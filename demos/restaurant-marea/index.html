@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marea — Signature Sea Foods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Inter:wght@400;500;600&family=Yellowtail&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <nav><a href="#">Home <i class="ri-add-line"></i></a><a href="#about">About Us</a><a href="#catch">Today's Catch</a></nav>
+      <a href="#" class="emblem" aria-label="Marea"><i class="ri-restaurant-2-line"></i></a>
+      <nav class="r"><a href="#menu">Menu <i class="ri-add-line"></i></a><a href="#gallery">Gallery</a><a href="#reserve">Contact Us <i class="ri-add-line"></i></a></nav>
+      <button class="mobile-btn" id="mobileBtn" aria-label="Menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__title">
+        <span class="script">Signature</span>
+        <h1>Sea Foods</h1>
+      </div>
+      <div class="hero__meta">
+        <p>Every dish is not just prepared — it's crafted with a sense of the sea. Line-caught fish, hand-dived scallops and oysters shucked to order.</p>
+        <div class="hero__plate"><img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=1000&q=80" alt="Grilled prawns" /></div>
+        <div class="right">
+          <div class="hero__rating"><b>4.9</b><div><span><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><small>2,300+ guest reviews</small></div></div>
+          <a href="#reserve" class="btn">Book A Table <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__band"></div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__img">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Seaside terrace" />
+        <div class="years"><b>32</b><span>Years by the sea</span></div>
+      </div>
+      <div>
+        <span class="label"><i class="ri-anchor-line"></i> About Us</span>
+        <h2>Variety Of Flavours From The <span class="script">Mediterranean</span></h2>
+        <p>Marea started as a six-table fish shack on the harbour in 1994. Today we still buy every fish directly from the boats at dawn — if it wasn't swimming yesterday, it isn't on the menu tonight.</p>
+        <ul class="checks">
+          <li><i class="ri-check-line"></i> Daily line-caught fish</li>
+          <li><i class="ri-check-line"></i> Sustainable sourcing</li>
+          <li><i class="ri-check-line"></i> Raw bar &amp; oysters</li>
+          <li><i class="ri-check-line"></i> Sea-view terrace</li>
+        </ul>
+        <a href="#menu" class="btn btn--navy">Explore Menu <i class="ri-arrow-right-line"></i></a>
+        <div class="about__sign">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=150&q=80" alt="" />
+          <div><b>Luca Moretti</b><span>Founder &amp; Head Chef</span></div>
+          <span class="script">Luca M.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catch" id="catch">
+    <div class="container">
+      <div class="catch__top">
+        <div><span class="label"><i class="ri-anchor-line"></i> Fresh from the boats</span><h2>Today's Catch</h2></div>
+        <div class="arrows"><button id="prev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button><button id="next" aria-label="Next"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+      <div class="track" id="track"></div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="head-c"><span class="label"><i class="ri-anchor-line"></i> Our Menu</span><h2>From The Sea To Your Table</h2><p>All mains served with seasonal greens and house-baked focaccia.</p></div>
+      <div class="menu__cols" id="menuCols"></div>
+    </div>
+  </section>
+
+  <div class="gallery" id="gallery">
+    <a href="#"><img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=900&q=80" alt="" /></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="" /></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=500&q=80" alt="" /></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="" /></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=500&q=80" alt="" /></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=500&q=80" alt="" /></a>
+  </div>
+
+  <section class="reserve" id="reserve">
+    <div class="container">
+      <div>
+        <span class="label"><i class="ri-anchor-line"></i> Reservation</span>
+        <h2>Reserve Your <span class="script">Ocean Table</span></h2>
+        <p>Sunset tables on the terrace go fast — we recommend booking at least two days ahead for Friday and Saturday evenings.</p>
+        <div class="hours">
+          <div><span>Monday — Thursday</span><b>12:00 — 22:30</b></div>
+          <div><span>Friday — Saturday</span><b>12:00 — 00:00</b></div>
+          <div><span>Sunday</span><b>12:00 — 21:00</b></div>
+          <div><span>Call us</span><b>+34 971 555 012</b></div>
+        </div>
+      </div>
+      <form class="rform" id="rform">
+        <h3>Book A Table</h3>
+        <div class="grid">
+          <input placeholder="Your name" required />
+          <input type="email" placeholder="Email address" required />
+          <input type="date" required />
+          <select><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option></select>
+          <select><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option></select>
+          <select><option>Terrace (sea view)</option><option>Main dining room</option><option>Private room</option></select>
+          <textarea placeholder="Special requests, allergies…"></textarea>
+          <button class="btn">Confirm Reservation <i class="ri-arrow-right-line"></i></button>
+          <p class="ok" id="ok"><i class="ri-checkbox-circle-fill"></i> Thank you — your table is reserved. A confirmation is on its way.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="#" class="brand"><span class="emblem"><i class="ri-restaurant-2-line"></i></span>MAREA</a>
+          <p>Harbour Front 12, Palma de Mallorca<br />hola@marea.com · +34 971 555 012</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#menu">Menu</a></li><li><a href="#catch">Today's Catch</a></li><li><a href="#reserve">Reservations</a></li></ul></div>
+        <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">TripAdvisor</a></li></ul></div>
+        <div><h4>Instagram</h4><div class="insta">
+          <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=200&q=70" alt="" />
+          <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=200&q=70" alt="" />
+          <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=200&q=70" alt="" />
+          <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=200&q=70" alt="" />
+          <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=200&q=70" alt="" />
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=200&q=70" alt="" />
+        </div></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Marea Signature Sea Foods</span><span>Privacy · Terms · Allergens</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const img = (id, w = 500) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    const catchOfDay = [
+      ["Tiger Prawns", "1559737558-2f5a35f4523b", "Per 500g", 28, "Fresh"],
+      ["Atlantic Salmon", "1579871494447-9811cf80d66c", "Per fillet", 24, ""],
+      ["Whole Sea Bass", "1615141982883-c7ad0e69fd62", "Per kg", 42, "Today"],
+      ["King Shrimp Bowl", "1565680018434-b513d5e5fd47", "Serves 2", 36, ""],
+      ["Sushi Platter", "1553621042-f6e147245754", "24 pieces", 48, "Chef's pick"],
+      ["Nigiri Selection", "1617196034796-73dfa7b1fd56", "12 pieces", 26, ""],
+    ];
+    const track = document.getElementById("track");
+    track.innerHTML = catchOfDay.map(([n, id, u, p, t]) => `
+      <div class="fish"><div class="fish__img"><img src="${img(id)}" alt="${n}" />${t ? `<span class="fish__tag">${t}</span>` : ""}</div>
+      <h3>${n}</h3><div class="fish__row"><span>${u}</span><b>$${p}</b></div></div>`).join("");
+    document.getElementById("prev").onclick = () => track.scrollBy({ left: -324 });
+    document.getElementById("next").onclick = () => track.scrollBy({ left: 324 });
+
+    const menu = [
+      ["Starters", [["Oysters on Ice", "1615141982883-c7ad0e69fd62", 18, "Half dozen, mignonette, lemon", "Raw"], ["Garlic Prawns", "1559737558-2f5a35f4523b", 16, "Chili, parsley, sourdough", ""], ["Tuna Tartare", "1611143669185-af224c5e3252", 19, "Avocado, sesame, crispy shallot", ""]]],
+      ["Mains", [["Grilled Sea Bass", "1615141982883-c7ad0e69fd62", 34, "Salsa verde, charred lemon", ""], ["Seafood Linguine", "1563379926898-05f4575a45d8", 28, "Prawns, mussels, cherry tomato", "Signature"], ["King Prawn Bowl", "1565680018434-b513d5e5fd47", 31, "Saffron rice, aioli", ""]]],
+      ["Raw Bar", [["Salmon Sashimi", "1579871494447-9811cf80d66c", 21, "Ponzu, radish, shiso", ""], ["Nigiri Set", "1617196034796-73dfa7b1fd56", 26, "Chef's selection of 8", ""], ["Maki Platter", "1553621042-f6e147245754", 32, "24 pieces, for sharing", "Share"]]],
+      ["Desserts", [["Lemon Panna Cotta", "1488477181946-6428a0291777", 11, "Berries, almond crumble", ""], ["Berry Layer Cake", "1565958011703-44f9829ba187", 12, "Mascarpone, raspberry", ""], ["Affogato", "1551024601-bec78aea704b", 9, "Vanilla gelato, espresso", ""]]],
+    ];
+    document.getElementById("menuCols").innerHTML = menu.map(([title, items]) => `
+      <div class="menu__group"><h3>${title}</h3>${items.map(([n, id, p, d, tag]) => `
+        <div class="mi"><img src="${img(id, 160)}" alt="${n}" /><div><div class="mi__top"><h4>${n}${tag ? `<em>${tag.toUpperCase()}</em>` : ""}</h4><span></span><b>$${p}</b></div><p>${d}</p></div></div>`).join("")}
+      </div>`).join("");
+
+    document.getElementById("rform").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("ok").style.display = "flex";
+    });
+    document.getElementById("mobileBtn").onclick = () => document.getElementById("header").classList.toggle("open");
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

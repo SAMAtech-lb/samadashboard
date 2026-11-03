@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivo Cycles — City &amp; Gravel Bikes, Direct From the Workshop</title>
+  <meta name="description" content="Meet the new Rivo range: lightweight city, gravel and single-speed bikes designed in Bristol and sold direct. Configure yours, find your size and book a free test ride." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Saira+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announce"><b>Launch offer:</b> free accessories pack worth £180 with every pre-order — ends in<span id="countdown">--</span></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo"><i class="ri-riding-line"></i>RIVO</a>
+      <nav class="nav" id="nav">
+        <a href="#configure" class="active">Models</a>
+        <a href="#tech">Tech</a>
+        <a href="#compare">Compare</a>
+        <a href="#size">Size guide</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#test-ride">Test ride</a>
+      </nav>
+      <div class="header__right">
+        <a href="#configure" class="btn">Pre-order <i class="ri-arrow-right-up-line"></i></a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <span class="hero__word" aria-hidden="true">RIVO</span>
+    <div class="container">
+      <div class="reveal">
+        <span class="tag">New 2027 range · Designed in Bristol</span>
+        <h1>Ride the City. <span>Leave the Car.</span></h1>
+        <p>Featherlight aluminium frames, maintenance-free belt drive and hydraulic disc brakes — built for the daily commute and the weekend detour. Delivered to your door, ready to ride.</p>
+        <div class="hero__btns">
+          <a href="#configure" class="btn">Configure Yours <i class="ri-arrow-right-line"></i></a>
+          <a href="#test-ride" class="btn btn--line"><i class="ri-calendar-event-line"></i> Book a Test Ride</a>
+        </div>
+        <div class="hero__price">
+          <div><b>£1,190</b><small>Starting price</small></div>
+          <span class="sep"></span>
+          <div><b>£33<small style="font-size:16px">/mo</small></b><small>0% APR over 36 months</small></div>
+        </div>
+      </div>
+      <div class="hero__img reveal">
+        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1100&q=80" alt="Rivo Commute city bike in white" />
+        <span class="spec-chip spec-chip--1"><i class="ri-scales-3-line"></i>Only 9.8 kg</span>
+        <span class="spec-chip spec-chip--2"><i class="ri-settings-5-line"></i>Carbon belt drive</span>
+        <span class="spec-chip spec-chip--3"><i class="ri-shield-check-line"></i>Lifetime frame warranty</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero__bar">
+        <div><i class="ri-truck-line"></i><span><b>Free UK delivery</b><small>Arrives 95% assembled</small></span></div>
+        <div><i class="ri-arrow-go-back-line"></i><span><b>30-day home trial</b><small>Free returns, no questions</small></span></div>
+        <div><i class="ri-tools-line"></i><span><b>Free first service</b><small>At 300+ partner shops</small></span></div>
+        <div><i class="ri-bank-card-line"></i><span><b>0% finance</b><small>Plus Cycle to Work</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+  <!-- Configurator -->
+  <section class="section" id="configure">
+    <div class="container">
+      <div class="head reveal"><div><span class="tag">Build yours</span><h2>Choose Your <span>Rivo</span></h2></div><p>Three bikes, one philosophy: fewer parts, less maintenance, more riding. Pick a model, colour, size and extras — your price updates live.</p></div>
+      <div class="models" id="models"></div>
+      <div class="config">
+        <div class="config__visual reveal">
+          <span class="badge" id="c-badge"></span>
+          <img id="c-img" alt="" />
+          <div class="config__specs" id="c-specs"></div>
+        </div>
+        <div class="config__panel reveal">
+          <h3 id="c-name"></h3>
+          <p id="c-desc"></p>
+          <div class="opt"><div class="opt__label">Frame colour <span id="c-colour"></span></div><div class="swatches" id="c-swatches"></div></div>
+          <div class="opt"><div class="opt__label">Frame size <span id="c-size-note"></span></div><div class="sizes" id="c-sizes"></div></div>
+          <div class="opt"><div class="opt__label">Extras</div><div class="extras" id="c-extras"></div></div>
+          <div class="opt"><div class="opt__label">Pay monthly <span>0% APR</span></div><div class="finance" id="c-fin"><button data-m="0">Pay in full</button><button data-m="12">12 mo</button><button data-m="24">24 mo</button><button data-m="36" class="active">36 mo</button></div></div>
+          <div class="summary">
+            <div><b id="c-total">£0</b><small id="c-monthly"></small></div>
+            <button class="btn" id="c-order">Pre-order Now <i class="ri-shopping-bag-3-line"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section class="section section--light" id="tech">
+    <div class="container">
+      <div class="head reveal"><div><span class="tag">Engineering</span><h2>Every Part <span>Earns Its Place</span></h2></div><p>Tap the hotspots to explore what makes a Rivo lighter, quieter and easier to live with.</p></div>
+      <div class="tech">
+        <div class="tech__img reveal" id="hotspots">
+          <img src="https://images.unsplash.com/photo-1593764592116-bfb2a97c642a?auto=format&fit=crop&w=1300&q=80" alt="Rivo bike side view" loading="lazy" />
+        </div>
+        <div class="tech__list reveal" id="tech-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="head reveal"><div><span class="tag">Side by side</span><h2>Compare <span>Models</span></h2></div><p>Not sure which one fits your ride? Here's how they stack up.</p></div>
+      <div class="compare reveal">
+        <table>
+          <thead><tr><th>Spec</th><th>Commute<small>from £1,190</small></th><th>Gravel<small>from £1,590</small></th><th>Track<small>from £790</small></th></tr></thead>
+          <tbody>
+            <tr><td>Best for</td><td>Daily city riding</td><td>Mixed terrain &amp; touring</td><td>Flat cities, pure fun</td></tr>
+            <tr><td>Weight</td><td>9.8 kg</td><td>10.4 kg</td><td>8.6 kg</td></tr>
+            <tr><td>Drivetrain</td><td>Gates carbon belt, 8-speed hub</td><td>Shimano GRX 1×11</td><td>Single-speed / fixed flip-flop</td></tr>
+            <tr><td>Brakes</td><td>Hydraulic disc</td><td>Hydraulic disc</td><td>Dual-pivot rim</td></tr>
+            <tr><td>Tyre clearance</td><td>40 mm</td><td>50 mm</td><td>32 mm</td></tr>
+            <tr><td>Rack &amp; mudguard mounts</td><td><i class="ri-checkbox-circle-fill yes"></i></td><td><i class="ri-checkbox-circle-fill yes"></i></td><td><i class="ri-close-circle-line no"></i></td></tr>
+            <tr><td>Integrated lights</td><td><i class="ri-checkbox-circle-fill yes"></i></td><td><i class="ri-close-circle-line no"></i></td><td><i class="ri-close-circle-line no"></i></td></tr>
+            <tr><td>Service interval</td><td>Every 5,000 km</td><td>Every 2,500 km</td><td>Every 3,000 km</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Size finder -->
+  <section class="section section--light" id="size">
+    <div class="container">
+      <div class="sizer reveal">
+        <div class="sizer__in">
+          <span class="tag">Size finder</span>
+          <h3>Find Your Perfect Fit</h3>
+          <p>Enter your height and inside-leg measurement. We'll match you to the right frame.</p>
+          <div class="units" id="units"><button class="active" data-u="cm">cm</button><button data-u="in">ft / in</button></div>
+          <div class="field"><label for="s-height">Height <b id="o-height"></b></label><input type="range" id="s-height" min="150" max="205" value="176" /></div>
+          <div class="field"><label for="s-leg">Inside leg <b id="o-leg"></b></label><input type="range" id="s-leg" min="66" max="96" value="81" /></div>
+        </div>
+        <div class="sizer__out">
+          <small>Your recommended frame</small>
+          <div class="sizer__big" id="s-size">M<span>.</span></div>
+          <div class="sizer__scale" id="s-scale"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span></div>
+          <p id="s-note"></p>
+          <button class="btn" id="s-apply">Use This Size <i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Band -->
+  <section class="band" id="band">
+    <div class="container">
+      <span class="tag">Since 2019</span>
+      <h2>Built for <span>Real Roads</span>, Not Showrooms</h2>
+      <div class="band__stats" id="band-stats">
+        <div><b><span data-count="18">0</span>k<em>+</em></b>Riders on Rivos</div>
+        <div><b><span data-count="42">0</span>M</b>Kilometres ridden</div>
+        <div><b><span data-count="4.9" data-dec="1">0</span><em>★</em></b>Trustpilot rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="head reveal"><div><span class="tag">#RideRivo</span><h2>Out <span>There</span></h2></div><p>Shared by our riders — from Bristol commutes to Highland bikepacking trips.</p></div>
+      <div class="ride reveal">
+        <figure><img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=1000&q=80" alt="Bikepacking at sunset" loading="lazy" /><figcaption><i class="ri-map-pin-2-fill"></i>Cairngorms, Scotland</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Two riders on a coastal road" loading="lazy" /><figcaption><i class="ri-map-pin-2-fill"></i>Cornwall</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=600&q=80" alt="Track bike with orange wheels" loading="lazy" /><figcaption><i class="ri-map-pin-2-fill"></i>Shoreditch, London</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?auto=format&fit=crop&w=1000&q=80" alt="Rider on a forest road" loading="lazy" /><figcaption><i class="ri-map-pin-2-fill"></i>Forest of Dean</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--light" id="reviews">
+    <div class="container">
+      <div class="head reveal"><div><span class="tag">Reviews</span><h2>Riders <span>Agree</span></h2></div><p>4.9 out of 5 from 2,140 verified owners.</p></div>
+      <div class="press">
+        <div class="press__item reveal"><span class="score">9/10</span><p>"The most hassle-free commuter we've tested this year. The belt drive alone is worth it."</p><b>Northwind Cycling</b></div>
+        <div class="press__item reveal"><span class="score">★★★★★</span><p>"Light, quick and beautifully finished. A genuine rival to bikes costing twice as much."</p><b>Orbit Outdoors</b></div>
+        <div class="press__item reveal"><span class="score">Best Buy</span><p>"Our pick for gravel riders on a budget. Stable, comfy and ready for anything."</p><b>Fieldnote Magazine</b></div>
+      </div>
+      <div class="reviews" id="review-grid"></div>
+    </div>
+  </section>
+
+  <!-- Test ride -->
+  <section class="section" id="test-ride">
+    <div class="container testride">
+      <div class="testride__img reveal">
+        <img src="https://images.unsplash.com/photo-1620802051782-725fa33db067?auto=format&fit=crop&w=900&q=80" alt="Rider on a Rivo in the city" loading="lazy" />
+        <div class="cities"><b>Test-ride hubs</b><div><span><i class="ri-map-pin-fill"></i>London</span><span><i class="ri-map-pin-fill"></i>Bristol</span><span><i class="ri-map-pin-fill"></i>Manchester</span><span><i class="ri-map-pin-fill"></i>Leeds</span><span><i class="ri-map-pin-fill"></i>Edinburgh</span></div></div>
+      </div>
+      <div class="reveal">
+        <span class="tag">Free · 45 minutes</span>
+        <h2 class="h2">Book a <span>Test Ride</span></h2>
+        <p style="margin-top:16px">Ride all three models at one of our hubs, or we'll bring a bike to your door in selected postcodes. No pressure, no deposit.</p>
+        <form class="form" id="ride-form">
+          <div><label for="r-name">Name</label><input id="r-name" required placeholder="Alex Morgan" /></div>
+          <div><label for="r-email">Email</label><input id="r-email" type="email" required placeholder="alex@email.com" /></div>
+          <div><label for="r-city">Hub</label><select id="r-city"><option>London — Hackney</option><option>Bristol — Harbourside</option><option>Manchester — Ancoats</option><option>Leeds — Kirkstall</option><option>Edinburgh — Leith</option><option>Home test ride</option></select></div>
+          <div><label for="r-model">Model</label><select id="r-model"><option>Commute</option><option>Gravel</option><option>Track</option><option>All three</option></select></div>
+          <div><label for="r-date">Date</label><input id="r-date" type="date" required /></div>
+          <div><label for="r-time">Time</label><select id="r-time"><option>10:00</option><option>11:00</option><option>13:00</option><option>15:00</option><option>17:00</option></select></div>
+          <div class="full"><button class="btn btn--dark" type="submit">Confirm Test Ride <i class="ri-check-line"></i></button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light">
+    <div class="container faq">
+      <div class="reveal"><span class="tag">FAQ</span><h2 class="h2">Good To <span>Know</span></h2><p style="margin-top:16px">Still unsure? Chat to our team 8am–8pm, seven days a week.</p><a href="#test-ride" class="btn btn--line" style="margin-top:24px">Talk to a Rider <i class="ri-chat-3-line"></i></a></div>
+      <div class="reveal" id="faq"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <h2>Join the <span>Ride</span></h2>
+        <form class="news" id="news"><input type="email" required placeholder="Email for launch news &amp; routes" aria-label="Email" /><button class="btn">Subscribe</button></form>
+      </div>
+      <div class="footer__grid">
+        <div><a href="#home" class="logo"><i class="ri-riding-line"></i>RIVO</a><p>Simple, beautiful bikes designed in Bristol and sold direct, so you pay for the bike — not the middleman.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Strava"><i class="ri-riding-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div></div>
+        <div><h4>Bikes</h4><ul><li><a href="#configure">Rivo Commute</a></li><li><a href="#configure">Rivo Gravel</a></li><li><a href="#configure">Rivo Track</a></li><li><a href="#compare">Compare</a></li></ul></div>
+        <div><h4>Support</h4><ul><li><a href="#size">Size guide</a></li><li><a href="#">Delivery &amp; returns</a></li><li><a href="#">Warranty</a></li><li><a href="#">Cycle to Work</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#">Our story</a></li><li><a href="#test-ride">Test-ride hubs</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Rivo Cycles Ltd · Unit 4, Paintworks, Bristol BS4 3EH</span><span>Privacy · Terms · Cookies</span></div>
+    </div>
+  </footer>
+
+  <!-- Sticky buy bar -->
+  <div class="buybar" id="buybar">
+    <div class="buybar__name"><b id="bb-name">Rivo Commute</b><small id="bb-sub"></small></div>
+    <span class="buybar__price" id="bb-price"></span>
+    <a href="#configure" class="btn" id="bb-btn">Pre-order</a>
+  </div>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const gbp = (n) => "£" + Math.round(n).toLocaleString("en-GB");
+
+    /* Launch countdown (rolling 6-day offer) */
+    const end = Date.now() + ((6 * 24 + 7) * 3600 + 42 * 60) * 1000;
+    function tick() {
+      const s = Math.max(0, Math.floor((end - Date.now()) / 1000));
+      const d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      $("countdown").textContent = `${d}d ${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m ${String(sec).padStart(2, "0")}s`;
+    }
+    tick(); setInterval(tick, 1000);
+
+    /* Marquee */
+    const words = ["Belt drive", "Hydraulic discs", "9.8 kg", "Lifetime frame warranty", "30-day home trial", "Free delivery", "0% finance"];
+    $("marquee").innerHTML = [...words, ...words].map((w) => `<span>${w}</span>`).join("");
+
+    /* Configurator */
+    const models = {
+      commute: { n: "Rivo Commute", short: "Commute", from: "City", price: 1190, img: "1559348349-86f1f65817fe", badge: "Best seller",
+        d: "Our do-it-all city bike. Belt drive means no oily chain and no rust, and the 8-speed hub shifts even when you're stopped at the lights.",
+        specs: [["9.8 kg", "Weight"], ["8-speed", "Shimano hub"], ["40 mm", "Tyres"], ["5,000 km", "Service"]],
+        colours: [["Chalk White", "#ecebe5"], ["Graphite", "#3a3d42"], ["Signal Orange", "#ff5b14"], ["Sage", "#9aab8f"]] },
+      gravel: { n: "Rivo Gravel", short: "Gravel", from: "Adventure", price: 1590, img: "1576435728678-68d0fbf94e91", badge: "New for 2027",
+        d: "Drop bars, wide tyres and a relaxed geometry for long days on lanes, towpaths and forest tracks. Mounts for racks, bags and three bottles.",
+        specs: [["10.4 kg", "Weight"], ["1×11", "Shimano GRX"], ["50 mm", "Max tyre"], ["3", "Bottle mounts"]],
+        colours: [["Stealth Black", "#17181a"], ["Moss", "#4d5a3f"], ["Sand", "#cbb994"]] },
+      track: { n: "Rivo Track", short: "Track", from: "Single-speed", price: 790, img: "1507035895480-2b3156c31fc8", badge: "Lightest",
+        d: "Pure, simple and fast. A flip-flop hub lets you choose freewheel or fixed. The lightest bike we make — and the easiest to carry upstairs.",
+        specs: [["8.6 kg", "Weight"], ["Flip-flop", "Hub"], ["32 mm", "Tyres"], ["1", "Gear. Ever."]],
+        colours: [["Ice White", "#f4f4f2"], ["Midnight", "#1b2333"], ["Orange Fade", "#ff7a3d"]] },
+    };
+    const extras = [["guards", "Full-length mudguards", 49], ["rack", "Rear rack (25 kg)", 69], ["lights", "USB-C light set", 45], ["lock", "Gold-rated D-lock", 59], ["care", "3-year RivoCare plan", 129]];
+    const sizes = ["XS", "S", "M", "L", "XL"];
+    let st = { model: "commute", colour: 0, size: "M", months: 36 };
+    $("models").innerHTML = Object.entries(models).map(([k, m]) => `<button data-k="${k}">${m.short}<small>${m.from} · from ${gbp(m.price)}</small></button>`).join("");
+    $("c-sizes").innerHTML = sizes.map((s) => `<button data-s="${s}">${s}</button>`).join("") + '<a href="#size">Not sure?</a>';
+    $("c-extras").innerHTML = extras.map(([id, t, p]) => `<label class="extra"><input type="checkbox" value="${id}" /><span>${t}</span><small>+${gbp(p)}</small></label>`).join("");
+    function renderModel() {
+      const m = models[st.model];
+      document.querySelectorAll("#models button").forEach((b) => b.classList.toggle("active", b.dataset.k === st.model));
+      $("c-img").style.opacity = 0;
+      setTimeout(() => { $("c-img").src = U(m.img, 1000); $("c-img").alt = m.n; $("c-img").style.opacity = 1; }, 180);
+      $("c-badge").textContent = m.badge; $("c-name").textContent = m.n; $("c-desc").textContent = m.d;
+      $("c-specs").innerHTML = m.specs.map(([b, s]) => `<div><b>${b}</b>${s}</div>`).join("");
+      st.colour = Math.min(st.colour, m.colours.length - 1);
+      $("c-swatches").innerHTML = m.colours.map(([n, c], i) => `<button class="sw ${i === st.colour ? "active" : ""}" style="background:${c}" data-i="${i}" aria-label="${n}"></button>`).join("");
+      price();
+    }
+    function price() {
+      const m = models[st.model];
+      const picked = [...document.querySelectorAll("#c-extras input:checked")].map((i) => extras.find((e) => e[0] === i.value));
+      const total = m.price + picked.reduce((s, e) => s + e[2], 0);
+      $("c-colour").textContent = m.colours[st.colour][0];
+      $("c-size-note").textContent = `Size ${st.size}`;
+      document.querySelectorAll("#c-sizes button").forEach((b) => b.classList.toggle("active", b.dataset.s === st.size));
+      document.querySelectorAll("#c-fin button").forEach((b) => b.classList.toggle("active", +b.dataset.m === st.months));
+      $("c-total").textContent = gbp(total);
+      $("c-monthly").innerHTML = st.months ? `or <strong>${gbp(total / st.months)}/mo</strong> for ${st.months} months · 0% APR` : "Free accessories pack included";
+      $("bb-name").textContent = `${m.n} · ${m.colours[st.colour][0]}`;
+      $("bb-sub").textContent = `Size ${st.size}${picked.length ? ` · ${picked.length} extra${picked.length > 1 ? "s" : ""}` : ""}${st.months ? ` · ${gbp(total / st.months)}/mo` : ""}`;
+      $("bb-price").textContent = gbp(total);
+    }
+    $("models").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.model = b.dataset.k; renderModel(); } });
+    $("c-swatches").addEventListener("click", (e) => { const b = e.target.closest(".sw"); if (!b) return; st.colour = +b.dataset.i; document.querySelectorAll(".sw").forEach((x) => x.classList.toggle("active", x === b)); price(); });
+    $("c-sizes").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.size = b.dataset.s; price(); } });
+    $("c-extras").addEventListener("change", price);
+    $("c-fin").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.months = +b.dataset.m; price(); } });
+    const order = () => toast(`${$("bb-name").textContent} (size ${st.size}) reserved — we'll email your checkout link.`);
+    $("c-order").addEventListener("click", order);
+    $("bb-btn").addEventListener("click", (e) => { if (document.querySelector("#configure").getBoundingClientRect().top < 200 && document.querySelector("#configure").getBoundingClientRect().bottom > 0) { e.preventDefault(); order(); } });
+    renderModel();
+
+    /* Tech hotspots */
+    const tech = [
+      [53, 83, "Gates carbon belt drive", "Lasts up to three times longer than a chain, never needs oiling and won't leave marks on your trousers."],
+      [59, 68, "Lightweight 6061 frame", "Triple-butted aluminium with smooth welds, internal cable routing and a lifetime warranty."],
+      [75, 52, "Ergonomic cockpit", "Flat-back bar and lock-on grips designed to keep wrists comfortable on long commutes."],
+      [45, 45, "Comfort saddle", "Pressure-relief channel and a short nose — tested by riders over 12,000 km."],
+      [76, 81, "Hydraulic disc brakes", "Strong, quiet stopping in the wet with one-finger lever feel."],
+    ];
+    $("hotspots").insertAdjacentHTML("beforeend", tech.map(([x, y], i) => `<button class="hot" style="left:${x}%;top:${y}%" data-i="${i}" aria-label="${tech[i][2]}">${i + 1}</button>`).join(""));
+    $("tech-list").innerHTML = tech.map(([, , t, d], i) => `<button class="tech__item" data-i="${i}"><span>${i + 1}</span><div><b>${t}</b><p>${d}</p></div></button>`).join("");
+    function setTech(i) {
+      document.querySelectorAll(".hot").forEach((h) => h.classList.toggle("active", +h.dataset.i === i));
+      document.querySelectorAll(".tech__item").forEach((h) => h.classList.toggle("active", +h.dataset.i === i));
+    }
+    document.querySelector(".tech").addEventListener("click", (e) => { const b = e.target.closest("[data-i]"); if (b) setTech(+b.dataset.i); });
+    setTech(0);
+
+    /* Size finder */
+    let unit = "cm";
+    const ftin = (cm) => { const inch = Math.round(cm / 2.54); return `${Math.floor(inch / 12)}′${inch % 12}″`; };
+    function sizeCalc() {
+      const h = +$("s-height").value, leg = +$("s-leg").value;
+      $("o-height").textContent = unit === "cm" ? h + " cm" : ftin(h);
+      $("o-leg").textContent = unit === "cm" ? leg + " cm" : Math.round(leg / 2.54) + "″";
+      const score = h * 0.6 + (leg / 0.47) * 0.4;
+      const idx = score < 160 ? 0 : score < 168 ? 1 : score < 178 ? 2 : score < 188 ? 3 : 4;
+      const sz = sizes[idx];
+      $("s-size").innerHTML = `${sz}<span>.</span>`;
+      [...$("s-scale").children].forEach((s, i) => s.classList.toggle("on", i === idx));
+      const ratio = leg / h;
+      $("s-note").textContent = ratio > 0.48 ? `Long legs for your height — if you're between sizes, size up to ${sizes[Math.min(4, idx + 1)]}.` : ratio < 0.44 ? `Longer torso — if you're between sizes, ${sizes[Math.max(0, idx - 1)]} gives a more upright ride.` : `A classic ${sz} fit. Standover height and reach should feel just right.`;
+      $("s-apply").dataset.s = sz;
+    }
+    ["s-height", "s-leg"].forEach((id) => $(id).addEventListener("input", sizeCalc));
+    $("units").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; unit = b.dataset.u; document.querySelectorAll("#units button").forEach((x) => x.classList.toggle("active", x === b)); sizeCalc(); });
+    $("s-apply").addEventListener("click", () => { st.size = $("s-apply").dataset.s; price(); document.querySelector("#configure").scrollIntoView(); toast(`Size ${st.size} added to your build.`); });
+    sizeCalc();
+
+    /* Reviews */
+    const reviews = [
+      ["Sold my car", "Six months in and I haven't missed it once. The belt drive is silent and I've done zero maintenance.", "Hannah Price", "Commute owner · Bristol", "1494790108377-be9c29b29330"],
+      ["Gravel heaven", "Took it on the King Alfred's Way, 350 km of chalk and mud. Comfortable all day and nothing rattled loose.", "Owen Davies", "Gravel owner · Winchester", "1500648767791-00dcc994a43e"],
+      ["Delivery was brilliant", "Arrived in a box, fitted the pedals and turned the bars — riding in 15 minutes. The video guide was spot on.", "Priya Nair", "Track owner · London", "1544005313-94ddf0286df2"],
+    ];
+    $("review-grid").innerHTML = reviews.map(([h, p, n, r, img]) => `
+      <article class="review reveal"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><h4>${h}</h4><p>${p}</p>
+      <div class="review__who"><img src="${U(img, 100)}" alt="${n}" loading="lazy" /><div><b>${n}</b><small><i class="ri-verified-badge-fill"></i>${r}</small></div></div></article>`).join("");
+
+    /* FAQ */
+    const faqs = [
+      ["How is the bike delivered?", "Your Rivo arrives 95% assembled in a recyclable box. You'll just fit the pedals and straighten the handlebar — tools and a video guide are included."],
+      ["What if it doesn't fit or I don't love it?", "You have 30 days to ride it at home. If it's not right, we'll collect it for free and give you a full refund."],
+      ["When will pre-orders ship?", "Launch pre-orders ship from mid-November in delivery order. You'll get a tracking link and a 1-hour delivery window."],
+      ["Can I buy through Cycle to Work?", "Yes — we work with all major Cycle to Work schemes. Choose it at checkout and we'll send the quote to your employer."],
+      ["Where can I get it serviced?", "Your first service is free at any of 300+ partner workshops across the UK. Belt-drive parts are standard and widely available."],
+    ];
+    $("faq").innerHTML = faqs.map(([q, a], i) => `<div class="acc ${i ? "" : "open"}"><button>${q}<i class="ri-add-line"></i></button><div class="acc__body"><p>${a}</p></div></div>`).join("");
+    const setAcc = (el, o) => { el.classList.toggle("open", o); const b = el.querySelector(".acc__body"); b.style.maxHeight = o ? b.scrollHeight + "px" : 0; };
+    document.querySelectorAll(".acc").forEach((a) => setAcc(a, a.classList.contains("open")));
+    $("faq").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const acc = b.parentNode, o = !acc.classList.contains("open"); document.querySelectorAll(".acc").forEach((a) => setAcc(a, false)); setAcc(acc, o); });
+
+    /* Forms */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3800); }
+    const dmin = new Date(); dmin.setDate(dmin.getDate() + 1); $("r-date").min = dmin.toISOString().slice(0, 10);
+    $("ride-form").addEventListener("submit", (e) => { e.preventDefault(); toast(`Test ride booked: ${$("r-model").value} at ${$("r-city").value.split(" —")[0]}, ${$("r-time").value}. See you soon!`); e.target.reset(); });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); toast("You're on the list — first routes coming soon."); e.target.reset(); });
+
+    /* Header, nav, buy bar */
+    const links = [...document.querySelectorAll("#nav a")];
+    const secs = links.map((a) => document.querySelector(a.getAttribute("href")));
+    $("band").style.backgroundImage = `url(${U("1474552226712-ac0f0961a954", 1800)})`;
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 20);
+      $("buybar").classList.toggle("show", scrollY > innerHeight * 0.9);
+      let idx = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 140) idx = i; });
+      links.forEach((l, i) => l.classList.toggle("active", i === idx));
+    });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    links.forEach((l) => l.addEventListener("click", () => $("nav").classList.remove("open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+
+    /* Reveal + counters */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach((c) => {
+        const endV = +c.dataset.count, dec = +(c.dataset.dec || 0), t0 = performance.now();
+        const step = (t) => { const p = Math.min((t - t0) / 1600, 1); c.textContent = (endV * (1 - Math.pow(1 - p, 3))).toFixed(dec); if (p < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      });
+      io.unobserve(en.target);
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal, #band-stats").forEach((el) => io.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

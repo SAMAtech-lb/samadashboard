@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dew Theory — Simple skincare that works</title>
+  <meta name="description" content="Dew Theory makes serums, cleansers, moisturisers and SPF with short, clear ingredient lists. Dermatologist tested, fragrance-free and free UK delivery over £30." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <a href="#top" class="logo">dew theory</a>
+      <nav class="nav" id="nav">
+        <a href="#shop" data-type="all">Shop all</a>
+        <a href="#shop" data-type="Serums">Serums</a>
+        <a href="#shop" data-type="Moisturisers">Moisturisers</a>
+        <a href="#shop" data-type="Cleansers">Cleansers</a>
+        <a href="#routine">Routines</a>
+        <a href="#inside">Ingredients</a>
+      </nav>
+      <div class="icons">
+        <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="#" class="hide-sm" aria-label="Account"><i class="ri-user-line"></i></a>
+        <button id="bagBtn" aria-label="Open bag"><i class="ri-shopping-bag-3-line"></i><b id="bagCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__in">
+        <div class="hero__copy">
+          <span class="kicker">Dermatologist tested · fragrance-free</span>
+          <h1>Simple skincare that <em>actually</em> works</h1>
+          <p>Ten products, short ingredient lists and clinical results you can see in four weeks. Made for every skin type, including sensitive.</p>
+          <div class="hero__cta"><a href="#shop" class="btn" data-type="all">Shop bestsellers</a><a href="#routine" class="link">See the morning routine <i class="ri-arrow-right-line"></i></a></div>
+          <div class="hero__proof"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><p><b>4.8/5</b> from 9,300+ reviews</p></div>
+        </div>
+        <div class="hero__media">
+          <img class="hero__img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1100&q=80" alt="Woman with clear, natural skin" />
+          <div class="hero__card"><img src="https://images.unsplash.com/photo-1781344116880-029945a42b75?auto=format&fit=crop&w=300&q=80" alt="" /><div><small>Bestseller</small><b>Hydrating Serum</b><span>£26 · 30 ml</span></div><button data-add="1" aria-label="Add Hydrating Serum to bag"><i class="ri-add-line"></i></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concern strip -->
+    <section class="concerns">
+      <div class="container">
+        <p class="concerns__label">Shop by concern</p>
+        <div class="concerns__list" id="concerns">
+          <button data-concern="Dryness"><i class="ri-drop-line"></i>Dryness</button>
+          <button data-concern="Dullness"><i class="ri-sun-line"></i>Dullness</button>
+          <button data-concern="Breakouts"><i class="ri-focus-3-line"></i>Breakouts</button>
+          <button data-concern="Sensitivity"><i class="ri-leaf-line"></i>Sensitivity</button>
+          <button data-concern="Ageing"><i class="ri-hourglass-line"></i>Fine lines</button>
+          <button data-concern="Sun"><i class="ri-shield-sun-line"></i>Sun care</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="head">
+          <div><h2 id="shopTitle">Bestsellers</h2><p id="shopSub">Our most-loved products, chosen by 9,300 reviewers.</p></div>
+          <button class="clear" id="clearFilter" hidden><i class="ri-close-line"></i>Clear filter</button>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Routine bundle -->
+    <section class="section section--sage" id="routine">
+      <div class="container">
+        <div class="head head--center"><span class="kicker">The morning routine</span><h2>Four steps, five minutes</h2><p>Buy the full routine together and save 15%.</p></div>
+        <ol class="steps" id="steps"></ol>
+        <div class="bundle reveal"><div><b>Full morning routine</b><span id="bundleItems"></span></div><p class="price"><s id="bundleWas"></s><b id="bundleNow"></b></p><button class="btn" id="bundleAdd">Add routine to bag</button></div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section">
+      <div class="container results">
+        <div class="results__img reveal"><img src="https://images.unsplash.com/photo-1670201203208-055d6d79db4a?auto=format&fit=crop&w=1000&q=80" alt="Applying serum to the cheek" loading="lazy" /></div>
+        <div class="results__copy reveal">
+          <span class="kicker">Clinical results</span>
+          <h2>Tested on 120 people for four weeks</h2>
+          <p>An independent lab tested the Hydrating Serum twice a day on dry and sensitive skin. Here's what they measured.</p>
+          <ul class="results__list">
+            <li><b data-count="94">0</b><span>% said skin felt softer after one week</span></li>
+            <li><b data-count="72">0</b><span>% more hydration measured after 4 weeks</span></li>
+            <li><b data-count="0">0</b><span>reactions recorded on sensitive skin</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section class="section section--cream" id="inside">
+      <div class="container inside">
+        <div>
+          <span class="kicker">What's inside</span>
+          <h2>Ingredients you can read</h2>
+          <p class="inside__p">Every formula uses fewer than 15 ingredients. No fragrance, no essential oils, no drying alcohol.</p>
+          <ul class="ings" id="ings"></ul>
+        </div>
+        <div class="inside__img reveal"><img src="https://images.unsplash.com/photo-1781346325200-61cef7b29d76?auto=format&fit=crop&w=1000&q=80" alt="Glass serum bottle with a gold cap" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section">
+      <div class="container">
+        <div class="head"><h2>Real skin, real reviews</h2><a href="#" class="link">Read all 9,312 reviews <i class="ri-arrow-right-line"></i></a></div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="perks">
+      <div class="container perks__in">
+        <p><i class="ri-truck-line"></i><span><b>Free UK delivery</b>On orders over £30</span></p>
+        <p><i class="ri-refresh-line"></i><span><b>60-day guarantee</b>Full refund, even if opened</span></p>
+        <p><i class="ri-recycle-line"></i><span><b>Refill pouches</b>Save 20% on refills</span></p>
+        <p><i class="ri-rabbit-line"></i><span><b>Cruelty-free</b>And 100% vegan</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#top" class="logo logo--light">dew theory</a><p>Simple skincare made in London. Dermatologist tested and suitable for sensitive skin.</p><div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a></div></div>
+        <div><h4>Shop</h4><a href="#shop">Serums</a><a href="#shop">Moisturisers</a><a href="#shop">Cleansers</a><a href="#shop">SPF</a><a href="#routine">Routines</a></div>
+        <div><h4>Help</h4><a href="#">Delivery</a><a href="#">Returns</a><a href="#">Skin consultation</a><a href="#">Contact</a></div>
+        <div><h4>10% off your first order</h4><p>Skin tips and new launches, twice a month.</p><form class="news" id="news"><input type="email" required placeholder="Email address" aria-label="Email" /><button class="btn btn--light">Subscribe</button></form><p class="form-msg" id="newsMsg"></p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Dew Theory Ltd · Photography from Unsplash</p><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i></div></div>
+    </div>
+  </footer>
+
+  <!-- Search -->
+  <div class="search" id="search" aria-hidden="true"><div class="container"><div class="search__bar"><i class="ri-search-line"></i><input id="searchInput" type="search" placeholder="Search serums, SPF, cleansers…" aria-label="Search" /><button id="searchClose" aria-label="Close"><i class="ri-close-line"></i></button></div><div class="search__res" id="searchRes"></div></div></div>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__img"><img id="mImg" src="" alt="" /></div>
+      <div class="modal__body">
+        <span class="kicker" id="mType"></span>
+        <h3 id="mName"></h3>
+        <div class="modal__rate" id="mRate"></div>
+        <p id="mDesc"></p>
+        <div class="modal__tags" id="mTags"></div>
+        <div class="modal__opt"><span>Size</span><div class="sizes" id="mSizes"></div></div>
+        <label class="sub"><input type="checkbox" id="mSub" /><span><b>Subscribe &amp; save 15%</b>Delivered every 8 weeks. Skip or cancel anytime.</span></label>
+        <div class="modal__buy"><p class="price price--lg" id="mPrice"></p><button class="btn" id="mAdd">Add to bag</button></div>
+        <details><summary>How to use</summary><p id="mUse"></p></details>
+        <details><summary>Key ingredients</summary><p id="mKey"></p></details>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bag -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Your bag</h3><button id="drawerClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__ship"><p id="shipTxt"></p><div><span id="shipBar"></span></div></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">£0.00</b></div><button class="btn btn--full" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const gbp = (n) => "£" + n.toFixed(2);
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2300); };
+
+    /* ---------- Products ---------- */
+    const P = [
+      { id: 1, n: "Hydrating Serum", type: "Serums", p: 26, ml: "30 ml", big: ["60 ml", 42], img: "1781344116880-029945a42b75", r: 4.9, rc: 2841, best: true, c: ["Dryness", "Sensitivity"], d: "A lightweight serum with three weights of hyaluronic acid and panthenol. Plumps and soothes without stickiness.", use: "Apply 3–4 drops to damp skin morning and night, before moisturiser.", key: "Hyaluronic acid 2%, panthenol 5%, glycerin." },
+      { id: 2, n: "Vitamin C Drops", type: "Serums", p: 32, ml: "30 ml", img: "1781346325200-61cef7b29d76", r: 4.7, rc: 1290, best: true, c: ["Dullness", "Ageing"], d: "A stable 15% vitamin C serum that brightens dull skin and fades marks over 8 weeks.", use: "Apply 3 drops in the morning after cleansing. Follow with SPF.", key: "Ascorbyl glucoside 15%, ferulic acid, vitamin E." },
+      { id: 3, n: "Barrier Cream", type: "Moisturisers", p: 28, ml: "50 ml", big: ["100 ml", 46], img: "1779437141537-62577b216307", r: 4.8, rc: 1904, best: true, c: ["Dryness", "Sensitivity"], d: "A rich but quick-absorbing moisturiser with ceramides to repair a stressed skin barrier.", use: "Massage a pea-sized amount into face and neck, morning and night.", key: "Ceramides NP, AP, EOP, cholesterol, squalane." },
+      { id: 4, n: "Gentle Gel Cleanser", type: "Cleansers", p: 18, ml: "150 ml", big: ["300 ml", 30], img: "1778665654058-dcd700142738", r: 4.8, rc: 1630, best: true, c: ["Breakouts", "Sensitivity"], d: "A low-foam gel cleanser that removes sunscreen and makeup without leaving skin tight.", use: "Massage onto damp skin for 30 seconds and rinse with lukewarm water.", key: "Glycerin, betaine, oat extract." },
+      { id: 5, n: "Calming Toner", type: "Cleansers", p: 20, ml: "200 ml", img: "1623143445418-40c192fa3d11", r: 4.6, rc: 702, c: ["Sensitivity", "Breakouts"], d: "An alcohol-free toner that rebalances skin after cleansing and calms redness.", use: "Press into skin with palms or a cotton pad after cleansing.", key: "Niacinamide 4%, centella, allantoin." },
+      { id: 6, n: "Overnight Mask", type: "Moisturisers", p: 30, ml: "75 ml", img: "1609097164502-59a1f0f9a66f", r: 4.7, rc: 588, best: true, c: ["Dryness", "Dullness"], d: "A cushiony sleeping mask that locks in moisture overnight. Wake up to softer skin.", use: "Apply a thin layer as the last step of your evening routine, 2–3 times a week.", key: "Shea butter, squalane, peptides." },
+      { id: 7, n: "Mineral SPF 50", type: "Moisturisers", p: 24, ml: "50 ml", img: "1616750819574-7e38aa8046fa", r: 4.6, rc: 1120, best: true, c: ["Sun", "Sensitivity"], d: "A sheer mineral sunscreen with no white cast. Comfortable under makeup.", use: "Apply generously as the last step every morning. Reapply every two hours outdoors.", key: "Zinc oxide 20%, niacinamide, vitamin E." },
+      { id: 8, n: "Retinal Night Serum", type: "Serums", p: 38, ml: "30 ml", img: "1770048792339-d8f8d8d2dbeb", r: 4.7, rc: 810, best: true, c: ["Ageing", "Breakouts"], d: "A gentle retinaldehyde serum that smooths fine lines and clears pores, with less irritation than retinol.", use: "Start twice a week at night, building up to every night. Always use SPF the next day.", key: "Retinal 0.05%, bakuchiol, squalane." },
+      { id: 9, n: "Squalane Face Oil", type: "Serums", p: 22, ml: "30 ml", img: "1576426863848-c21f53c60b19", r: 4.8, rc: 940, best: true, c: ["Dryness", "Ageing"], d: "Pure plant-derived squalane. Light, non-greasy and suitable for every skin type.", use: "Warm 2–3 drops between palms and press into skin as the last step at night.", key: "100% olive-derived squalane." },
+      { id: 10, n: "Clarifying Gel", type: "Moisturisers", p: 26, ml: "50 ml", img: "1620916566398-39f1143ab7be", r: 4.5, rc: 430, c: ["Breakouts", "Dullness"], d: "An oil-free gel moisturiser for combination and oily skin. Hydrates without clogging pores.", use: "Apply to face and neck morning and night after serum.", key: "Salicylic acid 0.5%, zinc PCA, aloe." },
+    ];
+    const ROUTINE = [[4, "Cleanse"], [1, "Hydrate"], [3, "Moisturise"], [7, "Protect"]];
+    const stars = (r) => { let s = ""; for (let i = 1; i <= 5; i++) s += `<i class="ri-star-${r >= i ? "fill" : r >= i - 0.5 ? "half-fill" : "line"}"></i>`; return s; };
+    const card = (x, i) => `<article class="card" style="--d:${i * 0.05}s">
+      <button class="card__media" data-quick="${x.id}" aria-label="View ${x.n}">${x.best ? '<span class="badge">Bestseller</span>' : ""}<img src="${U(x.img)}" alt="${x.n}" loading="lazy" /></button>
+      <div class="card__body">
+        <div class="card__rate"><span class="stars">${stars(x.r)}</span>${x.rc.toLocaleString()}</div>
+        <h3><button data-quick="${x.id}">${x.n}</button></h3>
+        <p>${x.c.join(" · ")}</p>
+        <div class="card__foot"><span class="price"><b>${gbp(x.p)}</b><small>${x.ml}</small></span><button class="btn btn--sm" data-add="${x.id}">Add to bag</button></div>
+      </div>
+    </article>`;
+    let filter = { type: null, concern: null, q: "" };
+    const render = () => {
+      let list = P, title = "Bestsellers", sub = "Our most-loved products, chosen by 9,300 reviewers.";
+      if (filter.q) { list = P.filter((x) => (x.n + x.type + x.c.join(" ") + x.key).toLowerCase().includes(filter.q)); title = `Results for "${filter.q}"`; sub = `${list.length} products`; }
+      else if (filter.concern) { list = P.filter((x) => x.c.includes(filter.concern)); title = `For ${filter.concern === "Ageing" ? "fine lines" : filter.concern === "Sun" ? "sun care" : filter.concern.toLowerCase()}`; sub = `${list.length} products picked by our skin team`; }
+      else if (filter.type === "all") { title = "Shop all"; sub = `${P.length} products`; }
+      else if (filter.type) { list = P.filter((x) => x.type === filter.type); title = filter.type; sub = `${list.length} products`; }
+      else list = P.filter((x) => x.best);
+      $("grid").innerHTML = list.length ? list.map(card).join("") : `<p class="none">Nothing found. Try "serum" or "SPF".</p>`;
+      $("shopTitle").textContent = title; $("shopSub").textContent = sub;
+      $("clearFilter").hidden = !(filter.q || filter.concern || filter.type);
+      $("concerns").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.concern === filter.concern));
+    };
+    const goShop = () => $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+    $("concerns").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; filter = { type: null, concern: filter.concern === b.dataset.concern ? null : b.dataset.concern, q: "" }; render(); goShop(); });
+    document.querySelectorAll("[data-type]").forEach((a) => a.addEventListener("click", () => { filter = { type: a.dataset.type, concern: null, q: "" }; render(); closeNav(); }));
+    $("clearFilter").addEventListener("click", () => { filter = { type: null, concern: null, q: "" }; render(); });
+    render();
+
+    /* ---------- Routine bundle ---------- */
+    const rItems = ROUTINE.map(([id]) => P.find((x) => x.id === id));
+    const rTotal = rItems.reduce((s, x) => s + x.p, 0), rNow = Math.round(rTotal * 0.85 * 100) / 100;
+    $("steps").innerHTML = ROUTINE.map(([id, step], i) => { const x = P.find((p) => p.id === id); return `<li class="step reveal" style="--d:${i * 0.08}s"><span class="step__n">${step}</span><button class="step__img" data-quick="${x.id}" aria-label="View ${x.n}"><img src="${U(x.img, 500)}" alt="${x.n}" loading="lazy" /></button><h3>${x.n}</h3><p>${gbp(x.p)} · ${x.ml}</p></li>`; }).join("");
+    $("bundleItems").textContent = rItems.map((x) => x.n).join(" + ");
+    $("bundleWas").textContent = gbp(rTotal); $("bundleNow").textContent = gbp(rNow);
+
+    /* ---------- Bag ---------- */
+    let bag = [];
+    try { bag = JSON.parse(localStorage.getItem("dtBag") || "[]"); } catch (e) {}
+    const FREE = 30;
+    const renderBag = () => {
+      const n = bag.reduce((s, i) => s + i.q, 0), sub = bag.reduce((s, i) => s + i.q * i.p, 0);
+      $("bagCount").textContent = n; $("bagCount").classList.toggle("on", n > 0);
+      $("drawerList").innerHTML = bag.length ? bag.map((i, k) => `<li><img src="${U(i.img, 160)}" alt="" /><div><b>${i.n}</b><small>${i.ml}${i.sub ? " · Every 8 weeks" : ""}</small><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>${gbp(i.p * i.q)}</span><button data-rm="${k}" aria-label="Remove"><i class="ri-delete-bin-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-shopping-bag-3-line"></i><p>Your bag is empty.</p></li>`;
+      $("dSub").textContent = gbp(sub);
+      $("shipTxt").innerHTML = sub >= FREE ? "You've unlocked <b>free UK delivery</b>" : `Add <b>${gbp(FREE - sub)}</b> for free UK delivery`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      try { localStorage.setItem("dtBag", JSON.stringify(bag)); } catch (e) {}
+    };
+    const addItem = (it, msg) => { const f = bag.find((i) => i.key === it.key); f ? f.q++ : bag.push({ ...it, q: 1 }); renderBag(); toast(msg || `${it.n} added to bag`); $("bagBtn").classList.remove("bump"); void $("bagBtn").offsetWidth; $("bagBtn").classList.add("bump"); };
+    const addProduct = (x, size = [x.ml, x.p], sub = false) => addItem({ key: x.id + size[0] + sub, n: x.n, ml: size[0], p: sub ? Math.round(size[1] * 85) / 100 : size[1], img: x.img, sub });
+    $("bundleAdd").addEventListener("click", () => addItem({ key: "routine", n: "Morning Routine Set", ml: "4 full-size products", p: rNow, img: rItems[1].img }, "Morning routine added. You saved 15%."));
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.rm !== undefined) bag.splice(+b.dataset.rm, 1); else { const i = bag[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) bag.splice(+b.dataset.k, 1); } renderBag(); });
+    const openBag = () => { closeModal(); document.body.classList.add("bag-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeBag = () => { document.body.classList.remove("bag-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("bagBtn").addEventListener("click", openBag); $("drawerClose").addEventListener("click", closeBag); $("scrim").addEventListener("click", closeBag);
+    $("checkout").addEventListener("click", () => { if (!bag.length) return; bag = []; renderBag(); closeBag(); toast("Order confirmed. Free samples included."); });
+    renderBag();
+
+    /* ---------- Quick view ---------- */
+    let mItem = null, mSize = null;
+    const setPrice = () => { const p = $("mSub").checked ? Math.round(mSize[1] * 85) / 100 : mSize[1]; $("mPrice").innerHTML = ($("mSub").checked ? `<s>${gbp(mSize[1])}</s>` : "") + gbp(p); };
+    const openModal = (x) => {
+      mItem = x; mSize = [x.ml, x.p]; $("mSub").checked = false;
+      $("mImg").src = U(x.img, 1000); $("mImg").alt = x.n;
+      $("mType").textContent = x.type; $("mName").textContent = x.n;
+      $("mRate").innerHTML = `<span class="stars">${stars(x.r)}</span>${x.r} · ${x.rc.toLocaleString()} reviews`;
+      $("mDesc").textContent = x.d; $("mUse").textContent = x.use; $("mKey").textContent = x.key;
+      $("mTags").innerHTML = x.c.map((c) => `<span>${c === "Ageing" ? "Fine lines" : c === "Sun" ? "Sun care" : c}</span>`).join("");
+      const sizes = [[x.ml, x.p], ...(x.big ? [x.big] : [])];
+      $("mSizes").innerHTML = sizes.map((s, i) => `<button class="${i ? "" : "on"}" data-i="${i}">${s[0]}<small>${gbp(s[1])}</small></button>`).join("");
+      $("mSizes").onclick = (e) => { const b = e.target.closest("button"); if (!b) return; mSize = sizes[+b.dataset.i]; $("mSizes").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); setPrice(); };
+      setPrice();
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("mSub").addEventListener("change", setPrice);
+    $("mAdd").addEventListener("click", () => { addProduct(mItem, mSize, $("mSub").checked); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]"), q = e.target.closest("[data-quick]");
+      if (a) addProduct(P.find((x) => x.id === +a.dataset.add));
+      if (q) { closeSearch(); openModal(P.find((x) => x.id === +q.dataset.quick)); }
+    });
+
+    /* ---------- Search ---------- */
+    const openSearch = () => { document.body.classList.add("search-open"); $("search").setAttribute("aria-hidden", "false"); setTimeout(() => $("searchInput").focus(), 150); };
+    const closeSearch = () => { document.body.classList.remove("search-open"); $("search").setAttribute("aria-hidden", "true"); };
+    $("searchBtn").addEventListener("click", openSearch); $("searchClose").addEventListener("click", closeSearch);
+    $("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      const res = q ? P.filter((x) => (x.n + x.type + x.c.join(" ") + x.key).toLowerCase().includes(q)) : [];
+      $("searchRes").innerHTML = q ? (res.length ? res.map((x) => `<button data-quick="${x.id}"><img src="${U(x.img, 160)}" alt="" /><span><b>${x.n}</b>${x.type} · ${x.ml}</span><em>${gbp(x.p)}</em></button>`).join("") : `<p>No results for "${e.target.value}".</p>`) : "";
+    });
+
+    /* ---------- Ingredients ---------- */
+    const ING = [
+      ["Hyaluronic acid", "Holds up to 1,000 times its weight in water. We use three sizes so it hydrates the surface and deeper layers."],
+      ["Ceramides", "The fats that hold skin cells together. Topping them up repairs a dry, irritated barrier."],
+      ["Niacinamide", "Vitamin B3. Calms redness, refines pores and evens tone with daily use."],
+      ["Zinc oxide", "A mineral sunscreen filter that protects from UVA and UVB and is gentle on sensitive eyes."],
+      ["Retinal", "A faster-acting form of vitamin A that smooths fine lines with less irritation than retinol."],
+    ];
+    $("ings").innerHTML = ING.map(([n, t], i) => `<li class="${i ? "" : "open"}"><button aria-expanded="${!i}">${n}<i class="ri-add-line"></i></button><div><p>${t}</p></div></li>`).join("");
+    $("ings").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const li = b.parentElement, was = li.classList.contains("open"); $("ings").querySelectorAll("li").forEach((x) => { x.classList.remove("open"); x.firstElementChild.setAttribute("aria-expanded", "false"); }); if (!was) { li.classList.add("open"); b.setAttribute("aria-expanded", "true"); } });
+
+    /* ---------- Reviews ---------- */
+    const REV = [
+      ["Hydrating Serum", "My skin drinks this up. Two weeks in and the flaky patches around my nose are gone.", "Rachel P.", "Dry, sensitive", 5],
+      ["Barrier Cream", "The first moisturiser that doesn't sting my rosacea. Rich but sinks in within a minute.", "Tom H.", "Sensitive", 5],
+      ["Mineral SPF 50", "Zero white cast on my brown skin, which I genuinely didn't think was possible with a mineral SPF.", "Nadia A.", "Combination", 5],
+      ["Retinal Night Serum", "Started slowly as advised and had no peeling. My forehead lines are visibly softer after two months.", "Claire D.", "Normal", 4],
+    ];
+    $("reviews").innerHTML = REV.map(([p, q, n, t, r], i) => `<figure class="rev reveal" style="--d:${i * 0.08}s"><span class="stars">${stars(r)}</span><blockquote>“${q}”</blockquote><figcaption><b>${n}</b><span>${t} skin · ${p}</span></figcaption></figure>`).join("");
+
+    /* ---------- Misc ---------- */
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeBag(); closeSearch(); closeNav(); } });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 10), { passive: true });
+    document.querySelectorAll(".head, .perks__in > p, .concerns__list button").forEach((el, i) => { el.classList.add("reveal"); el.style.setProperty("--d", (i % 6) * 0.05 + "s"); });
+    const count = (el) => { const t = +el.dataset.count, t0 = performance.now(); const step = (now) => { const k = Math.min(1, (now - t0) / 1400); el.textContent = Math.round(t * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }; reduce ? (el.textContent = t) : requestAnimationFrame(step); };
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(count); io.unobserve(e.target); }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Thanks! Your 10% code is on its way."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

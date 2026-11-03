@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converso — AI Agent and Help Desk for Customer Support Teams</title>
+  <meta name="description" content="Converso is a customer support platform with a built-in AI agent. It answers from your help centre, takes actions in Shopify and Stripe, and hands off to your team with full context." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#top" class="logo"><span><i></i></span>converso</a>
+      <nav class="nav" id="nav">
+        <a href="#product">Product</a>
+        <a href="#how">AI agent</a>
+        <a href="#customers">Customers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#">Docs</a>
+      </nav>
+      <div class="header__right"><a href="#" class="signin">Sign in</a><a href="#demo" class="btn">Book a demo</a></div>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <h1>The help desk with an AI agent that <span class="u">actually closes</span> tickets.</h1>
+      <p class="hero__lead">Converso answers customers from your own help centre, checks orders and issues refunds within the limits you set — and passes everything else to your team with the full story.</p>
+      <div class="hero__btns"><a href="#pricing" class="btn">Start 14-day free trial</a><a href="#demo" class="btn btn--ghost">Book a demo</a></div>
+      <p class="hero__note">No credit card required. Works alongside Zendesk, Intercom and Gorgias.</p>
+
+      <div class="shot fade">
+        <div class="inbox">
+          <div class="rail"><i class="ri-inbox-2-fill on"></i><i class="ri-robot-2-line"></i><i class="ri-book-open-line"></i><i class="ri-bar-chart-2-line"></i><i class="ri-settings-3-line"></i></div>
+          <div class="list">
+            <div class="list__head"><b>Open</b><span>24 conversations</span></div>
+            <div class="conv on"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Emma Clarke <small>2m</small></b><p>My order hasn't arrived and it was supposed to…</p><span class="tag ai"><i class="ri-sparkling-line"></i>AI resolving</span></div></div>
+            <div class="conv"><span class="ini" style="background:#0ea5e9">JR</span><div><b>James Rowe <small>6m</small></b><p>Can I change the size on my order #48213?</p><span class="tag done">Resolved by AI</span></div></div>
+            <div class="conv"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Marcus Hill <small>11m</small></b><p>I was charged twice for my subscription</p><span class="tag human">Needs agent · Billing</span></div></div>
+            <div class="conv"><span class="ini" style="background:#f97316">SL</span><div><b>Sofia López <small>18m</small></b><p>¿Hacéis envíos a Canarias?</p><span class="tag done">Resolved by AI</span></div></div>
+            <div class="conv"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Hannah Price <small>25m</small></b><p>Discount code SPRING20 isn't working at checkout</p><span class="tag done">Resolved by AI</span></div></div>
+            <div class="conv"><span class="ini" style="background:#16a34a">DK</span><div><b>Daniel Kim <small>31m</small></b><p>Is the Aero jacket waterproof or just water…</p><span class="tag done">Resolved by AI</span></div></div>
+          </div>
+          <div class="thread">
+            <div class="thread__head"><b>Order not delivered</b><span>Web chat · English · Lumen Store</span></div>
+            <div class="msgs" id="msgs">
+              <div class="m m--in"><p>Hi, my order hasn't arrived and it was supposed to come yesterday. Order number is LM-20481.</p><small>Emma · 10:41</small></div>
+              <div class="action"><i class="ri-checkbox-circle-fill"></i><span>Looked up <b>LM-20481</b> in Shopify · tracking checked with Royal Mail</span></div>
+              <div class="m m--ai"><p>Sorry about the wait, Emma. Your parcel was delayed at the Bristol depot and is now out for delivery — Royal Mail expects it today before 6pm. I've refunded the £4.95 delivery charge to your Visa ending 4417.</p>
+                <div class="src"><span><i class="ri-file-text-line"></i>Late delivery policy</span><span><i class="ri-bank-card-line"></i>Stripe refund £4.95</span></div><small>Converso AI · 10:41</small></div>
+              <div class="m m--in"><p>Oh great, thank you!</p><small>Emma · 10:42</small></div>
+            </div>
+            <div class="compose"><i class="ri-sparkling-line"></i><span>AI is handling this conversation · Take over</span><i class="ri-attachment-2"></i></div>
+          </div>
+          <aside class="side">
+            <div><h6>Customer</h6><div class="cust"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Emma Clarke</b>emma.clarke@gmail.com</div></div></div>
+            <div><h6>Details</h6><div class="kv"><span>Location</span><b>Bristol, UK</b><span>Customer since</span><b>Mar 2024</b><span>Lifetime value</span><b>£612</b><span>Orders</span><b>9</b></div></div>
+            <div><h6>Latest order</h6><div class="ord"><div><b>LM-20481</b><span class="pill">Out for delivery</span></div><div style="margin-top:6px;color:var(--muted)"><span>2 items · £89.00</span><span>Royal Mail</span></div></div></div>
+            <div><h6>AI actions allowed</h6><div class="kv"><span>Refunds</span><b>Up to £10</b><span>Address change</span><b>Before dispatch</b></div></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <div class="logos">
+    <p>2,400 support teams run on Converso</p>
+    <div class="logos__row"><span><i class="ri-sun-fill"></i>Lumen</span><span><i class="ri-compass-3-fill"></i>Northwind</span><span><i class="ri-planet-fill"></i>Orbit</span><span><i class="ri-leaf-fill"></i>Fieldnote</span><span><i class="ri-gamepad-fill"></i>Arcade</span></div>
+  </div>
+
+  <!-- How the AI agent works -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="sh fade"><span class="label">How the AI agent works</span><h2>You decide what it knows, how it behaves and what it's allowed to do</h2></div>
+      <div class="how">
+        <div class="how__c fade"><div class="how__t"><small>1 · Knowledge</small><h3>Answers only from your content</h3><p>Sync your help centre, PDFs and past tickets. Every answer cites its source, and gaps are flagged for your team.</p></div>
+          <div class="how__ui"><div class="r"><i class="ri-global-line"></i>help.lumenstore.com<em class="ok">412 articles</em></div><div class="r"><i class="ri-file-pdf-2-line"></i>Returns-policy-2026.pdf<em class="ok">Synced</em></div><div class="r"><i class="ri-chat-history-line"></i>Resolved tickets (90 days)<em class="ok">18,240</em></div><div class="r"><i class="ri-shopping-bag-line"></i>Shopify catalogue<em>Syncing…</em></div></div></div>
+        <div class="how__c fade"><div class="how__t"><small>2 · Guidance</small><h3>Rules written in plain English</h3><p>Brief the agent like you'd brief a new hire. Test changes against real past conversations before going live.</p></div>
+          <div class="how__ui"><div class="rule"><b>Tone</b>Friendly and brief. Use the customer's first name. No exclamation marks.</div><div class="rule"><b>Escalation</b>Hand off to a person if the customer mentions a chargeback, legal action or asks twice.</div><div class="rule"><b>VIPs</b>Customers with lifetime value over £1,000 go straight to the priority queue.</div></div></div>
+        <div class="how__c fade"><div class="how__t"><small>3 · Actions</small><h3>Takes real actions, with limits</h3><p>Connect Shopify, Stripe and your own APIs. Each action has a limit and appears in the audit log.</p></div>
+          <div class="how__ui"><div class="r"><i class="ri-truck-line"></i>Track order<em>Shopify</em></div><div class="r"><i class="ri-refund-2-line"></i>Refund delivery fee<em>Stripe · max £10</em></div><div class="r"><i class="ri-map-pin-line"></i>Change address<em>Before dispatch</em></div><div class="r"><i class="ri-lock-password-line"></i>Password reset<em>Auth0</em></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product features -->
+  <section class="section section--light" id="product">
+    <div class="container">
+      <div class="feat fade">
+        <div class="feat__t"><span class="label">Help desk</span><h3>One inbox for every channel</h3><p>Chat, email, WhatsApp and social messages land in a shared inbox with assignments, SLAs and saved replies. The AI agent works in the same place your team does.</p>
+          <ul><li><i class="ri-check-line"></i>SLA timers and breach alerts per queue</li><li><i class="ri-check-line"></i>Collision detection so two agents never reply at once</li><li><i class="ri-check-line"></i>Macros, internal notes and @mentions</li></ul></div>
+        <div class="panel"><div class="panel__h"><b>Channels</b><small>6 connected</small></div>
+          <div class="chans">
+            <div><i class="ri-chat-smile-3-line" style="color:#6d28d9"></i><span><b>Web chat</b><small>Widget on 3 sites</small></span></div>
+            <div><i class="ri-mail-line" style="color:#0f172a"></i><span><b>Email</b><small>support@lumen…</small></span></div>
+            <div><i class="ri-whatsapp-line" style="color:#16a34a"></i><span><b>WhatsApp</b><small>Business API</small></span></div>
+            <div><i class="ri-instagram-line" style="color:#db2777"></i><span><b>Instagram</b><small>DMs &amp; replies</small></span></div>
+            <div><i class="ri-messenger-line" style="color:#2563eb"></i><span><b>Messenger</b><small>Lumen Store page</small></span></div>
+            <div><i class="ri-phone-line" style="color:#64748b"></i><span><b>Voice</b><small>Call summaries</small></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feat feat--rev fade">
+        <div class="feat__t"><span class="label">Reporting</span><h3>Know exactly what the AI resolves — and what it can't</h3><p>Resolution rates by topic, CSAT for AI versus human replies, and a list of questions the agent couldn't answer so you can fill the gaps.</p>
+          <ul><li><i class="ri-check-line"></i>Resolution rate and CSAT by topic and channel</li><li><i class="ri-check-line"></i>Content gaps with suggested articles</li><li><i class="ri-check-line"></i>Export to CSV, Looker or Snowflake</li></ul></div>
+        <div class="panel"><div class="panel__h"><b>AI performance · last 30 days</b><small>All channels</small></div>
+          <div class="rep">
+            <div class="rep__k"><div><small>Conversations</small><b>18,402</b></div><div><small>AI resolved</small><b>64%</b></div><div><small>AI CSAT</small><b>4.6 / 5</b></div><div><small>Handed off</small><b>6,624</b></div></div>
+            <table>
+              <tr><th>Topic</th><th>AI resolution</th><th>Volume</th></tr>
+              <tr><td>Order status</td><td><span class="bar"><i style="width:91%"></i></span>91%</td><td>5,840</td></tr>
+              <tr><td>Returns &amp; exchanges</td><td><span class="bar"><i style="width:78%"></i></span>78%</td><td>3,912</td></tr>
+              <tr><td>Discount codes</td><td><span class="bar"><i style="width:84%"></i></span>84%</td><td>1,206</td></tr>
+              <tr><td>Billing disputes</td><td><span class="bar"><i style="width:22%"></i></span>22%</td><td>904</td></tr>
+              <tr><td>Wholesale enquiries</td><td class="gap">Content gap</td><td>212</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section class="section">
+    <div class="container">
+      <div class="sh sh--c fade"><span class="label">Integrations</span><h2>Works with the stack you already have</h2><p>Use Converso as your full help desk, or add the AI agent on top of the one you use today.</p></div>
+      <div class="integ fade"><span><i class="ri-shopping-bag-3-line" style="color:#16a34a"></i>Shopify</span><span><i class="ri-bank-card-line" style="color:#635bff"></i>Stripe</span><span><i class="ri-customer-service-2-line" style="color:#03363d"></i>Zendesk</span><span><i class="ri-chat-1-line" style="color:#1f8ded"></i>Intercom</span><span><i class="ri-cloud-line" style="color:#00a1e0"></i>Salesforce</span><span><i class="ri-hub-line" style="color:#ff7a59"></i>HubSpot</span><span><i class="ri-slack-line" style="color:#4a154b"></i>Slack</span><span><i class="ri-whatsapp-line" style="color:#16a34a"></i>WhatsApp</span><span><i class="ri-notion-fill"></i>Notion</span><span><i class="ri-google-fill" style="color:#4285f4"></i>Google Drive</span><span><i class="ri-code-s-slash-line" style="color:#6d28d9"></i>REST API &amp; webhooks</span></div>
+    </div>
+  </section>
+
+  <!-- Customers -->
+  <section class="section section--light" id="customers">
+    <div class="container">
+      <div class="sh fade"><span class="label">Customers</span><h2>Results from teams like yours</h2></div>
+      <div class="cases">
+        <div class="case fade"><div class="case__co"><i class="ri-sun-fill" style="color:#f59e0b"></i>Lumen Store</div><div class="case__n"><div><b>68%</b><small>AI resolution</small></div><div><b>40s</b><small>First response (was 9h)</small></div></div><p>“We stopped hiring seasonal agents for Black Friday. Converso handled order-status questions and our team focused on the tricky ones.”</p><div class="case__who"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Hannah Price</b>Head of CX, Lumen Store</div></div></div>
+        <div class="case fade"><div class="case__co"><i class="ri-planet-fill" style="color:#6d28d9"></i>Orbit Bank</div><div class="case__n"><div><b>41%</b><small>AI resolution</small></div><div><b>+11 pts</b><small>CSAT</small></div></div><p>“Regulated industry, cautious rollout. The guidance rules and audit log gave our compliance team the confidence to say yes.”</p><div class="case__who"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Marcus Lee</b>Support Director, Orbit</div></div></div>
+        <div class="case fade"><div class="case__co"><i class="ri-gamepad-fill" style="color:#0ea5e9"></i>Arcade</div><div class="case__n"><div><b>11</b><small>Languages live</small></div><div><b>−38%</b><small>Cost per ticket</small></div></div><p>“We support players in eleven languages with one team. The AI replies natively and our agents see a translated summary.”</p><div class="case__who"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="" /><div><b>Sofia Martín</b>Player Support Lead, Arcade</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="sh fade"><span class="label">Pricing</span><h2>Help desk seats, plus a fixed price per AI resolution</h2><p>Prices per agent seat per month, billed annually. Monthly billing is also available.</p></div>
+      <div class="plans fade">
+        <div class="plan"><h3>Starter</h3><p>For small teams moving off a shared inbox.</p><div class="price"><b>$29</b> <span>/ seat / month</span></div><div class="plan__b">$35 billed monthly</div><a href="#" class="btn btn--ghost">Start free trial</a><ul><li><i class="ri-check-line"></i>Web chat &amp; email</li><li><i class="ri-check-line"></i>Shared inbox &amp; macros</li><li><i class="ri-check-line"></i>Help centre</li><li><i class="ri-check-line"></i>AI agent (pay per resolution)</li></ul></div>
+        <div class="plan plan--pop"><h3>Growth <small>Most popular</small></h3><p>For growing support teams on several channels.</p><div class="price"><b>$79</b> <span>/ seat / month</span></div><div class="plan__b">$95 billed monthly</div><a href="#" class="btn">Start free trial</a><ul><p>Everything in Starter, plus</p><li><i class="ri-check-line"></i>WhatsApp, Instagram &amp; Messenger</li><li><i class="ri-check-line"></i>AI actions (Shopify, Stripe)</li><li><i class="ri-check-line"></i>SLAs &amp; reporting</li><li><i class="ri-check-line"></i>Multiple brands</li></ul></div>
+        <div class="plan"><h3>Enterprise</h3><p>For large or regulated support organisations.</p><div class="price"><b>Custom</b></div><div class="plan__b">Annual contract</div><a href="#demo" class="btn btn--ghost">Book a demo</a><ul><p>Everything in Growth, plus</p><li><i class="ri-check-line"></i>Custom actions via API</li><li><i class="ri-check-line"></i>SSO, SCIM &amp; audit log</li><li><i class="ri-check-line"></i>HIPAA BAA &amp; EU hosting</li><li><i class="ri-check-line"></i>Dedicated success manager</li></ul></div>
+      </div>
+      <div class="ai-price fade"><b class="big">$0.89</b><div><h4>per AI resolution, on every plan</h4><p>You only pay when the customer confirms the answer helped or doesn't come back within 24 hours. Hand-offs to your team are free. Volume discounts from 5,000 resolutions a month.</p></div><a href="#" class="link">How we count resolutions <i class="ri-arrow-right-line"></i></a></div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="sh fade"><span class="label">Security &amp; privacy</span><h2>Your customers' data stays yours</h2></div>
+      <div class="sec fade">
+        <div><i class="ri-shield-check-line"></i><b>SOC 2 Type II</b><p>Audited annually. Report available under NDA.</p></div>
+        <div><i class="ri-earth-line"></i><b>EU or US hosting</b><p>Choose where conversation data is stored.</p></div>
+        <div><i class="ri-eye-off-line"></i><b>No model training</b><p>Your data is never used to train shared models.</p></div>
+        <div><i class="ri-user-unfollow-line"></i><b>PII redaction</b><p>Card numbers and IDs masked before processing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + demo -->
+  <section class="section" id="demo">
+    <div class="container faqd">
+      <div class="fade">
+        <span class="label">FAQ</span><h2 style="font-size:clamp(28px,3vw,38px);margin-bottom:24px">Common questions</h2>
+        <details open><summary>Do we have to replace our current help desk?<i class="ri-add-line"></i></summary><p>No. You can add the Converso AI agent to Zendesk, Intercom or Gorgias and keep your current workflows. Many teams move fully to Converso later to save on seat costs.</p></details>
+        <details><summary>What happens when the AI doesn't know the answer?<i class="ri-add-line"></i></summary><p>It tells the customer it's passing them to the team, then assigns the conversation with a summary and the steps it already took. You're not charged for hand-offs.</p></details>
+        <details><summary>How long does setup take?<i class="ri-add-line"></i></summary><p>Connecting your help centre and switching on the agent for one channel takes about an hour. Most teams test on 10–20% of traffic for a week before rolling out fully.</p></details>
+        <details><summary>Which languages are supported?<i class="ri-add-line"></i></summary><p>The agent replies in 45 languages, including Spanish, French, German, Arabic, Japanese and Portuguese, even if your help centre is only in English.</p></details>
+      </div>
+      <div class="demo fade" id="demo-box">
+        <h3>Book a 30-minute demo</h3>
+        <p>We'll connect a copy of your help centre and show you the agent answering your real questions.</p>
+        <form id="demo-form">
+          <div class="two"><input required placeholder="First name" aria-label="First name" /><input required placeholder="Last name" aria-label="Last name" /></div>
+          <input type="email" required placeholder="Work email" aria-label="Work email" />
+          <input placeholder="Company website" aria-label="Company website" />
+          <select aria-label="Support team size"><option>Support team size</option><option>1–5 agents</option><option>6–25 agents</option><option>26–100 agents</option><option>100+ agents</option></select>
+          <button class="btn" type="submit">Request demo</button>
+          <small>We'll reply within one business day.</small>
+        </form>
+        <div class="demo__ok"><b>Thanks — request received.</b>A product specialist will email you within one business day to schedule a time.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about"><a href="#top" class="logo"><span><i></i></span>converso</a><p>Customer support platform with a built-in AI agent. London &amp; San Francisco.</p></div>
+        <div><h5>Product</h5><ul><li><a href="#how">AI agent</a></li><li><a href="#product">Help desk</a></li><li><a href="#product">Reporting</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
+        <div><h5>Resources</h5><ul><li><a href="#">Documentation</a></li><li><a href="#">API</a></li><li><a href="#">Status</a></li><li><a href="#">Blog</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="#">About</a></li><li><a href="#customers">Customers</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+        <div><h5>Legal</h5><ul><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li><li><a href="#">DPA</a></li><li><a href="#">Trust centre</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Converso AI Ltd.</span><span class="soc"><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("burger").onclick = () => document.getElementById("nav").classList.toggle("open");
+    document.querySelectorAll("#nav a").forEach((a) => a.addEventListener("click", () => document.getElementById("nav").classList.remove("open")));
+    document.getElementById("demo-form").addEventListener("submit", (e) => { e.preventDefault(); document.getElementById("demo-box").classList.add("done"); });
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.1 });
+    document.querySelectorAll(".fade").forEach((el) => io.observe(el));
+
+    /* Hero thread plays out: customer message, AI looks it up, types, replies */
+    (() => {
+      const box = document.getElementById("msgs"); if (!box || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const items = [...box.children], typing = document.createElement("div");
+      typing.className = "typing"; typing.innerHTML = "<i></i><i></i><i></i>";
+      box.classList.add("play");
+      const steps = [[0, 500], [1, 1400], ["t", 2100], [2, 3300], [3, 4600]];
+      steps.forEach(([k, ms]) => setTimeout(() => {
+        if (k === "t") { box.insertBefore(typing, items[2]); requestAnimationFrame(() => typing.classList.add("show")); return; }
+        if (k === 2) typing.remove();
+        items[k].classList.add("show");
+      }, ms));
+    })();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

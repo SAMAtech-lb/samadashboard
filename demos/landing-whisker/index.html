@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whisker &amp; Co. — Everything for Cats</title>
+  <meta name="description" content="Whisker & Co. is a cat-only pet shop: fresh food, litter, toys, scratchers and beds, with free delivery over $45 and a monthly cat care box." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar"><div class="container topbar__in"><span><i class="ri-truck-line"></i> Free delivery on orders over $45</span><span><i class="ri-loop-left-line"></i> 30-day happy-cat guarantee</span><span><i class="ri-customer-service-2-line"></i> Cat experts on chat 8am–8pm</span></div></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><i class="ri-bear-smile-fill"></i>Whisker<span>&amp;Co.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#shop">Shop</a>
+        <a href="#best">Bestsellers</a>
+        <a href="#box">Monthly box</a>
+        <a href="#tips">Cat care</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#" class="icon-btn" aria-label="Account"><i class="ri-user-3-line"></i></a>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Open cart"><i class="ri-shopping-basket-2-line"></i><span id="cartCount">0</span></button>
+        <button class="icon-btn burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="chip"><i class="ri-truck-line"></i> Free delivery on orders over $45</span>
+        <h1>Everything your cat <span>secretly</span> wants.</h1>
+        <p>Fresh food, clumping litter, toys and cosy beds — picked by cat people, approved by very picky cats. Delivered to your door in 1–2 days.</p>
+        <div class="hero__btns">
+          <a href="#best" class="btn">Shop bestsellers <i class="ri-arrow-right-line"></i></a>
+          <a href="#box" class="btn btn--line">Try the monthly box</a>
+        </div>
+        <ul class="hero__trust">
+          <li><strong>48,000+</strong><span>cats served</span></li>
+          <li><strong>4.9 <i class="ri-star-fill"></i></strong><span>3,200 reviews</span></li>
+          <li><strong>1–2 days</strong><span>delivery</span></li>
+        </ul>
+      </div>
+
+      <div class="cat-stage" id="catStage">
+        <div class="cat" id="cat">
+          <img class="cat__img" src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?auto=format&fit=crop&w=1200&h=1200&q=85" alt="Mochi, a grey Scottish Fold cat, looking at you" />
+          <div class="eye eye--l"><div class="iris"><div class="pupil"></div></div><i class="glint"></i><b class="lid"></b></div>
+          <div class="eye eye--r"><div class="iris"><div class="pupil"></div></div><i class="glint"></i><b class="lid"></b></div>
+        </div>
+        
+        <div class="hero__tag"><img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=120&q=70" alt="" /><div><small>Mochi's favourite</small><strong>Salmon &amp; Pumpkin Kibble</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="title"><h2>Shop by <span>category</span></h2><p>Over 900 products for cats of every age.</p></div>
+      <div class="cats">
+        <a href="#best" class="catg" data-filter="Food"><span><i class="ri-restaurant-2-line"></i></span><strong>Food</strong><small>Dry, wet &amp; raw</small></a>
+        <a href="#best" class="catg" data-filter="Treats"><span><i class="ri-cake-3-line"></i></span><strong>Treats</strong><small>Crunchy &amp; lickable</small></a>
+        <a href="#best" class="catg" data-filter="Litter"><span><i class="ri-leaf-line"></i></span><strong>Litter</strong><small>Clumping, tofu, pine</small></a>
+        <a href="#best" class="catg" data-filter="Toys"><span><i class="ri-magic-line"></i></span><strong>Toys</strong><small>Wands, balls, catnip</small></a>
+        <a href="#best" class="catg" data-filter="Home"><span><i class="ri-home-heart-line"></i></span><strong>Beds &amp; trees</strong><small>Caves, towers, posts</small></a>
+        <a href="#best" class="catg" data-filter="Care"><span><i class="ri-heart-pulse-line"></i></span><strong>Health &amp; care</strong><small>Brushes, vitamins</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers -->
+  <section class="section section--soft" id="best">
+    <div class="container">
+      <div class="title title--row">
+        <div><h2>Bestsellers this <span>week</span></h2><p>Our own Whisker &amp; Co. range, made in small batches.</p></div>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Box -->
+  <section class="box" id="box">
+    <div class="container box__in">
+      <div class="box__img">
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=80" alt="Kitten reaching up playfully" loading="lazy" />
+        <span class="box__badge">First box<br /><b>50% off</b></span>
+      </div>
+      <div class="box__text">
+        <span class="chip chip--dark"><i class="ri-gift-line"></i> The Whisker Box</span>
+        <h2>A monthly box of joy, picked for your cat.</h2>
+        <p>Tell us your cat's age and taste, and every month we send 2 new toys, a bag of treats and a full month of their favourite food. Skip, pause or cancel any time.</p>
+        <div class="plans">
+          <div class="plan"><strong>Treats &amp; toys</strong><span>2 toys + 2 treat bags</span><b>$24<small>/month</small></b></div>
+          <div class="plan plan--pop"><em>Most popular</em><strong>Full box</strong><span>Toys, treats + 4 kg kibble</span><b>$49<small>/month</small></b></div>
+        </div>
+        <a href="#" class="btn">Build my cat's box <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="section">
+    <div class="container why">
+      <div class="why__item"><i class="ri-flask-line"></i><h3>Vet-formulated food</h3><p>Every recipe is made with a feline nutritionist and tested by 40 real cats.</p></div>
+      <div class="why__item"><i class="ri-truck-line"></i><h3>Delivered in 1–2 days</h3><p>Free over $45. Repeat orders arrive before the bag runs out.</p></div>
+      <div class="why__item"><i class="ri-emotion-happy-line"></i><h3>Happy-cat guarantee</h3><p>Cat turns up their nose? Return any food within 30 days, even opened.</p></div>
+      <div class="why__item"><i class="ri-chat-heart-line"></i><h3>Real cat experts</h3><p>Chat with our team of vet nurses and cat behaviourists, 7 days a week.</p></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--soft" id="reviews">
+    <div class="container">
+      <div class="title"><h2>Cats (and humans) <span>approve</span></h2><p>4.9 out of 5 from 3,200 verified reviews</p></div>
+      <div class="reviews">
+        <figure class="review"><img class="review__pet" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Pepper the cat" loading="lazy" /><div><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><blockquote>Pepper is the pickiest eater I know. She finished the salmon kibble and then sat by the cupboard asking for more.</blockquote><figcaption><strong>Laura &amp; Pepper</strong><span>Bought Salmon &amp; Pumpkin Kibble</span></figcaption></div></figure>
+        <figure class="review"><img class="review__pet" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=600&q=80" alt="Oscar the kitten" loading="lazy" /><div><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><blockquote>The tofu litter really doesn't smell, and there's no dust on the floor anymore. Delivery came the next day.</blockquote><figcaption><strong>Tom &amp; Oscar</strong><span>Bought Tofu Clumping Litter</span></figcaption></div></figure>
+        <figure class="review"><img class="review__pet" src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?auto=format&fit=crop&w=600&q=80" alt="Luna the kitten" loading="lazy" /><div><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><blockquote>Our monthly box is the highlight of Luna's month. She knows the sound of the delivery van now.</blockquote><figcaption><strong>Aisha &amp; Luna</strong><span>Whisker Box subscriber</span></figcaption></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section class="section" id="tips">
+    <div class="container">
+      <div class="title title--row"><div><h2>Cat care <span>guides</span></h2><p>Written by our vet nurses.</p></div><a href="#" class="btn btn--line btn--sm">All guides</a></div>
+      <div class="tips">
+        <a href="#" class="tip"><img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=600&q=75" alt="" loading="lazy" /><div><span>Kittens · 6 min</span><h3>Your kitten's first 30 days: a simple checklist</h3></div></a>
+        <a href="#" class="tip"><img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=75" alt="" loading="lazy" /><div><span>Nutrition · 5 min</span><h3>Wet or dry food? What vets actually recommend</h3></div></a>
+        <a href="#" class="tip"><img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=600&q=75" alt="" loading="lazy" /><div><span>Behaviour · 4 min</span><h3>Why your cat scratches the sofa (and how to stop it)</h3></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="news-band">
+    <div class="container news-band__in">
+      <div><h2>Get 15% off your first order</h2><p>Plus cat care tips and early access to new toys. One email a week, tops.</p></div>
+      <form class="news" id="news"><input type="email" placeholder="Your email address" aria-label="Email" required /><button class="btn">Get my code</button></form>
+      <p class="news__msg" id="newsMsg"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a href="#home" class="logo logo--light"><i class="ri-bear-smile-fill"></i>Whisker<span>&amp;Co.</span></a><p>The cat-only pet shop. Food, litter, toys and care, delivered across the US.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a></div></div>
+      <div><h4>Shop</h4><a href="#shop">Food</a><a href="#shop">Litter</a><a href="#shop">Toys</a><a href="#box">Monthly box</a></div>
+      <div><h4>Help</h4><a href="#">Delivery</a><a href="#">Returns</a><a href="#">Track order</a><a href="#">Contact us</a></div>
+      <div><h4>Company</h4><a href="#">About us</a><a href="#tips">Cat care guides</a><a href="#">Shelter partners</a><a href="#">Careers</a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Whisker &amp; Co.</span><span>Prices in USD. Free delivery over $45 in the contiguous US.</span></div>
+  </footer>
+
+  <!-- Cart -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Your basket">
+    <div class="drawer__head"><h3>Your basket</h3><button id="closeCart" aria-label="Close"><i class="ri-close-line"></i></button></div>
+    <div class="ship" id="ship"></div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot" id="cartFoot"><div class="drawer__row"><span>Subtotal</span><strong id="sub">$0</strong></div><button class="btn btn--block" id="checkout">Checkout <i class="ri-lock-line"></i></button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* ---------- Mochi: eyes follow the cursor ---------- */
+    const stage = $("catStage"), cat = $("cat");
+    const eyes = [...cat.querySelectorAll(".eye")].map((el) => ({ el, pupil: el.querySelector(".pupil"), x: 0, y: 0, tx: 0, ty: 0 }));
+    const head = { rx: 0, ry: 0, trx: 0, try_: 0 };
+    let dilate = 1, tDilate = 1, lastMove = performance.now(), idle = true;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function aim(px, py) {
+      lastMove = performance.now(); idle = false;
+      eyes.forEach((e) => {
+        const r = e.el.getBoundingClientRect();
+        const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        const dx = px - cx, dy = py - cy, dist = Math.hypot(dx, dy) || 1;
+        const reach = Math.min(dist / 200, 1);            // how far the pupil travels
+        e.tx = (dx / dist) * reach * r.width * 0.3;
+        e.ty = (dy / dist) * reach * r.height * 0.22;
+      });
+      const s = stage.getBoundingClientRect();
+      const nx = (px - (s.left + s.width / 2)) / innerWidth, ny = (py - (s.top + s.height * 0.3)) / innerHeight;
+      head.try_ = Math.max(-1, Math.min(1, nx * 2)) * 5;  // degrees
+      head.trx = Math.max(-1, Math.min(1, ny * 2)) * -4;
+      // pupils widen when the cursor comes close (curious), narrow when far
+      const d = Math.hypot(px - (s.left + s.width / 2), py - (s.top + s.height * 0.25));
+      tDilate = d < 220 ? 2.1 : d < 480 ? 1.5 : 1;
+    }
+    addEventListener("pointermove", (e) => aim(e.clientX, e.clientY), { passive: true });
+    addEventListener("touchmove", (e) => { const t = e.touches[0]; if (t) aim(t.clientX, t.clientY); }, { passive: true });
+
+    // when nobody moves for a while, Mochi looks around on her own
+    let wander = 0;
+    function idleLook(t) {
+      wander += 1;
+      const r = stage.getBoundingClientRect();
+      const ang = t / 1600, x = r.left + r.width / 2 + Math.cos(ang) * 420, y = r.top + r.height * 0.25 + Math.sin(ang * 1.7) * 180;
+      aim(x, y); idle = true; lastMove -= 0;
+    }
+
+    function frame(t) {
+      if (performance.now() - lastMove > 3500) { idleLook(t); lastMove = performance.now() - 3500; }
+      const k = reduce ? 1 : 0.14;                          // spring-ish easing toward the target
+      eyes.forEach((e) => {
+        e.x += (e.tx - e.x) * k; e.y += (e.ty - e.y) * k;
+        e.pupil.style.transform = `translate(${e.x.toFixed(2)}px, ${e.y.toFixed(2)}px) scaleX(${dilate.toFixed(3)})`;
+      });
+      dilate += (tDilate - dilate) * 0.06;
+      if (!reduce) {
+        head.rx += (head.trx - head.rx) * 0.06; head.ry += (head.try_ - head.ry) * 0.06;
+        const breathe = Math.sin(t / 1100) * 0.006;
+        cat.style.transform = `perspective(1400px) rotateX(${head.rx.toFixed(2)}deg) rotateY(${head.ry.toFixed(2)}deg) scale(${(1.04 + breathe).toFixed(4)})`;
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    // natural blinking every 3–6 seconds, sometimes a double blink
+    function blink() {
+      cat.classList.add("blink");
+      setTimeout(() => cat.classList.remove("blink"), 170);
+      const again = Math.random() < 0.2;
+      setTimeout(again ? () => { cat.classList.add("blink"); setTimeout(() => cat.classList.remove("blink"), 150); setTimeout(blink, 3000 + Math.random() * 3000); } : blink, again ? 320 : 3000 + Math.random() * 3000);
+    }
+    if (!reduce) setTimeout(blink, 2200);
+
+    // click the cat for a slow blink
+    stage.addEventListener("click", () => {
+      cat.classList.add("slow-blink"); setTimeout(() => cat.classList.remove("slow-blink"), 900);
+    });
+
+    /* ---------- Products ---------- */
+    const PRODUCTS = [
+      { id: "p1", n: "Salmon & Pumpkin Kibble", c: "Food", d: "Grain-free · 2 kg", p: 34, was: 39, img: "1589924691995-400dc9ecc119", tag: "Bestseller", r: 4.9, rc: 812 },
+      { id: "p2", n: "Tuna Pâté, 12 cans", c: "Food", d: "Wet food · 12 × 85 g", p: 21, img: "1513245543132-31f507417b26", r: 4.8, rc: 403 },
+      { id: "p3", n: "Freeze-Dried Chicken Bites", c: "Treats", d: "Single ingredient · 60 g", p: 9, img: "1543852786-1cf6624b9987", tag: "New", r: 4.9, rc: 156 },
+      { id: "p4", n: "Tofu Clumping Litter", c: "Litter", d: "Flushable, low dust · 6 L", p: 18, img: "1514888286974-6c03e2ca1dba", r: 4.7, rc: 640 },
+      { id: "p5", n: "Feather Wand Teaser", c: "Toys", d: "Telescopic, 3 refills", p: 12, img: "1592194996308-7b43878e84a6", r: 4.8, rc: 290 },
+      { id: "p6", n: "Felt Cave Bed", c: "Home", d: "Hand-felted wool · 40 cm", p: 59, img: "1494256997604-768d1f608cac", tag: "Mochi's pick", r: 4.9, rc: 221 },
+      { id: "p7", n: "Sisal Scratching Post", c: "Home", d: "Heavy base · 70 cm", p: 39, img: "1574158622682-e40e69881006", r: 4.6, rc: 188 },
+      { id: "p8", n: "Self-Grooming Brush", c: "Care", d: "Soft pins, removes 90% loose fur", p: 16, img: "1573865526739-10659fec78a5", r: 4.7, rc: 132 },
+    ];
+    const ALL = Object.fromEntries(PRODUCTS.map((p) => [p.id, p]));
+    const FILTERS = ["All", "Food", "Treats", "Litter", "Toys", "Home", "Care"];
+    let filter = "All";
+    function renderProducts() {
+      $("filters").innerHTML = FILTERS.map((f) => `<button class="${f === filter ? "on" : ""}" data-f="${f}">${f === "Home" ? "Beds & trees" : f}</button>`).join("");
+      const list = PRODUCTS.filter((p) => filter === "All" || p.c === filter);
+      $("products").innerHTML = list.length ? list.map((p) => `
+        <article class="prod">
+          <div class="prod__img"><img src="${U(p.img)}" alt="${p.n}" loading="lazy" />${p.tag ? `<span class="prod__tag">${p.tag}</span>` : ""}${p.was ? `<span class="prod__sale">-${Math.round((1 - p.p / p.was) * 100)}%</span>` : ""}</div>
+          <div class="prod__body">
+            <div class="prod__rating"><i class="ri-star-fill"></i> ${p.r} <span>(${p.rc})</span></div>
+            <h3>${p.n}</h3><p>${p.d}</p>
+            <div class="prod__foot"><div><strong>$${p.p}</strong>${p.was ? `<s>$${p.was}</s>` : ""}</div><button class="add" data-add="${p.id}"><i class="ri-shopping-basket-2-line"></i> Add</button></div>
+          </div>
+        </article>`).join("") : `<p class="empty-filter">More coming soon.</p>`;
+    }
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) { filter = b.dataset.f; renderProducts(); } });
+    document.querySelectorAll(".catg").forEach((a) => a.addEventListener("click", () => { filter = a.dataset.filter; renderProducts(); }));
+    renderProducts();
+
+    /* ---------- Cart ---------- */
+    let cart = {};
+    try { cart = JSON.parse(localStorage.getItem("whisker-cart")) || {}; } catch (e) { cart = {}; }
+    const save = () => { try { localStorage.setItem("whisker-cart", JSON.stringify(cart)); } catch (e) {} };
+    const FREE = 45;
+    function toast(m) { $("toast").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 2200); }
+    function renderCart() {
+      const ids = Object.keys(cart).filter((k) => ALL[k]);
+      const count = ids.reduce((s, k) => s + cart[k], 0), sub = ids.reduce((s, k) => s + ALL[k].p * cart[k], 0);
+      $("cartCount").textContent = count; $("cartCount").classList.toggle("has", count > 0);
+      const left = Math.max(0, FREE - sub);
+      $("ship").innerHTML = `<p>${left ? `Add <b>$${left}</b> more for free delivery` : `<i class="ri-checkbox-circle-fill"></i> Free delivery unlocked`}</p><div class="ship__bar"><i style="transform:scaleX(${Math.min(sub / FREE, 1)})"></i></div>`;
+      if (!ids.length) { $("cartItems").innerHTML = `<div class="empty"><i class="ri-shopping-basket-2-line"></i><strong>Your basket is empty</strong><span>Browse bestsellers to get started.</span></div>`; $("cartFoot").hidden = true; return; }
+      $("cartFoot").hidden = false;
+      $("cartItems").innerHTML = ids.map((k) => { const p = ALL[k]; return `<div class="line"><img src="${U(p.img, 160)}" alt="" /><div class="line__info"><strong>${p.n}</strong><span>$${p.p}</span></div><div class="qty"><button data-q="${k}" data-d="-1" aria-label="Remove one"><i class="ri-subtract-line"></i></button><span>${cart[k]}</span><button data-q="${k}" data-d="1" aria-label="Add one"><i class="ri-add-line"></i></button></div></div>`; }).join("");
+      $("sub").textContent = `$${sub}`;
+    }
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]");
+      if (a) { const k = a.dataset.add; cart[k] = (cart[k] || 0) + 1; save(); renderCart(); toast(`${ALL[k].n} added to your basket`); }
+      const q = e.target.closest("[data-q]");
+      if (q) { const k = q.dataset.q; cart[k] += +q.dataset.d; if (cart[k] <= 0) delete cart[k]; save(); renderCart(); }
+    });
+    const openCart = () => document.body.classList.add("cart-open"), closeCart = () => document.body.classList.remove("cart-open");
+    $("cartBtn").addEventListener("click", openCart); $("closeCart").addEventListener("click", closeCart); $("overlay").addEventListener("click", closeCart);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeCart(); });
+    $("checkout").addEventListener("click", () => { $("cartItems").innerHTML = `<div class="empty"><i class="ri-checkbox-circle-fill ok"></i><strong>Order placed!</strong><span>Demo checkout — a real store would continue to payment here.</span></div>`; $("cartFoot").hidden = true; cart = {}; save(); $("cartCount").textContent = 0; $("cartCount").classList.remove("has"); });
+    renderCart();
+
+    /* ---------- Misc ---------- */
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Your 15% code is on its way to your inbox."; e.target.reset(); });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 30), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

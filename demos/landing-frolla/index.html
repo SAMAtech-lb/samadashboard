@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frolla Gelato — Small-Batch Gelato Made Fresh Every Morning</title>
+  <meta name="description" content="Frolla is a small-batch gelateria in Lisbon. 24 flavours churned every morning, dairy-free sorbetti, party tubs to pre-order and a build-your-own cone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__cone"><i></i></span>frolla<small>gelato</small></a>
+      <nav class="nav" id="nav">
+        <a href="#flavours">Flavours</a>
+        <a href="#build">Build a cone</a>
+        <a href="#tubs">Party tubs</a>
+        <a href="#story">Our lab</a>
+        <a href="#shops">Shops</a>
+      </nav>
+      <a href="tel:+351213456789" class="header__phone"><i class="ri-phone-fill"></i> 21 345 6789</a>
+      <button class="bag-btn" id="bagBtn" aria-label="Open order bag"><i class="ri-shopping-bag-3-fill"></i><span id="bagCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <canvas class="hero__sprinkles" id="sprinkles" aria-hidden="true"></canvas>
+    <div class="container hero__in">
+      <div class="hero__copy">
+        <p class="open-badge" id="openBadge"><i></i> <span>Checking opening hours…</span></p>
+        <h1 class="hero__title"><span>Churned</span> <span>this <em>morning.</em></span> <span>Gone by tonight.</span></h1>
+        <p class="hero__lead">Small-batch gelato from Alfama, made every day at 7 am with Azores milk, Sicilian pistachios and fruit from the Ribeira market. 24 flavours, never frozen overnight.</p>
+        <div class="hero__ctas">
+          <a href="#build" class="btn">Build your cone <i class="ri-arrow-right-line"></i></a>
+          <a href="#flavours" class="btn btn--line">Today's flavours</a>
+        </div>
+        <div class="hero__rating">
+          <div class="faces"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="" /></div>
+          <p><b>4.9 ★</b> from 3,200 Google reviews<br /><span>"Best pistachio in Lisbon" — Time Out</span></p>
+        </div>
+      </div>
+      <div class="hero__art">
+        <div class="hero__blob"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1100&q=80" alt="Hand holding a pink gelato cone against a yellow wall" /></div>
+        <div class="sticker sticker--1"><strong>24</strong><span>flavours<br />today</span></div>
+        <div class="sticker sticker--2"><i class="ri-leaf-fill"></i> 9 dairy-free</div>
+        <svg class="hero__circle" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" /></defs><text><textPath href="#circ">made fresh every morning · made fresh every morning · </textPath></text></svg>
+      </div>
+    </div>
+    <p class="hero__hint"><i class="ri-cursor-fill"></i> Psst — wiggle your cursor</p>
+  </section>
+
+  <!-- Flavour marquee -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip__track" id="strip"></div>
+  </div>
+
+  <!-- Flavours -->
+  <section class="section" id="flavours">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">In the counter today</p>
+        <h2>Today's <span>flavours</span></h2>
+        <p>The board changes daily with what the market has. Tap a flavour to put it straight on your cone.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="on" data-f="all">All <b></b></button>
+        <button data-f="classic">Classics <b></b></button>
+        <button data-f="vegan">Dairy-free <b></b></button>
+        <button data-f="nuts">With nuts <b></b></button>
+        <button data-f="season">Seasonal <b></b></button>
+      </div>
+      <div class="flavs" id="flavs"></div>
+    </div>
+  </section>
+
+  <!-- Build a cone -->
+  <section class="section build" id="build">
+    <div class="container build__in">
+      <div class="build__stage">
+        <div class="build__bg"></div>
+        <div class="treat" id="treat">
+          <div class="scoops" id="scoops"></div>
+          <div class="holder" id="holder"></div>
+        </div>
+        <p class="build__empty" id="buildEmpty">Pick a flavour to start your cone →</p>
+        <button class="build__reset" id="reset" aria-label="Start again"><i class="ri-refresh-line"></i></button>
+      </div>
+      <div class="build__panel">
+        <p class="kicker">Build your own</p>
+        <h2 class="h2">Your cone, <span>your rules.</span></h2>
+        <div class="step"><h4><b>1</b> Cone or cup?</h4>
+          <div class="seg" id="holders">
+            <button class="on" data-h="cone">Waffle cone</button><button data-h="choc">Choc-dipped cone <small>+€0.80</small></button><button data-h="cup">Cup</button>
+          </div>
+        </div>
+        <div class="step"><h4><b>2</b> Up to 3 scoops <span id="scoopHint">0 / 3</span></h4>
+          <div class="swatches" id="swatches"></div>
+        </div>
+        <div class="step"><h4><b>3</b> Toppings <small>€0.60 each</small></h4>
+          <div class="tops" id="tops">
+            <button data-t="sprinkles"><span class="tdot tdot--spr"></span>Rainbow sprinkles</button>
+            <button data-t="sauce"><span class="tdot tdot--sauce"></span>Warm chocolate</button>
+            <button data-t="crumble"><span class="tdot tdot--crumb"></span>Hazelnut crumble</button>
+            <button data-t="wafer"><span class="tdot tdot--wafer"></span>Wafer roll</button>
+          </div>
+        </div>
+        <div class="build__total">
+          <div><span id="buildDesc">Nothing yet</span><strong id="buildPrice">€0.00</strong></div>
+          <button class="btn" id="addCone" disabled><i class="ri-shopping-bag-3-line"></i> Add to order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="section story" id="story">
+    <div class="container story__in">
+      <div class="story__imgs">
+        <img class="story__a" src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?auto=format&fit=crop&w=800&q=80" alt="Chocolate gelato in a waffle cone" loading="lazy" />
+        <img class="story__b" src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=600&q=80" alt="Scoops of peach gelato" loading="lazy" />
+      </div>
+      <div class="story__copy">
+        <p class="kicker">Our lab</p>
+        <h2 class="h2">Two Italians, one Portuguese grandmother and a <span>very loud machine.</span></h2>
+        <p>Giulia trained at the Carpigiani Gelato University in Bologna. Tiago grew up above his avó's pastelaria on Rua dos Remédios. In 2019 they opened Frolla in her old shop, kept her marble counter, and started churning.</p>
+        <p>Every batch is 6 litres. When a flavour runs out, it's gone until tomorrow — that's how you know it was made today.</p>
+        <ul class="story__facts">
+          <li><strong>7 am</strong><span>first batch every day</span></li>
+          <li><strong>0</strong><span>powders, pastes or colourings</span></li>
+          <li><strong>6 L</strong><span>batches, so nothing sits</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Party tubs -->
+  <section class="section tubs" id="tubs">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">Birthdays, dinners, Tuesdays</p>
+        <h2>Pre-order a <span>party tub</span></h2>
+        <p>Packed in insulated boxes that keep for 2 hours. Order by 6 pm for next-day pick-up.</p>
+      </div>
+      <div class="tubs__grid">
+        <div class="tub-sizes" id="tubSizes"></div>
+        <form class="tub-form" id="tubForm">
+          <h3>Your tub</h3>
+          <p class="tub-form__size" id="tubSizeLabel"></p>
+          <span class="lbl">Choose <b id="tubMax">2</b> flavours</span>
+          <div class="tub-flavs" id="tubFlavs"></div>
+          <div class="tub-form__row">
+            <label>Pick-up day<select id="tubDay"></select></label>
+            <label>Shop<select><option>Alfama</option><option>Príncipe Real</option><option>Cascais</option></select></label>
+          </div>
+          <label>Name<input required placeholder="Ana Ribeiro" /></label>
+          <div class="tub-form__foot">
+            <strong id="tubPrice">€0</strong>
+            <button class="btn" type="submit">Reserve tub</button>
+          </div>
+          <p class="ok" id="tubOk"><i class="ri-checkbox-circle-fill"></i> <span></span></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">Love letters</p>
+        <h2>People queue <span>in the rain.</span></h2>
+      </div>
+      <div class="revs" id="revs"></div>
+    </div>
+  </section>
+
+  <!-- Shops -->
+  <section class="section shops" id="shops">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">Come say olá</p>
+        <h2>Three shops, <span>one freezer</span> we love</h2>
+      </div>
+      <div class="shops__grid" id="shopsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section class="insta">
+    <div class="insta__head container"><h3><i class="ri-instagram-line"></i> @frolla.gelato</h3><a href="#" class="btn btn--line btn--sm">Follow us</a></div>
+    <div class="insta__row" id="insta"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="logo"><span class="logo__cone"><i></i></span>frolla<small>gelato</small></a>
+          <p>Small-batch gelato, made fresh every morning in Lisbon since 2019.</p>
+          <div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></div>
+        </div>
+        <div><h4>Visit</h4><a href="#shops">Alfama</a><a href="#shops">Príncipe Real</a><a href="#shops">Cascais</a></div>
+        <div><h4>Order</h4><a href="#build">Build a cone</a><a href="#tubs">Party tubs</a><a href="#">Weddings &amp; events</a><a href="#">Gift cards</a></div>
+        <div>
+          <h4>Flavour of the week</h4>
+          <p>One email on Friday with next week's specials. Plus a free scoop on your birthday.</p>
+          <form class="news" id="news"><input type="email" required placeholder="your@email.com" aria-label="Email" /><button aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button></form>
+          <p class="news__ok" id="newsOk">Obrigada! See you Friday.</p>
+        </div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Frolla Gelato Lda · Rua dos Remédios 81, 1100-445 Lisboa</span><span><a href="#">Allergens</a> · <a href="#">Privacy</a></span></div>
+    </div>
+  </footer>
+
+  <!-- Bag drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="bag" id="bag" aria-label="Your order">
+    <div class="bag__head"><h3>Your order</h3><button id="bagClose" aria-label="Close"><i class="ri-close-line"></i></button></div>
+    <ul class="bag__list" id="bagList"></ul>
+    <div class="bag__foot">
+      <label>Pick up at Alfama<select id="pickTime"></select></label>
+      <div class="bag__total"><span>Total</span><strong id="bagTotal">€0.00</strong></div>
+      <button class="btn btn--block" id="checkout">Order &amp; pay at pick-up</button>
+      <p class="ok" id="bagOk"><i class="ri-checkbox-circle-fill"></i> <span></span></p>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const eur = (n) => "€" + n.toFixed(2);
+    function toast(t) { const el = $("toast"); el.innerHTML = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2200); }
+
+    // Header
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 20);
+      let cur = ""; document.querySelectorAll("section[id]").forEach((s) => { if (scrollY + 130 >= s.offsetTop) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    }, { passive: true });
+    $("burger").addEventListener("click", () => $("nav").classList.toggle("open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") $("nav").classList.remove("open"); });
+
+    // ---------- Data ----------
+    const FLAVS = [
+      { id: "pist", n: "Pistachio di Bronte", d: "Sicilian pistachios, roasted and ground here. Nothing else green in it.", c: "#b9d48f", s: "#7f9c56", tags: ["classic", "nuts"], extra: 0.5, star: true },
+      { id: "fior", n: "Fior di latte", d: "Just Azores milk, cream and a little sugar. The purest test of a gelateria.", c: "#fbf3e3", s: "#efe2c8", tags: ["classic"] },
+      { id: "stra", n: "Stracciatella", d: "Fior di latte with 70% chocolate drizzled in while it churns.", c: "#f7efe1", s: "#3b2418", tags: ["classic"] },
+      { id: "choc", n: "Dark chocolate 70%", d: "Made with water, not milk, so the cacao is louder. Dairy-free.", c: "#5a3424", s: "#3d2116", tags: ["classic", "vegan"] },
+      { id: "straw", n: "Strawberry sorbetto", d: "Ribatejo strawberries, lemon and sugar. Tastes like June.", c: "#ff7598", s: "#e2456f", tags: ["vegan"] },
+      { id: "hazel", n: "Nocciola Piemonte", d: "IGP hazelnuts from Piedmont, toasted until the kitchen smells of them.", c: "#c99b6c", s: "#9b6c40", tags: ["classic", "nuts"] },
+      { id: "car", n: "Salted caramel & flor de sal", d: "Burnt-sugar caramel with Aveiro sea salt flakes.", c: "#dea05a", s: "#b8742f", tags: ["classic"] },
+      { id: "mango", n: "Mango & lime", d: "Alphonso mango with lime zest. Dairy-free and very orange.", c: "#ffc44d", s: "#f29f1c", tags: ["vegan"] },
+      { id: "lemon", n: "Lemon & basil", d: "Algarve lemons with basil from our window box.", c: "#f6f0a0", s: "#b8c26a", tags: ["vegan"] },
+      { id: "pastel", n: "Pastel de nata", d: "Custard gelato with caramelised pastry pieces and cinnamon.", c: "#f6d79a", s: "#c98b3d", tags: ["season"], star: true },
+      { id: "fig", n: "Fig & ricotta", d: "Late-summer figs swirled through sheep's milk ricotta.", c: "#d9a0b4", s: "#8a3b5a", tags: ["season"] },
+      { id: "blue", n: "Blueberry cheesecake", d: "Cream cheese gelato, blueberry ripple and biscuit crumbs.", c: "#a796dd", s: "#5d4aa8", tags: ["season"] },
+    ];
+    const byId = (id) => FLAVS.find((f) => f.id === id);
+    const TAGNAME = { classic: "Classic", vegan: "Dairy-free", nuts: "Nuts", season: "Seasonal" };
+
+    // Marquee strip
+    const stripHTML = FLAVS.map((f) => `<span><i style="background:${f.c}"></i>${f.n}</span>`).join("");
+    $("strip").innerHTML = stripHTML + stripHTML;
+
+    // ---------- Open now ----------
+    const SHOPS = [
+      { n: "Alfama", a: "Rua dos Remédios 81", img: "1501443762994-82bd5dace89a", h: [12, 23], note: "The original — avó's marble counter" },
+      { n: "Príncipe Real", a: "Praça do Príncipe Real 12", img: "1563805042-7684c019e1cb", h: [11, 24], note: "Garden seating under the cedar tree" },
+      { n: "Cascais", a: "Rua Frederico Arouca 34", img: "1580915411954-282cb1b0d780", h: [11, 22], note: "Two minutes from the beach" },
+    ];
+    function lisbonHour() { const t = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Lisbon" }); return +t.slice(0, 2) + +t.slice(3) / 60; }
+    function hoursTxt(h) { return `${h[0]}:00 – ${h[1] === 24 ? "midnight" : h[1] + ":00"}`; }
+    function renderShops() {
+      const now = lisbonHour();
+      const open = (s) => now >= s.h[0] && now < s.h[1];
+      const a = SHOPS[0];
+      $("openBadge").classList.toggle("closed", !open(a));
+      $("openBadge").querySelector("span").textContent = open(a) ? `Open now in Alfama · until ${a.h[1]}:00` : `Closed now · opens at ${a.h[0]}:00`;
+      $("shopsGrid").innerHTML = SHOPS.map((s) => `
+        <article class="shop">
+          <div class="shop__img"><img src="${U(s.img, 700)}" alt="Gelato at Frolla ${s.n}" loading="lazy" /><span class="shop__badge ${open(s) ? "" : "closed"}"><i></i>${open(s) ? "Open now" : "Closed"}</span></div>
+          <div class="shop__body"><h3>${s.n}</h3><p>${s.note}</p>
+          <ul><li><i class="ri-map-pin-2-line"></i>${s.a}</li><li><i class="ri-time-line"></i>Daily ${hoursTxt(s.h)}</li></ul>
+          <a href="#" class="shop__dir">Directions <i class="ri-arrow-right-up-line"></i></a></div>
+        </article>`).join("");
+    }
+    renderShops(); setInterval(renderShops, 60000);
+
+    // ---------- Flavours grid ----------
+    let filter = "all";
+    const scoopHTML = (f, cls = "") => `<span class="scoop ${cls}" style="--c:${f.c};--s:${f.s}"></span>`;
+    function renderFlavs() {
+      document.querySelectorAll("#filters button").forEach((b) => { b.querySelector("b").textContent = b.dataset.f === "all" ? FLAVS.length : FLAVS.filter((f) => f.tags.includes(b.dataset.f)).length; });
+      const list = FLAVS.filter((f) => filter === "all" || f.tags.includes(filter));
+      $("flavs").innerHTML = list.map((f, i) => `
+        <button class="flav" data-id="${f.id}" style="--d:${i}">
+          ${f.star ? '<span class="flav__star">Bestseller</span>' : ""}
+          <div class="flav__art">${scoopHTML(f)}</div>
+          <h3>${f.n}</h3><p>${f.d}</p>
+          <div class="flav__tags">${f.tags.map((t) => `<span class="tag tag--${t}">${TAGNAME[t]}</span>`).join("")}${f.extra ? `<span class="tag">+€${f.extra.toFixed(2)}</span>` : ""}</div>
+          <span class="flav__add"><i class="ri-add-line"></i> Add to my cone</span>
+        </button>`).join("");
+    }
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (!b) return; filter = b.dataset.f; document.querySelectorAll("#filters button").forEach((x) => x.classList.toggle("on", x === b)); renderFlavs(); });
+    $("flavs").addEventListener("click", (e) => { const b = e.target.closest(".flav"); if (!b) return; if (addScoop(b.dataset.id)) { $("build").scrollIntoView({ behavior: "smooth" }); } });
+    renderFlavs();
+
+    // ---------- Build a cone ----------
+    const cone = { holder: "cone", scoops: [], tops: new Set() };
+    const PRICE = [0, 3.5, 5.5, 7];
+    $("swatches").innerHTML = FLAVS.map((f) => `<button data-id="${f.id}" title="${f.n}" aria-label="${f.n}">${scoopHTML(f, "scoop--mini")}<span>${f.n.split(" ")[0]}</span></button>`).join("");
+    function addScoop(id) {
+      if (cone.scoops.length >= 3) { toast('<i class="ri-error-warning-fill"></i> Three scoops is the limit — even for us.'); $("treat").classList.remove("wobble"); void $("treat").offsetWidth; $("treat").classList.add("wobble"); return false; }
+      cone.scoops.push(id); renderCone(true); return true;
+    }
+    function renderCone(dropped) {
+      const n = cone.scoops.length;
+      // cone: a straight stack · cup: side by side, the third scoop sits on top of the two
+      const cup = cone.holder === "cup";
+      const pos = (i) => !cup ? [0, i * 100] : n === 1 ? [0, 0] : i < 2 ? [i ? 46 : -46, 0] : [0, 78];
+      const topY = cup ? (n === 3 ? 78 : 0) : (n - 1) * 100;
+      $("scoops").style.setProperty("--top", topY + "px");
+      $("scoops").innerHTML = cone.scoops.map((id, i) => `<div class="stack-scoop ${dropped && i === n - 1 ? "drop" : ""}" style="--i:${i};--x:${pos(i)[0]}px;--y:${pos(i)[1]}px">${scoopHTML(byId(id), "scoop--big")}</div>`).join("") +
+        (cone.tops.has("sauce") && n ? '<div class="top top--sauce" style="--n:' + n + '"></div>' : "") +
+        (cone.tops.has("sprinkles") && n ? '<div class="top top--spr" style="--n:' + n + '">' + Array.from({ length: 22 }, (_, k) => `<i style="--x:${(k * 37) % 100};--y:${(k * 53) % 60};--r:${(k * 71) % 180}deg;--c:${["#ff6f91", "#ffc44d", "#7cc6ff", "#a8d5a2", "#fff", "#b38cff"][k % 6]}"></i>`).join("") + "</div>" : "") +
+        (cone.tops.has("crumble") && n ? '<div class="top top--crumb" style="--n:' + n + '">' + Array.from({ length: 14 }, (_, k) => `<i style="--x:${(k * 41) % 100};--y:${(k * 29) % 50}"></i>`).join("") + "</div>" : "") +
+        (cone.tops.has("wafer") && n ? '<div class="top top--wafer" style="--n:' + n + '"></div>' : "");
+      $("holder").className = "holder holder--" + cone.holder;
+      $("treat").className = "treat treat--" + cone.holder;
+      $("buildEmpty").classList.toggle("hide", n > 0);
+      $("scoopHint").textContent = `${n} / 3`;
+      let price = PRICE[n] + cone.scoops.reduce((a, id) => a + (byId(id).extra || 0), 0) + cone.tops.size * 0.6 + (cone.holder === "choc" ? 0.8 : 0);
+      $("buildPrice").textContent = eur(n ? price : 0);
+      $("buildDesc").textContent = n ? `${n} scoop${n > 1 ? "s" : ""} · ${cone.scoops.map((id) => byId(id).n.split(" ")[0]).join(", ")}` : "Nothing yet";
+      $("addCone").disabled = !n;
+      cone.price = price;
+    }
+    $("swatches").addEventListener("click", (e) => { const b = e.target.closest("[data-id]"); if (b) addScoop(b.dataset.id); });
+    $("holders").addEventListener("click", (e) => { const b = e.target.closest("[data-h]"); if (!b) return; cone.holder = b.dataset.h; document.querySelectorAll("#holders button").forEach((x) => x.classList.toggle("on", x === b)); renderCone(); });
+    $("tops").addEventListener("click", (e) => { const b = e.target.closest("[data-t]"); if (!b) return; const t = b.dataset.t; cone.tops.has(t) ? cone.tops.delete(t) : cone.tops.add(t); b.classList.toggle("on", cone.tops.has(t)); renderCone(); });
+    $("reset").onclick = () => { cone.scoops = []; cone.tops.clear(); document.querySelectorAll("#tops button").forEach((b) => b.classList.remove("on")); renderCone(); };
+    renderCone();
+
+    // ---------- Bag ----------
+    let bag = [];
+    try { bag = JSON.parse(localStorage.getItem("frolla-bag") || "[]"); } catch (e) { bag = []; }
+    const saveBag = () => { try { localStorage.setItem("frolla-bag", JSON.stringify(bag)); } catch (e) {} };
+    function renderBag() {
+      $("bagCount").textContent = bag.length;
+      $("bagList").innerHTML = bag.length ? bag.map((it, i) => `
+        <li><div class="bag__mini">${it.scoops.map((id) => scoopHTML(byId(id), "scoop--mini")).join("")}</div>
+        <div><strong>${it.title}</strong><span>${it.desc}</span></div><b>${eur(it.price)}</b>
+        <button data-rm="${i}" aria-label="Remove"><i class="ri-delete-bin-6-line"></i></button></li>`).join("")
+        : '<li class="bag__empty"><i class="ri-ice-cream-line"></i>Your bag is empty.<br />Build a cone to get started.</li>';
+      $("bagTotal").textContent = eur(bag.reduce((a, b) => a + b.price, 0));
+      $("checkout").disabled = !bag.length;
+    }
+    const HN = { cone: "Waffle cone", choc: "Choc-dipped cone", cup: "Cup" };
+    $("addCone").onclick = () => {
+      bag.push({ title: `${HN[cone.holder]} · ${cone.scoops.length} scoop${cone.scoops.length > 1 ? "s" : ""}`, desc: cone.scoops.map((id) => byId(id).n).join(" · ") + (cone.tops.size ? " + " + [...cone.tops].join(", ") : ""), price: cone.price, scoops: [...cone.scoops] });
+      saveBag(); renderBag();
+      $("bagBtn").classList.remove("bump"); void $("bagBtn").offsetWidth; $("bagBtn").classList.add("bump");
+      toast('<i class="ri-check-line"></i> Added to your order');
+      $("reset").click();
+    };
+    const openBag = (v) => { $("bag").classList.toggle("open", v); $("overlay").classList.toggle("open", v); };
+    $("bagBtn").onclick = () => openBag(true);
+    $("bagClose").onclick = $("overlay").onclick = () => openBag(false);
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { openBag(false); $("nav").classList.remove("open"); } });
+    $("bagList").addEventListener("click", (e) => { const b = e.target.closest("[data-rm]"); if (!b) return; bag.splice(+b.dataset.rm, 1); saveBag(); renderBag(); });
+    (function slots() {
+      const now = new Date(), opts = [];
+      const start = new Date(now); start.setMinutes(Math.ceil((now.getMinutes() + 15) / 15) * 15, 0, 0);
+      for (let i = 0; i < 8; i++) { const t = new Date(start.getTime() + i * 15 * 60000); opts.push(`<option>${i === 0 ? "ASAP · " : ""}${t.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</option>`); }
+      $("pickTime").innerHTML = opts.join("");
+    })();
+    $("checkout").onclick = () => {
+      const ok = $("bagOk"); ok.querySelector("span").textContent = `Order #F${Math.floor(1000 + Math.random() * 8999)} placed — pick up at ${$("pickTime").value.replace("ASAP · ", "")}. We'll scoop it fresh.`; ok.classList.add("on");
+      bag = []; saveBag(); renderBag(); setTimeout(() => ok.classList.remove("on"), 6000);
+    };
+    renderBag();
+
+    // ---------- Party tubs ----------
+    const TUBS = [{ n: "Small", v: "500 ml", serves: "2–3 people", p: 12, max: 2 }, { n: "Medium", v: "1 litre", serves: "5–6 people", p: 21, max: 3 }, { n: "Party", v: "2.5 litres", serves: "12–15 people", p: 45, max: 4 }];
+    let tub = 1, tubSel = [];
+    function renderTubs() {
+      $("tubSizes").innerHTML = TUBS.map((t, i) => `
+        <button class="tub ${i === tub ? "on" : ""}" data-i="${i}">
+          <span class="tub__pic tub__pic--${i}"><i></i></span>
+          <span class="tub__txt"><strong>${t.n} · ${t.v}</strong><span>${t.serves} · up to ${t.max} flavours</span></span>
+          <b>€${t.p}</b>
+        </button>`).join("");
+      const T = TUBS[tub];
+      tubSel = tubSel.slice(0, T.max);
+      $("tubMax").textContent = T.max;
+      $("tubSizeLabel").textContent = `${T.n} tub · ${T.v} · serves ${T.serves}`;
+      $("tubFlavs").innerHTML = FLAVS.map((f) => `<button type="button" class="${tubSel.includes(f.id) ? "on" : ""}" data-id="${f.id}"><i style="background:${f.c}"></i>${f.n}</button>`).join("");
+      $("tubPrice").textContent = "€" + T.p;
+    }
+    $("tubSizes").addEventListener("click", (e) => { const b = e.target.closest("[data-i]"); if (!b) return; tub = +b.dataset.i; renderTubs(); });
+    $("tubFlavs").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-id]"); if (!b) return; const id = b.dataset.id;
+      if (tubSel.includes(id)) tubSel = tubSel.filter((x) => x !== id);
+      else if (tubSel.length < TUBS[tub].max) tubSel.push(id);
+      else { toast(`This size takes ${TUBS[tub].max} flavours — go bigger for more!`); return; }
+      renderTubs();
+    });
+    (function days() {
+      const o = []; const d = new Date(); d.setDate(d.getDate() + (d.getHours() >= 18 ? 2 : 1));
+      for (let i = 0; i < 7; i++) { o.push(`<option>${d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" })}</option>`); d.setDate(d.getDate() + 1); }
+      $("tubDay").innerHTML = o.join("");
+    })();
+    $("tubForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!tubSel.length) { toast("Pick at least one flavour for your tub"); return; }
+      const ok = $("tubOk"); ok.querySelector("span").textContent = `Reserved! ${TUBS[tub].n} tub of ${tubSel.map((id) => byId(id).n).join(", ")} for ${$("tubDay").value}.`; ok.classList.add("on");
+    });
+    renderTubs();
+
+    // ---------- Reviews ----------
+    const REVS = [
+      { q: "The pistachio is the real thing — brown-green, not neon. I've been back four times this week.", n: "Clara M.", from: "Madrid", img: "1494790108377-be9c29b29330", r: "-2deg", c: "#ffe1e8" },
+      { q: "Pastel de nata gelato should be illegal. Queue was 20 minutes and I'd do it again tomorrow.", n: "Ben T.", from: "London", img: "1500648767791-00dcc994a43e", r: "1.5deg", c: "#fff1c9" },
+      { q: "Ordered a party tub for my daughter's 7th. Twelve kids, zero leftovers, one very happy dad.", n: "Rui S.", from: "Lisboa", img: "1507003211169-0a1dd7228f2d", r: "-1deg", c: "#e3f1dc" },
+      { q: "Finally a vegan chocolate that doesn't taste like a compromise. Dark, silky, perfect.", n: "Mei L.", from: "Porto", img: "1544005313-94ddf0286df2", r: "2deg", c: "#ebe5ff" },
+    ];
+    $("revs").innerHTML = REVS.map((r) => `<figure class="rev" style="--r:${r.r};--bg:${r.c}"><span class="rev__stars">★★★★★</span><blockquote>“${r.q}”</blockquote><figcaption><img src="${U(r.img, 100)}" alt="${r.n}" loading="lazy" /><span><strong>${r.n}</strong>${r.from}</span></figcaption></figure>`).join("");
+
+    // ---------- Instagram ----------
+    const IG = ["1501443762994-82bd5dace89a", "1563805042-7684c019e1cb", "1505394033641-40c6ad1178d7", "1570197788417-0e82375c9371", "1560008581-09826d1de69e", "1488900128323-21503983a07e", "1580915411954-282cb1b0d780", "1576506295286-5cda18df43e7"];
+    $("insta").innerHTML = IG.map((id, i) => `<a href="#" class="ig"><img src="${U(id, 500)}" alt="Gelato photo from Instagram" loading="lazy" /><span><i class="ri-heart-3-fill"></i> ${[812, 1240, 655, 930, 2104, 488, 1377, 760][i]}</span></a>`).join("");
+
+    // ---------- Newsletter ----------
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsOk").classList.add("on"); e.target.reset(); });
+
+    // ---------- Sprinkles that follow the cursor ----------
+    const cv = $("sprinkles"), cx = cv.getContext("2d"), parts = [];
+    const COLS = ["#ff6f91", "#ffc44d", "#7cc6ff", "#9ed58f", "#b38cff", "#ffffff"];
+    let W = 0, H = 0, lastX = null, lastY = null, running = false;
+    function cvSize() { const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0); }
+    cvSize(); addEventListener("resize", cvSize);
+    function spawn(x, y, n, vx = 0, vy = 0) {
+      for (let i = 0; i < n && parts.length < 260; i++) parts.push({ x, y, vx: vx * .25 + (Math.random() - .5) * 3, vy: vy * .25 - Math.random() * 3, r: Math.random() * 6, vr: (Math.random() - .5) * .3, c: COLS[(Math.random() * COLS.length) | 0], life: 1, l: 7 + Math.random() * 6 });
+      if (!running) { running = true; requestAnimationFrame(loop); }
+    }
+    function loop() {
+      cx.clearRect(0, 0, W, H);
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const p = parts[i];
+        p.vy += .18; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.life -= .008;
+        if (p.y > H + 20 || p.life <= 0) { parts.splice(i, 1); continue; }
+        cx.save(); cx.translate(p.x, p.y); cx.rotate(p.r); cx.globalAlpha = Math.min(1, p.life * 2);
+        cx.fillStyle = p.c; cx.beginPath(); cx.roundRect ? cx.roundRect(-p.l / 2, -2, p.l, 4, 2) : cx.rect(-p.l / 2, -2, p.l, 4); cx.fill();
+        cx.restore();
+      }
+      if (parts.length) requestAnimationFrame(loop); else running = false;
+    }
+    if (!RM) {
+      $("home").addEventListener("pointermove", (e) => {
+        const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+        if (lastX !== null) { const dx = x - lastX, dy = y - lastY, sp = Math.hypot(dx, dy); if (sp > 6) spawn(x, y, Math.min(4, sp / 12 | 0) + 1, dx, dy); }
+        lastX = x; lastY = y;
+      });
+      $("home").addEventListener("click", (e) => { const r = cv.getBoundingClientRect(); if (e.target.closest("a,button")) return; spawn(e.clientX - r.left, e.clientY - r.top, 40, 0, -10); });
+      setTimeout(() => { const r = document.querySelector(".hero__blob").getBoundingClientRect(), h = cv.getBoundingClientRect(); spawn(r.left - h.left + r.width / 2, r.top - h.top + 60, 70, 0, -14); }, 900);
+    }
+
+    // ---------- Scroll reveals ----------
+    const REVEAL = [".title", ".filters", ".build__stage", ".build__panel > *", ".story__imgs", ".story__copy > *", ".tub-sizes", ".tub-form", ".rev", ".shop", ".insta__head", ".footer__grid > div"].join(",");
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(REVEAL).forEach((el) => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter((c) => c.matches(REVEAL));
+      el.style.setProperty("--i", Math.min(sibs.indexOf(el), 5));
+      io.observe(el);
+    });
+    const fio = new IntersectionObserver((es) => { if (es[0].isIntersecting) { $("flavs").classList.add("in"); fio.disconnect(); } }, { threshold: .1 });
+    fio.observe($("flavs"));
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

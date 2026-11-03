@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sami Rahal — Full-stack Engineer</title>
+  <meta name="description" content="Sami Rahal is a full-stack engineer building fast, reliable web products with TypeScript, React, Node and Postgres. Case studies, stack, experience and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Sami Rahal home"><span class="logo__mark">SR</span><span>SAMI RAHAL</span></a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="status"><i></i> Available Jan 2027</span>
+      <a href="#contact" class="btn btn--sm">Hire me</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <canvas id="stars" aria-hidden="true"></canvas>
+      <div class="container hero__in">
+        <div class="hero__copy">
+          <p class="label hero__fade">Full-stack engineer · Beirut → remote</p>
+          <h1 class="hero__name"><span class="line"><span>SAMI</span></span><span class="line"><span class="grad">RAHAL</span></span></h1>
+          <p class="hero__lead hero__fade">I build fast, reliable web products with TypeScript, React and Node. Eight years, 40+ launches, and code your next developer will thank me for.</p>
+          <div class="hero__cta hero__fade">
+            <a href="#work" class="btn">See my work <i class="ri-arrow-right-down-line"></i></a>
+            <a href="#" class="btn btn--ghost"><i class="ri-file-download-line"></i> Download CV</a>
+          </div>
+        </div>
+
+        <div class="term hero__fade" id="term">
+          <div class="term__bar"><i></i><i></i><i></i><span>sami@orbit: ~</span></div>
+          <div class="term__body" id="termBody" aria-live="polite"></div>
+          <form class="term__input" id="termForm"><span>$</span><input id="termIn" autocomplete="off" spellcheck="false" aria-label="Type a terminal command" placeholder="type help" /></form>
+        </div>
+      </div>
+      <div class="container hero__foot hero__fade">
+        <span><i class="ri-time-line"></i> Beirut <b id="clock">--:--</b></span>
+        <span><i class="ri-chat-check-line"></i> Replies within 24h</span>
+        <span><i class="ri-github-line"></i> 1.2k contributions this year</span>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients" aria-label="Teams I've shipped with">
+      <p>Shipped with teams at</p>
+      <div class="clients__track">
+        <div class="clients__row"><span><i class="ri-compass-3-line"></i>Northwind</span><span><i class="ri-sun-line"></i>Lumen</span><span><i class="ri-planet-line"></i>Orbit</span><span><i class="ri-booklet-line"></i>Fieldnote</span><span><i class="ri-gamepad-line"></i>Arcade</span><span><i class="ri-flashlight-line"></i>Voltra</span></div>
+        <div class="clients__row" aria-hidden="true"><span><i class="ri-compass-3-line"></i>Northwind</span><span><i class="ri-sun-line"></i>Lumen</span><span><i class="ri-planet-line"></i>Orbit</span><span><i class="ri-booklet-line"></i>Fieldnote</span><span><i class="ri-gamepad-line"></i>Arcade</span><span><i class="ri-flashlight-line"></i>Voltra</span></div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="head head--row">
+          <div>
+            <p class="label reveal">Selected work</p>
+            <h2 class="h2 reveal">Products I've <span class="grad">built and shipped.</span></h2>
+          </div>
+          <div class="tabs reveal" id="workTabs" role="tablist" aria-label="Filter projects"></div>
+        </div>
+        <div class="work" id="workList"></div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section section--alt" id="stack">
+      <div class="container">
+        <div class="head head--row">
+          <div>
+            <p class="label reveal">Stack</p>
+            <h2 class="h2 reveal">My tools, <span class="grad">mapped like a sky.</span></h2>
+          </div>
+          <p class="head__p reveal">Each star is a tool I use in production. Hover or tap one to see how it connects to the rest, and where I've used it.</p>
+        </div>
+        <div class="stackwrap reveal">
+          <div class="stackmap" id="stackMap">
+            <svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true" id="stackLines"></svg>
+          </div>
+          <aside class="stackinfo" id="stackInfo" aria-live="polite"></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container exp">
+        <div class="exp__side">
+          <p class="label reveal">Experience</p>
+          <h2 class="h2 reveal">Eight years, <span class="grad">four teams.</span></h2>
+          <figure class="exp__photo reveal">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Portrait of Sami Rahal" loading="lazy" />
+            <figcaption>Sami Rahal · Beirut</figcaption>
+          </figure>
+        </div>
+        <ol class="roles" id="roles"></ol>
+      </div>
+    </section>
+
+    <!-- Open source -->
+    <section class="section section--alt" id="oss">
+      <div class="container">
+        <div class="head head--row">
+          <div>
+            <p class="label reveal">Open source</p>
+            <h2 class="h2 reveal">Code in <span class="grad">public.</span></h2>
+          </div>
+          <a href="#" class="btn btn--ghost reveal"><i class="ri-github-fill"></i> github.com/samirahal</a>
+        </div>
+        <div class="heat reveal">
+          <div class="heat__top"><b><span data-count="1284">0</span> contributions</b> in the last year<span class="heat__legend">Less <i></i><i></i><i></i><i></i><i></i> More</span></div>
+          <div class="heat__grid" id="heat" role="img" aria-label="GitHub contribution graph for the last 12 months"></div>
+        </div>
+        <div class="repos" id="repos"></div>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="head head--row">
+          <div>
+            <p class="label reveal">Writing</p>
+            <h2 class="h2 reveal">Notes from <span class="grad">the trenches.</span></h2>
+          </div>
+          <p class="head__p reveal">I write about performance, payments and keeping codebases calm. Read by about 9,000 developers a month.</p>
+        </div>
+        <div class="posts" id="posts"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--alt" id="kind-words">
+      <div class="container">
+        <div class="head">
+          <p class="label reveal">Kind words</p>
+          <h2 class="h2 reveal">From people <span class="grad">I've shipped with.</span></h2>
+        </div>
+        <div class="words" id="words"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-sec" id="contact">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="label reveal">Contact</p>
+          <h2 class="h2 reveal">Have something <span class="grad">to build?</span></h2>
+          <p class="reveal">Tell me what you're working on. I take on two projects at a time, so you always get my full attention.</p>
+          <div class="mail reveal">
+            <a href="mailto:hello@samirahal.dev">hello@samirahal.dev</a>
+            <button type="button" id="copyMail" aria-label="Copy email address"><i class="ri-file-copy-line"></i> <span>Copy</span></button>
+          </div>
+          <a href="#" class="call reveal"><i class="ri-calendar-schedule-line"></i><span><b>Book a 20-minute intro call</b><small>Free · Mon–Fri, 10:00–18:00 Beirut time</small></span><i class="ri-arrow-right-up-line"></i></a>
+          <div class="socials reveal"><a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="Dev.to"><i class="ri-article-line"></i></a></div>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <label>What do you need?</label>
+          <div class="chips" data-group="type"><button type="button" class="on">New product</button><button type="button">Existing codebase</button><button type="button">Performance audit</button><button type="button">Ongoing support</button></div>
+          <label>Budget</label>
+          <div class="chips" data-group="budget"><button type="button">&lt; $5k</button><button type="button" class="on">$5k – $15k</button><button type="button">$15k – $40k</button><button type="button">$40k+</button></div>
+          <div class="row">
+            <input type="text" id="cName" placeholder="Your name" aria-label="Your name" />
+            <input type="email" id="cEmail" placeholder="Email" aria-label="Email" />
+          </div>
+          <textarea id="cMsg" rows="5" placeholder="What are you building, and by when?" aria-label="Project details"></textarea>
+          <button class="btn btn--full" type="submit">Send message <i class="ri-send-plane-2-line"></i></button>
+          <p class="form-msg" id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__big" aria-hidden="true">SAMI RAHAL</p>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Sami Rahal. Built by hand, no templates harmed.</p>
+        <nav><a href="#work">Work</a><a href="#stack">Stack</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case study modal -->
+  <div class="modal" id="modal" hidden>
+    <article class="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+      <button class="case__close" id="caseClose" aria-label="Close case study"><i class="ri-close-line"></i></button>
+      <div id="caseBody"></div>
+    </article>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <a href="#top" class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2600); };
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const PROJECTS = [
+      { id: "ledgerly", name: "Ledgerly", cat: "SaaS", year: "2025", role: "Lead engineer", img: "1460925895917-afdab827c52f",
+        line: "Invoicing and payments for 12,000 freelancers across Europe.",
+        stack: ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Stripe"],
+        stats: [["0.8s", "page load, down from 3.1s"], ["+38%", "MRR in 6 months"]],
+        challenge: "Ledgerly's dashboard had grown into a 9-second bundle and customers were cancelling during onboarding. Every new feature broke an old one.",
+        built: "I split the app into server components, moved invoice rendering to the edge, rewrote the payments flow with idempotent Stripe webhooks and added end-to-end tests for every money path.",
+        outcome: "Onboarding completion went from 41% to 73%. Support tickets about failed payments dropped to almost zero, and the team now ships twice a week without fear." },
+      { id: "haven", name: "Haven Market", cat: "E-commerce", year: "2024", role: "Full-stack developer", img: "1563986768609-322da13575f3",
+        line: "Headless store for a homeware brand doing $4M a year online.",
+        stack: ["Remix", "Shopify API", "Algolia", "Vercel"],
+        stats: [["+22%", "checkout conversion"], ["98", "Lighthouse score on mobile"]],
+        challenge: "A slow theme with 30 apps installed, a search that couldn't find 'oak table', and a checkout that lost a quarter of mobile shoppers.",
+        built: "A headless storefront with streamed product pages, instant search with typo tolerance, a custom bundle builder and a one-page checkout tuned for phones.",
+        outcome: "Conversion up 22% in the first quarter, average order value up 14% thanks to bundles, and the marketing team edits pages without asking a developer." },
+      { id: "pulse", name: "Pulse Clinics", cat: "Mobile", year: "2024", role: "Engineer, app & API", img: "1551650975-87deedd944c3",
+        line: "Booking and reminders app used by 140 clinics in the Gulf.",
+        stack: ["React Native", "Node.js", "PostgreSQL", "Redis", "AWS"],
+        stats: [["140", "clinics live"], ["-31%", "no-show appointments"]],
+        challenge: "Clinics booked patients by phone and WhatsApp. One in four appointments was a no-show, and there was no shared calendar between branches.",
+        built: "An iOS and Android app for patients, a web dashboard for reception, a booking API with per-doctor availability rules and automated SMS and WhatsApp reminders.",
+        outcome: "No-shows fell by 31%. The app is now used by 140 clinics and handles around 60,000 bookings a month." },
+      { id: "comet", name: "Comet UI", cat: "Open source", year: "2023", role: "Author & maintainer", img: "1607799279861-4dd421887fb3",
+        line: "Accessible React components with zero runtime CSS.",
+        stack: ["React", "TypeScript", "Vitest", "Storybook"],
+        stats: [["4.2k", "GitHub stars"], ["38k", "weekly downloads"]],
+        challenge: "Every client project needed the same dialogs, menus and comboboxes, and most libraries were either heavy or not accessible with a keyboard.",
+        built: "A headless component library with full keyboard and screen-reader support, tree-shakeable exports, and docs with copy-paste recipes for Tailwind and CSS Modules.",
+        outcome: "Used in production by teams at Lumen and Fieldnote, 60+ contributors, and featured in two newsletters with over 100k readers." },
+    ];
+    const STACK = [
+      { n: "TypeScript", i: "devicon-typescript-plain", x: 46, y: 26, yrs: "7 years", note: "Every project since 2018. Strict mode, always.", used: ["Ledgerly", "Comet UI", "Pulse Clinics"] },
+      { n: "React", i: "devicon-react-original", x: 30, y: 16, yrs: "8 years", note: "My daily driver for interfaces of every size.", used: ["Comet UI", "Haven Market"] },
+      { n: "Next.js", i: "devicon-nextjs-plain", x: 18, y: 28, yrs: "5 years", note: "Server components, edge rendering and ISR in production.", used: ["Ledgerly"] },
+      { n: "Remix", i: "devicon-remix-original", x: 14, y: 12, yrs: "2 years", note: "Great for commerce where every millisecond counts.", used: ["Haven Market"] },
+      { n: "React Native", i: "devicon-react-original", x: 31, y: 44, yrs: "3 years", note: "One codebase for iOS and Android, shipped to both stores.", used: ["Pulse Clinics"] },
+      { n: "Tailwind", i: "devicon-tailwindcss-original", x: 8, y: 40, yrs: "4 years", note: "Fast, consistent styling with design tokens.", used: ["Ledgerly", "Haven Market"] },
+      { n: "Node.js", i: "devicon-nodejs-plain", x: 62, y: 16, yrs: "8 years", note: "APIs, queues, webhooks and background workers.", used: ["Pulse Clinics", "Ledgerly"] },
+      { n: "tRPC", i: "devicon-typescript-plain", x: 58, y: 38, yrs: "2 years", note: "End-to-end type safety between client and server.", used: ["Ledgerly"] },
+      { n: "GraphQL", i: "devicon-graphql-plain", x: 74, y: 30, yrs: "4 years", note: "Federated schemas for larger teams.", used: ["Haven Market"] },
+      { n: "PostgreSQL", i: "devicon-postgresql-plain", x: 80, y: 12, yrs: "7 years", note: "My default database. Indexes, CTEs and careful migrations.", used: ["Ledgerly", "Pulse Clinics"] },
+      { n: "Redis", i: "devicon-redis-plain", x: 90, y: 28, yrs: "5 years", note: "Caching, rate limits and job queues.", used: ["Pulse Clinics"] },
+      { n: "Docker", i: "devicon-docker-plain", x: 76, y: 48, yrs: "6 years", note: "Reproducible local setups and deploys.", used: ["Pulse Clinics"] },
+      { n: "AWS", i: "devicon-amazonwebservices-plain-wordmark", x: 92, y: 48, yrs: "5 years", note: "Lambda, RDS, S3, SQS and CloudFront.", used: ["Pulse Clinics"] },
+      { n: "Vercel", i: "devicon-vercel-original", x: 44, y: 52, yrs: "4 years", note: "Previews on every pull request.", used: ["Ledgerly", "Haven Market"] },
+      { n: "Playwright", i: "devicon-playwright-plain", x: 60, y: 54, yrs: "3 years", note: "End-to-end tests for every money path.", used: ["Ledgerly"] },
+      { n: "Vitest", i: "devicon-vitest-plain", x: 46, y: 8, yrs: "2 years", note: "Fast unit tests that people actually run.", used: ["Comet UI"] },
+    ];
+    const LINKS = [["TypeScript", "React"], ["TypeScript", "Node.js"], ["TypeScript", "tRPC"], ["React", "Next.js"], ["React", "Remix"], ["React", "React Native"], ["Next.js", "Tailwind"], ["Next.js", "Vercel"], ["Remix", "Tailwind"], ["Node.js", "PostgreSQL"], ["Node.js", "GraphQL"], ["Node.js", "Redis"], ["tRPC", "Next.js"], ["tRPC", "Playwright"], ["PostgreSQL", "Redis"], ["Redis", "AWS"], ["Docker", "AWS"], ["Docker", "Node.js"], ["Vercel", "Playwright"], ["Vitest", "React"], ["Vitest", "TypeScript"], ["GraphQL", "Docker"], ["React Native", "Vercel"]];
+    const ROLES = [
+      ["2023 — Now", "Independent engineer", "Remote · Clients in Berlin, Dubai and London", "I partner with founders and product teams on new products, rescues and performance work. Two projects at a time, weekly demos, no hand-offs to juniors.", ["Next.js", "Node.js", "Stripe"]],
+      ["2020 — 2023", "Senior engineer, Payments", "Lumen · Berlin (remote)", "Led a team of five that rebuilt checkout for 400,000 customers. Cut payment failures by 47% and introduced the company's first end-to-end test suite.", ["TypeScript", "GraphQL", "PostgreSQL"]],
+      ["2018 — 2020", "Full-stack developer", "Arcade Studio · Beirut", "Built web apps and APIs for agency clients in retail and hospitality. Moved the studio from PHP templates to React and Node.", ["React", "Node.js", "AWS"]],
+      ["2016 — 2018", "Front-end developer", "Voltra · Beirut", "My first job. Turned designs into responsive sites for a fast-growing energy startup and learned to love performance budgets.", ["JavaScript", "Sass", "Webpack"]],
+    ];
+    const REPOS = [
+      ["comet-ui", "Accessible, headless React components with zero runtime CSS.", "TypeScript", "4.2k", "312"],
+      ["tiny-queue", "A 2 KB job queue for Node with retries, backoff and Redis persistence.", "TypeScript", "1.1k", "64"],
+      ["next-i18n-lite", "Type-safe translations for the Next.js App Router, with Arabic RTL support.", "TypeScript", "860", "41"],
+    ];
+    const POSTS = [
+      ["Nov 2026", "8 min", "How we cut a 9-second dashboard to 0.8 seconds", "A step-by-step teardown of the Ledgerly rebuild: bundle splitting, server components and the one index that mattered most.", "1504639725590-34d0984388bd"],
+      ["Aug 2026", "6 min", "Idempotent Stripe webhooks, explained with coffee orders", "Why payments double-charge, and the three-table pattern I now use on every project.", "1580927752452-89d86da3fa0a"],
+      ["Apr 2026", "5 min", "Building right-to-left interfaces without the pain", "Logical properties, mirrored icons and the bugs nobody warns you about when you ship in Arabic.", "1555066931-4365d14bab8c"],
+    ];
+    const WORDS = [
+      ["Sami rebuilt our checkout in six weeks and it simply hasn't broken since. He explains trade-offs in plain language, which our board loved.", "Hannah Weiss", "CTO, Lumen", "HW"],
+      ["We hired Sami for a performance audit and kept him for a year. Our app went from 'sorry, it's loading' to the fastest in our market.", "Omar Farouk", "Founder, Pulse Clinics", "OF"],
+      ["The rare engineer who cares about the design as much as the database. Our designers fought over who got to work with him.", "Clara Jensen", "Head of Product, Fieldnote", "CJ"],
+    ];
+
+    /* =====================================================
+       Hero starfield
+       ===================================================== */
+    (() => {
+      const cv = $("stars"), ctx = cv.getContext("2d");
+      let W, H, stars = [], mx = 0, my = 0, ox = 0, oy = 0, run = true;
+      const size = () => {
+        const d = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+        stars = Array.from({ length: Math.min(700, (W * H) / 2200) }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() ** 3 * 1.4 + .3, a: Math.random() * .6 + .2, z: Math.random() * .9 + .1, t: Math.random() * 7 }));
+      };
+      size(); addEventListener("resize", size);
+      addEventListener("pointermove", (e) => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; });
+      new IntersectionObserver(([e]) => { run = e.isIntersecting; if (run) requestAnimationFrame(f); }).observe(cv);
+      function f(now) {
+        ctx.clearRect(0, 0, W, H);
+        ox += (mx * -24 - ox) * .04; oy += (my * -16 - oy) * .04;
+        for (const s of stars) {
+          if (!reduce) { s.y -= s.z * .06; if (s.y < -2) s.y = H + 2; }
+          ctx.globalAlpha = s.a * (reduce ? 1 : .7 + .3 * Math.sin(now * .0012 + s.t));
+          ctx.fillStyle = "#dfe8ff"; ctx.beginPath(); ctx.arc(s.x + ox * s.z, s.y + oy * s.z, s.r, 0, 6.283); ctx.fill();
+        }
+        if (run) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    })();
+
+    /* =====================================================
+       Terminal
+       ===================================================== */
+    (() => {
+      const body = $("termBody"), input = $("termIn");
+      const out = (html, cls = "") => { const p = document.createElement("p"); p.className = cls; p.innerHTML = html; body.appendChild(p); body.scrollTop = body.scrollHeight; };
+      const CMDS = {
+        help: () => out(`Commands: <b>about</b> · <b>projects</b> · <b>stack</b> · <b>contact</b> · <b>hire</b> · <b>clear</b>`),
+        about: () => out(`Full-stack engineer in Beirut (GMT+2). 8 years, 40+ shipped products.<br>I like boring databases, fast pages and teams that demo on Fridays.`),
+        whoami: () => CMDS.about(),
+        projects: () => out(PROJECTS.map((p) => `<span class="t-acc">${p.name}</span> · ${p.cat} · ${p.year}`).join("<br>") + `<br><span class="t-dim">Full case studies below ↓</span>`),
+        stack: () => out(`TypeScript · React · Next.js · Node.js · PostgreSQL · Redis · AWS`),
+        contact: () => out(`hello@samirahal.dev · or type <b>hire</b>`),
+        hire: () => { out(`Opening the contact form… <span class="t-acc">✓</span>`); setTimeout(() => $("contact").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }), 500); },
+        clear: () => (body.innerHTML = ""),
+        sudo: () => out(`Nice try. Permission granted to <b>hire</b> only.`, "t-dim"),
+      };
+      const run = (c) => { out(`<span class="t-p">$</span> ${c.replace(/</g, "&lt;")}`, "t-cmd"); const k = c.trim().toLowerCase().split(" ")[0]; if (!k) return; (CMDS[k] || (() => out(`command not found: ${k.replace(/</g, "&lt;")} — try <b>help</b>`, "t-dim")))(); };
+      $("termForm").addEventListener("submit", (e) => { e.preventDefault(); run(input.value); input.value = ""; });
+      $("term").addEventListener("click", () => input.focus({ preventScroll: true }));
+      const script = ["whoami", "stack", "projects"];
+      const typeCmd = async (c) => {
+        const p = document.createElement("p"); p.className = "t-cmd"; p.innerHTML = `<span class="t-p">$</span> `; body.appendChild(p);
+        for (const ch of c) { p.innerHTML += ch; await new Promise((r) => setTimeout(r, reduce ? 0 : 55)); }
+        await new Promise((r) => setTimeout(r, reduce ? 0 : 260)); const k = c; p.remove(); run(k);
+        await new Promise((r) => setTimeout(r, reduce ? 0 : 650));
+      };
+      (async () => { await new Promise((r) => setTimeout(r, 900)); for (const c of script) await typeCmd(c); out(`Type <b>help</b> to explore.`, "t-dim"); })();
+    })();
+
+    /* =====================================================
+       Work
+       ===================================================== */
+    const CATS = ["All", ...new Set(PROJECTS.map((p) => p.cat))];
+    let cat = "All";
+    const renderTabs = () => ($("workTabs").innerHTML = CATS.map((c) => `<button role="tab" aria-selected="${c === cat}" class="${c === cat ? "on" : ""}">${c}</button>`).join(""));
+    const renderWork = () => {
+      $("workList").innerHTML = PROJECTS.filter((p) => cat === "All" || p.cat === cat).map((p, i) => `
+        <article class="proj" style="--d:${i * .06}s">
+          <button class="proj__img" data-case="${p.id}" aria-label="Open ${p.name} case study"><img src="${U(p.img, 1300)}" alt="${p.name} project" loading="lazy" /><span class="proj__open"><i class="ri-arrow-right-up-line"></i></span></button>
+          <div class="proj__body">
+            <p class="proj__meta"><span>${p.cat}</span><span>${p.year}</span><span>${p.role}</span></p>
+            <h3>${p.name}</h3>
+            <p class="proj__line">${p.line}</p>
+            <div class="proj__stats">${p.stats.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div>
+            <ul class="tags">${p.stack.map((s) => `<li>${s}</li>`).join("")}</ul>
+            <div class="proj__links"><button class="btn btn--sm" data-case="${p.id}">Read case study <i class="ri-arrow-right-line"></i></button><a href="#" class="link">Live site <i class="ri-external-link-line"></i></a></div>
+          </div>
+        </article>`).join("");
+    };
+    $("workTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; cat = b.textContent; renderTabs(); renderWork(); });
+    renderTabs(); renderWork();
+
+    /* Case study modal */
+    const openCase = (id) => {
+      const p = PROJECTS.find((x) => x.id === id);
+      $("caseBody").innerHTML = `
+        <img class="case__hero" src="${U(p.img, 1600)}" alt="${p.name}" />
+        <div class="case__in">
+          <p class="proj__meta"><span>${p.cat}</span><span>${p.year}</span><span>${p.role}</span></p>
+          <h3 id="caseTitle">${p.name}</h3><p class="case__line">${p.line}</p>
+          <div class="proj__stats">${p.stats.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div>
+          <div class="case__cols">
+            <div><h4>The challenge</h4><p>${p.challenge}</p></div>
+            <div><h4>What I built</h4><p>${p.built}</p></div>
+            <div><h4>The outcome</h4><p>${p.outcome}</p></div>
+          </div>
+          <ul class="tags">${p.stack.map((s) => `<li>${s}</li>`).join("")}</ul>
+        </div>`;
+      $("modal").hidden = false; document.body.style.overflow = "hidden"; $("caseClose").focus();
+    };
+    const closeCase = () => { $("modal").hidden = true; document.body.style.overflow = ""; };
+    document.addEventListener("click", (e) => { const b = e.target.closest("[data-case]"); if (b) openCase(b.dataset.case); });
+    $("caseClose").addEventListener("click", closeCase);
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeCase(); });
+
+    /* =====================================================
+       Stack constellation
+       ===================================================== */
+    (() => {
+      const map = $("stackMap"), svg = $("stackLines");
+      svg.innerHTML = LINKS.map(([a, b]) => { const A = STACK.find((s) => s.n === a), B = STACK.find((s) => s.n === b); return `<line data-a="${a}" data-b="${b}" x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" vector-effect="non-scaling-stroke" />`; }).join("");
+      map.insertAdjacentHTML("beforeend", STACK.map((s) => `<button class="node" style="left:${5 + s.x * .9}%;top:${6 + (s.y / 60) * 88}%" data-n="${s.n}"><i class="${s.i}"></i><span>${s.n}</span></button>`).join(""));
+      const nodes = [...map.querySelectorAll(".node")], lines = [...svg.querySelectorAll("line")];
+      const pick = (n) => {
+        const s = STACK.find((x) => x.n === n), near = new Set([n]);
+        LINKS.forEach(([a, b]) => { if (a === n) near.add(b); if (b === n) near.add(a); });
+        map.classList.add("focus");
+        nodes.forEach((el) => { el.classList.toggle("on", el.dataset.n === n); el.classList.toggle("near", near.has(el.dataset.n)); });
+        lines.forEach((l) => l.classList.toggle("on", l.dataset.a === n || l.dataset.b === n));
+        $("stackInfo").innerHTML = `<i class="${s.i} stackinfo__ico"></i><h3>${s.n}</h3><p class="stackinfo__yrs">${s.yrs} in production</p><p>${s.note}</p>
+          <h4>Pairs with</h4><ul class="tags">${[...near].filter((x) => x !== n).map((x) => `<li>${x}</li>`).join("")}</ul>
+          <h4>Used in</h4><ul class="stackinfo__used">${s.used.map((u) => `<li><i class="ri-arrow-right-s-line"></i>${u}</li>`).join("")}</ul>`;
+      };
+      map.addEventListener("pointerover", (e) => { const b = e.target.closest(".node"); if (b) pick(b.dataset.n); });
+      map.addEventListener("click", (e) => { const b = e.target.closest(".node"); if (b) pick(b.dataset.n); });
+      map.addEventListener("focusin", (e) => { const b = e.target.closest(".node"); if (b) pick(b.dataset.n); });
+      pick("TypeScript");
+    })();
+
+    /* =====================================================
+       Experience, open source, writing, testimonials
+       ===================================================== */
+    $("roles").innerHTML = ROLES.map(([when, role, where, text, tags], i) => `<li class="role reveal" style="--d:${i * .06}s"><span class="role__when">${when}</span><div><h3>${role}</h3><p class="role__where">${where}</p><p>${text}</p><ul class="tags">${tags.map((t) => `<li>${t}</li>`).join("")}</ul></div></li>`).join("");
+
+    (() => {
+      let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const cells = [];
+      for (let w = 0; w < 52; w++) for (let d = 0; d < 7; d++) {
+        const base = d > 4 ? .25 : .7, burst = w > 30 && w < 40 ? .3 : 0, v = rnd() * (base + burst);
+        cells.push(`<i class="l${v < .18 ? 0 : v < .35 ? 1 : v < .52 ? 2 : v < .7 ? 3 : 4}" style="--i:${w}"></i>`);
+      }
+      $("heat").innerHTML = cells.join("");
+    })();
+    $("repos").innerHTML = REPOS.map(([n, d, l, s, f], i) => `<a href="#" class="repo reveal" style="--d:${i * .06}s"><div class="repo__top"><i class="ri-git-repository-line"></i><b>samirahal/${n}</b></div><p>${d}</p><div class="repo__meta"><span><i class="dot"></i>${l}</span><span><i class="ri-star-line"></i>${s}</span><span><i class="ri-git-fork-line"></i>${f}</span></div></a>`).join("");
+    $("posts").innerHTML = POSTS.map(([date, read, t, d, img], i) => `<a href="#" class="post reveal" style="--d:${i * .06}s"><div class="post__img"><img src="${U(img, 800)}" alt="" loading="lazy" /></div><p class="post__meta">${date} · ${read} read</p><h3>${t}</h3><p>${d}</p><span class="link">Read article <i class="ri-arrow-right-line"></i></span></a>`).join("");
+    $("words").innerHTML = WORDS.map(([q, n, r, ini], i) => `<figure class="word reveal" style="--d:${i * .08}s"><i class="ri-double-quotes-l"></i><blockquote>${q}</blockquote><figcaption><span class="avatar">${ini}</span><span><b>${n}</b>${r}</span></figcaption></figure>`).join("");
+
+    /* =====================================================
+       Contact
+       ===================================================== */
+    document.querySelectorAll(".chips").forEach((g) => g.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; g.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); }));
+    $("copyMail").addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText("hello@samirahal.dev"); } catch (e) {}
+      $("copyMail").querySelector("span").textContent = "Copied"; toast("Email copied to clipboard");
+      setTimeout(() => ($("copyMail").querySelector("span").textContent = "Copy"), 2000);
+    });
+    $("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = $("cName").value.trim(), email = $("cEmail").value.trim(), msg = $("formMsg");
+      if (!name || !/^\S+@\S+\.\S+$/.test(email) || $("cMsg").value.trim().length < 10) { msg.textContent = "Please add your name, a valid email and a few words about the project."; msg.className = "form-msg err"; return; }
+      const type = e.target.querySelector('[data-group="type"] .on').textContent;
+      msg.textContent = `Thanks ${name.split(" ")[0]}! Your "${type}" request is in. I'll reply to ${email} within 24 hours.`; msg.className = "form-msg ok";
+      e.target.reset(); toast("Message sent");
+    });
+    const tick = () => ($("clock").textContent = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Beirut" }));
+    tick(); setInterval(tick, 15000);
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, reveal, counters
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCase(); closeNav(); } });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 30); $("totop").classList.toggle("show", scrollY > 900);
+      let cur = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === cur));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const count = (el) => { const end = +el.dataset.count, t0 = performance.now(); const s = (n) => { const k = Math.min(1, (n - t0) / 1400); el.textContent = Math.round(end * (1 - (1 - k) ** 3)).toLocaleString("en"); if (k < 1) requestAnimationFrame(s); }; reduce ? (el.textContent = end.toLocaleString("en")) : requestAnimationFrame(s); };
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(count); io.unobserve(e.target); }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

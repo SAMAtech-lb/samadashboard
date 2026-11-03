@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldstone Shoe Co. — Leather boots, oxfords and loafers</title>
+  <meta name="description" content="Fieldstone sells Goodyear-welted leather boots, oxfords, loafers and Chelsea boots for men and women. Free delivery and free size exchanges." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-2-line"></i></button>
+      <a href="#top" class="logo" aria-label="Fieldstone home"><i class="ri-footprint-fill"></i>FIELDSTONE</a>
+      <nav class="nav" id="nav">
+        <a href="#shop" data-filter="Men">Men</a>
+        <a href="#shop" data-filter="Women">Women</a>
+        <a href="#shop" data-filter="Boots">Boots</a>
+        <a href="#shop" data-filter="Sale">Sale</a>
+        <a href="#store">Our Store</a>
+      </nav>
+      <form class="search" id="searchForm" role="search"><i class="ri-search-line"></i><input id="searchInput" type="search" placeholder="Search shoes…" aria-label="Search shoes" /></form>
+      <div class="icons">
+        <a href="#" aria-label="Account" class="hide-sm"><i class="ri-user-3-line"></i></a>
+        <button id="wishBtn" aria-label="Wishlist" class="hide-sm"><i class="ri-heart-3-line"></i><b id="wishCount">0</b></button>
+        <button id="cartBtn" aria-label="Open cart"><i class="ri-shopping-cart-2-line"></i><b id="cartCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero slider -->
+    <section class="hero">
+      <div class="hero__slides" id="heroSlides"></div>
+      <div class="container hero__ctrl">
+        <div class="hero__dots" id="heroDots"></div>
+        <div class="hero__arrows"><button id="heroPrev" aria-label="Previous slide"><i class="ri-arrow-left-line"></i></button><button id="heroNext" aria-label="Next slide"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="perks">
+      <div class="container perks__in">
+        <p><i class="ri-truck-line"></i><span><b>Free delivery</b>On orders over $150</span></p>
+        <p><i class="ri-arrow-left-right-line"></i><span><b>Free size exchange</b>Within 30 days</span></p>
+        <p><i class="ri-hammer-line"></i><span><b>Goodyear welted</b>Built to be resoled</span></p>
+        <p><i class="ri-shield-check-line"></i><span><b>Secure checkout</b>Card, PayPal, Apple Pay</span></p>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="head"><h2>Shop by style</h2><a href="#shop" class="more" data-filter="all">All shoes <i class="ri-arrow-right-line"></i></a></div>
+        <div class="cats">
+          <a href="#shop" class="cat reveal" data-filter="Boots"><img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=700&q=80" alt="Dark brown lace-up leather boots" loading="lazy" /><span>Boots <i class="ri-arrow-right-up-line"></i></span></a>
+          <a href="#shop" class="cat reveal" data-filter="Oxfords"><img src="https://images.unsplash.com/photo-1777987601431-8d27d2039cc4?auto=format&fit=crop&w=700&q=80" alt="Brown leather wingtip oxfords" loading="lazy" /><span>Oxfords &amp; Derbies <i class="ri-arrow-right-up-line"></i></span></a>
+          <a href="#shop" class="cat reveal" data-filter="Loafers"><img src="https://images.unsplash.com/photo-1616406432452-07bc5938759d?auto=format&fit=crop&w=700&q=80" alt="Brown leather horsebit loafers" loading="lazy" /><span>Loafers <i class="ri-arrow-right-up-line"></i></span></a>
+          <a href="#shop" class="cat reveal" data-filter="Women"><img src="https://images.unsplash.com/photo-1605732440685-d0654d81aa30?auto=format&fit=crop&w=700&q=80" alt="Black leather ankle boot" loading="lazy" /><span>Women's <i class="ri-arrow-right-up-line"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section section--grey" id="shop">
+      <div class="container">
+        <div class="head"><h2 id="shopTitle">All shoes</h2><div class="sort"><label for="sort">Sort by</label><select id="sort"><option value="feat">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rate">Top rated</option></select></div></div>
+        <div class="shop">
+          <aside class="filters" id="filters">
+            <div class="filters__head"><h3>Filters</h3><button id="filtersClose" aria-label="Close filters"><i class="ri-close-line"></i></button></div>
+            <div class="fgroup"><h4>Category</h4><div id="fCat"></div></div>
+            <div class="fgroup"><h4>Size (EU)</h4><div class="fsizes" id="fSize"></div></div>
+            <div class="fgroup"><h4>Price</h4><div id="fPrice"></div></div>
+            <button class="btn btn--line btn--full" id="fReset">Clear filters</button>
+          </aside>
+          <div>
+            <div class="shop__bar"><button class="btn btn--line" id="filtersOpen"><i class="ri-equalizer-line"></i>Filters</button><p id="count"></p></div>
+            <div class="grid" id="grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo banners -->
+    <section class="section">
+      <div class="container promos">
+        <a href="#shop" class="promo reveal" data-filter="Men"><img src="https://images.unsplash.com/photo-1531310197839-ccf54634509e?auto=format&fit=crop&w=1000&q=80" alt="Man wearing brown leather shoes" loading="lazy" /><div><span>Men's collection</span><h3>Built for every day,<br />made to last years</h3><b class="btn btn--white">Shop men</b></div></a>
+        <a href="#shop" class="promo reveal" data-filter="Sale"><img src="https://images.unsplash.com/photo-1608629601270-a0007becead3?auto=format&fit=crop&w=1000&q=80" alt="Brown suede Chelsea boots" loading="lazy" /><div><span>End of season</span><h3>Up to 30% off<br />selected styles</h3><b class="btn btn--white">Shop sale</b></div></a>
+      </div>
+    </section>
+
+    <!-- Craft -->
+    <section class="section section--dark">
+      <div class="container craft">
+        <div class="craft__copy reveal">
+          <span class="kicker">How we make them</span>
+          <h2>Full-grain leather, stitched to be resoled</h2>
+          <p>Every pair is Goodyear welted in a family workshop in Porto. The sole is stitched, not glued, so when it wears through we can replace it and send your shoes back looking new.</p>
+          <div class="craft__nums"><div><b data-count="40">0</b><span>years of shoemaking</span></div><div><b data-count="200">0</b><span>steps per pair</span></div><div><b data-count="10">0</b><span>year sole warranty</span></div></div>
+        </div>
+        <div class="craft__img reveal"><img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=1000&q=80" alt="Person lacing up leather boots" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section">
+      <div class="container">
+        <div class="head"><h2>Customer reviews</h2><p class="rating"><b>4.8</b><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></span>2,140 reviews</p></div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Store -->
+    <section class="store" id="store">
+      <div class="store__img"><img src="https://images.unsplash.com/photo-1760302318620-261f5e4d1940?auto=format&fit=crop&w=1400&q=80" alt="Inside a modern shoe store" loading="lazy" /></div>
+      <div class="store__card reveal">
+        <span class="kicker">Visit us</span>
+        <h2>Try them on in store</h2>
+        <ul>
+          <li><i class="ri-map-pin-2-line"></i>48 Mercer Street, New York, NY 10013</li>
+          <li><i class="ri-time-line"></i>Mon–Sat 10am–8pm · Sun 11am–6pm</li>
+          <li><i class="ri-phone-line"></i><a href="tel:+12125550188">(212) 555-0188</a></li>
+        </ul>
+        <p>Free fitting by our staff, plus shoe care and resoling at the counter.</p>
+        <a href="#" class="btn">Get directions</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#top" class="logo logo--light"><i class="ri-footprint-fill"></i>FIELDSTONE</a>
+          <p>Leather shoes and boots, made in Portugal and sold in New York since 2011.</p>
+          <div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a></div>
+        </div>
+        <div><h4>Shop</h4><a href="#shop">Men</a><a href="#shop">Women</a><a href="#shop">Boots</a><a href="#shop">Sale</a></div>
+        <div><h4>Help</h4><a href="#">Size guide</a><a href="#">Delivery</a><a href="#">Returns &amp; exchanges</a><a href="#">Resoling service</a></div>
+        <div><h4>Newsletter</h4><p>New arrivals and early access to sales.</p><form class="news" id="news"><input type="email" required placeholder="Email address" aria-label="Email" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form><p class="form-msg" id="newsMsg"></p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Fieldstone Shoe Co. · Photography from Unsplash</p><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i></div></div>
+    </div>
+  </footer>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__gal"><img id="mImg" src="" alt="" /><div class="modal__thumbs" id="mThumbs"></div></div>
+      <div class="modal__body">
+        <span class="kicker" id="mCat"></span>
+        <h3 id="mName"></h3>
+        <div class="modal__rate" id="mRate"></div>
+        <p class="price price--lg" id="mPrice"></p>
+        <p id="mDesc"></p>
+        <div class="modal__sizes"><div class="modal__sizes-head"><span>Select size (EU)</span><a href="#">Size guide</a></div><div class="sizes" id="mSizes"></div><p class="modal__err" id="mErr"></p></div>
+        <button class="btn btn--full" id="mAdd"><i class="ri-shopping-cart-2-line"></i>Add to cart</button>
+        <ul class="modal__meta"><li><i class="ri-truck-line"></i>Free delivery over $150, ships in 1–2 days</li><li><i class="ri-arrow-left-right-line"></i>Free size exchange within 30 days</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer__head"><h3>Cart <span id="dCount"></span></h3><button id="drawerClose" aria-label="Close cart"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__ship"><p id="shipTxt"></p><div><span id="shipBar"></span></div></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">$0</b></div><button class="btn btn--full" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 700) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const toast = (t) => { const el = $("toast"); el.innerHTML = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2400); };
+
+    /* ---------- Hero ---------- */
+    const SLIDES = [
+      { k: "Autumn / Winter 2026", h: "Boots that get better with age", p: "Full-grain leather, Goodyear welted, made in Portugal.", img: "1638609348722-aa2a3a67db26", f: "Boots" },
+      { k: "New in", h: "The loafer, done properly", p: "Hand-finished horsebit loafers in chestnut and black.", img: "1616406432452-07bc5938759d", f: "Loafers" },
+      { k: "Best seller", h: "Suede Chelsea boots", p: "Easy on, easy off, and comfortable from day one.", img: "1608629601270-a0007becead3", f: "Boots" },
+    ];
+    $("heroSlides").innerHTML = SLIDES.map((s, i) => `<div class="slide${i ? "" : " on"}"><img src="${U(s.img, 1800)}" alt="" ${i ? 'loading="lazy"' : ""} /><div class="container slide__copy"><span>${s.k}</span><h1>${s.h}</h1><p>${s.p}</p><div><a href="#shop" class="btn btn--white" data-filter="${s.f}">Shop now</a><a href="#shop" class="btn btn--ghost" data-filter="all">View all</a></div></div></div>`).join("");
+    $("heroDots").innerHTML = SLIDES.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Slide ${i + 1}"><span></span></button>`).join("");
+    let cur = 0, timer;
+    const go = (n) => {
+      cur = (n + SLIDES.length) % SLIDES.length;
+      document.querySelectorAll(".slide").forEach((s, i) => s.classList.toggle("on", i === cur));
+      document.querySelectorAll("#heroDots button").forEach((d, i) => d.classList.toggle("on", i === cur));
+      clearInterval(timer); if (!reduce) timer = setInterval(() => go(cur + 1), 6500);
+    };
+    $("heroPrev").addEventListener("click", () => go(cur - 1));
+    $("heroNext").addEventListener("click", () => go(cur + 1));
+    $("heroDots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) go([...b.parentElement.children].indexOf(b)); });
+    go(0);
+
+    /* ---------- Products ---------- */
+    const P = [
+      { id: 1, n: "Halden Brogue Boot", cat: "Boots", g: "Men", p: 295, img: "1638609348722-aa2a3a67db26", alt: "1520639888713-7851133b1ed0", r: 4.9, rc: 312, c: "Tan calf", sz: [40, 41, 42, 43, 44, 45, 46], d: "A wingtip lace-up boot in tan calf leather with a Dainite rubber sole. Our best seller for six years running." },
+      { id: 2, n: "Ashford Chelsea", cat: "Boots", g: "Men", p: 245, was: 320, img: "1608629601270-a0007becead3", alt: "1531310197839-ccf54634509e", r: 4.8, rc: 198, c: "Snuff suede", sz: [40, 41, 42, 43, 44], d: "Water-resistant suede Chelsea boot with elastic gussets and a light crepe sole." },
+      { id: 3, n: "Penn Horsebit Loafer", cat: "Loafers", g: "Men", p: 265, img: "1616406432452-07bc5938759d", alt: "1760616172899-0681b97a2de3", r: 4.7, rc: 141, c: "Chestnut", sz: [40, 41, 42, 43, 44, 45], d: "A polished calf loafer with a brass horsebit and a leather sole with rubber heel." },
+      { id: 4, n: "Marlow Wingtip Oxford", cat: "Oxfords", g: "Men", p: 275, img: "1777987601431-8d27d2039cc4", alt: "1765779362274-5d8eedb9c6b8", r: 4.8, rc: 167, c: "Walnut", sz: [40, 41, 42, 43, 44, 45, 46], d: "A full brogue oxford with closed lacing. Smart enough for weddings, sturdy enough for every day." },
+      { id: 5, n: "Ridge Lace-up Boot", cat: "Boots", g: "Men", p: 310, img: "1608256246200-53e635b5b65f", alt: "1760817074821-329c6a9e78d9", r: 4.9, rc: 226, c: "Dark brown", sz: [41, 42, 43, 44, 45, 46], d: "A cap-toe service boot in oiled leather. Ready for rain, cobbles and long walks." },
+      { id: 6, n: "Nova Zip Ankle Boot", cat: "Boots", g: "Women", p: 235, img: "1605732440685-d0654d81aa30", alt: "1531310197839-ccf54634509e", r: 4.7, rc: 133, c: "Black calf", sz: [36, 37, 38, 39, 40, 41], d: "A sleek ankle boot with side zip and a 4 cm stacked heel. Goes with everything." },
+      { id: 7, n: "Cooper Derby", cat: "Oxfords", g: "Men", p: 225, was: 280, img: "1625357165350-bdbcb6d7d524", alt: "1614252235316-8c857d38b5f4", r: 4.6, rc: 94, c: "Cognac", sz: [40, 41, 42, 43, 44], d: "An open-laced derby on a rounded last. More relaxed than an oxford and roomy across the foot." },
+      { id: 8, n: "Ellis Brogue", cat: "Oxfords", g: "Men", p: 260, img: "1641893843833-a006778dc00b", alt: "1614253429340-98120bd6d753", r: 4.8, rc: 77, c: "Burgundy", sz: [40, 41, 42, 43, 44, 45], d: "Deep burgundy leather with a hand-burnished toe. A classic that works with grey and navy." },
+      { id: 9, n: "Wren Suede Bootie", cat: "Boots", g: "Women", p: 215, was: 270, img: "1605733160314-4fc7dac4bb16", alt: "1531310197839-ccf54634509e", r: 4.6, rc: 88, c: "Camel suede", sz: [36, 37, 38, 39, 40], d: "A soft suede ankle boot with button detail and a cushioned footbed." },
+      { id: 10, n: "Sutton Derby", cat: "Oxfords", g: "Women", p: 210, img: "1668069226492-508742b03147", alt: "1614252235316-8c857d38b5f4", r: 4.5, rc: 52, c: "Navy & black", sz: [36, 37, 38, 39, 40, 41], d: "A navy suede derby with a black leather heel counter. Light, flexible and easy to wear in." },
+      { id: 11, n: "Calder Monk Strap", cat: "Loafers", g: "Men", p: 285, img: "1533867617858-e7b97e060509", alt: "1777987601431-8d27d2039cc4", r: 4.7, rc: 63, c: "Brown calf", sz: [40, 41, 42, 43, 44, 45], d: "A double monk strap with brushed silver buckles. Our dressiest shoe." },
+      { id: 12, n: "Leather Care Set", cat: "Care", g: "Unisex", p: 45, img: "1637868796504-32f45a96d5a0", alt: "1614252235316-8c857d38b5f4", r: 4.9, rc: 410, c: "Neutral", sz: [], d: "Cream polish, horsehair brush, cloth and cedar shoe trees. Everything you need to keep leather looking new." },
+    ];
+    const ALL_SIZES = [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46];
+    const PRICES = [["Under $230", 0, 229], ["$230 – $280", 230, 280], ["Over $280", 281, 9999]];
+    const CATS = ["Boots", "Oxfords", "Loafers", "Care"];
+    const F = { cats: new Set(), g: null, sale: false, size: null, price: null, q: "" };
+    let wish = new Set();
+    try { wish = new Set(JSON.parse(localStorage.getItem("fsWish") || "[]")); } catch (e) {}
+    const stars = (r) => { let s = ""; for (let i = 1; i <= 5; i++) s += `<i class="ri-star-${r >= i ? "fill" : r >= i - 0.5 ? "half-fill" : "line"}"></i>`; return s; };
+
+    $("fCat").innerHTML = CATS.map((c) => `<label class="check"><input type="checkbox" value="${c}" /><span></span>${c === "Oxfords" ? "Oxfords & Derbies" : c === "Care" ? "Shoe care" : c} <em>${P.filter((x) => x.cat === c).length}</em></label>`).join("") + `<label class="check"><input type="checkbox" value="__sale" /><span></span>On sale <em>${P.filter((x) => x.was).length}</em></label>`;
+    $("fSize").innerHTML = ALL_SIZES.map((s) => `<button data-s="${s}">${s}</button>`).join("");
+    $("fPrice").innerHTML = PRICES.map((p, i) => `<label class="check check--radio"><input type="radio" name="price" value="${i}" /><span></span>${p[0]}</label>`).join("");
+
+    const card = (x, i) => `<article class="card" style="--d:${i * 0.05}s">
+      <div class="card__media">
+        ${x.was ? `<span class="badge">-${Math.round((1 - x.p / x.was) * 100)}%</span>` : ""}
+        <button class="card__wish ${wish.has(x.id) ? "on" : ""}" data-wish="${x.id}" aria-label="Add ${x.n} to wishlist"><i class="ri-heart-3-${wish.has(x.id) ? "fill" : "line"}"></i></button>
+        <img src="${U(x.img)}" alt="${x.n}" loading="lazy" /><img class="card__alt" src="${U(x.alt)}" alt="" loading="lazy" />
+        <button class="card__quick" data-quick="${x.id}">${x.sz.length ? "Choose size" : "Quick add"}</button>
+      </div>
+      <div class="card__body"><span>${x.g} · ${x.c}</span><h3><button data-quick="${x.id}">${x.n}</button></h3><div class="card__rate"><span class="stars">${stars(x.r)}</span>(${x.rc})</div><p class="price">${x.was ? `<s>$${x.was}</s>` : ""}<b class="${x.was ? "sale" : ""}">$${x.p}</b></p></div>
+    </article>`;
+    const render = () => {
+      let list = P.filter((x) => (!F.cats.size || F.cats.has(x.cat)) && (!F.g || x.g === F.g || x.g === "Unisex") && (!F.sale || x.was) && (!F.size || x.sz.includes(F.size)) && (!F.price || (x.p >= F.price[1] && x.p <= F.price[2])) && (!F.q || (x.n + x.cat + x.c + x.g).toLowerCase().includes(F.q)));
+      const s = $("sort").value;
+      if (s === "low") list.sort((a, b) => a.p - b.p); else if (s === "high") list.sort((a, b) => b.p - a.p); else if (s === "rate") list.sort((a, b) => b.r - a.r);
+      $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="none"><i class="ri-search-eye-line"></i><p>No shoes match these filters.</p><button class="btn btn--line" id="noneReset">Clear filters</button></div>`;
+      $("count").textContent = `${list.length} ${list.length === 1 ? "product" : "products"}`;
+      $("shopTitle").textContent = F.q ? `Results for "${F.q}"` : F.sale ? "Sale" : F.g ? `${F.g}'s shoes` : F.cats.size === 1 ? [...F.cats][0] === "Oxfords" ? "Oxfords & Derbies" : [...F.cats][0] : "All shoes";
+    };
+    const syncInputs = () => {
+      $("fCat").querySelectorAll("input").forEach((i) => (i.checked = i.value === "__sale" ? F.sale : F.cats.has(i.value)));
+      $("fSize").querySelectorAll("button").forEach((b) => b.classList.toggle("on", +b.dataset.s === F.size));
+      $("fPrice").querySelectorAll("input").forEach((i) => (i.checked = F.price === PRICES[+i.value]));
+    };
+    const reset = () => { F.cats.clear(); F.g = null; F.sale = false; F.size = null; F.price = null; F.q = ""; $("searchInput").value = ""; syncInputs(); render(); };
+    $("fCat").addEventListener("change", (e) => { const v = e.target.value; if (v === "__sale") F.sale = e.target.checked; else e.target.checked ? F.cats.add(v) : F.cats.delete(v); render(); });
+    $("fSize").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; F.size = F.size === +b.dataset.s ? null : +b.dataset.s; syncInputs(); render(); });
+    $("fPrice").addEventListener("change", (e) => { F.price = PRICES[+e.target.value]; render(); });
+    $("fReset").addEventListener("click", reset);
+    $("sort").addEventListener("change", render);
+    $("searchForm").addEventListener("submit", (e) => { e.preventDefault(); F.q = $("searchInput").value.trim().toLowerCase(); render(); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+    $("searchInput").addEventListener("input", (e) => { if (!e.target.value) { F.q = ""; render(); } });
+    document.addEventListener("click", (e) => {
+      const f = e.target.closest("[data-filter]"); if (!f) return;
+      const v = f.dataset.filter; reset();
+      if (v === "Men" || v === "Women") F.g = v; else if (v === "Sale") F.sale = true; else if (v !== "all") F.cats.add(v);
+      syncInputs(); render(); closeNav();
+    });
+    $("filtersOpen").addEventListener("click", () => document.body.classList.add("filters-open"));
+    $("filtersClose").addEventListener("click", () => document.body.classList.remove("filters-open"));
+    $("grid").addEventListener("click", (e) => { if (e.target.closest("#noneReset")) reset(); });
+    render();
+
+    /* ---------- Wishlist ---------- */
+    const renderWish = () => { $("wishCount").textContent = wish.size; $("wishCount").classList.toggle("on", wish.size > 0); try { localStorage.setItem("fsWish", JSON.stringify([...wish])); } catch (e) {} };
+    renderWish();
+    $("wishBtn").addEventListener("click", () => { reset(); $("grid").innerHTML = wish.size ? P.filter((x) => wish.has(x.id)).map(card).join("") : `<div class="none"><i class="ri-heart-3-line"></i><p>Your wishlist is empty.</p></div>`; $("shopTitle").textContent = "Wishlist"; $("count").textContent = `${wish.size} saved`; $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* ---------- Cart ---------- */
+    let cart = [];
+    try { cart = JSON.parse(localStorage.getItem("fsCart") || "[]"); } catch (e) {}
+    const FREE = 150;
+    const renderCart = () => {
+      const n = cart.reduce((s, i) => s + i.q, 0), sub = cart.reduce((s, i) => s + i.q * i.p, 0);
+      $("cartCount").textContent = n; $("cartCount").classList.toggle("on", n > 0); $("dCount").textContent = n ? `(${n})` : "";
+      $("drawerList").innerHTML = cart.length ? cart.map((i, k) => `<li><img src="${U(i.img, 200)}" alt="" /><div><b>${i.n}</b><small>${i.size ? "Size EU " + i.size + " · " : ""}${i.c}</small><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>$${i.p * i.q}</span><button data-rm="${k}" aria-label="Remove">Remove</button></div></li>`).join("") : `<li class="empty"><i class="ri-shopping-cart-2-line"></i><p>Your cart is empty</p></li>`;
+      $("dSub").textContent = "$" + sub;
+      $("shipTxt").innerHTML = sub >= FREE ? '<i class="ri-checkbox-circle-fill"></i> You get <b>free delivery</b>' : `Add <b>$${FREE - sub}</b> more for free delivery`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      try { localStorage.setItem("fsCart", JSON.stringify(cart)); } catch (e) {}
+    };
+    const addToCart = (x, size) => {
+      const key = x.id + "-" + (size || 0), f = cart.find((i) => i.key === key);
+      f ? f.q++ : cart.push({ key, n: x.n, size, c: x.c, p: x.p, img: x.img, q: 1 });
+      renderCart(); toast(`<i class="ri-check-line"></i> ${x.n}${size ? ", EU " + size : ""} added to cart`);
+      $("cartBtn").classList.remove("bump"); void $("cartBtn").offsetWidth; $("cartBtn").classList.add("bump");
+    };
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.rm !== undefined) cart.splice(+b.dataset.rm, 1); else { const i = cart[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) cart.splice(+b.dataset.k, 1); } renderCart(); });
+    const openCart = () => { closeModal(); document.body.classList.add("cart-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { document.body.classList.remove("cart-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("cartBtn").addEventListener("click", openCart); $("drawerClose").addEventListener("click", closeCart); $("scrim").addEventListener("click", closeCart);
+    $("checkout").addEventListener("click", () => { if (!cart.length) return; cart = []; renderCart(); closeCart(); toast("Order placed. You'll get a tracking email shortly."); });
+    renderCart();
+
+    /* ---------- Quick view ---------- */
+    let mItem = null, mSize = null;
+    const openModal = (x) => {
+      mItem = x; mSize = null; $("mErr").textContent = "";
+      $("mImg").src = U(x.img, 1000); $("mImg").alt = x.n;
+      $("mThumbs").innerHTML = [x.img, x.alt].map((im, i) => `<button class="${i ? "" : "on"}" data-im="${im}"><img src="${U(im, 200)}" alt="" /></button>`).join("");
+      $("mCat").textContent = `${x.g} · ${x.cat === "Oxfords" ? "Oxfords & Derbies" : x.cat}`; $("mName").textContent = x.n;
+      $("mRate").innerHTML = `<span class="stars">${stars(x.r)}</span>${x.r} · ${x.rc} reviews`;
+      $("mPrice").innerHTML = (x.was ? `<s>$${x.was}</s>` : "") + `<b class="${x.was ? "sale" : ""}">$${x.p}</b>`;
+      $("mDesc").textContent = x.d;
+      $("mSizes").parentElement.style.display = x.sz.length ? "" : "none";
+      const range = x.g === "Women" ? ALL_SIZES.slice(0, 7) : ALL_SIZES.slice(4);
+      $("mSizes").innerHTML = range.map((s) => `<button data-s="${s}" ${x.sz.includes(s) ? "" : "disabled"}>${s}</button>`).join("");
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("mThumbs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; $("mImg").src = U(b.dataset.im, 1000); $("mThumbs").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); });
+    $("mSizes").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || b.disabled) return; mSize = +b.dataset.s; $("mErr").textContent = ""; $("mSizes").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); });
+    $("mAdd").addEventListener("click", () => { if (mItem.sz.length && !mSize) { $("mErr").textContent = "Please choose a size."; return; } addToCart(mItem, mSize); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+    document.addEventListener("click", (e) => {
+      const q = e.target.closest("[data-quick]"), w = e.target.closest("[data-wish]");
+      if (q) openModal(P.find((x) => x.id === +q.dataset.quick));
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); w.classList.toggle("on", wish.has(id)); w.innerHTML = `<i class="ri-heart-3-${wish.has(id) ? "fill" : "line"}"></i>`; renderWish(); toast(wish.has(id) ? "Saved to wishlist" : "Removed from wishlist"); }
+    });
+
+    /* ---------- Reviews ---------- */
+    const REV = [
+      ["Halden Brogue Boot", "Third winter in these and they look better than when I bought them. Took a week to break in, then perfect.", "James T.", 5],
+      ["Nova Zip Ankle Boot", "True to size and comfortable enough to walk to work in. The heel is just the right height.", "Sofia R.", 5],
+      ["Penn Horsebit Loafer", "Beautiful finish. I went half a size down on the advice of the store staff and they fit like slippers.", "Marcus L.", 5],
+      ["Ridge Lace-up Boot", "Wore them through a week of rain in Scotland. Dry feet the whole time. Already sent an old pair to be resoled.", "Ewan M.", 4],
+    ];
+    $("reviews").innerHTML = REV.map(([p, q, n, r], i) => `<figure class="rev reveal" style="--d:${i * 0.08}s"><span class="stars">${stars(r)}</span><blockquote>${q}</blockquote><figcaption><b>${n}</b><span><i class="ri-checkbox-circle-fill"></i>Verified buyer · ${p}</span></figcaption></figure>`).join("");
+
+    /* ---------- Misc ---------- */
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeCart(); closeNav(); document.body.classList.remove("filters-open"); } });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 10), { passive: true });
+    document.querySelectorAll(".head, .perks__in > p").forEach((el) => el.classList.add("reveal"));
+    const count = (el) => { const t = +el.dataset.count, t0 = performance.now(); const step = (now) => { const k = Math.min(1, (now - t0) / 1400); el.textContent = Math.round(t * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }; reduce ? (el.textContent = t) : requestAnimationFrame(step); };
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(count); io.unobserve(e.target); }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Thanks, you're subscribed."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

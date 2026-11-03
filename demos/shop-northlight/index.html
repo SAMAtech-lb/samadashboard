@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hearth &amp; Wick — Hand-poured soy candles</title>
+  <meta name="description" content="Hearth & Wick pours soy wax candles by hand in small batches. Jar, pillar and ceramic candles, gift sets and refills, with free shipping over $60." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce">
+    <div class="container announce__in">
+      <div class="announce__social"><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a></div>
+      <p>Free shipping on orders over $60 · Gift wrapping on every order</p>
+      <div class="announce__opts"><span>English</span><span>USD</span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__top">
+      <div class="header__info">
+        <a href="tel:+15035550147"><i class="ri-customer-service-2-line"></i>(503) 555-0147</a>
+        <a href="#visit"><i class="ri-map-pin-line"></i>Find our store</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <a href="#top" class="logo" aria-label="Hearth and Wick home"><span class="logo__name">Hearth &amp; Wick</span><span class="logo__sub">Candle Company</span></a>
+      <div class="header__icons">
+        <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="#" class="hide-sm" aria-label="Account"><i class="ri-user-line"></i></a>
+        <button id="wishBtn" class="hide-sm" aria-label="Wishlist"><i class="ri-heart-line"></i><b id="wishCount">0</b></button>
+        <button id="cartBtn" aria-label="Open cart"><i class="ri-shopping-bag-line"></i><b id="cartCount">0</b></button>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="container nav__in">
+        <a href="#top" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Collections</a>
+        <a href="#gifts">Gift Sets</a>
+        <a href="#journal">Journal</a>
+        <a href="#visit">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero slider -->
+    <section class="hero" aria-roledescription="carousel">
+      <div class="hero__track" id="heroTrack"></div>
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Previous slide"><i class="ri-arrow-left-s-line"></i></button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Next slide"><i class="ri-arrow-right-s-line"></i></button>
+      <div class="hero__dots" id="heroDots"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container services__in">
+        <div><i class="ri-truck-line"></i><p><b>Free shipping</b>On orders over $60</p></div>
+        <div><i class="ri-leaf-line"></i><p><b>100% soy wax</b>Cotton wicks, no paraffin</p></div>
+        <div><i class="ri-time-line"></i><p><b>Up to 60 hour burn</b>Tested in our studio</p></div>
+        <div><i class="ri-gift-line"></i><p><b>Free gift wrap</b>With a handwritten note</p></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="title"><span class="kicker">Collections</span><h2>Shop by category</h2></div>
+        <div class="cats">
+          <a href="#shop" class="cat reveal" data-cat="Jar"><img src="https://images.unsplash.com/photo-1602607202679-d4a5e8d2b524?auto=format&fit=crop&w=700&q=80" alt="Amber glass jar candle" loading="lazy" /><span><b>Jar Candles</b>14 products</span></a>
+          <a href="#shop" class="cat reveal" data-cat="Pillar"><img src="https://images.unsplash.com/photo-1605101600616-a8c6db5b98aa?auto=format&fit=crop&w=700&q=80" alt="White pillar candle on wood" loading="lazy" /><span><b>Pillar Candles</b>8 products</span></a>
+          <a href="#shop" class="cat reveal" data-cat="Ceramic"><img src="https://images.unsplash.com/photo-1603897076223-17f346f02a03?auto=format&fit=crop&w=700&q=80" alt="Ceramic candle with wooden wick" loading="lazy" /><span><b>Ceramic Candles</b>6 products</span></a>
+          <a href="#gifts" class="cat reveal" data-cat="Gift"><img src="https://images.unsplash.com/photo-1720788810305-85fe22e6c3a2?auto=format&fit=crop&w=700&q=80" alt="Candle gift box with flowers" loading="lazy" /><span><b>Gift Sets</b>5 products</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section section--soft" id="shop">
+      <div class="container">
+        <div class="title"><span class="kicker">Our candles</span><h2>Poured this season</h2></div>
+        <div class="tabs" id="tabs" role="tablist">
+          <button class="on" data-tab="new" role="tab">New Arrivals</button>
+          <button data-tab="best" role="tab">Best Sellers</button>
+          <button data-tab="sale" role="tab">On Sale</button>
+        </div>
+        <div class="grid" id="grid"></div>
+        <div class="center"><a href="#shop" class="btn btn--line" id="viewAll">View all candles</a></div>
+      </div>
+    </section>
+
+    <!-- Promo -->
+    <section class="promo" id="gifts">
+      <div class="promo__img"><img src="https://images.unsplash.com/photo-1720788810349-7e51a042404a?auto=format&fit=crop&w=1400&q=80" alt="Row of colourful scented candles on a table" loading="lazy" /></div>
+      <div class="promo__copy reveal">
+        <span class="kicker kicker--light">Gift season</span>
+        <h2>Gift sets, 20% off this week</h2>
+        <p>Three of our best-loved scents in a keepsake box, wrapped by hand. Use code <b>WARMTH20</b> at checkout.</p>
+        <div class="countdown" id="countdown" aria-label="Offer ends in"><div><b id="cdD">0</b><span>Days</span></div><div><b id="cdH">0</b><span>Hours</span></div><div><b id="cdM">0</b><span>Mins</span></div><div><b id="cdS">0</b><span>Secs</span></div></div>
+        <a href="#shop" class="btn btn--light" id="shopGifts">Shop gift sets <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section">
+      <div class="container story">
+        <div class="story__imgs reveal">
+          <img src="https://images.unsplash.com/photo-1612293905607-b003de9e54fb?auto=format&fit=crop&w=800&q=80" alt="Hand lighting a candle in a brown jar" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1636714560735-9f84a7c06d16?auto=format&fit=crop&w=600&q=80" alt="Candles and wax on a work table" loading="lazy" />
+        </div>
+        <div class="story__copy reveal">
+          <span class="kicker">Our story</span>
+          <h2>Poured by hand in Portland since 2016</h2>
+          <p>We started in a garage with a double boiler and a box of cotton wicks. Today a team of six pours every candle in our studio on Alberta Street, in batches of forty.</p>
+          <ul class="checks">
+            <li><i class="ri-check-line"></i>Natural soy wax from US farms</li>
+            <li><i class="ri-check-line"></i>Phthalate-free fragrance and essential oils</li>
+            <li><i class="ri-check-line"></i>Jars you can return for a refill discount</li>
+          </ul>
+          <a href="#visit" class="btn">Visit the studio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="title"><span class="kicker">Reviews</span><h2>What our customers say</h2></div>
+        <div class="reviews">
+          <div class="reviews__track" id="revTrack"></div>
+        </div>
+        <div class="reviews__nav"><button id="revPrev" aria-label="Previous review"><i class="ri-arrow-left-line"></i></button><button id="revNext" aria-label="Next review"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+    </section>
+
+    <!-- Journal -->
+    <section class="section" id="journal">
+      <div class="container">
+        <div class="title"><span class="kicker">Journal</span><h2>From the candle studio</h2></div>
+        <div class="posts">
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1643716991951-285e23e35961?auto=format&fit=crop&w=800&q=80" alt="Candle beside an open book on a blanket" loading="lazy" /></a><span>Oct 18, 2026 · Care</span><h3><a href="#">How to get an even burn every time</a></h3><p>The first burn sets the memory of the wax. Here's how long to leave it lit.</p></article>
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1613068431228-8cb6a1e92573?auto=format&fit=crop&w=800&q=80" alt="White pillar candles with eucalyptus" loading="lazy" /></a><span>Oct 02, 2026 · Home</span><h3><a href="#">Styling pillar candles for autumn tables</a></h3><p>Three easy table settings using pillars, greenery and what's in your kitchen.</p></article>
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1636714528228-f469eefb3eef?auto=format&fit=crop&w=800&q=80" alt="Pillar candle and incense on a table" loading="lazy" /></a><span>Sep 21, 2026 · Scent</span><h3><a href="#">Pairing scents with the room you're in</a></h3><p>Fresh for kitchens, woody for living rooms, soft florals for the bedroom.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="insta">
+      <div class="insta__head"><i class="ri-instagram-line"></i><p>Follow us <a href="#">@hearthandwick</a></p></div>
+      <div class="insta__grid">
+        <a href="#"><img src="https://images.unsplash.com/photo-1643122966895-380f2a0fe570?auto=format&fit=crop&w=500&q=80" alt="Lit jar candles on wood" loading="lazy" /><i class="ri-instagram-line"></i></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1601479604588-68d9e6d386b5?auto=format&fit=crop&w=500&q=80" alt="Pillar candles on a table" loading="lazy" /><i class="ri-instagram-line"></i></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1602607203588-d6d0eda790e3?auto=format&fit=crop&w=500&q=80" alt="Amber jar candles with gift box" loading="lazy" /><i class="ri-instagram-line"></i></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1603905179139-db12ab535ca9?auto=format&fit=crop&w=500&q=80" alt="Ceramic candles on a wooden board" loading="lazy" /><i class="ri-instagram-line"></i></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1714228499605-367154d9bdb2?auto=format&fit=crop&w=500&q=80" alt="Lit amber candle" loading="lazy" /><i class="ri-instagram-line"></i></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1596433809571-baab6e05bb9b?auto=format&fit=crop&w=500&q=80" alt="Red jar candles on linen" loading="lazy" /><i class="ri-instagram-line"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="visit">
+    <div class="container">
+      <div class="footer__news">
+        <div><h3>Join our newsletter</h3><p>New scents, restocks and 10% off your first order.</p></div>
+        <form class="news" id="news"><input type="email" required placeholder="Your email address" aria-label="Email" /><button class="btn">Subscribe</button></form>
+      </div>
+      <p class="form-msg" id="newsMsg"></p>
+      <div class="footer__grid">
+        <div>
+          <a href="#top" class="logo logo--foot"><span class="logo__name">Hearth &amp; Wick</span><span class="logo__sub">Candle Company</span></a>
+          <p>2214 NE Alberta St<br />Portland, OR 97211</p>
+          <p>Mon–Sat 10am–6pm · Sun 11am–4pm</p>
+          <p><a href="tel:+15035550147">(503) 555-0147</a> · <a href="mailto:hello@hearthandwick.com">hello@hearthandwick.com</a></p>
+        </div>
+        <div><h4>Shop</h4><a href="#shop">Jar candles</a><a href="#shop">Pillar candles</a><a href="#shop">Ceramic candles</a><a href="#gifts">Gift sets</a><a href="#shop">Refills</a></div>
+        <div><h4>Help</h4><a href="#">Shipping &amp; delivery</a><a href="#">Returns</a><a href="#">Candle care</a><a href="#">Wholesale</a><a href="#">FAQ</a></div>
+        <div><h4>Company</h4><a href="#">About us</a><a href="#journal">Journal</a><a href="#">Careers</a><a href="#visit">Contact</a></div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Hearth &amp; Wick Candle Co. · Photography from Unsplash</p>
+        <div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="totop" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <!-- Search -->
+  <div class="search" id="search" aria-hidden="true">
+    <div class="container">
+      <div class="search__bar"><i class="ri-search-line"></i><input id="searchInput" type="search" placeholder="Search candles, scents…" aria-label="Search products" /><button id="searchClose" aria-label="Close search"><i class="ri-close-line"></i></button></div>
+      <div class="search__res" id="searchRes"></div>
+    </div>
+  </div>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__img"><img id="mImg" src="" alt="" /></div>
+      <div class="modal__body">
+        <span class="kicker" id="mCat"></span>
+        <h3 id="mName"></h3>
+        <div class="stars" id="mStars"></div>
+        <p class="price" id="mPrice"></p>
+        <p id="mDesc"></p>
+        <p class="modal__notes" id="mNotes"></p>
+        <div class="modal__opt"><span>Size</span><div class="sizes" id="mSizes"></div></div>
+        <div class="modal__buy"><div class="qty"><button id="qMinus" aria-label="Less"><i class="ri-subtract-line"></i></button><b id="qVal">1</b><button id="qPlus" aria-label="More"><i class="ri-add-line"></i></button></div><button class="btn" id="mAdd">Add to cart</button></div>
+        <ul class="modal__meta"><li><i class="ri-truck-line"></i>Ships in 1–2 business days</li><li><i class="ri-refresh-line"></i>Free returns within 30 days</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer__head"><h3>Your cart</h3><button id="drawerClose" aria-label="Close cart"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__ship"><p id="shipTxt"></p><div><span id="shipBar"></span></div></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">$0.00</b></div><p class="drawer__note">Taxes and shipping calculated at checkout.</p><button class="btn btn--full" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 700) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const money = (n) => "$" + n.toFixed(2);
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2200); };
+
+    /* ---------- Hero slider ---------- */
+    const SLIDES = [
+      { k: "Autumn collection", h: "Warm scents for longer nights", p: "Cedar, fig, smoked vanilla and spice. Hand-poured soy candles for the colder months.", img: "1643122966895-380f2a0fe570" },
+      { k: "New in", h: "Amber jars, poured by hand", p: "Our signature 8 oz jar with a cotton wick and up to 50 hours of clean burn.", img: "1612293905607-b003de9e54fb" },
+      { k: "Pillar candles", h: "Simple pillars for every table", p: "Unscented and dripless. Made to last through long dinners.", img: "1601479604588-68d9e6d386b5" },
+    ];
+    $("heroTrack").innerHTML = SLIDES.map((s, i) => `<div class="slide${i ? "" : " on"}"><div class="slide__panel"><div class="slide__copy"><span class="slide__k">${s.k}</span><h1>${s.h}</h1><p>${s.p}</p><a href="#shop" class="btn btn--light">Shop now <i class="ri-arrow-right-line"></i></a></div></div><div class="slide__img"><img src="${U(s.img, 1400)}" alt="" ${i ? 'loading="lazy"' : ""} /></div></div>`).join("");
+    $("heroDots").innerHTML = SLIDES.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Slide ${i + 1}"></button>`).join("");
+    let cur = 0, timer;
+    const go = (n) => {
+      cur = (n + SLIDES.length) % SLIDES.length;
+      document.querySelectorAll(".slide").forEach((s, i) => s.classList.toggle("on", i === cur));
+      document.querySelectorAll("#heroDots button").forEach((d, i) => d.classList.toggle("on", i === cur));
+      clearInterval(timer); if (!reduce) timer = setInterval(() => go(cur + 1), 6000);
+    };
+    $("heroPrev").addEventListener("click", () => go(cur - 1));
+    $("heroNext").addEventListener("click", () => go(cur + 1));
+    $("heroDots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) go([...b.parentElement.children].indexOf(b)); });
+    go(0);
+
+    /* ---------- Products ---------- */
+    const P = [
+      { id: 1, n: "Cedar & Smoke", cat: "Jar", p: 32, img: "1602607203475-c5e99918dfc5", alt: "1602607202679-d4a5e8d2b524", r: 5, rc: 214, tags: ["new", "best"], notes: "Cedarwood, smoked birch, black pepper", d: "Our best-selling jar. Warm and woody with a hint of campfire, in an amber glass jar with a black lid." },
+      { id: 2, n: "Fig & Cassis", cat: "Jar", p: 38, img: "1602607202950-a06a2a03cb9d", alt: "1602607203304-b57d80a65791", r: 5, rc: 96, tags: ["new"], notes: "Green fig, blackcurrant, sandalwood", d: "A large two-wick jar with a fresh, fruity top and a soft woody base. Fills an open-plan room." },
+      { id: 3, n: "Travel Trio", cat: "Gift", p: 42, was: 52, img: "1602607203588-d6d0eda790e3", alt: "1602607203559-d38903b80507", r: 4, rc: 58, tags: ["new", "sale"], notes: "Cedar & Smoke, Fig & Cassis, White Tea", d: "Three 3 oz jars of our favourite scents in a kraft gift box. Each burns for about 20 hours." },
+      { id: 4, n: "Sea Salt & Sage", cat: "Ceramic", p: 46, img: "1603897076223-17f346f02a03", alt: "1603905179139-db12ab535ca9", r: 5, rc: 71, tags: ["new", "best"], notes: "Sea salt, sage, driftwood", d: "Poured into a speckled stoneware cup made by a local potter, with a crackling wooden wick. Use the cup again once it's finished." },
+      { id: 5, n: "Classic Pillar", cat: "Pillar", p: 18, img: "1605101600616-a8c6db5b98aa", alt: "1601479604588-68d9e6d386b5", r: 4, rc: 132, tags: ["new", "best"], notes: "Unscented", d: "A dripless 3 × 6 inch soy pillar. Unscented, so it's perfect for dinner tables." },
+      { id: 6, n: "Bergamot Duo", cat: "Jar", p: 36, was: 44, img: "1596433809571-baab6e05bb9b", alt: "1605794465649-84b7e6e93af5", r: 5, rc: 49, tags: ["new", "sale"], notes: "Bergamot, cinnamon, clove", d: "Two 6 oz jars, one bright bergamot and one cinnamon spice. A holiday favourite." },
+      { id: 7, n: "White Tea", cat: "Jar", p: 28, img: "1772915022472-ffc1df2d6051", alt: "1604172083143-081d302edb4d", r: 4, rc: 88, tags: ["new", "best"], notes: "White tea, jasmine, musk", d: "Clean and light in a clear glass tumbler. Our go-to for bedrooms and bathrooms." },
+      { id: 8, n: "Pumpkin Spice", cat: "Jar", p: 30, img: "1643122966696-a67c288b39d3", alt: "1643122966664-b766fc5b2d75", r: 5, rc: 167, tags: ["new", "best"], notes: "Pumpkin, nutmeg, brown sugar", d: "Back for autumn. Sweet and spiced in our copper-lid jar." },
+      { id: 9, n: "Vanilla Tonka", cat: "Jar", p: 34, was: 40, img: "1714228499605-367154d9bdb2", alt: "1612293905607-b003de9e54fb", r: 5, rc: 120, tags: ["best", "sale"], notes: "Vanilla, tonka bean, amber", d: "Rich and cosy, with a soft amber glow through the brown glass." },
+      { id: 10, n: "Copper Tin Set", cat: "Gift", p: 48, was: 60, img: "1643122966676-29e8597257f7", alt: "1643122966694-8778087ee3b0", r: 4, rc: 37, tags: ["best", "sale"], notes: "Four scents, 4 oz each", d: "Four copper-lid tins of our seasonal scents. Easy to gift, easy to share." },
+      { id: 11, n: "Glass Pillar", cat: "Pillar", p: 24, was: 30, img: "1619799360851-a143fbc240b3", alt: "1604160526882-551c7c24f2cb", r: 4, rc: 44, tags: ["sale"], notes: "Unscented", d: "A tall pillar on a clear glass holder. Safe for windowsills and mantels." },
+      { id: 12, n: "Garden Gift Box", cat: "Gift", p: 58, img: "1720788810305-85fe22e6c3a2", alt: "1720788810349-7e51a042404a", r: 5, rc: 29, tags: ["best"], notes: "Five floral scents", d: "Five mini jars in a printed keepsake box. Rose, lily, lavender, peach and lemon." },
+    ];
+    const SIZES = { Jar: [["8 oz", 0], ["12 oz", 10]], Ceramic: [["Standard", 0]], Pillar: [["3 × 6 in", 0], ["3 × 9 in", 8]], Gift: [["Gift box", 0]] };
+    const stars = (r) => '<i class="ri-star-fill"></i>'.repeat(r) + '<i class="ri-star-line"></i>'.repeat(5 - r);
+    let wish = new Set(), tab = "new", catFilter = null;
+    try { wish = new Set(JSON.parse(localStorage.getItem("hwWish") || "[]")); } catch (e) {}
+    const card = (x, i) => `<article class="card" style="--d:${i * 0.06}s">
+        <div class="card__media">
+          ${x.was ? `<span class="badge">-${Math.round((1 - x.p / x.was) * 100)}%</span>` : x.tags.includes("new") && !x.tags.includes("best") ? '<span class="badge badge--new">New</span>' : ""}
+          <img src="${U(x.img)}" alt="${x.n} candle" loading="lazy" /><img class="card__alt" src="${U(x.alt)}" alt="" loading="lazy" />
+          <div class="card__acts"><button data-wish="${x.id}" class="${wish.has(x.id) ? "on" : ""}" aria-label="Add to wishlist"><i class="ri-heart-${wish.has(x.id) ? "fill" : "line"}"></i></button><button data-quick="${x.id}" aria-label="Quick view"><i class="ri-eye-line"></i></button></div>
+          <button class="card__add" data-add="${x.id}">Add to cart</button>
+        </div>
+        <div class="card__body"><span>${x.cat} candle</span><h3><button data-quick="${x.id}">${x.n}</button></h3><div class="stars">${stars(x.r)}<small>(${x.rc})</small></div><p class="price">${x.was ? `<s>${money(x.was)}</s>` : ""}${money(x.p)}</p></div>
+      </article>`;
+    const renderGrid = () => {
+      const list = catFilter ? P.filter((x) => x.cat === catFilter) : P.filter((x) => x.tags.includes(tab)).slice(0, 8);
+      $("grid").innerHTML = list.map(card).join("");
+    };
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; tab = b.dataset.tab; catFilter = null; $("tabs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); renderGrid(); });
+    document.querySelectorAll("[data-cat]").forEach((a) => a.addEventListener("click", () => { catFilter = a.dataset.cat; $("tabs").querySelectorAll("button").forEach((x) => x.classList.remove("on")); renderGrid(); }));
+    $("viewAll").addEventListener("click", (e) => { e.preventDefault(); catFilter = null; $("grid").innerHTML = P.map(card).join(""); $("viewAll").style.display = "none"; });
+    $("shopGifts").addEventListener("click", () => { catFilter = "Gift"; $("tabs").querySelectorAll("button").forEach((x) => x.classList.remove("on")); renderGrid(); });
+    renderGrid();
+
+    /* ---------- Wishlist ---------- */
+    const renderWish = () => { $("wishCount").textContent = wish.size; $("wishCount").classList.toggle("on", wish.size > 0); try { localStorage.setItem("hwWish", JSON.stringify([...wish])); } catch (e) {} };
+    renderWish();
+
+    /* ---------- Cart ---------- */
+    let cart = [];
+    try { cart = JSON.parse(localStorage.getItem("hwCart") || "[]"); } catch (e) {}
+    const FREE = 60;
+    const renderCart = () => {
+      const n = cart.reduce((s, i) => s + i.q, 0), sub = cart.reduce((s, i) => s + i.q * i.p, 0);
+      $("cartCount").textContent = n; $("cartCount").classList.toggle("on", n > 0);
+      $("drawerList").innerHTML = cart.length ? cart.map((i, k) => `<li><img src="${U(i.img, 200)}" alt="" /><div><b>${i.n}</b><small>${i.size}</small><div class="qty qty--sm"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>${money(i.p * i.q)}</span><button data-rm="${k}" aria-label="Remove"><i class="ri-delete-bin-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-shopping-bag-line"></i>Your cart is empty.<a href="#shop" class="btn btn--line" id="emptyShop">Continue shopping</a></li>`;
+      $("dSub").textContent = money(sub);
+      $("shipTxt").innerHTML = sub >= FREE ? "You've unlocked <b>free shipping</b>" : `Spend <b>${money(FREE - sub)}</b> more for free shipping`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      try { localStorage.setItem("hwCart", JSON.stringify(cart)); } catch (e) {}
+    };
+    const addToCart = (x, size = SIZES[x.cat][0], q = 1) => {
+      const key = x.id + size[0], f = cart.find((i) => i.key === key);
+      f ? (f.q += q) : cart.push({ key, n: x.n, size: size[0], p: x.p + size[1], img: x.img, q });
+      renderCart(); toast(`${x.n} added to cart`);
+      $("cartBtn").classList.remove("bump"); void $("cartBtn").offsetWidth; $("cartBtn").classList.add("bump");
+    };
+    $("drawerList").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (b.dataset.rm !== undefined) cart.splice(+b.dataset.rm, 1);
+      else { const i = cart[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) cart.splice(+b.dataset.k, 1); }
+      renderCart();
+    });
+    const openCart = () => { closeAll(); document.body.classList.add("cart-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { document.body.classList.remove("cart-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("cartBtn").addEventListener("click", openCart); $("drawerClose").addEventListener("click", closeCart); $("scrim").addEventListener("click", closeCart);
+    $("drawer").addEventListener("click", (e) => { if (e.target.closest("#emptyShop")) closeCart(); });
+    $("checkout").addEventListener("click", () => { if (!cart.length) return; cart = []; renderCart(); closeCart(); toast("Thank you! Your order is confirmed."); });
+    renderCart();
+
+    /* ---------- Quick view ---------- */
+    let mItem = null, mSize = null, mQ = 1;
+    const openModal = (x) => {
+      mItem = x; mQ = 1; mSize = SIZES[x.cat][0];
+      $("mImg").src = U(x.img, 900); $("mImg").alt = x.n + " candle";
+      $("mCat").textContent = x.cat + " candle"; $("mName").textContent = x.n;
+      $("mStars").innerHTML = stars(x.r) + `<small>${x.rc} reviews</small>`;
+      $("mDesc").textContent = x.d; $("mNotes").innerHTML = `<b>Notes:</b> ${x.notes}`; $("qVal").textContent = 1;
+      $("mSizes").innerHTML = SIZES[x.cat].map((s, i) => `<button class="${i ? "" : "on"}" data-i="${i}">${s[0]}</button>`).join("");
+      const setPrice = () => { $("mPrice").innerHTML = (x.was && !mSize[1] ? `<s>${money(x.was)}</s>` : "") + money(x.p + mSize[1]); };
+      setPrice(); $("mSizes").onclick = (e) => { const b = e.target.closest("button"); if (!b) return; mSize = SIZES[x.cat][+b.dataset.i]; $("mSizes").querySelectorAll("button").forEach((y) => y.classList.toggle("on", y === b)); setPrice(); };
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("qMinus").addEventListener("click", () => { mQ = Math.max(1, mQ - 1); $("qVal").textContent = mQ; });
+    $("qPlus").addEventListener("click", () => { mQ++; $("qVal").textContent = mQ; });
+    $("mAdd").addEventListener("click", () => { addToCart(mItem, mSize, mQ); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]"), q = e.target.closest("[data-quick]"), w = e.target.closest("[data-wish]");
+      if (a) addToCart(P.find((x) => x.id === +a.dataset.add));
+      if (q) { closeSearch(); openModal(P.find((x) => x.id === +q.dataset.quick)); }
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); w.classList.toggle("on", wish.has(id)); w.innerHTML = `<i class="ri-heart-${wish.has(id) ? "fill" : "line"}"></i>`; renderWish(); toast(wish.has(id) ? "Added to wishlist" : "Removed from wishlist"); }
+    });
+    $("wishBtn").addEventListener("click", () => { catFilter = null; $("grid").innerHTML = wish.size ? P.filter((x) => wish.has(x.id)).map(card).join("") : '<p class="none">Your wishlist is empty. Tap the heart on any candle to save it.</p>'; $("tabs").querySelectorAll("button").forEach((x) => x.classList.remove("on")); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* ---------- Search ---------- */
+    const openSearch = () => { document.body.classList.add("search-open"); $("search").setAttribute("aria-hidden", "false"); setTimeout(() => $("searchInput").focus(), 100); };
+    const closeSearch = () => { document.body.classList.remove("search-open"); $("search").setAttribute("aria-hidden", "true"); };
+    $("searchBtn").addEventListener("click", openSearch); $("searchClose").addEventListener("click", closeSearch);
+    $("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      const res = q ? P.filter((x) => (x.n + x.notes + x.cat).toLowerCase().includes(q)) : [];
+      $("searchRes").innerHTML = q ? (res.length ? res.map((x) => `<button data-quick="${x.id}"><img src="${U(x.img, 160)}" alt="" /><span><b>${x.n}</b>${x.notes}</span><em>${money(x.p)}</em></button>`).join("") : `<p>No candles match "${e.target.value}".</p>`) : "";
+    });
+
+    /* ---------- Countdown ---------- */
+    const end = Date.now() + ((3 * 24 + 7) * 3600 + 42 * 60) * 1000;
+    const tick = () => { let s = Math.max(0, Math.floor((end - Date.now()) / 1000)); $("cdD").textContent = Math.floor(s / 86400); s %= 86400; $("cdH").textContent = String(Math.floor(s / 3600)).padStart(2, "0"); s %= 3600; $("cdM").textContent = String(Math.floor(s / 60)).padStart(2, "0"); $("cdS").textContent = String(s % 60).padStart(2, "0"); };
+    tick(); setInterval(tick, 1000);
+
+    /* ---------- Reviews ---------- */
+    const REV = [
+      ["Cedar & Smoke is the only candle my husband and I agree on. The throw is strong without being overwhelming, and it burns evenly right to the bottom.", "Megan R.", "Seattle, WA"],
+      ["I ordered the Travel Trio as a gift and it arrived beautifully wrapped with a handwritten note. Already reordered one for myself.", "Daniel K.", "Austin, TX"],
+      ["You can tell these are made with care. No black soot, no tunnelling, and the stoneware cup now holds my rings.", "Priya S.", "Portland, OR"],
+      ["Fast shipping and the White Tea candle smells exactly like the description. Clean, soft and not sweet at all.", "Laura M.", "Denver, CO"],
+    ];
+    $("revTrack").innerHTML = REV.map(([q, n, c]) => `<figure class="rev"><div class="stars">${stars(5)}</div><blockquote>“${q}”</blockquote><figcaption><b>${n}</b><span>${c} · Verified buyer</span></figcaption></figure>`).join("");
+    let ri = 0;
+    const perView = () => (innerWidth < 760 ? 1 : innerWidth < 1100 ? 2 : 3);
+    const slideRev = (d) => { const max = REV.length - perView(); ri = Math.min(max, Math.max(0, ri + d)); const w = $("revTrack").firstElementChild.getBoundingClientRect().width + 24; $("revTrack").style.transform = `translateX(${-ri * w}px)`; };
+    $("revPrev").addEventListener("click", () => slideRev(-1)); $("revNext").addEventListener("click", () => slideRev(1));
+    addEventListener("resize", () => slideRev(0));
+
+    /* ---------- Misc ---------- */
+    const closeAll = () => { closeModal(); closeSearch(); };
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeAll(); closeCart(); closeNav(); } });
+    const header = $("header");
+    addEventListener("scroll", () => { header.classList.toggle("sticky", scrollY > 140); $("toTop").classList.toggle("on", scrollY > 700); }, { passive: true });
+    $("toTop").addEventListener("click", () => scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
+    document.querySelectorAll(".title, .services__in > div").forEach((el) => el.classList.add("reveal"));
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el, i) => { el.style.setProperty("--d", (i % 4) * 0.08 + "s"); io.observe(el); });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Thanks for subscribing! Your 10% code is on its way."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

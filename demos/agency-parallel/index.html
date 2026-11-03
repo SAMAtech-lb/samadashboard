@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Studio — Web &amp; App Development Agency</title>
+  <meta name="description" content="Parallel is a 24-person web and app development studio. We design and build online shops, booking platforms and customer apps for brands across Europe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo"><span class="logo__mark"><i></i><i></i></span>Parallel</a>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#engage">Pricing</a>
+        <a href="#team">Team</a>
+      </nav>
+      <a href="#contact" class="btn btn--sm" data-magnet>Start a project <i class="ri-arrow-right-up-line"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wall" id="wall" aria-hidden="true">
+        <div class="wall__plane" id="plane">
+          <div class="wall__col" data-dir="up"></div>
+          <div class="wall__col" data-dir="down"></div>
+          <div class="wall__col" data-dir="up"></div>
+          <div class="wall__col" data-dir="down"></div>
+          <div class="wall__col" data-dir="up"></div>
+        </div>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__in">
+        <p class="pill reveal" style="--d:.05s"><span>New</span> Kickvault's release-day rebuild is live <i class="ri-arrow-right-line"></i></p>
+        <h1 class="hero__title">
+          <span class="line"><span>We build websites</span></span>
+          <span class="line"><span><em class="grad">people buy</em> from.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d:.5s">Parallel is a 24-person design and development studio in Lisbon and Berlin. Since 2015 we've launched 140+ online shops, booking platforms and customer apps for brands across Europe.</p>
+        <div class="hero__cta reveal" style="--d:.62s">
+          <a href="#contact" class="btn" data-magnet>Start a project <i class="ri-arrow-right-line"></i></a>
+          <a href="#work" class="btn btn--ghost">See our work</a>
+        </div>
+        <ul class="hero__stats reveal" style="--d:.75s">
+          <li><b data-count="140">0</b><span>+ launches</span></li>
+          <li><b data-count="4.9" data-dec="1">0</b><span>avg. client rating</span></li>
+          <li><b data-count="11">0</b><span>years together</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients" aria-label="Clients">
+      <p>Trusted by teams at</p>
+      <div class="clients__view"><div class="clients__track" id="clients"></div></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="head">
+          <span class="kicker reveal">What we do</span>
+          <h2 class="h2 reveal">Strategy, design and code <em class="grad">under one roof.</em></h2>
+        </div>
+        <div class="svc">
+          <div class="svc__list" id="svcList"></div>
+          <div class="svc__stage" id="svcStage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section work" id="work">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">Selected work</span><h2 class="h2 reveal">Launched, <em class="grad">measured.</em></h2></div>
+          <p class="head__p reveal">Six of the 140+ products we've shipped. Scroll through — each one is live and earning.</p>
+        </div>
+      </div>
+      <div class="stack" id="stack"></div>
+      <div class="container work__more reveal"><a href="#contact" class="btn btn--ghost">Ask for the full portfolio <i class="ri-arrow-right-up-line"></i></a></div>
+    </section>
+
+    <!-- Impact -->
+    <section class="impact">
+      <div class="container impact__in">
+        <div class="impact__item reveal"><b class="grad"><span data-count="1.4" data-dec="1">0</span>B</b><span>in client revenue processed through our builds in 2025</span></div>
+        <div class="impact__item reveal" style="--d:.08s"><b class="grad"><span data-count="0.9" data-dec="1">0</span>s</b><span>median page load across live client sites</span></div>
+        <div class="impact__item reveal" style="--d:.16s"><b class="grad"><span data-count="38">0</span>%</b><span>average conversion lift in the first 90 days</span></div>
+        <div class="impact__item reveal" style="--d:.24s"><b class="grad"><span data-count="92">0</span>%</b><span>of clients still with us after two years</span></div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+      <div class="process__pin">
+        <div class="container">
+          <span class="kicker">How we work</span>
+          <h2 class="h2">From first call to <em class="grad">launch day.</em></h2>
+          <div class="track">
+            <svg class="track__line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path id="trackPath" d="M0 60 C 200 0, 300 120, 500 60 S 800 0, 1000 60 S 1150 110, 1200 60" /></svg>
+            <div class="steps" id="steps"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements -->
+    <section class="section engage" id="engage">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">Engagements</span><h2 class="h2 reveal">Three ways to <em class="grad">work together.</em></h2></div>
+          <p class="head__p reveal">Fixed prices agreed before we start. No hourly surprises.</p>
+        </div>
+        <div class="models">
+          <article class="model reveal">
+            <span class="model__no">01</span>
+            <h3>Discovery Sprint</h3>
+            <p class="model__price"><b>€14k</b> · 2 weeks</p>
+            <p>Workshops, research and a clickable prototype of your key journeys — plus a fixed quote for the build.</p>
+            <ul><li><i class="ri-check-line"></i>Stakeholder workshops</li><li><i class="ri-check-line"></i>5 customer interviews</li><li><i class="ri-check-line"></i>Clickable prototype</li><li><i class="ri-check-line"></i>Fixed build quote</li></ul>
+            <a href="#contact" class="model__cta">Book a sprint <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="model model--pop reveal" style="--d:.08s">
+            <span class="model__tag">Most clients start here</span>
+            <span class="model__no">02</span>
+            <h3>Product Build</h3>
+            <p class="model__price"><b>from €60k</b> · 8 – 16 weeks</p>
+            <p>Design and development in two-week sprints with a live demo every other Friday. You own the code from day one.</p>
+            <ul><li><i class="ri-check-line"></i>Dedicated squad of 4–6</li><li><i class="ri-check-line"></i>Design system + code</li><li><i class="ri-check-line"></i>QA, analytics, launch</li><li><i class="ri-check-line"></i>30 days of aftercare</li></ul>
+            <a href="#contact" class="btn">Start a build <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="model reveal" style="--d:.16s">
+            <span class="model__no">03</span>
+            <h3>Growth Partner</h3>
+            <p class="model__price"><b>from €8k</b> / month</p>
+            <p>A named team that ships experiments, features and fixes every month, with a quarterly roadmap review.</p>
+            <ul><li><i class="ri-check-line"></i>6–10 days a month</li><li><i class="ri-check-line"></i>A/B testing programme</li><li><i class="ri-check-line"></i>24/7 monitoring</li><li><i class="ri-check-line"></i>Quarterly strategy day</li></ul>
+            <a href="#contact" class="model__cta">Talk about retainers <i class="ri-arrow-right-line"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech stack -->
+    <section class="tech" aria-label="Technologies we use">
+      <div class="container tech__head"><span class="kicker reveal">Our stack</span><p class="reveal">Boring, proven technology — chosen for speed today and easy hiring tomorrow.</p></div>
+      <div class="tech__row"><div class="tech__track" id="tech1"></div></div>
+      <div class="tech__row tech__row--rev"><div class="tech__track" id="tech2"></div></div>
+    </section>
+
+    <!-- Team -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">The people</span><h2 class="h2 reveal">Small team. <em class="grad">Senior hands.</em></h2></div>
+          <p class="head__p reveal">No hand-offs to juniors. The people on your first call design and build your product.</p>
+        </div>
+        <div class="people" id="people"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section voices">
+      <div class="container">
+        <div class="voice" id="voice"></div>
+        <div class="voice__nav"><button id="vPrev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button><span id="vCount">01 / 03</span><button id="vNext" aria-label="Next"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="section awards">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">Milestones</span><h2 class="h2 reveal">Launches that <em class="grad">moved the needle.</em></h2></div>
+        </div>
+        <ul class="aw" id="awards"></ul>
+      </div>
+      <div class="aw__float" id="awFloat" aria-hidden="true"><img id="awImg" alt="" /></div>
+    </section>
+
+    <!-- Insights -->
+    <section class="section insights" id="insights">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">Insights</span><h2 class="h2 reveal">Notes from <em class="grad">the studio.</em></h2></div>
+          <a href="#" class="btn btn--ghost reveal">All articles <i class="ri-arrow-right-up-line"></i></a>
+        </div>
+        <div class="posts" id="posts"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <div class="container faq__in">
+        <div>
+          <span class="kicker reveal">FAQ</span>
+          <h2 class="h2 reveal">Questions we <em class="grad">hear a lot.</em></h2>
+          <p class="reveal">Something else? Ana answers every message herself within a day.</p>
+        </div>
+        <div class="acc" id="acc">
+          <details open><summary>How much does a typical project cost?</summary><p>Most online shops and booking platforms land between €60k and €180k, depending on integrations and how much is custom. The Discovery Sprint gives you a fixed number before you commit.</p></details>
+          <details><summary>Do we own the code and design files?</summary><p>Yes — everything lives in your GitHub and Figma from day one. No lock-in, no licence fees.</p></details>
+          <details><summary>Can you work with our in-house team?</summary><p>Often. We pair with in-house developers and designers, share rituals and hand over gradually so your team owns the product after launch.</p></details>
+          <details><summary>Which time zones do you cover?</summary><p>Lisbon and Berlin cover 7am–7pm CET. For US clients we run overlapping afternoons and a weekly call at a time that suits you.</p></details>
+          <details><summary>What happens after launch?</summary><p>30 days of aftercare are included. Most clients then move to a Growth Partner retainer so we keep shipping improvements every month.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Let's build something</span><i class="ri-asterisk"></i><span>Let's build something</span><i class="ri-asterisk"></i><span>Let's build something</span><i class="ri-asterisk"></i><span>Let's build something</span><i class="ri-asterisk"></i></div></div>
+      <div class="container contact__in">
+        <div>
+          <span class="kicker reveal">Start a project</span>
+          <h2 class="h2 reveal">Tell us what you're <em class="grad">building.</em></h2>
+          <p class="reveal">Ana or Jonas will reply within one working day with questions and a time for a 30-minute call.</p>
+          <div class="offices reveal">
+            <div><b>Lisbon</b><span>Rua do Alecrim 41, 1200-014</span><span class="clock" data-tz="Europe/Lisbon"></span></div>
+            <div><b>Berlin</b><span>Torstraße 109, 10119</span><span class="clock" data-tz="Europe/Berlin"></span></div>
+          </div>
+        </div>
+        <form class="form reveal" id="form">
+          <div class="form__row"><label>Name<input required /></label><label>Company<input required /></label></div>
+          <label>Email<input type="email" required /></label>
+          <div class="chips" id="needs"><span>We need</span><button type="button" class="on">Online shop</button><button type="button">Web app</button><button type="button">Mobile app</button><button type="button">Redesign</button></div>
+          <div class="chips" id="budget"><span>Budget</span><button type="button">€25–50k</button><button type="button" class="on">€50–100k</button><button type="button">€100k+</button></div>
+          <label>Project details<textarea rows="4" required></textarea></label>
+          <button class="btn" type="submit" data-magnet>Send brief <i class="ri-send-plane-line"></i></button>
+          <p class="form__ok" id="ok" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__in">
+      <a href="#top" class="logo"><span class="logo__mark"><i></i><i></i></span>Parallel</a>
+      <nav><a href="#">Careers <em>4 open</em></a><a href="#">Dribbble</a><a href="#">LinkedIn</a><a href="#">Behance</a></nav>
+      <span>© 2026 Parallel Studio Lda</span>
+    </div>
+  </footer>
+
+  <!-- Case modal -->
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal__box"><button class="modal__x" id="modalX" aria-label="Close"><i class="ri-close-line"></i></button><div id="modalBody"></div></div></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+    const SHOTS = ["shop-kickvault", "clinic-stride", "dashboard-kora", "landing-portline", "realestate-havenly", "shop-brightbyte", "shop-velora", "restaurant-wokstreet", "auto-kessler"];
+    const WORK = [
+      { img: "shop-kickvault", cat: "E-commerce", n: "Kickvault", t: "A sneaker store that survives release day", y: "2026", c1: "#c8ff2e", c2: "#1c2a00", ink: "#0d0d0d", tags: ["Headless Shopify", "Raffle queue", "UK/EU/US sizing"], m: [["38k", "visitors in 10 min"], ["0", "downtime on drop day"], ["+64%", "mobile conversion"]], d: "Headless Shopify with a raffle queue in front of checkout, live stock and size switching built for drop-day traffic." },
+      { img: "landing-portline", cat: "Platform", n: "Portline Logistics", t: "Freight tracking customers actually trust", y: "2025", c1: "#ff7a00", c2: "#0b2545", ink: "#ffffff", tags: ["Next.js", "Live tracking", "Quote engine"], m: [["−54%", "\"where is it?\" calls"], ["9", "languages"], ["2.1s → 0.8s", "page load"]], d: "Shipment tracking with route maps and milestone timelines, plus an instant quote engine wired into their TMS." },
+      { img: "clinic-stride", cat: "Booking", n: "Stride Physio", t: "Booking a physio in four taps", y: "2025", c1: "#2454e6", c2: "#0d2240", ink: "#ffffff", tags: ["Booking engine", "Deposits", "SMS reminders"], m: [["62%", "booked online"], ["−50%", "front-desk calls"], ["−31%", "no-shows"]], d: "Treatments, physios, deposits and SMS reminders, synced to each therapist's calendar." },
+      { img: "realestate-havenly", cat: "Platform", n: "Havenly", t: "Searching 2,400 homes in under a second", y: "2025", c1: "#c9a45c", c2: "#14213d", ink: "#ffffff", tags: ["Map search", "Listings feed", "Agent routing"], m: [["+3.2×", "viewing requests"], ["0.8s", "search results"], ["2,400", "live listings"]], d: "Map and filter search over a live listings feed, with valuation requests routed straight to the right agent." },
+      { img: "shop-brightbyte", cat: "E-commerce", n: "Brightbyte", t: "Electronics with compare and trade-in", y: "2024", c1: "#e11d48", c2: "#1a1a2e", ink: "#ffffff", tags: ["Shopify Plus", "Compare tool", "Trade-in"], m: [["+41%", "revenue per visitor"], ["4,000", "products"], ["€1.2M", "trade-in credit issued"]], d: "Live search, side-by-side compare and trade-in credit applied at checkout." },
+      { img: "restaurant-wokstreet", cat: "Booking", n: "Wok Street", t: "Off the delivery apps, onto their own", y: "2024", c1: "#ffc21a", c2: "#8f0b10", ink: "#ffffff", tags: ["Ordering", "Pickup slots", "Loyalty"], m: [["68%", "orders now direct"], ["−€92k", "marketplace fees / yr"], ["6", "restaurants"]], d: "Branded ordering and pickup slots that moved customers off delivery marketplaces and into a loyalty programme." },
+    ];
+    const SERVICES = [
+      { t: "Product strategy", d: "Workshops, customer interviews and a roadmap that starts from your revenue, not a mood board.", l: ["Discovery sprints", "Customer research", "Analytics audits"], img: "dashboard-kora" },
+      { t: "UX & visual design", d: "Design systems and interfaces that convert on day one and stay consistent at version fifty.", l: ["Design systems", "Prototypes", "Usability tests"], img: "shop-velora" },
+      { t: "Web development", d: "Shopify Plus, Next.js and headless builds that load in under a second.", l: ["Headless commerce", "Next.js", "CMS"], img: "shop-kickvault" },
+      { t: "Mobile apps", d: "iOS and Android apps for loyalty, ordering and field teams from one React Native codebase.", l: ["React Native", "App Store releases", "Push & offline"], img: "restaurant-wokstreet" },
+    ];
+    const STEPS = [["Discover", "2 weeks", "Workshops, research and a clickable prototype with a fixed quote."], ["Design", "3–5 weeks", "UX and visual design in weekly reviews with your team."], ["Build", "6–12 weeks", "Two-week sprints with a live demo every other Friday."], ["Launch", "Week of", "QA, analytics, training and a calm go-live."], ["Grow", "Ongoing", "Monthly experiments and improvements with a named team."]];
+    const PEOPLE = [["Ana Ribeiro", "Co-founder · Design", "1580489944761-15a19d654956"], ["Jonas Vogel", "Co-founder · Engineering", "1560250097-0b93528c311a"], ["Priya Desai", "Lead developer", "1544005313-94ddf0286df2"], ["Tomás Lima", "Product designer", "1507003211169-0a1dd7228f2d"], ["Sophie Laurent", "Project lead", "1573496359142-b8d87734a5a2"], ["Marek Nowak", "Mobile lead", "1500648767791-00dcc994a43e"], ["Lea Schmidt", "UX researcher", "1494790108377-be9c29b29330"], ["Daniel Okoye", "Backend developer", "1519085360753-af0119f7cbe7"]];
+    const VOICES = [
+      ["Parallel rebuilt our store in eleven weeks and it paid for itself before Christmas. What we value most is that they told us what not to build.", "Owen Pritchard", "Founder, Brightbyte", "1472099645785-5658abf4ff4e"],
+      ["Release day used to be a panic. Now 38,000 people hit the site in ten minutes and we watch the dashboard with pizza.", "Jordan Pike", "Founder, Kickvault", "1506794778202-cad84cf45f1d"],
+      ["They understood freight better than some forwarders I've hired. Our customers stopped calling to ask where their containers are.", "Sophie van Dijk", "COO, Portline Logistics", "1534528741775-53994a69daeb"],
+    ];
+
+    /* ---------- Hero wall ---------- */
+    document.querySelectorAll(".wall__col").forEach((col, i) => {
+      const list = [...SHOTS.slice(i * 2 % SHOTS.length), ...SHOTS.slice(0, i * 2 % SHOTS.length)];
+      const html = list.map((s) => `<img src="img/${s}.jpg" alt="" />`).join("");
+      col.innerHTML = `<div class="wall__strip">${html}${html}</div>`;
+      col.style.setProperty("--dur", 38 + i * 6 + "s");
+    });
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    $("top").addEventListener("pointermove", (e) => { tx = e.clientX / innerWidth - .5; ty = e.clientY / innerHeight - .5; });
+    (function tilt() { cx += (tx - cx) * .05; cy += (ty - cy) * .05; $("plane").style.transform = `rotateX(${48 - cy * 8}deg) rotateZ(${-24 + cx * 6}deg) translate3d(${cx * -40}px, 0, 0)`; requestAnimationFrame(tilt); })();
+
+    /* ---------- Clients ---------- */
+    const CL = ["Kickvault", "Brightbyte", "Portline", "Havenly", "Stride Physio", "Velora", "Wok Street", "Kessler Motors", "Kora"];
+    const c = CL.map((x) => `<span>${x}</span>`).join("");
+    $("clients").innerHTML = c + c;
+
+    /* ---------- Services (auto-rotating) ---------- */
+    $("svcList").innerHTML = SERVICES.map((s, i) => `<button class="svc__item" data-i="${i}"><span class="svc__no">0${i + 1}</span><span class="svc__t">${s.t}</span><i class="svc__bar"><b></b></i></button>`).join("");
+    let si = 0, sTimer;
+    function showSvc(i) {
+      si = i; const s = SERVICES[i];
+      document.querySelectorAll(".svc__item").forEach((b, k) => { b.classList.toggle("on", k === i); b.classList.remove("run"); });
+      const cur = document.querySelectorAll(".svc__item")[i]; void cur.offsetWidth; cur.classList.add("run");
+      $("svcStage").innerHTML = `<div class="stage"><div class="stage__img"><img src="img/${s.img}.jpg" alt="${s.t} example" /></div><div class="stage__txt"><h3>${s.t}</h3><p>${s.d}</p><ul>${s.l.map((x) => `<li><i class="ri-check-line"></i>${x}</li>`).join("")}</ul></div></div>`;
+      clearTimeout(sTimer); sTimer = setTimeout(() => showSvc((si + 1) % SERVICES.length), 5000);
+    }
+    $("svcList").addEventListener("click", (e) => { const b = e.target.closest("[data-i]"); if (b) showSvc(+b.dataset.i); });
+    showSvc(0);
+
+    /* ---------- Work: sticky stacking showcase ---------- */
+    $("stack").innerHTML = WORK.map((w, i) => `
+      <div class="stack__item">
+        <article class="pcard" style="--c1:${w.c1};--c2:${w.c2};--ink:${w.ink}" data-n="${w.n}">
+          <div class="pcard__txt">
+            <div class="pcard__top"><span class="pcard__no">0${i + 1}</span><span class="pcard__cat">${w.cat} · ${w.y}</span></div>
+            <h3>${w.n}</h3>
+            <p class="pcard__t">${w.t}</p>
+            <div class="pcard__tags">${w.tags.map((t) => `<span>${t}</span>`).join("")}</div>
+            <div class="pcard__m">${w.m.map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join("")}</div>
+            <button class="pcard__btn" data-case="${w.n}">View case study <i class="ri-arrow-right-up-line"></i></button>
+          </div>
+          <div class="pcard__vis">
+            <div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span>${w.n.toLowerCase().replace(/[^a-z]/g, "")}.com</span></div><img src="img/${w.img}.jpg" alt="${w.n} desktop website" loading="lazy" /></div>
+            <div class="mphone"><img src="img/m-${w.img}.jpg" alt="${w.n} mobile website" loading="lazy" /></div>
+          </div>
+        </article>
+      </div>`).join("");
+    const pcards = [...document.querySelectorAll(".pcard")];
+    $("stack").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-case]"); if (!b) return; const w = WORK.find((x) => x.n === b.dataset.case);
+      $("modalBody").innerHTML = `<span class="kicker">${w.cat} · ${w.y}</span><h3>${w.n}: ${w.t}</h3><img src="img/${w.img}.jpg" alt="${w.n}" /><p>${w.d}</p><div class="modal__m">${w.m.map(([a, b]) => `<div><b class="grad">${a}</b><span>${b}</span></div>`).join("")}</div><a href="#contact" class="btn" id="modalCta">Build something like this <i class="ri-arrow-right-line"></i></a>`;
+      $("modal").classList.add("on"); $("modal").setAttribute("aria-hidden", "false");
+    });
+    const closeM = () => { $("modal").classList.remove("on"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("modalX").onclick = closeM; $("modal").addEventListener("click", (e) => { if (e.target === $("modal") || e.target.id === "modalCta" || e.target.closest("#modalCta")) closeM(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeM(); document.body.classList.remove("nav-open"); } });
+
+    /* ---------- Tech stack ---------- */
+    const TECH1 = [["devicon-nextjs-plain", "Next.js"], ["devicon-react-original", "React"], ["devicon-typescript-plain", "TypeScript"], ["devicon-nodejs-plain", "Node.js"], ["devicon-postgresql-plain", "PostgreSQL"], ["devicon-graphql-plain", "GraphQL"], ["devicon-tailwindcss-original", "Tailwind"], ["devicon-redis-plain", "Redis"]];
+    const TECH2 = [["devicon-figma-plain", "Figma"], ["devicon-swift-plain", "Swift"], ["devicon-kotlin-plain", "Kotlin"], ["devicon-amazonwebservices-plain-wordmark", "AWS"], ["devicon-vercel-original", "Vercel"], ["devicon-docker-plain", "Docker"], ["devicon-firebase-plain", "Firebase"], ["devicon-sass-original", "Sass"]];
+    const chip = ([i, n]) => `<span class="tchip"><i class="${i} colored"></i>${n}</span>`;
+    $("tech1").innerHTML = [...TECH1, ...TECH1].map(chip).join("");
+    $("tech2").innerHTML = [...TECH2, ...TECH2].map(chip).join("");
+
+    /* ---------- Milestones with hover preview ---------- */
+    const AWARDS = [["Kickvault", "38k visitors in the first 10 minutes of a drop, zero downtime", "2026", "shop-kickvault"], ["Stride Physio", "62% of appointments now booked online", "2025", "clinic-stride"], ["Brightbyte", "+41% revenue per visitor after the compare tool", "2025", "shop-brightbyte"], ["Havenly", "Search across 2,400 homes in under a second", "2024", "realestate-havenly"], ["Portline", "Instant quotes cut sales calls by half", "2024", "landing-portline"]];
+    $("awards").innerHTML = AWARDS.map(([o, w, y, img], i) => `<li class="reveal" style="--d:${i * .06}s" data-img="${img}"><span class="aw__org">${o}</span><span class="aw__what">${w}</span><span class="aw__y">${y}</span><i class="ri-arrow-right-up-line"></i></li>`).join("");
+    const awF = $("awFloat"); let ax = 0, ay = 0, atx = 0, aty = 0;
+    document.querySelectorAll("#awards li").forEach((li) => { li.addEventListener("mouseenter", () => { $("awImg").src = `img/${li.dataset.img}.jpg`; awF.classList.add("on"); }); li.addEventListener("mouseleave", () => awF.classList.remove("on")); });
+    $("awards").addEventListener("pointermove", (e) => { atx = e.clientX; aty = e.clientY; });
+    (function awLoop() { ax += (atx - ax) * .14; ay += (aty - ay) * .14; awF.style.transform = `translate(${ax}px,${ay}px) translate(-50%,-50%) rotate(${(atx - ax) * .05}deg)`; requestAnimationFrame(awLoop); })();
+
+    /* ---------- Insights ---------- */
+    const POSTS = [["1522071820081-009f0129c71c", "Process", "Why every project starts with a paid two-week sprint", "8 min read", "Oct 2026"], ["1460925895917-afdab827c52f", "Commerce", "Headless Shopify in 2026: when it's worth it (and when it isn't)", "11 min read", "Sep 2026"], ["1551288049-bebda4e38f71", "Performance", "We cut Portline's page load from 2.1s to 0.8s. Here's the checklist.", "6 min read", "Aug 2026"]];
+    $("posts").innerHTML = POSTS.map(([img, tag, t, r, d], i) => `<a href="#" class="post reveal" style="--d:${i * .08}s"><div class="post__img"><img src="${U(img, 800)}" alt="" loading="lazy" /><span>${tag}</span></div><div class="post__meta"><span>${d} · ${r}</span><h3>${t}</h3><b>Read article <i class="ri-arrow-right-line"></i></b></div></a>`).join("");
+
+    /* ---------- FAQ ---------- */
+    document.querySelectorAll("#acc details").forEach((d) => d.addEventListener("toggle", () => { if (d.open) document.querySelectorAll("#acc details").forEach((o) => o !== d && (o.open = false)); }));
+
+    /* ---------- Process ---------- */
+    $("steps").innerHTML = STEPS.map(([t, w, d], i) => `<div class="step" style="--i:${i}"><span class="step__dot"></span><span class="step__w">${w}</span><h3>${t}</h3><p>${d}</p></div>`).join("");
+    const path = $("trackPath"), PL = path.getTotalLength(); path.style.strokeDasharray = PL; path.style.strokeDashoffset = PL;
+
+    /* ---------- Team ---------- */
+    $("people").innerHTML = PEOPLE.map(([n, r, img], i) => `<figure class="person reveal" style="--d:${(i % 4) * .08}s"><div class="person__img"><img src="${U(img, 500)}" alt="${n}" loading="lazy" /></div><figcaption><b>${n}</b><span>${r}</span></figcaption></figure>`).join("");
+
+    /* ---------- Voices ---------- */
+    let vi = 0;
+    function showV(i) {
+      vi = (i + VOICES.length) % VOICES.length; const [q, n, r, img] = VOICES[vi];
+      $("voice").innerHTML = `<i class="ri-double-quotes-l voice__q grad"></i><blockquote>${q.split(" ").map((w, k) => `<span style="--k:${k}">${w}</span>`).join(" ")}</blockquote><footer><img src="${U(img, 120)}" alt="${n}" /><span><b>${n}</b>${r}</span></footer>`;
+      $("vCount").textContent = `0${vi + 1} / 0${VOICES.length}`;
+    }
+    $("vPrev").onclick = () => { showV(vi - 1); clearInterval(vT); };
+    $("vNext").onclick = () => { showV(vi + 1); clearInterval(vT); };
+    const vT = setInterval(() => showV(vi + 1), 7000);
+    showV(0);
+
+    /* ---------- Clocks ---------- */
+    function clocks() { document.querySelectorAll(".clock").forEach((c) => (c.textContent = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: c.dataset.tz }) + " local")); }
+    clocks(); setInterval(clocks, 30000);
+
+    /* ---------- Form ---------- */
+    $("needs").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") e.target.classList.toggle("on"); });
+    $("budget").addEventListener("click", (e) => { if (e.target.tagName !== "BUTTON") return; document.querySelectorAll("#budget button").forEach((b) => b.classList.toggle("on", b === e.target)); });
+    $("form").addEventListener("submit", (e) => { e.preventDefault(); $("ok").textContent = "Thanks — Ana or Jonas will reply within one working day."; e.target.querySelector(".btn").disabled = true; });
+
+    /* ---------- Scroll ---------- */
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight, pr = $("process"), r = pr.getBoundingClientRect();
+      pcards.forEach((c, i) => {
+        const next = pcards[i + 1]; if (!next) return;
+        const nt = next.getBoundingClientRect().top, k = clamp(1 - (nt - 110) / vh, 0, 1);
+        c.style.transform = `scale(${1 - k * .08})`; c.style.filter = `brightness(${1 - k * .45})`;
+      });
+      const p = clamp(-r.top / Math.max(1, pr.offsetHeight - vh) * 1.15, 0, 1);
+      path.style.strokeDashoffset = PL * (1 - p);
+      document.querySelectorAll(".step").forEach((s, i) => s.classList.toggle("on", p > (i + .3) / STEPS.length));
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * .4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll); onScroll();
+
+    /* ---------- Reveal + counters ---------- */
+    function countUp(el) { const end = +el.dataset.count, dec = +(el.dataset.dec || 0), t0 = performance.now(); (function k(n) { const q = clamp((n - t0) / 1600, 0, 1); el.textContent = (end * (1 - Math.pow(1 - q, 3))).toFixed(dec); if (q < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(e.target); }), { threshold: .15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* ---------- Magnet + nav ---------- */
+    if (!reduced && matchMedia("(pointer:fine)").matches) document.querySelectorAll("[data-magnet]").forEach((b) => {
+      b.addEventListener("pointermove", (e) => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      b.addEventListener("pointerleave", () => (b.style.transform = ""));
+    });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("nav-open"); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

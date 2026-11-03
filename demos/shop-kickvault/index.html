@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kickvault — Sneakers from Nike, Jordan, adidas, New Balance &amp; More</title>
+  <meta name="description" content="Kickvault is a multi-brand sneaker store: Nike, Jordan, adidas, New Balance, Converse, Vans and Puma. Free UK delivery over £100, 30-day returns and weekly raffles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kanit:ital,wght@1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Announcement (rotating) -->
+  <div class="announce" id="announce">
+    <div><span><b>Free UK delivery</b> on orders over £100 · 30-day free returns</span></div>
+    <div class="wait"><span>Use code <b>KICK10</b> for 10% off your first order</span></div>
+    <div class="wait"><span><b>Raffle open:</b> Air Jordan 1 High OG 'Bred Toe' — enter below</span></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__top">
+      <a href="#home" class="logo">Kick<span>vault</span></a>
+      <nav class="nav" id="nav">
+        <a href="#shop" data-gender="all">New In</a>
+        <a href="#shop" data-gender="men">Men</a>
+        <a href="#shop" data-gender="women">Women</a>
+        <a href="#brands">Brands</a>
+        <a href="#drop">Drops</a>
+        <a href="#shop" data-sale="1" class="sale">Sale</a>
+      </nav>
+      <div class="header__tools">
+        <label class="search"><i class="ri-search-line"></i><input id="search" placeholder="Search Jordan, Dunk, 990…" aria-label="Search sneakers" /></label>
+        <div class="units" id="units"><button class="active" data-u="UK">UK</button><button data-u="EU">EU</button><button data-u="US">US</button></div>
+        <button class="icon-btn" id="wish-btn" aria-label="Wishlist"><i class="ri-heart-3-line"></i><b id="wish-count">0</b></button>
+        <button class="icon-btn" id="cart-open" aria-label="Open bag"><i class="ri-shopping-bag-3-line"></i><b id="cart-count">0</b></button>
+        <button class="icon-btn burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Landing hero -->
+  <section class="lead" id="home">
+    <span class="lead__word" aria-hidden="true">KICKVAULT</span>
+    <div class="container lead__grid">
+      <div class="lead__text">
+        <span class="tag">New season · fresh drops every Friday</span>
+        <h1>Find Your <span>Next Pair.</span></h1>
+        <p>Nike, Jordan, adidas, New Balance, Converse, Vans and Puma — 100% authentic, in every size from UK 3 to 13, delivered tomorrow.</p>
+        <div class="lead__btns">
+          <a href="#shop" class="btn" data-gender="all">Shop New In <i class="ri-arrow-right-line"></i></a>
+          <a href="#drop" class="btn btn--line"><i class="ri-ticket-2-line"></i> Enter the Raffle</a>
+        </div>
+        <div class="lead__stats">
+          <div><b>500+</b><small>Styles in stock</small></div>
+          <div><b>7</b><small>Top brands</small></div>
+          <div><b>24h</b><small>Next-day delivery</small></div>
+        </div>
+        <div class="lead__trust">
+          <div class="lead__avatars"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="" /></div>
+          <span><b>4.8 ★ Trustpilot</b>from 12,400 sneakerheads</span>
+        </div>
+      </div>
+      <div class="lead__panel">
+        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=1100&q=80" alt="Nike SuperRep Go 3 in volt and black" />
+        <span class="lead__chip">Just dropped</span>
+        <div class="lead__card">
+          <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=160&q=80" alt="" />
+          <div><small>Nike</small><b>SuperRep Go 3 Next Nature</b><span>£84.99</span></div>
+          <button class="btn" data-qv="superrep" aria-label="Quick view Nike SuperRep Go 3"><i class="ri-shopping-bag-3-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured slider + promos -->
+  <section class="hero" id="featured">
+    <div class="container hero__grid">
+      <div class="slider" id="slider">
+        <div class="slide active">
+          <div class="slide__bg"><img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=1400&q=80" alt="Nike Air Force 1 on a blue court" /></div>
+          <div class="slide__text"><span class="tag">Icons collection</span><h1>Classics <span>Never Fade.</span></h1><p>The Air Force 1, Dunk and Jordan 1 — restocked in every core colourway, sizes UK 3 to 13.</p><div class="slide__btns"><a href="#shop" class="btn btn--volt" data-brand="Nike">Shop Nike <i class="ri-arrow-right-line"></i></a><a href="#shop" class="btn btn--line">All New In</a></div></div>
+        </div>
+        <div class="slide">
+          <div class="slide__bg"><img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=1400&q=80" alt="Air Jordan 1 sneakers on feet" loading="lazy" /></div>
+          <div class="slide__text"><span class="tag">Jordan week</span><h1>Fly Season. <span>Up to 30% Off.</span></h1><p>Selected Air Jordan 1, 4 and 12 retros — while sizes last.</p><div class="slide__btns"><a href="#shop" class="btn btn--volt" data-brand="Jordan">Shop Jordan <i class="ri-arrow-right-line"></i></a></div></div>
+        </div>
+        <div class="slide">
+          <div class="slide__bg"><img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=1400&q=80" alt="Nike Air Max on feet in the street" loading="lazy" /></div>
+          <div class="slide__text"><span class="tag">Running edit</span><h1>Built to <span>Move.</span></h1><p>Free RN, Air Max and New Balance — cushioning for every mile.</p><div class="slide__btns"><a href="#shop" class="btn btn--volt" data-cat="running">Shop Running <i class="ri-arrow-right-line"></i></a></div></div>
+        </div>
+        <div class="slider__dots" id="dots"><button class="active" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button></div>
+      </div>
+      <div class="hero__side">
+        <a href="#shop" class="promo" data-brand="Converse"><img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=800&q=80" alt="Red Converse Chuck Taylor high top" /><span class="tag">From £60</span><h3>Chuck Taylor<br />Classics</h3><span>Shop Converse <i class="ri-arrow-right-line"></i></span></a>
+        <a href="#shop" class="promo" data-brand="Vans"><img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80" alt="Vans Old Skool in burgundy" /><span class="tag">Skate staples</span><h3>Vans<br />Old Skool</h3><span>Shop Vans <i class="ri-arrow-right-line"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <div class="brands" id="brands">
+    <div class="container brands__row" id="brand-row"></div>
+  </div>
+
+  <!-- Categories -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="head reveal"><h2>Shop by Style</h2><a href="#shop">View all sneakers <i class="ri-arrow-right-line"></i></a></div>
+      <div class="cats">
+        <a href="#shop" class="cat reveal" data-cat="lifestyle"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80" alt="Lifestyle sneakers" loading="lazy" /><div><h3>Lifestyle</h3><i class="ri-arrow-right-up-line"></i></div></a>
+        <a href="#shop" class="cat reveal" data-cat="running"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Running shoes" loading="lazy" /><div><h3>Running</h3><i class="ri-arrow-right-up-line"></i></div></a>
+        <a href="#shop" class="cat reveal" data-cat="basketball"><img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=700&q=80" alt="Basketball shoes" loading="lazy" /><div><h3>Basketball</h3><i class="ri-arrow-right-up-line"></i></div></a>
+        <a href="#shop" class="cat reveal" data-cat="skate"><img src="https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&w=700&q=80" alt="Skate shoes" loading="lazy" /><div><h3>Skate</h3><i class="ri-arrow-right-up-line"></i></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="head"><h2>Latest Sneakers</h2></div>
+      <div class="shop">
+        <aside class="filters" id="filters">
+          <div class="fgroup"><h4>Gender</h4><div class="chips" id="f-gender"><button class="active" data-g="all">All</button><button data-g="men">Men</button><button data-g="women">Women</button><button data-g="unisex">Unisex</button></div></div>
+          <div class="fgroup"><h4>Brand <small id="clear-brand">Clear</small></h4><div id="f-brand"></div></div>
+          <div class="fgroup"><h4>Style</h4><div id="f-cat"></div></div>
+          <div class="fgroup"><h4>Size <small id="f-unit">UK</small></h4><div class="size-grid" id="f-size"></div></div>
+          <div class="fgroup"><h4>Max price</h4><input type="range" id="f-price" min="40" max="200" step="5" value="200" aria-label="Maximum price" /><div class="price-out"><span>£40</span><span id="f-price-out">£200</span></div></div>
+          <div class="fgroup"><label class="check"><input type="checkbox" id="f-sale" />On sale only</label></div>
+          <button class="btn mobile-filter" id="filters-close" style="width:100%;margin-top:16px">Show results</button>
+        </aside>
+        <div>
+          <div class="toolbar">
+            <button class="btn btn--line mobile-filter" id="filters-open" style="padding:10px 18px"><i class="ri-equalizer-line"></i>Filters</button>
+            <span><b id="count">0</b> sneakers</span>
+            <div class="active-tags" id="active-tags"></div>
+            <select id="sort" aria-label="Sort"><option value="feat">Featured</option><option value="new">Newest</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rate">Top rated</option></select>
+          </div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drop / raffle -->
+  <section class="section" id="drop" style="padding-top:0">
+    <div class="container">
+      <div class="drop reveal" id="drop-box">
+        <div class="drop__img"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=80" alt="Air Jordan 1 High OG in red, black and white" loading="lazy" /><span>Raffle live</span></div>
+        <div class="drop__body">
+          <span class="tag">Upcoming drop</span>
+          <h2>Air Jordan 1 Retro High OG <span>'Bred Toe'</span></h2>
+          <div class="drop__price">£169.99</div>
+          <p>Limited pairs, one entry per person. Winners are drawn at random and charged only if selected. Entries close when the timer hits zero.</p>
+          <div class="count" id="count-down"><div><b id="d-d">00</b><small>Days</small></div><div><b id="d-h">00</b><small>Hours</small></div><div><b id="d-m">00</b><small>Mins</small></div><div><b id="d-s">00</b><small>Secs</small></div></div>
+          <form class="raffle" id="raffle">
+            <input required placeholder="Full name" aria-label="Full name" />
+            <input type="email" required placeholder="Email" aria-label="Email" />
+            <select id="raffle-size" required aria-label="Size"></select>
+            <select aria-label="Collection"><option>Home delivery</option><option>Collect: London Soho</option><option>Collect: Manchester</option></select>
+            <button class="btn btn--volt full" type="submit">Enter the Raffle <i class="ri-ticket-2-line"></i></button>
+          </form>
+          <div class="raffle__ok" id="raffle-ok"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Size finder -->
+  <section class="section section--light" id="size-guide">
+    <div class="container finder">
+      <div class="reveal">
+        <span class="tag">Size guide</span>
+        <h2 style="font-size:clamp(34px,4.4vw,60px)">Find Your <br />Perfect Fit</h2>
+        <p style="margin:16px 0 24px;font-size:16px;max-width:460px">Measure your foot from heel to longest toe, standing on a sheet of paper. Slide to your length and we'll convert it for every system.</p>
+        <div class="finder__card">
+          <label for="foot">Foot length <b id="foot-out">27.0 cm</b></label>
+          <input type="range" id="foot" min="23.5" max="31" step="0.5" value="27" />
+          <div class="finder__result" id="finder-res"></div>
+          <div class="finder__note"><i class="ri-information-line"></i><span id="finder-note">Between sizes? Go half a size up for running shoes and Jordans.</span></div>
+        </div>
+      </div>
+      <div class="reveal" style="overflow-x:auto"><table class="chart" id="chart"></table></div>
+    </div>
+  </section>
+
+  <!-- Lookbook -->
+  <section class="section">
+    <div class="container">
+      <div class="head reveal"><h2>Seen on the Street</h2><a href="#">#Kickvault <i class="ri-instagram-line"></i></a></div>
+      <div class="look reveal">
+        <a href="#"><img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=800&q=80" alt="Nike Air Max 90 street style" loading="lazy" /><span><i class="ri-price-tag-3-line"></i>Nike Air Max 90</span></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?auto=format&fit=crop&w=600&q=80" alt="Green Converse high tops" loading="lazy" /><span><i class="ri-price-tag-3-line"></i>Converse Chuck 70</span></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80" alt="Grey Nike sneakers" loading="lazy" /><span><i class="ri-price-tag-3-line"></i>Nike Free</span></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80" alt="Air Jordan 1 on feet" loading="lazy" /><span><i class="ri-price-tag-3-line"></i>Air Jordan 1</span></a>
+        <a href="#"><img src="https://images.unsplash.com/photo-1562183241-b937e95585b6?auto=format&fit=crop&w=600&q=80" alt="Knit sneakers mid-air" loading="lazy" /><span><i class="ri-price-tag-3-line"></i>adidas Originals</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="head reveal"><h2>4.8 ★ on Trustpilot</h2><a href="#">Read 12,400 reviews <i class="ri-arrow-right-line"></i></a></div>
+      <div class="revs">
+        <div class="rev reveal"><div class="rev__top"><span class="stars">★★★★★</span><small><i class="ri-verified-badge-fill"></i>Verified</small></div><h4>Won the Dunk raffle!</h4><p>Third raffle I've entered and finally got the pair. Shipped the next day, double-boxed. Legit service.</p><div class="rev__who"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Marcus" loading="lazy" /><div><b>Marcus J.</b>Bought: Nike SB Dunk High</div></div></div>
+        <div class="rev reveal"><div class="rev__top"><span class="stars">★★★★★</span><small><i class="ri-verified-badge-fill"></i>Verified</small></div><h4>Size guide is spot on</h4><p>Used the foot-length tool and went with UK 6 in the AF1 Shadow. Perfect fit, first time. Will order again.</p><div class="rev__who"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Ellie" loading="lazy" /><div><b>Ellie R.</b>Bought: Air Force 1 Shadow</div></div></div>
+        <div class="rev reveal"><div class="rev__top"><span class="stars">★★★★★</span><small><i class="ri-verified-badge-fill"></i>Verified</small></div><h4>Easy returns</h4><p>The 990s ran a bit big for me. Printed the label at home, refund came through in three days. No fuss at all.</p><div class="rev__who"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Dev" loading="lazy" /><div><b>Dev P.</b>Bought: New Balance 247</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks + newsletter -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="perks">
+        <div class="perk reveal"><i class="ri-truck-line"></i><div><b>Free delivery</b><small>On UK orders over £100</small></div></div>
+        <div class="perk reveal"><i class="ri-arrow-go-back-line"></i><div><b>30-day returns</b><small>Free, from your door</small></div></div>
+        <div class="perk reveal"><i class="ri-shield-check-line"></i><div><b>100% authentic</b><small>Direct from the brands</small></div></div>
+        <div class="perk reveal"><i class="ri-bank-card-line"></i><div><b>Pay in 3</b><small>Interest-free with Klarna</small></div></div>
+      </div>
+      <div class="news reveal">
+        <div><h2>Get 10% Off Your First Pair</h2><p>Plus early raffle access and restock alerts in your size.</p></div>
+        <form id="news-form"><input type="email" required placeholder="Your email" aria-label="Email" /><button class="btn" type="submit">Sign Up</button></form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#home" class="logo">Kick<span>vault</span></a><p>Independent multi-brand sneaker store. Shipping heat from our Manchester warehouse since 2016.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></div></div>
+        <div><h4>Shop</h4><ul><li><a href="#shop">New In</a></li><li><a href="#shop">Men</a></li><li><a href="#shop">Women</a></li><li><a href="#shop">Sale</a></li></ul></div>
+        <div><h4>Brands</h4><ul><li><a href="#shop">Nike</a></li><li><a href="#shop">Jordan</a></li><li><a href="#shop">adidas</a></li><li><a href="#shop">New Balance</a></li></ul></div>
+        <div><h4>Help</h4><ul><li><a href="#size-guide">Size Guide</a></li><li><a href="#">Delivery</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
+        <div><h4>Stores</h4><ul><li>London — Soho</li><li>Manchester — Northern Quarter</li><li>Glasgow — Buchanan St</li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Kickvault Ltd. Independent retailer — brand names and trademarks belong to their owners.</span><span class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i><i class="ri-google-line"></i></span></div>
+    </div>
+  </footer>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="q-name">
+    <div class="modal__box">
+      <button class="modal__close" id="q-close" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__img"><img id="q-img" alt="" /></div>
+      <div class="modal__body">
+        <span class="card__brand" id="q-brand"></span>
+        <h3 id="q-name"></h3>
+        <div class="modal__rating" id="q-rating"></div>
+        <span class="price" id="q-price"></span>
+        <p id="q-desc"></p>
+        <div class="mlabel"><span>Select size (<span id="q-unit">UK</span>)</span><a href="#size-guide" id="q-guide">Size guide</a></div>
+        <div class="msizes" id="q-sizes"></div>
+        <div class="low" id="q-low"></div>
+        <div class="modal__btns"><button class="btn" id="q-add">Add to Bag <i class="ri-shopping-bag-3-line"></i></button><button class="btn btn--line" id="q-wish" aria-label="Add to wishlist"><i class="ri-heart-3-line"></i></button></div>
+        <div class="modal__perks"><div><i class="ri-truck-line"></i>Order in the next <b id="q-cut">2h 14m</b> for next-day delivery</div><div><i class="ri-arrow-go-back-line"></i>Free 30-day returns</div><div><i class="ri-bank-card-line"></i>Or 3 interest-free payments of <b id="q-klarna"></b></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Your bag">
+    <div class="drawer__head"><div><h3>Your Bag</h3><button id="cart-close" aria-label="Close bag"><i class="ri-close-line"></i></button></div><div class="ship"><span id="ship-msg"></span><div class="ship__bar"><span id="ship-bar"></span></div></div></div>
+    <div class="drawer__list" id="cart-list"></div>
+    <div class="drawer__foot" id="cart-foot">
+      <form class="promo-code" id="promo-form"><input id="promo" placeholder="Promo code" aria-label="Promo code" /><button type="submit">Apply</button></form>
+      <div class="promo-msg" id="promo-msg"></div>
+      <div class="row"><span>Subtotal</span><span id="c-sub"></span></div>
+      <div class="row"><span>Discount</span><span id="c-disc"></span></div>
+      <div class="row"><span>Delivery</span><span id="c-ship"></span></div>
+      <div class="row total"><span>Total</span><span id="c-total"></span></div>
+      <button class="btn" id="checkout">Secure Checkout <i class="ri-lock-line"></i></button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const gbp = (n) => "£" + n.toFixed(2).replace(".00", "");
+    const store = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+
+    /* Sizes */
+    const UK = [5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 11, 12];
+    const EU = [38, 39, 40, 41, 42, 42.5, 43, 44, 44.5, 45, 46, 47.5];
+    const CM = [24, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 30, 31];
+    let unit = store.get("kv-unit", "UK");
+    const label = (i) => unit === "UK" ? UK[i] : unit === "EU" ? EU[i] : UK[i] + 1;
+
+    /* Products */
+    const P = [
+      { id: "superrep", b: "Nike", n: "Nike SuperRep Go 3 Next Nature", c: "running", g: "unisex", p: 84.99, img: "1606107557195-0e29a4b5b4aa", col: ["#d4ff3a", "#111"], badge: "New", r: 4.6, rv: 210, d: "Flexible Flyknit-style upper, soft foam and a wide, stable base for HIIT, circuits and everyday runs." },
+      { id: "aj1m", b: "Jordan", n: "Air Jordan 1 Mid 'Gym Red'", c: "basketball", g: "men", p: 114.99, img: "1597045566677-8cf032ed6634", col: ["#fff", "#d62b2b", "#111"], badge: "Bestseller", r: 4.9, rv: 812, d: "The Jordan 1 Mid brings full-grain leather and an Air-Sole unit to an all-time classic." },
+      { id: "aj12", b: "Jordan", n: "Air Jordan 12 Retro 'Gym Red'", c: "basketball", g: "men", p: 185, was: 159.99, img: "1575537302964-96cd47c06b1b", col: ["#e0262b"], r: 4.8, rv: 214, d: "Tumbled leather, Zoom Air cushioning and the iconic stitched mudguard lines." },
+      { id: "af1", b: "Nike", n: "Nike Air Force 1 '07", c: "lifestyle", g: "unisex", p: 109.99, img: "1600269452121-4f2416e55c28", col: ["#fff"], badge: "Bestseller", r: 4.9, rv: 2310, d: "Crisp leather, bold details and the perfect amount of flash. The b-ball original." },
+      { id: "af1s", b: "Nike", n: "Nike Air Force 1 Shadow 'Pastel'", c: "lifestyle", g: "women", p: 119.99, img: "1595950653106-6c9ebd614d3a", col: ["#f6c9d6", "#c9e4f6", "#f8e6a8"], r: 4.7, rv: 540, d: "Doubled-up details and a layered pastel palette give the AF1 a playful twist." },
+      { id: "dunk", b: "Nike", n: "Nike SB Dunk High Pro", c: "skate", g: "unisex", p: 104.99, img: "1584735175315-9d5df23860e6", col: ["#f4c48d", "#c8d4ef"], badge: "New", r: 4.8, rv: 156, d: "Padded high collar, Zoom Air insole and grippy cupsole for long sessions." },
+      { id: "am270", b: "Nike", n: "Nike Air Max 270 'Royal'", c: "running", g: "men", p: 144.99, was: 109.99, img: "1515955656352-a1fa3ffcd111", col: ["#1a6cf0"], r: 4.6, rv: 690, d: "Nike's biggest heel Air unit yet for an unreal, all-day ride." },
+      { id: "free", b: "Nike", n: "Nike Free RN Flyknit", c: "running", g: "women", p: 109.99, img: "1542291026-7eec264c27ff", col: ["#c41e2d"], r: 4.7, rv: 402, d: "Flexible, barefoot-style feel with a stretchy Flyknit upper that moves with you." },
+      { id: "kyrie", b: "Nike", n: "Nike Kyrie 7", c: "basketball", g: "men", p: 119.99, was: 84.99, img: "1605348532760-6753d2c43329", col: ["#222", "#e9e9e9"], r: 4.5, rv: 120, d: "Containment strap and a rounded outsole for the quickest cuts on court." },
+      { id: "prop", b: "adidas", n: "adidas Prophere", c: "running", g: "unisex", p: 99.99, img: "1520256862855-398228c41684", col: ["#2b62d9", "#ff6f91"], r: 4.4, rv: 88, d: "Aggressive chunky midsole and a sock-like knit upper with a bold colourway." },
+      { id: "eqt", b: "adidas", n: "adidas EQT Support ADV", c: "lifestyle", g: "men", p: 89.99, img: "1518002171953-a080ee817e1f", col: ["#3a3a3a"], r: 4.5, rv: 230, d: "90s EQT heritage meets a breathable mesh upper and lightweight cushioning." },
+      { id: "nb247", b: "New Balance", n: "New Balance 247 'Olive'", c: "lifestyle", g: "men", p: 94.99, img: "1539185441755-769473a23570", col: ["#5d6146"], r: 4.6, rv: 310, d: "REVlite foam and a sleek knit upper — made for city days." },
+      { id: "nbx90", b: "New Balance", n: "New Balance X-90", c: "running", g: "women", p: 89.99, img: "1551107696-a4b0c5a0d9a2", col: ["#f2b8c6", "#9a9a9a"], badge: "New", r: 4.5, rv: 74, d: "A modern take on the 990 silhouette with a pink suede and mesh upper." },
+      { id: "c70", b: "Converse", n: "Converse Chuck 70 Hi 'Parchment'", c: "lifestyle", g: "unisex", p: 85, img: "1556048219-bb6978360b84", col: ["#ece2c6"], r: 4.8, rv: 1450, d: "Premium canvas, vintage egret midsole and extra cushioning for all-day wear." },
+      { id: "cth", b: "Converse", n: "Converse Chuck Taylor All Star Hi", c: "lifestyle", g: "unisex", p: 60, img: "1607522370275-f14206abe5d3", col: ["#d2232a", "#111", "#fff"], r: 4.7, rv: 3120, d: "The canvas high-top that started it all. Rubber toe cap, star ankle patch." },
+      { id: "vans", b: "Vans", n: "Vans Old Skool 'Port Royale'", c: "skate", g: "unisex", p: 70, img: "1525966222134-fcfa99b8ae77", col: ["#6e1c2b"], r: 4.7, rv: 980, d: "Suede and canvas, side stripe and padded collar — the original skate shoe." },
+      { id: "rsx", b: "Puma", n: "Puma RS-X³ Puzzle", c: "lifestyle", g: "women", p: 100, was: 64.99, img: "1608667508764-33cf0726b13a", col: ["#f7c9c0", "#fff"], r: 4.4, rv: 142, d: "Bulky RS cushioning and a pastel mesh-and-suede upper." },
+      { id: "smash", b: "Puma", n: "Puma Smash v2 Leather", c: "lifestyle", g: "men", p: 50, img: "1608231387042-66d1773070a5", col: ["#fff"], r: 4.5, rv: 520, d: "Clean tennis-inspired leather sneaker with a SoftFoam+ sockliner." },
+    ];
+    P.forEach((p, k) => {
+      const seed = [...p.id].reduce((s, ch) => s + ch.charCodeAt(0), 0);
+      p.stock = UK.map((_, i) => ((seed + i * 7) % 9 === 0 ? 0 : (seed * (i + 3)) % 11 === 1 ? 1 + (i % 2) : 5));
+      p.order = k; p.price = p.was ? p.was : p.p;
+    });
+
+    /* Rotating announcement */
+    const ann = [...$("announce").children]; let ai = 0;
+    setInterval(() => { ann[ai].className = "out"; const prev = ai; ai = (ai + 1) % ann.length; ann[ai].className = ""; setTimeout(() => (ann[prev].className = "wait"), 600); }, 4000);
+
+    /* Hero slider */
+    const slides = [...document.querySelectorAll(".slide")], dots = [...$("dots").children]; let si = 0, sTimer;
+    function go(i) { si = (i + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle("active", k === si)); dots.forEach((d, k) => d.classList.toggle("active", k === si)); clearInterval(sTimer); sTimer = setInterval(() => go(si + 1), 6000); }
+    dots.forEach((d, k) => (d.onclick = () => go(k))); go(0);
+
+    /* Filters */
+    const brands = ["Nike", "Jordan", "adidas", "New Balance", "Converse", "Vans", "Puma"];
+    const cats = [["lifestyle", "Lifestyle"], ["running", "Running"], ["basketball", "Basketball"], ["skate", "Skate"]];
+    const f = { g: "all", brands: new Set(), cats: new Set(), size: null, max: 200, sale: false, q: "" };
+    $("brand-row").innerHTML = brands.map((b) => `<button data-brand="${b}">${b}</button>`).join("");
+    $("f-brand").innerHTML = brands.map((b) => `<label class="check"><input type="checkbox" value="${b}" />${b}<span>${P.filter((p) => p.b === b).length}</span></label>`).join("");
+    $("f-cat").innerHTML = cats.map(([k, n]) => `<label class="check"><input type="checkbox" value="${k}" />${n}<span>${P.filter((p) => p.c === k).length}</span></label>`).join("");
+    function renderSizes() {
+      $("f-unit").textContent = unit;
+      $("f-size").innerHTML = UK.map((_, i) => `<button class="${f.size === i ? "active" : ""}" data-i="${i}">${label(i)}</button>`).join("");
+      $("raffle-size").innerHTML = `<option value="">Size (${unit})</option>` + UK.map((_, i) => `<option>${unit} ${label(i)}</option>`).join("");
+    }
+    function filtered() {
+      let list = P.filter((p) =>
+        (f.g === "all" || p.g === f.g || (p.g === "unisex" && f.g !== "unisex")) &&
+        (!f.brands.size || f.brands.has(p.b)) && (!f.cats.size || f.cats.has(p.c)) &&
+        (f.size === null || p.stock[f.size] > 0) && p.price <= f.max && (!f.sale || p.was) &&
+        (!f.q || (p.n + " " + p.b).toLowerCase().includes(f.q)));
+      const s = $("sort").value;
+      if (s === "low") list.sort((a, b) => a.price - b.price);
+      if (s === "high") list.sort((a, b) => b.price - a.price);
+      if (s === "rate") list.sort((a, b) => b.r - a.r);
+      if (s === "new") list.sort((a, b) => (b.badge === "New") - (a.badge === "New"));
+      return list;
+    }
+    let wish = new Set(store.get("kv-wish", []));
+    function renderGrid() {
+      const list = filtered();
+      $("count").textContent = list.length;
+      const tags = [...f.brands, ...[...f.cats].map((c) => cats.find((x) => x[0] === c)[1]), f.size !== null ? `${unit} ${label(f.size)}` : "", f.sale ? "On sale" : "", f.q ? `“${f.q}”` : ""].filter(Boolean);
+      $("active-tags").innerHTML = tags.length ? tags.map((t) => `<button data-t="${t}">${t}<i class="ri-close-line"></i></button>`).join("") : "";
+      $("grid").innerHTML = list.length ? list.map((p, i) => `
+        <article class="card" style="animation-delay:${i * 40}ms" data-id="${p.id}">
+          <div class="card__img" data-open>
+            ${p.was ? `<span class="badge sale">-${Math.round((1 - p.was / p.p) * 100)}%</span>` : p.badge ? `<span class="badge ${p.badge === "New" ? "new" : ""}">${p.badge}</span>` : ""}
+            <button class="wish ${wish.has(p.id) ? "on" : ""}" data-wish aria-label="Add ${p.n} to wishlist"><i class="${wish.has(p.id) ? "ri-heart-3-fill" : "ri-heart-3-line"}"></i></button>
+            <img src="${U(p.img, 600)}" alt="${p.n}" loading="lazy" />
+            <div class="card__sizes"><small>Available sizes (${unit})</small><div>${UK.map((_, k) => `<span class="${p.stock[k] ? "" : "out"}">${label(k)}</span>`).join("")}</div></div>
+          </div>
+          <div class="card__body"><span class="card__brand">${p.b}</span><h3 data-open>${p.n}</h3>
+            <div class="card__meta"><span class="price">${gbp(p.price)}${p.was ? `<s>${gbp(p.p)}</s>` : ""}</span><span class="colors">${p.col.map((c) => `<i style="background:${c}"></i>`).join("")}</span></div></div>
+        </article>`).join("") : '<div class="empty-grid"><i class="ri-footprint-line"></i><b>No sneakers match those filters</b>Try another size or clear a filter.</div>';
+    }
+    function resetChecks(id, set) { document.querySelectorAll(`#${id} input`).forEach((c) => (c.checked = set.has(c.value))); }
+    $("f-gender").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; f.g = b.dataset.g; document.querySelectorAll("#f-gender button").forEach((x) => x.classList.toggle("active", x === b)); renderGrid(); });
+    $("f-brand").addEventListener("change", (e) => { e.target.checked ? f.brands.add(e.target.value) : f.brands.delete(e.target.value); renderGrid(); });
+    $("f-cat").addEventListener("change", (e) => { e.target.checked ? f.cats.add(e.target.value) : f.cats.delete(e.target.value); renderGrid(); });
+    $("clear-brand").onclick = () => { f.brands.clear(); resetChecks("f-brand", f.brands); renderGrid(); };
+    $("f-size").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; f.size = f.size === +b.dataset.i ? null : +b.dataset.i; renderSizes(); renderGrid(); });
+    $("f-price").addEventListener("input", (e) => { f.max = +e.target.value; $("f-price-out").textContent = "£" + f.max; renderGrid(); });
+    $("f-sale").addEventListener("change", (e) => { f.sale = e.target.checked; renderGrid(); });
+    $("sort").addEventListener("change", renderGrid);
+    $("search").addEventListener("input", (e) => { f.q = e.target.value.trim().toLowerCase(); renderGrid(); });
+    $("search").addEventListener("keydown", (e) => { if (e.key === "Enter") document.querySelector("#shop").scrollIntoView(); });
+    $("active-tags").addEventListener("click", (e) => {
+      const t = e.target.closest("button")?.dataset.t; if (!t) return;
+      if (f.brands.has(t)) f.brands.delete(t); const c = cats.find((x) => x[1] === t); if (c) f.cats.delete(c[0]);
+      if (t.startsWith(unit + " ")) f.size = null; if (t === "On sale") { f.sale = false; $("f-sale").checked = false; } if (t.startsWith("“")) { f.q = ""; $("search").value = ""; }
+      resetChecks("f-brand", f.brands); resetChecks("f-cat", f.cats); renderSizes(); renderGrid();
+    });
+    // Shortcuts from hero, nav, brand row, categories
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-brand],[data-cat],[data-gender],[data-sale]"); if (!a || a.closest("#filters")) return;
+      if (a.dataset.brand) { f.brands = new Set([a.dataset.brand]); }
+      if (a.dataset.cat) { f.cats = new Set([a.dataset.cat]); }
+      if (a.dataset.gender) { f.g = a.dataset.gender; f.brands.clear(); f.cats.clear(); f.sale = false; document.querySelectorAll("#f-gender button").forEach((x) => x.classList.toggle("active", x.dataset.g === f.g)); }
+      if (a.dataset.sale) { f.sale = true; $("f-sale").checked = true; }
+      resetChecks("f-brand", f.brands); resetChecks("f-cat", f.cats); renderGrid();
+      if (a.tagName === "BUTTON") document.querySelector("#shop").scrollIntoView();
+      $("nav").classList.remove("open");
+    });
+    $("filters-open").onclick = () => $("filters").classList.add("open");
+    $("filters-close").onclick = () => $("filters").classList.remove("open");
+
+    /* Units */
+    function setUnit(u) { unit = u; store.set("kv-unit", u); document.querySelectorAll("#units button").forEach((b) => b.classList.toggle("active", b.dataset.u === u)); renderSizes(); renderGrid(); renderFinder(); if (cur) renderQSizes(); $("q-unit").textContent = u; }
+    $("units").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setUnit(b.dataset.u); });
+
+    /* Wishlist */
+    function saveWish() { store.set("kv-wish", [...wish]); $("wish-count").textContent = wish.size; }
+    function toggleWish(id) { wish.has(id) ? wish.delete(id) : wish.add(id); saveWish(); renderGrid(); toast(wish.has(id) ? "Saved to your wishlist" : "Removed from wishlist"); }
+    $("wish-btn").onclick = () => { if (!wish.size) return toast("Your wishlist is empty — tap ♡ on any sneaker"); f.q = ""; document.querySelector("#shop").scrollIntoView(); toast(`${wish.size} saved: ${P.filter((p) => wish.has(p.id)).map((p) => p.n.split(" '")[0]).join(", ")}`); };
+
+    /* Quick view */
+    let cur = null, qSize = null;
+    function renderQSizes() {
+      $("q-sizes").innerHTML = UK.map((_, i) => `<button data-i="${i}" class="${qSize === i ? "active" : ""}" ${cur.stock[i] ? "" : "disabled"}>${label(i)}</button>`).join("");
+      $("q-low").textContent = qSize !== null && cur.stock[qSize] <= 2 ? `Only ${cur.stock[qSize]} left in ${unit} ${label(qSize)} — order soon` : "";
+    }
+    function openQ(id) {
+      cur = P.find((p) => p.id === id); qSize = null;
+      $("q-img").src = U(cur.img, 1000); $("q-img").alt = cur.n;
+      $("q-brand").textContent = cur.b; $("q-name").textContent = cur.n;
+      $("q-rating").innerHTML = `<i class="ri-star-fill"></i> ${cur.r} · ${cur.rv.toLocaleString()} reviews`;
+      $("q-price").innerHTML = `${gbp(cur.price)}${cur.was ? `<s>${gbp(cur.p)}</s>` : ""}`;
+      $("q-desc").textContent = cur.d; $("q-klarna").textContent = gbp(cur.price / 3);
+      $("q-wish").innerHTML = `<i class="${wish.has(cur.id) ? "ri-heart-3-fill" : "ri-heart-3-line"}"></i>`;
+      const n = new Date(), cut = new Date(n); cut.setHours(21, 0, 0, 0); if (cut < n) cut.setDate(cut.getDate() + 1);
+      const mins = Math.round((cut - n) / 60000); $("q-cut").textContent = `${Math.floor(mins / 60)}h ${mins % 60}m`;
+      renderQSizes(); $("modal").classList.add("open");
+    }
+    document.addEventListener("click", (e) => { const b = e.target.closest("[data-qv]"); if (b) openQ(b.dataset.qv); });
+    $("grid").addEventListener("click", (e) => {
+      const card = e.target.closest(".card"); if (!card) return;
+      if (e.target.closest("[data-wish]")) { e.stopPropagation(); return toggleWish(card.dataset.id); }
+      if (e.target.closest("[data-open]")) openQ(card.dataset.id);
+    });
+    $("q-sizes").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || b.disabled) return; qSize = +b.dataset.i; renderQSizes(); });
+    $("q-wish").onclick = () => { toggleWish(cur.id); $("q-wish").innerHTML = `<i class="${wish.has(cur.id) ? "ri-heart-3-fill" : "ri-heart-3-line"}"></i>`; };
+    $("q-guide").onclick = () => closeQ();
+    const closeQ = () => $("modal").classList.remove("open");
+    $("q-close").onclick = closeQ;
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeQ(); });
+    $("q-add").onclick = () => {
+      if (qSize === null) { $("q-low").textContent = "Please select a size first"; return; }
+      const key = cur.id + "|" + qSize, ex = cart.find((c) => c.key === key);
+      if (ex) ex.q++; else cart.push({ key, id: cur.id, size: qSize, q: 1 });
+      saveCart(); closeQ(); openCart();
+    };
+
+    /* Cart */
+    let cart = store.get("kv-cart", []), promo = store.get("kv-promo", "");
+    const FREE = 100;
+    function saveCart() { store.set("kv-cart", cart); renderCart(); }
+    function renderCart() {
+      $("cart-count").textContent = cart.reduce((s, c) => s + c.q, 0);
+      const sub = cart.reduce((s, c) => s + P.find((p) => p.id === c.id).price * c.q, 0);
+      const disc = promo === "KICK10" ? sub * 0.1 : 0, ship = sub === 0 || sub >= FREE ? 0 : 4.95;
+      $("ship-msg").innerHTML = sub >= FREE ? "<i class='ri-truck-line'></i> You've unlocked <b>free delivery</b>" : `You're <b>${gbp(FREE - sub)}</b> away from free delivery`;
+      $("ship-bar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      if (!cart.length) { $("cart-list").innerHTML = '<div class="drawer__empty"><i class="ri-footprint-line"></i><b>Your bag is empty</b>Time to find your next pair.</div>'; $("cart-foot").style.display = "none"; return; }
+      $("cart-foot").style.display = "";
+      $("cart-list").innerHTML = cart.map((c, i) => { const p = P.find((x) => x.id === c.id); return `
+        <div class="ci"><img src="${U(p.img, 200)}" alt="" /><div><b>${p.n}</b><small>${p.b} · ${unit} ${label(c.size)}</small></div>
+        <div class="ci__r"><strong>${gbp(p.price * c.q)}</strong><div class="qty"><button data-i="${i}" data-d="-1" aria-label="Less">−</button><span>${c.q}</span><button data-i="${i}" data-d="1" aria-label="More">+</button></div></div></div>`; }).join("");
+      $("c-sub").textContent = gbp(sub); $("c-disc").textContent = disc ? "−" + gbp(disc) : "—"; $("c-ship").textContent = ship ? gbp(ship) : "Free";
+      $("c-total").textContent = gbp(sub - disc + ship);
+      $("promo-msg").innerHTML = promo ? `<span style="color:#1a9e55">✓ ${promo} applied — 10% off</span>` : "";
+    }
+    $("cart-list").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (!b) return; const c = cart[+b.dataset.i]; c.q += +b.dataset.d; if (c.q <= 0) cart.splice(+b.dataset.i, 1); saveCart(); });
+    $("promo-form").addEventListener("submit", (e) => {
+      e.preventDefault(); const v = $("promo").value.trim().toUpperCase();
+      if (v === "KICK10") { promo = v; store.set("kv-promo", v); renderCart(); } else { $("promo-msg").innerHTML = `<span style="color:var(--red)">“${v || "…"}” isn't a valid code. Try KICK10.</span>`; }
+    });
+    const openCart = () => { $("drawer").classList.add("open"); $("overlay").classList.add("open"); };
+    const closeCart = () => { $("drawer").classList.remove("open"); $("overlay").classList.remove("open"); $("filters").classList.remove("open"); };
+    $("cart-open").onclick = openCart; $("cart-close").onclick = closeCart; $("overlay").onclick = closeCart;
+    $("checkout").onclick = () => { closeCart(); toast(`Order #KV${Math.floor(100000 + Math.random() * 899999)} confirmed — tracking on its way!`); cart = []; saveCart(); };
+
+    /* Drop countdown (next Saturday 08:00) + raffle */
+    const drop = new Date(); drop.setDate(drop.getDate() + ((6 - drop.getDay() + 7) % 7 || 7)); drop.setHours(8, 0, 0, 0);
+    function tick() {
+      const s = Math.max(0, Math.floor((drop - Date.now()) / 1000)), p = (n) => String(n).padStart(2, "0");
+      $("d-d").textContent = p(Math.floor(s / 86400)); $("d-h").textContent = p(Math.floor((s % 86400) / 3600)); $("d-m").textContent = p(Math.floor((s % 3600) / 60)); $("d-s").textContent = p(s % 60);
+    }
+    tick(); setInterval(tick, 1000);
+    $("raffle").addEventListener("submit", (e) => {
+      e.preventDefault();
+      $("raffle-ok").innerHTML = `<b>You're in! Entry #${Math.floor(10000 + Math.random() * 89999)}</b>${$("raffle-size").value} · Winners drawn ${drop.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })} at 8:00. We'll email you either way — good luck!`;
+      $("drop-box").classList.add("entered");
+    });
+
+    /* Size finder */
+    function renderFinder() {
+      const cm = +$("foot").value; $("foot-out").textContent = cm.toFixed(1) + " cm";
+      let i = CM.findIndex((c) => c >= cm); if (i < 0) i = CM.length - 1;
+      $("finder-res").innerHTML = [["UK", UK[i]], ["EU", EU[i]], ["US", UK[i] + 1], ["CM", CM[i]]].map(([u, v]) => `<div class="${u === unit ? "on" : ""}"><b>${v}</b><small>${u}</small></div>`).join("");
+      $("finder-note").textContent = CM[i] - cm >= 0.5 ? `You're between sizes — we recommend ${unit} ${label(i)} for a little toe room.` : `A true ${unit} ${label(i)}. For running shoes and Jordans, consider half a size up.`;
+      $("chart").innerHTML = `<tr><th>UK</th><th>EU</th><th>US</th><th>CM</th></tr>` + UK.map((u, k) => `<tr class="${k === i ? "hl" : ""}"><td>${u}</td><td>${EU[k]}</td><td>${u + 1}</td><td>${CM[k]}</td></tr>`).join("");
+    }
+    $("foot").addEventListener("input", renderFinder);
+
+    /* Toast, newsletter, header */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3400); }
+    $("news-form").addEventListener("submit", (e) => { e.preventDefault(); toast("Welcome to the vault — your 10% code KICK10 is on its way!"); e.target.reset(); });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeQ(); closeCart(); $("nav").classList.remove("open"); } });
+
+    /* Init */
+    saveWish(); renderSizes(); renderGrid(); renderCart(); renderFinder(); setUnit(unit);
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

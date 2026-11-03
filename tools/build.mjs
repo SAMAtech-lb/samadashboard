@@ -6,7 +6,8 @@ import { fileURLToPath } from "node:url";
 import { SITE, CATEGORIES, SERVICES, HOME_SERVICES, PROMISE, PROCESS, WHY, FORMATS, HOME_FAQ, ABOUT, SHOW } from "./content.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const projects = JSON.parse(readFileSync(join(root, "data", "projects.json"), "utf8"));
+const library = JSON.parse(readFileSync(join(root, "data", "library.json"), "utf8"));
+const projects = JSON.parse(readFileSync(join(root, "data", "list.json"), "utf8")).map((id, i) => ({ ...library.find((p) => p.id === id), rank: i + 1 }));
 const { icons, tech } = JSON.parse(readFileSync(join(root, "tools", "icons.json"), "utf8"));
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const abs = (path) => `${SITE.url}/${path}`;
@@ -344,10 +345,15 @@ for (const p of projects) {
   const crumbs = [["Home", ""], ["Work", "work/"], [C.label, catPath(p.category)], [p.name, `work/${p.id}/`]];
   const related = [...inCat(p.category).filter((x) => x.id !== p.id), ...projects.filter((x) => x.category !== p.category)].slice(0, 3);
   let description = `${p.name} is a live ${type.toLowerCase()} website demo by SAMA, a web design studio in Beirut, Lebanon. Includes ${features.join(", ")}.`;
+  for (let n = features.length; esc(description).length > 158 && n > 0; n--) description = `${p.name} is a live ${type.toLowerCase()} website demo by SAMA, a web design studio in Beirut, Lebanon. Includes ${features.slice(0, n - 1).join(", ")}.`.replace(" Includes .", "");
+  if (esc(description).length > 158) description = `${p.name}: a live website demo by SAMA, a web design studio in Beirut, Lebanon.`.slice(0, 158);
   if (description.length < 110) description += " Try it on any screen.";
+  let title = `${p.name}: ${type} Website Design | SAMA`;
+  if (esc(title).length > 60) title = `${p.name} Website Design | SAMA`;
+  if (esc(title).length > 60) title = `${p.name.slice(0, 30)} | SAMA`;
   page({
     path: `work/${p.id}/`, ogType: "article",
-    title: `${p.name}: ${type} Website Design | SAMA`, description, image: `assets/work/${p.id}-og.jpg`,
+    title, description, image: `assets/work/${p.id}-og.jpg`,
     ld: [crumbsLd(crumbs), { "@type": "CreativeWork", "@id": abs(`work/${p.id}/#work`), name: `${p.name} website demo`, description: p.description, image: abs(`assets/work/${p.id}-og.jpg`), creator: { "@id": `${SITE.url}/#org` }, genre: "Web design", keywords: p.tags.join(", "), inLanguage: "en" }],
     body: (base) => `${pageHero(crumbs, base, `${esc(type)} · demo`, `${esc(p.name)}: ${esc(type.toLowerCase())} <em>website</em>`, `<div class="hero__cta"><a class="btn" href="${base}demos/${p.id}/index.html" data-preview="${p.id}" rel="nofollow" data-magnet>Live preview ${ic("eye-line")}</a><a class="btn btn--glass" href="${base}contact/?project=${encodeURIComponent(p.name)}">I want one like this</a></div>`)}
 <section class="section section--first"><div class="container">

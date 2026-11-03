@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ginger &amp; Moss — The Kitten &amp; Cat Shop</title>
+  <meta name="description" content="Ginger & Moss is a neighbourhood cat shop: new kitten starter kits, food for every age, toys and beds, and a free kitten clinic every Saturday." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#top" class="logo"><span class="logo__paw"><i class="ri-bear-smile-line"></i></span>Ginger <em>&amp;</em> Moss</a>
+      <nav class="nav" id="nav">
+        <a href="#kits">Starter kits</a>
+        <a href="#food">Food</a>
+        <a href="#shop">Shop</a>
+        <a href="#care">Kitten care</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <button class="basket-btn" id="basketBtn" aria-label="Open basket"><i class="ri-shopping-basket-line"></i><span>Basket</span><b id="count">0</b></button>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="scene" id="scene">
+          <div class="scene__media">
+          <img class="scene__img" src="img/kitten.jpg" alt="Maple, a ginger tabby kitten, sitting in a sunny garden and watching you" />
+          <div class="eye eye--l" aria-hidden="true"><div class="iris"></div></div>
+          <div class="eye eye--r" aria-hidden="true"><div class="iris"></div></div>
+          
+          </div>
+
+          <div class="scene__text">
+            <p class="hello">The kitten &amp; cat shop on Elm Street</p>
+            <h1>Everything your new kitten needs.</h1>
+            <p>Food, litter, toys and cosy beds, chosen by cat people in our little shop on Elm Street. Pick up today or get it delivered tomorrow.</p>
+            <div class="scene__btns">
+              <a href="#kits" class="btn">Shop starter kits</a>
+              <a href="#food" class="btn btn--glass">Find the right food</a>
+            </div>
+          </div>
+        </div>
+
+        <ul class="perks">
+          <li><i class="ri-truck-line"></i><div><strong>Next-day delivery</strong><span>Free over $40 in the city</span></div></li>
+          <li><i class="ri-store-2-line"></i><div><strong>Click &amp; collect</strong><span>Ready in 1 hour at Elm St</span></div></li>
+          <li><i class="ri-stethoscope-line"></i><div><strong>Free kitten clinic</strong><span>Every Saturday morning</span></div></li>
+          <li><i class="ri-arrow-go-back-line"></i><div><strong>Fussy-eater promise</strong><span>Swap any food, even opened</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <div class="brands" aria-label="Brands we stock"><div class="brands__track"><span>Brands we trust <i class="ri-heart-3-fill"></i> Tofu Paws <i class="ri-heart-3-fill"></i> Little Hunter <i class="ri-heart-3-fill"></i> Purrfect Kitchen <i class="ri-heart-3-fill"></i> Moss &amp; Mouse <i class="ri-heart-3-fill"></i> Whisker Woods <i class="ri-heart-3-fill"></i> Kind Kibble <i class="ri-heart-3-fill"></i></span><span aria-hidden="true">Brands we trust <i class="ri-heart-3-fill"></i> Tofu Paws <i class="ri-heart-3-fill"></i> Little Hunter <i class="ri-heart-3-fill"></i> Purrfect Kitchen <i class="ri-heart-3-fill"></i> Moss &amp; Mouse <i class="ri-heart-3-fill"></i> Whisker Woods <i class="ri-heart-3-fill"></i> Kind Kibble <i class="ri-heart-3-fill"></i></span></div></div>
+
+    <!-- Starter kits -->
+    <section class="section" id="kits">
+      <div class="container">
+        <div class="title">
+          <h2>New kitten starter kits</h2>
+          <p>Bringing a kitten home this week? Our kits have everything for the first month, at less than buying each item on its own.</p>
+        </div>
+        <div class="kits" id="kitsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Food by age -->
+    <section class="section section--moss" id="food">
+      <div class="container">
+        <div class="title title--light">
+          <h2>The right food for every age</h2>
+          <p>Kittens need more protein and calories than adult cats. Choose your cat's age to see what we recommend.</p>
+        </div>
+        <div class="ages" id="ages">
+          <button class="on" data-age="kitten"><strong>Kitten</strong><span>2–12 months</span></button>
+          <button data-age="adult"><strong>Adult</strong><span>1–7 years</span></button>
+          <button data-age="senior"><strong>Senior</strong><span>7+ years</span></button>
+        </div>
+        <p class="age-tip" id="ageTip"></p>
+        <div class="foods" id="foods"></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="title"><h2>Shop the store</h2><p>Over 900 cat products in store and online.</p></div>
+        <div class="cats">
+          <a href="#" class="cat cat--big"><img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=80" alt="Kitten playing" loading="lazy" /><span>Toys &amp; play <i class="ri-arrow-right-line"></i></span></a>
+          <a href="#" class="cat"><img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=700&q=80" alt="Cat under a blanket" loading="lazy" /><span>Beds &amp; blankets <i class="ri-arrow-right-line"></i></span></a>
+          <a href="#" class="cat"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Cat" loading="lazy" /><span>Litter &amp; trays <i class="ri-arrow-right-line"></i></span></a>
+          <a href="#" class="cat"><img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="Cat" loading="lazy" /><span>Scratchers &amp; trees <i class="ri-arrow-right-line"></i></span></a>
+          <a href="#" class="cat"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Fluffy cat" loading="lazy" /><span>Grooming &amp; health <i class="ri-arrow-right-line"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kitten care -->
+    <section class="section section--cream" id="care">
+      <div class="container care">
+        <div class="clinic">
+          <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?auto=format&fit=crop&w=900&q=80" alt="Kitten looking up" loading="lazy" />
+          <div class="clinic__body">
+            <h2>Free kitten clinic, every Saturday</h2>
+            <p>Bring your new kitten for a free 15-minute check with Hannah, our vet nurse: weight, teeth, ears, flea and worm advice, and a feeding plan to take home.</p>
+            <p class="clinic__when"><i class="ri-calendar-line"></i> Saturdays, 9:00 – 12:00 · walk in, no booking needed</p>
+          </div>
+        </div>
+        <div class="guide">
+          <h3>Your kitten's first week</h3>
+          <ol>
+            <li><strong>Day 1 — Keep it quiet</strong><span>Start with one room: bed, litter tray, food and water far apart.</span></li>
+            <li><strong>Days 2–3 — Same food</strong><span>Keep the breeder's or shelter's food for a week, then switch slowly over 7 days.</span></li>
+            <li><strong>Days 3–5 — Play every day</strong><span>Two or three short wand-toy sessions help them settle and sleep at night.</span></li>
+            <li><strong>Day 7 — First vet visit</strong><span>Book vaccinations and a microchip check, or visit our Saturday clinic first.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kit finder -->
+    <section class="section" id="finder">
+      <div class="container finder">
+        <div class="finder__intro">
+          <p class="hello hello--dark">Not sure where to start?</p>
+          <h2>Find the right kit in three taps.</h2>
+          <p>Tell us a little about your kitten and we'll build a shopping list, with the right food for their age.</p>
+        </div>
+        <div class="quiz" id="quiz">
+          <div class="quiz__bar"><i id="quizBar"></i></div>
+          <div class="quiz__q" id="quizQ"></div>
+          <div class="quiz__a" id="quizA"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adoption -->
+    <section class="section section--moss adopt" id="adopt">
+      <div class="container">
+        <div class="title title--light"><h2>Looking for a kitten?</h2><p>We work with Portland Cat Rescue. These three are looking for a home right now.</p></div>
+        <div class="adopt__grid" id="adoptGrid"></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section">
+      <div class="container">
+        <div class="title"><h2>From our regulars</h2><p><i class="ri-star-fill"></i> 4.9 from 860 Google reviews</p></div>
+        <div class="reviews">
+          <figure class="review"><blockquote>“We came in totally clueless the day before picking up our kitten. Twenty minutes later we left with the starter kit and a feeding plan. Lovely people.”</blockquote><figcaption><strong>Emma &amp; Biscuit</strong><span>Kitten parents since March</span></figcaption></figure>
+          <figure class="review"><blockquote>“The Saturday clinic spotted ear mites on our rescue that we'd completely missed. Free, quick and so kind.”</blockquote><figcaption><strong>Daniel &amp; Pip</strong><span>Rescue cat, 6 months</span></figcaption></figure>
+          <figure class="review"><blockquote>“Our fussy old boy refused his new food, so they swapped it for another brand, no questions asked.”</blockquote><figcaption><strong>Ruth &amp; Oscar</strong><span>Senior cat, 13 years</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--cream" id="faq">
+      <div class="container faq">
+        <div><h2>Questions we hear every day</h2><p>Call us or pop in: we love talking about cats.</p><a href="tel:+12075550136" class="btn">(207) 555-0136</a></div>
+        <div class="acc" id="acc"></div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit">
+      <div class="container visit__in">
+        <div>
+          <h2>Come and visit the shop</h2>
+          <ul class="visit__list">
+            <li><i class="ri-map-pin-2-line"></i><div><strong>48 Elm Street, Portland, ME 04101</strong><span>Free parking in the lot behind the shop</span></div></li>
+            <li><i class="ri-phone-line"></i><div><strong>(207) 555-0136</strong><span>Call for click &amp; collect or stock questions</span></div></li>
+            <li><i class="ri-mail-line"></i><div><strong>hello@gingerandmoss.com</strong><span>We reply the same day</span></div></li>
+          </ul>
+        </div>
+        <div class="hours">
+          <h3>Opening hours <span id="openNow"></span></h3>
+          <table id="hours"></table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <a href="#top" class="logo logo--light"><span class="logo__paw"><i class="ri-bear-smile-line"></i></span>Ginger <em>&amp;</em> Moss</a>
+      <nav><a href="#kits">Starter kits</a><a href="#food">Food</a><a href="#care">Kitten care</a><a href="#visit">Visit</a></nav>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Ginger &amp; Moss Cat Shop</span><span>48 Elm Street, Portland, ME 04101</span></div>
+  </footer>
+
+  <!-- Basket -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Your basket">
+    <div class="drawer__head"><h3>Your basket</h3><button id="closeBasket" aria-label="Close"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__body" id="lines"></div>
+    <div class="drawer__foot" id="foot">
+      <div class="choose" id="choose">
+        <label><input type="radio" name="get" value="collect" checked /> <span>Click &amp; collect — free</span></label>
+        <label><input type="radio" name="get" value="deliver" /> <span id="delLabel">Next-day delivery</span></label>
+      </div>
+      <div class="row"><span>Total</span><strong id="total">$0</strong></div>
+      <button class="btn btn--block" id="checkout">Checkout</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* ---------- Maple's eyes ---------- */
+    const scene = $("scene");
+    const eyes = [...scene.querySelectorAll(".eye")].map((el) => ({ el, iris: el.querySelector(".iris"), x: 0, y: 0, tx: 0, ty: 0 }));
+    let last = performance.now();
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function look(px, py, fromUser = true) {
+      if (fromUser) last = performance.now();
+      eyes.forEach((e) => {
+        const r = e.el.getBoundingClientRect();
+        const dx = px - (r.left + r.width / 2), dy = py - (r.top + r.height / 2);
+        const d = Math.hypot(dx, dy) || 1, reach = Math.min(d / 260, 1);
+        e.tx = (dx / d) * reach * r.width * 0.16;
+        e.ty = (dy / d) * reach * r.height * 0.1;
+      });
+    }
+    addEventListener("pointermove", (e) => look(e.clientX, e.clientY), { passive: true });
+    addEventListener("touchmove", (e) => { const t = e.touches[0]; if (t) look(t.clientX, t.clientY); }, { passive: true });
+
+    function tick(t) {
+      if (performance.now() - last > 4000) {      // idle: Maple glances around by herself
+        const s = scene.getBoundingClientRect(), a = t / 1900;
+        look(s.left + s.width * (0.5 + Math.cos(a) * 0.35), s.top + s.height * (0.3 + Math.sin(a * 1.6) * 0.3), false);
+      }
+      const k = reduce ? 1 : 0.15;
+      eyes.forEach((e) => {
+        e.x += (e.tx - e.x) * k; e.y += (e.ty - e.y) * k;
+        e.iris.style.transform = `translate(${e.x.toFixed(2)}px, ${e.y.toFixed(2)}px)`;
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    /* ---------- Data ---------- */
+    const KITS = [
+      { id: "k1", n: "Essentials kit", p: 79, was: 96, img: "1529778873920-4da4926a72c2", items: ["Kitten dry food, 1.5 kg", "Litter tray + scoop", "Tofu litter, 6 L", "Food & water bowls", "2 starter toys"] },
+      { id: "k2", n: "Cosy home kit", p: 129, was: 158, img: "1494256997604-768d1f608cac", tag: "Most popular", items: ["Everything in Essentials", "Soft cave bed", "Sisal scratching post", "Grooming brush", "Wet food sampler, 12 pouches"] },
+      { id: "k3", n: "Complete kit", p: 189, was: 232, img: "1592194996308-7b43878e84a6", items: ["Everything in Cosy home", "Travel carrier", "Covered litter box", "Feather wand + refills", "Free first-month food delivery"] },
+    ];
+    const FOODS = {
+      kitten: { tip: "Feed 3–4 small meals a day until 6 months, then 2–3. Fresh water always.", list: [
+        { id: "f1", n: "Kitten Chicken & Rice", d: "Dry food · 1.5 kg", p: 18, img: "1589924691995-400dc9ecc119", note: "High protein for growth" },
+        { id: "f2", n: "Kitten Salmon Pouches", d: "Wet food · 12 × 85 g", p: 14, img: "1513245543132-31f507417b26", note: "Soft texture for small teeth" },
+        { id: "f3", n: "Kitten Milk", d: "Lactose-free · 6 × 200 ml", p: 9, img: "1555685812-4b943f1cb0eb", note: "Treat, not a meal" } ] },
+      adult: { tip: "Most adult cats do best on 2 measured meals a day, plus a little wet food for hydration.", list: [
+        { id: "f4", n: "Adult Turkey Grain-Free", d: "Dry food · 3 kg", p: 32, img: "1589924691995-400dc9ecc119", note: "Our best seller" },
+        { id: "f5", n: "Indoor Cat Formula", d: "Dry food · 2 kg", p: 26, img: "1518791841217-8f162f1e1131", note: "Fewer calories, hairball care" },
+        { id: "f6", n: "Tuna Pâté, 12 cans", d: "Wet food · 12 × 85 g", p: 21, img: "1573865526739-10659fec78a5", note: "Extra water in the diet" } ] },
+      senior: { tip: "Older cats often need softer food, more water and support for joints and kidneys.", list: [
+        { id: "f7", n: "Senior 7+ Chicken", d: "Dry food · 1.5 kg", p: 22, img: "1495360010541-f48722b34f7d", note: "Gentle on kidneys" },
+        { id: "f8", n: "Senior Soft Chunks", d: "Wet food · 12 × 85 g", p: 16, img: "1514888286974-6c03e2ca1dba", note: "Easy to chew" },
+        { id: "f9", n: "Joint Care Treats", d: "Glucosamine · 60 g", p: 8, img: "1574158622682-e40e69881006", note: "Daily supplement" } ] },
+    };
+    const ALL = Object.fromEntries([...KITS, ...Object.values(FOODS).flatMap((f) => f.list)].map((x) => [x.id, x]));
+
+    $("kitsGrid").innerHTML = KITS.map((k) => `
+      <article class="kit${k.tag ? " kit--main" : ""}">
+        ${k.tag ? `<span class="kit__tag">${k.tag}</span>` : ""}
+        <img src="${U(k.img, 700)}" alt="${k.n}" loading="lazy" />
+        <div class="kit__body">
+          <h3>${k.n}</h3>
+          <p class="kit__price"><strong>$${k.p}</strong><s>$${k.was}</s><span>save $${k.was - k.p}</span></p>
+          <ul>${k.items.map((i) => `<li><i class="ri-check-line"></i>${i}</li>`).join("")}</ul>
+          <button class="btn btn--block${k.tag ? "" : " btn--soft"}" data-add="${k.id}">Add to basket</button>
+        </div>
+      </article>`).join("");
+
+    function renderFood(age) {
+      $("ages").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.age === age));
+      $("ageTip").innerHTML = `<i class="ri-lightbulb-line"></i> ${FOODS[age].tip}`;
+      $("foods").innerHTML = FOODS[age].list.map((f) => `
+        <article class="food">
+          <img src="${U(f.img, 400)}" alt="${f.n}" loading="lazy" />
+          <div>
+            <span class="food__note">${f.note}</span>
+            <h3>${f.n}</h3><p>${f.d}</p>
+            <div class="food__foot"><strong>$${f.p}</strong><button class="add" data-add="${f.id}" aria-label="Add ${f.n}"><i class="ri-add-line"></i> Add</button></div>
+          </div>
+        </article>`).join("");
+    }
+    $("ages").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) renderFood(b.dataset.age); });
+    renderFood("kitten");
+
+    /* ---------- Basket ---------- */
+    let basket = {};
+    try { basket = JSON.parse(localStorage.getItem("gm-basket")) || {}; } catch (e) { basket = {}; }
+    const save = () => { try { localStorage.setItem("gm-basket", JSON.stringify(basket)); } catch (e) {} };
+    const toast = (m) => { $("toast").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 2200); };
+    function render() {
+      const ids = Object.keys(basket).filter((k) => ALL[k]);
+      const n = ids.reduce((s, k) => s + basket[k], 0), sub = ids.reduce((s, k) => s + ALL[k].p * basket[k], 0);
+      $("count").textContent = n; $("count").classList.toggle("has", n > 0);
+      const deliver = document.querySelector('input[name="get"]:checked').value === "deliver";
+      const fee = deliver && sub < 40 ? 5 : 0;
+      $("delLabel").textContent = sub >= 40 ? "Next-day delivery — free" : `Next-day delivery — $5 (free over $40)`;
+      if (!ids.length) { $("lines").innerHTML = `<div class="empty"><i class="ri-shopping-basket-line"></i><strong>Your basket is empty</strong><span>Start with a kitten starter kit.</span></div>`; $("foot").hidden = true; return; }
+      $("foot").hidden = false;
+      $("lines").innerHTML = ids.map((k) => { const x = ALL[k]; return `<div class="line"><img src="${U(x.img, 140)}" alt="" /><div class="line__info"><strong>${x.n}</strong><span>$${x.p}</span></div><div class="qty"><button data-q="${k}" data-d="-1" aria-label="Remove one"><i class="ri-subtract-line"></i></button><span>${basket[k]}</span><button data-q="${k}" data-d="1" aria-label="Add one"><i class="ri-add-line"></i></button></div></div>`; }).join("");
+      $("total").textContent = `$${sub + fee}`;
+    }
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]");
+      if (a) { const k = a.dataset.add; basket[k] = (basket[k] || 0) + 1; save(); render(); toast(`${ALL[k].n} added to your basket`); }
+      const q = e.target.closest("[data-q]");
+      if (q) { const k = q.dataset.q; basket[k] += +q.dataset.d; if (basket[k] <= 0) delete basket[k]; save(); render(); }
+    });
+    $("choose").addEventListener("change", render);
+    const open = () => document.body.classList.add("basket-open"), close = () => document.body.classList.remove("basket-open");
+    $("basketBtn").addEventListener("click", open); $("closeBasket").addEventListener("click", close); $("overlay").addEventListener("click", close);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    $("checkout").addEventListener("click", () => {
+      const collect = document.querySelector('input[name="get"]:checked').value === "collect";
+      $("lines").innerHTML = `<div class="empty"><i class="ri-checkbox-circle-fill ok"></i><strong>Order placed!</strong><span>${collect ? "We'll text you when it's ready to collect — usually within an hour." : "It will arrive tomorrow between 9am and 6pm."}</span></div>`;
+      $("foot").hidden = true; basket = {}; save(); $("count").textContent = 0; $("count").classList.remove("has");
+    });
+    render();
+
+    /* ---------- Hours ---------- */
+    const H = [[10, 16], [9, 19], [9, 19], [9, 19], [9, 19], [9, 20], [8, 18]], D = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const f = (h) => `${h > 12 ? h - 12 : h}:00 ${h >= 12 ? "pm" : "am"}`;
+    const now = new Date(), d = now.getDay(), hr = now.getHours() + now.getMinutes() / 60, isOpen = hr >= H[d][0] && hr < H[d][1];
+    $("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map((i) => `<tr class="${i === d ? "today" : ""}"><td>${D[i]}</td><td>${f(H[i][0])} – ${f(H[i][1])}</td></tr>`).join("");
+    $("openNow").innerHTML = isOpen ? `<em class="open">Open now</em>` : `<em>Closed now</em>`;
+
+    /* ---------- Header ---------- */
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 20), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+
+
+    /* ---------- Kit finder quiz ---------- */
+    const QUIZ = [
+      ["How old is your kitten?", [["Under 3 months", "baby"], ["3 – 6 months", "kitten"], ["6 – 12 months", "teen"]]],
+      ["Where will they spend most time?", [["Small flat", "flat"], ["House with garden", "house"], ["Mostly indoors, big home", "indoor"]]],
+      ["Anything you already have?", [["Nothing yet", "none"], ["Litter tray & bowls", "basics"], ["Most things, just food", "food"]]],
+    ];
+    const ans = []; let qi = 0;
+    const quiz = () => {
+      $("quizBar").style.width = (qi / QUIZ.length) * 100 + "%";
+      if (qi < QUIZ.length) {
+        const [q, opts] = QUIZ[qi];
+        $("quizQ").innerHTML = `<small>Question ${qi + 1} of ${QUIZ.length}</small><h3>${q}</h3>`;
+        $("quizA").innerHTML = opts.map(([t, v]) => `<button data-v="${v}">${t}<i class="ri-arrow-right-line"></i></button>`).join("") + (qi ? `<button class="quiz__back" data-back>Back</button>` : "");
+      } else {
+        const kit = ans[2] === "food" ? null : ans[2] === "basics" ? "k2" : ans[1] === "house" ? "k3" : "k2";
+        const food = ans[0] === "baby" ? ["f2", "f3"] : ["f1", "f2"];
+        const picks = [kit, ...food].filter(Boolean);
+        const total = picks.reduce((s, k) => s + ALL[k].p, 0);
+        $("quizQ").innerHTML = `<small>Your list</small><h3>Here's what we'd get.</h3>`;
+        $("quizA").innerHTML = `<ul class="quiz__list">${picks.map((k) => `<li><img src="${U(ALL[k].img, 140)}" alt="" /><span>${ALL[k].n}</span><b>$${ALL[k].p}</b></li>`).join("")}</ul><div class="quiz__foot"><button class="btn" id="quizAdd">Add all · $${total}</button><button class="quiz__back" data-restart>Start again</button></div>`;
+        $("quizAdd").addEventListener("click", () => { picks.forEach((k) => (basket[k] = (basket[k] || 0) + 1)); save(); render(); toast("Your kitten list is in the basket"); document.body.classList.add("basket-open"); });
+      }
+    };
+    $("quizA").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (b.dataset.back !== undefined) { qi--; ans.pop(); }
+      else if (b.dataset.restart !== undefined) { qi = 0; ans.length = 0; }
+      else if (b.dataset.v) { ans[qi] = b.dataset.v; qi++; }
+      else return;
+      $("quiz").classList.remove("flip"); void $("quiz").offsetWidth; $("quiz").classList.add("flip"); quiz();
+    });
+    quiz();
+
+    /* ---------- Adoption ---------- */
+    const CATS = [["Pumpkin", "12 weeks · boy", "Loves feather wands and falling asleep on laps.", "1592194996308-7b43878e84a6"], ["Willow", "4 months · girl", "Shy for a day, then your shadow for life.", "1494256997604-768d1f608cac"], ["Biscuit & Bean", "10 weeks · brothers", "Must go together. Twice the chaos, twice the purrs.", "1529778873920-4da4926a72c2"]];
+    $("adoptGrid").innerHTML = CATS.map(([n, a, t, img], i) => `<article class="pet reveal" style="--d:${i * 0.1}s"><span class="pet__img"><img src="${U(img, 600)}" alt="${n}" loading="lazy" /><button class="pet__fav" aria-label="Like ${n}"><i class="ri-heart-3-line"></i></button></span><h3>${n}</h3><small>${a}</small><p>${t}</p><a href="#visit" class="btn btn--soft btn--block">Meet ${n.split(" ")[0]} on Saturday</a></article>`).join("");
+    $("adoptGrid").addEventListener("click", (e) => { const b = e.target.closest(".pet__fav"); if (!b) return; b.classList.toggle("on"); b.innerHTML = `<i class="ri-heart-3-${b.classList.contains("on") ? "fill" : "line"}"></i>`; if (b.classList.contains("on")) toast("Lovely! We'll tell the rescue you're interested"); });
+
+    /* ---------- FAQ ---------- */
+    const FAQS = [["What should I buy before my kitten arrives?", "Food they already know, a litter tray with unscented litter, a bed, a scratching post and two or three toys. Our Essentials kit covers all of it."], ["Can I return food my cat won't eat?", "Yes. Our fussy-eater promise means you can swap any food for another brand, even if the bag is open."], ["Do you deliver?", "Next-day delivery across Portland, free over $40. Click & collect orders are ready within an hour."], ["Is the Saturday clinic really free?", "Completely. Hannah, our vet nurse, checks weight, teeth, ears and gives flea and worm advice. Walk in between 9 and 12."]];
+    $("acc").innerHTML = FAQS.map(([q, a], i) => `<div class="acc__i ${i ? "" : "open"}"><button aria-expanded="${!i}">${q}<i class="ri-add-line"></i></button><div class="acc__a"><div><p>${a}</p></div></div></div>`).join("");
+    $("acc").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const it = b.parentElement, o = !it.classList.contains("open"); $("acc").querySelectorAll(".acc__i").forEach((x) => { x.classList.remove("open"); x.firstElementChild.setAttribute("aria-expanded", "false"); }); if (o) { it.classList.add("open"); b.setAttribute("aria-expanded", "true"); } });
+
+    /* ---------- Motion: scroll reveals ---------- */
+    document.querySelectorAll(".perks li, .title, .kit, .food, .cat, .clinic, .guide, .guide li, .review, .finder__intro, .quiz, .faq > div, .visit__in > div").forEach((el, i) => { el.classList.add("reveal"); if (!el.style.getPropertyValue("--d")) el.style.setProperty("--d", (i % 4) * 0.08 + "s"); });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    new MutationObserver(() => document.querySelectorAll("#foods .food").forEach((el, i) => { el.style.setProperty("--d", i * 0.06 + "s"); el.classList.add("pop"); })).observe($("foods"), { childList: true });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

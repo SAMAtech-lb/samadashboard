@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Hayes — Full-Stack Developer</title>
+  <meta name="description" content="Adam Hayes is a full-stack developer building fast, modern websites and web apps with React, Laravel and Node.js." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo">Adam<span>.</span>dev</a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#resume">Resume</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn">Hire Me <i class="ri-arrow-right-line"></i></a>
+      <button class="burger" id="burger" aria-label="Menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div>
+        <span class="hello">Hello, I'm</span>
+        <h1>Adam <span>Hayes</span></h1>
+        <div class="typed">I'm a <b id="typed"></b></div>
+        <p>I build fast, modern and easy-to-use websites and web applications for startups and businesses — from the first idea to launch day and beyond.</p>
+        <div class="hero__btns">
+          <a href="#contact" class="btn">Hire Me <i class="ri-send-plane-fill"></i></a>
+          <a href="#" download class="btn btn--outline" id="cvBtn"><!-- point href to your CV file -->Download CV <i class="ri-download-2-line"></i></a>
+        </div>
+        <div class="hero__social">
+          <span>Follow me:</span>
+          <a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="ri-dribbble-line"></i></a>
+          <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        </div>
+      </div>
+      <div class="hero__img">
+        <span class="dots dots--a"></span>
+        <span class="dots dots--b"></span>
+        <span class="hero__ring"></span>
+        <span class="hero__circle"></span>
+        <div class="hero__photo"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Adam Hayes" /></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero__now">
+        <span class="hero__live"><i></i> Taking 2 new projects for January 2027</span>
+        <span>Currently building <b>a booking platform for 40 London clinics</b></span>
+        <span>Replies within <b>24 hours</b></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="clients">
+    <div class="container">
+      <p>Trusted by great companies:</p>
+      <div class="clients__logos">
+        <span><i class="ri-compass-3-fill"></i>Northwind</span>
+        <span><i class="ri-sun-fill"></i>Lumen</span>
+        <span><i class="ri-gamepad-fill"></i>Arcade</span>
+        <span><i class="ri-planet-fill"></i>Orbit</span>
+        <span><i class="ri-leaf-fill"></i>Fieldnote</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__img reveal">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Workspace" />
+        <div class="exp-box"><b>6+</b><span>Years of<br />Experience</span></div>
+      </div>
+      <div class="reveal">
+        <span class="sub-title">About Me</span>
+        <h2>I Turn Ideas Into <span>Fast, Beautiful</span> Websites</h2>
+        <p>I'm a full-stack developer based in London with six years of experience building websites, dashboards and web apps. I work closely with founders and teams to turn their ideas into clean, reliable products that their customers love to use.</p>
+        <p style="margin-top:12px">I care about speed, clean code and clear communication — you'll always know what I'm working on and when it will be ready.</p>
+        <div class="info">
+          <div><b>Name:</b> Adam Hayes</div>
+          <div><b>Phone:</b> +44 20 7946 0188</div>
+          <div><b>Email:</b> hello@adamhayes.dev</div>
+          <div><b>Location:</b> London, UK</div>
+          <div><b>Experience:</b> 6+ Years</div>
+          <div><b>Freelance:</b> <span class="yes">Available</span></div>
+        </div>
+        <a href="#contact" class="btn">Let's Talk <i class="ri-chat-3-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--light" id="services">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">My Services</span><h2>What I Can <span>Do For You</span></h2><p>From a simple landing page to a full web application, I handle design implementation, development and launch.</p></div>
+      <div class="services__grid">
+        <div class="service reveal"><span class="service__num">01</span><div class="service__icon"><i class="ri-code-s-slash-line"></i></div><h3>Web Development</h3><p>Fast, responsive websites built with modern tools and clean, maintainable code.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+        <div class="service reveal"><span class="service__num">02</span><div class="service__icon"><i class="ri-layout-masonry-line"></i></div><h3>Web Applications</h3><p>Dashboards, SaaS products and internal tools with React and Laravel.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+        <div class="service reveal"><span class="service__num">03</span><div class="service__icon"><i class="ri-shopping-cart-2-line"></i></div><h3>E-commerce</h3><p>Online stores that are easy to manage and built to convert visitors into buyers.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+        <div class="service reveal"><span class="service__num">04</span><div class="service__icon"><i class="ri-smartphone-line"></i></div><h3>Mobile-First Design</h3><p>Pixel-perfect layouts that look and work great on every screen size.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+        <div class="service reveal"><span class="service__num">05</span><div class="service__icon"><i class="ri-server-line"></i></div><h3>API &amp; Backend</h3><p>Secure APIs, databases and integrations with payment and email services.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+        <div class="service reveal"><span class="service__num">06</span><div class="service__icon"><i class="ri-tools-line"></i></div><h3>Support &amp; Maintenance</h3><p>Updates, backups, speed improvements and fixes so your site stays healthy.</p><a href="#contact">Learn more <i class="ri-arrow-right-line"></i></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills">
+    <div class="container">
+      <div class="reveal">
+        <span class="sub-title">My Stack</span>
+        <h2>Technologies I <span>Work With</span></h2>
+        <p style="margin-bottom:30px">I pick the right tool for each project, with a strong focus on the JavaScript and PHP ecosystems.</p>
+        <div class="stackrow"><b>Front end</b><span>React, Next.js, TypeScript, Tailwind. Every site I ship scores 90+ on mobile PageSpeed.</span></div>
+        <div class="stackrow"><b>Back end</b><span>Laravel and Node.js APIs, MySQL and Postgres, Stripe and email integrations.</span></div>
+        <div class="stackrow"><b>Shipping</b><span>Git, CI previews on every change, Vercel and Forge deploys, uptime monitoring.</span></div>
+        <div class="stackrow"><b>Design hand-off</b><span>I work straight from Figma and flag UX issues before they reach code.</span></div>
+      </div>
+      <div class="tech-grid reveal">
+        <div class="tech"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+        <div class="tech"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+        <div class="tech"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="tech"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+        <div class="tech"><i class="devicon-react-original colored"></i><span>React</span></div>
+        <div class="tech"><i class="devicon-nextjs-plain"></i><span>Next.js</span></div>
+        <div class="tech"><i class="devicon-laravel-original colored"></i><span>Laravel</span></div>
+        <div class="tech"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+        <div class="tech"><i class="devicon-mysql-original colored"></i><span>MySQL</span></div>
+        <div class="tech"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span></div>
+        <div class="tech"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="tech"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section class="section section--light" id="resume">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">My Resume</span><h2>Experience &amp; <span>Education</span></h2></div>
+      <div class="tabs" id="tabs"><button class="on" data-t="exp"><i class="ri-briefcase-4-line"></i> Experience</button><button data-t="edu"><i class="ri-graduation-cap-line"></i> Education</button></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">My Portfolio</span><h2>Recent <span>Projects</span></h2><p>A selection of websites and applications I've designed and built for clients.</p></div>
+      <div class="filters" id="filters"><button class="on" data-f="All">All</button><button data-f="Web App">Web App</button><button data-f="Website">Website</button><button data-f="E-commerce">E-commerce</button><button data-f="Dashboard">Dashboard</button></div>
+      <div class="works" id="works"></div>
+    </div>
+  </section>
+
+  <!-- Counter band -->
+  <section class="band">
+    <div class="container">
+      <div class="band__item"><i class="ri-rocket-2-line"></i><div><b data-count="120">0</b>Projects launched</div></div>
+      <div class="band__item"><i class="ri-emotion-happy-line"></i><div><b data-count="85">0</b>Happy clients</div></div>
+      <div class="band__item"><i class="ri-cup-line"></i><div><b data-count="1400">0</b>Cups of coffee</div></div>
+      <div class="band__item"><i class="ri-star-smile-line"></i><div><b data-count="98" data-suffix="%">0</b>Client satisfaction</div></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">Testimonials</span><h2>What My <span>Clients Say</span></h2></div>
+      <div class="testi__wrap">
+        <div class="testi__viewport"><div class="testi__track" id="track"></div></div>
+        <div class="testi__nav"><button id="prev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button><button id="next" aria-label="Next"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">Pricing</span><h2>Simple, <span>Fair Pricing</span></h2><p>Clear prices with no surprises. Every project starts with a free 30-minute call.</p></div>
+      <div class="plans">
+        <div class="plan reveal"><div class="plan__icon"><i class="ri-file-text-line"></i></div><h3>Landing Page</h3><div class="price">$900<small> / project</small></div><span>Perfect for launches &amp; campaigns</span><ul><li><i class="ri-checkbox-circle-fill"></i> 1-page responsive website</li><li><i class="ri-checkbox-circle-fill"></i> Contact form &amp; analytics</li><li><i class="ri-checkbox-circle-fill"></i> Basic SEO setup</li><li class="no"><i class="ri-close-circle-line"></i> CMS / admin panel</li></ul><a href="#contact" class="btn btn--outline">Get Started</a></div>
+        <div class="plan plan--pop reveal"><div class="plan__icon"><i class="ri-global-line"></i></div><h3>Business Website</h3><div class="price">$2,400<small> / project</small></div><span>Most chosen by small businesses</span><ul><li><i class="ri-checkbox-circle-fill"></i> Up to 8 custom pages</li><li><i class="ri-checkbox-circle-fill"></i> Easy-to-use admin panel</li><li><i class="ri-checkbox-circle-fill"></i> Blog &amp; SEO optimisation</li><li><i class="ri-checkbox-circle-fill"></i> 1 month free support</li></ul><a href="#contact" class="btn">Get Started</a></div>
+        <div class="plan reveal"><div class="plan__icon"><i class="ri-apps-2-line"></i></div><h3>Web Application</h3><div class="price">$6,500<small> / from</small></div><span>Custom apps, SaaS &amp; dashboards</span><ul><li><i class="ri-checkbox-circle-fill"></i> User accounts &amp; roles</li><li><i class="ri-checkbox-circle-fill"></i> Payments &amp; integrations</li><li><i class="ri-checkbox-circle-fill"></i> API &amp; database design</li><li><i class="ri-checkbox-circle-fill"></i> 3 months free support</li></ul><a href="#contact" class="btn btn--outline">Get Started</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title">Blog</span><h2>Latest <span>Articles</span></h2></div>
+      <div class="posts">
+        <article class="post reveal"><div class="post__img"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="" /><span class="post__cat">Development</span></div><div class="post__body"><div class="post__meta"><span><i class="ri-calendar-line"></i> Oct 12, 2026</span><span><i class="ri-time-line"></i> 6 min read</span></div><h3>10 Ways to Make Your Website Load Twice as Fast</h3><a href="#" class="post__more">Read More <i class="ri-arrow-right-line"></i></a></div></article>
+        <article class="post reveal"><div class="post__img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="" /><span class="post__cat">Business</span></div><div class="post__body"><div class="post__meta"><span><i class="ri-calendar-line"></i> Sep 28, 2026</span><span><i class="ri-time-line"></i> 4 min read</span></div><h3>How Much Does a Website Really Cost in 2026?</h3><a href="#" class="post__more">Read More <i class="ri-arrow-right-line"></i></a></div></article>
+        <article class="post reveal"><div class="post__img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="" /><span class="post__cat">Tutorial</span></div><div class="post__body"><div class="post__meta"><span><i class="ri-calendar-line"></i> Sep 10, 2026</span><span><i class="ri-time-line"></i> 8 min read</span></div><h3>Building a REST API With Laravel: A Beginner's Guide</h3><a href="#" class="post__more">Read More <i class="ri-arrow-right-line"></i></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div>
+        <span class="sub-title">Contact Me</span>
+        <h2 style="font-size:clamp(30px,3.4vw,40px);margin-bottom:14px">Let's Work <span style="color:var(--primary)">Together</span></h2>
+        <p style="margin-bottom:28px">Have a project in mind? Send me a message and I'll get back to you within 24 hours.</p>
+        <div class="cinfo">
+          <div class="cinfo__item"><i class="ri-phone-line"></i><div><span>Call Me</span><b>+44 20 7946 0188</b></div></div>
+          <div class="cinfo__item"><i class="ri-mail-line"></i><div><span>Email Me</span><b>hello@adamhayes.dev</b></div></div>
+          <div class="cinfo__item"><i class="ri-map-pin-line"></i><div><span>Location</span><b>London, United Kingdom</b></div></div>
+        </div>
+      </div>
+      <form class="cform reveal" id="cform">
+        <h3>Send Me a Message</h3>
+        <p>Fill in the form and I'll reply as soon as possible.</p>
+        <div class="row"><input placeholder="Your Name" required /><input type="email" placeholder="Your Email" required /></div>
+        <div class="row"><input placeholder="Phone Number" /><select><option>Website</option><option>Web Application</option><option>E-commerce</option><option>Other</option></select></div>
+        <textarea placeholder="Tell me about your project..." required></textarea>
+        <button class="btn">Send Message <i class="ri-send-plane-fill"></i></button>
+        <p class="ok" id="ok"><i class="ri-checkbox-circle-fill"></i> Thank you! Your message has been sent.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a href="#home" class="logo">Adam<span>.</span>dev</a><p>Full-stack developer building fast, modern websites and web apps for businesses around the world.</p><div class="footer__social"><a href="#"><i class="ri-github-fill"></i></a><a href="#"><i class="ri-linkedin-fill"></i></a><a href="#"><i class="ri-dribbble-line"></i></a><a href="#"><i class="ri-twitter-x-line"></i></a></div></div>
+      <div><h4>Quick Links</h4><ul><li><a href="#about"><i class="ri-arrow-right-s-line"></i> About</a></li><li><a href="#services"><i class="ri-arrow-right-s-line"></i> Services</a></li><li><a href="#portfolio"><i class="ri-arrow-right-s-line"></i> Portfolio</a></li><li><a href="#contact"><i class="ri-arrow-right-s-line"></i> Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services"><i class="ri-arrow-right-s-line"></i> Web Development</a></li><li><a href="#services"><i class="ri-arrow-right-s-line"></i> Web Apps</a></li><li><a href="#services"><i class="ri-arrow-right-s-line"></i> E-commerce</a></li><li><a href="#services"><i class="ri-arrow-right-s-line"></i> Maintenance</a></li></ul></div>
+      <div><h4>Newsletter</h4><p style="margin-top:0">Get web tips and new articles in your inbox once a month.</p><form id="news"><input type="email" placeholder="Your email" required /><button class="btn">Join</button></form></div>
+    </div>
+    <div class="copyright">© 2026 <span>Adam Hayes</span>. All rights reserved.</div>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <div class="modal" id="modal">
+    <div class="modal__box">
+      <button class="modal__close" id="mClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <img id="mImg" alt="" />
+      <div class="modal__info">
+        <small id="mCat"></small>
+        <h3 id="mTitle"></h3>
+        <p id="mDesc"></p>
+        <dl><dt>Client</dt><dd id="mClient"></dd><dt>Year</dt><dd id="mYear"></dd><dt>Tech</dt><dd id="mTech"></dd></dl>
+        <div class="modal__btns"><a href="#" class="btn">Live Preview <i class="ri-external-link-line"></i></a><a href="#" class="btn btn--outline"><i class="ri-github-fill"></i> Source</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Typing effect */
+    const roles = ["Full-Stack Developer", "React Specialist", "Laravel Expert", "Freelancer"];
+    let r = 0, c = 0, deleting = false;
+    (function type() {
+      const word = roles[r];
+      $("typed").textContent = word.slice(0, c);
+      if (!deleting && c < word.length) c++;
+      else if (deleting && c > 0) c--;
+      else if (!deleting) { deleting = true; return setTimeout(type, 1600); }
+      else { deleting = false; r = (r + 1) % roles.length; }
+      setTimeout(type, deleting ? 45 : 90);
+    })();
+
+    /* Resume tabs */
+    const RESUME = {
+      exp: [
+        ["2023 — Present", "Senior Full-Stack Developer", "Northwind Digital", "Leading development of client web apps in React and Laravel. Mentoring two junior developers."],
+        ["2021 — 2023", "Full-Stack Developer", "Lumen Studio", "Built 30+ websites and three SaaS dashboards for clients in retail, health and finance."],
+        ["2020 — 2021", "Front-End Developer", "Arcade Agency", "Turned designs into fast, accessible, responsive websites for agency clients."],
+        ["2019 — 2020", "Junior Web Developer", "Freelance", "Built websites for local businesses and learned the craft one project at a time."],
+      ],
+      edu: [
+        ["2015 — 2019", "BSc Computer Science", "University of Manchester", "First-class honours. Final project: real-time collaborative code editor."],
+        ["2022", "Advanced React Patterns", "Online Certification", "Performance, state management and testing in large React apps."],
+        ["2021", "Laravel Certified Developer", "Professional Certificate", "Official certification covering APIs, queues, testing and security."],
+        ["2020", "AWS Cloud Practitioner", "Amazon Web Services", "Cloud fundamentals, deployment and cost management."],
+      ],
+    };
+    function renderResume(k) {
+      $("timeline").innerHTML = RESUME[k].map(([d, t, at, desc], i) => `
+        <div class="tl" style="animation-delay:${i * 80}ms"><span class="tl__date">${d}</span><h3>${t}</h3><h4>${at}</h4><p>${desc}</p></div>`).join("");
+    }
+    $("tabs").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      $("tabs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      renderResume(b.dataset.t);
+    });
+    renderResume("exp");
+
+    /* Portfolio */
+    const WORKS = [
+      { t: "Finance Dashboard", c: "Dashboard", img: "1551288049-bebda4e38f71", tags: ["React", "Chart.js", "Node"], client: "Ledgerly", y: 2026, d: "A real-time finance dashboard with interactive charts, reports and team permissions." },
+      { t: "Restaurant Ordering App", c: "Web App", img: "1504674900247-0877df9cc836", tags: ["Laravel", "Vue", "Stripe"], client: "Flamebite", y: 2026, d: "Online ordering with live order tracking, payments and a kitchen display screen." },
+      { t: "Fashion Online Store", c: "E-commerce", img: "1490481651871-ab68de25d43d", tags: ["Shopify", "Liquid", "JS"], client: "Maison", y: 2025, d: "A fast, elegant store with filters, quick view and a smooth checkout." },
+      { t: "Real Estate Platform", c: "Website", img: "1600596542815-ffad4c1539a9", tags: ["Next.js", "Tailwind", "Prisma"], client: "Havenly", y: 2025, d: "Property search with map view, saved homes and a mortgage calculator." },
+      { t: "Analytics SaaS", c: "Web App", img: "1460925895917-afdab827c52f", tags: ["React", "Laravel", "MySQL"], client: "Pulse", y: 2024, d: "A SaaS product for tracking website traffic, with team accounts and billing." },
+      { t: "Fitness Studio Website", c: "Website", img: "1534438327276-14e5300c3a48", tags: ["HTML", "CSS", "JS"], client: "Ironclad", y: 2024, d: "A bold gym website with class booking and membership plans." },
+      { t: "Electronics Shop", c: "E-commerce", img: "1505740420928-5e560c06d30e", tags: ["WooCommerce", "PHP"], client: "Sonora", y: 2023, d: "Product catalogue, reviews and fast checkout for an audio brand." },
+      { t: "Project Management Tool", c: "Dashboard", img: "1517694712202-14dd9538aa97", tags: ["React", "Node", "Socket.io"], client: "Fieldnote", y: 2023, d: "Kanban boards, real-time updates and team chat in one tool." },
+      { t: "Clinic Booking System", c: "Web App", img: "1629909613654-28e377c37b09", tags: ["Laravel", "Livewire"], client: "Clearview", y: 2022, d: "Online appointment booking with reminders and a staff calendar." },
+    ];
+    let filter = "All", list = [];
+    function renderWorks() {
+      list = WORKS.filter((w) => filter === "All" || w.c === filter);
+      $("works").innerHTML = list.map((w, i) => `
+        <article class="work" data-i="${i}" style="animation-delay:${i * 60}ms">
+          <div class="work__img"><img src="${U(w.img)}" alt="${w.t}" loading="lazy" /><div class="work__overlay"><span><i class="ri-eye-line"></i></span></div></div>
+          <div class="work__body"><small>${w.c}</small><h3>${w.t}</h3><div class="work__tags">${w.tags.map((t) => `<span>${t}</span>`).join("")}</div></div>
+        </article>`).join("");
+    }
+    $("filters").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      $("filters").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      filter = b.dataset.f; renderWorks();
+    });
+    renderWorks();
+    $("works").addEventListener("click", (e) => {
+      const card = e.target.closest(".work"); if (!card) return;
+      const w = list[+card.dataset.i];
+      $("mImg").src = U(w.img, 1200); $("mCat").textContent = w.c; $("mTitle").textContent = w.t; $("mDesc").textContent = w.d;
+      $("mClient").textContent = w.client; $("mYear").textContent = w.y; $("mTech").textContent = w.tags.join(", ");
+      $("modal").classList.add("on"); document.body.style.overflow = "hidden";
+    });
+    const closeModal = () => { $("modal").classList.remove("on"); document.body.style.overflow = ""; };
+    $("mClose").onclick = closeModal;
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    /* Testimonials slider */
+    const TESTI = [
+      ["Adam rebuilt our website in four weeks and our online orders doubled. He explained everything clearly and was always on time.", "Sarah Mitchell", "Owner, Flamebite", "1494790108377-be9c29b29330"],
+      ["Super professional and fast. Our dashboard is now quicker and our team actually enjoys using it.", "James Carter", "CEO, Ledgerly", "1506794778202-cad84cf45f1d"],
+      ["The best developer we've hired. Great communication, clean code and he suggested ideas we hadn't thought of.", "Emily Watson", "Marketing Lead, Maison", "1438761681033-6461ffad8d80"],
+      ["Our booking system works perfectly and patients love it. Adam was patient with all our changes.", "Dr. Raj Patel", "Clearview Clinic", "1612349317150-e413f6a5b16d"],
+    ];
+    $("track").innerHTML = TESTI.map(([q, n, role, img]) => `
+      <div class="tcard"><div class="tcard__inner"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+      <p>"${q}"</p><div class="tcard__who"><img src="${U(img, 120)}" alt="" /><div><b>${n}</b><span>${role}</span></div></div></div></div>`).join("");
+    let slide = 0;
+    const perView = () => (innerWidth <= 991 ? 1 : 2);
+    function go(i) {
+      const max = TESTI.length - perView();
+      slide = i < 0 ? max : i > max ? 0 : i;
+      $("track").style.transform = `translateX(-${slide * (100 / perView())}%)`;
+    }
+    $("prev").onclick = () => go(slide - 1);
+    $("next").onclick = () => go(slide + 1);
+    setInterval(() => go(slide + 1), 6000);
+    addEventListener("resize", () => go(slide));
+
+    /* Reveal on scroll + skill bars + counters */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      if (el.classList.contains("reveal")) el.classList.add("in");
+      if (el.dataset.count) {
+        const end = +el.dataset.count, suffix = el.dataset.suffix || "+", t0 = performance.now();
+        const step = (t) => { const p = Math.min((t - t0) / 1600, 1); el.innerHTML = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString() + `<sup>${suffix}</sup>`; if (p < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      }
+      io.unobserve(el);
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal, [data-count]").forEach((el) => io.observe(el));
+
+    /* Header, active link, progress, back-to-top */
+    const sections = [...document.querySelectorAll("section[id]")];
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 60);
+      $("toTop").classList.toggle("on", scrollY > 600);
+      $("progress").style.width = (scrollY / (document.body.scrollHeight - innerHeight)) * 100 + "%";
+      const current = sections.filter((s) => s.offsetTop - 120 <= scrollY).pop();
+      if (current) document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current.id));
+    });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", () => $("nav").classList.remove("open")));
+
+    /* Forms */
+    $("cform").addEventListener("submit", (e) => { e.preventDefault(); $("ok").style.display = "block"; e.target.reset(); });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); e.target.innerHTML = "<p style='padding:10px 16px;margin:0;color:#fff'>Thanks for subscribing!</p>"; });
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

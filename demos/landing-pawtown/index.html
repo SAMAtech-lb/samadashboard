@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawtown — Pet Supplies, Grooming &amp; Daycare</title>
+  <meta name="description" content="Pawtown is a neighbourhood pet store with food, toys and accessories, professional grooming, daycare and a vet clinic. Book grooming online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar__in">
+      <span><i class="ri-truck-line"></i> Free same-day delivery on orders over $49</span>
+      <div><a href="tel:+16175550124"><i class="ri-phone-line"></i> (617) 555-0124</a><span><i class="ri-map-pin-line"></i> 212 Harvard St, Brookline</span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i class="ri-bear-smile-fill"></i></span>Pawtown</a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Grooming</a>
+        <a href="#adopt">Adopt</a>
+        <a href="#visit">Visit us</a>
+      </nav>
+      <a href="#booking" class="btn btn--sm header__cta"><i class="ri-calendar-check-line"></i> Book grooming</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="chip"><i class="ri-heart-3-fill"></i> Family-owned since 2011</span>
+        <h1>Everything your pet needs, <span>all in one place</span></h1>
+        <p>Premium food, toys and treats, professional grooming and a friendly vet clinic — just around the corner, or delivered to your door today.</p>
+        <form class="search" id="search" role="search">
+          <i class="ri-search-line"></i>
+          <input type="search" id="q" placeholder="Search dog food, cat litter, toys..." aria-label="Search products" />
+          <button class="btn">Search</button>
+        </form>
+        <div class="popular"><span>Popular:</span><button>Grain-free kibble</button><button>Cat litter</button><button>Chew toys</button><button>Flea &amp; tick</button></div>
+        <p class="search__msg" id="searchMsg"></p>
+      </div>
+      <div class="hero__media">
+        <div class="blob"></div>
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Pug on a yellow background" />
+        <div class="hero__card hero__card--a"><i class="ri-scissors-cut-line"></i><div><strong>Grooming from $45</strong><span>Book online in 1 minute</span></div></div>
+        <div class="hero__card hero__card--b"><div class="mini-avatars"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&q=80" alt="" /><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=100&q=80" alt="" /></div><div><strong>8,000+</strong><span>happy pets groomed</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by pet -->
+  <section class="pets">
+    <div class="container">
+      <div class="pets__row">
+        <a href="#shop" class="pet"><span><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=300&q=80" alt="" /></span><strong>Dogs</strong><small>1,240 products</small></a>
+        <a href="#shop" class="pet"><span><img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=300&q=80" alt="" /></span><strong>Cats</strong><small>860 products</small></a>
+        <a href="#shop" class="pet"><span><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=300&q=80" alt="" /></span><strong>Puppies</strong><small>310 products</small></a>
+        <a href="#shop" class="pet"><span><img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?auto=format&fit=crop&w=300&q=80" alt="" /></span><strong>Kittens</strong><small>240 products</small></a>
+        <a href="#shop" class="pet"><span class="pet__icon"><i class="ri-mickey-line"></i></span><strong>Small pets</strong><small>190 products</small></a>
+        <a href="#shop" class="pet"><span class="pet__icon pet__icon--b"><i class="ri-drop-line"></i></span><strong>Fish &amp; aquatics</strong><small>150 products</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop categories -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="title title--row">
+        <div><span class="sub">Shop in store or online</span><h2>Popular <span>categories</span></h2></div>
+        <div class="seg" id="seg"><button class="on" data-p="dog">For dogs</button><button data-p="cat">For cats</button></div>
+      </div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <!-- Promo -->
+  <section class="promos">
+    <div class="container promos__grid">
+      <div class="promo promo--orange">
+        <div><span>New customers</span><h3>20% off your first grooming</h3><p>Use code <b>FIRSTGROOM</b> when you book online.</p><a href="#booking" class="btn btn--white">Book now</a></div>
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="French bulldog in a hoodie" loading="lazy" />
+      </div>
+      <div class="promo promo--navy">
+        <div><span>Autoship &amp; save</span><h3>Never run out of food again</h3><p>Save 10% on every repeat delivery. Skip or cancel any time.</p><a href="#" class="btn btn--yellow">Set up autoship</a></div>
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80" alt="Kitten on a blue background" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="brands">
+    <div class="container brands__in">
+      <p>Brands we stock</p>
+      <ul><li>Royal Canin</li><li>Hill's Science Diet</li><li>Purina Pro Plan</li><li>Orijen</li><li>KONG</li><li>Blue Buffalo</li></ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--soft" id="services">
+    <div class="container">
+      <div class="title">
+        <span class="sub">Care under one roof</span>
+        <h2>Services your pet will <span>love</span></h2>
+      </div>
+      <div class="services">
+        <article class="svc"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Dog being groomed" loading="lazy" /><div class="svc__body"><span class="svc__icon"><i class="ri-scissors-2-line"></i></span><h3>Grooming spa</h3><p>Bath, haircut, nails and ears by certified groomers using gentle, natural shampoos.</p><div class="svc__foot"><b>from $45</b><a href="#booking">Book <i class="ri-arrow-right-line"></i></a></div></div></article>
+        <article class="svc"><img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?auto=format&fit=crop&w=600&q=80" alt="Vet checking a dog" loading="lazy" /><div class="svc__body"><span class="svc__icon"><i class="ri-stethoscope-line"></i></span><h3>Vet clinic</h3><p>Check-ups, vaccines and microchipping with Dr. Amy Chen, open 6 days a week.</p><div class="svc__foot"><b>from $65</b><a href="#visit">Call us <i class="ri-arrow-right-line"></i></a></div></div></article>
+        <article class="svc"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80" alt="Two dogs running" loading="lazy" /><div class="svc__body"><span class="svc__icon"><i class="ri-sun-line"></i></span><h3>Doggy daycare</h3><p>Supervised play groups by size, an outdoor yard and photo updates during the day.</p><div class="svc__foot"><b>$38 / day</b><a href="#visit">Enquire <i class="ri-arrow-right-line"></i></a></div></div></article>
+        <article class="svc"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Dog sitting attentively" loading="lazy" /><div class="svc__body"><span class="svc__icon"><i class="ri-medal-line"></i></span><h3>Puppy training</h3><p>6-week classes for puppies and adult dogs: sit, stay, leash walking and recall.</p><div class="svc__foot"><b>$240 / course</b><a href="#visit">Join a class <i class="ri-arrow-right-line"></i></a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section" id="booking">
+    <div class="container booking">
+      <div class="booking__intro">
+        <span class="sub">Online booking</span>
+        <h2 class="h2-left">Book a grooming <span>appointment</span></h2>
+        <p>Choose your pet's size and package, pick a time and you're done. We'll text you when your pet is ready for pickup.</p>
+        <ul class="ticks">
+          <li><i class="ri-check-line"></i> Fear-free certified groomers</li>
+          <li><i class="ri-check-line"></i> No cages — pets wait in our play room</li>
+          <li><i class="ri-check-line"></i> Free nail trim between visits</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=700&q=80" alt="Puppies waiting in the play room" loading="lazy" />
+      </div>
+      <form class="wizard" id="wizard" novalidate>
+        <div class="steps" id="steps"><span class="on">1. Pet</span><span>2. Package</span><span>3. Time</span><span>4. Details</span></div>
+
+        <div class="pane on" data-step="0">
+          <h3>Who's coming in?</h3>
+          <div class="opts opts--2" data-group="type">
+            <button type="button" class="opt on" data-v="Dog"><i class="ri-bear-smile-line"></i>Dog</button>
+            <button type="button" class="opt" data-v="Cat"><i class="ri-ghost-smile-line"></i>Cat</button>
+          </div>
+          <h4>Size</h4>
+          <div class="opts opts--4" data-group="size">
+            <button type="button" class="opt on" data-v="Small"><strong>Small</strong><small>up to 20 lb</small></button>
+            <button type="button" class="opt" data-v="Medium"><strong>Medium</strong><small>21–50 lb</small></button>
+            <button type="button" class="opt" data-v="Large"><strong>Large</strong><small>51–90 lb</small></button>
+            <button type="button" class="opt" data-v="XL"><strong>Extra large</strong><small>90 lb +</small></button>
+          </div>
+        </div>
+
+        <div class="pane" data-step="1">
+          <h3>Choose a package</h3>
+          <div class="packages" id="packages"></div>
+        </div>
+
+        <div class="pane" data-step="2">
+          <h3>Pick a day &amp; time</h3>
+          <div class="days" id="days"></div>
+          <div class="slots" id="slots"></div>
+        </div>
+
+        <div class="pane" data-step="3">
+          <h3>Your details</h3>
+          <div class="frow"><input name="pet" placeholder="Pet's name" aria-label="Pet's name" /><input name="name" placeholder="Your name" aria-label="Your name" /></div>
+          <div class="frow"><input name="phone" type="tel" placeholder="Mobile number" aria-label="Mobile number" /><input name="email" type="email" placeholder="Email" aria-label="Email" /></div>
+          <textarea name="notes" rows="3" placeholder="Anything we should know? (optional)" aria-label="Notes"></textarea>
+        </div>
+
+        <div class="summary" id="summary"></div>
+        <p class="wizard__err" id="wErr"></p>
+        <div class="wizard__nav">
+          <button type="button" class="btn btn--ghost" id="back" hidden><i class="ri-arrow-left-line"></i> Back</button>
+          <button type="button" class="btn" id="nextStep">Continue <i class="ri-arrow-right-line"></i></button>
+        </div>
+        <div class="wizard__done" id="wDone" hidden></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Adopt -->
+  <section class="section section--soft" id="adopt">
+    <div class="container">
+      <div class="title title--row">
+        <div><span class="sub">With Brookline Animal Rescue</span><h2>Meet our <span>adoptable</span> friends</h2></div>
+        <div class="seg" id="adoptSeg"><button class="on" data-a="all">All</button><button data-a="Dog">Dogs</button><button data-a="Cat">Cats</button></div>
+      </div>
+      <div class="adopt" id="adoptGrid"></div>
+      <p class="adopt__note"><i class="ri-calendar-event-line"></i> Adoption day every first Saturday of the month, 11:00 – 15:00 in store.</p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="title">
+        <span class="sub">Reviews</span>
+        <h2>Tails are <span>wagging</span></h2>
+        <p class="rating"><b>4.9</b> <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i> from 1,120 Google reviews</p>
+      </div>
+      <div class="reviews">
+        <figure class="review"><blockquote>Our nervous rescue used to shake at the groomer. Here she walks in wagging. The team is so patient and gentle.</blockquote><figcaption><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy" /><div><strong>Jessica Moore</strong><span>Mom of Luna, beagle mix</span></div></figcaption></figure>
+        <figure class="review"><blockquote>Same-day delivery of our cat's prescription food saved us twice this month. Prices match the big online stores.</blockquote><figcaption><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy" /><div><strong>Daniel Kim</strong><span>Dad of Mochi &amp; Sushi</span></div></figcaption></figure>
+        <figure class="review"><blockquote>Puppy class was the best $240 we've spent. Biscuit now walks on a loose leash and comes back when called.</blockquote><figcaption><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy" /><div><strong>Rachel Owens</strong><span>Mom of Biscuit, golden retriever</span></div></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit" id="visit">
+    <div class="container visit__in">
+      <div class="visit__card">
+        <h2>Come say <span>hi!</span></h2>
+        <p>Pets are always welcome in store — and there's a treat jar at the till.</p>
+        <ul class="visit__info">
+          <li><i class="ri-map-pin-2-fill"></i><span>212 Harvard St, Brookline, MA 02446<br /><small>Free parking behind the store</small></span></li>
+          <li><i class="ri-phone-fill"></i><a href="tel:+16175550124">(617) 555-0124</a></li>
+          <li><i class="ri-mail-fill"></i><a href="mailto:hello@pawtownpets.com">hello@pawtownpets.com</a></li>
+        </ul>
+        <table class="hours" id="hours"></table>
+      </div>
+      <div class="visit__img"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=80" alt="Dogs running outside" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__mark"><i class="ri-bear-smile-fill"></i></span>Pawtown</a>
+        <p>Your neighbourhood pet store for food, supplies, grooming and care since 2011.</p>
+        <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div>
+      </div>
+      <div><h4>Shop</h4><a href="#shop">Dog</a><a href="#shop">Cat</a><a href="#shop">Small pets</a><a href="#shop">Fish</a></div>
+      <div><h4>Services</h4><a href="#services">Grooming</a><a href="#services">Vet clinic</a><a href="#services">Daycare</a><a href="#services">Training</a></div>
+      <div>
+        <h4>Pawtown Pack</h4>
+        <p>Deals, new arrivals and pet care tips once a month.</p>
+        <form class="news" id="news"><input type="email" placeholder="Your email" aria-label="Email" required /><button aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button></form>
+        <p class="news__msg" id="newsMsg"></p>
+      </div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Pawtown Pet Supply LLC</span><span><a href="#">Privacy</a> · <a href="#">Shipping</a> · <a href="#">Returns</a></span></div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Search */
+    $("search").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = $("q").value.trim();
+      $("searchMsg").innerHTML = v ? `<i class="ri-checkbox-circle-fill"></i> Showing 48 results for “${v.replace(/</g, "&lt;")}” in store and online.` : "Type what you're looking for, e.g. “puppy food”.";
+    });
+    document.querySelector(".popular").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { $("q").value = b.textContent; $("search").requestSubmit(); } });
+
+    /* Categories */
+    const CATS = {
+      dog: [["Dry food", "Kibble for every age & diet", "1589924691995-400dc9ecc119", 420], ["Treats & chews", "Training treats, dental sticks", "1535930891776-0c2dfb7fda1a", 260], ["Toys", "Balls, tug ropes, puzzle feeders", "1591946614720-90a587da4a36", 310], ["Walk & travel", "Leashes, harnesses, carriers", "1587300003388-59208cc962cb", 180], ["Beds & crates", "Orthopedic beds, crates, mats", "1477884213360-7e9d7dcc1e48", 95], ["Health & grooming", "Shampoo, flea & tick, vitamins", "1516734212186-a967f81ad0d7", 140]],
+      cat: [["Dry & wet food", "Kitten, adult & senior recipes", "1514888286974-6c03e2ca1dba", 310], ["Litter & boxes", "Clumping, crystal, pine", "1574158622682-e40e69881006", 85], ["Toys", "Wands, tunnels, catnip toys", "1592194996308-7b43878e84a6", 160], ["Trees & scratchers", "Cat trees, posts, pads", "1533743983669-94fa5c4338ec", 70], ["Treats", "Freeze-dried, lickable, dental", "1450778869180-41d0601e046e", 120], ["Health & grooming", "Brushes, dental, supplements", "1623387641168-d9803ddd3f35", 90]],
+    };
+    function renderCats(p) {
+      $("seg").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.p === p));
+      $("cats").innerHTML = CATS[p].map(([t, d, img, n]) => `
+        <a href="#" class="cat">
+          <div class="cat__img"><img src="${U(img, 500)}" alt="${t}" loading="lazy" /><span>${n} items</span></div>
+          <div class="cat__body"><div><h3>${t}</h3><p>${d}</p></div><i class="ri-arrow-right-up-line"></i></div>
+        </a>`).join("");
+    }
+    $("seg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) renderCats(b.dataset.p); });
+    renderCats("dog");
+
+    /* Booking wizard */
+    const PRICES = { // package: [Small, Medium, Large, XL]
+      "Bath & tidy": { d: "Bath, blow-dry, nails, ears, sanitary trim", p: [45, 55, 70, 85], t: "1.5 h" },
+      "Full groom": { d: "Everything in Bath & tidy plus a full haircut", p: [70, 85, 105, 125], t: "2.5 h" },
+      "Spa day": { d: "Full groom, blueberry facial, paw balm, teeth brushing", p: [90, 105, 125, 150], t: "3 h" },
+    };
+    const SIZES = ["Small", "Medium", "Large", "XL"];
+    const st = { step: 0, type: "Dog", size: "Small", pkg: "Full groom", day: 0, time: null };
+    const days = []; const d0 = new Date(); d0.setHours(0, 0, 0, 0);
+    while (days.length < 6) { d0.setDate(d0.getDate() + 1); if (d0.getDay() !== 0) days.push(new Date(d0)); }
+    const TIMES = ["8:00 AM", "9:30 AM", "11:00 AM", "12:30 PM", "2:00 PM", "3:30 PM"];
+    const price = () => PRICES[st.pkg].p[SIZES.indexOf(st.size)];
+
+    function renderPackages() {
+      $("packages").innerHTML = Object.entries(PRICES).map(([n, o]) => `
+        <button type="button" class="pkg${n === st.pkg ? " on" : ""}" data-pkg="${n}">
+          <span class="pkg__radio"></span>
+          <span class="pkg__info"><strong>${n}</strong><small>${o.d} · about ${o.t}</small></span>
+          <span class="pkg__price">$${o.p[SIZES.indexOf(st.size)]}</span>
+        </button>`).join("");
+    }
+    function renderDays() {
+      $("days").innerHTML = days.map((x, i) => `<button type="button" class="day${i === st.day ? " on" : ""}" data-day="${i}"><span>${x.toLocaleDateString("en-US", { weekday: "short" })}</span><strong>${x.getDate()}</strong></button>`).join("");
+      const full = new Set([(st.day * 2 + 1) % 6, (st.day + 4) % 6]);
+      $("slots").innerHTML = TIMES.map((t, i) => `<button type="button" class="slot${st.time === t ? " on" : ""}" data-time="${t}" ${full.has(i) ? "disabled" : ""}>${t}${full.has(i) ? "<small>Full</small>" : ""}</button>`).join("");
+    }
+    function renderSummary() {
+      $("summary").innerHTML = `<div><i class="ri-bear-smile-line"></i>${st.type} · ${st.size}</div><div><i class="ri-scissors-cut-line"></i>${st.pkg}</div><div><i class="ri-calendar-line"></i>${st.time ? `${days[st.day].toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}, ${st.time}` : "No time yet"}</div><div class="summary__price">$${price()}</div>`;
+    }
+    function show(step) {
+      st.step = step;
+      document.querySelectorAll(".pane").forEach((p) => p.classList.toggle("on", +p.dataset.step === step));
+      [...$("steps").children].forEach((s, i) => { s.classList.toggle("on", i === step); s.classList.toggle("done", i < step); });
+      $("back").hidden = step === 0;
+      $("nextStep").innerHTML = step === 3 ? 'Confirm booking <i class="ri-check-line"></i>' : 'Continue <i class="ri-arrow-right-line"></i>';
+      $("wErr").textContent = "";
+      renderPackages(); renderDays(); renderSummary();
+    }
+    $("wizard").addEventListener("click", (e) => {
+      const o = e.target.closest(".opt");
+      if (o) { const g = o.parentElement.dataset.group; o.parentElement.querySelectorAll(".opt").forEach((x) => x.classList.toggle("on", x === o)); st[g] = o.dataset.v; renderSummary(); }
+      const pk = e.target.closest(".pkg"); if (pk) { st.pkg = pk.dataset.pkg; renderPackages(); renderSummary(); }
+      const dy = e.target.closest(".day"); if (dy) { st.day = +dy.dataset.day; st.time = null; renderDays(); renderSummary(); }
+      const sl = e.target.closest(".slot"); if (sl && !sl.disabled) { st.time = sl.dataset.time; renderDays(); renderSummary(); }
+    });
+    $("back").addEventListener("click", () => show(st.step - 1));
+    $("nextStep").addEventListener("click", () => {
+      if (st.step === 2 && !st.time) { $("wErr").textContent = "Please choose a time slot."; return; }
+      if (st.step < 3) return show(st.step + 1);
+      const f = $("wizard"), errs = [];
+      f.querySelectorAll(".bad").forEach((x) => x.classList.remove("bad"));
+      ["pet", "name"].forEach((n) => { if (!f[n].value.trim()) { errs.push(n === "pet" ? "your pet's name" : "your name"); f[n].classList.add("bad"); } });
+      if (f.phone.value.replace(/\D/g, "").length < 7) { errs.push("a mobile number"); f.phone.classList.add("bad"); }
+      if (!/^\S+@\S+\.\S+$/.test(f.email.value)) { errs.push("a valid email"); f.email.classList.add("bad"); }
+      if (errs.length) { $("wErr").textContent = `Please add ${errs.join(", ")}.`; return; }
+      $("wDone").innerHTML = `<i class="ri-checkbox-circle-fill"></i><h3>See you soon, ${f.pet.value.trim()}!</h3><p>${st.pkg} for a ${st.size.toLowerCase()} ${st.type.toLowerCase()} on ${days[st.day].toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at ${st.time}. Estimated price $${price()}. A confirmation text is on its way to ${f.phone.value}.</p>`;
+      $("wDone").hidden = false;
+      f.querySelectorAll(".steps, .pane, .summary, .wizard__nav, .wizard__err").forEach((x) => (x.hidden = true));
+    });
+    show(0);
+
+    /* Adoptable pets */
+    const ADOPT = [
+      ["Max", "Dog", "Beagle", "2 years", "Male", "1543466835-00a7907e9de1", "Loves long walks and belly rubs"],
+      ["Luna", "Cat", "Domestic shorthair", "1 year", "Female", "1514888286974-6c03e2ca1dba", "Curious, playful, great with kids"],
+      ["Rocky", "Dog", "Husky mix", "4 years", "Male", "1568572933382-74d440642117", "Needs an active family with a yard"],
+      ["Bean", "Dog", "Jack Russell", "3 years", "Female", "1561037404-61cd46aa615b", "Small, smart and very cuddly"],
+      ["Oliver", "Cat", "Tabby", "6 months", "Male", "1574158622682-e40e69881006", "Gets along with other cats"],
+      ["Daisy", "Dog", "Corgi", "1 year", "Female", "1537151608828-ea2b11777ee8", "Friendly with dogs and cats"],
+    ];
+    function renderAdopt(f) {
+      $("adoptSeg").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.a === f));
+      $("adoptGrid").innerHTML = ADOPT.filter((a) => f === "all" || a[1] === f).map(([n, t, br, age, sex, img, note]) => `
+        <article class="friend">
+          <div class="friend__img"><img src="${U(img, 500)}" alt="${n} the ${br}" loading="lazy" /><span>${t}</span></div>
+          <div class="friend__body">
+            <div class="friend__top"><h3>${n}</h3><i class="${sex === "Male" ? "ri-men-line" : "ri-women-line"}" aria-label="${sex}"></i></div>
+            <p class="friend__meta">${br} · ${age}</p>
+            <p>${note}</p>
+            <a href="#visit" class="friend__btn">Ask about ${n} <i class="ri-heart-3-line"></i></a>
+          </div>
+        </article>`).join("");
+    }
+    $("adoptSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) renderAdopt(b.dataset.a); });
+    renderAdopt("all");
+
+    /* Opening hours with today highlighted */
+    const HOURS = [["Sunday", "10:00 – 17:00"], ["Monday", "8:00 – 20:00"], ["Tuesday", "8:00 – 20:00"], ["Wednesday", "8:00 – 20:00"], ["Thursday", "8:00 – 20:00"], ["Friday", "8:00 – 20:00"], ["Saturday", "9:00 – 18:00"]];
+    const today = new Date().getDay();
+    $("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map((i) => `<tr class="${i === today ? "today" : ""}"><td>${HOURS[i][0]}${i === today ? " <em>Today</em>" : ""}</td><td>${HOURS[i][1]}</td></tr>`).join("");
+
+    /* Newsletter, header, menu */
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Welcome to the pack! Check your inbox for 10% off."; e.target.reset(); });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 40), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+    const links = [...document.querySelectorAll(".nav a")];
+    const spy = new IntersectionObserver((es) => es.forEach((en) => {
+      if (en.isIntersecting) links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id));
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    ["home", "shop", "services", "booking", "adopt", "visit"].forEach((id) => spy.observe($(id)));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

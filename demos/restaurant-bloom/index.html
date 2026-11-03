@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bean &amp; Bloom — Café &amp; Bakery in Bath</title>
+  <meta name="description" content="Bean & Bloom is a neighbourhood café and bakery in Bath serving specialty coffee, fresh bakes from 6am and all-day brunch. Order ahead and skip the queue." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=Young+Serif&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__info">
+        <span class="open-dot" id="open-status">Open now</span>
+        <span><i class="ri-map-pin-2-line"></i> 12 Abbey Green, Bath BA1 1NW</span>
+        <span><i class="ri-phone-line"></i> 01225 480 312</span>
+      </div>
+      <span><i class="ri-gift-line" style="color:var(--accent)"></i> 10th coffee free with our loyalty card</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo"><i class="ri-cup-fill"></i>Bean <span>&amp;</span> Bloom</a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#loyalty">Rewards</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="header__right">
+        <button class="cart-btn" id="cart-open" aria-label="Open order"><i class="ri-shopping-bag-3-line"></i><b id="cart-count">0</b></button>
+        <a href="#menu" class="btn">Order Ahead <i class="ri-arrow-right-line"></i></a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="reveal">
+        <span class="sub-title"><i class="ri-sun-line"></i> Good mornings start here</span>
+        <h1>Fresh Coffee, Warm Bakes &amp; <span>Slow Mornings<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 10 C 90 2, 210 2, 298 9" stroke="#f2a65a" stroke-width="5" fill="none" stroke-linecap="round" /></svg></span></h1>
+        <p>A little neighbourhood café in the heart of Bath. Specialty coffee roasted down the road, pastries out of the oven at 6am and brunch served all day long.</p>
+        <div class="hero__btns">
+          <a href="#menu" class="btn">Order Ahead <i class="ri-shopping-bag-3-line"></i></a>
+          <a href="#menu" class="btn btn--outline">View Menu</a>
+        </div>
+        <p class="oven" id="oven"><i></i><span id="ovenTxt">Out of the oven</span></p>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="hero__main"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80" alt="Barista pouring latte art" /></div>
+        <div class="hero__small"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Freshly baked croissants" /></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <div class="perks">
+    <div class="container">
+      <div class="perks__line reveal"><span>Direct-trade single origins</span><span>Everything baked in-house from 6am</span><span>Free oat milk on Tuesdays &amp; Thursdays</span><span>Laptops welcome till 2pm</span></div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__imgs reveal">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Inside the Bean &amp; Bloom café" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=700&q=80" alt="Coffee bar and shelves" loading="lazy" />
+        <div class="about__since"><b>2016</b><small>Est. in Bath</small></div>
+      </div>
+      <div class="reveal">
+        <span class="sub-title"><i class="ri-heart-3-line"></i> Our Story</span>
+        <h2 class="h2" style="margin-bottom:20px">A Café Built on <span>Good Coffee</span> &amp; Kind Faces</h2>
+        <p>Bean &amp; Bloom started as a coffee cart outside Bath Abbey with one grinder, one kettle and a tin of homemade flapjacks. Ten years later we're a little café with a big oven, but the idea hasn't changed.</p>
+        <p>We serve coffee from small roasters in the South West, bake everything in-house with local flour and butter, and remember your order by your second visit.</p>
+        <div class="about__list">
+          <div><i class="ri-check-line"></i> Local, seasonal produce</div>
+          <div><i class="ri-check-line"></i> Dog-friendly garden</div>
+          <div><i class="ri-check-line"></i> Vegan &amp; GF options</div>
+          <div><i class="ri-check-line"></i> Compostable cups</div>
+        </div>
+        <div class="sign">
+          <a href="#menu" class="btn">Explore the Menu</a>
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Rosie Hart" />
+          <div><b>Rosie Hart</b><small>Founder &amp; head baker</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section section--light" id="menu">
+    <svg class="wave wave--top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0, 480 0, 720 20 S 1200 40, 1440 10 V40 Z" fill="currentColor" /></svg>
+    <div class="container">
+      <div class="title reveal"><span class="sub-title"><i class="ri-restaurant-2-line"></i> Our Menu</span><h2>Made Fresh, <span>Made With Love</span></h2><p>Tap the + to customise and add to your order. We'll have it ready when you arrive.</p></div>
+      <div class="tabs" id="tabs">
+        <button class="active" data-c="coffee"><i class="ri-cup-line"></i>Coffee</button>
+        <button data-c="tea"><i class="ri-drinks-2-line"></i>Tea &amp; Iced</button>
+        <button data-c="bakery"><i class="ri-cake-3-line"></i>Bakery</button>
+        <button data-c="brunch"><i class="ri-restaurant-line"></i>Brunch</button>
+      </div>
+      <div class="menu" id="menu-grid"></div>
+      <p class="menu__note"><i class="ri-leaf-fill"></i> Plant-based milk available for all drinks · Please tell us about any allergies</p>
+    </div>
+  </section>
+
+  <!-- Deal -->
+  <section class="section" id="deal">
+    <div class="container">
+      <div class="deal reveal">
+        <div class="deal__text">
+          <span class="sub-title"><i class="ri-timer-flash-line"></i> Early-bird deal</span>
+          <h2>The Morning Bundle: <span>Coffee + Croissant</span></h2>
+          <p>Any regular coffee with a fresh butter croissant or pain au chocolat. Served every day until 11am — the perfect start, for less.</p>
+          <div class="deal__price"><b>£5.20</b><s>£6.30</s></div>
+          <div class="timer" id="timer"><div><b id="t-h">00</b><small>Hours</small></div><div><b id="t-m">00</b><small>Mins</small></div><div><b id="t-s">00</b><small>Secs</small></div></div>
+          <p id="timer-label" style="margin:-14px 0 22px;font-size:14px"></p>
+          <button class="btn btn--accent" id="deal-add">Add Bundle to Order <i class="ri-add-line"></i></button>
+        </div>
+        <div class="deal__img">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Two coffees in hand" loading="lazy" />
+          <span class="deal__tag"><span>-17%<small>Until 11am</small></span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty -->
+  <section class="section section--light" id="loyalty">
+    <div class="container loyal">
+      <div class="reveal">
+        <span class="sub-title"><i class="ri-medal-line"></i> Bloom Rewards</span>
+        <h2 class="h2">Every 10th Coffee Is <span>On Us</span></h2>
+        <div class="loyal__steps">
+          <div><i class="ri-smartphone-line"></i><span><b>Order ahead or in store</b>Every hot or iced drink earns one stamp automatically.</span></div>
+          <div><i class="ri-stamp-line"></i><span><b>Collect 9 stamps</b>Your digital card lives right here — no app to download.</span></div>
+          <div><i class="ri-gift-2-line"></i><span><b>Enjoy a free drink</b>Any size, any milk, any syrup. Plus a treat on your birthday.</span></div>
+        </div>
+        <a href="#menu" class="btn">Start Collecting</a>
+      </div>
+      <div class="card-stamp reveal">
+        <div class="card-stamp__head"><span class="logo"><i class="ri-cup-fill"></i>Bean <span>&amp;</span> Bloom</span><span id="stamp-label">3 / 9 stamps</span></div>
+        <div class="stamps" id="stamps"></div>
+        <div class="progress"><span id="stamp-bar"></span></div>
+        <div class="card-stamp__foot"><span id="stamp-msg"><b>6 more</b> to your free coffee</span><button class="btn btn--outline" id="stamp-reset" style="padding:9px 18px;font-size:13.5px">Reset demo</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title"><i class="ri-instagram-line"></i> @beanandbloom.bath</span><h2>Moments From <span>Our Café</span></h2></div>
+      <div class="gallery reveal" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="title reveal"><span class="sub-title"><i class="ri-chat-smile-3-line"></i> Kind Words</span><h2>What Our <span>Regulars Say</span></h2></div>
+      <div class="reviews">
+        <div class="review reveal"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>The best flat white in Bath, no contest. And the cardamom buns sell out by 10 for a reason. My Saturday ritual.</p><div class="review__who"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Hannah" loading="lazy" /><div><b>Hannah W.</b><small>Local Guide · Google</small></div></div></div>
+        <div class="review reveal"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>Ordering ahead on the way to the station is a game changer. Coffee's always ready, always hot, always perfect.</p><div class="review__who"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Tom" loading="lazy" /><div><b>Tom B.</b><small>Daily commuter</small></div></div></div>
+        <div class="review reveal"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>Brought the kids and the dog for brunch — the staff couldn't have been lovelier. French toast was heavenly.</p><div class="review__who"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Priya" loading="lazy" /><div><b>Priya S.</b><small>TripAdvisor</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="container visit">
+      <div class="hours reveal">
+        <span class="sub-title"><i class="ri-map-pin-time-line"></i> Visit Us</span>
+        <h3>Opening Hours</h3>
+        <p id="hours-status"></p>
+        <ul id="hours"></ul>
+        <div class="contact-lines">
+          <div><i class="ri-map-pin-2-line"></i>12 Abbey Green, Bath BA1 1NW</div>
+          <div><i class="ri-phone-line"></i>01225 480 312</div>
+          <div><i class="ri-mail-line"></i>hello@beanandbloom.co.uk</div>
+        </div>
+      </div>
+      <div class="map reveal"><iframe title="Map of Bean &amp; Bloom" loading="lazy" src="https://maps.google.com/maps?q=Abbey%20Green%2C%20Bath&z=16&output=embed"></iframe></div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="container">
+    <div class="news reveal">
+      <div><h2>Join the Bloom Club</h2><p>New seasonal drinks, bake-sale days and a free pastry on sign-up.</p></div>
+      <form id="news-form"><input type="email" required placeholder="Your email address" aria-label="Email" /><button class="btn" type="submit">Subscribe</button></form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a href="#home" class="logo"><i class="ri-cup-fill"></i>Bean <span>&amp;</span> Bloom</a><p>Specialty coffee, fresh bakes and slow mornings in the heart of Bath since 2016.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div></div>
+      <div><h4>Explore</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#menu">Menu</a></li><li><a href="#loyalty">Rewards</a></li><li><a href="#visit">Find Us</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">Allergens</a></li><li><a href="#">Catering &amp; Events</a></li><li><a href="#">Gift Cards</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Hours</h4><ul class="ftimes"><li><span>Mon – Fri</span><span>7:00 – 18:00</span></li><li><span>Saturday</span><span>8:00 – 17:00</span></li><li><span>Sunday</span><span>9:00 – 16:00</span></li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><span>© 2026 Bean &amp; Bloom Café Ltd. All rights reserved.</span><span>Privacy · Terms · Allergen info</span></div></div>
+  </footer>
+
+  <!-- Customiser modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-name">
+    <div class="modal__box">
+      <div class="modal__head"><img id="m-img" alt="" /><button class="modal__close" id="m-close" aria-label="Close"><i class="ri-close-line"></i></button></div>
+      <div class="modal__body">
+        <h3 id="m-name"></h3>
+        <p id="m-desc"></p>
+        <div id="m-opts"></div>
+        <div class="modal__foot">
+          <div class="qty"><button id="m-minus" aria-label="Less">−</button><span id="m-qty">1</span><button id="m-plus" aria-label="More">+</button></div>
+          <button class="btn" id="m-add">Add to Order · <span id="m-price">£0.00</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Your order">
+    <div class="drawer__head"><h3>Your Order</h3><button id="cart-close" aria-label="Close order"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__list" id="cart-list"></div>
+    <div class="drawer__foot" id="cart-foot">
+      <label>Pickup time</label>
+      <div class="slots" id="slots"></div>
+      <div class="row"><span>Subtotal</span><span id="c-sub">£0.00</span></div>
+      <div class="row"><span>Bundle savings</span><span id="c-save">−£0.00</span></div>
+      <div class="row total"><span>Total</span><span id="c-total">£0.00</span></div>
+      <button class="btn" id="checkout">Place Order for Pickup <i class="ri-check-line"></i></button>
+      <p class="stamp-note" id="stamp-note"></p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const gbp = (n) => "£" + n.toFixed(2);
+    const store = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+
+    /* Opening hours */
+    const HOURS = [[9, 16], [7, 18], [7, 18], [7, 18], [7, 18], [7, 18], [8, 17]]; // Sun..Sat
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const now = new Date(), dow = now.getDay(), hr = now.getHours() + now.getMinutes() / 60;
+    const isOpen = hr >= HOURS[dow][0] && hr < HOURS[dow][1];
+    $("open-status").textContent = isOpen ? `Open now · until ${HOURS[dow][1]}:00` : `Closed · opens ${hr < HOURS[dow][0] ? "today" : "tomorrow"} at ${hr < HOURS[dow][0] ? HOURS[dow][0] : HOURS[(dow + 1) % 7][0]}:00`;
+    $("open-status").classList.toggle("closed", !isOpen);
+    $("hours-status").textContent = isOpen ? "We're open right now — come say hello!" : "We're closed right now, but you can still order ahead for later.";
+    $("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map((d) => `<li class="${d === dow ? "today" : ""}"><span>${DAYS[d]}</span><b>${HOURS[d][0]}:00 – ${HOURS[d][1]}:00</b></li>`).join("");
+
+    /* Menu data */
+    const menu = [
+      { id: "fw", c: "coffee", n: "Flat White", d: "Double ristretto, silky whole milk. Our most-loved coffee.", p: 3.4, img: "1572442388796-11668a67e53d", tag: "Bestseller" },
+      { id: "cap", c: "coffee", n: "Cappuccino", d: "Espresso with velvety foam and a dusting of cocoa.", p: 3.5, img: "1485808191679-5f86510681a2" },
+      { id: "oat", c: "coffee", n: "Honey Oat Latte", d: "Oat milk latte with local wildflower honey.", p: 3.9, img: "1534778101976-62847782c213", tag: "Vegan", veg: 1 },
+      { id: "esp", c: "coffee", n: "Espresso", d: "This month: Huila, Colombia — red apple, caramel, cocoa.", p: 2.6, img: "1610889556528-9a770e32642f" },
+      { id: "moc", c: "coffee", n: "Salted Caramel Mocha", d: "Belgian chocolate, espresso and our salted caramel.", p: 4.2, img: "1563805042-7684c019e1cb" },
+      { id: "isl", c: "coffee", n: "Iced Spanish Latte", d: "Cold espresso over condensed milk and ice.", p: 4.2, img: "1517701604599-bb29b565090c", tag: "New" },
+      { id: "mat", c: "tea", n: "Ceremonial Matcha Latte", d: "Stone-ground Uji matcha, whisked to order.", p: 4.3, img: "1515823064-d6e0c04616a7" },
+      { id: "chai", c: "tea", n: "Dirty Chai", d: "House-spiced chai with a shot of espresso.", p: 4.1, img: "1509042239860-f550ce710b93" },
+      { id: "cb", c: "tea", n: "Cold Brew Tonic", d: "18-hour cold brew, elderflower tonic, orange peel.", p: 4.0, img: "1461023058943-07fcbe16d735", tag: "Summer" },
+      { id: "ia", c: "tea", n: "Iced Americano", d: "Espresso, cold water and plenty of ice.", p: 3.1, img: "1559496417-e7f25cb247f3" },
+      { id: "cro", c: "bakery", n: "Butter Croissant", d: "Laminated over three days with Cornish butter.", p: 2.9, img: "1555507036-ab1f4038808a", food: 1 },
+      { id: "sd", c: "bakery", n: "Sourdough Loaf", d: "48-hour fermented, baked fresh at 6am. 800g.", p: 5.5, img: "1509440159596-0249088772ff", food: 1, tag: "Vegan", veg: 1 },
+      { id: "ck", c: "bakery", n: "Brown Butter Cookie", d: "Dark chocolate chunks and flaky sea salt.", p: 2.4, img: "1558961363-fa8fdf82db35", food: 1 },
+      { id: "cup", c: "bakery", n: "Pistachio Cupcake", d: "Light sponge, pistachio buttercream.", p: 3.2, img: "1486427944299-d1955d23e34d", food: 1 },
+      { id: "ft", c: "brunch", n: "Brioche French Toast", d: "Berries, banana, maple syrup and crème fraîche.", p: 9.5, img: "1484723091739-30a097e8f929", food: 1, tag: "Bestseller" },
+      { id: "pan", c: "brunch", n: "Buttermilk Pancakes", d: "Stack of three with blueberries and whipped butter.", p: 8.9, img: "1528207776546-365bb710ee93", food: 1 },
+      { id: "fb", c: "brunch", n: "The Full Bloom", d: "Eggs, bacon, sausage, beans, mushroom, sourdough.", p: 11.5, img: "1533089860892-a7c6f0a88666", food: 1 },
+      { id: "hb", c: "brunch", n: "Harvest Bowl", d: "Quinoa, roast squash, avocado, greens, tahini.", p: 9.2, img: "1512621776951-a57141f2eefd", food: 1, tag: "Vegan", veg: 1 },
+    ];
+    function renderMenu(c) {
+      $("menu-grid").innerHTML = menu.filter((m) => m.c === c).map((m, i) => `
+        <div class="item" style="animation-delay:${i * 70}ms">
+          <img src="${U(m.img, 240)}" alt="${m.n}" loading="lazy" />
+          <div><h3>${m.n}${m.tag ? `<em class="${m.veg ? "veg" : ""}">${m.tag}</em>` : ""}</h3><p>${m.d}</p></div>
+          <div class="item__side"><b>${gbp(m.p)}</b><button class="add" data-id="${m.id}" aria-label="Add ${m.n}"><i class="ri-add-line"></i></button></div>
+        </div>`).join("");
+    }
+    $("tabs").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      document.querySelectorAll("#tabs button").forEach((x) => x.classList.toggle("active", x === b));
+      renderMenu(b.dataset.c);
+    });
+    renderMenu("coffee");
+
+    /* Customiser */
+    const OPTS = {
+      size: { label: "Size", list: [["Small", "8oz", 0], ["Regular", "12oz", 0.4], ["Large", "16oz", 0.8]], def: 1 },
+      milk: { label: "Milk", list: [["Whole", "", 0], ["Oat", "+£0.40", 0.4], ["Almond", "+£0.40", 0.4], ["Skimmed", "", 0]], def: 0 },
+      shots: { label: "Espresso shots", list: [["Standard", "", 0], ["+1 shot", "+£0.70", 0.7], ["+2 shots", "+£1.40", 1.4], ["Decaf", "", 0]], def: 0 },
+      syrup: { label: "Syrup", list: [["None", "", 0], ["Vanilla", "+£0.50", 0.5], ["Caramel", "+£0.50", 0.5], ["Hazelnut", "+£0.50", 0.5]], def: 0 },
+      warm: { label: "Serve", list: [["As it comes", "", 0], ["Warmed up", "", 0]], def: 0 },
+    };
+    let cur = null, sel = {}, qty = 1;
+    function optKeys(m) { return m.food ? (m.c === "bakery" ? ["warm"] : []) : m.c === "coffee" ? ["size", "milk", "shots", "syrup"] : ["size", "milk", "syrup"]; }
+    function openModal(m) {
+      cur = m; qty = 1; sel = {};
+      optKeys(m).forEach((k) => (sel[k] = OPTS[k].def));
+      $("m-img").src = U(m.img, 800); $("m-img").alt = m.n;
+      $("m-name").textContent = m.n; $("m-desc").textContent = m.d;
+      $("m-opts").innerHTML = optKeys(m).map((k) => `<div class="opt"><div class="opt__label">${OPTS[k].label}</div><div class="chips" data-k="${k}">${OPTS[k].list.map(([n, s], i) => `<button class="${i === sel[k] ? "active" : ""}" data-i="${i}">${n}${s ? `<small>${s}</small>` : ""}</button>`).join("")}</div></div>`).join("");
+      updateModal();
+      $("modal").classList.add("open");
+    }
+    const unitPrice = () => cur.p + Object.entries(sel).reduce((s, [k, i]) => s + OPTS[k].list[i][2], 0);
+    function updateModal() { $("m-qty").textContent = qty; $("m-price").textContent = gbp(unitPrice() * qty); }
+    $("m-opts").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      const k = b.parentNode.dataset.k; sel[k] = +b.dataset.i;
+      b.parentNode.querySelectorAll("button").forEach((x) => x.classList.toggle("active", x === b)); updateModal();
+    });
+    $("m-minus").onclick = () => { qty = Math.max(1, qty - 1); updateModal(); };
+    $("m-plus").onclick = () => { qty = Math.min(20, qty + 1); updateModal(); };
+    const closeModal = () => $("modal").classList.remove("open");
+    $("m-close").onclick = closeModal;
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    $("menu-grid").addEventListener("click", (e) => { const b = e.target.closest(".add"); if (b) openModal(menu.find((m) => m.id === b.dataset.id)); });
+
+    /* Cart */
+    let cart = store.get("bb-cart", []);
+    $("m-add").onclick = () => {
+      const note = Object.entries(sel).filter(([k, i]) => i !== OPTS[k].def || k === "size").map(([k, i]) => OPTS[k].list[i][0]).join(" · ");
+      const key = cur.id + "|" + note;
+      const ex = cart.find((c) => c.key === key);
+      if (ex) ex.q += qty; else cart.push({ key, id: cur.id, n: cur.n, img: cur.img, note, p: unitPrice(), q: qty, drink: !cur.food });
+      saveCart(); closeModal(); toast(`${qty} × ${cur.n} added to your order`);
+    };
+    $("deal-add").onclick = () => {
+      const ex = cart.find((c) => c.key === "bundle");
+      if (ex) ex.q++; else cart.push({ key: "bundle", id: "bundle", n: "Morning Bundle", img: "1495474472287-4d71bcdd2085", note: "Regular coffee + croissant", p: 5.2, q: 1, drink: true, was: 6.3 });
+      saveCart(); toast("Morning Bundle added — nice choice!");
+    };
+    function saveCart() { store.set("bb-cart", cart); renderCart(); const b = $("cart-count"); b.classList.add("bump"); setTimeout(() => b.classList.remove("bump"), 300); }
+    function slots() {
+      const out = []; const t = new Date(); t.setSeconds(0, 0);
+      t.setMinutes(Math.ceil((t.getMinutes() + 10) / 15) * 15);
+      for (let i = 0; out.length < 8 && i < 200; i++) {
+        const d = t.getDay(), h = t.getHours() + t.getMinutes() / 60;
+        if (h >= HOURS[d][0] && h < HOURS[d][1] - 0.25) out.push(new Date(t));
+        t.setMinutes(t.getMinutes() + 15);
+      }
+      return out;
+    }
+    let slot = 0;
+    const slotList = slots();
+    function renderCart() {
+      const count = cart.reduce((s, c) => s + c.q, 0);
+      $("cart-count").textContent = count;
+      if (!cart.length) {
+        $("cart-list").innerHTML = '<div class="empty"><i class="ri-cup-line"></i><b>Your order is empty</b>Pick something delicious from the menu.</div>';
+        $("cart-foot").style.display = "none"; return;
+      }
+      $("cart-foot").style.display = "";
+      $("cart-list").innerHTML = cart.map((c, i) => `
+        <div class="ci"><img src="${U(c.img, 160)}" alt="" /><div><b>${c.n}</b><small>${c.note || "&nbsp;"}</small></div>
+        <div class="ci__right"><strong>${gbp(c.p * c.q)}</strong><div class="qty"><button data-i="${i}" data-d="-1" aria-label="Less">−</button><span>${c.q}</span><button data-i="${i}" data-d="1" aria-label="More">+</button></div></div></div>`).join("");
+      const sub = cart.reduce((s, c) => s + (c.was || c.p) * c.q, 0), total = cart.reduce((s, c) => s + c.p * c.q, 0);
+      $("c-sub").textContent = gbp(sub); $("c-save").textContent = "−" + gbp(sub - total); $("c-total").textContent = gbp(total);
+      const fmt = (d) => (d.toDateString() === new Date().toDateString() ? "" : DAYS[d.getDay()].slice(0, 3) + " ") + d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+      $("slots").innerHTML = slotList.map((d, i) => `<button class="${i === slot ? "active" : ""}" data-s="${i}">${i === 0 && isOpen ? "ASAP · " : ""}${fmt(d)}</button>`).join("");
+      const drinks = cart.filter((c) => c.drink).reduce((s, c) => s + c.q, 0);
+      $("stamp-note").innerHTML = drinks ? `<i class="ri-stamp-line"></i> This order earns ${drinks} loyalty stamp${drinks > 1 ? "s" : ""}` : "";
+    }
+    $("cart-list").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-d]"); if (!b) return;
+      const c = cart[+b.dataset.i]; c.q += +b.dataset.d; if (c.q <= 0) cart.splice(+b.dataset.i, 1); saveCart();
+    });
+    $("slots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { slot = +b.dataset.s; renderCart(); } });
+    const openCart = () => { $("drawer").classList.add("open"); $("overlay").classList.add("open"); };
+    const closeCart = () => { $("drawer").classList.remove("open"); $("overlay").classList.remove("open"); };
+    $("cart-open").onclick = openCart; $("cart-close").onclick = closeCart; $("overlay").onclick = closeCart;
+    $("checkout").onclick = () => {
+      const drinks = cart.filter((c) => c.drink).reduce((s, c) => s + c.q, 0);
+      const t = slotList[slot].toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+      addStamps(drinks); cart = []; saveCart(); closeCart();
+      toast(`Order placed! Ready for pickup at ${t}${drinks ? ` · +${drinks} stamp${drinks > 1 ? "s" : ""}` : ""}`);
+    };
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeCart(); $("nav").classList.remove("open"); } });
+    renderCart();
+
+    /* Deal countdown — until 11:00 today, or until it starts again tomorrow */
+    function dealTick() {
+      const n = new Date(), t = new Date(n); let label;
+      if (n.getHours() < 11) { t.setHours(11, 0, 0, 0); label = "Hurry — today's bundle ends at 11:00."; }
+      else { t.setDate(t.getDate() + 1); t.setHours(HOURS[t.getDay()][0], 0, 0, 0); label = "Today's deal is over — the next one starts when we open. Add it now for a tomorrow pickup."; }
+      const s = Math.max(0, Math.floor((t - n) / 1000));
+      $("t-h").textContent = String(Math.floor(s / 3600)).padStart(2, "0");
+      $("t-m").textContent = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+      $("t-s").textContent = String(s % 60).padStart(2, "0");
+      $("timer-label").textContent = label;
+    }
+    dealTick(); setInterval(dealTick, 1000);
+
+    /* Loyalty stamps */
+    let stamps = store.get("bb-stamps", 3);
+    function renderStamps() {
+      const s = stamps % 10;
+      $("stamps").innerHTML = Array.from({ length: 10 }, (_, i) => i < 9 ? `<span class="stamp ${i < s ? "on" : ""}"><i class="ri-cup-fill"></i></span>` : `<span class="stamp free ${s >= 9 ? "on" : ""}">FREE<br/>COFFEE</span>`).join("");
+      $("stamp-label").textContent = `${Math.min(s, 9)} / 9 stamps`;
+      $("stamp-bar").style.width = (Math.min(s, 9) / 9) * 100 + "%";
+      $("stamp-msg").innerHTML = s >= 9 ? "<b>Your next coffee is free!</b>" : `<b>${9 - s} more</b> to your free coffee`;
+    }
+    function addStamps(n) { stamps = stamps % 10 + n; if (stamps > 9) stamps = 9; store.set("bb-stamps", stamps); renderStamps(); }
+    $("stamp-reset").onclick = () => { stamps = 3; store.set("bb-stamps", 3); renderStamps(); };
+    renderStamps();
+
+    /* Gallery */
+    $("gallery").innerHTML = ["1509042239860-f550ce710b93", "1600093463592-8e36ae95ef56", "1507133750040-4a8f57021571", "1521017432531-fbd92d768814", "1559496417-e7f25cb247f3", "1525610553991-2bede1a236e2"]
+      .map((id) => `<a href="#" aria-label="View on Instagram"><img src="${U(id, 600)}" alt="Café moment" loading="lazy" /></a>`).join("");
+
+    /* Toast + newsletter */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3500); }
+    $("news-form").addEventListener("submit", (e) => { e.preventDefault(); toast("Welcome to the Bloom Club — your free pastry voucher is in your inbox!"); e.target.reset(); });
+
+    /* Header & nav */
+    const links = [...document.querySelectorAll("#nav a")];
+    const secs = links.map((a) => document.querySelector(a.getAttribute("href")));
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 40);
+      let idx = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 150) idx = i; });
+      links.forEach((l, i) => l.classList.toggle("active", i === idx));
+    });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    links.forEach((l) => l.addEventListener("click", () => $("nav").classList.remove("open")));
+
+    /* Reveal */
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* "Out of the oven" ticker in the hero, rotating through this morning's bakes */
+    (() => {
+      const el = document.getElementById("ovenTxt"); if (!el) return;
+      const bakes = [["Almond croissants", 12], ["Cinnamon buns", 4], ["Sourdough loaves", 26], ["Cardamom knots", 9]];
+      let i = 0;
+      const show = () => { const [n, m] = bakes[i]; el.innerHTML = `Out of the oven <b>${m} min ago</b>: ${n.toLowerCase()}`; i = (i + 1) % bakes.length; };
+      show(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { el.style.opacity = 0; setTimeout(() => { show(); el.style.opacity = 1; }, 300); }, 3800);
+    })();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

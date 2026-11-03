@@ -4,7 +4,7 @@ import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); if (statSync(p).isDirectory()) return /^(demos|tools|data|\.git)$/.test(f) ? [] : walk(p); return f === "index.html" ? [p] : []; });
+const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); if (statSync(p).isDirectory()) return /^(demos|tools|data|admin|\.github|\.git)$/.test(f) ? [] : walk(p); return f === "index.html" ? [p] : []; });
 const pages = walk(root);
 const problems = [];
 const bad = (page, msg) => problems.push(`${page.replace(root, "") || "/"}: ${msg}`);

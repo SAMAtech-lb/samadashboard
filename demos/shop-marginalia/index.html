@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marginalia Books — Independent bookshop in Bath</title>
+  <meta name="description" content="Marginalia is an independent bookshop on Walcot Street, Bath. Shop bestsellers, new releases and staff picks online, book author events and buy gift cards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <a href="#top" class="logo">Marginalia<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#books" data-genre="all">Books</a>
+        <a href="#books" data-tab="new">New releases</a>
+        <a href="#picks">Staff picks</a>
+        <a href="#events">Events</a>
+        <a href="#gifts">Gift cards</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="icons">
+        <button id="searchToggle" aria-label="Search"><i class="ri-search-line"></i></button>
+        <button id="wishBtn" class="hide-sm" aria-label="Wishlist"><i class="ri-bookmark-line"></i><b id="wishCount">0</b></button>
+        <button id="cartBtn" aria-label="Open basket"><i class="ri-shopping-basket-line"></i><b id="cartCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero__bg" src="https://images.unsplash.com/photo-1518373714866-3f1478910cc0?auto=format&fit=crop&w=1600&q=80" alt="A woman browsing the shelves of a bookshop" />
+      <div class="container hero__in">
+        <div class="hero__card">
+          <span class="kicker">Independent since 1998</span>
+          <h1>Find your next favourite book</h1>
+          <p>Over 11,000 books on our shelves, picked and read by five booksellers. Order online and collect in store, or get free UK delivery over £25.</p>
+          <form class="hero__search" id="heroSearch" role="search"><i class="ri-search-line"></i><input id="heroInput" type="search" placeholder="Search by title, author or ISBN" aria-label="Search books" /><button class="btn">Search</button></form>
+          <div class="hero__tags"><span>Popular:</span><button data-q="Haig">Matt Haig</button><button data-q="Cookery">Cookery</button><button data-q="Children">Children's</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container services__in">
+        <p><i class="ri-truck-line"></i><span><b>Free UK delivery</b>On orders over £25</span></p>
+        <p><i class="ri-store-2-line"></i><span><b>Click &amp; collect</b>Ready in 2 hours</span></p>
+        <p><i class="ri-gift-line"></i><span><b>Gift wrapping</b>Free on every book</span></p>
+        <p><i class="ri-quill-pen-line"></i><span><b>Signed copies</b>From our author events</span></p>
+      </div>
+    </section>
+
+    <!-- Genres -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="head"><h2>Browse by genre</h2></div>
+        <div class="genres" id="genres"></div>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section class="section section--cream" id="books">
+      <div class="container">
+        <div class="head">
+          <h2 id="booksTitle">Bestsellers this week</h2>
+          <div class="tabs" id="tabs"><button class="on" data-tab="best">Bestsellers</button><button data-tab="new">New releases</button><button data-tab="sale">Offers</button></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Book of the month -->
+    <section class="section botm">
+      <div class="container botm__in">
+        <div class="botm__cover reveal" id="botmCover"></div>
+        <div class="botm__copy reveal">
+          <span class="kicker">Book of the month · November</span>
+          <h2>The Midnight Library</h2>
+          <p class="botm__by">by Matt Haig</p>
+          <p>Between life and death there is a library, and every book in it lets Nora try a life she could have lived. Warm, clever and full of hope, it is the book we recommend most this year.</p>
+          <blockquote>“I pressed this into the hands of everyone who came in for a month. Not one has come back disappointed.” <cite>— Hannah, bookseller</cite></blockquote>
+          <div class="botm__buy"><p class="price"><s>£10.99</s>£8.99</p><button class="btn" data-add="1">Add to basket</button><button class="btn btn--line" data-quick="1">More details</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff picks -->
+    <section class="section section--green" id="picks">
+      <div class="container">
+        <div class="head head--light"><h2>Staff picks</h2><p>What our booksellers can't stop talking about.</p></div>
+        <div class="picks" id="picksGrid"></div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section" id="events">
+      <div class="container events">
+        <div class="events__intro reveal">
+          <h2>Events in the shop</h2>
+          <p>Book club, story time, supper clubs and poetry nights. Tickets include £5 off the featured book on the night.</p>
+          <img src="https://images.unsplash.com/photo-1764337482439-ae67981bff34?auto=format&fit=crop&w=900&q=80" alt="Cosy bookshop with full shelves" loading="lazy" />
+        </div>
+        <ul class="events__list" id="eventList"></ul>
+      </div>
+    </section>
+
+    <!-- Gift + subscription -->
+    <section class="section section--cream" id="gifts">
+      <div class="container promos">
+        <div class="promo promo--green reveal">
+          <i class="ri-gift-2-line"></i>
+          <h3>Marginalia gift cards</h3>
+          <p>From £10 to £100, spendable in store and online. Never expires.</p>
+          <div class="amounts" id="amounts"><button data-v="10">£10</button><button data-v="25" class="on">£25</button><button data-v="50">£50</button><button data-v="100">£100</button></div>
+          <button class="btn btn--light" id="giftAdd">Buy a £25 gift card</button>
+        </div>
+        <div class="promo promo--photo reveal">
+          <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=1000&q=80" alt="Open book on a stack of books" loading="lazy" />
+          <div>
+            <h3>A book a month, picked for you</h3>
+            <p>Tell us what you love and a bookseller chooses one new book each month. From £16 including postage.</p>
+            <a href="#visit" class="btn btn--light">Start a subscription</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section" id="visit">
+      <div class="container visit">
+        <div class="visit__img reveal"><img src="https://images.unsplash.com/photo-1774070231417-4bf4d2025878?auto=format&fit=crop&w=1200&q=80" alt="Inside Marginalia bookshop" loading="lazy" /></div>
+        <div class="visit__copy reveal">
+          <h2>Visit the shop</h2>
+          <p>Two floors of books, a children's corner with beanbags and a reading chair by the window.</p>
+          <dl>
+            <div><dt><i class="ri-map-pin-line"></i>Address</dt><dd>41 Walcot Street, Bath BA1 5BN</dd></div>
+            <div><dt><i class="ri-time-line"></i>Opening hours</dt><dd>Mon–Sat 9:30–18:00<br />Sun 11:00–17:00</dd></div>
+            <div><dt><i class="ri-phone-line"></i>Phone</dt><dd><a href="tel:+441225555014">01225 555 014</a></dd></div>
+            <div><dt><i class="ri-mail-line"></i>Email</dt><dd><a href="mailto:hello@marginaliabooks.co.uk">hello@marginaliabooks.co.uk</a></dd></div>
+          </dl>
+          <a href="#" class="btn">Get directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#top" class="logo logo--light">Marginalia<span>.</span></a><p>An independent bookshop on Walcot Street, Bath, since 1998. Proud member of the Booksellers Association.</p><div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a></div></div>
+        <div><h4>Shop</h4><a href="#books">Bestsellers</a><a href="#books">New releases</a><a href="#picks">Staff picks</a><a href="#gifts">Gift cards</a></div>
+        <div><h4>Help</h4><a href="#">Delivery &amp; returns</a><a href="#">Click &amp; collect</a><a href="#">Special orders</a><a href="#visit">Contact us</a></div>
+        <div><h4>Newsletter</h4><p>New books, events and staff picks every Friday.</p><form class="news" id="news"><input type="email" required placeholder="Your email" aria-label="Email" /><button class="btn btn--light">Join</button></form><p class="form-msg" id="newsMsg"></p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Marginalia Books Ltd · Photography from Unsplash</p><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i></div></div>
+    </div>
+  </footer>
+
+  <!-- Search overlay -->
+  <div class="sbar" id="sbar" aria-hidden="true"><div class="container"><form class="sbar__form" id="sbarForm"><i class="ri-search-line"></i><input id="sbarInput" type="search" placeholder="Search by title, author or ISBN" aria-label="Search books" /><button type="button" id="sbarClose" aria-label="Close search"><i class="ri-close-line"></i></button></form></div></div>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Book details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__cover" id="mCover"></div>
+      <div class="modal__body">
+        <span class="kicker" id="mGenre"></span>
+        <h3 id="mTitle"></h3>
+        <p class="modal__by" id="mBy"></p>
+        <div class="modal__rate" id="mRate"></div>
+        <p id="mDesc"></p>
+        <div class="formats" id="mFormats"></div>
+        <div class="modal__buy"><p class="price price--lg" id="mPrice"></p><button class="btn" id="mAdd">Add to basket</button></div>
+        <ul class="modal__meta" id="mMeta"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basket -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+    <div class="drawer__head"><h3>Your basket</h3><button id="drawerClose" aria-label="Close basket"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__ship"><p id="shipTxt"></p><div><span id="shipBar"></span></div></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">£0.00</b></div><label class="drawer__opt"><input type="checkbox" id="wrap" /> Gift wrap my order (free)</label><button class="btn btn--full" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 500) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const gbp = (n) => "£" + n.toFixed(2);
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2300); };
+
+    /* ---------- Catalogue ---------- */
+    const B = [
+      { id: 1, t: "The Midnight Library", a: "Matt Haig", g: "Fiction", p: 8.99, was: 10.99, isbn: "9780525559474", r: 5, rc: 1412, tags: ["best", "sale"], d: "Between life and death there is a library, and every book in it lets Nora try a life she could have lived. A warm, clever novel about regret and second chances.", pages: 304, pub: "Canongate, 2020" },
+      { id: 2, t: "Where the Crawdads Sing", a: "Delia Owens", g: "Fiction", p: 9.99, isbn: "9780735219090", r: 5, rc: 2210, tags: ["best"], d: "A girl raised alone in the marshes of North Carolina becomes the prime suspect when a local man is found dead. Part mystery, part love letter to nature.", pages: 384, pub: "Putnam, 2018" },
+      { id: 3, t: "Normal People", a: "Sally Rooney", g: "Fiction", p: 8.99, isbn: "9781984822185", r: 4, rc: 980, tags: ["best", "new"], d: "Connell and Marianne grow up in the same small town in Ireland and keep finding their way back to each other through school, university and beyond.", pages: 288, pub: "Hogarth, 2019" },
+      { id: 4, t: "Salt, Fat, Acid, Heat", a: "Samin Nosrat", g: "Cookery", p: 30.00, isbn: "9781476753836", r: 5, rc: 640, tags: ["best", "new"], d: "Four elements that make food taste good, explained so you can cook without a recipe. Beautifully illustrated and genuinely useful.", pages: 480, pub: "Simon & Schuster, 2017" },
+      { id: 5, t: "The Gruffalo", a: "Julia Donaldson", g: "Children's", p: 7.99, isbn: "9780142403877", r: 5, rc: 1530, tags: ["best", "new"], d: "A clever mouse takes a stroll through the deep dark wood and invents a monster to scare off predators. Ages 3-7.", pages: 32, pub: "Puffin, 1999" },
+      { id: 6, t: "Steal Like an Artist", a: "Austin Kleon", g: "Art & Design", p: 11.99, isbn: "9780761169253", r: 4, rc: 410, tags: ["new"], d: "Ten short, illustrated lessons on creativity for anyone who makes things. A favourite gift for students.", pages: 160, pub: "Workman, 2012" },
+      { id: 7, t: "Project Hail Mary", a: "Andy Weir", g: "Fiction", p: 10.99, isbn: "9780593135204", r: 5, rc: 1120, tags: ["new", "best"], d: "A science teacher wakes up alone on a spaceship with no memory and the fate of Earth in his hands. Funny, tense and hard to put down.", pages: 496, pub: "Ballantine, 2021" },
+      { id: 8, t: "milk and honey", a: "rupi kaur", g: "Poetry", p: 10.99, isbn: "9781449474256", r: 4, rc: 870, tags: ["best"], d: "Short poems and drawings about love, loss, trauma and healing. One of the best-selling poetry books of the decade.", pages: 208, pub: "Andrews McMeel, 2015" },
+      { id: 9, t: "Sapiens", a: "Yuval Noah Harari", g: "History", p: 11.99, was: 16.99, isbn: "9780062316097", r: 5, rc: 1960, tags: ["sale"], d: "How a minor ape became the ruler of the planet, from the first humans to the age of algorithms. Big ideas, clearly told.", pages: 464, pub: "Harper, 2015" },
+      { id: 10, t: "Jerusalem", a: "Yotam Ottolenghi & Sami Tamimi", g: "Cookery", p: 20.00, was: 30.00, isbn: "9781607743941", r: 5, rc: 530, tags: ["sale"], d: "120 recipes from the city where the authors grew up, one in the Jewish west and one in the Arab east.", pages: 320, pub: "Ten Speed Press, 2012" },
+      { id: 11, t: "Klara and the Sun", a: "Kazuo Ishiguro", g: "Fiction", p: 9.99, isbn: "9780593318171", r: 4, rc: 620, tags: ["new"], d: "Klara, an Artificial Friend, watches the world from a shop window and waits to be chosen. A quiet, moving novel from the Nobel winner.", pages: 320, pub: "Knopf, 2021" },
+      { id: 12, t: "Into the Wild", a: "Jon Krakauer", g: "Travel", p: 9.99, was: 12.99, isbn: "9780385486804", r: 4, rc: 740, tags: ["sale", "new"], d: "The true story of Chris McCandless, who gave away everything and hitchhiked to Alaska to live off the land.", pages: 224, pub: "Anchor, 1997" },
+    ];
+    const GENRES = ["Fiction", "Children's", "Cookery", "Travel", "History", "Poetry", "Art & Design"];
+    const GICON = { "Fiction": "ri-book-open-line", "Children's": "ri-bear-smile-line", "Cookery": "ri-restaurant-2-line", "Travel": "ri-compass-3-line", "History": "ri-ancient-pavilion-line", "Poetry": "ri-quill-pen-line", "Art & Design": "ri-palette-line" };
+    const C = (b, size = "M") => `https://covers.openlibrary.org/b/isbn/${b.isbn}-${size}.jpg`;
+    const cover = (b, big) => `<div class="cover${big ? " cover--big" : ""}"><img src="${C(b, big ? "L" : "M")}" alt="${b.t} by ${b.a}, book cover" loading="lazy" /></div>`;
+    const stars = (r) => '<i class="ri-star-fill"></i>'.repeat(r) + '<i class="ri-star-line"></i>'.repeat(5 - r);
+    let wish = new Set(), tab = "best", genre = null, q = "";
+    try { wish = new Set(JSON.parse(localStorage.getItem("mgWish") || "[]")); } catch (e) {}
+
+    $("genres").innerHTML = GENRES.map((g) => `<button class="genre" data-genre="${g}"><i class="${GICON[g]}"></i><b>${g}</b><span>${[1240, 860, 410, 380, 920, 210, 330][GENRES.indexOf(g)]} books</span></button>`).join("");
+
+    const card = (b, i) => `<article class="book" style="--d:${i * 0.05}s">
+      <div class="book__media">${b.was ? `<span class="badge">Save ${Math.round((1 - b.p / b.was) * 100)}%</span>` : ""}<button class="book__wish ${wish.has(b.id) ? "on" : ""}" data-wish="${b.id}" aria-label="Save ${b.t}"><i class="ri-bookmark-${wish.has(b.id) ? "fill" : "line"}"></i></button><button class="book__open" data-quick="${b.id}" aria-label="View ${b.t}">${cover(b)}</button></div>
+      <div class="book__body"><h3><button data-quick="${b.id}">${b.t}</button></h3><p>${b.a}</p><div class="stars">${stars(b.r)}<small>${b.rc}</small></div><div class="book__foot"><p class="price">${b.was ? `<s>${gbp(b.was)}</s>` : ""}${gbp(b.p)}</p><button class="book__add" data-add="${b.id}" aria-label="Add ${b.t} to basket"><i class="ri-shopping-basket-line"></i></button></div></div>
+    </article>`;
+    const render = () => {
+      let list = B;
+      if (q) list = B.filter((b) => (b.t + b.a + b.g).toLowerCase().includes(q));
+      else if (genre) list = B.filter((b) => b.g === genre);
+      else list = B.filter((b) => b.tags.includes(tab)).slice(0, 6);
+      $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="none"><i class="ri-book-2-line"></i><p>No books found${q ? ` for "${q}"` : ""}. We can order almost any book in print. Call us on 01225 555 014.</p></div>`;
+      $("booksTitle").textContent = q ? `Results for "${q}"` : genre ? genre : { best: "Bestsellers this week", new: "New releases", sale: "Offers" }[tab];
+      $("tabs").style.visibility = q || genre ? "hidden" : "visible";
+    };
+    const setTab = (t) => { tab = t; genre = null; q = ""; $("tabs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x.dataset.tab === t)); render(); };
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setTab(b.dataset.tab); });
+    const goBooks = () => $("books").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+    document.addEventListener("click", (e) => {
+      const g = e.target.closest("[data-genre]"), t = e.target.closest("[data-tab]:not(#tabs button)");
+      if (g) { q = ""; genre = g.dataset.genre === "all" ? null : g.dataset.genre; if (!genre) setTab("best"); else render(); goBooks(); closeNav(); }
+      if (t && !t.closest("#tabs")) { setTab(t.dataset.tab); closeNav(); }
+    });
+    const search = (val) => { q = val.trim().toLowerCase(); genre = null; render(); goBooks(); };
+    $("heroSearch").addEventListener("submit", (e) => { e.preventDefault(); search($("heroInput").value); });
+    document.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => { $("heroInput").value = b.dataset.q; if (b.dataset.q === "Children" || b.dataset.q === "Cookery") { q = ""; genre = b.dataset.q === "Children" ? "Children's" : "Cookery"; render(); goBooks(); } else search(b.dataset.q); }));
+    render();
+
+    /* Book of the month cover */
+    $("botmCover").innerHTML = cover(B[0], true);
+
+    /* ---------- Staff picks ---------- */
+    const PICKS = [
+      [3, "Hannah", "Fiction buyer", "I read it in one sitting on a train and missed my stop. Sharp, tender and so true about first love."],
+      [7, "Owen", "Sci-fi & history", "The funniest book about saving the world I have ever read. Everyone I lend it to buys their own copy."],
+      [4, "Priya", "Cookery & children's", "It changed how I cook. After the salt chapter you will never under-season pasta water again."],
+    ];
+    $("picksGrid").innerHTML = PICKS.map(([id, n, role, quote], i) => { const b = B.find((x) => x.id === id); return `<article class="pick reveal" style="--d:${i * 0.1}s"><button class="pick__cover" data-quick="${b.id}" aria-label="View ${b.t}">${cover(b)}</button><div><blockquote>“${quote}”</blockquote><p class="pick__who"><b>${n}</b>${role}</p><h3>${b.t}</h3><p class="pick__by">${b.a} · ${gbp(b.p)}</p><button class="btn btn--light btn--sm" data-add="${b.id}">Add to basket</button></div></article>`; }).join("");
+
+    /* ---------- Events ---------- */
+    const EV = [
+      ["14", "Nov", "Thu 7pm", "Book club: The Midnight Library", "Our monthly book club discusses this month's pick. Wine and snacks included.", 5, 12],
+      ["22", "Nov", "Sat 11am", "Story time: The Gruffalo", "A reading with puppets and colouring. Free, ages 3–7, parents welcome.", 0, 4],
+      ["03", "Dec", "Wed 7pm", "Supper club: Salt, Fat, Acid, Heat", "Local chef Ana Ruiz cooks three dishes from the book. Tasting included.", 10, 20],
+      ["12", "Dec", "Fri 6pm", "Winter poetry open mic", "Bring a poem of your own or one you love. Mulled wine on us.", 0, 0],
+    ];
+    $("eventList").innerHTML = EV.map(([d, m, time, t, desc, price, left], i) => `<li class="event reveal" style="--d:${i * 0.08}s"><div class="event__date"><b>${d}</b><span>${m}</span></div><div class="event__info"><small>${time} · ${price ? "£" + price : "Free"}</small><h3>${t}</h3><p>${desc}</p></div><button class="btn ${left ? "btn--line" : "btn--off"}" data-event="${i}" ${left ? "" : "disabled"}>${left ? "Reserve" : "Sold out"}</button><span class="event__left">${left ? left + " seats left" : ""}</span></li>`).join("");
+    $("eventList").addEventListener("click", (e) => { const b = e.target.closest("[data-event]"); if (!b) return; b.textContent = "Reserved"; b.disabled = true; b.classList.add("btn--done"); toast(`Seat reserved for ${EV[+b.dataset.event][3]}. We've emailed your ticket.`); });
+
+    /* ---------- Gift cards ---------- */
+    let gift = 25;
+    $("amounts").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; gift = +b.dataset.v; $("amounts").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); $("giftAdd").textContent = `Buy a £${gift} gift card`; });
+    $("giftAdd").addEventListener("click", () => addItem({ key: "gift" + gift, t: `Gift card £${gift}`, a: "Marginalia Books", p: gift, src: U("1543002588-bfa74002ed7e", 160), f: "Digital" }));
+
+    /* ---------- Basket ---------- */
+    let cart = [];
+    try { cart = JSON.parse(localStorage.getItem("mgCart2") || "[]"); } catch (e) {}
+    const FREE = 25;
+    const renderCart = () => {
+      const n = cart.reduce((s, i) => s + i.q, 0), sub = cart.reduce((s, i) => s + i.q * i.p, 0);
+      $("cartCount").textContent = n; $("cartCount").classList.toggle("on", n > 0);
+      $("drawerList").innerHTML = cart.length ? cart.map((i, k) => `<li><img src="${i.src || U(i.img, 160)}" alt="" /><div><b>${i.t}</b><small>${i.a} · ${i.f}</small><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>${gbp(i.p * i.q)}</span><button data-rm="${k}" aria-label="Remove"><i class="ri-delete-bin-6-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-shopping-basket-line"></i><p>Your basket is empty.</p></li>`;
+      $("dSub").textContent = gbp(sub);
+      $("shipTxt").innerHTML = sub >= FREE ? "You qualify for <b>free UK delivery</b>" : `Spend <b>${gbp(FREE - sub)}</b> more for free UK delivery`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      try { localStorage.setItem("mgCart2", JSON.stringify(cart)); } catch (e) {}
+    };
+    const addItem = (it) => { const f = cart.find((i) => i.key === it.key); f ? f.q++ : cart.push({ ...it, q: 1 }); renderCart(); toast(`${it.t} added to your basket`); $("cartBtn").classList.remove("bump"); void $("cartBtn").offsetWidth; $("cartBtn").classList.add("bump"); };
+    const addBook = (b, fmt = "Paperback", price = b.p) => addItem({ key: b.id + fmt, t: b.t, a: b.a, p: price, src: C(b, "S"), f: fmt });
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.rm !== undefined) cart.splice(+b.dataset.rm, 1); else { const i = cart[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) cart.splice(+b.dataset.k, 1); } renderCart(); });
+    const openCart = () => { closeModal(); document.body.classList.add("cart-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { document.body.classList.remove("cart-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("cartBtn").addEventListener("click", openCart); $("drawerClose").addEventListener("click", closeCart); $("scrim").addEventListener("click", closeCart);
+    $("checkout").addEventListener("click", () => { if (!cart.length) return; const w = $("wrap").checked; cart = []; renderCart(); closeCart(); toast(`Thank you! Order confirmed${w ? ", gift wrapped" : ""}.`); });
+    renderCart();
+
+    /* ---------- Quick view ---------- */
+    let mBook = null, mFmt = null;
+    const openModal = (b) => {
+      mBook = b;
+      const fmts = b.g === "Children's" ? [["Hardback", b.p + 4], ["Paperback", b.p]] : [["Paperback", b.p], ["Hardback", +(b.p + 7).toFixed(2)], ["eBook", +(b.p * 0.6).toFixed(2)]];
+      mFmt = fmts[0];
+      $("mCover").innerHTML = cover(b, true);
+      $("mGenre").textContent = b.g; $("mTitle").textContent = b.t; $("mBy").textContent = "by " + b.a;
+      $("mRate").innerHTML = `<span class="stars">${stars(b.r)}</span>${b.rc} reader reviews`;
+      $("mDesc").textContent = b.d;
+      $("mFormats").innerHTML = fmts.map((f, i) => `<button class="${i ? "" : "on"}" data-i="${i}"><b>${f[0]}</b>${gbp(f[1])}</button>`).join("");
+      const setP = () => { $("mPrice").innerHTML = (b.was && mFmt === fmts[0] ? `<s>${gbp(b.was)}</s>` : "") + gbp(mFmt[1]); };
+      setP(); $("mFormats").onclick = (e) => { const x = e.target.closest("button"); if (!x) return; mFmt = fmts[+x.dataset.i]; $("mFormats").querySelectorAll("button").forEach((y) => y.classList.toggle("on", y === x)); setP(); };
+      $("mMeta").innerHTML = `<li><span>Pages</span>${b.pages}</li><li><span>Publisher</span>${b.pub}</li><li><span>Availability</span>In stock, ships today</li>`;
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("mAdd").addEventListener("click", () => { addBook(mBook, mFmt[0], mFmt[1]); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]"), qk = e.target.closest("[data-quick]"), w = e.target.closest("[data-wish]");
+      if (a) addBook(B.find((b) => b.id === +a.dataset.add));
+      if (qk) openModal(B.find((b) => b.id === +qk.dataset.quick));
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); w.classList.toggle("on", wish.has(id)); w.innerHTML = `<i class="ri-bookmark-${wish.has(id) ? "fill" : "line"}"></i>`; renderWish(); toast(wish.has(id) ? "Saved to your reading list" : "Removed from your reading list"); }
+    });
+
+    /* ---------- Wishlist ---------- */
+    const renderWish = () => { $("wishCount").textContent = wish.size; $("wishCount").classList.toggle("on", wish.size > 0); try { localStorage.setItem("mgWish", JSON.stringify([...wish])); } catch (e) {} };
+    renderWish();
+    $("wishBtn").addEventListener("click", () => { $("grid").innerHTML = wish.size ? B.filter((b) => wish.has(b.id)).map(card).join("") : `<div class="none"><i class="ri-bookmark-line"></i><p>Your reading list is empty. Tap the bookmark on any book to save it.</p></div>`; $("booksTitle").textContent = "Your reading list"; $("tabs").style.visibility = "hidden"; goBooks(); });
+
+    /* ---------- Search overlay ---------- */
+    const openS = () => { document.body.classList.add("sbar-open"); $("sbar").setAttribute("aria-hidden", "false"); setTimeout(() => $("sbarInput").focus(), 150); };
+    const closeS = () => { document.body.classList.remove("sbar-open"); $("sbar").setAttribute("aria-hidden", "true"); };
+    $("searchToggle").addEventListener("click", openS); $("sbarClose").addEventListener("click", closeS);
+    $("sbarForm").addEventListener("submit", (e) => { e.preventDefault(); search($("sbarInput").value); closeS(); });
+
+    /* ---------- Misc ---------- */
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeCart(); closeNav(); closeS(); } });
+    addEventListener("scroll", () => { $("header").classList.toggle("sticky", scrollY > 10); if (!reduce && scrollY < 900) document.querySelector(".hero__bg").style.transform = `scale(1.08) translateY(${scrollY * 0.12}px)`; }, { passive: true });
+    document.querySelectorAll(".head, .services__in > p, .genre").forEach((el, i) => { el.classList.add("reveal"); el.style.setProperty("--d", (i % 7) * 0.05 + "s"); });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Thanks! See you on Friday."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

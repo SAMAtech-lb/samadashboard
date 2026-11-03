@@ -1,31 +1,25 @@
 # samadashboard
 
-The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web design and development studio in Beirut, Lebanon. It uses the design of the SAMA site (`studio-dashboard/sama`), shows only the top 30 projects, and is plain static HTML, CSS and JavaScript.
+The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web design and development studio in Beirut, Lebanon. It is plain static HTML, CSS and JavaScript, hosted on GitHub Pages.
 
-## Publish on GitHub Pages
+## Manage projects
 
-1. In this repository, open **Settings → Pages**. Under Source choose **Deploy from a branch**, then `main` and `/ (root)`.
-2. At your domain registrar, add these DNS records:
-   - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` record for `www`: `samatech-lb.github.io`
-3. Back in **Settings → Pages**, confirm the custom domain is `samatechlb.com`, wait for the DNS check, then tick **Enforce HTTPS**.
+Open [samatechlb.com/admin/](https://samatechlb.com/admin/) and sign in with a GitHub access token (the sign-in page explains how to make one).
 
-## Add or remove projects
+- **Add or Remove** moves a project on or off the website, and the arrows change its order.
+- **+ New project** uploads a new project folder into the library.
+- **Publish to website** saves everything as one commit. The `Build website` GitHub Action then makes screenshots and pages, and the page tells you when it's live.
 
-No subdomain or online admin is needed. Forma Studio on your computer is the dashboard.
+The sign-in is the token itself: nothing secret is stored in this repository, so the page is useless without a token that can edit it.
 
-1. Open `studio-dashboard/index.html` and use **Add to portfolio** or **Remove from portfolio**.
-2. Click **Save to website** and save over `studio-dashboard/portfolio.js`.
-3. Double-click `publish.bat` in this folder.
+The library lives in `data/library.json` and `demos/`, and the projects on the site are listed in `data/list.json`. This repository is public, so every project in `demos/` can be opened by anyone who has its address, even when it isn't on the site. Demos carry a `noindex` tag to keep them out of Google, because they show fictional businesses.
 
-## Change something
+## Change wording
 
-| To change | Do this |
-| --- | --- |
-| Wording, email or WhatsApp number | Edit `tools/content.mjs`, then run `node tools/build.mjs` |
-| Add an icon | Add it to `tools/fetch_assets.mjs`, then run that file |
-| Check for SEO mistakes and broken links | Run `node tools/check.mjs` |
+Edit `tools/content.mjs` and push. The Action rebuilds the site. To check locally, run `node tools/sync.mjs`, `node tools/build.mjs` and `node tools/check.mjs`.
 
-To refresh screenshots, run `python -m http.server 8123 --bind 127.0.0.1` in this folder, then `node tools/capture.mjs` and `python tools/images.py` in a second terminal.
+Pages at the site root, `work/`, the service folders, `about/` and `contact/` are generated, so edit `tools/` rather than those files. To add an icon, add it to `tools/fetch_assets.mjs` and run that file.
 
-Pages at the site root, `work/`, the service folders, `about/` and `contact/` are generated, so edit `tools/` rather than those files. Demos in `demos/` are copied from Forma and carry a `noindex` tag, because they show fictional businesses.
+## Hosting
+
+GitHub Pages deploys `main` from `/ (root)`. DNS: `A` records for `@` to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `CNAME` for `www` to `samatech-lb.github.io`.

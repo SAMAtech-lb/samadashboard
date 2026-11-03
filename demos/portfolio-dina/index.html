@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dina Khoury — Product &amp; Brand Designer</title>
+  <meta name="description" content="Dina Khoury is a product and brand designer helping startups look as good as they work. Case studies, services, playground and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Dina Khoury home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="dg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3d7bff"/><stop offset="1" stop-color="#9cc4ff"/></linearGradient></defs><circle cx="16" cy="16" r="14" fill="url(#dg)"/><circle cx="21" cy="11" r="10" fill="#060a18"/></svg><span>DINA KHOURY</span></a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#playground">Playground</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--sm">Start a project</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero: draggable project board -->
+    <section class="hero" id="hero">
+      <div class="board" id="board" aria-label="Board of projects. Drag to explore, click a card to open it.">
+        <div class="board__in" id="boardIn"></div>
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <p class="label hero__fade">Product &amp; brand designer · Beirut</p>
+        <h1 class="hero__name"><span class="line"><span>DINA</span></span><span class="line"><span class="grad">KHOURY</span></span></h1>
+        <p class="hero__lead hero__fade">I help startups look as good as they work. Apps, brands and design systems for teams in Europe and the Gulf.</p>
+        <div class="hero__cta hero__fade"><a href="#work" class="btn">View case studies <i class="ri-arrow-right-down-line"></i></a><a href="#contact" class="btn btn--ghost">Work with me</a></div>
+      </div>
+      <p class="hero__hint hero__fade"><i class="ri-drag-move-2-line"></i> Drag to explore · click any card</p>
+    </section>
+
+    <!-- Intro -->
+    <section class="section intro" id="about">
+      <div class="container intro__in">
+        <figure class="intro__photo reveal">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Portrait of Dina Khoury" loading="lazy" />
+          <figcaption><i class="ri-map-pin-line"></i> Beirut · working worldwide</figcaption>
+        </figure>
+        <div>
+          <p class="label reveal">Hello</p>
+          <p class="intro__big reveal">I'm Dina. For nine years I've turned <span class="grad">messy products</span> into clear, lovable ones, from the first logo sketch to the four-hundredth screen.</p>
+          <div class="intro__cols reveal">
+            <div><h4>Focus</h4><p>Product design, brand identity and design systems for early-stage startups.</p></div>
+            <div><h4>How I work</h4><p>Directly with founders, in short weekly cycles, with prototypes you can click from week one.</p></div>
+            <div><h4>Tools</h4><p>Figma, Framer, Illustrator, After Effects, and a lot of paper.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work: stacking cards -->
+    <section class="section section--alt" id="work">
+      <div class="container">
+        <div class="head head--row">
+          <div>
+            <p class="label reveal">Selected work</p>
+            <h2 class="h2 reveal">Four projects, <span class="grad">four very happy teams.</span></h2>
+          </div>
+          <p class="head__p reveal">A few recent projects, with the numbers that changed after launch. Open any of them for the full story.</p>
+        </div>
+        <div class="stack" id="stack"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="head">
+          <p class="label reveal">Services</p>
+          <h2 class="h2 reveal">What I can <span class="grad">do for you.</span></h2>
+        </div>
+        <div class="svc" id="svc"></div>
+      </div>
+      <img class="svc__float" id="svcFloat" alt="" aria-hidden="true" />
+    </section>
+
+    <!-- Playground -->
+    <section class="section section--alt" id="playground">
+      <div class="container head head--row">
+        <div>
+          <p class="label reveal">Playground</p>
+          <h2 class="h2 reveal">Explorations <span class="grad">&amp; side quests.</span></h2>
+        </div>
+        <div class="pg__ctrl reveal"><button id="pgPrev" aria-label="Scroll left"><i class="ri-arrow-left-line"></i></button><button id="pgNext" aria-label="Scroll right"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+      <div class="pg" id="pg"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="clients">
+      <div class="container said">
+        <p class="label reveal">Clients say</p>
+        <div class="said__tabs reveal" id="saidTabs" role="tablist" aria-label="Choose a client"></div>
+        <div class="said__quotes" id="saidQuotes" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Experience & recognition -->
+    <section class="section section--alt" id="experience">
+      <div class="container cv">
+        <div>
+          <p class="label reveal">Experience</p>
+          <ul class="cv__list" id="cvList"></ul>
+        </div>
+        <div>
+          <p class="label reveal">Recognition</p>
+          <ul class="cv__list" id="awardList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-sec" id="contact">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="label reveal">Contact</p>
+          <h2 class="h2 reveal">Let's make something <span class="grad">people love.</span></h2>
+          <p class="reveal">Tell me a little about your project. I reply within two working days with questions, a rough plan and a price range.</p>
+          <div class="avail reveal"><i class="ri-calendar-check-line"></i><span><small>Next available start</small><b>February 2027</b></span></div>
+          <a class="bigmail reveal" href="mailto:hello@dinakhoury.design">hello@dinakhoury.design <i class="ri-arrow-right-up-line"></i></a>
+          <div class="socials reveal"><a href="#" aria-label="Dribbble"><i class="ri-dribbble-line"></i></a><a href="#" aria-label="Behance"><i class="ri-behance-line"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></div>
+        </div>
+        <form class="planner reveal" id="planner" novalidate>
+          <fieldset>
+            <legend>I need help with <small>(pick any)</small></legend>
+            <div class="chips chips--multi" data-group="svc"><button type="button" class="on">Product design</button><button type="button">Brand identity</button><button type="button">Design system</button><button type="button">Website</button><button type="button">Pitch deck</button></div>
+          </fieldset>
+          <fieldset>
+            <legend>Budget</legend>
+            <div class="chips" data-group="budget"><button type="button">$3k – $8k</button><button type="button" class="on">$8k – $20k</button><button type="button">$20k – $50k</button><button type="button">$50k+</button></div>
+          </fieldset>
+          <fieldset>
+            <legend>Timeline</legend>
+            <div class="chips" data-group="time"><button type="button">ASAP</button><button type="button" class="on">1–3 months</button><button type="button">Flexible</button></div>
+          </fieldset>
+          <div class="row">
+            <input type="text" id="pName" placeholder="Your name" aria-label="Your name" />
+            <input type="email" id="pEmail" placeholder="Email" aria-label="Email" />
+          </div>
+          <textarea id="pMsg" rows="4" placeholder="What are you building? Links welcome." aria-label="Project details"></textarea>
+          <div class="planner__sum" id="pSum"></div>
+          <button type="submit" class="btn btn--full">Send project brief <i class="ri-send-plane-2-line"></i></button>
+          <p class="form-msg" id="pMsgOut"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#contact" class="footer__big">Let's talk <i class="ri-arrow-right-up-line"></i></a>
+      <div class="footer__grid">
+        <p>© <span id="year"></span> Dina Khoury Design Studio</p>
+        <nav><a href="#work">Work</a><a href="#services">Services</a><a href="#playground">Playground</a><a href="#about">About</a></nav>
+        <p>Beirut <b id="clock">--:--</b> · GMT+2</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case study -->
+  <div class="modal" id="modal" hidden>
+    <article class="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+      <button class="case__close" id="caseClose" aria-label="Close case study"><i class="ri-close-line"></i></button>
+      <div id="caseBody"></div>
+      <div class="case__nav"><button id="casePrev"><i class="ri-arrow-left-line"></i> Previous</button><button id="caseNext">Next project <i class="ri-arrow-right-line"></i></button></div>
+    </article>
+  </div>
+
+  <a href="#top" class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const CASES = [
+      { name: "Lumen Bank", type: "Product design", year: "2025", img: "1551650975-87deedd944c3", extra: ["1586717791821-3f44a563fa4c", "1522542550221-31fd19575a2d"],
+        line: "A mobile bank people actually enjoy opening.", result: ["4.7★", "App Store rating, up from 3.1"], tags: ["iOS & Android", "UX research", "Prototyping"],
+        challenge: "Lumen had a reliable bank and an app customers called 'a spreadsheet with a logo'. Simple tasks like splitting a bill took eight taps, and reviews were sliding.",
+        approach: "Twenty customer interviews, a new information architecture built around the three things people do daily, and a friendlier visual language with real-time feedback on every payment.",
+        outcome: "Rating jumped from 3.1 to 4.7 in four months. Support chats about 'how do I…' dropped by 36%, and daily active users grew 28%." },
+      { name: "Orbit", type: "Brand identity", year: "2025", img: "1614850523459-c2f4c699c52e", extra: ["1618005182384-a83a8bd57fbe", "1618005198919-d3d4b5a92ead"],
+        line: "A brand for a satellite-data startup that needed to look bigger than six people.", result: ["$6M", "seed round raised with the new brand"], tags: ["Logo", "Visual identity", "Pitch deck"],
+        challenge: "A brilliant team with a clip-art logo, pitching to investors who had seen a hundred space startups that month.",
+        approach: "A logo built from an orbit path, a deep-night palette with one electric blue, motion principles for the product, and a pitch deck that told the story in twelve slides.",
+        outcome: "Orbit closed a $6M seed round eight weeks after the rebrand. Two investors mentioned the deck by name." },
+      { name: "Fieldnote", type: "Design system", year: "2024", img: "1558655146-d09347e92766", extra: ["1531403009284-440f080d1e12", "1561070791-2526d30994b5"],
+        line: "One system for a note-taking app used by 300,000 people.", result: ["3×", "faster from design to release"], tags: ["Tokens", "Figma library", "Documentation"],
+        challenge: "Four designers, nine shades of grey, and buttons that looked different on every screen. Engineers rebuilt the same components again and again.",
+        approach: "An audit of 1,100 screens, design tokens shared with code, 140 components with dark mode and accessibility built in, and docs that engineers actually read.",
+        outcome: "New features now go from design to release three times faster, and the team shipped full dark mode in two weeks." },
+      { name: "Haven Stays", type: "Website", year: "2024", img: "1559028012-481c04fa702d", extra: ["1572044162444-ad60f128bdea", "1563986768609-322da13575f3"],
+        line: "A booking website for boutique stays along the Lebanese coast.", result: ["+41%", "direct bookings in the first season"], tags: ["Web design", "Art direction", "Framer"],
+        challenge: "Haven relied on booking platforms that took 18% of every stay, and its own site looked like a holiday brochure from 2012.",
+        approach: "Photography-led pages for each property, a three-step booking flow, honest prices shown up front and a guide to the coast that ranks well on Google.",
+        outcome: "Direct bookings rose 41% in the first summer, saving the owners around $70,000 in platform fees." },
+    ];
+    const BOARD = [
+      [0, 120, 140, 300, "t"], [1, 500, 60, 360, "w"], [2, 960, 120, 420, "w"], [3, 1470, 70, 340, "t"], [0, 1890, 160, 360, "w"],
+      [1, 60, 600, 360, "w"], [2, 1680, 560, 300, "t"], [3, 1950, 640, 340, "w"],
+      [0, 200, 1010, 360, "w"], [1, 700, 960, 300, "t"], [2, 1120, 1040, 380, "w"], [3, 1600, 1060, 320, "t"],
+    ];
+    const BOARD_IMG = ["1551650975-87deedd944c3", "1614850523459-c2f4c699c52e", "1558655146-d09347e92766", "1559028012-481c04fa702d", "1586717791821-3f44a563fa4c", "1618005182384-a83a8bd57fbe", "1531403009284-440f080d1e12", "1572044162444-ad60f128bdea", "1522542550221-31fd19575a2d", "1618005198919-d3d4b5a92ead", "1561070791-2526d30994b5", "1563986768609-322da13575f3"];
+    const SERVICES = [
+      ["Product design", "Apps and web products from first flow to final pixel.", ["UX research", "Flows & wireframes", "UI design", "Clickable prototypes"], "from $8,000", "1551650975-87deedd944c3"],
+      ["Brand identity", "Names, logos and visual languages that make you look as serious as you are.", ["Logo & wordmark", "Colour & type", "Brand guidelines", "Pitch deck"], "from $5,000", "1614850523459-c2f4c699c52e"],
+      ["Design systems", "Component libraries your designers and engineers both love.", ["UI audit", "Design tokens", "Figma library", "Documentation"], "from $12,000", "1558655146-d09347e92766"],
+      ["Websites", "Marketing sites built in Framer that your team can update without me.", ["Art direction", "Copy support", "Framer build", "SEO basics"], "from $4,000", "1559028012-481c04fa702d"],
+    ];
+    const SHOTS = [
+      ["1618005182384-a83a8bd57fbe", "Gradient study", "Personal · 2026"],
+      ["1586717791821-3f44a563fa4c", "Sketching flows on the go", "Lumen Bank · 2025"],
+      ["1561070791-2526d30994b5", "Colour exploration", "Fieldnote · 2024"],
+      ["1522542550221-31fd19575a2d", "Paper wireframes", "Workshop · 2025"],
+      ["1618005198919-d3d4b5a92ead", "3D orbit mark", "Orbit · 2025"],
+      ["1581291518857-4e27b48ff24e", "Mobile flows, first pass", "Side project · 2026"],
+      ["1572044162444-ad60f128bdea", "Palette for Haven", "Haven Stays · 2024"],
+      ["1531403009284-440f080d1e12", "Journey mapping wall", "Fieldnote · 2024"],
+    ];
+    const QUOTES = [
+      ["Lumen", "Dina didn't just redesign our app, she changed how our whole team thinks about customers. Our reviews went from complaints to love letters.", "Rana Haddad", "Head of Product, Lumen Bank"],
+      ["Orbit", "We walked into investor meetings with a brand that made us look like a Series B company. Dina was the best money we spent all year.", "Marc Feld", "Co-founder, Orbit"],
+      ["Fieldnote", "The system Dina built is still the backbone of everything we ship. Engineers quote her documentation in code reviews.", "Clara Jensen", "Head of Product, Fieldnote"],
+      ["Haven", "Our own website now brings in more bookings than the big platforms. Guests tell us it's the reason they picked us.", "Joe Matar", "Owner, Haven Stays"],
+    ];
+    const CV = [["2022 — Now", "Independent designer", "Dina Khoury Design Studio"], ["2019 — 2022", "Lead product designer", "Lumen Bank, Berlin"], ["2017 — 2019", "Senior designer", "Northwind Agency, Dubai"], ["2015 — 2017", "Designer", "Arcade Studio, Beirut"]];
+    const AWARDS = [["2026", "Site of the Day", "Haven Stays website"], ["2025", "Brand of the Year, shortlist", "Orbit identity"], ["2024", "Featured talk", "Design Systems Week, Berlin"], ["2023", "Behance Featured", "Fieldnote design system"]];
+
+    /* =====================================================
+       Hero board: drag to pan, with inertia and slow drift
+       ===================================================== */
+    (() => {
+      // Phones get a compact board so the first screen is full of work, not empty sky
+      const small = innerWidth < 700, kx = small ? .5 : 1, ky = small ? .72 : 1, kw = small ? .56 : 1;
+      const board = $("board"), inner = $("boardIn"), BW = 2400 * kx, BH = Math.max(1500 * ky, innerHeight + 120);
+      inner.style.width = BW + "px"; inner.style.height = BH + "px";
+      inner.innerHTML = BOARD.map(([c, x, y, w, shape], i) => `<button class="card card--${shape}" style="left:${x * kx}px;top:${y * ky}px;width:${w * kw}px;--r:${(i % 3 - 1) * 1.5}deg" data-case="${c}"><img src="${U(BOARD_IMG[i], 700)}" alt="" draggable="false" /><span><b>${CASES[c].name}</b>${CASES[c].type}</span></button>`).join("")
+        + Array.from({ length: 80 }, () => `<i class="spark" style="left:${Math.random() * BW}px;top:${Math.random() * BH}px;--s:${Math.random() * 2 + 1}px"></i>`).join("");
+      let dirX = -1, dirY = -1, x = 0, y = 0, vx = 0, vy = 0, drag = false, moved = 0, sx, sy, lx, ly, last = performance.now(), idle = 0;
+      const clamp = () => { const W = board.clientWidth, H = board.clientHeight; x = Math.min(0, Math.max(W - BW, x)); y = Math.min(0, Math.max(H - BH, y)); };
+      const center = () => { x = (board.clientWidth - BW) / 2; y = (board.clientHeight - BH) / 2; clamp(); };
+      center(); addEventListener("resize", center);
+      board.addEventListener("pointerdown", (e) => { drag = true; moved = 0; sx = lx = e.clientX; sy = ly = e.clientY; vx = vy = 0; board.classList.add("grab"); });
+      addEventListener("pointermove", (e) => { if (!drag) return; const dx = e.clientX - lx, dy = e.pointerType === "touch" ? 0 : e.clientY - ly; x += dx; y += dy; vx = dx; vy = dy; lx = e.clientX; ly = e.clientY; moved = Math.hypot(e.clientX - sx, e.clientY - sy); idle = performance.now(); clamp(); });
+      addEventListener("pointerup", () => { drag = false; board.classList.remove("grab"); });
+      board.addEventListener("click", (e) => { const c = e.target.closest(".card"); if (c && moved < 6) openCase(+c.dataset.case); }, true);
+      let run = true;
+      new IntersectionObserver(([e]) => { run = e.isIntersecting; if (run) requestAnimationFrame(loop); }).observe(board);
+      function loop(now) {
+        const dt = Math.min(50, now - last); last = now;
+        if (!drag) {
+          x += vx; y += vy; vx *= .92; vy *= .92;
+          if (!reduce && now - idle > 2500 && Math.abs(vx) < .1) {
+            const W = board.clientWidth, H = board.clientHeight;
+            x += dirX * dt * .014; y += dirY * dt * .006;
+            if (x <= W - BW || x >= 0) dirX *= -1;
+            if (y <= H - BH || y >= 0) dirY *= -1;
+          }
+          clamp();
+        }
+        inner.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        if (run) requestAnimationFrame(loop);
+      }
+      requestAnimationFrame(loop);
+    })();
+
+    /* =====================================================
+       Work: stacking cards
+       ===================================================== */
+    $("stack").innerHTML = CASES.map((c, i) => `
+      <article class="scard" style="--i:${i}">
+        <div class="scard__body">
+          <p class="scard__meta"><span>0${i + 1}</span>${c.type} · ${c.year}</p>
+          <h3>${c.name}</h3>
+          <p>${c.line}</p>
+          <div class="scard__result"><b>${c.result[0]}</b><span>${c.result[1]}</span></div>
+          <ul class="tags">${c.tags.map((t) => `<li>${t}</li>`).join("")}</ul>
+          <button class="btn" data-open="${i}">View case study <i class="ri-arrow-right-line"></i></button>
+        </div>
+        <button class="scard__img" data-open="${i}" aria-label="Open ${c.name} case study"><img src="${U(c.img, 1400)}" alt="${c.name}" loading="lazy" /></button>
+      </article>`).join("");
+
+    /* Case modal */
+    let cur = 0;
+    function openCase(i) {
+      cur = (i + CASES.length) % CASES.length; const c = CASES[cur];
+      $("caseBody").innerHTML = `
+        <img class="case__hero" src="${U(c.img, 1800)}" alt="${c.name}" />
+        <div class="case__in">
+          <p class="scard__meta">${c.type} · ${c.year}</p>
+          <h3 id="caseTitle">${c.name}</h3>
+          <p class="case__line">${c.line}</p>
+          <div class="case__facts"><div><b>${c.result[0]}</b><span>${c.result[1]}</span></div><div><small>Scope</small>${c.tags.join(", ")}</div><div><small>Year</small>${c.year}</div></div>
+          <div class="case__sec"><h4>The challenge</h4><p>${c.challenge}</p></div>
+          <div class="case__imgs"><img src="${U(c.extra[0], 900)}" alt="" loading="lazy" /><img src="${U(c.extra[1], 900)}" alt="" loading="lazy" /></div>
+          <div class="case__sec"><h4>The approach</h4><p>${c.approach}</p></div>
+          <div class="case__sec"><h4>The outcome</h4><p>${c.outcome}</p></div>
+        </div>`;
+      $("modal").hidden = false; $("modal").scrollTop = 0; document.querySelector(".case").scrollTop = 0; document.body.style.overflow = "hidden"; $("caseClose").focus();
+    }
+    const closeCase = () => { $("modal").hidden = true; document.body.style.overflow = ""; };
+    document.addEventListener("click", (e) => { const b = e.target.closest("[data-open]"); if (b) openCase(+b.dataset.open); });
+    $("caseClose").addEventListener("click", closeCase);
+    $("casePrev").addEventListener("click", () => openCase(cur - 1));
+    $("caseNext").addEventListener("click", () => openCase(cur + 1));
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeCase(); });
+
+    /* =====================================================
+       Services with cursor-follow preview
+       ===================================================== */
+    $("svc").innerHTML = SERVICES.map(([n, d, list, price, img], i) => `
+      <div class="svc__row reveal" data-img="${img}" style="--d:${i * .05}s">
+        <span class="svc__n">0${i + 1}</span>
+        <div class="svc__main"><h3>${n}</h3><p>${d}</p></div>
+        <ul>${list.map((l) => `<li>${l}</li>`).join("")}</ul>
+        <span class="svc__price">${price}</span>
+      </div>`).join("");
+    (() => {
+      const fl = $("svcFloat"); let tx = 0, ty = 0, fx = 0, fy = 0, on = false;
+      $("svc").addEventListener("pointermove", (e) => { tx = e.clientX; ty = e.clientY; });
+      $("svc").addEventListener("pointerover", (e) => { const r = e.target.closest(".svc__row"); if (!r || matchMedia("(hover: none)").matches) return; fl.src = U(r.dataset.img, 600); fl.classList.add("on"); if (!on) { fx = tx; fy = ty; } on = true; });
+      $("svc").addEventListener("pointerleave", () => { fl.classList.remove("on"); on = false; });
+      const loop = () => { fx += (tx - fx) * .14; fy += (ty - fy) * .14; fl.style.transform = `translate(${fx + 30}px, ${fy - 120}px) rotate(${Math.max(-8, Math.min(8, (tx - fx) * .08))}deg)`; requestAnimationFrame(loop); };
+      loop();
+    })();
+
+    /* =====================================================
+       Playground: drag-to-scroll strip
+       ===================================================== */
+    (() => {
+      const pg = $("pg");
+      pg.innerHTML = SHOTS.map(([id, t, s]) => `<figure class="shot"><img src="${U(id, 800)}" alt="${t}" loading="lazy" draggable="false" /><figcaption><b>${t}</b>${s}</figcaption></figure>`).join("");
+      let down = false, sx, sl;
+      pg.addEventListener("pointerdown", (e) => { if (e.pointerType === "touch") return; down = true; sx = e.clientX; sl = pg.scrollLeft; pg.classList.add("grab"); });
+      addEventListener("pointermove", (e) => { if (down) pg.scrollLeft = sl - (e.clientX - sx); });
+      addEventListener("pointerup", () => { down = false; pg.classList.remove("grab"); });
+      const step = () => pg.querySelector(".shot").offsetWidth + 20;
+      $("pgPrev").addEventListener("click", () => pg.scrollBy({ left: -step(), behavior: "smooth" }));
+      $("pgNext").addEventListener("click", () => pg.scrollBy({ left: step(), behavior: "smooth" }));
+    })();
+
+    /* =====================================================
+       Testimonials by client
+       ===================================================== */
+    $("saidTabs").innerHTML = QUOTES.map(([c], i) => `<button role="tab" class="${i ? "" : "on"}" aria-selected="${!i}">${c}</button>`).join("");
+    $("saidQuotes").innerHTML = QUOTES.map(([, q, n, r], i) => `<figure class="quote ${i ? "" : "on"}"><blockquote>“${q}”</blockquote><figcaption><b>${n}</b> · ${r}</figcaption></figure>`).join("");
+    let qi = 0, qt;
+    const showQ = (i) => {
+      qi = (i + QUOTES.length) % QUOTES.length;
+      [...$("saidTabs").children].forEach((b, k) => { b.classList.toggle("on", k === qi); b.setAttribute("aria-selected", k === qi); });
+      [...$("saidQuotes").children].forEach((f, k) => f.classList.toggle("on", k === qi));
+      clearInterval(qt); if (!reduce) qt = setInterval(() => showQ(qi + 1), 7000);
+    };
+    $("saidTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) showQ([...$("saidTabs").children].indexOf(b)); });
+    showQ(0);
+
+    /* CV */
+    const li = ([a, b, c], i) => `<li class="reveal" style="--d:${i * .05}s"><span>${a}</span><b>${b}</b><em>${c}</em></li>`;
+    $("cvList").innerHTML = CV.map(li).join(""); $("awardList").innerHTML = AWARDS.map(li).join("");
+
+    /* =====================================================
+       Project planner
+       ===================================================== */
+    const sel = (g) => [...document.querySelectorAll(`[data-group="${g}"] .on`)].map((b) => b.textContent);
+    const sum = () => { const s = sel("svc"); $("pSum").innerHTML = `<i class="ri-file-list-3-line"></i> ${s.length ? s.join(" + ") : "Nothing selected yet"} · ${sel("budget")[0]} · ${sel("time")[0]}`; };
+    document.querySelectorAll(".chips").forEach((g) => g.addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (g.classList.contains("chips--multi")) b.classList.toggle("on"); else g.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      sum();
+    }));
+    sum();
+    $("planner").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const n = $("pName").value.trim(), m = $("pEmail").value.trim(), out = $("pMsgOut");
+      if (!sel("svc").length) { out.textContent = "Pick at least one thing you need help with."; out.className = "form-msg err"; return; }
+      if (!n || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = "Please add your name and a valid email."; out.className = "form-msg err"; return; }
+      out.textContent = `Thank you, ${n.split(" ")[0]}! Your brief for ${sel("svc").join(" + ").toLowerCase()} is on its way. I'll reply to ${m} within two working days.`; out.className = "form-msg ok";
+      $("pName").value = $("pEmail").value = $("pMsg").value = "";
+    });
+
+    /* =====================================================
+       Header, clock, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeCase(); closeNav(); }
+      if (!$("modal").hidden && e.key === "ArrowRight") openCase(cur + 1);
+      if (!$("modal").hidden && e.key === "ArrowLeft") openCase(cur - 1);
+    });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 30); $("totop").classList.toggle("show", scrollY > 900);
+      let c = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * .4) c = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === c));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const tick = () => ($("clock").textContent = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Beirut" }));
+    tick(); setInterval(tick, 15000);
+    $("year").textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

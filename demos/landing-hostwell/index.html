@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostwell — Fast, Secure Web Hosting with a Free Domain</title>
+  <meta name="description" content="Hostwell web hosting from $2.49/mo: NVMe storage, LiteSpeed servers, free domain, free SSL, daily backups and 24/7 expert support. 30-day money-back guarantee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="promo"><b>Autumn sale:</b> up to 78% off web hosting + a free domain for 1 year.<a href="#plans">See plans</a></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#top" class="logo"><span><i></i><i></i><i></i></span>hostwell</a>
+      <nav class="nav" id="nav">
+        <a href="#plans">Web hosting</a>
+        <a href="#products">WordPress</a>
+        <a href="#products">VPS</a>
+        <a href="#domains">Domains</a>
+        <a href="#products">Email</a>
+        <a href="#support">Help</a>
+      </nav>
+      <div class="header__right">
+        <a href="#" class="login">Log in</a>
+        <a href="#domains" class="icon" aria-label="Cart"><i class="ri-shopping-cart-2-line"></i><b id="cart" data-n="0">0</b></a>
+      </div>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div>
+        <span class="hero__kicker"><i class="ri-server-line"></i>Web hosting</span>
+        <h1>Fast, secure hosting for every kind of website</h1>
+        <ul class="checks">
+          <li><i class="ri-checkbox-circle-fill"></i>Free domain for the first year</li>
+          <li><i class="ri-checkbox-circle-fill"></i>Free SSL certificates and daily backups</li>
+          <li><i class="ri-checkbox-circle-fill"></i>One-click WordPress, WooCommerce and Laravel</li>
+          <li><i class="ri-checkbox-circle-fill"></i>Real people on support, 24/7</li>
+        </ul>
+        <div class="hero__price"><s>$11.99</s><b>$2.49</b><span>/mo</span><em>+3 months free</em></div>
+        <div class="hero__btns"><a href="#plans" class="btn">Get started</a><a href="#compare" class="btn btn--ghost">Compare plans</a></div>
+        <div class="hero__guarantee"><i class="ri-shield-check-line"></i>30-day money-back guarantee · Cancel anytime</div>
+      </div>
+
+      <!-- Control panel screenshot -->
+      <div class="cp fade">
+        <div class="cp__top"><span class="fav">B</span><div><b>bloombakery.co.uk</b><small>Premium plan · London (UK)</small></div><div class="r"><span>File manager</span><span class="p">WordPress admin</span></div></div>
+        <div class="cp__grid">
+          <div><small>Status</small><b><i class="ri-checkbox-circle-fill ok"></i>Online</b></div>
+          <div><small>SSL certificate</small><b><i class="ri-lock-fill ok"></i>Active</b></div>
+          <div><small>PHP version</small><b>8.3</b></div>
+        </div>
+        <div class="cp__body">
+          <div class="cp__chart"><h6>Visitors <small>Last 14 days · 18,420</small></h6><div class="cols"><i style="height:38%"></i><i style="height:44%"></i><i style="height:40%"></i><i style="height:52%"></i><i style="height:61%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:55%"></i><i style="height:60%"></i><i style="height:58%"></i><i style="height:66%"></i><i style="height:74%"></i><i style="height:81%"></i><i style="height:92%"></i></div><div class="axis"><span>Oct 5</span><span>Oct 18</span></div></div>
+          <div class="cp__res">
+            <div class="res"><small>Disk usage <b>14.2 / 100 GB</b></small><div class="meter"><i style="width:14%"></i></div></div>
+            <div class="res"><small>Bandwidth <b>Unmetered</b></small><div class="meter"><i style="width:6%"></i></div></div>
+            <div class="res"><small>Inodes <b>41,200 / 600,000</b></small><div class="meter"><i style="width:7%"></i></div></div>
+            <div class="res"><small>Email accounts <b>3 / 100</b></small><div class="meter"><i style="width:3%"></i></div></div>
+          </div>
+        </div>
+        <div class="cp__list">
+          <div><i class="ri-history-line"></i><span>Daily backup completed</span><em>Today, 03:12</em></div>
+          <div><i class="ri-shield-check-line"></i><span>Malware scan · no threats found</span><em>Today, 04:00</em></div>
+          <div><i class="ri-wordpress-line"></i><span>WordPress updated to 6.6.2</span><em>Yesterday</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain search -->
+  <section class="domain" id="domains">
+    <div class="container domain__grid">
+      <div><h2>Find your domain name</h2><p>Free for the first year with any annual hosting plan.</p></div>
+      <div>
+        <form class="dsearch" id="dsearch"><input id="dq" placeholder="Type the domain you want, e.g. bloombakery" aria-label="Domain name" autocomplete="off" /><button class="btn" type="submit"><i class="ri-search-line"></i>Search</button></form>
+        <div class="tlds"><span><b>.com</b> $9.99</span><span><b>.co.uk</b> $4.99</span><span><b>.net</b> $11.99</span><span><b>.io</b> $34.99</span><span><b>.store</b> $1.99</span><span><b>.online</b> $0.99</span></div>
+        <div class="results" id="results"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="sh sh--c fade"><span class="label">Web hosting plans</span><h2>Pick a plan that fits your website</h2><p>All plans include free SSL, a free CDN, malware scanning and 24/7 support.</p></div>
+      <div class="plans fade">
+        <div class="plan"><h3>Starter</h3><p>For a personal site or a first project.</p><div class="plan__was"><s>$7.99</s><em>Save 68%</em></div><div class="price"><b>$2.49</b><span>/mo</span></div><span class="plan__free">+3 months free</span><a href="#" class="btn btn--ghost">Choose plan</a><span class="plan__renew">$5.99/mo when you renew</span>
+          <ul><li><i class="ri-check-line"></i>1 website</li><li><i class="ri-check-line"></i>25 GB NVMe storage</li><li><i class="ri-check-line"></i>Unmetered bandwidth</li><li><i class="ri-check-line"></i>Free SSL</li><li><i class="ri-check-line"></i>Weekly backups</li><li class="x"><i class="ri-close-line"></i>Free domain</li><li class="x"><i class="ri-close-line"></i>Email accounts</li></ul></div>
+        <div class="plan plan--pop"><span class="plan__tag">Most popular</span><h3>Premium</h3><p>For small businesses and online shops.</p><div class="plan__was"><s>$11.99</s><em>Save 72%</em></div><div class="price"><b>$3.29</b><span>/mo</span></div><span class="plan__free">+3 months free</span><a href="#" class="btn">Choose plan</a><span class="plan__renew">$8.99/mo when you renew</span>
+          <ul><li><i class="ri-check-line"></i>Up to 100 websites</li><li><i class="ri-check-line"></i>100 GB NVMe storage</li><li><i class="ri-check-line"></i>Free domain (1 year)</li><li><i class="ri-check-line"></i>100 email accounts</li><li><i class="ri-check-line"></i>Daily backups</li><li><i class="ri-check-line"></i>WordPress staging</li><li class="x"><i class="ri-close-line"></i>Priority support</li></ul></div>
+        <div class="plan"><h3>Business</h3><p>For busy sites that need more power.</p><div class="plan__was"><s>$17.99</s><em>Save 67%</em></div><div class="price"><b>$5.99</b><span>/mo</span></div><span class="plan__free">+3 months free</span><a href="#" class="btn btn--ghost">Choose plan</a><span class="plan__renew">$13.99/mo when you renew</span>
+          <ul><li><i class="ri-check-line"></i>Up to 100 websites</li><li><i class="ri-check-line"></i>200 GB NVMe storage</li><li><i class="ri-check-line"></i>Free domain (1 year)</li><li><i class="ri-check-line"></i>Daily &amp; on-demand backups</li><li><i class="ri-check-line"></i>2× CPU &amp; memory</li><li><i class="ri-check-line"></i>Free CDN with 50 PoPs</li><li><i class="ri-check-line"></i>Priority support</li></ul></div>
+        <div class="plan"><h3>Cloud Startup</h3><p>Dedicated resources for high-traffic sites.</p><div class="plan__was"><s>$29.99</s><em>Save 63%</em></div><div class="price"><b>$10.99</b><span>/mo</span></div><span class="plan__free">+3 months free</span><a href="#" class="btn btn--ghost">Choose plan</a><span class="plan__renew">$25.99/mo when you renew</span>
+          <ul><li><i class="ri-check-line"></i>Up to 300 websites</li><li><i class="ri-check-line"></i>200 GB NVMe storage</li><li><i class="ri-check-line"></i>3 GB RAM · 2 CPU cores</li><li><i class="ri-check-line"></i>Dedicated IP address</li><li><i class="ri-check-line"></i>Daily backups</li><li><i class="ri-check-line"></i>99.9% uptime SLA</li><li><i class="ri-check-line"></i>Priority support</li></ul></div>
+      </div>
+      <p class="plans__note">Prices shown are per month for a 48-month term, paid upfront. Monthly, 12-month and 24-month terms are available at checkout. VAT may apply.</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section section--light" id="products">
+    <div class="container">
+      <div class="sh fade"><span class="label">More than shared hosting</span><h2>Everything you need to run a website</h2></div>
+      <div class="products fade">
+        <div class="prod"><div class="prod__h"><i class="ri-wordpress-line"></i><span>from <b>$2.99/mo</b></span></div><h3>Managed WordPress</h3><p>Automatic core and plugin updates, built-in caching and one-click staging.</p><a href="#" class="link">Explore WordPress hosting <i class="ri-arrow-right-line"></i></a></div>
+        <div class="prod"><div class="prod__h"><i class="ri-shopping-bag-3-line"></i><span>from <b>$3.99/mo</b></span></div><h3>WooCommerce hosting</h3><p>Optimised for online stores, with dedicated PHP workers and object caching.</p><a href="#" class="link">Explore WooCommerce <i class="ri-arrow-right-line"></i></a></div>
+        <div class="prod"><div class="prod__h"><i class="ri-cloud-line"></i><span>from <b>$10.99/mo</b></span></div><h3>Cloud hosting</h3><p>Guaranteed CPU and RAM with the simplicity of a managed control panel.</p><a href="#" class="link">Explore cloud hosting <i class="ri-arrow-right-line"></i></a></div>
+        <div class="prod"><div class="prod__h"><i class="ri-terminal-box-line"></i><span>from <b>$5.99/mo</b></span></div><h3>VPS hosting</h3><p>Full root access, KVM virtualisation and your choice of Ubuntu, Debian or AlmaLinux.</p><a href="#" class="link">Explore VPS <i class="ri-arrow-right-line"></i></a></div>
+        <div class="prod"><div class="prod__h"><i class="ri-mail-line"></i><span>from <b>$0.99/mo</b></span></div><h3>Business email</h3><p>Professional email on your own domain, with 10 GB mailboxes and spam filtering.</p><a href="#" class="link">Explore email <i class="ri-arrow-right-line"></i></a></div>
+        <div class="prod"><div class="prod__h"><i class="ri-global-line"></i><span>from <b>$0.99/yr</b></span></div><h3>Domains</h3><p>Over 300 extensions with free WHOIS privacy and simple DNS management.</p><a href="#domains" class="link">Search domains <i class="ri-arrow-right-line"></i></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance -->
+  <section class="section">
+    <div class="container">
+      <div class="perf">
+        <div class="perf__img fade"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1000&q=80" alt="Hostwell engineer in a data centre" loading="lazy" /></div>
+        <div class="fade">
+          <span class="label">Performance</span>
+          <h2 style="font-size:clamp(28px,3.4vw,42px)">Built on hardware that keeps your site fast</h2>
+          <p style="font-size:17px;margin-top:12px">LiteSpeed web servers, NVMe SSD storage and a global CDN come standard — no extra setup needed.</p>
+          <div class="stats"><div><b>99.9%</b><small>Uptime guarantee</small></div><div><b>&lt; 200 ms</b><small>Median server response (TTFB)</small></div><div><b>NVMe</b><small>SSD storage on every plan</small></div><div><b>50+</b><small>CDN locations worldwide</small></div></div>
+        </div>
+      </div>
+      <div class="dc fade">
+        <div class="dc__h"><b>Data centres</b><small>Choose the closest location to your visitors when you set up your site</small></div>
+        <div class="dc__grid">
+          <div><span class="cc">UK</span><span><b>London</b><small>United Kingdom</small></span></div>
+          <div><span class="cc">NL</span><span><b>Amsterdam</b><small>Netherlands</small></span></div>
+          <div><span class="cc">DE</span><span><b>Frankfurt</b><small>Germany</small></span></div>
+          <div><span class="cc">US</span><span><b>Ashburn</b><small>United States (East)</small></span></div>
+          <div><span class="cc">US</span><span><b>Phoenix</b><small>United States (West)</small></span></div>
+          <div><span class="cc">SG</span><span><b>Singapore</b><small>Asia Pacific</small></span></div>
+          <div><span class="cc">IN</span><span><b>Mumbai</b><small>India</small></span></div>
+          <div><span class="cc">BR</span><span><b>São Paulo</b><small>Brazil</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="sh fade"><span class="label">Included with every plan</span><h2>Security and tools, built in</h2></div>
+      <div class="incl">
+      <div class="term fade" aria-label="Example deploy log">
+        <div class="term__bar"><i></i><i></i><i></i><span>bloombakery.co.uk · deploy</span></div>
+        <pre class="term__body" id="termLog"></pre>
+      </div>
+      <div class="feats fade">
+        <div><i class="ri-lock-line"></i><h4>Free SSL</h4><p>Let's Encrypt certificates issued and renewed automatically.</p></div>
+        <div><i class="ri-history-line"></i><h4>Automatic backups</h4><p>Restore files or databases from any day in the last 30.</p></div>
+        <div><i class="ri-shield-keyhole-line"></i><h4>Malware scanner</h4><p>Daily scans with one-click clean-up of infected files.</p></div>
+        <div><i class="ri-fire-line"></i><h4>Web application firewall</h4><p>Blocks brute-force logins and common exploits.</p></div>
+        <div><i class="ri-dashboard-3-line"></i><h4>Easy control panel</h4><p>Manage sites, email, DNS and databases in one place.</p></div>
+        <div><i class="ri-git-branch-line"></i><h4>Git &amp; SSH access</h4><p>Deploy from GitHub, use WP-CLI and Composer.</p></div>
+        <div><i class="ri-database-2-line"></i><h4>MySQL &amp; PHP 8.3</h4><p>Switch PHP versions per site in a couple of clicks.</p></div>
+        <div><i class="ri-earth-line"></i><h4>Free CDN</h4><p>Static files cached close to your visitors.</p></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Migration + support -->
+  <section class="section" id="support">
+    <div class="container duo">
+      <div class="box fade">
+        <span class="label">Free migration</span>
+        <h3>Moving from another host? We'll do it for you</h3>
+        <p>Our team moves your website, files, databases and email at no cost — usually within 24 hours and with no downtime.</p>
+        <ol class="steps"><li><span><b>Request a migration</b>Share your current host's login in the control panel.</span></li><li><span><b>We copy everything</b>Files, databases and email accounts are moved and tested.</span></li><li><span><b>Point your domain</b>We guide you through the DNS change, or do it for you.</span></li></ol>
+        <a href="#" class="btn btn--ghost">Request free migration</a>
+      </div>
+      <div class="box fade">
+        <span class="label">Support</span>
+        <div class="support">
+          <div>
+            <h3>Talk to a real person, any time</h3>
+            <p>Our support team works around the clock from London, Manila and Lisbon. Average live-chat wait time is under 2 minutes.</p>
+            <div class="chan"><div><i class="ri-chat-3-line"></i><span><b>Live chat</b> · 24/7 in the control panel</span></div><div><i class="ri-mail-line"></i><span><b>Email &amp; tickets</b> · reply within 1 hour</span></div><div><i class="ri-book-open-line"></i><span><b>Help centre</b> · 900+ tutorials</span></div></div>
+          </div>
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="Hostwell support specialist" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="rev__head fade"><div><span class="label">Reviews</span><h2 style="font-size:clamp(28px,3.4vw,42px)">What customers say</h2></div><div class="tp"><b>4.7</b><div><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></span><small>Based on 31,400 reviews on Trustpilot</small></div></div></div>
+      <div class="reviews fade">
+        <div class="review"><div class="stars">★★★★★</div><h4>Migration was painless</h4><p>Moved four client sites from my old host. Support did the whole thing overnight and nothing broke. Page load went from 2.8s to 1.1s.</p><small>Tom R. · Web designer · Leeds</small></div>
+        <div class="review"><div class="stars">★★★★★</div><h4>Great value for a small shop</h4><p>Running a WooCommerce store on the Premium plan with about 3,000 visitors a day. Fast, stable, and the daily backups saved me once already.</p><small>Priya S. · Online store owner · Manchester</small></div>
+        <div class="review"><div class="stars">★★★★☆</div><h4>Support actually knows their stuff</h4><p>Had a PHP memory issue at 2am. Chat agent found it in five minutes and raised the limit. Renewal price is higher, but that's clearly stated upfront.</p><small>Daniel K. · Developer · Dublin</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="sh fade"><span class="label">Compare plans</span><h2>Full plan comparison</h2></div>
+      <div class="cmp fade">
+        <table>
+          <thead><tr><th></th><th>Starter</th><th>Premium</th><th>Business</th><th>Cloud Startup</th></tr></thead>
+          <tbody>
+            <tr class="g"><td colspan="5">Resources</td></tr>
+            <tr><td>Websites</td><td>1</td><td>100</td><td>100</td><td>300</td></tr>
+            <tr><td>NVMe storage</td><td>25 GB</td><td>100 GB</td><td>200 GB</td><td>200 GB</td></tr>
+            <tr><td>Bandwidth</td><td>Unmetered</td><td>Unmetered</td><td>Unmetered</td><td>Unmetered</td></tr>
+            <tr><td>CPU / RAM</td><td>1 core / 1 GB</td><td>2 cores / 2 GB</td><td>4 cores / 4 GB</td><td>2 dedicated / 3 GB</td></tr>
+            <tr><td>Inodes</td><td>200,000</td><td>600,000</td><td>800,000</td><td>2,000,000</td></tr>
+            <tr class="g"><td colspan="5">Included</td></tr>
+            <tr><td>Free domain (1 year)</td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td></tr>
+            <tr><td>Email accounts</td><td><i class="ri-subtract-line n"></i></td><td>100</td><td>100</td><td>100</td></tr>
+            <tr><td>Backups</td><td>Weekly</td><td>Daily</td><td>Daily + on-demand</td><td>Daily + on-demand</td></tr>
+            <tr><td>WordPress staging</td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td></tr>
+            <tr><td>Dedicated IP</td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-check-line y"></i></td></tr>
+            <tr class="g"><td colspan="5">Support</td></tr>
+            <tr><td>24/7 live chat</td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td></tr>
+            <tr><td>Priority queue</td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-subtract-line n"></i></td><td><i class="ri-check-line y"></i></td><td><i class="ri-check-line y"></i></td></tr>
+            <tr><td>Price (48-month term)</td><td>$2.49/mo</td><td>$3.29/mo</td><td>$5.99/mo</td><td>$10.99/mo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light">
+    <div class="container faq">
+      <div class="fade"><span class="label">FAQ</span><h2>Hosting questions, answered</h2><p class="faq__help">Can't find an answer? Our team is on <a href="#support" class="link">live chat 24/7</a>.</p></div>
+      <div class="fade">
+        <details open><summary>What is the renewal price?<i class="ri-add-line"></i></summary><p>The discounted price applies to your first term. After that, plans renew at the standard rate shown under each plan — for example, Premium renews at $8.99/mo. We email you 30 days before any renewal.</p></details>
+        <details><summary>How does the 30-day money-back guarantee work?<i class="ri-add-line"></i></summary><p>If you cancel within 30 days, we refund the full hosting fee. Domain registrations are non-refundable, as they're paid to the registry.</p></details>
+        <details><summary>Can I upgrade my plan later?<i class="ri-add-line"></i></summary><p>Yes, you can upgrade at any time from the control panel. You only pay the difference for the rest of your term, and there's no downtime.</p></details>
+        <details><summary>Which payment methods do you accept?<i class="ri-add-line"></i></summary><p>Visa, Mastercard, American Express, PayPal, Google Pay and Apple Pay. Annual plans can also be paid by bank transfer.</p></details>
+        <details><summary>Do you offer Windows hosting?<i class="ri-add-line"></i></summary><p>Our shared and cloud plans run on Linux. If you need Windows or .NET, choose a VPS plan with a Windows Server licence.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><h5>Hosting</h5><ul><li><a href="#plans">Web hosting</a></li><li><a href="#products">WordPress hosting</a></li><li><a href="#products">WooCommerce hosting</a></li><li><a href="#products">Cloud hosting</a></li><li><a href="#products">VPS hosting</a></li></ul></div>
+        <div><h5>Domains</h5><ul><li><a href="#domains">Domain search</a></li><li><a href="#">Domain transfer</a></li><li><a href="#">WHOIS lookup</a></li><li><a href="#">Domain prices</a></li></ul></div>
+        <div><h5>Email &amp; tools</h5><ul><li><a href="#products">Business email</a></li><li><a href="#">Website builder</a></li><li><a href="#">SSL certificates</a></li><li><a href="#">CDN</a></li></ul></div>
+        <div><h5>Support</h5><ul><li><a href="#support">Contact us</a></li><li><a href="#">Help centre</a></li><li><a href="#">System status</a></li><li><a href="#support">Free migration</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="#">About Hostwell</a></li><li><a href="#">Careers</a></li><li><a href="#">Affiliate programme</a></li><li><a href="#">Legal &amp; privacy</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><a href="#top" class="logo"><span><i></i><i></i><i></i></span>hostwell</a><span>© 2026 Hostwell Ltd. Prices in USD, excluding VAT.</span><span class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i><i class="ri-google-line"></i></span></div>
+    </div>
+  </footer>
+
+  <script>
+    /* Domain search */
+    const TLDS = [[".com", 9.99, 15.99], [".co.uk", 4.99, 9.99], [".net", 11.99, 16.99], [".org", 8.99, 14.99], [".io", 34.99, 49.99], [".store", 1.99, 49.99], [".online", 0.99, 34.99]];
+    const cart = new Set();
+    const hash = (s) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+    function search(raw) {
+      let q = raw.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "");
+      const tldHit = TLDS.find(([t]) => q.endsWith(t));
+      let name = (tldHit ? q.slice(0, -tldHit[0].length) : q.split(".")[0]).replace(/[^a-z0-9-]/g, "");
+      const box = document.getElementById("results");
+      if (!name) { box.classList.add("show"); box.innerHTML = '<div class="dres"><span>Please enter a domain name using letters, numbers or hyphens.</span></div>'; return; }
+      const order = tldHit ? [tldHit, ...TLDS.filter((t) => t !== tldHit)] : TLDS;
+      box.innerHTML = order.map(([t, p, r], i) => {
+        const d = name + t, taken = name.length < 5 ? t === ".com" || t === ".net" || t === ".io" : hash(d) % 5 === 0;
+        return `<div class="dres ${i === 0 && !taken ? "dres--top" : ""}"><span><b>${d}</b><br /><span class="st ${taken ? "" : "av"}">${taken ? "Already registered" : i === 0 ? "Available · exact match" : "Available"}</span></span>
+          <span class="pr">${taken ? "" : `<b>$${p.toFixed(2)}/yr</b><s>Renews at $${r.toFixed(2)}/yr</s>`}</span>
+          <button type="button" data-d="${d}" ${taken ? "disabled" : ""} class="${cart.has(d) ? "in" : ""}">${taken ? "Taken" : cart.has(d) ? "In cart" : "Add to cart"}</button></div>`;
+      }).join("");
+      box.classList.add("show");
+    }
+    document.getElementById("dsearch").addEventListener("submit", (e) => { e.preventDefault(); search(document.getElementById("dq").value); });
+    document.getElementById("results").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-d]"); if (!b || b.disabled) return;
+      const d = b.dataset.d; cart.has(d) ? cart.delete(d) : cart.add(d);
+      b.classList.toggle("in", cart.has(d)); b.textContent = cart.has(d) ? "In cart" : "Add to cart";
+      const c = document.getElementById("cart"); c.textContent = cart.size; c.dataset.n = cart.size;
+    });
+
+    document.getElementById("burger").onclick = () => document.getElementById("nav").classList.toggle("open");
+    document.querySelectorAll("#nav a").forEach((a) => a.addEventListener("click", () => document.getElementById("nav").classList.remove("open")));
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.1 });
+    document.querySelectorAll(".fade").forEach((el) => io.observe(el));
+
+    /* Deploy log types itself out when it scrolls into view */
+    (() => {
+      const el = document.getElementById("termLog"); if (!el) return;
+      const L = [
+        ['<span class="dim">$</span> git push hostwell main', 0],
+        ['<span class="dim">→</span> Building bloombakery.co.uk (PHP 8.3)', 500],
+        ['<span class="ok">✓</span> Dependencies installed <span class="dim">(composer, 4.1s)</span>', 900],
+        ['<span class="ok">✓</span> Database backup taken <span class="dim">· kept 30 days</span>', 700],
+        ['<span class="ok">✓</span> Malware scan clean <span class="dim">· 1,284 files</span>', 700],
+        ['<span class="ok">✓</span> SSL certificate valid <span class="dim">· renews 12 Feb</span>', 600],
+        ['<span class="ok">✓</span> Cache purged on 52 CDN edges', 600],
+        ['<span class="hl">●</span> Live in <b>38s</b> · zero downtime', 700],
+      ];
+      let started = false;
+      const run = async () => {
+        if (started) return; started = true;
+        const fast = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let html = "";
+        for (const [line, wait] of L) { if (!fast) await new Promise((r) => setTimeout(r, wait)); html += line + "<br>"; el.innerHTML = html + '<span class="cur"></span>'; }
+      };
+      new IntersectionObserver(([e], o) => { if (e.isIntersecting) { o.disconnect(); run(); } }, { threshold: 0.3 }).observe(el);
+    })();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

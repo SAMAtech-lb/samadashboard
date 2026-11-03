@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lukas Meyer — Full-Stack Developer for Online Shops</title>
+  <meta name="description" content="Lukas Meyer is a Berlin full-stack developer who builds fast online shops, booking systems and dashboards for growing brands. Selected work, services and availability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo"><span class="logo__mark">LM</span>Lukas Meyer</a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="avail"><i></i> 1 slot open · Feb 2027</span>
+      <a href="#contact" class="btn btn--sm" data-magnet>Start a project</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__in">
+        <div class="hero__copy">
+          <p class="mono reveal" style="--d:.05s">Full-stack developer · Berlin · since 2014</p>
+          <h1 class="hero__title">
+            <span class="line"><span>I build online</span></span>
+            <span class="line"><span>shops that</span></span>
+            <span class="line"><span class="grad" id="rot">sell.</span></span>
+          </h1>
+          <p class="hero__lead reveal" style="--d:.55s">Headless Shopify, booking systems and admin dashboards for brands doing €1M–€50M a year. Fast on day one, still fast in year three.</p>
+          <div class="hero__cta reveal" style="--d:.7s">
+            <a href="#work" class="btn" data-magnet>See the work <i class="ri-arrow-right-line"></i></a>
+            <a href="#contact" class="btn btn--ghost">Book a 30-min call</a>
+          </div>
+        </div>
+
+        <!-- Live build browser -->
+        <div class="build reveal" style="--d:.35s" id="build">
+          <div class="build__frame" id="frame">
+            <div class="build__bar">
+              <span class="build__dots"><i></i><i></i><i></i></span>
+              <span class="build__url"><i class="ri-lock-line"></i> <b id="url"></b><i class="caret"></i></span>
+            </div>
+            <div class="build__view">
+              <div class="wire" id="wire">
+                <i class="w1"></i><i class="w2"></i><i class="w3"></i><i class="w4"></i><i class="w5"></i><i class="w6"></i><i class="w7"></i>
+              </div>
+              <img id="shot" alt="" />
+            </div>
+          </div>
+          <div class="build__log">
+            <span class="mono" id="logStep">$ npm run build</span>
+            <div class="build__scores">
+              <div><b id="sPerf">0</b><span>Performance</span></div>
+              <div><b id="sLcp">0.0s</b><span>LCP</span></div>
+              <div><b id="sCvr">0.0%</b><span>Conversion</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients" aria-label="Clients">
+      <div class="clients__track" id="clients"></div>
+    </section>
+
+    <!-- Work: sticky showcase -->
+    <section class="work" id="work">
+      <div class="work__in">
+        <aside class="work__info">
+          <p class="mono">Selected work · 2024 – 2026</p>
+          <div class="work__panel" id="workPanel"></div>
+          <div class="work__prog" id="workProg"></div>
+        </aside>
+        <div class="work__shots" id="workShots"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="head">
+          <p class="mono reveal">Services</p>
+          <h2 class="reveal">What I <span class="grad">build</span></h2>
+        </div>
+        <div class="srv" id="srv"></div>
+      </div>
+      <div class="srv__float" id="srvFloat" aria-hidden="true"><img id="srvImg" alt="" /></div>
+    </section>
+
+    <!-- Approach: pinned statement -->
+    <section class="approach" id="approach">
+      <div class="approach__pin">
+        <p class="mono">How I work</p>
+        <p class="approach__text" id="approachText">I scope for two paid days, quote a fixed price, ship something real every Friday and hand over code your next developer will thank you for.</p>
+        <div class="nums">
+          <div><strong data-count="31">0</strong><span>projects shipped</span></div>
+          <div><strong data-count="97">0</strong><span>avg. Lighthouse score</span></div>
+          <div><strong data-count="12">0</strong><span>years writing software</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section words">
+      <div class="container">
+        <div class="head head--row">
+          <h2 class="reveal">Kind <span class="grad">words</span></h2>
+          <p class="mono reveal">Drag →</p>
+        </div>
+      </div>
+      <div class="deck" id="deck"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact__in">
+        <div>
+          <p class="mono reveal">Contact</p>
+          <h2 class="contact__title reveal">Let's build the <span class="grad">next one.</span></h2>
+          <a class="contact__mail reveal" href="mailto:hi@lukasmeyer.dev" data-magnet>hi@lukasmeyer.dev <i class="ri-arrow-right-up-line"></i></a>
+          <ul class="contact__links reveal"><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Read.cv</a></li></ul>
+        </div>
+        <form class="form reveal" id="form">
+          <label>Your name<input required /></label>
+          <label>Email<input type="email" required /></label>
+          <div class="form__chips" id="chips"><span>I need</span><button type="button" class="on">Online shop</button><button type="button">Booking system</button><button type="button">Dashboard</button><button type="button">Something else</button></div>
+          <label>Tell me about it<textarea rows="4" required></textarea></label>
+          <button class="btn" type="submit" data-magnet>Send it <i class="ri-send-plane-line"></i></button>
+          <p class="form__ok" id="ok" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__in">
+      <span>© 2026 Lukas Meyer · Softwareentwicklung · Berlin</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+      <a href="#top">Back to top <i class="ri-arrow-up-line"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+    /* ---------- Data ---------- */
+    const WORK = [
+      { img: "shop-kickvault", url: "kickvault.com", client: "Kickvault", year: "2026", title: "A sneaker shop that survives release day", text: "Headless Shopify storefront with a raffle queue in front of checkout and UK / EU / US sizing.", stack: ["Hydrogen", "Next.js", "Redis"], perf: 98, lcp: 0.9, cvr: 3.8, result: "38k visitors in 10 minutes, zero downtime" },
+      { img: "clinic-stride", url: "stridephysio.co.uk", client: "Stride Physio", year: "2025", title: "Online booking for a London clinic", text: "Treatment, physio and time in four steps, deposits by card and SMS reminders.", stack: ["Next.js", "Postgres", "Twilio"], perf: 99, lcp: 0.8, cvr: 6.2, result: "62% of appointments now booked online" },
+      { img: "dashboard-kora", url: "app.korastore.co", client: "Kora", year: "2025", title: "The dashboard that killed four spreadsheets", text: "Orders, stock and customers in one place, connected to Shopify and the warehouse.", stack: ["React", "Node", "Chart.js"], perf: 96, lcp: 1.1, cvr: 0, result: "40 minutes of daily reporting → 0" },
+      { img: "shop-brightbyte", url: "brightbyte.store", client: "Brightbyte", year: "2024", title: "An electronics store with a real compare tool", text: "4,000 products, live search, side-by-side compare and trade-in credit at checkout.", stack: ["Shopify", "Algolia", "Klaviyo"], perf: 95, lcp: 1.2, cvr: 2.9, result: "+41% revenue per visitor" },
+      { img: "shop-velora", url: "velora-parfums.com", client: "Velora", year: "2024", title: "Perfume shop with a scent quiz that sells", text: "Five questions recommend three fragrances from 120, then sell the sample box.", stack: ["Shopify", "Liquid", "Klaviyo"], perf: 97, lcp: 1.0, cvr: 4.4, result: "Quiz takers convert at 3.1×" },
+    ];
+    const SERVICES = [
+      ["Online shops", "Headless or theme-based Shopify that loads in under a second and survives peak traffic.", "shop-kickvault", "from €18k"],
+      ["Booking systems", "Availability, deposits, reminders and a staff calendar people actually use.", "clinic-stride", "from €14k"],
+      ["Dashboards & tools", "Admin panels and reports that replace spreadsheets, wired into your stack.", "dashboard-kora", "from €12k"],
+      ["Speed rescues", "Two-week sprints that take a slow shop to green Core Web Vitals.", "shop-brightbyte", "€7,500 fixed"],
+    ];
+    const QUOTES = [
+      ["Lukas rebuilt our booking in seven weeks. Front-desk calls halved in the first month.", "Dr. Hannah Roy", "Clinical Director, Stride Physio", "1580489944761-15a19d654956"],
+      ["Release day used to be panic. Now we watch the dashboard and eat pizza.", "Jordan Pike", "Founder, Kickvault", "1500648767791-00dcc994a43e"],
+      ["Clear estimates, Friday demos and code our new team picked up without a single handover call.", "Martin Kessler", "Owner, Kessler Motors", "1560250097-0b93528c311a"],
+      ["Our Lighthouse score went from 41 to 97. Conversion followed within a month.", "Ines Duarte", "Head of E-commerce, Velora", "1544005313-94ddf0286df2"],
+      ["The only developer we've worked with who says no to things that won't make us money.", "Owen Pritchard", "Founder, Brightbyte", "1519085360753-af0119f7cbe7"],
+    ];
+
+    /* ---------- Hero title: line reveal + rotating last word ---------- */
+    const WORDS = ["sell.", "book.", "scale.", "load fast."];
+    let wi = 0;
+    setInterval(() => { const r = $("rot"); r.classList.add("out"); setTimeout(() => { wi = (wi + 1) % WORDS.length; r.textContent = WORDS[wi]; r.classList.remove("out"); }, 420); }, 2600);
+
+    /* ---------- Live build browser ---------- */
+    let bi = 0;
+    function countTo(el, end, dec, suffix, ms = 900) { const t0 = performance.now(); (function k(n) { const p = clamp((n - t0) / ms, 0, 1), v = end * (1 - Math.pow(1 - p, 3)); el.textContent = v.toFixed(dec) + suffix; if (p < 1) requestAnimationFrame(k); })(t0); }
+    async function buildLoop() {
+      while (true) {
+        const w = WORK[bi % WORK.length];
+        const frame = $("frame"), url = $("url"), shot = $("shot");
+        frame.classList.remove("done"); frame.classList.add("wiring");
+        $("sPerf").textContent = "0"; $("sLcp").textContent = "0.0s"; $("sCvr").textContent = "0.0%";
+        url.textContent = "";
+        $("logStep").textContent = "$ npm run build";
+        for (const ch of w.url) { url.textContent += ch; await sleep(reduced ? 0 : 55); }
+        await sleep(500);
+        $("logStep").textContent = "✓ compiled · deploying to edge…";
+        shot.src = `img/${w.img}.jpg`; shot.alt = `${w.client} website`;
+        await new Promise((r) => (shot.complete ? r() : (shot.onload = r)));
+        await sleep(700);
+        frame.classList.remove("wiring"); frame.classList.add("done");
+        $("logStep").textContent = `✓ live · ${w.url}`;
+        countTo($("sPerf"), w.perf, 0, ""); countTo($("sLcp"), w.lcp, 1, "s"); if (w.cvr) countTo($("sCvr"), w.cvr, 1, "%"); else $("sCvr").textContent = "n/a";
+        await sleep(3600);
+        bi++;
+      }
+    }
+    buildLoop();
+    // 3D tilt
+    const build = $("build");
+    if (!reduced && matchMedia("(pointer:fine)").matches) {
+      build.addEventListener("pointermove", (e) => { const r = build.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; $("frame").style.transform = `rotateY(${x * 14 - 8}deg) rotateX(${-y * 10 + 4}deg)`; });
+      build.addEventListener("pointerleave", () => ($("frame").style.transform = ""));
+    }
+
+    /* ---------- Clients marquee ---------- */
+    const CL = ["Kickvault", "Stride Physio", "Kora", "Brightbyte", "Velora", "Kessler Motors", "Wok Street", "Havenly"];
+    const cl = CL.map((c) => `<span>${c}</span><i class="ri-asterisk"></i>`).join("");
+    $("clients").innerHTML = cl + cl;
+
+    /* ---------- Work: sticky showcase ---------- */
+    $("workShots").innerHTML = WORK.map((w, i) => `<figure class="shot" data-i="${i}"><div class="shot__in"><img src="img/${w.img}.jpg" alt="${w.client} website" loading="lazy" /></div></figure>`).join("");
+    $("workProg").innerHTML = WORK.map((_, i) => `<i data-i="${i}"></i>`).join("");
+    let curW = -1;
+    function setWork(i) {
+      if (i === curW) return; curW = i;
+      const w = WORK[i];
+      $("workPanel").innerHTML = `
+        <div class="wp">
+          <span class="wp__no">0${i + 1}</span>
+          <p class="mono">${w.client} · ${w.year}</p>
+          <h3>${w.title}</h3>
+          <p>${w.text}</p>
+          <ul>${w.stack.map((s) => `<li>${s}</li>`).join("")}</ul>
+          <p class="wp__res"><i class="ri-arrow-right-up-line"></i> ${w.result}</p>
+        </div>`;
+      document.querySelectorAll("#workProg i").forEach((d, k) => d.classList.toggle("on", k <= i));
+    }
+    setWork(0);
+
+    /* ---------- Services: hover image follows cursor ---------- */
+    $("srv").innerHTML = SERVICES.map(([t, d, img, p], i) => `
+      <div class="srv__row reveal" style="--d:${i * .08}s" data-img="${img}">
+        <span class="srv__no mono">0${i + 1}</span><h3>${t}</h3><p>${d}</p><span class="srv__price mono">${p}</span><i class="ri-arrow-right-up-line"></i>
+      </div>`).join("");
+    const fl = $("srvFloat");
+    let fx = 0, fy = 0, tx = 0, ty = 0;
+    document.querySelectorAll(".srv__row").forEach((r) => {
+      r.addEventListener("mouseenter", () => { $("srvImg").src = `img/${r.dataset.img}.jpg`; fl.classList.add("on"); });
+      r.addEventListener("mouseleave", () => fl.classList.remove("on"));
+    });
+    $("srv").addEventListener("pointermove", (e) => { tx = e.clientX; ty = e.clientY; });
+    (function follow() { fx += (tx - fx) * .14; fy += (ty - fy) * .14; fl.style.transform = `translate(${fx}px, ${fy}px) translate(-50%, -50%) rotate(${(tx - fx) * .04}deg)`; requestAnimationFrame(follow); })();
+
+    /* ---------- Approach words ---------- */
+    const at = $("approachText");
+    at.innerHTML = at.textContent.split(" ").map((w) => `<span class="w">${w}</span>`).join(" ");
+    const aw = [...at.querySelectorAll(".w")];
+
+    /* ---------- Testimonials: draggable deck ---------- */
+    $("deck").innerHTML = `<div class="deck__track" id="deckTrack">${QUOTES.map(([q, n, r, img]) => `<figure class="card"><i class="ri-double-quotes-l"></i><blockquote>${q}</blockquote><figcaption><img src="${U(img, 120)}" alt="${n}" loading="lazy" /><span><b>${n}</b>${r}</span></figcaption></figure>`).join("")}</div>`;
+    const dt = $("deckTrack");
+    let dragging = false, sx = 0, base = 0, pos = 0, vel = 0, lastX = 0;
+    const maxPos = () => -(dt.scrollWidth - innerWidth + 48);
+    $("deck").addEventListener("pointerdown", (e) => { dragging = true; sx = lastX = e.clientX; base = pos; $("deck").setPointerCapture(e.pointerId); $("deck").classList.add("grab"); });
+    $("deck").addEventListener("pointermove", (e) => { if (!dragging) return; vel = e.clientX - lastX; lastX = e.clientX; pos = clamp(base + e.clientX - sx, maxPos(), 0); dt.style.transform = `translateX(${pos}px)`; });
+    const end = () => { if (!dragging) return; dragging = false; $("deck").classList.remove("grab"); pos = clamp(pos + vel * 8, maxPos(), 0); dt.style.transition = "transform .7s cubic-bezier(.2,.8,.2,1)"; dt.style.transform = `translateX(${pos}px)`; setTimeout(() => (dt.style.transition = ""), 700); };
+    $("deck").addEventListener("pointerup", end); $("deck").addEventListener("pointercancel", end);
+
+    /* ---------- Scroll ---------- */
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      // work showcase: active shot is the one crossing the viewport middle
+      document.querySelectorAll(".shot").forEach((s) => {
+        const r = s.getBoundingClientRect(), mid = r.top + r.height / 2;
+        const k = clamp(1 - Math.abs(mid - vh / 2) / vh, 0, 1);
+        s.style.setProperty("--k", k.toFixed(3));
+        if (r.top < vh * .55 && r.bottom > vh * .45) setWork(+s.dataset.i);
+      });
+      // approach words
+      const ap = $("approach").getBoundingClientRect();
+      const p = clamp(-ap.top / Math.max(1, $("approach").offsetHeight - vh) * 1.25, 0, 1);
+      const lit = reduced ? aw.length : Math.floor(p * aw.length);
+      aw.forEach((w, i) => w.classList.toggle("lit", i < lit));
+      if (p > .85) $("approach").classList.add("done");
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * .4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll); onScroll();
+
+    /* ---------- Reveal + counters ---------- */
+    function countUp(el) { const end = +el.dataset.count, t0 = performance.now(); (function k(n) { const p = clamp((n - t0) / 1600, 0, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(e.target); }), { threshold: .2 });
+    document.querySelectorAll(".reveal, .nums").forEach((el) => io.observe(el));
+
+    /* ---------- Contact ---------- */
+    $("chips").addEventListener("click", (e) => { if (e.target.tagName !== "BUTTON") return; e.target.classList.toggle("on"); });
+    $("form").addEventListener("submit", (e) => { e.preventDefault(); $("ok").textContent = "Got it — I'll reply within one working day with a few questions and a call slot."; e.target.querySelector(".btn").disabled = true; });
+
+    /* ---------- Magnet + nav ---------- */
+    if (!reduced && matchMedia("(pointer:fine)").matches) document.querySelectorAll("[data-magnet]").forEach((b) => {
+      b.addEventListener("pointermove", (e) => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      b.addEventListener("pointerleave", () => (b.style.transform = ""));
+    });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("nav-open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") document.body.classList.remove("nav-open"); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

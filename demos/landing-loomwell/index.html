@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loomwell — Everyday Essentials, Made to Last</title>
+  <meta name="description" content="Loomwell makes organic cotton tees, knitwear, denim and outerwear designed to be worn for years. Shop the Autumn Essentials collection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce"><div class="container announce__in"><span>Free shipping on orders over $100</span><span>Free returns within 30 days</span><span>10% off your first order — <a href="#join">join the list</a></span></div></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      <nav class="nav" id="nav">
+        <a href="#shop">Women</a>
+        <a href="#shop">Men</a>
+        <a href="#new">New in</a>
+        <a href="#fabric">Our fabrics</a>
+        <a href="#cost">Open pricing</a>
+      </nav>
+      <a href="#home" class="logo">LOOMWELL</a>
+      <div class="header__icons">
+        <button aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="#" aria-label="Account"><i class="ri-user-3-line"></i></a>
+        <button aria-label="Open bag" id="bagBtn" class="bag-btn"><i class="ri-shopping-bag-line"></i><span id="bagCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="eyebrow-tag hero__fade">Autumn Essentials 2026</span>
+        <h1 class="hero__title"><span class="hl"><span>Clothes you'll</span></span><span class="hl"><span>wear for years,</span></span><span class="hl"><span><em>not weeks.</em></span></span></h1>
+        <p class="hero__fade">Heavyweight organic cotton tees, merino knits and selvedge denim — designed in Copenhagen, made in Portugal, priced fairly.</p>
+        <div class="hero__btns hero__fade"><a href="#new" class="btn">Shop the collection</a><a href="#shop" class="btn btn--outline">Shop men</a></div>
+        <ul class="hero__usp hero__fade">
+          <li><i class="ri-leaf-line"></i> 100% organic cotton</li>
+          <li><i class="ri-recycle-line"></i> Free repairs for life</li>
+          <li><i class="ri-truck-line"></i> 2-day delivery</li>
+        </ul>
+      </div>
+      <div class="hero__imgs">
+        <img class="hero__a" data-par="-0.06" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80" alt="Woman wearing a denim jacket" />
+        <img class="hero__b" data-par="0.08" src="https://images.unsplash.com/photo-1564859228273-274232fdb516?auto=format&fit=crop&w=700&q=80" alt="Man wearing a white tee" />
+        <div class="hero__tag"><span>Belted Wool Coat</span><strong>$240</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values marquee -->
+  <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Organic cotton <i>✺</i> Made in Porto <i>✺</i> Free repairs for life <i>✺</i> Tested for 50 washes <i>✺</i> Fair, open pricing <i>✺</i> Carbon-neutral delivery <i>✺</i></span><span>Organic cotton <i>✺</i> Made in Porto <i>✺</i> Free repairs for life <i>✺</i> Tested for 50 washes <i>✺</i> Fair, open pricing <i>✺</i> Carbon-neutral delivery <i>✺</i></span></div></div>
+
+  <!-- Categories -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="head"><h2>Shop by category</h2><a href="#new" class="link">View all <i class="ri-arrow-right-line"></i></a></div>
+      <div class="cats">
+        <a href="#new" class="cat cat--big"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Women's collection" loading="lazy" /><div><span>Women</span><small>146 styles</small></div></a>
+        <a href="#new" class="cat"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=700&q=80" alt="Men's collection" loading="lazy" /><div><span>Men</span><small>118 styles</small></div></a>
+        <a href="#new" class="cat"><img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=80" alt="Folded t-shirts" loading="lazy" /><div><span>Tees &amp; tops</span><small>52 styles</small></div></a>
+        <a href="#new" class="cat"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="Bomber jacket" loading="lazy" /><div><span>Outerwear</span><small>31 styles</small></div></a>
+        <a href="#new" class="cat"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=80" alt="Leather bag" loading="lazy" /><div><span>Bags &amp; accessories</span><small>40 styles</small></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- New in -->
+  <section class="section section--soft" id="new">
+    <div class="container">
+      <div class="head">
+        <div><h2>New this week</h2><p>Fresh arrivals from the Autumn Essentials drop.</p></div>
+        <div class="seg" id="seg"><button class="on" data-g="all">All</button><button data-g="w">Women</button><button data-g="m">Men</button></div>
+      </div>
+      <div class="products" id="products"></div>
+      <p class="sizes-note"><button class="link" id="sizeGuideBtn"><i class="ri-ruler-line"></i> Not sure about your size? See the size guide</button></p>
+    </div>
+  </section>
+
+  <!-- Fabric -->
+  <section class="section" id="fabric">
+    <div class="container fabric">
+      <div class="fabric__img">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80" alt="Green tees on hangers" loading="lazy" />
+      </div>
+      <div class="fabric__text">
+        <span class="eyebrow-tag">Why Loomwell</span>
+        <h2>Better fabric. Fewer, better clothes.</h2>
+        <p>We work with two family-run factories in Porto and use only certified organic cotton, merino wool and recycled nylon. Every piece is tested for 50 washes before it goes on sale.</p>
+        <div class="specs">
+          <div><strong>240 gsm</strong><span>Heavyweight cotton that keeps its shape</span></div>
+          <div><strong>GOTS</strong><span>Certified organic cotton, traceable to farm</span></div>
+          <div><strong>50 washes</strong><span>Tested for shrinkage, pilling and colour</span></div>
+          <div><strong>Lifetime</strong><span>Free repairs on every piece we sell</span></div>
+        </div>
+        <a href="#" class="link">Read about our factories <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- True cost -->
+  <section class="section section--soft cost" id="cost">
+    <div class="container cost__in">
+      <div class="cost__text">
+        <span class="eyebrow-tag">Open pricing</span>
+        <h2>What you're really paying for.</h2>
+        <p>We show the real cost of making every piece, and what a traditional brand would charge for the same thing. No seasonal sales, no inflated "was" prices.</p>
+        <div class="seg" id="costSeg"></div>
+      </div>
+      <div class="cost__card">
+        <div class="cost__img"><img id="costImg" src="" alt="" /></div>
+        <div class="cost__bars" id="costBars"></div>
+        <div class="cost__total"><div><small>Our price</small><b id="costOurs">$0</b></div><div><small>Traditional retail</small><s id="costTrad">$0</s></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook -->
+  <section class="look">
+    <div class="look__grid">
+      <figure><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80" alt="Floral wrap dress" loading="lazy" /><figcaption>The Wrap Dress · $118</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=700&q=80" alt="Pink wool coat" loading="lazy" /><figcaption>Wool Car Coat · $260</figcaption></figure>
+      <div class="look__text">
+        <span class="eyebrow-tag eyebrow-tag--light">Lookbook</span>
+        <h2>Autumn, layered.</h2>
+        <p>Twelve looks built from twenty pieces. Mix them all season long.</p>
+        <a href="#new" class="btn btn--white">Shop the looks</a>
+      </div>
+      <figure><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=700&q=80" alt="Man in a navy suit" loading="lazy" /><figcaption>Travel Suit · $340</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Yellow tracksuit" loading="lazy" /><figcaption>Fleece Set · $148</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Made in Porto -->
+  <section class="section porto" id="porto">
+    <div class="container">
+      <div class="head"><div><span class="eyebrow-tag">Made in Porto</span><h2>Two factories. Three generations. One tee.</h2></div><p class="head__p">We visit every month and pay 30% above the regional wage. Follow a Heavy Tee from yarn to your door.</p></div>
+      <ol class="journey" id="journey">
+        <li><span class="journey__img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Knitted cotton rolls in the factory" loading="lazy" /></span><b>Day 1</b><h3>Knitted in Barcelos</h3><p>Organic yarn from a GOTS farm in Turkey is knitted into 240 gsm jersey at the Ferreira family mill.</p></li>
+        <li><span class="journey__img"><img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=800&q=80" alt="Finished tees on a rail" loading="lazy" /></span><b>Day 4</b><h3>Cut and sewn in Porto</h3><p>Fourteen people at Costura Lima cut, sew and double-stitch every seam. Each one signs the tag.</p></li>
+        <li><span class="journey__img"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80" alt="Tees hung after washing tests" loading="lazy" /></span><b>Day 6</b><h3>Washed 50 times</h3><p>A sample from every batch goes through 50 washes. If it shrinks more than 3%, the batch is rejected.</p></li>
+        <li><span class="journey__img"><img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&w=800&q=80" alt="Clothes ready to ship" loading="lazy" /></span><b>Day 9</b><h3>At your door</h3><p>Packed in recycled paper and delivered carbon-neutral in two days across the EU, UK and US.</p></li>
+      </ol>
+      <div class="journey__line"><i id="journeyLine"></i></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="head head--center">
+        <h2>Rated 4.8 out of 5</h2>
+        <p><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></span> Based on 14,200 verified reviews</p>
+      </div>
+      <div class="reviews">
+        <figure class="review"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><h3>Best tee I own</h3><blockquote>Thick, soft and it hasn't shrunk after a year of washing. I bought three more colours.</blockquote><figcaption><strong>Anna K.</strong><span><i class="ri-checkbox-circle-fill"></i> Verified buyer · The Heavy Tee, size S</span></figcaption></figure>
+        <figure class="review"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><h3>Fits like it was tailored</h3><blockquote>The straight jeans are the first pair that fit my waist and length without alterations.</blockquote><figcaption><strong>Marco D.</strong><span><i class="ri-checkbox-circle-fill"></i> Verified buyer · Straight Selvedge Jean, 32/32</span></figcaption></figure>
+        <figure class="review"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span><h3>Warm and light</h3><blockquote>Lovely merino jumper, not itchy at all. Runs slightly big, so I'd size down.</blockquote><figcaption><strong>Sophie L.</strong><span><i class="ri-checkbox-circle-fill"></i> Verified buyer · Merino Crew, size M</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section section--soft" id="community">
+    <div class="container">
+      <div class="head"><div><span class="eyebrow-tag">#wornbyloomwell</span><h2>Worn for years, by you.</h2></div><a href="#" class="link">Follow on Instagram <i class="ri-arrow-right-line"></i></a></div>
+      <div class="ugc" id="ugc"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div><span class="eyebrow-tag">Help</span><h2>Good to know.</h2><p>Still stuck? Our team in Copenhagen replies within 4 hours, Monday to Saturday.</p><a href="mailto:hello@loomwell.com" class="btn btn--outline">Email us</a></div>
+      <div class="acc" id="acc"></div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section class="join" id="join">
+    <div class="container join__in">
+      <div><h2>Get 10% off your first order</h2><p>Plus early access to new drops and restocks. No spam, unsubscribe any time.</p></div>
+      <form class="join__form" id="joinForm"><input type="email" placeholder="Email address" aria-label="Email address" required /><button class="btn btn--white">Subscribe</button></form>
+      <p class="join__msg" id="joinMsg"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a href="#home" class="logo logo--light">LOOMWELL</a><p>Everyday essentials made to last. Designed in Copenhagen, made in Portugal.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a></div></div>
+      <div><h4>Shop</h4><a href="#shop">Women</a><a href="#shop">Men</a><a href="#new">New in</a><a href="#">Gift cards</a></div>
+      <div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns &amp; exchanges</a><a href="#">Repairs</a><a href="#" id="footSize">Size guide</a></div>
+      <div><h4>Company</h4><a href="#fabric">Our fabrics</a><a href="#porto">Factories</a><a href="#">Careers</a><a href="#">Contact</a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Loomwell ApS</span><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-fill"></i></div></div>
+  </footer>
+
+  <!-- Bag drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag">
+    <div class="drawer__head"><h3>Your bag (<span id="bagCount2">0</span>)</h3><button id="closeBag" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="ship" id="ship"></div>
+    <div class="drawer__body" id="bagItems"></div>
+    <div class="drawer__foot" id="bagFoot">
+      <div class="drawer__row"><span>Subtotal</span><strong id="bagSub">$0</strong></div>
+      <p class="drawer__note">Taxes included. Shipping calculated at checkout.</p>
+      <button class="btn btn--block" id="checkout">Checkout <i class="ri-lock-line"></i></button>
+    </div>
+  </aside>
+
+  <!-- Size guide -->
+  <div class="modal" id="sizeModal" hidden>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
+      <button class="modal__close" id="sgClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <h3 id="sgTitle">Size guide</h3>
+      <div class="seg seg--sm" id="sgSeg"><button class="on" data-t="w">Women</button><button data-t="m">Men</button></div>
+      <table class="sg" id="sgTable"></table>
+      <p class="sg__note">Measurements are body measurements in cm. Between sizes? Size up for a relaxed fit.</p>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Products */
+    const PRODUCTS = [
+      { id: "p1", n: "The Heavy Tee", c: "Organic cotton · 240 gsm", p: 38, g: "m", img: "1521572163474-6864f9cf17ab", alt: "1618354691373-d851c5c3a990", colors: ["#f4f4f2", "#1c1c1c", "#3b5d4a", "#c9b9a3"], tag: "Bestseller", sizes: ["XS", "S", "M", "L", "XL"] },
+      { id: "p2", n: "Relaxed Crew Sweat", c: "Brushed organic fleece", p: 78, g: "w", img: "1620799140408-edc6dcb6d633", alt: "1556905055-8f358a7a47b2", colors: ["#f2f0ea", "#9aa69a", "#2a2a2a"], sizes: ["XS", "S", "M", "L", "XL"] },
+      { id: "p3", n: "Straight Selvedge Jean", c: "13.5 oz Japanese denim", p: 128, g: "m", img: "1584370848010-d7fe6bc767ec", alt: "1506629082955-511b1aa562c8", colors: ["#2c3e5c", "#5b7aa2"], tag: "New", sizes: ["28", "30", "32", "34", "36"] },
+      { id: "p4", n: "Lightweight Bomber", c: "Recycled nylon, water-resistant", p: 168, g: "w", img: "1591047139829-d91aecb6caea", alt: "1551028719-00167b16eac5", colors: ["#c4835e", "#1d1d1d", "#5c6b4d"], sizes: ["XS", "S", "M", "L"] },
+      { id: "p5", n: "Graphic Tee — Lucky Cat", c: "Organic cotton, water-based print", p: 42, g: "m", img: "1576566588028-4147f3842f27", alt: "1503342217505-b0a15ec3261c", colors: ["#f4f4f2"], tag: "Limited", sizes: ["S", "M", "L", "XL"] },
+      { id: "p6", n: "Jogger Pant", c: "Loopback cotton, tapered", p: 72, g: "w", img: "1594633312681-425c7b97ccd1", alt: "1515886657613-9f3515b0c78f", colors: ["#e7b9a8", "#2a2a2a", "#d6cdb8"], sizes: ["XS", "S", "M", "L", "XL"] },
+      { id: "p7", n: "Leather Crossbody", c: "Vegetable-tanned leather", p: 145, g: "w", img: "1600857062241-98e5dba7f214", alt: "1590874103328-eac38a683ce7", colors: ["#8a5a3b", "#c96b2c"], sizes: ["One size"] },
+      { id: "p8", n: "Oxford Shirt", c: "Organic cotton oxford", p: 89, g: "m", img: "1598032895397-b9472444bf93", alt: "1617137968427-85924c800a22", colors: ["#eef1f6", "#f5dfe3"], sizes: ["S", "M", "L", "XL"] },
+    ];
+    const ALL = Object.fromEntries(PRODUCTS.map((p) => [p.id, p]));
+    let gender = "all", picking = null;
+
+    function renderProducts() {
+      $("seg").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.g === gender));
+      $("products").innerHTML = PRODUCTS.filter((p) => gender === "all" || p.g === gender).map((p) => `
+        <article class="prod" data-id="${p.id}">
+          <div class="prod__img">
+            <img src="${U(p.img)}" alt="${p.n}" loading="lazy" />
+            <img class="prod__alt" src="${U(p.alt)}" alt="" loading="lazy" />
+            ${p.tag ? `<span class="prod__tag">${p.tag}</span>` : ""}
+            <button class="prod__wish" aria-label="Save ${p.n}"><i class="ri-heart-line"></i></button>
+            <div class="quick ${picking === p.id ? "open" : ""}">
+              ${picking === p.id
+                ? `<p>Select size</p><div class="quick__sizes">${p.sizes.map((s) => `<button data-size="${s}">${s}</button>`).join("")}</div>`
+                : `<button class="quick__add" data-pick="${p.id}"><i class="ri-add-line"></i> Quick add</button>`}
+            </div>
+          </div>
+          <div class="prod__info">
+            <div><h3>${p.n}</h3><p>${p.c}</p></div>
+            <strong>$${p.p}</strong>
+          </div>
+          <div class="swatches">${p.colors.map((c, i) => `<span style="--c:${c}" class="${i === 0 ? "on" : ""}"></span>`).join("")}<small>${p.colors.length} colour${p.colors.length > 1 ? "s" : ""}</small></div>
+        </article>`).join("");
+    }
+    $("seg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { gender = b.dataset.g; picking = null; renderProducts(); document.querySelectorAll(".prod").forEach((p, i) => { p.style.setProperty("--d", i * 0.05 + "s"); p.classList.add("pop"); }); } });
+    $("products").addEventListener("click", (e) => {
+      const pick = e.target.closest("[data-pick]");
+      if (pick) { picking = pick.dataset.pick; renderProducts(); return; }
+      const size = e.target.closest("[data-size]");
+      if (size) { const id = size.closest(".prod").dataset.id; addToBag(id, size.dataset.size); picking = null; renderProducts(); return; }
+      const sw = e.target.closest(".swatches span");
+      if (sw) { sw.parentElement.querySelectorAll("span").forEach((s) => s.classList.toggle("on", s === sw)); return; }
+      const w = e.target.closest(".prod__wish");
+      if (w) { w.classList.toggle("on"); w.innerHTML = w.classList.contains("on") ? '<i class="ri-heart-fill"></i>' : '<i class="ri-heart-line"></i>'; }
+    });
+    renderProducts();
+
+    /* Bag */
+    let bag = [];
+    try { bag = JSON.parse(localStorage.getItem("loomwell-bag")) || []; } catch (e) { bag = []; }
+    bag = bag.filter((l) => ALL[l.id]);
+    const saveBag = () => { try { localStorage.setItem("loomwell-bag", JSON.stringify(bag)); } catch (e) {} };
+    const FREE = 100;
+    function addToBag(id, size) {
+      const line = bag.find((l) => l.id === id && l.size === size);
+      if (line) line.q++; else bag.push({ id, size, q: 1 });
+      saveBag(); renderBag(); openBag();
+    }
+    function renderBag() {
+      const count = bag.reduce((s, l) => s + l.q, 0), sub = bag.reduce((s, l) => s + ALL[l.id].p * l.q, 0);
+      $("bagCount").textContent = count; $("bagCount2").textContent = count;
+      $("bagCount").classList.toggle("has", count > 0);
+      const left = Math.max(0, FREE - sub);
+      $("ship").innerHTML = `<p>${left ? `You're <b>$${left}</b> away from free shipping` : `<i class="ri-checkbox-circle-fill"></i> You've unlocked <b>free shipping</b>`}</p><div class="ship__bar"><i style="transform: scaleX(${Math.min(sub / FREE, 1)})"></i></div>`;
+      if (!bag.length) {
+        $("bagItems").innerHTML = `<div class="empty"><i class="ri-shopping-bag-line"></i><strong>Your bag is empty</strong><a href="#new" class="btn btn--outline" id="keepShopping">Shop new arrivals</a></div>`;
+        $("bagFoot").hidden = true; return;
+      }
+      $("bagFoot").hidden = false;
+      $("bagItems").innerHTML = bag.map((l, i) => { const p = ALL[l.id]; return `
+        <div class="line">
+          <img src="${U(p.img, 200)}" alt="" />
+          <div class="line__info">
+            <strong>${p.n}</strong><span>Size ${l.size}</span>
+            <div class="qty"><button data-li="${i}" data-d="-1" aria-label="Decrease"><i class="ri-subtract-line"></i></button><span>${l.q}</span><button data-li="${i}" data-d="1" aria-label="Increase"><i class="ri-add-line"></i></button></div>
+          </div>
+          <div class="line__end"><strong>$${p.p * l.q}</strong><button class="line__rm" data-rm="${i}">Remove</button></div>
+        </div>`; }).join("");
+      $("bagSub").textContent = `$${sub}`;
+    }
+    $("bagItems").addEventListener("click", (e) => {
+      const q = e.target.closest("[data-li]"); if (q) { const l = bag[+q.dataset.li]; l.q += +q.dataset.d; if (l.q <= 0) bag.splice(+q.dataset.li, 1); saveBag(); renderBag(); }
+      const r = e.target.closest("[data-rm]"); if (r) { bag.splice(+r.dataset.rm, 1); saveBag(); renderBag(); }
+      if (e.target.closest("#keepShopping")) closeBag();
+    });
+    const openBag = () => document.body.classList.add("bag-open");
+    const closeBag = () => document.body.classList.remove("bag-open");
+    $("bagBtn").addEventListener("click", openBag);
+    $("closeBag").addEventListener("click", closeBag);
+    $("overlay").addEventListener("click", closeBag);
+    $("checkout").addEventListener("click", () => {
+      $("bagItems").innerHTML = `<div class="empty"><i class="ri-checkbox-circle-fill ok"></i><strong>Order placed — thank you!</strong><span>This is a demo checkout. A real store would continue to payment here.</span></div>`;
+      $("bagFoot").hidden = true; bag = []; saveBag();
+      $("bagCount").textContent = 0; $("bagCount2").textContent = 0; $("bagCount").classList.remove("has");
+    });
+    renderBag();
+
+    /* Size guide */
+    const SG = {
+      w: [["Size", "XS", "S", "M", "L", "XL"], ["EU", "34", "36", "38", "40", "42"], ["Bust", "80–83", "84–87", "88–92", "93–97", "98–103"], ["Waist", "62–65", "66–69", "70–74", "75–79", "80–85"], ["Hips", "88–91", "92–95", "96–100", "101–105", "106–111"]],
+      m: [["Size", "S", "M", "L", "XL", "XXL"], ["EU", "46", "48", "50", "52", "54"], ["Chest", "88–93", "94–99", "100–105", "106–111", "112–117"], ["Waist", "74–79", "80–85", "86–91", "92–97", "98–103"], ["Sleeve", "62", "63", "64", "65", "66"]],
+    };
+    function renderSG(t) {
+      $("sgSeg").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.t === t));
+      $("sgTable").innerHTML = SG[t].map((r, i) => `<tr>${r.map((c, j) => (i === 0 || j === 0 ? `<th>${c}</th>` : `<td>${c}</td>`)).join("")}</tr>`).join("");
+    }
+    $("sgSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) renderSG(b.dataset.t); });
+    const sgOpen = (e) => { e && e.preventDefault(); renderSG("w"); $("sizeModal").hidden = false; requestAnimationFrame(() => $("sizeModal").classList.add("open")); };
+    const sgClose = () => { $("sizeModal").classList.remove("open"); setTimeout(() => ($("sizeModal").hidden = true), 200); };
+    $("sizeGuideBtn").addEventListener("click", sgOpen);
+    $("footSize").addEventListener("click", sgOpen);
+    $("sgClose").addEventListener("click", sgClose);
+    $("sizeModal").addEventListener("click", (e) => { if (e.target === $("sizeModal")) sgClose(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeBag(); if (!$("sizeModal").hidden) sgClose(); picking = null; } });
+
+    /* Newsletter, header, menu */
+    $("joinForm").addEventListener("submit", (e) => { e.preventDefault(); $("joinMsg").textContent = "Welcome! Your 10% code WELCOME10 is on its way."; e.target.reset(); });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 30), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* Open pricing: animated cost breakdown */
+    const COST = [
+      { id: "p1", name: "Heavy Tee", trad: 85, parts: [["Fabric", 7.2], ["Labour", 6.5], ["Trims & label", 1.1], ["Duties", 1.4], ["Transport", 0.8], ["Our margin", 21]] },
+      { id: "p3", name: "Selvedge Jean", trad: 260, parts: [["Fabric", 24], ["Labour", 22], ["Trims & label", 6], ["Duties", 8], ["Transport", 2], ["Our margin", 66]] },
+      { id: "p4", name: "Bomber", trad: 340, parts: [["Fabric", 31], ["Labour", 34], ["Trims & label", 9], ["Duties", 11], ["Transport", 3], ["Our margin", 80]] },
+    ];
+    let ci = 0;
+    const renderCost = (animate) => {
+      const c = COST[ci], p = ALL[c.id], total = c.parts.reduce((s, x) => s + x[1], 0);
+      $("costSeg").innerHTML = COST.map((x, i) => `<button class="${i === ci ? "on" : ""}" data-c="${i}">${x.name}</button>`).join("");
+      $("costImg").src = U(p.img, 700); $("costImg").alt = p.n;
+      $("costBars").innerHTML = c.parts.map(([n, v], i) => `<div class="bar ${n === "Our margin" ? "bar--us" : ""}"><span>${n}</span><i><b style="--w:${(v / total) * 100}%;--d:${i * 0.08}s"></b></i><em>$${v % 1 ? v.toFixed(2) : v}</em></div>`).join("");
+      $("costOurs").textContent = `$${p.p}`; $("costTrad").textContent = `$${c.trad}`;
+      if (animate) requestAnimationFrame(() => $("costBars").classList.add("go"));
+    };
+    $("costSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; ci = +b.dataset.c; $("costBars").classList.remove("go"); renderCost(true); });
+    renderCost(false);
+
+    /* Community grid */
+    const UGC = [["1503342217505-b0a15ec3261c", "@annakarls", "The Heavy Tee", "p1"], ["1475180098004-ca77a66827be", "@maiwalks", "Merino Crew", "p2"], ["1520975954732-35dd22299614", "@theo.ldn", "Lightweight Bomber", "p4"], ["1490481651871-ab68de25d43d", "@slowwardrobe", "Straight Selvedge Jean", "p3"], ["1509631179647-0177331693ae", "@clara.mov", "Jogger Pant", "p6"], ["1434389677669-e08b4cac3105", "@minimal.mark", "Oxford Shirt", "p8"]];
+    $("ugc").innerHTML = UGC.map(([img, h, item, id], i) => `<figure class="u reveal" style="--d:${i * 0.06}s"><img src="${U(img, 600)}" alt="${h} wearing the ${item}" loading="lazy" /><figcaption><b>${h}</b><span>Wearing the ${item}</span><button data-pick-ugc="${id}"><i class="ri-shopping-bag-line"></i> Shop it</button></figcaption></figure>`).join("");
+    $("ugc").addEventListener("click", (e) => { const b = e.target.closest("[data-pick-ugc]"); if (!b) return; gender = "all"; picking = b.dataset.pickUgc; renderProducts(); $("new").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* FAQ */
+    const FAQ = [["How long does delivery take?", "Two working days across the EU and UK, four to the US. Delivery is free over $100 and carbon-neutral on every order."], ["What if it doesn't fit?", "Free returns and exchanges within 30 days, even if you've washed it once. We send a prepaid label by email."], ["How do free repairs work?", "Rip, broken zip or a loose button: send it back with the label from your account and we'll fix it within two weeks, for as long as you own it."], ["Why don't you have sales?", "Our prices are set fairly from day one, so we don't mark them up just to mark them down. The only discount is 10% on your first order."]];
+    $("acc").innerHTML = FAQ.map(([q, a], i) => `<div class="acc__i ${i ? "" : "open"}"><button aria-expanded="${!i}">${q}<i class="ri-add-line"></i></button><div class="acc__a"><div><p>${a}</p></div></div></div>`).join("");
+    $("acc").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const it = b.parentElement, o = !it.classList.contains("open"); $("acc").querySelectorAll(".acc__i").forEach((x) => { x.classList.remove("open"); x.firstElementChild.setAttribute("aria-expanded", "false"); }); if (o) { it.classList.add("open"); b.setAttribute("aria-expanded", "true"); } });
+
+    /* Motion: hero entrance, parallax, scroll reveals, journey line */
+    const par = [...document.querySelectorAll("[data-par]")];
+    const onScrollFx = () => {
+      if (!reduce) par.forEach((el) => (el.style.transform = `translateY(${scrollY * +el.dataset.par}px)`));
+      const j = $("journey"), r = j.getBoundingClientRect(), p = Math.min(1, Math.max(0, (innerHeight * 0.85 - r.top) / (r.height + innerHeight * 0.3)));
+      $("journeyLine").style.transform = `scaleX(${p})`;
+      j.querySelectorAll("li").forEach((li, i) => li.classList.toggle("lit", p > (i + 0.3) / 4));
+    };
+    addEventListener("scroll", onScrollFx, { passive: true }); onScrollFx();
+    document.querySelectorAll(".head, .cat, .prod, .fabric__img, .fabric__text, .specs > div, .look__text, .review, .cost__text, .cost__card, .faq > div:first-child, .acc__i, .join__in").forEach((el, i) => { el.classList.add("reveal"); if (!el.style.getPropertyValue("--d")) el.style.setProperty("--d", ((i % 4) * 0.07) + "s"); });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); if (e.target.classList.contains("cost__card")) $("costBars").classList.add("go"); io.unobserve(e.target); }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    new MutationObserver(() => document.querySelectorAll("#products .prod:not(.reveal)").forEach((el) => el.classList.add("in", "reveal"))).observe($("products"), { childList: true });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

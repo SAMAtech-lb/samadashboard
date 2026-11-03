@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theo Okafor — Sports &amp; Commercial Photographer</title>
+  <meta name="description" content="Theo Okafor is a London sports and commercial photographer shooting campaigns, events and athlete portraits for brands, clubs and magazines. Portfolio, rates and availability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=League+Gothic&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Theo Okafor home"><span class="logo__rec"></span>THEO OKAFOR</a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#campaign">Campaign</a>
+        <a href="#rates">Rates</a>
+        <a href="#dates">Availability</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--sm">Book a shoot</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero: camera viewfinder -->
+    <section class="vf" id="vf" aria-label="Featured photographs">
+      <div class="vf__frames" id="vfFrames"></div>
+      <div class="vf__flash" id="vfFlash"></div>
+      <div class="vf__ui" aria-hidden="true">
+        <span class="vf__corner vf__corner--tl"></span><span class="vf__corner vf__corner--tr"></span><span class="vf__corner vf__corner--bl"></span><span class="vf__corner vf__corner--br"></span>
+        <span class="vf__af" id="vfAf"></span>
+        <div class="vf__top"><span class="vf__rec"><i></i>REC</span><span id="vfMode">AF-C · 12 FPS</span><span><i class="ri-battery-2-charge-line"></i> 82%</span></div>
+      </div>
+      <div class="vf__copy">
+        <p class="vf__kicker hero__fade">Sports &amp; commercial photographer · London</p>
+        <h1 class="vf__title"><span class="line"><span>Theo</span></span><span class="line"><span><em>Okafor</em></span></span></h1>
+        <p class="vf__lead hero__fade">I photograph athletes at full speed. Campaigns, match days and portraits for brands, clubs and magazines across Europe.</p>
+        <div class="vf__cta hero__fade"><a href="#work" class="btn">See the work <i class="ri-arrow-right-down-line"></i></a><button class="btn btn--ghost" id="shutter"><i class="ri-camera-lens-line"></i> Next frame</button></div>
+      </div>
+      <div class="vf__exif" id="vfExif"></div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients" aria-label="Clients">
+      <div class="clients__track" id="clients"></div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="head">
+          <h2 class="h2">Selected <em>work</em></h2>
+          <div class="filters" id="filters" role="tablist" aria-label="Filter photos by sport"></div>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- Campaign story (pinned) -->
+    <section class="campaign" id="campaign">
+      <div class="campaign__sticky">
+        <div class="campaign__imgs" id="campImgs"></div>
+        <div class="campaign__shade"></div>
+        <div class="container campaign__in">
+          <p class="label">Featured campaign · Voltra Running · 2026</p>
+          <div class="campaign__steps" id="campSteps"></div>
+          <div class="campaign__bar"><i id="campBar"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about">
+      <div class="container about__in">
+        <figure class="about__img reveal"><img src="https://images.unsplash.com/photo-1500634245200-e5245c7574ef?auto=format&fit=crop&w=1000&q=80" alt="Theo Okafor holding his camera" loading="lazy" /></figure>
+        <div>
+          <p class="label reveal">About</p>
+          <h2 class="h2 reveal">Ex-sprinter. <em>Now I chase them.</em></h2>
+          <p class="reveal">I ran the 200 m for Great Britain juniors before a hamstring ended it. Ten years later I'm still trackside, just with a 400 mm lens. I know where an athlete will be before they get there, and that's the shot.</p>
+          <ul class="about__facts reveal">
+            <li><b>11 yrs</b><span>shooting professionally</span></li>
+            <li><b>3</b><span>Olympic Games covered</span></li>
+            <li><b>48 h</b><span>edited selects after any shoot</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section class="section rates-sec" id="rates">
+      <div class="container">
+        <div class="head">
+          <h2 class="h2">Shoots <em>&amp; rates</em></h2>
+          <p class="head__p">Every booking includes pre-production, a second shooter where needed and retouched selects within 48 hours. Usage is licensed per campaign.</p>
+        </div>
+        <div class="rates" id="rateList"></div>
+      </div>
+    </section>
+
+    <!-- Availability -->
+    <section class="section dates-sec" id="dates">
+      <div class="container dates">
+        <div>
+          <p class="label">Availability</p>
+          <h2 class="h2">Next <em>six weeks</em></h2>
+          <p class="dates__p">Lime days are open. Tap one to hold it for 48 hours while we talk. Grey days are booked or travelling.</p>
+          <div class="dates__legend"><span><i class="o"></i>Open</span><span><i class="b"></i>Booked</span><span><i class="h"></i>Held by you</span></div>
+        </div>
+        <div class="cal">
+          <div class="cal__week"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+          <div class="cal__grid" id="calGrid"></div>
+          <p class="cal__held" id="calHeld">No dates held yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section quotes-sec">
+      <div class="container">
+        <div class="quotes" id="quotes" aria-live="polite"></div>
+        <div class="quotes__nav" id="qNav"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-sec" id="contact">
+      <div class="container contact">
+        <div>
+          <h2 class="contact__big">Let's <em>shoot.</em></h2>
+          <a class="contact__mail" href="mailto:studio@theookafor.com">studio@theookafor.com <i class="ri-arrow-right-up-line"></i></a>
+          <p class="contact__p">Represented in Europe by Fieldnote Agency. For editorial requests, include your publication and deadline.</p>
+          <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Behance"><i class="ri-behance-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></div>
+        </div>
+        <form class="form" id="form" novalidate>
+          <label>What are we shooting?</label>
+          <div class="chips" id="fType"><button type="button" class="on">Campaign</button><button type="button">Match / event</button><button type="button">Athlete portraits</button><button type="button">Editorial</button></div>
+          <div class="row"><input id="fName" placeholder="Name" aria-label="Name" /><input id="fEmail" type="email" placeholder="Email" aria-label="Email" /></div>
+          <input id="fDate" placeholder="Date or dates (or tap them in the calendar)" aria-label="Dates" />
+          <textarea id="fMsg" rows="4" placeholder="Brand, athletes, location, deliverables…" aria-label="Brief"></textarea>
+          <button class="btn btn--full" type="submit">Send brief <i class="ri-send-plane-2-line"></i></button>
+          <p class="form-msg" id="fOut"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer__in"><p>© <span id="year"></span> Theo Okafor Photography Ltd · London</p><p>All images © Theo Okafor. Not for reuse without a licence.</p></div></footer>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lb" hidden>
+    <button class="lb__close" id="lbClose" aria-label="Close"><i class="ri-close-line"></i></button>
+    <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo"><i class="ri-arrow-left-line"></i></button>
+    <figure><img id="lbImg" alt="" /><figcaption id="lbCap"></figcaption></figure>
+    <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo"><i class="ri-arrow-right-line"></i></button>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const PHOTOS = [
+      { id: "1461896836934-ffe607ba8211", t: "Set", sport: "Athletics", where: "Lee Valley, London", exif: ["1/4000", "f/2.8", "ISO 400", "400 mm"], tall: false },
+      { id: "1502680390469-be75c86b636f", t: "Inside the barrel", sport: "Water", where: "Ericeira, Portugal", exif: ["1/3200", "f/4", "ISO 200", "600 mm"] },
+      { id: "1546519638-68e109498ffc", t: "Swish", sport: "Indoor", where: "Copper Box Arena", exif: ["1/1600", "f/2.8", "ISO 3200", "70 mm"] },
+      { id: "1517649763962-0c623066013b", t: "The bunch", sport: "Cycling", where: "Tour of Britain, Stage 4", exif: ["1/2000", "f/5.6", "ISO 400", "200 mm"] },
+      { id: "1530549387789-4c1017266635", t: "Fly", sport: "Water", where: "London Aquatics Centre", exif: ["1/2500", "f/2.8", "ISO 1600", "300 mm"], tall: true },
+      { id: "1574629810360-7efbbe195018", t: "First touch", sport: "Football", where: "Brentford FC training", exif: ["1/3200", "f/2.8", "ISO 800", "400 mm"] },
+      { id: "1541534741688-6078c6bfb5c5", t: "Last rep", sport: "Training", where: "Arcade Gym, Hackney", exif: ["1/500", "f/2", "ISO 1250", "35 mm"], tall: true },
+      { id: "1552674605-db6ffd4facb5", t: "Blue hour", sport: "Athletics", where: "Voltra Running campaign", exif: ["1/1000", "f/2.8", "ISO 640", "24 mm"] },
+      { id: "1522163182402-834f871fd851", t: "Overhang", sport: "Outdoor", where: "Railay, Thailand", exif: ["1/1250", "f/5.6", "ISO 200", "70 mm"], tall: true },
+      { id: "1517836357463-d25dfeac3438", t: "Grip", sport: "Training", where: "Northwind Strength", exif: ["1/800", "f/2.8", "ISO 1600", "50 mm"] },
+      { id: "1452626038306-9aae5e071dd3", t: "Mile 22", sport: "Athletics", where: "London Marathon", exif: ["1/2000", "f/4", "ISO 320", "200 mm"] },
+      { id: "1544367567-0f2fcb009e0b", t: "Still", sport: "Outdoor", where: "Lumen Yoga campaign", exif: ["1/800", "f/4", "ISO 100", "85 mm"] },
+    ];
+    const HERO = [0, 1, 4, 5, 8].map((i) => PHOTOS[i]);
+    const CAMPAIGN = [
+      ["1552674605-db6ffd4facb5", "The brief", "Make running at 6 am look like the best part of the day. Real club runners, no models, shot in four cities over twelve days."],
+      ["1452626038306-9aae5e071dd3", "The shoot", "We ran with them. A camera on a gimbal at pace, a 400 mm from bridges, and a lot of very early alarms."],
+      ["1461896836934-ffe607ba8211", "The result", "Running on 140 billboards across the UK and Germany. Voltra's best-performing campaign to date: +34% online sales in launch week."],
+    ];
+    const RATES = [
+      ["Campaign", "Brand and product campaigns, stills and short motion clips.", "from £3,800 / day", ["Pre-production & casting", "Second shooter + digital tech", "40 retouched selects"]],
+      ["Match & event", "Full coverage of a match, race or launch with live edits to your team.", "from £1,600 / day", ["Live uploads every 30 min", "Up to 250 edited images", "Social cuts in 9:16"]],
+      ["Athlete portraits", "Studio or on-location portraits for clubs, sponsors and press kits.", "from £950 / half-day", ["Lighting & set", "Up to 12 athletes", "15 retouched portraits"]],
+    ];
+    const QUOTES = [
+      ["Theo shot our whole season and every week we had a picture the players fought over. He's fast, calm and invisible on the touchline.", "Hannah Weiss", "Head of Content, Brentford FC Women"],
+      ["We gave him twelve days and four cities. He came back with a campaign that sold out our autumn shoe in a week.", "Marc Feld", "Brand Director, Voltra Running"],
+      ["The rare sports photographer who can also light a portrait. Our athletes actually liked their headshots for once.", "Priya Natarajan", "Marketing, Orbit Swim Club"],
+    ];
+
+    /* =====================================================
+       Viewfinder hero
+       ===================================================== */
+    let vf = 0, vfT;
+    $("vfFrames").innerHTML = HERO.map((p, i) => `<img src="${U(p.id, 1600)}" alt="${p.t}, ${p.where}" class="${i ? "" : "on"}" />`).join("");
+    const exif = (p, n) => `<span><small>Shutter</small>${p.exif[0]}</span><span><small>Aperture</small>${p.exif[1]}</span><span><small>ISO</small>${p.exif[2].replace("ISO ", "")}</span><span><small>Lens</small>${p.exif[3]}</span><span class="vf__frame"><small>Frame</small>${String(n).padStart(4, "0")}</span><span class="vf__where"><small>${p.sport}</small>${p.t} · ${p.where}</span>`;
+    let frameNo = 2186;
+    const showVf = (i, flash) => {
+      vf = (i + HERO.length) % HERO.length; frameNo++;
+      if (flash && !reduce) { $("vfFlash").classList.remove("on"); void $("vfFlash").offsetWidth; $("vfFlash").classList.add("on"); }
+      [...$("vfFrames").children].forEach((im, k) => im.classList.toggle("on", k === vf));
+      $("vfExif").innerHTML = exif(HERO[vf], frameNo);
+      clearInterval(vfT); if (!reduce) vfT = setInterval(() => showVf(vf + 1, true), 5200);
+    };
+    $("shutter").addEventListener("click", () => showVf(vf + 1, true));
+    (() => {
+      const box = $("vf"), af = $("vfAf"); let tx = 50, ty = 45, x = 50, y = 45;
+      box.addEventListener("pointermove", (e) => { const r = box.getBoundingClientRect(); tx = ((e.clientX - r.left) / r.width) * 100; ty = ((e.clientY - r.top) / r.height) * 100; af.classList.add("lock"); clearTimeout(af._t); af._t = setTimeout(() => af.classList.remove("lock"), 300); });
+      const loop = () => { x += (tx - x) * 0.12; y += (ty - y) * 0.12; af.style.left = x + "%"; af.style.top = y + "%"; requestAnimationFrame(loop); };
+      if (!reduce) loop();
+    })();
+    showVf(0);
+
+    /* Clients marquee */
+    const CL = ["Voltra", "Northwind", "Brentford FC", "Lumen", "Orbit Swim", "Arcade", "Fieldnote", "Kinetic Mag"];
+    $("clients").innerHTML = [0, 1].map(() => `<span>${CL.map((c) => `${c}<i>✕</i>`).join("")}</span>`).join("");
+
+    /* =====================================================
+       Gallery + filters + lightbox
+       ===================================================== */
+    const SPORTS = ["All", ...new Set(PHOTOS.map((p) => p.sport))];
+    let sport = "All", shown = [], li = 0;
+    const renderGallery = () => {
+      $("filters").innerHTML = SPORTS.map((s) => `<button role="tab" class="${s === sport ? "on" : ""}" aria-selected="${s === sport}">${s}</button>`).join("");
+      shown = PHOTOS.filter((p) => sport === "All" || p.sport === sport);
+      $("gallery").innerHTML = shown.map((p, i) => `<button class="shot ${p.tall ? "shot--tall" : ""}" data-i="${i}" style="--d:${(i % 6) * 0.05}s" aria-label="Open ${p.t}"><img src="${U(p.id, 900)}" alt="${p.t}, ${p.where}" loading="lazy" /><span class="shot__info"><b>${p.t}</b><small>${p.where}</small><em>${p.exif.join(" · ")}</em></span></button>`).join("");
+    };
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { sport = b.textContent; renderGallery(); } });
+    const openLb = (i) => { li = (i + shown.length) % shown.length; const p = shown[li]; $("lbImg").src = U(p.id, 1800); $("lbImg").alt = p.t; $("lbCap").innerHTML = `<b>${p.t}</b><span>${p.where}</span><em>${p.exif.join(" · ")}</em><span>${li + 1} / ${shown.length}</span>`; $("lb").hidden = false; document.body.style.overflow = "hidden"; };
+    const closeLb = () => { $("lb").hidden = true; document.body.style.overflow = ""; };
+    $("gallery").addEventListener("click", (e) => { const s = e.target.closest(".shot"); if (s) openLb(+s.dataset.i); });
+    $("lbClose").addEventListener("click", closeLb); $("lbPrev").addEventListener("click", () => openLb(li - 1)); $("lbNext").addEventListener("click", () => openLb(li + 1));
+    $("lb").addEventListener("click", (e) => { if (e.target.id === "lb") closeLb(); });
+    renderGallery();
+
+    /* =====================================================
+       Campaign: pinned, steps change with scroll
+       ===================================================== */
+    $("campImgs").innerHTML = CAMPAIGN.map(([id, t], i) => `<img src="${U(id, 1600)}" alt="${t}" class="${i ? "" : "on"}" loading="lazy" />`).join("");
+    $("campSteps").innerHTML = CAMPAIGN.map(([, t, p], i) => `<div class="cstep ${i ? "" : "on"}"><span>0${i + 1} / 03</span><h3>${t}</h3><p>${p}</p></div>`).join("");
+    const camp = () => {
+      const s = $("campaign"), r = s.getBoundingClientRect(), total = s.offsetHeight - innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total))), k = Math.min(CAMPAIGN.length - 1, Math.floor(p * CAMPAIGN.length));
+      [...$("campImgs").children].forEach((im, i) => im.classList.toggle("on", i === k));
+      [...$("campSteps").children].forEach((st, i) => st.classList.toggle("on", i === k));
+      $("campBar").style.width = p * 100 + "%";
+    };
+    addEventListener("scroll", camp, { passive: true }); camp();
+
+    /* =====================================================
+       Rates (expandable rows)
+       ===================================================== */
+    $("rateList").innerHTML = RATES.map(([t, d, pr, inc], i) => `
+      <div class="rate ${i ? "" : "open"}">
+        <button class="rate__head" aria-expanded="${!i}"><span class="rate__n">0${i + 1}</span><h3>${t}</h3><span class="rate__price">${pr}</span><i class="ri-add-line"></i></button>
+        <div class="rate__body"><div><p>${d}</p><ul>${inc.map((x) => `<li><i class="ri-check-line"></i>${x}</li>`).join("")}</ul><a href="#contact" class="btn btn--sm" data-type="${t}">Book a ${t.toLowerCase()} shoot</a></div></div>
+      </div>`).join("");
+    $("rateList").addEventListener("click", (e) => {
+      const h = e.target.closest(".rate__head");
+      if (h) { const r = h.parentElement, o = !r.classList.contains("open"); document.querySelectorAll(".rate").forEach((x) => { x.classList.remove("open"); x.firstElementChild.setAttribute("aria-expanded", "false"); }); if (o) { r.classList.add("open"); h.setAttribute("aria-expanded", "true"); } }
+      const b = e.target.closest("[data-type]");
+      if (b) { const map = { Campaign: 0, "Match & event": 1, "Athlete portraits": 2 }; [...$("fType").children].forEach((c, k) => c.classList.toggle("on", k === map[b.dataset.type])); }
+    });
+
+    /* =====================================================
+       Availability calendar (next 6 weeks)
+       ===================================================== */
+    const held = new Set();
+    const start = new Date(); start.setHours(0, 0, 0, 0); start.setDate(start.getDate() - ((start.getDay() + 6) % 7));
+    const booked = (d) => { const x = Math.sin(d.getFullYear() * 3 + d.getMonth() * 31 + d.getDate() * 17) * 1e4; return d.getDay() === 0 || x - Math.floor(x) < 0.3; };
+    const fmt = (d) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+    const renderCal = () => {
+      const today = new Date(); today.setHours(0, 0, 0, 0); let html = "";
+      for (let i = 0; i < 42; i++) {
+        const d = new Date(start); d.setDate(start.getDate() + i);
+        const past = d < today, b = !past && booked(d), key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`, h = held.has(key);
+        html += `<button class="day ${past ? "day--past" : b ? "day--b" : h ? "day--h" : "day--o"} ${d.getDate() === 1 ? "day--m" : ""}" data-k="${key}" ${past || b ? "disabled" : ""} aria-label="${fmt(d)}${b ? ", booked" : past ? "" : ", open"}">${d.getDate() === 1 || i === 0 ? `<small>${d.toLocaleDateString("en-GB", { month: "short" })}</small>` : ""}${d.getDate()}</button>`;
+      }
+      $("calGrid").innerHTML = html;
+      const list = [...held].sort().map((k) => fmt(new Date(k + "T12:00")));
+      $("calHeld").innerHTML = list.length ? `<i class="ri-timer-flash-line"></i> Held for 48 h: <b>${list.join(", ")}</b>` : "No dates held yet.";
+      $("fDate").value = list.join(", ");
+    };
+    $("calGrid").addEventListener("click", (e) => { const b = e.target.closest(".day"); if (!b || b.disabled) return; held.has(b.dataset.k) ? held.delete(b.dataset.k) : held.add(b.dataset.k); renderCal(); });
+    renderCal();
+
+    /* =====================================================
+       Quotes, form, misc
+       ===================================================== */
+    let qi = 0, qT;
+    $("quotes").innerHTML = QUOTES.map(([q, n, r], i) => `<figure class="quote ${i ? "" : "on"}"><blockquote>“${q}”</blockquote><figcaption><b>${n}</b>${r}</figcaption></figure>`).join("");
+    $("qNav").innerHTML = QUOTES.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Quote ${i + 1}"><i></i></button>`).join("");
+    const showQ = (i) => { qi = (i + QUOTES.length) % QUOTES.length; [...$("quotes").children].forEach((q, k) => q.classList.toggle("on", k === qi)); [...$("qNav").children].forEach((b, k) => b.classList.toggle("on", k === qi)); clearInterval(qT); if (!reduce) qT = setInterval(() => showQ(qi + 1), 6500); };
+    $("qNav").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) showQ([...$("qNav").children].indexOf(b)); });
+    showQ(0);
+    $("fType").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) [...$("fType").children].forEach((c) => c.classList.toggle("on", c === b)); });
+    $("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const n = $("fName").value.trim(), m = $("fEmail").value.trim(), o = $("fOut");
+      if (!n || !/^\S+@\S+\.\S+$/.test(m)) { o.textContent = "Please add your name and a valid email."; o.className = "form-msg err"; return; }
+      o.textContent = `Got it, ${n.split(" ")[0]}. Your ${$("fType").querySelector(".on").textContent.toLowerCase()} brief is in${held.size ? ` and ${held.size} date${held.size > 1 ? "s are" : " is"} held for you` : ""}. Reply within a day.`; o.className = "form-msg ok";
+      $("fName").value = $("fEmail").value = $("fMsg").value = "";
+    });
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeLb(); closeNav(); }
+      if (!$("lb").hidden && e.key === "ArrowRight") openLb(li + 1);
+      if (!$("lb").hidden && e.key === "ArrowLeft") openLb(li - 1);
+    });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 40);
+      let c = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * 0.4) c = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === c));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .section .h2, .rate, .cal, .form, .quotes").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rouge Club — Lipstick, eyes and face makeup</title>
+  <meta name="description" content="Rouge Club makes long-wear lipstick, eyeshadow palettes, complexion and brushes. Vegan, cruelty-free, free shipping over $35 and two free samples with every order." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce"><p><em>Free shipping over $35</em><em>2 free samples with every order</em><em>Vegan &amp; cruelty-free</em></p></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <a href="#top" class="logo" aria-label="Rouge Club home">ROUGE<span>CLUB</span></a>
+      <nav class="nav" id="nav">
+        <a href="#shop" data-cat="Lips">Lips</a>
+        <a href="#shop" data-cat="Eyes">Eyes</a>
+        <a href="#shop" data-cat="Face">Face</a>
+        <a href="#shop" data-cat="Tools">Brushes</a>
+        <a href="#shop" data-tab="sale" class="nav__sale">Sale</a>
+        <a href="#tips">Beauty tips</a>
+      </nav>
+      <div class="icons">
+        <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="#" class="hide-sm" aria-label="Account"><i class="ri-user-line"></i></a>
+        <button id="wishBtn" class="hide-sm" aria-label="Wishlist"><i class="ri-heart-line"></i><b id="wishCount">0</b></button>
+        <button id="bagBtn" aria-label="Open bag"><i class="ri-shopping-bag-line"></i><b id="bagCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__img"><img src="https://images.unsplash.com/photo-1767732337868-335e85582d0b?auto=format&fit=crop&w=1400&q=80" alt="Woman wearing red lipstick" /></div>
+      <div class="hero__panel">
+        <div class="hero__copy">
+          <span class="hero__k">New · Velvet Matte</span>
+          <h1>Lipstick that lasts all night</h1>
+          <p>Our velvet matte formula in 24 shades. Comfortable, weightless and transfer-proof for up to 12 hours.</p>
+          <div class="hero__cta"><a href="#shop" class="btn btn--white" data-cat="Lips">Shop lipstick</a><a href="#shop" class="btn btn--ghost" data-tab="best">Bestsellers</a></div>
+        </div>
+              </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cats">
+          <a href="#shop" class="cat reveal" data-cat="Lips"><span><img src="https://images.unsplash.com/photo-1571646034647-52e6ea84b28c?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy" /></span>Lips</a>
+          <a href="#shop" class="cat reveal" data-cat="Eyes"><span><img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy" /></span>Eyes</a>
+          <a href="#shop" class="cat reveal" data-cat="Face"><span><img src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy" /></span>Face</a>
+          <a href="#shop" class="cat reveal" data-cat="Tools"><span><img src="https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy" /></span>Brushes</a>
+          <a href="#shop" class="cat reveal" data-cat="Sets"><span><img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy" /></span>Sets &amp; gifts</a>
+          <a href="#shop" class="cat reveal" data-tab="sale"><span class="cat__sale">Up to<b>40%</b>off</span>Sale</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section section--blush" id="shop">
+      <div class="container">
+        <div class="head">
+          <h2 id="shopTitle">Bestsellers</h2>
+          <div class="tabs" id="tabs"><button class="on" data-t="best">Bestsellers</button><button data-t="new">New in</button><button data-t="sale">Sale</button></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Shade banner -->
+    <section class="shades">
+      <div class="container shades__in">
+        <div class="shades__copy reveal">
+          <span class="kicker">Velvet Matte Lipstick</span>
+          <h2>24 shades. One formula.</h2>
+          <p>From soft nudes to deep berry, every shade is tested on light, medium and deep skin tones before it makes the range.</p>
+          <ul><li><i class="ri-check-line"></i>Up to 12 hours of wear</li><li><i class="ri-check-line"></i>Hyaluronic acid keeps lips soft</li><li><i class="ri-check-line"></i>Refillable metal case</li></ul>
+          <a href="#shop" class="btn" data-cat="Lips">Shop all shades</a>
+        </div>
+        <div class="shades__img reveal"><img src="https://images.unsplash.com/photo-1631214499500-2e34edcaccfe?auto=format&fit=crop&w=1200&q=80" alt="Lipstick swatches in nude, peach, pink and red" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- Promo tiles -->
+    <section class="section">
+      <div class="container promos">
+        <a href="#shop" class="promo reveal" data-cat="Tools"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=80" alt="Makeup brushes in a cup" loading="lazy" /><div><span>This week only</span><h3>25% off brush sets</h3><b>Shop brushes <i class="ri-arrow-right-line"></i></b></div></a>
+        <a href="#shop" class="promo reveal" data-cat="Eyes"><img src="https://images.unsplash.com/photo-1709477542149-f4e0e21d590b?auto=format&fit=crop&w=1000&q=80" alt="Eyeshadow being applied with a brush" loading="lazy" /><div><span>New palettes</span><h3>Warm-toned eyes for autumn</h3><b>Shop eyes <i class="ri-arrow-right-line"></i></b></div></a>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--blush">
+      <div class="container">
+        <div class="head"><h2>Loved by 40,000+ customers</h2><p class="rating"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></span><b>4.7</b> from 12,480 reviews</p></div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section" id="tips">
+      <div class="container">
+        <div class="head"><h2>Beauty tips</h2><a href="#" class="more">All articles <i class="ri-arrow-right-line"></i></a></div>
+        <div class="posts">
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1758605456769-7f3d0939f623?auto=format&fit=crop&w=800&q=80" alt="Close-up of glossy lips" loading="lazy" /></a><span>Lips · 4 min read</span><h3><a href="#">How to make matte lipstick last through dinner</a></h3></article>
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80" alt="Hand holding an eyeshadow palette" loading="lazy" /></a><span>Eyes · 6 min read</span><h3><a href="#">A three-shade smoky eye for beginners</a></h3></article>
+          <article class="post reveal"><a href="#" class="post__img"><img src="https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?auto=format&fit=crop&w=800&q=80" alt="Set of makeup brushes" loading="lazy" /></a><span>Tools · 3 min read</span><h3><a href="#">The only five brushes you really need</a></h3></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container services__in">
+        <p><i class="ri-truck-line"></i><b>Free shipping</b>Orders over $35</p>
+        <p><i class="ri-gift-2-line"></i><b>2 free samples</b>With every order</p>
+        <p><i class="ri-rabbit-line"></i><b>Cruelty-free</b>Leaping Bunny certified</p>
+        <p><i class="ri-refresh-line"></i><b>Easy returns</b>Even if opened, 30 days</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#top" class="logo logo--light">ROUGE<span>CLUB</span></a><p>Vegan colour cosmetics made in small batches in Manchester.</p><div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a></div></div>
+        <div><h4>Shop</h4><a href="#shop">Lips</a><a href="#shop">Eyes</a><a href="#shop">Face</a><a href="#shop">Brushes</a><a href="#shop">Gift sets</a></div>
+        <div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Track order</a><a href="#">Contact us</a></div>
+        <div><h4>Get 15% off</h4><p>Sign up for launches, tutorials and members-only offers.</p><form class="news" id="news"><input type="email" required placeholder="Your email" aria-label="Email" /><button class="btn">Sign up</button></form><p class="form-msg" id="newsMsg"></p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Rouge Club Cosmetics Ltd · Photography from Unsplash</p><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i></div></div>
+    </div>
+  </footer>
+
+  <!-- Search -->
+  <div class="search" id="search" aria-hidden="true"><div class="container"><div class="search__bar"><i class="ri-search-line"></i><input id="searchInput" type="search" placeholder="Search lipstick, palettes, brushes…" aria-label="Search" /><button id="searchClose" aria-label="Close"><i class="ri-close-line"></i></button></div><div class="search__res" id="searchRes"></div></div></div>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__img"><img id="mImg" src="" alt="" /></div>
+      <div class="modal__body">
+        <span class="kicker" id="mCat"></span>
+        <h3 id="mName"></h3>
+        <div class="modal__rate" id="mRate"></div>
+        <p class="price price--lg" id="mPrice"></p>
+        <p id="mDesc"></p>
+        <div class="modal__shades" id="mShadeWrap"><p>Shade: <b id="mShadeName"></b></p><div class="dots" id="mShades"></div></div>
+        <div class="modal__buy"><div class="qty"><button id="qMinus" aria-label="Less"><i class="ri-subtract-line"></i></button><b id="qVal">1</b><button id="qPlus" aria-label="More"><i class="ri-add-line"></i></button></div><button class="btn" id="mAdd">Add to bag</button></div>
+        <ul class="modal__meta"><li><i class="ri-leaf-line"></i>Vegan and cruelty-free</li><li><i class="ri-truck-line"></i>Free shipping over $35</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bag -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Your bag</h3><button id="drawerClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__ship"><p id="shipTxt"></p><div><span id="shipBar"></span></div></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">$0.00</b></div><p class="drawer__note"><i class="ri-gift-2-line"></i> 2 free samples added at checkout</p><button class="btn btn--full" id="checkout">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const usd = (n) => "$" + n.toFixed(2);
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2300); };
+
+    /* ---------- Products ---------- */
+    const LIP = [["Club Red", "#b3132a"], ["Merlot", "#6d1427"], ["Rosewood", "#a85a5e"], ["Bare", "#c08a7a"], ["Coral Bay", "#e0634f"], ["Fuchsia", "#c4206e"]];
+    const P = [
+      { id: 1, n: "Velvet Matte Lipstick", cat: "Lips", p: 24, img: "1773372238316-5f080152bcf1", r: 4.8, rc: 3120, tags: ["best", "new"], sh: LIP, d: "Our best-selling matte lipstick. Rich colour in one swipe, comfortable for 12 hours and never drying." },
+      { id: 2, n: "Satin Lipstick Trio", cat: "Sets", p: 48, was: 64, img: "1773372238338-f26460145162", r: 4.7, rc: 412, tags: ["best", "sale"], d: "Three full-size satin lipsticks in our best nude, pink and rose. Comes in a gift box." },
+      { id: 3, n: "Liquid Lip Lacquer", cat: "Lips", p: 22, img: "1760860992755-c432351d47e9", r: 4.6, rc: 980, tags: ["best", "new"], sh: [["Ruby", "#a1101f"], ["Cherry", "#c1172c"], ["Brick", "#8f2a1f"]], d: "A glossy liquid lipstick that dries to a flexible, high-shine finish. No sticky feel." },
+      { id: 4, n: "Shade Wardrobe Set", cat: "Sets", p: 79, img: "1571646034647-52e6ea84b28c", r: 4.9, rc: 268, tags: ["new", "best"], d: "Five mini lipsticks from nude to bright coral. The easiest way to find your favourites." },
+      { id: 5, n: "Classic Red Lipstick", cat: "Lips", p: 24, img: "1626895872564-b691b6877b83", r: 4.8, rc: 1540, tags: ["best"], sh: [["Club Red", "#b3132a"], ["Siren", "#d8261d"]], d: "The blue-based red that suits every skin tone. Satin finish, full coverage." },
+      { id: 6, n: "Warm Nudes Palette", cat: "Eyes", p: 42, img: "1596704017254-9b121068fb31", r: 4.7, rc: 760, tags: ["best", "new"], d: "Eighteen buttery shadows in mattes and shimmers, from soft beige to deep chocolate." },
+      { id: 7, n: "Sunset Eye Palette", cat: "Eyes", p: 34, was: 42, img: "1764333746348-1df13b3a4aae", r: 4.5, rc: 330, tags: ["sale"], d: "Nine warm shades of copper, terracotta and gold. Built for autumn eyes." },
+      { id: 8, n: "Pro Brush Set (12)", cat: "Tools", p: 54, was: 72, img: "1620464003286-a5b0d79f32c2", r: 4.8, rc: 890, tags: ["best", "sale"], d: "Twelve soft synthetic brushes for face and eyes, with a vegan leather roll." },
+      { id: 10, n: "Glow Essentials Kit", cat: "Face", p: 58, img: "1583209814683-c023dd293cc6", r: 4.7, rc: 184, tags: ["new", "best"], d: "Primer, cream blush, highlighter and setting powder in travel sizes." },
+      { id: 11, n: "Gold Bullet Lipstick", cat: "Lips", p: 32, was: 38, img: "1617422275558-e5f616302690", r: 4.6, rc: 142, tags: ["sale"], sh: [["Mocha", "#8a5a4a"], ["Bare", "#c08a7a"], ["Rosewood", "#a85a5e"]], d: "Our luxe edition in a weighted gold case. Creamy satin finish." },
+      { id: 12, n: "Complexion Duo", cat: "Face", p: 44, was: 56, img: "1631730486572-226d1f595b68", r: 4.5, rc: 96, tags: ["sale"], d: "Skin tint and concealer in matching shades, with a mini sponge." },
+    ];
+    const stars = (r) => { let s = ""; for (let i = 1; i <= 5; i++) s += `<i class="ri-star-${r >= i ? "fill" : r >= i - 0.5 ? "half-fill" : "line"}"></i>`; return s; };
+    let wish = new Set(), tab = "best", cat = null;
+    try { wish = new Set(JSON.parse(localStorage.getItem("rcWish") || "[]")); } catch (e) {}
+    const card = (x, i) => `<article class="card" style="--d:${i * 0.05}s">
+      <div class="card__media">
+        ${x.was ? `<span class="badge">-${Math.round((1 - x.p / x.was) * 100)}%</span>` : x.tags.includes("new") ? '<span class="badge badge--new">New</span>' : ""}
+        <button class="card__wish ${wish.has(x.id) ? "on" : ""}" data-wish="${x.id}" aria-label="Save ${x.n}"><i class="ri-heart-${wish.has(x.id) ? "fill" : "line"}"></i></button>
+        <button class="card__open" data-quick="${x.id}" aria-label="View ${x.n}"><img src="${U(x.img)}" alt="${x.n}" loading="lazy" /></button>
+        <button class="card__add" data-add="${x.id}">${x.sh ? "Choose shade" : "Add to bag"}</button>
+      </div>
+      <div class="card__body">
+        ${x.sh ? `<div class="card__dots">${x.sh.slice(0, 5).map((s) => `<i style="background:${s[1]}" title="${s[0]}"></i>`).join("")}${x.sh.length > 5 ? `<small>+${x.sh.length - 5}</small>` : ""}</div>` : ""}
+        <h3><button data-quick="${x.id}">${x.n}</button></h3>
+        <div class="card__rate"><span class="stars">${stars(x.r)}</span>${x.rc.toLocaleString()}</div>
+        <p class="price">${x.was ? `<s>${usd(x.was)}</s>` : ""}<b class="${x.was ? "sale" : ""}">${usd(x.p)}</b></p>
+      </div>
+    </article>`;
+    const render = () => {
+      const list = cat ? P.filter((x) => x.cat === cat) : P.filter((x) => x.tags.includes(tab)).slice(0, 8);
+      $("grid").innerHTML = list.map(card).join("");
+      $("shopTitle").textContent = cat ? { Lips: "Lips", Eyes: "Eyes", Face: "Face", Tools: "Brushes & tools", Sets: "Sets & gifts" }[cat] : { best: "Bestsellers", new: "New in", sale: "Sale" }[tab];
+      $("tabs").querySelectorAll("button").forEach((b) => b.classList.toggle("on", !cat && b.dataset.t === tab));
+    };
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { tab = b.dataset.t; cat = null; render(); } });
+    document.addEventListener("click", (e) => {
+      const c = e.target.closest("[data-cat]"), t = e.target.closest("[data-tab]");
+      if (c) { cat = c.dataset.cat; render(); closeNav(); }
+      if (t) { cat = null; tab = t.dataset.tab; render(); closeNav(); }
+    });
+    render();
+
+    /* ---------- Wishlist ---------- */
+    const renderWish = () => { $("wishCount").textContent = wish.size; $("wishCount").classList.toggle("on", wish.size > 0); try { localStorage.setItem("rcWish", JSON.stringify([...wish])); } catch (e) {} };
+    renderWish();
+    $("wishBtn").addEventListener("click", () => { $("grid").innerHTML = wish.size ? P.filter((x) => wish.has(x.id)).map(card).join("") : '<p class="none">No favourites yet. Tap the heart on any product to save it.</p>'; $("shopTitle").textContent = "Your favourites"; $("tabs").querySelectorAll("button").forEach((b) => b.classList.remove("on")); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* ---------- Bag ---------- */
+    let bag = [];
+    try { bag = JSON.parse(localStorage.getItem("rcBag") || "[]"); } catch (e) {}
+    const FREE = 35;
+    const renderBag = () => {
+      const n = bag.reduce((s, i) => s + i.q, 0), sub = bag.reduce((s, i) => s + i.q * i.p, 0);
+      $("bagCount").textContent = n; $("bagCount").classList.toggle("on", n > 0);
+      $("drawerList").innerHTML = bag.length ? bag.map((i, k) => `<li><img src="${U(i.img, 160)}" alt="" /><div><b>${i.n}</b><small>${i.shade ? `<i style="background:${i.hex}"></i>${i.shade}` : "&nbsp;"}</small><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>${usd(i.p * i.q)}</span><button data-rm="${k}" aria-label="Remove"><i class="ri-delete-bin-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-shopping-bag-line"></i><p>Your bag is empty.</p></li>`;
+      $("dSub").textContent = usd(sub);
+      $("shipTxt").innerHTML = sub >= FREE ? "You've got <b>free shipping</b>" : `You're <b>${usd(FREE - sub)}</b> away from free shipping`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      try { localStorage.setItem("rcBag", JSON.stringify(bag)); } catch (e) {}
+    };
+    const addToBag = (x, shade, q = 1) => {
+      const key = x.id + (shade ? shade[0] : ""), f = bag.find((i) => i.key === key);
+      f ? (f.q += q) : bag.push({ key, n: x.n, shade: shade && shade[0], hex: shade && shade[1], p: x.p, img: x.img, q });
+      renderBag(); toast(`${x.n}${shade ? " in " + shade[0] : ""} added to bag`);
+      $("bagBtn").classList.remove("bump"); void $("bagBtn").offsetWidth; $("bagBtn").classList.add("bump");
+    };
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.rm !== undefined) bag.splice(+b.dataset.rm, 1); else { const i = bag[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) bag.splice(+b.dataset.k, 1); } renderBag(); });
+    const openBag = () => { closeModal(); document.body.classList.add("bag-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeBag = () => { document.body.classList.remove("bag-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("bagBtn").addEventListener("click", openBag); $("drawerClose").addEventListener("click", closeBag); $("scrim").addEventListener("click", closeBag);
+    $("checkout").addEventListener("click", () => { if (!bag.length) return; bag = []; renderBag(); closeBag(); toast("Order placed! Your free samples are on us."); });
+    renderBag();
+
+    /* ---------- Quick view ---------- */
+    let mItem = null, mShade = null, mQ = 1;
+    const openModal = (x) => {
+      mItem = x; mQ = 1; mShade = x.sh ? x.sh[0] : null;
+      $("mImg").src = U(x.img, 1000); $("mImg").alt = x.n;
+      $("mCat").textContent = { Lips: "Lips", Eyes: "Eyes", Face: "Face", Tools: "Brushes", Sets: "Sets & gifts" }[x.cat];
+      $("mName").textContent = x.n; $("mRate").innerHTML = `<span class="stars">${stars(x.r)}</span>${x.r} · ${x.rc.toLocaleString()} reviews`;
+      $("mPrice").innerHTML = (x.was ? `<s>${usd(x.was)}</s>` : "") + usd(x.p); $("mDesc").textContent = x.d; $("qVal").textContent = 1;
+      $("mShadeWrap").style.display = x.sh ? "" : "none";
+      if (x.sh) { $("mShades").innerHTML = x.sh.map((s, i) => `<button class="${i ? "" : "on"}" data-i="${i}" style="background:${s[1]}" aria-label="${s[0]}"></button>`).join(""); $("mShadeName").textContent = x.sh[0][0]; }
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("mShades").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; mShade = mItem.sh[+b.dataset.i]; $("mShadeName").textContent = mShade[0]; $("mShades").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); });
+    $("qMinus").addEventListener("click", () => { mQ = Math.max(1, mQ - 1); $("qVal").textContent = mQ; });
+    $("qPlus").addEventListener("click", () => { mQ++; $("qVal").textContent = mQ; });
+    $("mAdd").addEventListener("click", () => { addToBag(mItem, mShade, mQ); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-add]"), q = e.target.closest("[data-quick]"), w = e.target.closest("[data-wish]");
+      if (a) { const x = P.find((p) => p.id === +a.dataset.add); x.sh ? openModal(x) : addToBag(x); }
+      if (q) { closeSearch(); openModal(P.find((p) => p.id === +q.dataset.quick)); }
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); w.classList.toggle("on", wish.has(id)); w.innerHTML = `<i class="ri-heart-${wish.has(id) ? "fill" : "line"}"></i>`; renderWish(); toast(wish.has(id) ? "Saved to favourites" : "Removed from favourites"); }
+    });
+
+    /* ---------- Search ---------- */
+    const openSearch = () => { document.body.classList.add("search-open"); $("search").setAttribute("aria-hidden", "false"); setTimeout(() => $("searchInput").focus(), 150); };
+    const closeSearch = () => { document.body.classList.remove("search-open"); $("search").setAttribute("aria-hidden", "true"); };
+    $("searchBtn").addEventListener("click", openSearch); $("searchClose").addEventListener("click", closeSearch);
+    $("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      const res = q ? P.filter((x) => (x.n + " " + x.cat + " " + (x.sh || []).map((s) => s[0]).join(" ")).toLowerCase().includes(q)) : [];
+      $("searchRes").innerHTML = q ? (res.length ? res.map((x) => `<button data-quick="${x.id}"><img src="${U(x.img, 160)}" alt="" /><span><b>${x.n}</b>${x.cat}</span><em>${usd(x.p)}</em></button>`).join("") : `<p>No results for "${e.target.value}".</p>`) : "";
+    });
+
+    /* ---------- Reviews ---------- */
+    const REV = [
+      ["Velvet Matte Lipstick", "Finally a matte that doesn't crack. I wore Club Red to a wedding and it survived dinner, drinks and dancing.", "Jade W.", 5],
+      ["Warm Nudes Palette", "Every shade is wearable and they blend like a dream. The shimmer is gorgeous without looking glittery.", "Aisha K.", 5],
+      ["Pro Brush Set (12)", "Softer than brushes I've paid three times as much for. No shedding after a month of daily use.", "Megan T.", 5],
+    ];
+    $("reviews").innerHTML = REV.map(([p, q, n, r], i) => `<figure class="rev reveal" style="--d:${i * 0.1}s"><span class="stars">${stars(r)}</span><blockquote>“${q}”</blockquote><figcaption><b>${n}</b><span><i class="ri-checkbox-circle-fill"></i>Verified buyer · ${p}</span></figcaption></figure>`).join("");
+
+    /* ---------- Misc ---------- */
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeBag(); closeSearch(); closeNav(); } });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 40), { passive: true });
+    document.querySelectorAll(".head, .services__in > p").forEach((el) => el.classList.add("reveal"));
+    document.querySelectorAll(".cat").forEach((el, i) => el.style.setProperty("--d", i * 0.06 + "s"));
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Welcome! Your 15% code is in your inbox."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ironclad — Strength &amp; Conditioning Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo"><i class="ri-shield-flash-fill"></i>IRONCLAD</a>
+      <nav class="nav" id="nav"><a href="#programs">Programs</a><a href="#bmi">BMI</a><a href="#schedule">Schedule</a><a href="#trainers">Trainers</a><a href="#pricing">Pricing</a></nav>
+      <a href="#join" class="btn">Free Trial</a>
+      <button class="burger" id="burger" aria-label="Menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container">
+      <span class="kick">Open 24/7 · Downtown Austin</span>
+      <h1>No <em>Excuses.</em><br /><span>Just Results.</span></h1>
+      <p>Strength, conditioning and coaching for people who are done starting over. 12,000 sq ft of serious equipment and coaches who actually care.</p>
+      <div class="hero__btns">
+        <a href="#join" class="btn">Start 7-Day Free Trial <i class="ri-arrow-right-line"></i></a>
+        <a href="#programs" class="btn btn--ghost">Explore Programs</a>
+      </div>
+      <div class="hero__stats">
+        <div><b>2,400+</b><span>Active members</span></div>
+        <div><b>35</b><span>Classes weekly</span></div>
+        <div><b>18</b><span>Certified coaches</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div><span>Strength</span><i class="ri-flashlight-fill"></i><span>Hiit</span><i class="ri-flashlight-fill"></i><span>Boxing</span><i class="ri-flashlight-fill"></i><span>Crossfit</span><i class="ri-flashlight-fill"></i><span>Mobility</span><i class="ri-flashlight-fill"></i><span>Nutrition</span><i class="ri-flashlight-fill"></i><span>Strength</span><i class="ri-flashlight-fill"></i><span>Hiit</span><i class="ri-flashlight-fill"></i><span>Boxing</span><i class="ri-flashlight-fill"></i><span>Crossfit</span><i class="ri-flashlight-fill"></i><span>Mobility</span><i class="ri-flashlight-fill"></i><span>Nutrition</span><i class="ri-flashlight-fill"></i></div>
+  </div>
+
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="title"><span class="kick">Our programs</span><h2>Train <span>Your</span> Way</h2></div>
+      <div class="prog-grid">
+        <div class="prog"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=80" alt="" /><div class="prog__body"><span class="prog__num">01</span><h3>Strength</h3><p>Progressive barbell programming for squat, bench and deadlift PRs.</p></div></div>
+        <div class="prog"><img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=700&q=80" alt="" /><div class="prog__body"><span class="prog__num">02</span><h3>HIIT</h3><p>45-minute high-intensity circuits that torch calories and build engines.</p></div></div>
+        <div class="prog"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80" alt="" /><div class="prog__body"><span class="prog__num">03</span><h3>Personal</h3><p>One-to-one coaching built entirely around your body and goals.</p></div></div>
+        <div class="prog"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80" alt="" /><div class="prog__body"><span class="prog__num">04</span><h3>Core &amp; Mobility</h3><p>Stability, flexibility and recovery to keep you training for decades.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bmi" id="bmi">
+    <div class="container">
+      <div>
+        <span class="kick">Check your BMI</span>
+        <h2 style="font-size:clamp(40px,5vw,70px);margin-top:14px">Know Where<br />You Start</h2>
+        <p style="margin-top:18px;max-width:460px">Body Mass Index is a simple starting point. Book a free InBody scan with a coach for a full body-composition breakdown.</p>
+        <form class="bmi__form" id="bmiForm">
+          <input type="number" id="h" placeholder="Height (cm)" min="100" max="250" required />
+          <input type="number" id="w" placeholder="Weight (kg)" min="30" max="300" required />
+          <input type="number" placeholder="Age" min="12" max="100" />
+          <select><option>Male</option><option>Female</option></select>
+          <button class="btn">Calculate</button>
+        </form>
+        <div class="bmi__result" id="bmiResult"><b id="bmiVal"></b><span id="bmiCat"></span><p id="bmiTip" style="margin-top:6px"></p></div>
+      </div>
+      <table id="bmiTable">
+        <thead><tr><th>BMI</th><th>Weight status</th></tr></thead>
+        <tbody>
+          <tr data-c="under"><td>Below 18.5</td><td>Underweight</td></tr>
+          <tr data-c="healthy"><td>18.5 — 24.9</td><td>Healthy</td></tr>
+          <tr data-c="over"><td>25.0 — 29.9</td><td>Overweight</td></tr>
+          <tr data-c="obese"><td>30.0 and above</td><td>Obese</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="title"><span class="kick">Class schedule</span><h2>This <span>Week</span></h2></div>
+      <div class="days" id="days"></div>
+      <div class="classes" id="classes"></div>
+    </div>
+  </section>
+
+  <section class="trainers" id="trainers">
+    <div class="container">
+      <div class="title"><span class="kick">Coaches</span><h2>Meet The <span>Team</span></h2></div>
+      <div class="tr-grid">
+        <div class="trainer"><div class="trainer__img"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="" /></div><div class="trainer__body"><div><h4>Jake Morrison</h4><span>Head Strength Coach</span></div><div class="trainer__soc"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-youtube-fill"></i></a></div></div></div>
+        <div class="trainer"><div class="trainer__img"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=80" alt="" /></div><div class="trainer__body"><div><h4>Tasha Reid</h4><span>HIIT &amp; Boxing</span></div><div class="trainer__soc"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-tiktok-fill"></i></a></div></div></div>
+        <div class="trainer"><div class="trainer__img"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="" /></div><div class="trainer__body"><div><h4>Carlos Vega</h4><span>Mobility &amp; Recovery</span></div><div class="trainer__soc"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-youtube-fill"></i></a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="title"><span class="kick">Membership</span><h2>Pick Your <span>Plan</span></h2></div>
+      <div class="toggle" id="billing"><button class="on" data-b="m">Monthly</button><button data-b="y">Yearly <small>— save 20%</small></button></div>
+      <div class="plans">
+        <div class="plan"><h3>Basic</h3><div class="price" data-m="29" data-y="23"><sup>$</sup><span>29</span><small> /month</small></div><ul><li><i class="ri-check-line"></i> Gym floor access</li><li><i class="ri-check-line"></i> Locker &amp; showers</li><li><i class="ri-check-line"></i> 1 InBody scan</li><li class="no"><i class="ri-close-line"></i> Group classes</li><li class="no"><i class="ri-close-line"></i> Personal coaching</li></ul><a href="#join" class="btn btn--ghost">Choose Basic</a></div>
+        <div class="plan plan--hot"><h3>Pro</h3><div class="price" data-m="59" data-y="47"><sup>$</sup><span>59</span><small> /month</small></div><ul><li><i class="ri-check-line"></i> 24/7 gym access</li><li><i class="ri-check-line"></i> Unlimited group classes</li><li><i class="ri-check-line"></i> Monthly InBody scans</li><li><i class="ri-check-line"></i> Sauna &amp; recovery zone</li><li class="no"><i class="ri-close-line"></i> Personal coaching</li></ul><a href="#join" class="btn">Choose Pro</a></div>
+        <div class="plan"><h3>Elite</h3><div class="price" data-m="149" data-y="119"><sup>$</sup><span>149</span><small> /month</small></div><ul><li><i class="ri-check-line"></i> Everything in Pro</li><li><i class="ri-check-line"></i> 4 PT sessions / month</li><li><i class="ri-check-line"></i> Custom nutrition plan</li><li><i class="ri-check-line"></i> Guest passes</li><li><i class="ri-check-line"></i> Priority booking</li></ul><a href="#join" class="btn btn--ghost">Choose Elite</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="join">
+    <div class="container">
+      <span class="kick">Limited offer</span>
+      <h2>Your First Week<br />Is <span>On Us</span></h2>
+      <p>Full access to the gym and every class for 7 days. No contract, no credit card, no pressure.</p>
+      <form id="joinForm"><input type="email" placeholder="Enter your email" required /><button class="btn">Claim Pass</button></form>
+      <p class="ok" id="joinOk">You're in! Check your inbox for your 7-day pass.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#" class="logo"><i class="ri-shield-flash-fill"></i>IRONCLAD</a><p>Serious training for serious people. Downtown Austin since 2016.</p></div>
+        <div><h4>Gym</h4><ul><li><a href="#programs">Programs</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#pricing">Membership</a></li></ul></div>
+        <div><h4>Hours</h4><ul><li>Members: 24/7</li><li>Staffed: 6am — 10pm</li><li>Classes: 6am — 8pm</li></ul></div>
+        <div><h4>Visit</h4><ul><li>500 E 6th Street</li><li>Austin, TX 78701</li><li>(512) 555-0136</li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Ironclad Fitness LLC</span><span>Instagram · YouTube · TikTok</span></div>
+    </div>
+  </footer>
+
+  <script>
+    /* BMI */
+    document.getElementById("bmiForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const h = +document.getElementById("h").value / 100, w = +document.getElementById("w").value;
+      const bmi = w / (h * h);
+      const [cat, label, tip] = bmi < 18.5 ? ["under", "Underweight", "Our strength program can help you build healthy muscle mass."]
+        : bmi < 25 ? ["healthy", "Healthy", "Great base! Let's build strength and performance."]
+        : bmi < 30 ? ["over", "Overweight", "HIIT plus a nutrition plan is a proven combo for you."]
+        : ["obese", "Obese", "Start with a free coach consult — we'll build a safe, steady plan."];
+      document.getElementById("bmiVal").textContent = bmi.toFixed(1);
+      document.getElementById("bmiCat").textContent = label;
+      document.getElementById("bmiTip").textContent = tip;
+      document.getElementById("bmiResult").style.display = "block";
+      document.querySelectorAll("#bmiTable tbody tr").forEach((r) => r.classList.toggle("hit", r.dataset.c === cat));
+    });
+
+    /* Schedule */
+    const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const CLASSES = {
+      Mon: [["06:00", "Strength Foundations", "Jake M.", "Beginner"], ["12:15", "Lunch HIIT", "Tasha R.", "All levels"], ["18:00", "Powerlifting", "Jake M.", "Advanced"], ["19:30", "Mobility Flow", "Carlos V.", "All levels"]],
+      Tue: [["06:30", "Boxing Conditioning", "Tasha R.", "Intermediate"], ["17:30", "Olympic Lifting", "Jake M.", "Advanced"], ["19:00", "Core Blast", "Carlos V.", "All levels"]],
+      Wed: [["06:00", "HIIT 45", "Tasha R.", "All levels"], ["12:15", "Kettlebell Club", "Jake M.", "Intermediate"], ["18:30", "Stretch & Recover", "Carlos V.", "Beginner"]],
+      Thu: [["06:30", "Strength Foundations", "Jake M.", "Beginner"], ["17:30", "Boxing Technique", "Tasha R.", "All levels"], ["19:00", "Mobility Flow", "Carlos V.", "All levels"]],
+      Fri: [["06:00", "Friday Burner", "Tasha R.", "Intermediate"], ["17:00", "Deadlift Day", "Jake M.", "Advanced"]],
+      Sat: [["09:00", "Partner WOD", "Tasha R.", "All levels"], ["10:30", "Open Gym Coaching", "Jake M.", "All levels"], ["12:00", "Yoga for Lifters", "Carlos V.", "Beginner"]],
+    };
+    const booked = new Set();
+    const today = DAYS[Math.min(Math.max(new Date().getDay() - 1, 0), 5)];
+    const days = document.getElementById("days"), classes = document.getElementById("classes");
+    days.innerHTML = DAYS.map((d) => `<button data-d="${d}" class="${d === today ? "on" : ""}">${d}</button>`).join("");
+    function renderDay(d) {
+      classes.innerHTML = CLASSES[d].map(([t, n, c, l], i) => {
+        const key = d + t;
+        return `<div class="class" style="animation-delay:${i * 60}ms"><time>${t}</time><h4>${n}</h4><span class="coach">with ${c}</span><span class="lvl">${l}</span>
+          <button class="join ${booked.has(key) ? "booked" : ""}" data-k="${key}">${booked.has(key) ? "Booked ✓" : "Book spot"}</button></div>`;
+      }).join("");
+    }
+    days.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; days.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); renderDay(b.dataset.d); });
+    classes.addEventListener("click", (e) => { const b = e.target.closest(".join"); if (!b) return; booked.has(b.dataset.k) ? booked.delete(b.dataset.k) : booked.add(b.dataset.k); renderDay(days.querySelector(".on").dataset.d); });
+    renderDay(today);
+
+    /* Billing toggle */
+    document.getElementById("billing").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      document.querySelectorAll("#billing button").forEach((x) => x.classList.toggle("on", x === b));
+      document.querySelectorAll(".price").forEach((p) => p.querySelector("span").textContent = p.dataset[b.dataset.b]);
+    });
+
+    document.getElementById("joinForm").addEventListener("submit", (e) => { e.preventDefault(); document.getElementById("joinOk").style.display = "block"; });
+    addEventListener("scroll", () => document.getElementById("header").classList.toggle("solid", scrollY > 60));
+    document.getElementById("burger").onclick = () => document.getElementById("nav").classList.toggle("open");
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

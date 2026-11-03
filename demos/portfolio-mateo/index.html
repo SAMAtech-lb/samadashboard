@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateo Ruiz — Private Chef, London</title>
+  <meta name="description" content="Mateo Ruiz is a London private chef cooking fire-led tasting menus, dinner parties and long-table feasts in your home. See the menu, check open dates and book a dinner." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo">Mateo Ruiz<span class="flame"><i></i></span></a>
+      <nav class="nav" id="nav">
+        <a href="#menu">The menu</a>
+        <a href="#about">About</a>
+        <a href="#dinners">Dinners</a>
+        <a href="#plates">Plates</a>
+        <a href="#book">Book</a>
+      </nav>
+      <a href="#book" class="btn" data-magnet>Book a dinner <i class="ri-arrow-right-line"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+      <div class="hero__meta reveal" style="--d:.1s">
+        <span>Private chef · Fire &amp; seasons</span>
+        <span>Kitchen temp <b id="temp">212°C</b></span>
+        <span>London — and wherever you are</span>
+      </div>
+
+      <div class="hero__mask reveal" style="--d:.2s">
+        <div class="hero__plates" id="plates-bg">
+          <img class="on" src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=2000&q=80" alt="" />
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=2000&q=80" alt="" />
+          <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=2000&q=80" alt="" />
+          <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=2000&q=80" alt="" />
+        </div>
+        <h1 class="hero__name display">Mateo Ruiz</h1>
+      </div>
+
+      <div class="hero__sub">
+        <p class="hero__tag reveal" style="--d:.4s">I cook <em>fire-led tasting menus</em> in your kitchen, for six to forty guests — then leave it spotless.</p>
+        <div class="hero__now reveal" style="--d:.55s">
+          <span class="dot"></span>
+          <div><b>Now booking</b><span id="nextOpen">December — 4 Saturdays left</span></div>
+        </div>
+        <div class="hero__cta reveal" style="--d:.7s">
+          <a href="#menu" class="btn btn--ghost">See the menu</a>
+          <a href="#book" class="btn" data-magnet>Check dates <i class="ri-calendar-line"></i></a>
+        </div>
+      </div>
+      <span class="hero__scroll">Scroll — first course</span>
+    </section>
+
+    <!-- Menu: pinned horizontal courses -->
+    <section class="menu" id="menu">
+      <div class="menu__pin">
+        <div class="menu__head">
+          <span class="label">Autumn tasting menu · 7 courses</span>
+          <div class="menu__bar"><i id="menuBar"></i></div>
+          <span class="menu__count"><b id="menuNo">01</b> / 07</span>
+        </div>
+        <div class="menu__track" id="menuTrack"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about__in">
+        <figure class="about__img reveal from-l"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=80" alt="Mateo Ruiz plating under copper lights" loading="lazy" /><figcaption>Plating course four · Holland Park</figcaption></figure>
+        <div>
+          <span class="label reveal">About the chef</span>
+          <p class="about__text" id="aboutText">I grew up in my grandmother's kitchen in Valencia, learned fire at a grill in San Sebastián and spent nine years in London's best restaurant kitchens. Now I bring all of it to your table: smoke, seasons, and food meant to be shared slowly.</p>
+          <div class="nums">
+            <div><strong class="grad" data-count="318">0</strong><span>dinners cooked since 2021</span></div>
+            <div><strong class="grad" data-count="9">0</strong><span>years in Michelin-starred kitchens</span></div>
+            <div><strong class="grad" data-count="40">0</strong><span>guests at my largest table</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dinner formats: expanding panels -->
+    <section class="section dinners" id="dinners">
+      <div class="container">
+        <div class="head reveal">
+          <span class="label">Four ways to dine</span>
+          <h2 class="display">Pick the <span class="grad">evening</span></h2>
+        </div>
+        <div class="panels" id="panels"></div>
+      </div>
+    </section>
+
+    <!-- Plates marquee -->
+    <section class="plates" id="plates" aria-label="Plates from recent dinners">
+      <div class="plates__row" id="row1"></div>
+      <div class="plates__row" id="row2"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section words">
+      <div class="container words__in">
+        <span class="label reveal">From the table</span>
+        <div class="quotes" id="quotes"></div>
+        <div class="quotes__nav" id="qDots"></div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section book" id="book">
+      <div class="container book__in">
+        <div class="book__copy">
+          <span class="label reveal">Book a dinner</span>
+          <h2 class="display reveal">Pick a <span class="grad">date</span></h2>
+          <p class="reveal">Glowing dates are open. Choose one, tell me who's coming and I'll send a first menu within 48 hours. A 30% deposit holds the date.</p>
+          <ul class="book__facts reveal">
+            <li><i class="ri-map-pin-line"></i> London &amp; the Home Counties — further on request</li>
+            <li><i class="ri-leaf-line"></i> Vegetarian, vegan and gluten-free menus always possible</li>
+            <li><i class="ri-mail-line"></i> <a href="mailto:hola@mateoruiz.co.uk">hola@mateoruiz.co.uk</a></li>
+          </ul>
+        </div>
+        <form class="booker reveal" id="booker">
+          <div class="cal">
+            <div class="cal__head"><button type="button" id="calPrev" aria-label="Previous month"><i class="ri-arrow-left-s-line"></i></button><b id="calTitle"></b><button type="button" id="calNext" aria-label="Next month"><i class="ri-arrow-right-s-line"></i></button></div>
+            <div class="cal__dow"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+            <div class="cal__grid" id="calGrid"></div>
+          </div>
+          <div class="booker__fields">
+            <div class="field"><span>Dinner</span><div class="seg" id="fmt"></div></div>
+            <div class="field field--row">
+              <span>Guests</span>
+              <div class="step"><button type="button" id="gMinus" aria-label="Fewer guests">−</button><b id="guests">10</b><button type="button" id="gPlus" aria-label="More guests">+</button></div>
+            </div>
+            <div class="field--two">
+              <label>Name<input required name="name" /></label>
+              <label>Email<input type="email" required name="email" /></label>
+            </div>
+            <div class="booker__sum">
+              <div><span id="sumDate">Choose a date</span><strong id="sumTotal">—</strong></div>
+              <button class="btn" type="submit" data-magnet>Request this date</button>
+            </div>
+            <p class="booker__ok" id="bookOk" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__big display">Mateo Ruiz</p>
+    <div class="footer__row">
+      <span>© 2026 Mateo Ruiz Private Dining Ltd</span>
+      <nav><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Terms of booking</a></nav>
+      <a href="#top" class="totop">Back to top <i class="ri-arrow-up-line"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+    /* ---------- Data ---------- */
+    const COURSES = [
+      ["Snack", "Oyster, charred leek, smoked butter", "Rock oysters warmed over embers, leek ash, a spoon of smoked brown butter.", "1414235077428-338989a2e8c0"],
+      ["Garden", "Beetroot baked in salt and hay", "Whole beets cracked open at the table, goat's curd, toasted buckwheat.", "1512621776951-a57141f2eefd"],
+      ["Sea", "Hake, mussels, saffron", "Day-boat hake from Brixham, Valencian saffron broth, mussels opened on the grill.", "1467003909585-2f8a72700288"],
+      ["Fire", "Iberico pork, apple, mustard", "Pork presa cooked hard over oak, roast apple, mustard leaves.", "1432139555190-58524dae6a55"],
+      ["Field", "Short rib, smoked celeriac", "36-hour short rib, celeriac roasted in the coals, red wine and anchovy.", "1476224203421-9ac39bcb3327"],
+      ["Cheese", "Manchego, membrillo, walnut", "Two-year Manchego, my mother's quince paste, Pedro Ximénez.", "1504674900247-0877df9cc836"],
+      ["Sweet", "Burnt Basque cheesecake", "The one everyone asks for. Torched top, soft centre, sherry-soaked figs.", "1540189549336-e6e99c3679fe"],
+    ];
+    const FORMATS = [
+      { id: "dinner", n: "Dinner party", p: 95, min: 6, max: 14, d: "Four courses at the table. The classic evening at home.", img: "1556910103-1c02745aae4d" },
+      { id: "tasting", n: "Tasting menu", p: 150, min: 6, max: 12, d: "Seven courses, the full fire menu above, with optional wine pairing.", img: "1577219491135-ce391730fb2c" },
+      { id: "long", n: "Long table", p: 70, min: 14, max: 40, d: "Sharing platters down the table for birthdays, weddings and launches.", img: "1504674900247-0877df9cc836" },
+      { id: "class", n: "Cooking class", p: 85, min: 4, max: 10, d: "Cook the menu with me, then sit down and eat it together.", img: "1551218808-94e220e084d2" },
+    ];
+    const PLATES = ["1467003909585-2f8a72700288", "1414235077428-338989a2e8c0", "1432139555190-58524dae6a55", "1476224203421-9ac39bcb3327", "1504674900247-0877df9cc836", "1540189549336-e6e99c3679fe", "1512621776951-a57141f2eefd", "1546069901-ba9599a7e63c", "1547592180-85f173990554", "1551218808-94e220e084d2", "1529042410759-befb1204b468", "1600565193348-f74bd3c7ccdf"];
+    const QUOTES = [
+      ["Mateo cooked my mother's 70th in our garden for twenty-two people. The smoke, the noise, the cheesecake — people still message me about it.", "Harriet Lowe", "70th birthday, Chipping Norton", "1494790108377-be9c29b29330"],
+      ["Restaurant-level food, but you can hear each other talk and nobody has to drive home. Best money we've spent this year.", "Daniel Achebe", "Anniversary dinner, Highgate", "1507003211169-0a1dd7228f2d"],
+      ["He taught eight of my team to cook a whole hake over fire, then fed us like kings. Our best offsite, by miles.", "Priya Raman", "Team cooking class, Shoreditch", "1544005313-94ddf0286df2"],
+    ];
+
+    /* ---------- Render ---------- */
+    $("menuTrack").innerHTML = COURSES.map(([k, t, d, img], i) => `
+      <article class="course">
+        <div class="course__img"><img src="${U(img, 1200)}" alt="${t}" loading="lazy" /></div>
+        <div class="course__txt"><span class="course__no display">0${i + 1}</span><span class="course__kind">${k}</span><h3>${t}</h3><p>${d}</p></div>
+      </article>`).join("");
+
+    $("panels").innerHTML = FORMATS.map((f, i) => `
+      <article class="panel ${i === 1 ? "on" : ""}" tabindex="0" data-f="${f.id}">
+        <img src="${U(f.img, 1100)}" alt="${f.n}" loading="lazy" />
+        <div class="panel__body">
+          <span class="panel__no display">0${i + 1}</span>
+          <h3>${f.n}</h3>
+          <div class="panel__more"><p>${f.d}</p><p class="panel__price"><b class="grad">£${f.p}</b> per guest · ${f.min}–${f.max} guests</p><button class="btn btn--sm" data-pick="${f.id}">Book this</button></div>
+        </div>
+      </article>`).join("");
+    document.querySelectorAll(".panel").forEach((p) => {
+      const on = () => document.querySelectorAll(".panel").forEach((o) => o.classList.toggle("on", o === p));
+      p.addEventListener("mouseenter", on); p.addEventListener("focus", on); p.addEventListener("click", on);
+    });
+
+    const fig = (id) => `<figure><img src="${U(id, 600)}" alt="Plate from a recent dinner" loading="lazy" /></figure>`;
+    const h1 = PLATES.slice(0, 6), h2 = PLATES.slice(6);
+    $("row1").innerHTML = [...h1, ...h1, ...h1].map(fig).join("");
+    $("row2").innerHTML = [...h2, ...h2, ...h2].map(fig).join("");
+
+    $("quotes").innerHTML = QUOTES.map(([q, n, r, img], i) => `<blockquote class="quote ${i ? "" : "on"}"><p>“${q}”</p><footer><img src="${U(img, 120)}" alt="${n}" loading="lazy" /><span><b>${n}</b>${r}</span></footer></blockquote>`).join("");
+    $("qDots").innerHTML = QUOTES.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Quote ${i + 1}"></button>`).join("");
+    let qi = 0;
+    const showQ = (i) => { qi = (i + QUOTES.length) % QUOTES.length; document.querySelectorAll(".quote").forEach((q, k) => q.classList.toggle("on", k === qi)); document.querySelectorAll("#qDots button").forEach((d, k) => d.classList.toggle("on", k === qi)); };
+    $("qDots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { showQ([...$("qDots").children].indexOf(b)); clearInterval(qT); } });
+    const qT = setInterval(() => showQ(qi + 1), 6500);
+
+    /* ---------- Hero: plates cycling inside the name ---------- */
+    const heroImgs = [...document.querySelectorAll("#plates-bg img")];
+    let hi = 0;
+    setInterval(() => { heroImgs[hi].classList.remove("on"); hi = (hi + 1) % heroImgs.length; heroImgs[hi].classList.add("on"); }, 3200);
+    setInterval(() => { $("temp").textContent = 205 + Math.round(Math.random() * 18) + "°C"; }, 1400);
+
+    /* ---------- Embers ---------- */
+    const cv = $("embers"), cx = cv.getContext("2d");
+    let W = 0, H = 0, mouse = { x: -999, y: -999 };
+    const sparks = [];
+    function size() { const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0); }
+    size(); addEventListener("resize", size);
+    $("top").addEventListener("pointermove", (e) => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+    $("top").addEventListener("pointerleave", () => (mouse = { x: -999, y: -999 }));
+    function spawn() { sparks.push({ x: Math.random() * W, y: H + 10, vx: (Math.random() - .5) * .4, vy: -(0.6 + Math.random() * 1.4), r: .8 + Math.random() * 2.2, life: 1, hue: 18 + Math.random() * 25, tw: Math.random() * 6 }); }
+    function emberLoop(t) {
+      cx.clearRect(0, 0, W, H);
+      if (sparks.length < (W < 700 ? 60 : 130)) spawn();
+      for (let i = sparks.length - 1; i >= 0; i--) {
+        const s = sparks[i];
+        const dx = s.x - mouse.x, dy = s.y - mouse.y, d = Math.hypot(dx, dy);
+        if (d < 140) { s.vx += dx / d * .25; s.vy += dy / d * .12; }
+        s.vx += Math.sin(t / 700 + s.tw) * .01; s.vx *= .985;
+        s.x += s.vx; s.y += s.vy; s.life -= .0035;
+        if (s.life <= 0 || s.y < -20) { sparks.splice(i, 1); continue; }
+        const a = s.life * (.6 + .4 * Math.sin(t / 120 + s.tw));
+        const g = cx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 5);
+        g.addColorStop(0, `hsla(${s.hue},100%,62%,${a})`); g.addColorStop(1, `hsla(${s.hue},100%,50%,0)`);
+        cx.fillStyle = g; cx.beginPath(); cx.arc(s.x, s.y, s.r * 5, 0, 7); cx.fill();
+        cx.fillStyle = `hsla(${s.hue + 15},100%,80%,${a})`; cx.beginPath(); cx.arc(s.x, s.y, s.r * .7, 0, 7); cx.fill();
+      }
+      requestAnimationFrame(emberLoop);
+    }
+    if (!reduced) requestAnimationFrame(emberLoop);
+
+    /* ---------- About: words light up on scroll ---------- */
+    const aboutText = $("aboutText");
+    aboutText.innerHTML = aboutText.textContent.split(" ").map((w) => `<span class="w">${w}</span>`).join(" ");
+    const wordsEls = [...aboutText.querySelectorAll(".w")];
+
+    /* ---------- Scroll-driven motion ---------- */
+    const menu = $("menu"), track = $("menuTrack"), row1 = $("row1"), row2 = $("row2"), platesSec = $("plates");
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      // Pinned menu: vertical scroll drives the horizontal course track.
+      const m = menu.getBoundingClientRect();
+      const span = menu.offsetHeight - vh;
+      const p = clamp(-m.top / Math.max(1, span), 0, 1);
+      const maxX = track.scrollWidth - innerWidth + 48;
+      track.style.transform = `translate3d(${-p * maxX}px,0,0)`;
+      $("menuBar").style.width = p * 100 + "%";
+      $("menuNo").textContent = String(Math.min(COURSES.length, Math.floor(p * COURSES.length) + 1)).padStart(2, "0");
+      track.querySelectorAll(".course").forEach((c) => { const r = c.getBoundingClientRect(); const k = clamp(1 - Math.abs(r.left + r.width / 2 - innerWidth / 2) / innerWidth, 0, 1); c.style.setProperty("--k", k.toFixed(3)); });
+      // Plates rows slide opposite ways.
+      const pr = platesSec.getBoundingClientRect(), off = (vh - pr.top) * .35;
+      row1.style.transform = `translate3d(${off - 520}px,0,0)`;
+      row2.style.transform = `translate3d(${-(off - 260)}px,0,0)`;
+      // About words.
+      const a = aboutText.getBoundingClientRect();
+      const ap = clamp((vh * .85 - a.top) / (a.height + vh * .5), 0, 1);
+      const lit = reduced ? wordsEls.length : Math.floor(ap * wordsEls.length);
+      wordsEls.forEach((w, i) => w.classList.toggle("lit", i < lit));
+      // Header + active link.
+      $("header").classList.toggle("sticky", scrollY > 40);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * .4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll);
+    onScroll();
+
+    /* ---------- Booking calendar ---------- */
+    let view = new Date(); view.setDate(1);
+    const bk = { date: null, fmt: "tasting", guests: 10 };
+    const seed = (d) => (d.getDate() * 7 + d.getMonth() * 13) % 10;
+    function isOpen(d) { const t = new Date(); t.setHours(0, 0, 0, 0); if (d < t) return false; const dow = d.getDay(); return (dow === 5 || dow === 6 || dow === 4) ? seed(d) > 2 : seed(d) > 7; }
+    function renderCal() {
+      const y = view.getFullYear(), mo = view.getMonth();
+      $("calTitle").textContent = view.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+      const first = (new Date(y, mo, 1).getDay() + 6) % 7, days = new Date(y, mo + 1, 0).getDate();
+      let html = "";
+      for (let i = 0; i < first; i++) html += "<span></span>";
+      for (let d = 1; d <= days; d++) {
+        const dt = new Date(y, mo, d), open = isOpen(dt), sel = bk.date && dt.getTime() === bk.date.getTime();
+        html += `<button type="button" class="${open ? "open" : ""} ${sel ? "sel" : ""}" ${open ? "" : "disabled"} data-d="${dt.getTime()}">${d}</button>`;
+      }
+      $("calGrid").innerHTML = html;
+    }
+    $("calGrid").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (!b) return; bk.date = new Date(+b.dataset.d); renderCal(); summary(); });
+    $("calPrev").onclick = () => { const t = new Date(); t.setDate(1); if (view > t) { view.setMonth(view.getMonth() - 1); renderCal(); } };
+    $("calNext").onclick = () => { view.setMonth(view.getMonth() + 1); renderCal(); };
+    $("fmt").innerHTML = FORMATS.map((f) => `<button type="button" data-f="${f.id}" class="${f.id === bk.fmt ? "on" : ""}">${f.n}</button>`).join("");
+    function fmtSel() { return FORMATS.find((f) => f.id === bk.fmt); }
+    $("fmt").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (!b) return; pickFmt(b.dataset.f); });
+    function pickFmt(id) { bk.fmt = id; const f = fmtSel(); bk.guests = clamp(bk.guests, f.min, f.max); document.querySelectorAll("#fmt button").forEach((x) => x.classList.toggle("on", x.dataset.f === id)); summary(); }
+    $("gMinus").onclick = () => { bk.guests = Math.max(fmtSel().min, bk.guests - 1); summary(); };
+    $("gPlus").onclick = () => { bk.guests = Math.min(fmtSel().max, bk.guests + 1); summary(); };
+    function summary() {
+      const f = fmtSel();
+      $("guests").textContent = bk.guests;
+      $("sumDate").textContent = bk.date ? `${bk.date.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" })} · ${f.n} · ${bk.guests} guests` : `${f.n} · ${bk.guests} guests · choose a date`;
+      $("sumTotal").textContent = "£" + (f.p * bk.guests).toLocaleString("en-GB");
+    }
+    document.addEventListener("click", (e) => { const b = e.target.closest("[data-pick]"); if (!b) return; pickFmt(b.dataset.pick); $("book").scrollIntoView({ behavior: "smooth" }); });
+    $("booker").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!bk.date) { $("bookOk").textContent = "Pick a glowing date in the calendar first."; $("bookOk").className = "booker__ok bad"; return; }
+      $("bookOk").className = "booker__ok ok";
+      $("bookOk").textContent = `Request sent for ${bk.date.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}. I'll reply within 48 hours with a first menu.`;
+    });
+    renderCal(); summary();
+
+    /* ---------- Reveal + count-up ---------- */
+    function countUp(el) { const end = +el.dataset.count, t0 = performance.now(); (function k(n) { const p = Math.min(1, Math.max(0, (n - t0) / 1600)); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      e.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(e.target);
+    }), { threshold: .15 });
+    document.querySelectorAll(".reveal, .nums, .panel").forEach((el) => io.observe(el));
+
+    /* ---------- Magnetic buttons ---------- */
+    if (!reduced && matchMedia("(pointer:fine)").matches) document.querySelectorAll("[data-magnet]").forEach((b) => {
+      b.addEventListener("pointermove", (e) => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      b.addEventListener("pointerleave", () => (b.style.transform = ""));
+    });
+
+    /* ---------- Nav ---------- */
+    $("burger").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("nav-open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") document.body.classList.remove("nav-open"); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

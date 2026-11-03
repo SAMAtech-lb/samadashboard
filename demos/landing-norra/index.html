@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norra — Iceland Northern Lights Expeditions</title>
+  <meta name="description" content="Eight days around Iceland's south coast and north: glaciers, black-sand beaches, ice caves and a front-row seat to the northern lights. Small groups of 12, expert local guides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#top" class="logo"><i class="ri-snowflake-line"></i>NORRA</a>
+      <nav class="nav" id="nav">
+        <a href="#journey">The Journey</a>
+        <a href="#route">Route</a>
+        <a href="#trips">Trips</a>
+        <a href="#book">Dates &amp; Prices</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#book" class="btn">Book Your Seat</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- 1. Hero: frame grows to full screen -->
+  <section class="scene hero" id="top" data-scene="hero">
+    <div class="pin">
+      <div class="hero__top" id="hero-top">
+        <span class="hero__meta">Iceland · Winter expeditions 2027</span>
+        <span class="hero__title" id="hero-title">NORRA</span>
+      </div>
+      <div class="hero__side hero__side--l">64°N<small>Latitude</small></div>
+      <div class="hero__side hero__side--r">8 Days<small>Small groups of 12</small></div>
+      <div class="hero__frame" id="hero-frame"><img id="hero-img" src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1900&q=80" alt="Vestrahorn mountain above a black-sand beach in Iceland" /></div>
+      <div class="hero__over" id="hero-over">
+        <h2>Chase the Light <br />at the Edge of the World</h2>
+        <p>Eight days of glaciers, ice caves and black-sand beaches — and seven nights under the aurora.</p>
+        <a href="#book" class="btn btn--light">See Dates &amp; Prices <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="scroll-cue" id="cue">Scroll<span></span></div>
+    </div>
+  </section>
+
+  <!-- 2. Statement: words light up -->
+  <section class="scene statement" data-scene="statement">
+    <div class="pin">
+      <p id="statement">Eight days. Two thousand kilometres of black-sand beaches <span class="statement__img"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=300&q=80" alt="" /></span> blue <em class="hl">glaciers</em> and steaming lagoons <span class="statement__img"><img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=300&q=80" alt="" /></span> — and every night a front-row seat to the greatest <em class="hl">light</em> <em class="hl">show</em> on Earth.</p>
+    </div>
+  </section>
+
+  <!-- 3. Stretch type -->
+  <section class="stretch" id="stretch">
+    <div class="stretch__line" data-dir="1">Into the</div>
+    <div class="stretch__line stretch__line--2" data-dir="-1">wild north</div>
+    <div class="stretch__line stretch__line--3" data-dir="1">since 2014</div>
+    <div class="container stretch__row">
+      <p class="reveal">Norra is a small team of Icelandic guides, photographers and drivers. We run just twelve winter departures a year, so every trip gets the best guides, the best timing — and the patience to wait for the sky to wake up.</p>
+      <div class="facts reveal">
+        <div><b>12</b><small>Guests max per trip</small></div>
+        <div><b>94%</b><small>Groups saw the aurora</small></div>
+        <div><b>4.97</b><small>Average review score</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Horizontal journey -->
+  <section class="scene journey" id="journey" data-scene="journey">
+    <div class="pin">
+      <div class="journey__head">
+        <div class="container">
+          <div><span class="kicker" style="color:var(--aurora)">The journey</span><h2>Eight Days, <span>Day by Day</span></h2></div>
+          <div class="journey__count"><span id="day-now">01</span><small>OF 08 DAYS</small></div>
+        </div>
+      </div>
+      <div class="track" id="track"></div>
+      <div class="journey__bar"><span id="journey-bar"></span></div>
+    </div>
+  </section>
+
+  <!-- 5. Route map -->
+  <section class="scene route" id="route" data-scene="route">
+    <div class="pin">
+      <div class="container route__grid">
+        <div class="map">
+          <svg viewBox="0 0 600 430" id="map" role="img" aria-label="Route map of the trip around Iceland">
+            <path class="land" d="M95 300 L130 285 L150 270 L122 252 L62 218 L40 205 L72 194 L128 199 L118 176 L80 171 L42 150 L30 120 L50 90 L90 70 L130 60 L160 80 L170 110 L190 128 L215 148 L240 118 L262 138 L290 108 L320 124 L350 94 L380 118 L410 98 L440 114 L470 118 L500 138 L530 168 L546 198 L560 230 L540 262 L524 292 L490 320 L450 344 L400 364 L340 376 L290 380 L248 372 L208 360 L170 340 L140 320 L110 312 Z" />
+            <ellipse class="glacier" cx="410" cy="300" rx="70" ry="34" />
+            <ellipse class="glacier" cx="300" cy="300" rx="30" ry="18" />
+            <ellipse class="glacier" cx="250" cy="215" rx="34" ry="20" />
+            <path class="ghost" id="ghost" d="M150 268 C 170 260, 180 252, 196 254 S 222 266, 228 272 C 236 300, 238 330, 246 346 C 262 362, 278 366, 292 366 C 340 366, 390 352, 432 344 C 452 340, 470 330, 482 322 C 506 300, 520 278, 520 250 C 518 214, 494 184, 470 170 C 448 158, 425 152, 405 150 C 380 146, 360 140, 340 138" />
+            <path class="path" id="path" d="M150 268 C 170 260, 180 252, 196 254 S 222 266, 228 272 C 236 300, 238 330, 246 346 C 262 362, 278 366, 292 366 C 340 366, 390 352, 432 344 C 452 340, 470 330, 482 322 C 506 300, 520 278, 520 250 C 518 214, 494 184, 470 170 C 448 158, 425 152, 405 150 C 380 146, 360 140, 340 138" />
+            <g id="stops-svg"></g>
+            <circle class="car" id="car" r="6" cx="150" cy="268" />
+          </svg>
+          <div class="map__legend"><span><i></i>Driven so far</span><span><i class="g"></i>Still to come</span></div>
+        </div>
+        <div>
+          <span class="kicker">The route</span>
+          <h2 class="h2" style="font-size:clamp(36px,4vw,58px)">2,000 km of <span>Ring Road</span></h2>
+          <ol class="stops" id="stops"></ol>
+          <div class="km"><div><b id="km">0</b><small>Kilometres driven</small></div><div><b id="stops-n">1</b><small>Stops reached</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Night reveal -->
+  <section class="scene night" id="night" data-scene="night">
+    <div class="pin" id="night-pin">
+      <div class="night__photo" id="night-photo"><img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1900&q=80" alt="Green and violet northern lights over snowy mountains" loading="lazy" /></div>
+      <div class="night__text">
+        <h2>Night falls at 4pm <span>Then the sky dances</span></h2>
+        <p>Our guides track cloud cover and solar activity in real time, and drive you to the clearest skies — even if that means a midnight detour.</p>
+      </div>
+      <div class="kp" id="kp"><small>Aurora forecast · KP index</small><b id="kp-val">0.0</b><div class="kp__bars" id="kp-bars"></div></div>
+    </div>
+  </section>
+
+  <!-- 7. Stacking trip cards -->
+  <section class="trips" id="trips">
+    <div class="container">
+      <div class="trips__head reveal"><span class="kicker">Choose your expedition</span><h2 class="h2">Three Ways to <span>See the North</span></h2><p>All trips include expert guides, a 4×4 minibus, hand-picked guesthouses and the aurora wake-up call.</p></div>
+      <div class="stack" id="stack">
+        <article class="trip" style="--i:0">
+          <div class="trip__img"><img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1000&q=80" alt="Waterfall in green Icelandic valley" loading="lazy" /></div>
+          <div class="trip__body"><small>6 days · South Coast</small><h3>Aurora Classic</h3><p>The essential winter Iceland: Golden Circle, south-coast waterfalls, Vík's black beaches and four nights of aurora hunting.</p>
+            <ul><li><i class="ri-check-line"></i>5 nights guesthouses</li><li><i class="ri-check-line"></i>Golden Circle &amp; Vík</li><li><i class="ri-check-line"></i>Glacier walk</li><li><i class="ri-check-line"></i>Breakfasts &amp; 3 dinners</li></ul>
+            <div class="trip__foot"><div><span>From</span><b>£2,490</b></div><a href="#book" class="btn btn--line" data-trip="0">Choose Classic</a></div></div>
+        </article>
+        <article class="trip trip--dark" style="--i:1">
+          <div class="trip__img"><img src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?auto=format&fit=crop&w=1000&q=80" alt="Aurora over glacier ice" loading="lazy" /><span>Most booked</span></div>
+          <div class="trip__body"><small>8 days · South &amp; North</small><h3>Ice &amp; Fire</h3><p>Our signature route: everything in Classic plus the Jökulsárlón ice lagoon, a crystal ice cave, Vestrahorn at sunrise and Mývatn's hot springs.</p>
+            <ul><li><i class="ri-check-line"></i>7 nights incl. glass igloo</li><li><i class="ri-check-line"></i>Crystal ice cave</li><li><i class="ri-check-line"></i>Mývatn Nature Baths</li><li><i class="ri-check-line"></i>Domestic flight home</li></ul>
+            <div class="trip__foot"><div><span>From</span><b>£3,290</b></div><a href="#book" class="btn btn--light" data-trip="1">Choose Ice &amp; Fire</a></div></div>
+        </article>
+        <article class="trip" style="--i:2">
+          <div class="trip__img"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80" alt="Stars over snowy mountains" loading="lazy" /></div>
+          <div class="trip__body"><small>10 days · Private</small><h3>Highland Private</h3><p>Your own guide and super-jeep for up to six people. Fully flexible days, remote highland lodges and a private photography masterclass.</p>
+            <ul><li><i class="ri-check-line"></i>Private guide &amp; super-jeep</li><li><i class="ri-check-line"></i>Highland lodges</li><li><i class="ri-check-line"></i>Photo masterclass</li><li><i class="ri-check-line"></i>All meals included</li></ul>
+            <div class="trip__foot"><div><span>From</span><b>£5,900</b></div><a href="#book" class="btn btn--line" data-trip="2">Choose Private</a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Parallax gallery -->
+  <section class="para" id="para">
+    <div class="para__cols" id="para-cols"></div>
+    <div class="para__title"><h2><span>Moments from last winter</span>Out There</h2></div>
+  </section>
+
+  <!-- 9. Booking -->
+  <section class="section" id="book">
+    <div class="container book">
+      <div class="reveal">
+        <span class="kicker">Dates &amp; prices</span>
+        <h2 class="h2">Reserve <span>Your Seat</span></h2>
+        <p style="margin-top:18px;font-size:17px">Pick a trip and departure. A 20% deposit holds your seat and is fully refundable for 14 days.</p>
+        <ul class="incl">
+          <li><i class="ri-user-star-line"></i><span><b>Small groups, big guides</b>Max 12 guests with two certified Icelandic guides.</span></li>
+          <li><i class="ri-moon-clear-line"></i><span><b>Aurora guarantee</b>No lights? Come back on any winter trip at 50% off.</span></li>
+          <li><i class="ri-shield-check-line"></i><span><b>ATOL protected</b>Your money is safe, from deposit to departure.</span></li>
+        </ul>
+      </div>
+      <div class="book__card reveal">
+        <h3>Build Your Booking</h3>
+        <div class="lbl">Expedition</div>
+        <div class="pick" id="b-trip"></div>
+        <div class="lbl">Departure <small>All prices per person</small></div>
+        <div class="pick" id="b-date"></div>
+        <div class="lbl">Room</div>
+        <div class="pick" id="b-room"></div>
+        <div class="lbl">Add-ons <small>Optional</small></div>
+        <div class="pick" id="b-add"></div>
+        <div class="lbl">Travellers <div class="stepper"><button id="b-minus" aria-label="Fewer travellers">−</button><span id="b-n">2</span><button id="b-plus" aria-label="More travellers">+</button></div></div>
+        <div class="book__total">
+          <div class="row"><span id="b-line"></span><span id="b-base"></span></div>
+          <div class="row"><span>Add-ons</span><span id="b-extra"></span></div>
+          <div class="row big"><span>Total</span><b id="b-total"></b></div>
+          <div class="row"><span>Deposit today (20%)</span><b id="b-dep" style="color:var(--primary)"></b></div>
+        </div>
+        <form id="b-form">
+          <input required placeholder="Full name" aria-label="Full name" />
+          <input type="email" required placeholder="Email" aria-label="Email" />
+          <button class="btn full" type="submit">Hold My Seats <i class="ri-arrow-right-line"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px" class="reveal"><span class="kicker">FAQ</span><h2 class="h2">Before <span>You Go</span></h2></div>
+      <div class="faq reveal" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div><a href="#top" class="logo"><i class="ri-snowflake-line"></i>NORRA</a><p>Small-group winter expeditions in Iceland, led by locals since 2014. Laugavegur 18, 101 Reykjavík.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div></div>
+        <div><h4>Expeditions</h4><ul><li><a href="#trips">Aurora Classic</a></li><li><a href="#trips">Ice &amp; Fire</a></li><li><a href="#trips">Highland Private</a></li></ul></div>
+        <div><h4>Plan</h4><ul><li><a href="#book">Dates &amp; Prices</a></li><li><a href="#faq">What to Pack</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>+354 555 0142</li><li>hello@norra.is</li><li>Mon–Fri, 9:00–17:00 GMT</li></ul></div>
+      </div>
+    </div>
+    <div class="footer__word" id="footer-word"></div>
+    <div class="footer__bottom"><div class="container" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap"><span>© 2026 Norra Expeditions ehf. Demo template.</span><span>Privacy · Terms · Booking conditions</span></div></div>
+  </footer>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+    const lerp = (a, b, t) => a + (b - a) * t;
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const gbp = (n) => "£" + Math.round(n).toLocaleString("en-GB");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* Statement: wrap every word */
+    const st = $("statement");
+    [...st.childNodes].forEach((n) => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach((w) => { if (!w.trim()) frag.append(w); else { const s = document.createElement("span"); s.className = "w"; s.textContent = w; frag.append(s); } });
+        n.replaceWith(frag);
+      } else if (n.tagName === "EM") { n.classList.add("w"); n.style.fontStyle = "normal"; }
+      else n.classList.add("w");
+    });
+    const words = [...st.querySelectorAll(".w")];
+
+    /* Journey days */
+    const days = [
+      ["Reykjavík & Blue Lagoon", "Land, meet your guides and soak away the flight in the milky blue water of the lagoon.", "1470071459604-3b5ec3a7fe05", ["Lagoon", "Welcome dinner"]],
+      ["The Golden Circle", "Þingvellir's tectonic rift, the Strokkur geyser and thundering Gullfoss in winter light.", "1476610182048-b716b8518aae", ["Geysir", "Gullfoss"]],
+      ["Black Sands of Vík", "Basalt columns at Reynisfjara and a coastal hike above the roaring North Atlantic.", "1551632811-561732d1e306", ["Hike 8 km", "Beach"]],
+      ["Glacier Walk", "Crampons on for a guided walk across the blue ice of Skaftafell's outlet glacier.", "1454496522488-7a8e488e8606", ["Crampons", "Ice axes"]],
+      ["Jökulsárlón Lagoon", "Icebergs drift out to Diamond Beach, then descend into a natural crystal ice cave.", "1529963183134-61a90db47eaf", ["Ice cave", "Diamond Beach"]],
+      ["Vestrahorn Sunrise", "Pink light on the dunes and peaks of Stokksnes — a photographer's dream morning.", "1533240332313-0db49b459ad6", ["Photo stop", "Sunrise"]],
+      ["Mývatn & Hot Springs", "Steaming lava fields, pseudo-craters and an evening in the Mývatn Nature Baths.", "1500534314209-a25ddb2bd429", ["Nature baths", "Lava fields"]],
+      ["The Last Light", "A final night of aurora hunting from Akureyri before a short flight back to Reykjavík.", "1483347756197-71ef80e95f73", ["Aurora", "Farewell"]],
+    ];
+    $("track").innerHTML = days.map(([t, d, img, tags], i) => `
+      <article class="day"><img src="${U(img, 900)}" alt="${t}" loading="lazy" />
+        <div class="day__num"><small>DAY</small>${String(i + 1).padStart(2, "0")}</div>
+        <div class="day__body"><h3>${t}</h3><p>${d}</p><div class="day__tags">${tags.map((x) => `<span>${x}</span>`).join("")}</div></div></article>`).join("");
+
+    /* Route stops */
+    const stops = [["Reykjavík", 150, 268, 0], ["Golden Circle", 205, 252, 120], ["Seljalandsfoss", 238, 318, 245], ["Vík", 292, 366, 390], ["Jökulsárlón", 432, 344, 750], ["Vestrahorn", 482, 322, 860], ["Egilsstaðir", 520, 250, 1100], ["Mývatn", 405, 150, 1420], ["Akureyri", 340, 138, 1520]];
+    const lbl = [[-14, 4, "end"], [6, -14, "start"], [-14, 4, "end"], [0, 26, "middle"], [-6, 26, "middle"], [14, -8, "start"], [14, 4, "start"], [12, -12, "start"], [-12, -12, "end"]];
+    const path = $("path"), L = path.getTotalLength();
+    path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
+    const stopLen = stops.map(([, x, y]) => { let best = 0, bd = 1e9; for (let l = 0; l <= L; l += 2) { const p = path.getPointAtLength(l), dd = (p.x - x) ** 2 + (p.y - y) ** 2; if (dd < bd) { bd = dd; best = l; } } return best; });
+    $("stops-svg").innerHTML = stops.map(([n, x, y], i) => `<g class="stop" data-i="${i}"><circle cx="${x}" cy="${y}" r="7" /><text x="${x + lbl[i][0]}" y="${y + lbl[i][1]}" text-anchor="${lbl[i][2]}">${n}</text></g>`).join("");
+    $("stops").innerHTML = stops.map(([n, , , km], i) => `<li><span>${i + 1}</span>${n}<small>${km} km</small></li>`).join("");
+    const TOTAL_KM = 1520;
+
+    /* KP bars + footer word + parallax */
+    $("kp-bars").innerHTML = "<i></i>".repeat(9);
+    $("footer-word").innerHTML = "NORRA".split("").map((c) => `<span>${c}</span>`).join("");
+    const pImgs = ["1483347756197-71ef80e95f73", "1504280390367-361c6d9f38f4", "1454496522488-7a8e488e8606", "1519681393784-d120267933ba", "1500534314209-a25ddb2bd429", "1529963183134-61a90db47eaf", "1476610182048-b716b8518aae", "1533240332313-0db49b459ad6", "1551632811-561732d1e306"];
+    $("para-cols").innerHTML = [0, 1, 2].map((c) => `<div class="para__col">${pImgs.slice(c * 3, c * 3 + 3).map((id) => `<img src="${U(id, 600)}" alt="Iceland winter moment" loading="lazy" />`).join("")}</div>`).join("");
+
+    /* Scene engine */
+    const prog = (el) => { const r = el.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
+    const sc = Object.fromEntries([...document.querySelectorAll("[data-scene]")].map((el) => [el.dataset.scene, el]));
+    const frame = $("hero-frame"), title = $("hero-title"), over = $("hero-over");
+    function hero(p) {
+      const a = ease(clamp(p / 0.7)), vw = innerWidth, vh = innerHeight;
+      const w0 = vw < 640 ? 0.82 : vw < 991 ? 0.7 : 0.34, h0 = vw < 640 ? 0.3 : vw < 991 ? 0.34 : 0.4;
+      frame.style.width = lerp(w0 * vw, vw, a) + "px";
+      frame.style.height = lerp(h0 * vh, vh, a) + "px";
+      frame.style.top = lerp(62, 50, a) + "%";
+      frame.style.borderRadius = lerp(24, 0, a) + "px";
+      $("hero-img").style.transform = `scale(${lerp(1.25, 1, a)})`;
+      title.style.fontVariationSettings = `"wdth" ${lerp(150, 50, a)}`;
+      $("hero-top").style.transform = `translateY(${-a * 120}px)`;
+      $("hero-top").style.opacity = 1 - a * 1.4;
+      $("cue").style.opacity = 1 - a * 4;
+      const o = clamp((p - 0.7) / 0.18);
+      frame.style.setProperty("--o", o);
+      over.style.opacity = o; over.style.transform = `translateY(${(1 - o) * 30}px)`;
+    }
+    function statement(p) { const lit = Math.floor(clamp(p * 1.15) * words.length); words.forEach((w, i) => w.classList.toggle("on", i < lit)); }
+    function stretch() {
+      document.querySelectorAll(".stretch__line").forEach((el) => {
+        const r = el.getBoundingClientRect(), t = clamp((r.top + r.height / 2) / innerHeight, -0.2, 1.2);
+        el.style.transform = `translateX(${(t - 0.5) * 18 * +el.dataset.dir}vw)`;
+        el.style.fontVariationSettings = `"wdth" ${lerp(150, 55, clamp(t))}`;
+      });
+    }
+    function journey(p) {
+      const tr = $("track"), max = tr.scrollWidth - innerWidth;
+      tr.style.transform = `translateX(${-p * max}px)`;
+      $("day-now").textContent = String(Math.round(p * (days.length - 1)) + 1).padStart(2, "0");
+      $("journey-bar").style.width = p * 100 + "%";
+    }
+    function route(p) {
+      const q = clamp(p * 1.1), len = q * L;
+      path.style.strokeDashoffset = L - len;
+      const pt = path.getPointAtLength(len); $("car").setAttribute("cx", pt.x); $("car").setAttribute("cy", pt.y);
+      let reached = 0;
+      document.querySelectorAll("#stops-svg .stop").forEach((g, i) => { const on = len >= stopLen[i] - 2; g.classList.toggle("on", on); if (on) reached = i; });
+      document.querySelectorAll("#stops li").forEach((li, i) => { li.classList.toggle("on", i <= reached); li.classList.toggle("now", i === reached); });
+      $("km").textContent = Math.round(q * TOTAL_KM).toLocaleString("en-GB");
+      $("stops-n").textContent = reached + 1;
+    }
+    const mix = (a, b, t) => `rgb(${a.map((v, i) => Math.round(lerp(v, b[i], t))).join(",")})`;
+    function night(p) {
+      const d = clamp(p / 0.35), pin = $("night-pin");
+      pin.style.setProperty("--bg", mix([243, 241, 236], [6, 17, 28], d));
+      sc.night.classList.toggle("dark", d > 0.5);
+      const r = ease(clamp((p - 0.15) / 0.5));
+      $("night-photo").style.setProperty("--r", r * 150 + "%");
+      $("night-photo").style.setProperty("--s", lerp(1.25, 1, r));
+      const k = clamp((p - 0.55) / 0.35);
+      $("kp").style.setProperty("--ko", k ? 1 : 0);
+      const kp = k * 6.7; $("kp-val").textContent = kp.toFixed(1) + (kp > 5 ? " · Strong" : kp > 3 ? " · Active" : " · Quiet");
+      document.querySelectorAll("#kp-bars i").forEach((b, i) => b.classList.toggle("on", i < kp));
+    }
+    function trips() {
+      const cards = [...document.querySelectorAll(".trip")];
+      cards.forEach((c, i) => {
+        const next = cards[i + 1]; if (!next) return;
+        const ov = clamp(1 - (next.getBoundingClientRect().top - c.getBoundingClientRect().top) / c.offsetHeight);
+        c.style.transform = `scale(${1 - ov * 0.06})`; c.style.filter = `brightness(${1 - ov * 0.25})`;
+      });
+    }
+    function para() {
+      const r = $("para").getBoundingClientRect(), t = clamp((innerHeight - r.top) / (innerHeight + r.height));
+      [...$("para-cols").children].forEach((col, i) => (col.style.transform = `translateY(${[-260, 140, -380][i] * t + [80, -120, 140][i]}px)`));
+    }
+    function footerWord() {
+      const r = $("footer").getBoundingClientRect(), t = clamp((innerHeight - r.top) / r.height);
+      [...$("footer-word").children].forEach((s, i) => s.style.setProperty("--y", lerp(70, 0, clamp(t * 1.4 - i * 0.07)) + "%"));
+    }
+    function headerState() {
+      const h = $("header"), y = 40;
+      const darkZones = [sc.journey, $("para"), $("footer")].concat(sc.night.classList.contains("dark") ? [sc.night] : []);
+      const overHeroImg = prog(sc.hero) > 0.55 && sc.hero.getBoundingClientRect().bottom > y;
+      const dark = overHeroImg || darkZones.some((z) => { const r = z.getBoundingClientRect(); return r.top <= y && r.bottom >= y; });
+      h.classList.toggle("dark", dark);
+      h.classList.toggle("solid", scrollY > innerHeight * 3);
+    }
+    let ticking = false;
+    function update() {
+      ticking = false;
+      $("progress").style.transform = `scaleX(${scrollY / (document.documentElement.scrollHeight - innerHeight)})`;
+      if (reduced) { hero(1); statement(1); journey(0); route(1); night(1); headerState(); return; }
+      hero(prog(sc.hero)); statement(prog(sc.statement)); stretch(); journey(prog(sc.journey)); route(prog(sc.route)); night(prog(sc.night)); trips(); para(); footerWord(); headerState();
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener("resize", update);
+    update();
+
+    /* Booking */
+    const tripsData = [["Aurora Classic", 2490, "6 days"], ["Ice & Fire", 3290, "8 days"], ["Highland Private", 5900, "10 days"]];
+    const dates = [["Sat 9 Jan", 6], ["Sat 23 Jan", 2], ["Sat 6 Feb", 0], ["Sat 20 Feb", 8], ["Sat 6 Mar", 3], ["Sat 20 Mar", 10]];
+    const rooms = [["Shared twin", 0, "Find a roommate"], ["Private room", 390, "+£390 pp"]];
+    const addons = [["Snowmobile on Langjökull", 249], ["Super-jeep night safari", 189], ["Whale watching", 119]];
+    const bk = { trip: 1, date: 0, room: 0, add: new Set(), n: 2 };
+    $("b-trip").innerHTML = tripsData.map(([n, p, d], i) => `<button data-i="${i}">${n}<small>${d} · from ${gbp(p)}</small></button>`).join("");
+    $("b-date").innerHTML = dates.map(([d, s], i) => `<button data-i="${i}" ${s ? "" : "disabled"}>${d}<small class="${s && s <= 3 ? "low" : ""}">${s ? (s <= 3 ? `Only ${s} seats left` : `${s} seats left`) : "Sold out"}</small></button>`).join("");
+    $("b-room").innerHTML = rooms.map(([n, , s], i) => `<button data-i="${i}">${n}<small>${s}</small></button>`).join("");
+    $("b-add").innerHTML = addons.map(([n, p], i) => `<button data-i="${i}">${n}<small>+${gbp(p)} pp</small></button>`).join("");
+    function calcBook() {
+      const seats = dates[bk.date][1];
+      bk.n = clamp(bk.n, 1, Math.min(8, seats));
+      const [tn, tp] = tripsData[bk.trip], rp = rooms[bk.room][1];
+      const extra = [...bk.add].reduce((s, i) => s + addons[i][1], 0) * bk.n;
+      const base = (tp + rp) * bk.n, total = base + extra;
+      ["b-trip", "b-date", "b-room"].forEach((id, k) => [...$(id).children].forEach((b, i) => b.classList.toggle("active", i === [bk.trip, bk.date, bk.room][k])));
+      [...$("b-add").children].forEach((b, i) => b.classList.toggle("active", bk.add.has(i)));
+      $("b-n").textContent = bk.n;
+      $("b-line").textContent = `${tn}, ${dates[bk.date][0]} · ${bk.n} × ${gbp(tp + rp)}`;
+      $("b-base").textContent = gbp(base); $("b-extra").textContent = extra ? gbp(extra) : "—";
+      $("b-total").textContent = gbp(total); $("b-dep").textContent = gbp(total * 0.2);
+    }
+    const onPick = (id, fn) => $(id).addEventListener("click", (e) => { const b = e.target.closest("button"); if (b && !b.disabled) { fn(+b.dataset.i); calcBook(); } });
+    onPick("b-trip", (i) => (bk.trip = i)); onPick("b-date", (i) => (bk.date = i)); onPick("b-room", (i) => (bk.room = i));
+    onPick("b-add", (i) => (bk.add.has(i) ? bk.add.delete(i) : bk.add.add(i)));
+    $("b-minus").onclick = () => { bk.n--; calcBook(); };
+    $("b-plus").onclick = () => { if (bk.n >= dates[bk.date][1]) toast(`Only ${dates[bk.date][1]} seats left on this departure`); bk.n++; calcBook(); };
+    document.querySelectorAll("[data-trip]").forEach((a) => a.addEventListener("click", () => { bk.trip = +a.dataset.trip; calcBook(); }));
+    $("b-form").addEventListener("submit", (e) => { e.preventDefault(); toast(`${bk.n} seat${bk.n > 1 ? "s" : ""} held on ${tripsData[bk.trip][0]} (${dates[bk.date][0]}) — deposit link sent!`); e.target.reset(); });
+    calcBook();
+
+    /* FAQ */
+    const faqs = [
+      ["When is the best time to see the northern lights?", "From late September to early April, when the nights are long and dark. Our departures run January to March, when clear, cold nights are most common."],
+      ["How cold does it get?", "Usually between −5°C and +3°C on the south coast, colder in the north. We send a full packing list and lend crampons, helmets and thermal overalls."],
+      ["What if we don't see the aurora?", "It's nature, so it can't be promised — but 94% of our groups see it. If yours doesn't, you can join any future winter trip at 50% off."],
+      ["Is the trip suitable for beginners?", "Yes. Walks are 2–8 km on mostly flat ground. The glacier walk is fully guided and suitable for anyone with average fitness."],
+      ["Are flights included?", "International flights aren't included, so you can fly from your nearest airport. Ice & Fire includes the domestic flight from Akureyri back to Reykjavík."],
+    ];
+    $("faq-list").innerHTML = faqs.map(([q, a], i) => `<div class="acc ${i ? "" : "open"}"><button>${q}<i class="ri-add-line"></i></button><div class="acc__body"><p>${a}</p></div></div>`).join("");
+    const setAcc = (el, o) => { el.classList.toggle("open", o); const b = el.querySelector(".acc__body"); b.style.maxHeight = o ? b.scrollHeight + "px" : 0; };
+    document.querySelectorAll(".acc").forEach((a) => setAcc(a, a.classList.contains("open")));
+    $("faq-list").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const acc = b.parentNode, o = !acc.classList.contains("open"); document.querySelectorAll(".acc").forEach((a) => setAcc(a, false)); setAcc(acc, o); });
+
+    /* Toast, menu, reveal */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3600); }
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    document.querySelectorAll("#nav a").forEach((l) => l.addEventListener("click", () => $("nav").classList.remove("open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

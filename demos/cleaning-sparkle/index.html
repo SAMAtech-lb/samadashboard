@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparkle &amp; Co. — Professional Home &amp; Office Cleaning</title>
+  <meta name="description" content="Trusted, insured cleaners for homes, apartments and offices. Get an instant price, book online in 60 seconds and enjoy a 100% satisfaction guarantee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar__in">
+      <div class="topbar__info">
+        <span><i class="ri-time-line"></i> Mon – Sat: 7:00 – 20:00</span>
+        <span><i class="ri-mail-line"></i> book@sparkleandco.com</span>
+        <span><i class="ri-map-pin-line"></i> Serving Greater Austin, TX</span>
+      </div>
+      <div class="topbar__social">
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="#" aria-label="Google reviews"><i class="ri-google-fill"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__icon"><i class="ri-sparkling-2-fill"></i></span><span>Sparkle<em>&amp;Co.</em></span></a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#quote">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:+15125550188" class="call"><i class="ri-phone-fill"></i><span><small>Call us now</small>(512) 555-0188</span></a>
+        <a href="#quote" class="btn">Book Now</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__in">
+      <div class="hero__text reveal">
+        <span class="label"><i class="ri-shield-check-fill"></i> Insured, vetted &amp; eco-friendly</span>
+        <h1>A spotless home <span>without lifting a finger</span></h1>
+        <p>Professional cleaners for homes, apartments and offices across Austin. Transparent prices, same-week availability and a 100% satisfaction guarantee.</p>
+        <form class="quick" id="quickForm">
+          <label><i class="ri-home-smile-line"></i>
+            <select id="quickService" aria-label="Service">
+              <option value="0">Standard cleaning</option>
+              <option value="1">Deep cleaning</option>
+              <option value="2">Move in / out</option>
+              <option value="3">Office cleaning</option>
+            </select>
+          </label>
+          <label><i class="ri-map-pin-2-line"></i><input type="text" id="quickZip" placeholder="ZIP code" inputmode="numeric" maxlength="5" aria-label="ZIP code" /></label>
+          <button class="btn" type="submit">Get my price</button>
+        </form>
+        <p class="quick__msg" id="quickMsg"></p>
+        <div class="hero__rating">
+          <div class="g"><i class="ri-google-fill"></i><div><strong>4.9 <span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></strong><small>1,240+ Google reviews</small></div></div>
+          <div class="g"><i class="ri-shield-check-fill"></i><div><strong>$2M insured</strong><small>Every clean, every room</small></div></div>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Professional cleaner wiping a window" />
+        <div class="avail"><p><i></i> Open slots this week</p><ul id="availList"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container features__in">
+      <p class="promise reveal"><span>Background-checked cleaners</span><span>$2M liability cover</span><span>Products safe for kids &amp; pets</span><span>Not happy? We re-clean free</span></p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__imgs reveal">
+        <img class="about__a" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Freshly cleaned bright bathroom" loading="lazy" />
+        <img class="about__b" src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80" alt="Gloved hand holding a spray bottle" loading="lazy" />
+      </div>
+      <div class="about__text reveal">
+        <span class="sub-title">About Sparkle &amp; Co.</span>
+        <h2>Austin's most trusted <span>cleaning team</span> since 2011</h2>
+        <p>We started as a two-person team with one van and a simple promise: leave every home cleaner than we found it — and treat it like our own. Today 60+ trained cleaners serve families and businesses across Greater Austin.</p>
+        <div class="about__list">
+          <div><i class="ri-check-double-line"></i> Same cleaner every visit</div>
+          <div><i class="ri-check-double-line"></i> All supplies &amp; equipment included</div>
+          <div><i class="ri-check-double-line"></i> Flexible scheduling, 7 days a week</div>
+          <div><i class="ri-check-double-line"></i> No contracts — cancel anytime</div>
+        </div>
+        <div class="about__foot">
+          <a href="#quote" class="btn">Get a free quote</a>
+          <div class="sign"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Maria Lopez" /><div><strong>Maria Lopez</strong><small>Founder &amp; CEO</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--light" id="services">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Our services</span>
+        <h2>Cleaning services for <span>every space</span></h2>
+        <p>From weekly tidy-ups to top-to-bottom deep cleans, we have a service that fits your home and schedule.</p>
+      </div>
+      <div class="services" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- Quote calculator -->
+  <section class="section" id="quote">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Instant price</span>
+        <h2>Build your clean &amp; <span>book in 60 seconds</span></h2>
+      </div>
+      <div class="calc reveal">
+        <div class="calc__form">
+          <div class="calc__group">
+            <h3><span>1</span> Choose a service</h3>
+            <div class="types" id="types"></div>
+          </div>
+          <div class="calc__group">
+            <h3><span>2</span> Tell us about your place</h3>
+            <div class="steppers">
+              <div class="stepper"><label>Bedrooms</label><div><button type="button" data-k="beds" data-d="-1" aria-label="Fewer bedrooms"><i class="ri-subtract-line"></i></button><output id="beds">2</output><button type="button" data-k="beds" data-d="1" aria-label="More bedrooms"><i class="ri-add-line"></i></button></div></div>
+              <div class="stepper"><label>Bathrooms</label><div><button type="button" data-k="baths" data-d="-1" aria-label="Fewer bathrooms"><i class="ri-subtract-line"></i></button><output id="baths">1</output><button type="button" data-k="baths" data-d="1" aria-label="More bathrooms"><i class="ri-add-line"></i></button></div></div>
+            </div>
+          </div>
+          <div class="calc__group">
+            <h3><span>3</span> Extras</h3>
+            <div class="extras" id="extras"></div>
+          </div>
+          <div class="calc__group">
+            <h3><span>4</span> How often?</h3>
+            <div class="freq" id="freq"></div>
+          </div>
+          <div class="calc__group">
+            <h3><span>5</span> Pick a date &amp; time</h3>
+            <div class="when">
+              <input type="date" id="date" aria-label="Date" />
+              <div class="slots" id="slots"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="calc__sum">
+          <h3>Booking summary</h3>
+          <ul id="sumList"></ul>
+          <div class="sum__row"><span>Subtotal</span><span id="sumSub">$0</span></div>
+          <div class="sum__row sum__disc"><span id="sumDiscLbl">Discount</span><span id="sumDisc">−$0</span></div>
+          <div class="sum__total"><span>Total per visit</span><strong id="sumTotal">$0</strong></div>
+          <p class="sum__time"><i class="ri-timer-line"></i> Est. <span id="sumHours">0</span> with <span id="sumCrew">1 cleaner</span></p>
+          <button class="btn btn--full" id="bookBtn">Book this clean <i class="ri-arrow-right-line"></i></button>
+          <p class="sum__note"><i class="ri-lock-line"></i> No payment until the job is done</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="section section--dark" id="results">
+    <div class="container ba">
+      <div class="ba__text reveal">
+        <span class="sub-title sub-title--light">Real results</span>
+        <h2>See the <span>Sparkle difference</span></h2>
+        <p>Drag the handle to compare a kitchen before and after one of our deep cleans. Grease, limescale and fingerprints — gone in under four hours.</p>
+        <ul class="ba__list">
+          <li><strong>4 hrs</strong><small>Deep clean time</small></li>
+          <li><strong>2 pros</strong><small>Team size</small></li>
+          <li><strong>$289</strong><small>Total price</small></li>
+        </ul>
+      </div>
+      <div class="compare reveal" id="compare">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1100&q=80" alt="Kitchen after cleaning" />
+        <div class="compare__before" id="before">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1100&q=80" alt="Kitchen before cleaning" />
+        </div>
+        <span class="compare__tag compare__tag--l">Before</span>
+        <span class="compare__tag compare__tag--r">After</span>
+        <div class="compare__handle" id="handle"><span><i class="ri-arrow-left-s-line"></i><i class="ri-arrow-right-s-line"></i></span></div>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Compare before and after" />
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">How it works</span>
+        <h2>Three easy steps to a <span>cleaner home</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="step__icon"><i class="ri-calendar-check-line"></i><span>1</span></div><h3>Book online</h3><p>Choose your service, date and time. Get an instant fixed price — no hidden fees.</p></div>
+        <div class="step reveal"><div class="step__icon"><i class="ri-user-smile-line"></i><span>2</span></div><h3>We clean</h3><p>A vetted, insured pro arrives on time with all the supplies and equipment.</p></div>
+        <div class="step reveal"><div class="step__icon"><i class="ri-sofa-line"></i><span>3</span></div><h3>You relax</h3><p>Come home to a spotless space. Not perfect? We'll come back and fix it for free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+
+  <!-- Team -->
+  <section class="section section--light" id="team">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Our team</span>
+        <h2>Meet some of our <span>top cleaners</span></h2>
+      </div>
+      <div class="team" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Testimonials</span>
+        <h2>What our <span>customers say</span></h2>
+      </div>
+      <div class="reviews" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light" id="faq">
+    <div class="container faq">
+      <div class="faq__img reveal">
+        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80" alt="Hand in pink glove holding a yellow spray bottle" loading="lazy" />
+        <div class="faq__card"><i class="ri-customer-service-2-fill"></i><div><small>Still have questions?</small><strong>(512) 555-0188</strong></div></div>
+      </div>
+      <div class="reveal">
+        <span class="sub-title">FAQ</span>
+        <h2>Frequently asked <span>questions</span></h2>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="contact__info reveal">
+        <span class="sub-title">Contact us</span>
+        <h2>Do we clean in <span>your area?</span></h2>
+        <p>Enter your ZIP code to check coverage, or send us a message for custom and commercial quotes.</p>
+        <form class="zip" id="zipForm">
+          <input type="text" id="zipInput" placeholder="e.g. 78704" maxlength="5" inputmode="numeric" aria-label="ZIP code" required />
+          <button class="btn" type="submit">Check</button>
+        </form>
+        <p class="zip__msg" id="zipMsg"></p>
+        <div class="areas"><span>Downtown</span><span>South Congress</span><span>Round Rock</span><span>Cedar Park</span><span>Pflugerville</span><span>Westlake</span><span>Mueller</span><span>Bee Cave</span></div>
+        <ul class="contact__list">
+          <li><i class="ri-phone-line"></i><div><small>Phone</small>(512) 555-0188</div></li>
+          <li><i class="ri-mail-line"></i><div><small>Email</small>book@sparkleandco.com</div></li>
+          <li><i class="ri-map-pin-line"></i><div><small>Office</small>2100 S Lamar Blvd, Austin, TX 78704</div></li>
+        </ul>
+      </div>
+      <form class="form reveal" id="contactForm">
+        <h3>Send us a message</h3>
+        <div class="row">
+          <input type="text" required placeholder="Your name" aria-label="Your name" />
+          <input type="tel" required placeholder="Phone number" aria-label="Phone number" />
+        </div>
+        <input type="email" required placeholder="Email address" aria-label="Email address" />
+        <select aria-label="Service" required>
+          <option value="">Select a service</option>
+          <option>Home cleaning</option><option>Deep cleaning</option><option>Move in / out</option><option>Office cleaning</option><option>Carpet &amp; upholstery</option><option>Window cleaning</option>
+        </select>
+        <textarea rows="5" placeholder="Tell us about your space…" aria-label="Message"></textarea>
+        <button class="btn btn--full" type="submit">Send message</button>
+        <p class="form__msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta__in">
+      <div><h2>Get 20% off your first clean</h2><p>Use code <strong>SPARKLE20</strong> when you book online. New customers only.</p></div>
+      <a href="#quote" class="btn btn--white">Book my clean <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__icon"><i class="ri-sparkling-2-fill"></i></span><span>Sparkle<em>&amp;Co.</em></span></a>
+        <p>Professional, insured and eco-friendly home and office cleaning in Greater Austin since 2011.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+        </div>
+      </div>
+      <div><h4>Services</h4><a href="#services">Home cleaning</a><a href="#services">Deep cleaning</a><a href="#services">Move in / out</a><a href="#services">Office cleaning</a><a href="#services">Window cleaning</a></div>
+      <div><h4>Opening hours</h4><ul class="hours" id="hours"></ul></div>
+      <div><h4>Newsletter</h4><p>Cleaning tips &amp; seasonal offers.</p>
+        <form class="news" id="newsForm"><input type="email" required placeholder="Your email" aria-label="Email" /><button aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button></form>
+      </div>
+    </div>
+    <div class="container footer__bottom"><p>© 2026 Sparkle &amp; Co. Cleaning Services. All rights reserved.</p><div><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
+
+    /* Data */
+    const services = [
+      { t: "Home Cleaning", i: "ri-home-4-line", img: "1586023492125-27b2c045efd7", d: "Regular dusting, vacuuming, mopping, kitchens and bathrooms — kept fresh week after week.", p: 119 },
+      { t: "Deep Cleaning", i: "ri-sparkling-line", img: "1556911220-bff31c812dba", d: "Inside appliances, baseboards, cabinets and grout. Perfect for spring or a first visit.", p: 199 },
+      { t: "Move In / Out", i: "ri-truck-line", img: "1522708323590-d24dbb6b0267", d: "Get your deposit back. Empty-home cleaning that landlords and agents approve.", p: 249 },
+      { t: "Office Cleaning", i: "ri-building-2-line", img: "1497215728101-856f4ea42174", d: "Evening and weekend cleaning for offices, studios and co-working spaces.", p: 159 },
+      { t: "Carpet & Upholstery", i: "ri-sofa-line", img: "1567016432779-094069958ea5", d: "Hot-water extraction that lifts stains, allergens and pet odours from fabrics.", p: 99 },
+      { t: "Window Cleaning", i: "ri-window-line", img: "1505691938895-1758d7feb511", d: "Streak-free windows, frames and sills — inside and out, up to three storeys.", p: 89 },
+    ];
+    const types = [
+      { k: "Standard", i: "ri-home-4-line", base: 79, room: 20, bath: 25, hrs: 1.5 },
+      { k: "Deep clean", i: "ri-sparkling-line", base: 129, room: 30, bath: 35, hrs: 2.5 },
+      { k: "Move in / out", i: "ri-truck-line", base: 159, room: 35, bath: 40, hrs: 3 },
+      { k: "Office", i: "ri-building-2-line", base: 109, room: 25, bath: 30, hrs: 2 },
+    ];
+    const extras = [
+      { k: "Inside fridge", i: "ri-fridge-line", p: 30, h: 0.5 },
+      { k: "Inside oven", i: "ri-fire-line", p: 35, h: 0.5 },
+      { k: "Interior windows", i: "ri-window-line", p: 40, h: 0.75 },
+      { k: "Laundry & folding", i: "ri-t-shirt-line", p: 25, h: 0.5 },
+      { k: "Inside cabinets", i: "ri-archive-drawer-line", p: 35, h: 0.75 },
+      { k: "Balcony / patio", i: "ri-plant-line", p: 30, h: 0.5 },
+    ];
+    const freqs = [
+      { k: "One-time", d: 0 }, { k: "Monthly", d: 0.1 }, { k: "Every 2 weeks", d: 0.15 }, { k: "Weekly", d: 0.2 },
+    ];
+    const team = [
+      { n: "Ana Morales", r: "Team Leader · 9 yrs", img: "1573496359142-b8d87734a5a2" },
+      { n: "James Walker", r: "Deep-clean Specialist", img: "1507003211169-0a1dd7228f2d" },
+      { n: "Grace Kim", r: "Home Cleaning Pro", img: "1494790108377-be9c29b29330" },
+      { n: "David Chen", r: "Carpet & Windows", img: "1506794778202-cad84cf45f1d" },
+    ];
+    const reviews = [
+      { q: "Ana has cleaned our house every two weeks for a year. Always on time, always spotless, and she remembers how we like things. Worth every penny.", n: "Rachel Thompson", r: "Homeowner, Westlake", img: "1438761681033-6461ffad8d80" },
+      { q: "Booked a move-out clean on Tuesday, they came Thursday and we got our full deposit back. The online price was exactly what we paid.", n: "Kevin Brooks", r: "Renter, Mueller", img: "1500648767791-00dcc994a43e" },
+      { q: "We switched our 40-person office to Sparkle & Co. and the difference is obvious. Reliable crew, great communication, zero hassle.", n: "Sara Nguyen", r: "Office Manager, Lumen", img: "1580489944761-15a19d654956" },
+    ];
+    const faqs = [
+      ["Do I need to be home during the cleaning?", "No. Many customers give us a key or door code. Every cleaner is background-checked and fully insured, and you'll get a text when we arrive and leave."],
+      ["Do you bring your own supplies?", "Yes — we bring all eco-friendly products and professional equipment. If you prefer specific products, just leave them out and let us know."],
+      ["What if I'm not happy with the clean?", "Tell us within 24 hours and we'll come back to re-clean the areas you're not happy with, free of charge. That's our Happiness Promise."],
+      ["How do I pay?", "You pay by card only after the clean is complete. Recurring plans are charged automatically after each visit — no contracts."],
+      ["Can I reschedule or cancel?", "Of course. Reschedule or cancel for free up to 24 hours before your appointment from your booking link."],
+    ];
+    const hours = [["Sunday", "Closed"], ["Monday", "7:00 – 20:00"], ["Tuesday", "7:00 – 20:00"], ["Wednesday", "7:00 – 20:00"], ["Thursday", "7:00 – 20:00"], ["Friday", "7:00 – 20:00"], ["Saturday", "8:00 – 16:00"]];
+
+    /* Render: services, team, reviews, faq, hours */
+    $("servicesGrid").innerHTML = services.map((s) => `
+      <div class="service reveal">
+        <div class="service__img"><img src="${U(s.img, 600)}" alt="${s.t}" loading="lazy" /><span class="service__icon"><i class="${s.i}"></i></span></div>
+        <div class="service__body"><h3>${s.t}</h3><p>${s.d}</p>
+          <div class="service__foot"><span>From <strong>$${s.p}</strong></span><a href="#quote">Book now <i class="ri-arrow-right-line"></i></a></div>
+        </div>
+      </div>`).join("");
+    $("teamGrid").innerHTML = team.map((m) => `
+      <div class="member reveal">
+        <div class="member__img"><img src="${U(m.img, 500)}" alt="${m.n}" loading="lazy" /><div class="member__social"><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a></div></div>
+        <h3>${m.n}</h3><small>${m.r}</small>
+      </div>`).join("");
+    $("reviewsGrid").innerHTML = reviews.map((r) => `
+      <div class="review reveal">
+        <i class="ri-double-quotes-r review__q"></i>
+        <div class="stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div>
+        <p>${r.q}</p>
+        <div class="review__who"><img src="${U(r.img, 120)}" alt="${r.n}" loading="lazy" /><div><strong>${r.n}</strong><small>${r.r}</small></div></div>
+      </div>`).join("");
+    $("faqList").innerHTML = faqs.map(([q, a], i) => `<div class="faq__item ${i ? "" : "open"}"><button>${q}<i class="ri-arrow-down-s-line"></i></button><div class="faq__a"><p>${a}</p></div></div>`).join("");
+    $("faqList").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      const it = b.parentElement, was = it.classList.contains("open");
+      document.querySelectorAll(".faq__item").forEach((x) => x.classList.remove("open"));
+      if (!was) it.classList.add("open");
+    });
+    const today = new Date().getDay();
+    $("hours").innerHTML = hours.map(([d, h], i) => `<li class="${i === today ? "today" : ""}"><span>${d}</span><span>${h}</span></li>`).join("");
+
+    /* Quote calculator */
+    const st = { type: 0, beds: 2, baths: 1, extras: new Set(), freq: 2, slot: "09:00" };
+    $("types").innerHTML = types.map((t, i) => `<button type="button" data-i="${i}"><i class="${t.i}"></i>${t.k}<small>from $${t.base + t.room + t.bath}</small></button>`).join("");
+    $("extras").innerHTML = extras.map((x, i) => `<button type="button" data-i="${i}"><i class="${x.i}"></i><span>${x.k}</span><small>+$${x.p}</small></button>`).join("");
+    $("freq").innerHTML = freqs.map((f, i) => `<button type="button" data-i="${i}">${f.k}${f.d ? `<em>Save ${f.d * 100}%</em>` : ""}</button>`).join("");
+    $("slots").innerHTML = ["08:00", "09:00", "11:00", "13:00", "15:00", "17:00"].map((s) => `<button type="button" data-s="${s}">${s}</button>`).join("");
+    const d0 = new Date(); d0.setDate(d0.getDate() + 2);
+    $("date").min = new Date().toISOString().slice(0, 10);
+    $("date").value = d0.toISOString().slice(0, 10);
+
+    const calc = () => {
+      const t = types[st.type], f = freqs[st.freq];
+      const ex = [...st.extras].map((i) => extras[i]);
+      const sub = t.base + t.room * st.beds + t.bath * st.baths + ex.reduce((s, x) => s + x.p, 0);
+      const disc = sub * f.d;
+      const hrs = t.hrs + st.beds * 0.5 + st.baths * 0.5 + ex.reduce((s, x) => s + x.h, 0);
+      const crew = hrs > 5 ? 2 : 1;
+      $("beds").textContent = st.beds; $("baths").textContent = st.baths;
+      document.querySelectorAll("#types button").forEach((b) => b.classList.toggle("on", +b.dataset.i === st.type));
+      document.querySelectorAll("#extras button").forEach((b) => b.classList.toggle("on", st.extras.has(+b.dataset.i)));
+      document.querySelectorAll("#freq button").forEach((b) => b.classList.toggle("on", +b.dataset.i === st.freq));
+      document.querySelectorAll("#slots button").forEach((b) => b.classList.toggle("on", b.dataset.s === st.slot));
+      const dt = $("date").value ? new Date($("date").value + "T00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) : "Pick a date";
+      $("sumList").innerHTML = `
+        <li><i class="ri-home-4-line"></i>${t.k} cleaning</li>
+        <li><i class="ri-hotel-bed-line"></i>${st.beds} bed${st.beds > 1 ? "s" : ""} · ${st.baths} bath${st.baths > 1 ? "s" : ""}</li>
+        ${ex.length ? `<li><i class="ri-add-circle-line"></i>${ex.map((x) => x.k).join(", ")}</li>` : ""}
+        <li><i class="ri-repeat-line"></i>${f.k}</li>
+        <li><i class="ri-calendar-line"></i>${dt} at ${st.slot}</li>`;
+      $("sumSub").textContent = money(sub);
+      $("sumDiscLbl").textContent = f.d ? `${f.k} discount (${f.d * 100}%)` : "Discount";
+      $("sumDisc").textContent = "−" + money(disc);
+      $("sumTotal").textContent = money(sub - disc);
+      $("sumHours").textContent = `${(hrs / crew).toFixed(1)} hrs`;
+      $("sumCrew").textContent = crew === 1 ? "1 cleaner" : "2 cleaners";
+      return { t, total: sub - disc, dt };
+    };
+    $("types").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.type = +b.dataset.i; calc(); } });
+    $("extras").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const i = +b.dataset.i; st.extras.has(i) ? st.extras.delete(i) : st.extras.add(i); calc(); });
+    $("freq").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.freq = +b.dataset.i; calc(); } });
+    $("slots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.slot = b.dataset.s; calc(); } });
+    document.querySelectorAll(".stepper button").forEach((b) => b.addEventListener("click", () => {
+      const k = b.dataset.k, max = k === "beds" ? 8 : 6, min = k === "beds" ? 0 : 1;
+      st[k] = Math.min(max, Math.max(min, st[k] + +b.dataset.d)); calc();
+    }));
+    $("date").addEventListener("change", calc);
+    calc();
+    $("bookBtn").addEventListener("click", () => {
+      if (!$("date").value) return toast("Please pick a date for your clean.");
+      const r = calc();
+      toast(`Booked! ${r.t.k} on ${r.dt} at ${st.slot} — ${money(r.total)}. Confirmation sent by SMS.`);
+    });
+
+    /* Hero quick quote */
+    $("quickForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      st.type = +$("quickService").value; calc();
+      $("quickMsg").innerHTML = `<i class="ri-checkbox-circle-fill"></i> ${types[st.type].k} starts at <strong>${money(types[st.type].base + types[st.type].room + types[st.type].bath)}</strong> — customise it below.`;
+      setTimeout(() => $("quote").scrollIntoView({ behavior: "smooth" }), 900);
+    });
+
+    /* Before / after */
+    const setBA = (v) => { $("before").style.clipPath = `inset(0 ${100 - v}% 0 0)`; $("handle").style.left = v + "%"; };
+    $("baRange").addEventListener("input", (e) => setBA(+e.target.value));
+    setBA(50);
+
+    /* ZIP check */
+    $("zipForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const z = $("zipInput").value.trim();
+      const ok = /^\d{5}$/.test(z) && (z.startsWith("787") || z.startsWith("786"));
+      $("zipMsg").className = "zip__msg " + (ok ? "ok" : "no");
+      $("zipMsg").innerHTML = !/^\d{5}$/.test(z) ? '<i class="ri-error-warning-line"></i> Please enter a 5-digit ZIP code.'
+        : ok ? `<i class="ri-checkbox-circle-fill"></i> Great news — we clean in ${z}! Next available: this week.`
+        : `<i class="ri-close-circle-line"></i> We don't cover ${z} yet. Leave us a message and we'll let you know.`;
+    });
+
+    /* Forms + toast */
+    function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 4000); }
+    $("contactForm").addEventListener("submit", (e) => { e.preventDefault(); $("formMsg").innerHTML = '<i class="ri-checkbox-circle-fill"></i> Thanks! We\'ll call you back within 2 business hours.'; e.target.reset(); });
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Subscribed — your 10% coupon is on its way!"); e.target.reset(); });
+
+    /* Header, nav, burger, to-top */
+    const header = $("header"), links = [...document.querySelectorAll(".nav a")];
+    const onScroll = () => {
+      header.classList.toggle("sticky", scrollY > 120);
+      $("toTop").classList.toggle("show", scrollY > 600);
+      let cur = "home";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.offsetTop - 140 <= scrollY) cur = s.id; });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    };
+    addEventListener("scroll", onScroll); onScroll();
+    const setMenu = (o) => { $("nav").classList.toggle("open", o); $("burger").innerHTML = o ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>'; };
+    $("burger").onclick = () => setMenu(!$("nav").classList.contains("open"));
+    links.forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+    $("toTop").onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
+    /* Reveal + count-up */
+    const countUp = (el) => {
+      const end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now();
+      const tick = (t) => { const p = Math.min((t - t0) / 1600, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("en-US") + suf; if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver((es) => es.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(en.target);
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    /* Open slots this week (fills the hero card) */
+    (() => {
+      const out = [], d = new Date();
+      for (let i = 1; out.length < 3 && i < 10; i++) { const x = new Date(d); x.setDate(d.getDate() + i); if (x.getDay() === 0) continue; out.push(`<li><span>${x.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}</span><b>${["9:00 am", "1:00 pm", "10:30 am"][out.length]}</b></li>`); }
+      document.getElementById("availList").innerHTML = out.join("");
+    })();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

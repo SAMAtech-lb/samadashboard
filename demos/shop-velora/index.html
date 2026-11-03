@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora Parfums — Authentic Designer Perfumes</title>
+  <meta name="description" content="Shop authentic designer perfumes from Chanel, YSL, Versace, Armani and Dolce &amp; Gabbana. Find your signature scent with our fragrance finder. Free shipping over $75." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Promo bar -->
+  <div class="promo">
+    <div class="container promo__in">
+      <span><i class="ri-truck-line"></i> Free shipping on orders over $75</span>
+      <span class="promo__mid">Autumn Sale — up to <strong>30% off</strong> selected scents · Code <strong>VELORA30</strong></span>
+      <span><i class="ri-gift-line"></i> Free samples with every order</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-2-line"></i></button>
+      <a href="#home" class="logo">VELORA<small>Parfums</small></a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#finder">Scent Finder</a>
+        <a href="#gifts">Gift Sets</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="icons">
+        <button aria-label="Search" id="searchBtn"><i class="ri-search-line"></i></button>
+        <button aria-label="Wishlist" id="wishBtn"><i class="ri-heart-3-line"></i><span id="wishCount">0</span></button>
+        <button aria-label="Cart" id="cartBtn"><i class="ri-shopping-bag-3-line"></i><span id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="search" id="search">
+      <div class="container"><i class="ri-search-line"></i><input type="search" id="searchInput" placeholder="Search fragrances, notes or collections…" aria-label="Search" /><button id="searchClose" aria-label="Close search"><i class="ri-close-line"></i></button></div>
+    </div>
+  </header>
+
+  <!-- Hero slider -->
+  <section class="hero" id="home">
+    <div class="hero__slides" id="slides">
+      <div class="slide on">
+        <div class="container slide__in">
+          <div class="slide__text">
+            <span class="kicker">Authentic designer fragrances</span>
+            <h1>Find the scent that <span>tells your story</span></h1>
+            <p>Chanel, YSL, Versace, Armani and 120+ luxury houses — 100% authentic, sourced directly from the brands.</p>
+            <div class="slide__btns"><a href="#shop" class="btn">Shop now</a><a href="#finder" class="btn btn--line">Take the scent quiz</a></div>
+          </div>
+          <div class="slide__img"><div class="ring"></div><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=80" alt="Chanel Coco Mademoiselle bottle with roses" /><div class="tagp"><small>Chanel</small><strong>Coco Mademoiselle</strong><span>$160</span></div></div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container slide__in">
+          <div class="slide__text">
+            <span class="kicker">New arrival</span>
+            <h1>Black Opium <span>for bold evenings</span></h1>
+            <p>Black coffee, white flowers and vanilla — the addictive YSL signature, now with free gift wrapping.</p>
+            <div class="slide__btns"><a href="#shop" class="btn">Discover</a><a href="#gifts" class="btn btn--line">Gift sets</a></div>
+          </div>
+          <div class="slide__img"><div class="ring"></div><img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=900&q=80" alt="Yves Saint Laurent Black Opium bottle" /><div class="tagp"><small>Yves Saint Laurent</small><strong>Black Opium</strong><span>$135</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__ctrl">
+      <button id="hPrev" aria-label="Previous slide"><i class="ri-arrow-left-line"></i></button>
+      <div class="hero__dots" id="hDots"><button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div>
+      <button id="hNext" aria-label="Next slide"><i class="ri-arrow-right-line"></i></button>
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <section class="perks">
+    <div class="container perks__in">
+      <div><i class="ri-truck-line"></i><span><strong>Free shipping</strong><small>On orders over $75</small></span></div>
+      <div><i class="ri-drop-line"></i><span><strong>Free samples</strong><small>3 minis with every order</small></span></div>
+      <div><i class="ri-arrow-go-back-line"></i><span><strong>30-day returns</strong><small>Even if opened</small></span></div>
+      <div><i class="ri-shield-check-line"></i><span><strong>Secure payment</strong><small>Visa, PayPal, Apple Pay</small></span></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="cats">
+    <div class="container">
+      <div class="title reveal"><span class="sub">Shop by category</span><h2>Explore our <span>collections</span></h2></div>
+      <div class="cats" id="catsRow"></div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section section--soft" id="shop">
+    <div class="container">
+      <div class="shop__head reveal">
+        <div><span class="sub">Our products</span><h2>Best-loved <span>fragrances</span></h2></div>
+        <div class="shop__tools">
+          <div class="tabs" id="tabs">
+            <button class="on" data-g="all">All</button><button data-g="Women">Women</button><button data-g="Men">Men</button>
+          </div>
+          <select id="sort" aria-label="Sort products">
+            <option value="pop">Most popular</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rate">Top rated</option>
+          </select>
+        </div>
+      </div>
+      <p class="shop__count" id="shopCount"></p>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Deal banner -->
+  <section class="deal" id="gifts">
+    <div class="container deal__in">
+      <div class="deal__img reveal"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=900&q=80" alt="Collection of perfume bottles in a gift set" loading="lazy" /><span class="deal__off">-30%</span></div>
+      <div class="deal__text reveal">
+        <span class="sub">Deal of the week</span>
+        <h2>The Discovery Gift Set</h2>
+        <p>Five 10 ml minis of best-selling designer scents in a keepsake box — the perfect gift, or the perfect way to find your signature scent.</p>
+        <div class="deal__price"><strong>$69</strong><del>$99</del></div>
+        <div class="count" id="countdown">
+          <div><strong id="cd-d">00</strong><small>Days</small></div>
+          <div><strong id="cd-h">00</strong><small>Hours</small></div>
+          <div><strong id="cd-m">00</strong><small>Mins</small></div>
+          <div><strong id="cd-s">00</strong><small>Secs</small></div>
+        </div>
+        <button class="btn" id="dealAdd"><i class="ri-shopping-bag-3-line"></i> Add gift set to bag</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scent finder -->
+  <section class="section" id="finder">
+    <div class="container finder">
+      <div class="finder__text reveal">
+        <span class="sub">Scent finder</span>
+        <h2>Not sure what to choose? <span>Let us help.</span></h2>
+        <p>Answer three quick questions and we'll match you with the fragrance that fits your mood and style.</p>
+        <img src="https://images.unsplash.com/photo-1615634376658-c80abf877da2?auto=format&fit=crop&w=700&q=80" alt="Fresh tangerines and citrus leaves" loading="lazy" />
+      </div>
+      <div class="quiz reveal" id="quiz">
+        <div class="quiz__bar"><span id="quizBar"></span></div>
+        <div id="quizBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="section section--soft" id="story">
+    <div class="container story">
+      <div class="story__imgs reveal">
+        <img class="story__a" src="https://images.unsplash.com/photo-1557827983-012eb6ea8dc1?auto=format&fit=crop&w=800&q=80" alt="Velora perfume boutique with bottles on display" loading="lazy" />
+        <img class="story__b" src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=500&q=80" alt="Perfume oil dropper bottle with eucalyptus" loading="lazy" />
+      </div>
+      <div class="story__text reveal">
+        <span class="sub">Our story</span>
+        <h2>Your trusted perfume boutique <span>since 2009</span></h2>
+        <p>Velora began as a single boutique in Lyon, where founder Camille Durand helped customers find their signature scent. Today we're an authorised retailer for 120+ fragrance houses — every bottle sourced directly from the brand, never from grey markets.</p>
+        <div class="story__stats">
+          <div><strong data-count="120" data-suffix="+">0</strong><small>Luxury brands</small></div>
+          <div><strong data-count="120" data-suffix="k">0</strong><small>Happy customers</small></div>
+          <div><strong data-count="100" data-suffix="%">0</strong><small>Authentic</small></div>
+        </div>
+        <ul class="story__list">
+          <li><i class="ri-verified-badge-line"></i> Authorised retailer — authenticity guaranteed</li>
+          <li><i class="ri-gift-line"></i> Free gift wrapping &amp; handwritten notes</li>
+          <li><i class="ri-drop-line"></i> 3 free designer samples with every order</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="title reveal"><span class="sub">Testimonials</span><h2>Loved by <span>our customers</span></h2></div>
+      <div class="reviews" id="reviewsRow"></div>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section class="insta">
+    <div class="insta__grid" id="insta"></div>
+    <a href="#" class="insta__tag"><i class="ri-instagram-line"></i> @veloraparfums</a>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="newsletter reveal">
+        <div><span class="sub">Join the club</span><h2>Get 15% off your <span>first order</span></h2><p>Plus early access to new launches and members-only offers.</p></div>
+        <form id="newsForm"><input type="email" required placeholder="Your email address" aria-label="Email" /><button class="btn" type="submit">Subscribe</button></form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light">VELORA<small>Parfums</small></a>
+        <p>Authentic designer and niche perfumes from 120+ fragrance houses. Lyon boutique, shipping worldwide.</p>
+        <ul class="footer__contact">
+          <li><i class="ri-map-pin-line"></i> 18 Rue de la République, Lyon</li>
+          <li><i class="ri-phone-line"></i> +33 4 72 00 18 90</li>
+          <li><i class="ri-mail-line"></i> care@veloraparfums.com</li>
+        </ul>
+      </div>
+      <div><h4>Shop</h4><a href="#shop">Women</a><a href="#shop">Men</a><a href="#shop">Chanel</a><a href="#gifts">Gift sets</a><a href="#shop">Niche fragrances</a></div>
+      <div><h4>Help</h4><a href="#">Shipping &amp; delivery</a><a href="#">Returns</a><a href="#">Track order</a><a href="#">FAQ</a><a href="#contact">Contact us</a></div>
+      <div><h4>Follow us</h4>
+        <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></div>
+        <div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-fill"></i></div>
+      </div>
+    </div>
+    <div class="container footer__bottom"><p>© 2026 Velora Parfums. All rights reserved.</p><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+  </footer>
+
+  <!-- Quick view -->
+  <div class="overlay" id="overlay"></div>
+  <div class="qv" id="qv" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <button class="qv__close" id="qvClose" aria-label="Close"><i class="ri-close-line"></i></button>
+    <div class="qv__img"><img id="qvImg" src="" alt="" /></div>
+    <div class="qv__body">
+      <small id="qvGender"></small>
+      <h3 id="qvTitle"></h3>
+      <div class="qv__rate" id="qvRate"></div>
+      <div class="qv__price" id="qvPrice"></div>
+      <p id="qvDesc"></p>
+      <div class="notes" id="qvNotes"></div>
+      <label class="qv__label">Size</label>
+      <div class="sizes" id="qvSizes"></div>
+      <div class="qv__buy">
+        <div class="qty"><button id="qMinus" aria-label="Decrease quantity"><i class="ri-subtract-line"></i></button><span id="qVal">1</span><button id="qPlus" aria-label="Increase quantity"><i class="ri-add-line"></i></button></div>
+        <button class="btn" id="qvAdd"><i class="ri-shopping-bag-3-line"></i> Add to bag</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart drawer -->
+  <aside class="cart" id="cart" aria-label="Shopping bag">
+    <div class="cart__head"><h3>Your bag <span id="cartItems">(0)</span></h3><button id="cartClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="ship"><p id="shipMsg"></p><div class="ship__bar"><span id="shipBar"></span></div></div>
+    <div class="cart__list" id="cartList"></div>
+    <div class="cart__foot">
+      <div class="cart__row"><span>Subtotal</span><strong id="cartSub">$0.00</strong></div>
+      <div class="cart__row"><span>Shipping</span><span id="cartShip">—</span></div>
+      <div class="cart__row cart__total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn btn--full" id="checkout">Checkout <i class="ri-lock-line"></i></button>
+    </div>
+  </aside>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const money = (n) => "$" + n.toFixed(2);
+
+    /* Data */
+    const cats = [
+      { n: "For Her", img: "1595425970377-c9703cf48b6d", c: 186 },
+      { n: "For Him", img: "1610461888750-10bfc601b874", c: 142 },
+      { n: "Chanel", img: "1592914610354-fd354ea45e48", c: 38 },
+      { n: "Niche", img: "1622618991746-fe6004db3a47", c: 64 },
+      { n: "Gift Sets", img: "1615634260167-c8cdede054de", c: 48 },
+      { n: "Travel Size", img: "1620916297397-a4a5402a3c6c", c: 75 },
+    ];
+    const products = [
+      { id: 1, b: "Chanel", n: "N°5 Eau de Parfum", g: "Women", fam: "Floral", p: 165, old: 0, r: 4.9, rc: 812, pop: 10, img: "1541643600914-78b084683601", tag: "Bestseller",
+        d: "The legendary floral-aldehyde bouquet — timeless, powdery and unmistakably elegant.", notes: ["Aldehydes, Ylang-ylang, Neroli", "May rose, Jasmine, Iris", "Sandalwood, Vanilla, Vetiver"] },
+      { id: 2, b: "Chanel", n: "Bleu de Chanel", g: "Men", fam: "Woody", p: 150, old: 0, r: 4.9, rc: 654, pop: 9, img: "1523293182086-7651a899d37f", tag: "Bestseller",
+        d: "A woody aromatic fragrance for the man who defies convention — fresh, clean and deep.", notes: ["Grapefruit, Lemon, Mint", "Ginger, Jasmine, Nutmeg", "Sandalwood, Cedar, Incense"] },
+      { id: 3, b: "Chanel", n: "Coco Mademoiselle", g: "Women", fam: "Floral", p: 160, old: 0, r: 4.8, rc: 590, pop: 9, img: "1592945403244-b3fbafd7f539", tag: "",
+        d: "A fresh, sensual oriental with sparkling orange and a heart of rose and jasmine.", notes: ["Orange, Bergamot", "Rose, Jasmine", "Patchouli, Vetiver, Vanilla"] },
+      { id: 4, b: "Versace", n: "Eros Eau de Toilette", g: "Men", fam: "Fresh", p: 112, old: 132, r: 4.7, rc: 433, pop: 8, img: "1587017539504-67cfbddac569", tag: "-15%",
+        d: "Mint, green apple and vanilla — a vibrant, magnetic scent inspired by Greek mythology.", notes: ["Mint, Green apple, Lemon", "Tonka bean, Geranium", "Vanilla, Vetiver, Cedar"] },
+      { id: 5, b: "Yves Saint Laurent", n: "Black Opium", g: "Women", fam: "Warm", p: 135, old: 0, r: 4.8, rc: 501, pop: 8, img: "1600612253971-422e7f7faeb6", tag: "New",
+        d: "An addictive gourmand floral with black coffee, white flowers and creamy vanilla.", notes: ["Pink pepper, Pear, Orange blossom", "Coffee, Jasmine", "Vanilla, Patchouli, Cedar"] },
+      { id: 6, b: "Giorgio Armani", n: "Acqua di Giò", g: "Men", fam: "Fresh", p: 118, old: 0, r: 4.7, rc: 377, pop: 7, img: "1619994403073-2cec844b8e63", tag: "",
+        d: "The iconic aquatic — sea breeze, citrus and Mediterranean herbs on warm woods.", notes: ["Lime, Lemon, Bergamot", "Sea notes, Jasmine, Rosemary", "White musk, Cedar, Oakmoss"] },
+      { id: 7, b: "Dolce & Gabbana", n: "The One for Men", g: "Men", fam: "Warm", p: 128, old: 150, r: 4.6, rc: 268, pop: 6, img: "1616949755610-8c9bbc08f138", tag: "-15%",
+        d: "Warm and refined: spicy ginger and cardamom over tobacco and amber.", notes: ["Grapefruit, Coriander, Basil", "Ginger, Cardamom, Orange blossom", "Tobacco, Amber, Cedar"] },
+      { id: 8, b: "Chanel", n: "Coco Noir", g: "Women", fam: "Warm", p: 170, old: 0, r: 4.8, rc: 214, pop: 6, img: "1594035910387-fea47794261f", tag: "Limited",
+        d: "Mysterious and luminous — rose and jasmine wrapped in patchouli and sandalwood.", notes: ["Grapefruit, Bergamot", "Rose, Jasmine, Narcissus", "Patchouli, Sandalwood, Tonka"] },
+    ];
+    const sizes = [{ ml: 30, f: 0.6 }, { ml: 50, f: 0.8 }, { ml: 100, f: 1 }];
+    const reviews = [
+      { q: "My Coco Mademoiselle arrived in two days, beautifully gift-wrapped and with three samples. Cheaper than the department store, too.", n: "Emma Laurent", r: "Chanel Coco Mademoiselle", img: "1494790108377-be9c29b29330" },
+      { q: "Bought the discovery set to try a few designer scents and ended up ordering full bottles of Eros and Acqua di Giò. Quick delivery.", n: "Oliver Grant", r: "Discovery Gift Set", img: "1500648767791-00dcc994a43e" },
+      { q: "The scent quiz recommended Bleu de Chanel and it's exactly my style. Fresh, woody and perfect for the office.", n: "Daniel Ruiz", r: "Bleu de Chanel", img: "1506794778202-cad84cf45f1d" },
+    ];
+    const quiz = [
+      { q: "Which moment sounds most like you?", a: [["ri-sun-line", "Sunny morning at the beach", "Fresh"], ["ri-flower-line", "Picnic in a blooming garden", "Floral"], ["ri-moon-clear-line", "Candlelit dinner in the city", "Warm"], ["ri-tree-line", "Long walk in an autumn forest", "Woody"]] },
+      { q: "How strong do you like your fragrance?", a: [["ri-feather-line", "Light & close to the skin", 0], ["ri-contrast-drop-2-line", "Noticeable but balanced", 1], ["ri-fire-line", "Bold — leave a trail", 2]] },
+      { q: "Who is it for?", a: [["ri-women-line", "For her", "Women"], ["ri-men-line", "For him", "Men"], ["ri-user-heart-line", "Surprise me", "Any"]] },
+    ];
+
+    /* State (cart + wishlist saved locally) */
+    const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch { return d; } };
+    const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+    let cart = load("velora-cart", []), wish = new Set(load("velora-wish", []));
+    let gender = "all", sortBy = "pop", query = "";
+
+    /* Categories */
+    $("catsRow").innerHTML = cats.map((c) => `
+      <a href="#shop" class="cat reveal"><div class="cat__img"><img src="${U(c.img, 400)}" alt="${c.n}" loading="lazy" /></div><h3>${c.n}</h3><small>${c.c} products</small></a>`).join("");
+
+    /* Products */
+    const stars = (r) => Array.from({ length: 5 }, (_, i) => `<i class="ri-star-${r >= i + 1 ? "fill" : r >= i + 0.5 ? "half-fill" : "line"}"></i>`).join("");
+    const renderProducts = () => {
+      let list = products.filter((p) => (gender === "all" || p.g === gender) && (!query || (p.b + " " + p.n + p.fam + p.notes.join(" ") + p.g).toLowerCase().includes(query)));
+      list = list.sort((a, b) => sortBy === "low" ? a.p - b.p : sortBy === "high" ? b.p - a.p : sortBy === "rate" ? b.r - a.r : b.pop - a.pop);
+      $("shopCount").textContent = query ? `${list.length} result${list.length === 1 ? "" : "s"} for “${query}”` : `Showing ${list.length} fragrances`;
+      $("products").innerHTML = list.length ? list.map((p) => `
+        <div class="product">
+          <div class="product__img">
+            ${p.tag ? `<span class="product__tag ${p.tag.startsWith("-") ? "sale" : ""}">${p.tag}</span>` : ""}
+            <button class="product__wish ${wish.has(p.id) ? "on" : ""}" data-wish="${p.id}" aria-label="Add ${p.n} to wishlist"><i class="ri-heart-3-${wish.has(p.id) ? "fill" : "line"}"></i></button>
+            <img src="${U(p.img, 600)}" alt="${p.b} ${p.n}" loading="lazy" />
+            <div class="product__actions">
+              <button data-qv="${p.id}"><i class="ri-eye-line"></i> Quick view</button>
+              <button data-add="${p.id}" aria-label="Add ${p.n} to bag"><i class="ri-shopping-bag-3-line"></i></button>
+            </div>
+          </div>
+          <div class="product__body">
+            <small>${p.b}</small>
+            <h3>${p.n}</h3>
+            <div class="rate">${stars(p.r)}<span>(${p.rc})</span></div>
+            <div class="price">${money(p.p)}${p.old ? `<del>${money(p.old)}</del>` : ""}<em>${p.g} · 100 ml</em></div>
+          </div>
+        </div>`).join("") : `<div class="empty"><i class="ri-search-eye-line"></i><p>No fragrances match your search.</p></div>`;
+    };
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; gender = b.dataset.g; document.querySelectorAll("#tabs button").forEach((x) => x.classList.toggle("on", x === b)); renderProducts(); });
+    $("sort").addEventListener("change", (e) => { sortBy = e.target.value; renderProducts(); });
+    $("products").addEventListener("click", (e) => {
+      const w = e.target.closest("[data-wish]"), a = e.target.closest("[data-add]"), q = e.target.closest("[data-qv]");
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); save("velora-wish", [...wish]); renderProducts(); updateBadges(); toast(wish.has(id) ? "Added to your wishlist" : "Removed from wishlist"); }
+      if (a) addToCart(+a.dataset.add, 100, 1);
+      if (q) openQV(+q.dataset.qv);
+    });
+
+    /* Search */
+    $("searchBtn").onclick = () => { $("search").classList.add("open"); setTimeout(() => $("searchInput").focus(), 200); };
+    $("searchClose").onclick = () => { $("search").classList.remove("open"); };
+    $("searchInput").addEventListener("input", (e) => { query = e.target.value.trim().toLowerCase(); renderProducts(); });
+    $("searchInput").addEventListener("keydown", (e) => { if (e.key === "Enter") { $("shop").scrollIntoView({ behavior: "smooth" }); $("search").classList.remove("open"); } });
+
+    /* Quick view */
+    let qvP = null, qvSize = 100, qvQty = 1;
+    const priceFor = (p, ml) => p.p * sizes.find((s) => s.ml === ml).f;
+    const renderQV = () => {
+      $("qvPrice").innerHTML = `${money(priceFor(qvP, qvSize))}${qvP.old && qvSize === 100 ? `<del>${money(qvP.old)}</del>` : ""}`;
+      $("qvSizes").innerHTML = sizes.map((s) => `<button class="${s.ml === qvSize ? "on" : ""}" data-ml="${s.ml}">${s.ml} ml<small>${money(priceFor(qvP, s.ml))}</small></button>`).join("");
+      $("qVal").textContent = qvQty;
+    };
+    const openQV = (id) => {
+      qvP = products.find((p) => p.id === id); qvSize = 100; qvQty = 1;
+      $("qvImg").src = U(qvP.img, 900); $("qvImg").alt = qvP.n;
+      $("qvGender").textContent = `${qvP.b} · ${qvP.g} · ${qvP.fam}`;
+      $("qvTitle").textContent = qvP.n;
+      $("qvRate").innerHTML = `${stars(qvP.r)}<span>${qvP.r} · ${qvP.rc} reviews</span>`;
+      $("qvDesc").textContent = qvP.d;
+      $("qvNotes").innerHTML = ["Top", "Heart", "Base"].map((k, i) => `<div><small>${k} notes</small><span>${qvP.notes[i]}</span></div>`).join("");
+      renderQV();
+      $("qv").classList.add("open"); $("overlay").classList.add("show"); document.body.style.overflow = "hidden";
+    };
+    $("qvSizes").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { qvSize = +b.dataset.ml; renderQV(); } });
+    $("qMinus").onclick = () => { qvQty = Math.max(1, qvQty - 1); renderQV(); };
+    $("qPlus").onclick = () => { qvQty = Math.min(10, qvQty + 1); renderQV(); };
+    $("qvAdd").onclick = () => { addToCart(qvP.id, qvSize, qvQty); closeAll(); };
+    $("qvClose").onclick = () => closeAll();
+
+    /* Cart */
+    const GIFT = { id: 99, n: "Discovery Gift Set", p: 69, img: "1615634260167-c8cdede054de" };
+    const findP = (id) => (id === 99 ? GIFT : products.find((p) => p.id === id));
+    const addToCart = (id, ml, qty) => {
+      const key = `${id}-${ml}`, it = cart.find((c) => c.key === key);
+      if (it) it.qty += qty; else cart.push({ key, id, ml, qty });
+      save("velora-cart", cart); renderCart(); openCart();
+    };
+    const lineP = (c) => { const p = findP(c.id); return c.id === 99 ? p.p : priceFor(p, c.ml); };
+    const renderCart = () => {
+      const sub = cart.reduce((s, c) => s + lineP(c) * c.qty, 0), FREE = 75, ship = sub === 0 || sub >= FREE ? 0 : 6.95;
+      $("cartList").innerHTML = cart.length ? cart.map((c) => {
+        const p = findP(c.id);
+        return `<div class="ci">
+          <img src="${U(p.img, 200)}" alt="${p.n}" />
+          <div class="ci__info"><h4>${p.n}</h4><small>${c.id === 99 ? "5 × 10 ml minis" : (p.b + " · " + c.ml + " ml")}</small>
+            <div class="qty qty--sm"><button data-dec="${c.key}" aria-label="Decrease"><i class="ri-subtract-line"></i></button><span>${c.qty}</span><button data-inc="${c.key}" aria-label="Increase"><i class="ri-add-line"></i></button></div>
+          </div>
+          <div class="ci__end"><strong>${money(lineP(c) * c.qty)}</strong><button data-rm="${c.key}" aria-label="Remove ${p.n}"><i class="ri-delete-bin-6-line"></i></button></div>
+        </div>`;
+      }).join("") : `<div class="empty"><i class="ri-shopping-bag-3-line"></i><p>Your bag is empty.</p><a href="#shop" class="btn" id="emptyShop">Start shopping</a></div>`;
+      const left = FREE - sub;
+      $("shipMsg").innerHTML = sub === 0 ? "Add $75 of fragrances for <strong>free shipping</strong>" : left > 0 ? `You're <strong>${money(left)}</strong> away from free shipping` : `<i class="ri-checkbox-circle-fill"></i> You've unlocked <strong>free shipping!</strong>`;
+      $("shipBar").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      $("cartSub").textContent = money(sub);
+      $("cartShip").textContent = sub === 0 ? "—" : ship ? money(ship) : "Free";
+      $("cartTotal").textContent = money(sub + ship);
+      const n = cart.reduce((s, c) => s + c.qty, 0);
+      $("cartItems").textContent = `(${n})`;
+      updateBadges();
+    };
+    const updateBadges = () => {
+      $("cartCount").textContent = cart.reduce((s, c) => s + c.qty, 0);
+      $("wishCount").textContent = wish.size;
+    };
+    $("cartList").addEventListener("click", (e) => {
+      const t = e.target.closest("button"); if (!t) return;
+      const key = t.dataset.inc || t.dataset.dec || t.dataset.rm, it = cart.find((c) => c.key === key);
+      if (t.dataset.inc) it.qty++;
+      if (t.dataset.dec) it.qty--;
+      if (t.dataset.rm || (it && it.qty < 1)) cart = cart.filter((c) => c.key !== key);
+      save("velora-cart", cart); renderCart();
+    });
+    $("cartList").addEventListener("click", (e) => { if (e.target.id === "emptyShop") closeAll(); });
+    const openCart = () => { $("cart").classList.add("open"); $("overlay").classList.add("show"); document.body.style.overflow = "hidden"; };
+    const closeAll = () => { $("cart").classList.remove("open"); $("qv").classList.remove("open"); $("overlay").classList.remove("show"); $("search").classList.remove("open"); document.body.style.overflow = ""; };
+    $("cartBtn").onclick = openCart; $("cartClose").onclick = closeAll; $("overlay").onclick = closeAll;
+    $("wishBtn").onclick = () => toast(wish.size ? `You have ${wish.size} item${wish.size > 1 ? "s" : ""} in your wishlist` : "Tap the heart on any fragrance to save it");
+    $("checkout").onclick = () => { if (!cart.length) return toast("Your bag is empty"); cart = []; save("velora-cart", cart); renderCart(); closeAll(); toast("Thank you! Your order #VL" + Math.floor(10000 + Math.random() * 89999) + " is confirmed."); };
+    $("dealAdd").onclick = () => addToCart(99, 50, 1);
+
+    /* Countdown (deal ends next Sunday midnight) */
+    const end = new Date(); end.setDate(end.getDate() + ((7 - end.getDay()) % 7 || 7)); end.setHours(23, 59, 59, 0);
+    const pad = (n) => String(n).padStart(2, "0");
+    const tickCD = () => {
+      const s = Math.max(0, Math.floor((end - Date.now()) / 1000));
+      $("cd-d").textContent = pad(Math.floor(s / 86400)); $("cd-h").textContent = pad(Math.floor((s % 86400) / 3600));
+      $("cd-m").textContent = pad(Math.floor((s % 3600) / 60)); $("cd-s").textContent = pad(s % 60);
+    };
+    tickCD(); setInterval(tickCD, 1000);
+
+    /* Scent finder quiz */
+    let step = 0, ans = [];
+    const renderQuiz = () => {
+      $("quizBar").style.width = `${(step / quiz.length) * 100}%`;
+      if (step < quiz.length) {
+        const q = quiz[step];
+        $("quizBody").innerHTML = `<small class="quiz__step">Question ${step + 1} of ${quiz.length}</small><h3>${q.q}</h3>
+          <div class="quiz__opts">${q.a.map(([i, t], k) => `<button data-k="${k}"><i class="${i}"></i>${t}</button>`).join("")}</div>
+          ${step ? '<button class="quiz__back" id="quizBack"><i class="ri-arrow-left-line"></i> Back</button>' : ""}`;
+        return;
+      }
+      const [fam, , g] = ans;
+      const score = (p) => (p.fam === fam ? 3 : 0) + (p.g === g ? 2 : 0) + p.r / 5;
+      const best = [...products].sort((a, b) => score(b) - score(a))[0];
+      $("quizBody").innerHTML = `<small class="quiz__step">Your perfect match</small>
+        <div class="match"><img src="${U(best.img, 400)}" alt="${best.b} ${best.n}" /><div><small class="match__brand">${best.b}</small><h3>${best.n}</h3><p>${best.d}</p><div class="price">${money(best.p)}<em>100 ml</em></div></div></div>
+        <div class="match__btns"><button class="btn" data-add-best="${best.id}"><i class="ri-shopping-bag-3-line"></i> Add to bag</button><button class="btn btn--line" id="quizRestart">Retake quiz</button></div>`;
+    };
+    $("quizBody").addEventListener("click", (e) => {
+      const o = e.target.closest("[data-k]"), add = e.target.closest("[data-add-best]");
+      if (o) { ans[step] = quiz[step].a[+o.dataset.k][2]; step++; renderQuiz(); }
+      if (e.target.closest("#quizBack")) { step--; renderQuiz(); }
+      if (e.target.closest("#quizRestart")) { step = 0; ans = []; renderQuiz(); }
+      if (add) addToCart(+add.dataset.addBest, 100, 1);
+    });
+    renderQuiz();
+
+    /* Reviews + Instagram */
+    $("reviewsRow").innerHTML = reviews.map((r) => `
+      <div class="review reveal"><div class="rate">${stars(5)}</div><p>“${r.q}”</p>
+        <div class="review__who"><img src="${U(r.img, 120)}" alt="${r.n}" loading="lazy" /><div><strong>${r.n}</strong><small><i class="ri-checkbox-circle-fill"></i> Verified buyer · ${r.r}</small></div></div></div>`).join("");
+    $("insta").innerHTML = ["1585386959984-a4155224a1ad", "1587017539504-67cfbddac569", "1595425970377-c9703cf48b6d", "1523293182086-7651a899d37f", "1592914610354-fd354ea45e48", "1557827983-012eb6ea8dc1"]
+      .map((id) => `<a href="#" aria-label="Open Instagram post"><img src="${U(id, 400)}" alt="" loading="lazy" /><i class="ri-instagram-line"></i></a>`).join("");
+
+    /* Hero slider */
+    let hs = 0;
+    const slidesEl = document.querySelectorAll(".slide"), dotsEl = document.querySelectorAll("#hDots button");
+    const goHero = (n) => { hs = (n + slidesEl.length) % slidesEl.length; slidesEl.forEach((s, i) => s.classList.toggle("on", i === hs)); dotsEl.forEach((d, i) => d.classList.toggle("on", i === hs)); };
+    $("hPrev").onclick = () => goHero(hs - 1); $("hNext").onclick = () => goHero(hs + 1);
+    dotsEl.forEach((d, i) => (d.onclick = () => goHero(i)));
+    setInterval(() => goHero(hs + 1), 7000);
+
+    /* Toast, newsletter */
+    function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 3200); }
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Welcome to the club! Your 15% code is WELCOME15"); e.target.reset(); });
+
+    /* Header, nav, burger */
+    const links = [...document.querySelectorAll(".nav a")];
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 60);
+      $("toTop").classList.toggle("show", scrollY > 700);
+      let cur = "home";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.offsetTop - 140 <= scrollY) cur = s.id; });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    };
+    addEventListener("scroll", onScroll); onScroll();
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    links.forEach((a) => a.addEventListener("click", () => $("nav").classList.remove("open")));
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeAll(); $("nav").classList.remove("open"); } });
+    $("toTop").onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
+    /* Reveal + count-up */
+    const countUp = (el) => { const e = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(); const tk = (t) => { const p = Math.min((t - t0) / 1500, 1); el.textContent = Math.round(e * (1 - Math.pow(1 - p, 3))) + suf; if (p < 1) requestAnimationFrame(tk); }; requestAnimationFrame(tk); };
+    const io = new IntersectionObserver((es) => es.forEach((en) => { if (!en.isIntersecting) return; en.target.classList.add("in"); en.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(en.target); }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    renderProducts(); renderCart();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

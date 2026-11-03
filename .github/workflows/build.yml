@@ -1,0 +1,72 @@
+# Runs after the admin dashboard publishes: builds the pages, then saves them so GitHub Pages serves them.
+name: Build website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/list.json"
+      - "data/library.json"
+      - "demos/**"
+      - "tools/**"
+      - "assets/site.css"
+      - "assets/site.js"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-website
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepare projects
+        run: node tools/sync.mjs
+
+      - name: Screenshot new projects
+        run: |
+          ids="$(cat tools/.cache/missing.txt)"
+          if [ -n "$ids" ]; then
+            pip install --quiet pillow
+            python -m http.server 8123 --bind 127.0.0.1 >/dev/null 2>&1 &
+            sleep 2
+            CHROME="$(command -v google-chrome)" node tools/capture.mjs $ids
+            python tools/images.py
+          fi
+
+      - name: Build pages
+        run: SAMA_UPDATED="$(date +%F)" node tools/build.mjs
+
+      - name: Check pages
+        run: node tools/check.mjs
+
+      - name: Save
+        run: |
+          printf '{"source":"%s"}\n' "$GITHUB_SHA" > data/built.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Build website [skip ci]"
+          for attempt in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin main && exit 0
+            sleep 5
+          done
+          exit 1

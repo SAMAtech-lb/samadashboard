@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora — Workflow Automation for Modern Teams</title>
+  <meta name="description" content="Nexora connects your apps, automates busywork and gives every team live dashboards. Start a free 14-day trial — no credit card required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce">
+    <div class="container announce__in">
+      <span class="announce__tag">New</span>
+      <p>Nexora AI Assistant is here — build workflows by simply describing them.</p>
+      <a href="#features">See what's new <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i class="ri-shining-2-fill"></i></span>Nexora</a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header__cta">
+        <a href="#contact" class="link-login">Log in</a>
+        <a href="#contact" class="btn btn--sm">Start free trial</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__in">
+      <div class="hero__text reveal">
+        <span class="sub-title">Workflow automation for ops teams</span>
+        <h1>Automate the busywork. <span>Scale what matters.</span></h1>
+        <p>Nexora connects the tools your team already uses, automates repetitive tasks and turns scattered data into live dashboards — without writing a single line of code.</p>
+        <form class="hero__form" id="heroForm">
+          <input type="email" placeholder="Enter your work email" required aria-label="Work email" />
+          <button class="btn" type="submit">Get started free</button>
+        </form>
+        <ul class="hero__checks">
+          <li><i class="ri-checkbox-circle-fill"></i> 14-day free trial</li>
+          <li><i class="ri-checkbox-circle-fill"></i> No credit card</li>
+          <li><i class="ri-checkbox-circle-fill"></i> Cancel anytime</li>
+        </ul>
+      </div>
+
+      <!-- Product mock -->
+      <div class="mock reveal">
+        <div class="mock__bar"><span></span><span></span><span></span><em>app.nexora.io/dashboard</em></div>
+        <div class="mock__body">
+          <aside class="mock__side">
+            <div class="mock__logo"><i class="ri-shining-2-fill"></i></div>
+            <i class="ri-dashboard-3-line on"></i><i class="ri-flow-chart"></i><i class="ri-bar-chart-2-line"></i><i class="ri-team-line"></i><i class="ri-settings-3-line"></i>
+          </aside>
+          <div class="mock__main">
+            <div class="mock__head">
+              <div><small>Good morning, Dana</small><strong>Operations overview</strong></div>
+              <span class="mock__live"><i></i> Live</span>
+            </div>
+            <div class="mock__kpis">
+              <div><small>Tasks automated</small><strong data-count="48210">0</strong><em class="up">+18.4%</em></div>
+              <div><small>Hours saved</small><strong data-count="3920">0</strong><em class="up">+12.1%</em></div>
+              <div><small>Error rate</small><strong>0.4%</strong><em class="down">−2.3%</em></div>
+            </div>
+            <div class="mock__chart">
+              <div class="mock__chart-head"><strong>Workflow runs</strong><span>Last 12 weeks</span></div>
+              <div class="bars" id="bars"></div>
+            </div>
+            <div class="mock__list">
+              <div><i class="ri-mail-send-line"></i><span>New lead → CRM → Welcome email</span><em class="ok">Running</em></div>
+              <div><i class="ri-file-list-3-line"></i><span>Invoice paid → Update ledger</span><em class="ok">Running</em></div>
+              <div><i class="ri-customer-service-2-line"></i><span>Ticket tagged urgent → Notify on-call</span><em class="wait">Queued</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="logos">
+    <div class="container">
+      <p>Powering operations at fast-growing companies</p>
+      <div class="logos__row">
+        <span><i class="ri-windy-fill"></i> Northwind</span>
+        <span><i class="ri-sun-fill"></i> Lumen</span>
+        <span><i class="ri-planet-fill"></i> Orbit</span>
+        <span><i class="ri-booklet-fill"></i> Fieldnote</span>
+        <span><i class="ri-gamepad-fill"></i> Arcade</span>
+        <span><i class="ri-flashlight-fill"></i> Voltra</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section" id="p-benefits">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Why Nexora</span>
+        <h2>Everything your team needs to <span>work smarter</span></h2>
+        <p>One platform to connect apps, automate processes and see what's happening across your business in real time.</p>
+      </div>
+      <div class="benefits" id="benefits"></div>
+    </div>
+  </section>
+
+  <!-- Feature tabs -->
+  <section class="section section--light" id="features">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Features</span>
+        <h2>Built for the way <span>modern teams</span> work</h2>
+      </div>
+      <div class="ftabs reveal">
+        <div class="ftabs__nav" id="ftabsNav"></div>
+        <div class="ftabs__panel" id="ftabsPanel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">How it works</span>
+        <h2>Launch your first workflow in <span>minutes</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="step__num">01</span><i class="ri-plug-line"></i><h3>Connect your apps</h3><p>Sign in to the tools you already use. Nexora supports 300+ apps with secure one-click OAuth.</p></div>
+        <div class="step reveal"><span class="step__num">02</span><i class="ri-flow-chart"></i><h3>Build with drag &amp; drop</h3><p>Pick a trigger, add actions and conditions — or describe the workflow and let AI draft it for you.</p></div>
+        <div class="step reveal"><span class="step__num">03</span><i class="ri-rocket-2-line"></i><h3>Publish &amp; measure</h3><p>Go live with one click and watch runs, savings and errors on a real-time dashboard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+
+  <!-- Integrations -->
+  <section class="section" id="integrations">
+    <div class="container integ">
+      <div class="integ__text reveal">
+        <span class="sub-title">Integrations</span>
+        <h2>Plays nicely with <span>300+ apps</span></h2>
+        <p>Sync data between your CRM, finance, support and communication tools. If it has an API, Nexora can talk to it.</p>
+        <ul class="ticks">
+          <li><i class="ri-check-line"></i> Two-way sync with automatic retries</li>
+          <li><i class="ri-check-line"></i> Webhooks, REST and GraphQL connectors</li>
+          <li><i class="ri-check-line"></i> Bank-level encryption for every credential</li>
+        </ul>
+        <a href="#contact" class="btn">Browse all integrations</a>
+      </div>
+      <div class="integ__grid reveal" id="integGrid"></div>
+    </div>
+  </section>
+
+  <!-- ROI calculator -->
+  <section class="section section--light" id="roi">
+    <div class="container roi">
+      <div class="roi__text reveal">
+        <span class="sub-title">ROI calculator</span>
+        <h2>See how much time <span>you'll save</span></h2>
+        <p>Teams typically automate 30–40% of repetitive work in the first month. Adjust the sliders to estimate your savings.</p>
+      </div>
+      <div class="roi__card reveal">
+        <label>Team members <strong id="vTeam">25</strong></label>
+        <input type="range" id="rTeam" min="1" max="200" value="25" />
+        <label>Hours of manual work per person / week <strong id="vHours">6</strong></label>
+        <input type="range" id="rHours" min="1" max="20" value="6" />
+        <label>Average hourly cost <strong id="vRate">$40</strong></label>
+        <input type="range" id="rRate" min="15" max="150" step="5" value="40" />
+        <div class="roi__out">
+          <div><small>Hours saved / month</small><strong id="oHours">0</strong></div>
+          <div><small>Yearly savings</small><strong id="oMoney">$0</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Testimonials</span>
+        <h2>Loved by <span>operations teams</span></h2>
+      </div>
+      <div class="slider reveal">
+        <div class="slider__track" id="track"></div>
+      </div>
+      <div class="slider__ctrl">
+        <button id="prev" aria-label="Previous testimonial"><i class="ri-arrow-left-line"></i></button>
+        <div class="dots" id="dots"></div>
+        <button id="next" aria-label="Next testimonial"><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section--light" id="pricing">
+    <div class="container">
+      <div class="title reveal">
+        <span class="sub-title">Pricing</span>
+        <h2>Simple pricing that <span>scales with you</span></h2>
+      </div>
+      <div class="pricing__ctrl reveal">
+        <div class="toggle">
+          <button class="on" data-bill="m">Monthly</button>
+          <button data-bill="y">Yearly <em>-20%</em></button>
+        </div>
+        <div class="seats">
+          <label for="seats">Team size: <strong id="vSeats">10</strong> seats</label>
+          <input type="range" id="seats" min="1" max="100" value="10" />
+        </div>
+      </div>
+      <div class="plans" id="plans"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div class="faq__text reveal">
+        <span class="sub-title">FAQ</span>
+        <h2>Questions? <span>We've got answers</span></h2>
+        <p>Can't find what you're looking for? Our support team replies in under 2 hours, 24/7.</p>
+        <a href="#contact" class="btn btn--outline"><i class="ri-chat-3-line"></i> Talk to support</a>
+      </div>
+      <div class="faq__list reveal" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- Contact / Demo -->
+  <section class="section section--light" id="contact">
+    <div class="container demo">
+      <div class="demo__text reveal">
+        <span class="sub-title">Book a demo</span>
+        <h2>See Nexora in action with <span>your own data</span></h2>
+        <p>Get a 30-minute walkthrough tailored to your team. We'll map out your first three automations together.</p>
+        <ul class="demo__info">
+          <li><i class="ri-mail-line"></i><div><small>Email us</small>hello@nexora.io</div></li>
+          <li><i class="ri-phone-line"></i><div><small>Sales</small>+1 (415) 555-0142</div></li>
+          <li><i class="ri-map-pin-line"></i><div><small>HQ</small>535 Mission St, San Francisco, CA</div></li>
+        </ul>
+      </div>
+      <form class="demo__form reveal" id="demoForm">
+        <div class="row">
+          <label>Full name<input type="text" required placeholder="Dana Whitfield" /></label>
+          <label>Work email<input type="email" required placeholder="dana@company.com" /></label>
+        </div>
+        <div class="row">
+          <label>Company<input type="text" required placeholder="Company Inc." /></label>
+          <label>Team size
+            <select required>
+              <option value="">Select…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option>
+            </select>
+          </label>
+        </div>
+        <label>What would you like to automate?<textarea rows="4" placeholder="e.g. lead routing, invoice approvals, onboarding…"></textarea></label>
+        <button class="btn btn--full" type="submit">Request my demo <i class="ri-arrow-right-line"></i></button>
+        <p class="form-msg" id="demoMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta__in reveal">
+      <div>
+        <h2>Ready to give your team its time back?</h2>
+        <p>Join 12,000+ teams automating with Nexora. Free for 14 days.</p>
+      </div>
+      <div class="cta__btns">
+        <a href="#contact" class="btn btn--white">Start free trial</a>
+        <a href="#contact" class="btn btn--ghost">Talk to sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__about">
+        <a href="#home" class="logo"><span class="logo__mark"><i class="ri-shining-2-fill"></i></span>Nexora</a>
+        <p>The workflow automation platform for teams that would rather build than copy-paste.</p>
+        <div class="socials">
+          <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="#features">Features</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a><a href="#">Changelog</a><a href="#">Status</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About us</a><a href="#">Careers <em class="badge">We're hiring</em></a><a href="#">Customers</a><a href="#">Press kit</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Automation tips and product news, once a month.</p>
+        <form class="news" id="newsForm">
+          <input type="email" required placeholder="Your email" aria-label="Email" />
+          <button aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+      <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Data */
+    const benefits = [
+      { i: "ri-flow-chart", t: "No-code workflows", d: "Drag-and-drop builder with triggers, branches, loops and approvals." },
+      { i: "ri-robot-2-line", t: "AI assistant", d: "Describe a process in plain English and get a ready-to-run workflow." },
+      { i: "ri-line-chart-line", t: "Live dashboards", d: "Track KPIs from every connected app on one real-time screen." },
+      { i: "ri-shield-check-line", t: "Enterprise security", d: "SOC 2 Type II, SSO, audit logs and granular role permissions." },
+      { i: "ri-team-line", t: "Built for teams", d: "Shared folders, comments, version history and handoffs." },
+      { i: "ri-customer-service-2-line", t: "24/7 human support", d: "Real automation experts on chat, email and video — any time." },
+    ];
+    const ftabs = [
+      { k: "Automate", i: "ri-flow-chart", h: "Automate any process across your stack", p: "Build multi-step workflows with conditions, delays and approvals. Start from 400+ templates for sales, finance, HR and support.",
+        pts: ["Visual builder with 300+ app actions", "Branching, loops and error handling", "Scheduled, webhook and event triggers"], img: "1551288049-bebda4e38f71" },
+      { k: "Analyze", i: "ri-bar-chart-box-line", h: "Turn scattered data into clear answers", p: "Pull metrics from every app into live dashboards. Spot bottlenecks, measure time saved and share reports with stakeholders.",
+        pts: ["Drag-and-drop dashboard widgets", "Scheduled PDF & Slack reports", "Anomaly alerts powered by AI"], img: "1460925895917-afdab827c52f" },
+      { k: "Collaborate", i: "ri-team-line", h: "Keep every team on the same page", p: "Share workflows, leave comments, request reviews and roll back with full version history. Everyone sees what runs and why.",
+        pts: ["Shared workspaces & folders", "Approvals with Slack and email", "Version history & one-click rollback"], img: "1522071820081-009f0129c71c" },
+      { k: "Secure", i: "ri-lock-2-line", h: "Security your IT team will sign off on", p: "Data is encrypted at rest and in transit. Control who can build, edit and run with SSO, SCIM and granular roles.",
+        pts: ["SOC 2 Type II & GDPR ready", "SAML SSO & SCIM provisioning", "Full audit log export"], img: "1551434678-e076c223a692" },
+    ];
+    const integrations = [
+      ["ri-slack-fill", "Slack"], ["ri-google-fill", "Google"], ["ri-github-fill", "GitHub"], ["ri-notion-fill", "Notion"],
+      ["ri-dropbox-fill", "Dropbox"], ["ri-microsoft-fill", "Microsoft"], ["ri-trello-fill", "Trello"], ["ri-mail-fill", "Gmail"],
+      ["ri-paypal-fill", "PayPal"], ["ri-whatsapp-fill", "WhatsApp"], ["ri-calendar-fill", "Calendar"], ["ri-database-2-fill", "Postgres"],
+    ];
+    const reviews = [
+      { q: "We replaced four internal scripts and two contractors with Nexora. Our month-end close went from six days to two.", n: "Marcus Bell", r: "VP Finance, Northwind", img: "1500648767791-00dcc994a43e" },
+      { q: "The AI assistant built our lead-routing flow in about ten minutes. Sales reps now get leads before they even refresh their inbox.", n: "Priya Raman", r: "Head of RevOps, Lumen", img: "1573496359142-b8d87734a5a2" },
+      { q: "Onboarding a new hire used to touch nine tools. Now it's one form, and everything else just happens. HR loves it.", n: "Daniel Okafor", r: "People Ops Lead, Orbit", img: "1507003211169-0a1dd7228f2d" },
+      { q: "Finally an automation tool our security team approved in one meeting. SSO, audit logs, roles — it's all there.", n: "Elena Petrova", r: "CTO, Fieldnote", img: "1580489944761-15a19d654956" },
+    ];
+    const plans = [
+      { n: "Starter", d: "For small teams getting started with automation.", p: 12, f: ["5 active workflows", "2,000 tasks / month", "100+ app integrations", "Email support"] },
+      { n: "Growth", d: "For growing teams that run on automation.", p: 29, pop: true, f: ["Unlimited workflows", "50,000 tasks / month", "AI assistant & templates", "Live dashboards", "Priority chat support"] },
+      { n: "Enterprise", d: "For organisations with advanced security needs.", p: 59, f: ["Unlimited everything", "SAML SSO & SCIM", "Audit logs & data residency", "Dedicated success manager", "99.99% uptime SLA"] },
+    ];
+    const faqs = [
+      ["Do I need to know how to code?", "Not at all. Nexora is built for non-technical teams. Developers can still add custom code steps, webhooks and API calls when they need to."],
+      ["What counts as a task?", "A task is any single action a workflow performs — for example creating a CRM record or sending an email. Triggers and filters are always free."],
+      ["Can I change plans later?", "Yes. Upgrade, downgrade or change your number of seats at any time. We prorate the difference automatically on your next invoice."],
+      ["Is my data secure?", "We are SOC 2 Type II certified and GDPR compliant. All data is encrypted with AES-256 at rest and TLS 1.3 in transit."],
+      ["Do you offer discounts for non-profits?", "Yes — registered non-profits and education institutions get 50% off any paid plan. Contact sales with your details."],
+    ];
+
+    /* Render */
+    $("benefits").innerHTML = benefits.map((b) => `
+      <div class="benefit reveal"><span class="benefit__icon"><i class="${b.i}"></i></span><h3>${b.t}</h3><p>${b.d}</p></div>`).join("");
+
+    $("ftabsNav").innerHTML = ftabs.map((t, i) => `<button class="${i ? "" : "on"}" data-i="${i}"><i class="${t.i}"></i>${t.k}</button>`).join("");
+    const showTab = (i) => {
+      const t = ftabs[i];
+      $("ftabsPanel").innerHTML = `
+        <div class="ftabs__text">
+          <h3>${t.h}</h3><p>${t.p}</p>
+          <ul class="ticks">${t.pts.map((x) => `<li><i class="ri-check-line"></i> ${x}</li>`).join("")}</ul>
+          <a href="#contact" class="btn">Try it free</a>
+        </div>
+        <div class="ftabs__img"><img src="${U(t.img, 900)}" alt="${t.k} feature in Nexora" loading="lazy" /></div>`;
+      document.querySelectorAll("#ftabsNav button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
+    };
+    $("ftabsNav").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) showTab(+b.dataset.i); });
+    showTab(0);
+
+    $("integGrid").innerHTML = integrations.map(([i, n]) => `<div class="app" title="${n}"><i class="${i}"></i><span>${n}</span></div>`).join("");
+
+    /* Hero chart bars */
+    const runs = [42, 55, 48, 62, 58, 71, 66, 79, 74, 88, 83, 96];
+    $("bars").innerHTML = runs.map((v, i) => `<span style="--h:${v}%;--d:${i * 60}ms"></span>`).join("");
+
+    /* Testimonials slider */
+    let slide = 0;
+    $("track").innerHTML = reviews.map((r) => `
+      <div class="review">
+        <div class="stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div>
+        <p>“${r.q}”</p>
+        <div class="review__who"><img src="${U(r.img, 120)}" alt="${r.n}" loading="lazy" /><div><strong>${r.n}</strong><small>${r.r}</small></div></div>
+      </div>`).join("");
+    const perView = () => (innerWidth < 992 ? 1 : 2);
+    const pages = () => reviews.length - perView() + 1;
+    const goSlide = (n) => {
+      slide = (n + pages()) % pages();
+      $("track").style.transform = `translateX(-${slide * (100 / perView())}%)`;
+      $("dots").innerHTML = Array.from({ length: pages() }, (_, i) => `<button class="${i === slide ? "on" : ""}" data-i="${i}" aria-label="Go to slide ${i + 1}"></button>`).join("");
+    };
+    $("prev").onclick = () => goSlide(slide - 1);
+    $("next").onclick = () => goSlide(slide + 1);
+    $("dots").onclick = (e) => { const b = e.target.closest("button"); if (b) goSlide(+b.dataset.i); };
+    let auto = setInterval(() => goSlide(slide + 1), 6000);
+    $("track").parentElement.addEventListener("mouseenter", () => clearInterval(auto));
+    $("track").parentElement.addEventListener("mouseleave", () => (auto = setInterval(() => goSlide(slide + 1), 6000)));
+    addEventListener("resize", () => goSlide(Math.min(slide, pages() - 1)));
+    goSlide(0);
+
+    /* Pricing: billing toggle + seats */
+    let yearly = false;
+    const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
+    const renderPlans = () => {
+      const seats = +$("seats").value;
+      $("vSeats").textContent = seats;
+      $("plans").innerHTML = plans.map((p) => {
+        const per = yearly ? p.p * 0.8 : p.p;
+        return `
+        <div class="plan ${p.pop ? "plan--pop" : ""} reveal in">
+          ${p.pop ? '<span class="plan__badge">Most popular</span>' : ""}
+          <h3>${p.n}</h3><p class="plan__desc">${p.d}</p>
+          <div class="plan__price"><strong>${money(per)}</strong><span>/ seat / month</span></div>
+          <p class="plan__total">${money(per * seats * (yearly ? 12 : 1))} billed ${yearly ? "yearly" : "monthly"} for ${seats} seat${seats > 1 ? "s" : ""}</p>
+          <a href="#contact" class="btn ${p.pop ? "" : "btn--outline"} btn--full">${p.n === "Enterprise" ? "Contact sales" : "Start free trial"}</a>
+          <ul>${p.f.map((f) => `<li><i class="ri-check-line"></i>${f}</li>`).join("")}</ul>
+        </div>`;
+      }).join("");
+    };
+    document.querySelectorAll(".toggle button").forEach((b) => b.addEventListener("click", () => {
+      yearly = b.dataset.bill === "y";
+      document.querySelectorAll(".toggle button").forEach((x) => x.classList.toggle("on", x === b));
+      renderPlans();
+    }));
+    $("seats").addEventListener("input", renderPlans);
+    renderPlans();
+
+    /* ROI calculator */
+    const calcRoi = () => {
+      const team = +$("rTeam").value, hrs = +$("rHours").value, rate = +$("rRate").value;
+      $("vTeam").textContent = team; $("vHours").textContent = hrs; $("vRate").textContent = "$" + rate;
+      const saved = team * hrs * 4.33 * 0.35;
+      $("oHours").textContent = Math.round(saved).toLocaleString("en-US");
+      $("oMoney").textContent = money(saved * rate * 12);
+    };
+    ["rTeam", "rHours", "rRate"].forEach((id) => $(id).addEventListener("input", calcRoi));
+    calcRoi();
+
+    /* FAQ */
+    $("faqList").innerHTML = faqs.map(([q, a], i) => `
+      <div class="faq__item ${i ? "" : "open"}">
+        <button>${q}<i class="ri-add-line"></i></button>
+        <div class="faq__a"><p>${a}</p></div>
+      </div>`).join("");
+    $("faqList").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      const item = b.parentElement, was = item.classList.contains("open");
+      document.querySelectorAll(".faq__item").forEach((x) => x.classList.remove("open"));
+      if (!was) item.classList.add("open");
+    });
+
+    /* Toast + forms */
+    const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 3200); };
+    $("heroForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Your free trial is ready — check your inbox!"); e.target.reset(); });
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Thanks for subscribing!"); e.target.reset(); });
+    $("demoForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      $("demoMsg").innerHTML = '<i class="ri-checkbox-circle-fill"></i> Thanks! A product specialist will email you within one business day.';
+      e.target.reset();
+    });
+
+    /* Header, nav, burger, back to top */
+    const header = $("header"), links = [...document.querySelectorAll(".nav a")];
+    const onScroll = () => {
+      header.classList.toggle("sticky", scrollY > 40);
+      $("toTop").classList.toggle("show", scrollY > 600);
+      let cur = "home";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.offsetTop - 120 <= scrollY) cur = s.id; });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    };
+    addEventListener("scroll", onScroll); onScroll();
+    $("burger").onclick = () => { $("nav").classList.toggle("open"); $("burger").innerHTML = $("nav").classList.contains("open") ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>'; };
+    links.forEach((a) => a.addEventListener("click", () => { $("nav").classList.remove("open"); $("burger").innerHTML = '<i class="ri-menu-3-line"></i>'; }));
+    addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+    $("toTop").onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
+    /* Reveal + count-up */
+    const countUp = (el) => {
+      const end = +el.dataset.count, dec = +(el.dataset.dec || 0), suf = el.dataset.suffix || "";
+      const t0 = performance.now();
+      const tick = (t) => {
+        const k = Math.min((t - t0) / 1600, 1), v = end * (1 - Math.pow(1 - k, 3));
+        el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString("en-US")) + suf;
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach(countUp);
+      if (en.target.matches("[data-count]")) countUp(en.target);
+      io.unobserve(en.target);
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

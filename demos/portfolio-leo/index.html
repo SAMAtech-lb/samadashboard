@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leo Martins — Mobile &amp; Web Developer</title>
+  <meta name="description" content="Leo Martins is a mobile and web developer in Lisbon building fast apps with React, React Native and Node.js." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>try { const t = localStorage.getItem("leo-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar profile -->
+    <aside class="side">
+      <div class="avatar">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Leo Martins" />
+        <span class="online" title="Available for work"></span>
+      </div>
+      <div>
+        <h1>Leo Martins</h1>
+        <span class="role">Mobile &amp; Web Developer</span>
+      </div>
+      <div class="side__info">
+        <div><i class="ri-mail-line"></i><p><small>Email</small><b>hello@leomartins.dev</b></p></div>
+        <div><i class="ri-phone-line"></i><p><small>Phone</small><b>+351 210 000 482</b></p></div>
+        <div><i class="ri-map-pin-line"></i><p><small>Location</small><b>Lisbon, Portugal</b></p></div>
+        <div><i class="ri-calendar-line"></i><p><small>Experience</small><b>7+ years</b></p></div>
+      </div>
+      <div class="side__social">
+        <a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="ri-dribbble-line"></i></a>
+        <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+      </div>
+      <a href="#" download class="btn"><!-- point href to your CV file --><i class="ri-download-2-line"></i> Download CV</a>
+    </aside>
+
+    <!-- Main panel -->
+    <main class="main">
+      <div class="topnav">
+        <h2 id="pageTitle">About Me</h2>
+        <div class="topnav__right">
+          <nav class="tabs" id="tabs">
+            <button class="on" data-page="about"><i class="ri-user-3-line"></i><span>About</span></button>
+            <button data-page="resume"><i class="ri-file-list-3-line"></i><span>Resume</span></button>
+            <button data-page="portfolio"><i class="ri-briefcase-4-line"></i><span>Portfolio</span></button>
+            <button data-page="services"><i class="ri-stack-line"></i><span>Services</span></button>
+            <button data-page="contact"><i class="ri-mail-send-line"></i><span>Contact</span></button>
+          </nav>
+          <button class="theme-btn" id="themeBtn" aria-label="Toggle light / dark mode"><i class="ri-sun-line"></i></button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <section class="page on" id="p-about" data-title="About Me">
+        <div class="intro">
+          <div class="intro__text">
+            <p>Hi, I'm <b>Leo</b> — a mobile and web developer from Lisbon. For seven years I've been helping startups and growing businesses turn ideas into <b>fast, reliable apps</b> that people actually enjoy using.</p>
+            <p>I work across the whole product: from the first sketch and API design to the App Store release. I keep things simple, write clean code and always tell you exactly where your project stands.</p>
+            <p>Right now I'm <b>available for freelance work</b> and short-term contracts.</p>
+          </div>
+          <div class="code">
+            <div class="code__bar"><i></i><i></i><i></i><span>leo.js</span></div>
+<pre><span class="k">const</span> <span class="v">leo</span> = {
+  <span class="v">role</span>: <span class="s">"Mobile &amp; Web Developer"</span>,
+  <span class="v">based</span>: <span class="s">"Lisbon, PT"</span>,
+  <span class="v">stack</span>: [<span class="s">"React"</span>, <span class="s">"React Native"</span>,
+          <span class="s">"Node.js"</span>, <span class="s">"Flutter"</span>],
+  <span class="v">experience</span>: <span class="n">7</span>,
+  <span class="v">available</span>: <span class="n">true</span>,
+  <span class="c">// let's build something great</span>
+};</pre>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b data-count="7">0</b><small>Years of experience</small></div>
+          <div class="stat"><b data-count="140">0</b><small>Projects delivered</small></div>
+          <div class="stat"><b data-count="38">0</b><small>Apps in the stores</small></div>
+          <div class="stat"><b data-count="96">0</b><small>Happy clients</small></div>
+        </div>
+
+        <h3 class="h3"><i class="ri-flashlight-line"></i> What I'm Doing</h3>
+        <div class="doing">
+          <div class="do"><div class="do__icon"><i class="ri-smartphone-line"></i></div><div><h4>Mobile Apps</h4><p>Native-feeling iOS and Android apps with React Native and Flutter, from one codebase.</p></div></div>
+          <div class="do"><div class="do__icon"><i class="ri-code-box-line"></i></div><div><h4>Web Development</h4><p>Fast, responsive websites and web apps built with React, Next.js and clean CSS.</p></div></div>
+          <div class="do"><div class="do__icon"><i class="ri-server-line"></i></div><div><h4>APIs &amp; Backend</h4><p>Secure REST and GraphQL APIs, databases, auth and payment integrations in Node.js.</p></div></div>
+          <div class="do"><div class="do__icon"><i class="ri-pencil-ruler-2-line"></i></div><div><h4>UI Design</h4><p>Clean, simple interfaces in Figma, designed with real users and real content in mind.</p></div></div>
+        </div>
+
+        <h3 class="h3"><i class="ri-tools-line"></i> Tech Stack</h3>
+        <div class="stack">
+          <div class="stack__track" id="stackTrack">
+            <span><i class="devicon-react-original colored"></i>React</span>
+            <span><i class="devicon-nextjs-plain"></i>Next.js</span>
+            <span><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+            <span><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+            <span><i class="devicon-flutter-plain colored"></i>Flutter</span>
+            <span><i class="devicon-firebase-plain colored"></i>Firebase</span>
+            <span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+            <span><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+            <span><i class="devicon-docker-plain colored"></i>Docker</span>
+            <span><i class="devicon-figma-plain colored"></i>Figma</span>
+          </div>
+        </div>
+
+        <h3 class="h3"><i class="ri-chat-quote-line"></i> Testimonials</h3>
+        <div class="testis">
+          <div class="testi"><i class="ri-double-quotes-r"></i><div class="testi__who"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="" /><div><b>Sofia Almeida</b><span>Founder, Lumen Health</span><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div></div></div><p>Leo built our patient app from scratch in ten weeks. It's fast, it's stable and our reviews went from 3.1 to 4.8 stars.</p></div>
+          <div class="testi"><i class="ri-double-quotes-r"></i><div class="testi__who"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="" /><div><b>Daniel Brooks</b><span>CTO, Orbit Logistics</span><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div></div></div><p>Clear communication, clean code and always on time. Leo felt like part of our team from the first week.</p></div>
+          <div class="testi"><i class="ri-double-quotes-r"></i><div class="testi__who"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="" /><div><b>Emma Novak</b><span>Product Lead, Fieldnote</span><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div></div></div><p>He didn't just write code — he suggested features that our users now use every day. Highly recommended.</p></div>
+          <div class="testi"><i class="ri-double-quotes-r"></i><div class="testi__who"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="" /><div><b>Marco Ricci</b><span>Owner, Pizzaro</span><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div></div></div><p>Our ordering app paid for itself in two months. Leo made the whole process easy, even for non-tech people like me.</p></div>
+        </div>
+
+        <h3 class="h3"><i class="ri-building-line"></i> Clients</h3>
+        <div class="clients">
+          <span><i class="ri-compass-3-fill"></i>Northwind</span>
+          <span><i class="ri-sun-fill"></i>Lumen</span>
+          <span><i class="ri-planet-fill"></i>Orbit</span>
+          <span><i class="ri-leaf-fill"></i>Fieldnote</span>
+          <span><i class="ri-flashlight-fill"></i>Voltra</span>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section class="page" id="p-resume" data-title="Resume">
+        <div class="resume">
+          <div>
+            <h3 class="h3" style="margin-top:0"><i class="ri-briefcase-4-line"></i> Experience</h3>
+            <div class="tl">
+              <div class="tl__item"><span class="tl__date">2023 — Present</span><h4>Senior Mobile Developer</h4><span>Freelance · Remote</span><p>Building iOS and Android apps for startups in health, logistics and food delivery.</p></div>
+              <div class="tl__item"><span class="tl__date">2020 — 2023</span><h4>Full-Stack Developer</h4><span>Northwind Digital</span><p>Led a team of four building React web apps and Node.js APIs for 20+ clients.</p></div>
+              <div class="tl__item"><span class="tl__date">2018 — 2020</span><h4>Front-End Developer</h4><span>Lumen Studio</span><p>Turned designs into fast, accessible websites and launched the studio's first mobile app.</p></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="h3" style="margin-top:0"><i class="ri-graduation-cap-line"></i> Education</h3>
+            <div class="tl">
+              <div class="tl__item"><span class="tl__date">2014 — 2018</span><h4>BSc Computer Engineering</h4><span>University of Lisbon</span><p>Graduated with honours. Final project: an offline-first mobile app for field workers.</p></div>
+              <div class="tl__item"><span class="tl__date">2022</span><h4>Advanced React Native</h4><span>Online Certification</span><p>Performance, animations and native modules in large React Native apps.</p></div>
+              <div class="tl__item"><span class="tl__date">2021</span><h4>AWS Developer Associate</h4><span>Amazon Web Services</span><p>Serverless APIs, deployment pipelines and cloud cost management.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h3"><i class="ri-bar-chart-2-line"></i> My Skills</h3>
+        <div class="rings" id="rings">
+          <div class="ring" data-v="95"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="40" /><circle class="fg" cx="50" cy="50" r="40" /></svg><div class="ring__val">0%</div><b>React</b></div>
+          <div class="ring" data-v="92"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="40" /><circle class="fg" cx="50" cy="50" r="40" /></svg><div class="ring__val">0%</div><b>React Native</b></div>
+          <div class="ring" data-v="88"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="40" /><circle class="fg" cx="50" cy="50" r="40" /></svg><div class="ring__val">0%</div><b>Node.js</b></div>
+          <div class="ring" data-v="80"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="40" /><circle class="fg" cx="50" cy="50" r="40" /></svg><div class="ring__val">0%</div><b>Flutter</b></div>
+          <div class="ring" data-v="85"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="40" /><circle class="fg" cx="50" cy="50" r="40" /></svg><div class="ring__val">0%</div><b>UI Design</b></div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="page" id="p-portfolio" data-title="Portfolio">
+        <div class="filters" id="filters">
+          <button class="on" data-f="All">All</button>
+          <button data-f="Mobile App">Mobile App</button>
+          <button data-f="Web App">Web App</button>
+          <button data-f="Website">Website</button>
+        </div>
+        <div class="projects" id="projects"></div>
+      </section>
+
+      <!-- Services -->
+      <section class="page" id="p-services" data-title="Services">
+        <div class="services">
+          <div class="svc"><i class="ri-smartphone-line"></i><h4>Mobile App Development</h4><p>iOS and Android apps from one codebase, published to both stores.</p></div>
+          <div class="svc"><i class="ri-window-line"></i><h4>Web Applications</h4><p>Dashboards, booking systems and SaaS products with React and Next.js.</p></div>
+          <div class="svc"><i class="ri-global-line"></i><h4>Business Websites</h4><p>Fast, SEO-friendly websites that are easy to update yourself.</p></div>
+          <div class="svc"><i class="ri-database-2-line"></i><h4>APIs &amp; Databases</h4><p>Secure backends, user accounts, payments and third-party integrations.</p></div>
+          <div class="svc"><i class="ri-palette-line"></i><h4>UI / UX Design</h4><p>Wireframes and polished screens in Figma before a line of code is written.</p></div>
+          <div class="svc"><i class="ri-shield-check-line"></i><h4>Support &amp; Updates</h4><p>Monitoring, bug fixes and new features after launch, on a monthly plan.</p></div>
+        </div>
+
+        <h3 class="h3"><i class="ri-route-line"></i> How I Work</h3>
+        <div class="steps">
+          <div class="step"><h4>Discovery Call</h4><p>A free 30-minute call to understand your goals, users and budget.</p></div>
+          <div class="step"><h4>Plan &amp; Design</h4><p>A clear scope, timeline and clickable design you approve first.</p></div>
+          <div class="step"><h4>Build &amp; Test</h4><p>Weekly demos so you see real progress and can give feedback early.</p></div>
+          <div class="step"><h4>Launch &amp; Support</h4><p>Store release or go-live, plus 30 days of free support.</p></div>
+        </div>
+
+        <h3 class="h3"><i class="ri-price-tag-3-line"></i> Pricing</h3>
+        <div class="plans">
+          <div class="plan"><small>Starter</small><h4>Website</h4><div class="price">$1,200<span> / project</span></div><ul><li><i class="ri-check-line"></i> Up to 5 responsive pages</li><li><i class="ri-check-line"></i> Contact form &amp; analytics</li><li><i class="ri-check-line"></i> Basic SEO setup</li><li><i class="ri-check-line"></i> 2 weeks of support</li></ul><a href="#contact" class="btn btn--ghost" data-go="contact">Get Started</a></div>
+          <div class="plan plan--hot"><small>Most popular</small><h4>Mobile App</h4><div class="price">$6,800<span> / from</span></div><ul><li><i class="ri-check-line"></i> iOS &amp; Android app</li><li><i class="ri-check-line"></i> User accounts &amp; push alerts</li><li><i class="ri-check-line"></i> Admin dashboard</li><li><i class="ri-check-line"></i> Store publishing included</li></ul><a href="#contact" class="btn" data-go="contact">Get Started</a></div>
+          <div class="plan"><small>Ongoing</small><h4>Dedicated Dev</h4><div class="price">$3,900<span> / month</span></div><ul><li><i class="ri-check-line"></i> 80 hours per month</li><li><i class="ri-check-line"></i> Web, mobile &amp; backend</li><li><i class="ri-check-line"></i> Weekly progress calls</li><li><i class="ri-check-line"></i> Cancel anytime</li></ul><a href="#contact" class="btn btn--ghost" data-go="contact">Get Started</a></div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="page" id="p-contact" data-title="Contact">
+        <div class="map"><iframe src="https://maps.google.com/maps?q=Lisbon%2C%20Portugal&z=13&output=embed" title="Map of Lisbon" loading="lazy"></iframe></div>
+        <div class="contact">
+          <div class="cards">
+            <div class="ccard"><i class="ri-mail-line"></i><div><b>Email</b><span>hello@leomartins.dev</span></div></div>
+            <div class="ccard"><i class="ri-phone-line"></i><div><b>Phone</b><span>+351 210 000 482</span></div></div>
+            <div class="ccard"><i class="ri-time-line"></i><div><b>Reply time</b><span>Within 24 hours, Mon–Fri</span></div></div>
+          </div>
+          <form class="form" id="form">
+            <input placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <select class="full" aria-label="Project type"><option>Mobile app</option><option>Web application</option><option>Business website</option><option>Something else</option></select>
+            <textarea placeholder="Tell me about your project..." required></textarea>
+            <button class="btn"><i class="ri-send-plane-fill"></i> Send Message</button>
+            <p class="ok" id="ok"><i class="ri-checkbox-circle-fill"></i> Thanks! I'll get back to you within 24 hours.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="foot">© 2026 <span>Leo Martins</span>. Built with care in Lisbon.</footer>
+
+  <div class="modal" id="modal">
+    <div class="modal__box">
+      <button class="modal__close" id="mClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <img id="mImg" alt="" />
+      <div class="modal__body">
+        <small id="mCat"></small>
+        <h3 id="mTitle"></h3>
+        <p id="mDesc"></p>
+        <div class="chips" id="mChips"></div>
+        <div class="modal__btns"><a href="#" class="btn"><i class="ri-external-link-line"></i> Live Preview</a><a href="#" class="btn btn--ghost"><i class="ri-github-fill"></i> Source Code</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Theme toggle */
+    const root = document.documentElement;
+    const syncThemeIcon = () => ($("themeBtn").innerHTML = `<i class="ri-${root.dataset.theme === "dark" ? "sun" : "moon"}-line"></i>`);
+    $("themeBtn").onclick = () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      try { localStorage.setItem("leo-theme", root.dataset.theme); } catch (e) {}
+      syncThemeIcon();
+    };
+    syncThemeIcon();
+
+    /* Tabs / pages */
+    const pages = [...document.querySelectorAll(".page")];
+    function show(id, push = true) {
+      const page = pages.find((p) => p.id === "p-" + id) || pages[0];
+      pages.forEach((p) => p.classList.toggle("on", p === page));
+      document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", "p-" + b.dataset.page === page.id));
+      $("pageTitle").textContent = page.dataset.title;
+      if (push) history.replaceState(null, "", "#" + page.id.slice(2));
+      if (push && innerWidth <= 1100) document.querySelector(".main").scrollIntoView({ behavior: "smooth" });
+      if (page.id === "p-resume") animateRings();
+      if (page.id === "p-about") countUp();
+    }
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) show(b.dataset.page); });
+    document.querySelectorAll("[data-go]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); show(a.dataset.go); }));
+
+    /* Count-up stats */
+    let counted = false;
+    function countUp() {
+      if (counted) return; counted = true;
+      document.querySelectorAll("[data-count]").forEach((el) => {
+        const end = +el.dataset.count, t0 = performance.now();
+        const step = (t) => { const p = Math.min((t - t0) / 1500, 1); el.innerHTML = Math.round(end * (1 - Math.pow(1 - p, 3))) + "<span>+</span>"; if (p < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      });
+    }
+
+    /* Skill rings */
+    function animateRings() {
+      document.querySelectorAll(".ring").forEach((r) => {
+        const v = +r.dataset.v, val = r.querySelector(".ring__val");
+        r.querySelector(".fg").style.strokeDashoffset = 251.2 * (1 - v / 100);
+        const t0 = performance.now();
+        const step = (t) => { const p = Math.min((t - t0) / 1600, 1); val.textContent = Math.round(v * p) + "%"; if (p < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      });
+    }
+
+    /* Projects */
+    const WORKS = [
+      { t: "Lumen Health App", c: "Mobile App", img: "1512941937669-90a1b58e7e9c", tags: ["React Native", "Node.js", "Firebase"], d: "A patient app for booking appointments, video visits and prescription reminders. 4.8★ on both stores." },
+      { t: "Orbit Fleet Dashboard", c: "Web App", img: "1551288049-bebda4e38f71", tags: ["React", "TypeScript", "PostgreSQL"], d: "Live tracking for 600 delivery vans with routes, driver stats and automatic reports." },
+      { t: "Pizzaro Ordering", c: "Mobile App", img: "1504674900247-0877df9cc836", tags: ["Flutter", "Stripe", "Firebase"], d: "Online ordering with saved favourites, Apple Pay and live order tracking." },
+      { t: "Fieldnote Projects", c: "Web App", img: "1517694712202-14dd9538aa97", tags: ["Next.js", "Node.js", "Socket.io"], d: "Kanban boards, real-time comments and file sharing for remote teams." },
+      { t: "Maison Store", c: "Website", img: "1490481651871-ab68de25d43d", tags: ["Next.js", "Shopify", "Tailwind"], d: "A fast headless online store with filters, quick view and a smooth checkout." },
+      { t: "Voltra Wallet", c: "Mobile App", img: "1556742049-0cfed4f6a45d", tags: ["React Native", "Plaid", "Node.js"], d: "A budgeting app that connects bank accounts and sorts spending automatically." },
+      { t: "Pulse Analytics", c: "Web App", img: "1460925895917-afdab827c52f", tags: ["React", "Chart.js", "MongoDB"], d: "Website traffic analytics with team accounts, alerts and monthly billing." },
+      { t: "Ironclad Gym", c: "Website", img: "1534438327276-14e5300c3a48", tags: ["HTML", "CSS", "JavaScript"], d: "A bold gym website with class booking and membership plans." },
+      { t: "Northwind Corporate", c: "Website", img: "1555066931-4365d14bab8c", tags: ["Next.js", "Sanity CMS"], d: "A multilingual company website the marketing team updates without developers." },
+    ];
+    let list = [];
+    function renderWorks(f = "All") {
+      list = WORKS.filter((w) => f === "All" || w.c === f);
+      $("projects").innerHTML = list.map((w, i) => `
+        <article class="proj" data-i="${i}" style="animation-delay:${i * 60}ms">
+          <div class="proj__img"><img src="${U(w.img)}" alt="${w.t}" loading="lazy" /><span><i class="ri-eye-line"></i></span></div>
+          <div class="proj__body"><small>${w.c}</small><h4>${w.t}</h4></div>
+        </article>`).join("");
+    }
+    $("filters").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      $("filters").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      renderWorks(b.dataset.f);
+    });
+    renderWorks();
+
+    /* Project modal */
+    $("projects").addEventListener("click", (e) => {
+      const card = e.target.closest(".proj"); if (!card) return;
+      const w = list[+card.dataset.i];
+      $("mImg").src = U(w.img, 1400); $("mImg").alt = w.t;
+      $("mCat").textContent = w.c; $("mTitle").textContent = w.t; $("mDesc").textContent = w.d;
+      $("mChips").innerHTML = w.tags.map((t) => `<span>${t}</span>`).join("");
+      $("modal").classList.add("on"); document.body.style.overflow = "hidden";
+    });
+    const closeModal = () => { $("modal").classList.remove("on"); document.body.style.overflow = ""; };
+    $("mClose").onclick = closeModal;
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    /* Infinite tech-stack marquee: duplicate the items once */
+    $("stackTrack").innerHTML += $("stackTrack").innerHTML;
+
+    /* Contact form */
+    let toastTimer;
+    function toast(msg) { $("toast").textContent = msg; $("toast").classList.add("on"); clearTimeout(toastTimer); toastTimer = setTimeout(() => $("toast").classList.remove("on"), 2600); }
+    $("form").addEventListener("submit", (e) => { e.preventDefault(); $("ok").style.display = "block"; e.target.reset(); toast("Message sent — talk soon!"); });
+
+    /* Open the tab from the URL hash (e.g. #portfolio) */
+    show(location.hash.slice(1) || "about", false);
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

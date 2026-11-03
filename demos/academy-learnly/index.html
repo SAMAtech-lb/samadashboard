@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learnly — Online Courses From Industry Experts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo"><i class="ri-graduation-cap-fill"></i>learnly</a>
+      <nav class="nav" id="nav"><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#teachers">Instructors</a><a href="#pricing">Pricing</a><a href="#">For Teams</a></nav>
+      <div class="header__right"><a href="#" class="btn btn--ghost">Log in</a><a href="#pricing" class="btn">Start free</a><button class="burger" id="burger" aria-label="Menu"><i class="ri-menu-line"></i></button></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="tag"><i class="ri-fire-fill"></i> 1,200+ courses · new every week</span>
+        <h1>Learn the skills that move your <span>career</span> forward.</h1>
+        <p>Practical, project-based courses taught by people who actually do the work — at companies like Northwind, Lumen and Arcade.</p>
+        <form class="search" id="heroSearch"><i class="ri-search-line"></i><input id="heroQ" placeholder="What do you want to learn?" /><button class="btn">Search</button></form>
+        <div class="popular">Popular: <button>UX Design</button><button>Python</button><button>Marketing</button><button>Excel</button></div>
+      </div>
+      <div class="hero__visual">
+        <div class="player">
+          <div class="player__screen">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="UX Design Fundamentals, lesson 4" />
+            <button class="player__play" id="pPlay" aria-label="Play lesson preview"><i class="ri-pause-fill"></i></button>
+            <span class="player__cc">CC</span>
+            <div class="player__bar"><i id="pBar"></i></div>
+          </div>
+          <div class="player__info">
+            <p><small>UX Design Fundamentals · with Sara Lindqvist</small><b id="pTitle">4. Turning research into a user flow</b></p>
+            <ol class="player__list" id="pList">
+              <li class="done"><i class="ri-checkbox-circle-fill"></i>Interviewing five users <em>12:40</em></li>
+              <li class="done"><i class="ri-checkbox-circle-fill"></i>Affinity mapping <em>09:15</em></li>
+              <li class="done"><i class="ri-checkbox-circle-fill"></i>Writing a problem statement <em>07:30</em></li>
+              <li class="on"><i class="ri-play-circle-fill"></i>Turning research into a user flow <em id="pTime">0:00 / 11:20</em></li>
+              <li><i class="ri-lock-line"></i>Wireframing the flow <em>14:05</em></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="container"><p>Our instructors have worked at</p><div><span>Northwind</span><span>Lumen</span><span>Arcade</span><span>Orbit/</span><span>Fieldnote</span><span>Vessel</span></div></div>
+  </section>
+
+  <section class="cats">
+    <div class="container">
+      <div class="sh"><div><span class="tag">Categories</span><h2>Explore by topic</h2></div></div>
+      <div class="cat-grid" id="cats"></div>
+    </div>
+  </section>
+
+  <section class="courses" id="courses">
+    <div class="container">
+      <div class="sh"><div><span class="tag">Top courses</span><h2 id="courseTitle">Most popular right now</h2></div><span id="courseCount"></span></div>
+      <div class="course-grid" id="courseGrid"></div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="container">
+      <div class="sh"><div><span class="tag">How it works</span><h2>From curious to certified</h2></div></div>
+      <div class="how__grid">
+        <div class="how__step"><b>01</b><i class="ri-search-line"></i><h4>Find your course</h4><p>Browse 1,200+ courses or take our 2-minute skills quiz.</p></div>
+        <div class="how__step"><b>02</b><i class="ri-play-circle-line"></i><h4>Learn at your pace</h4><p>Bite-sized video lessons you can watch anywhere, even offline.</p></div>
+        <div class="how__step"><b>03</b><i class="ri-tools-line"></i><h4>Build real projects</h4><p>Every course ends with a portfolio-ready project and feedback.</p></div>
+        <div class="how__step"><b>04</b><i class="ri-award-line"></i><h4>Get certified</h4><p>Share verified certificates directly to LinkedIn.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="teachers" id="teachers">
+    <div class="container">
+      <div class="sh"><div><span class="tag">Instructors</span><h2>Learn from the best</h2></div><a href="#" class="btn btn--ghost">Become an instructor <i class="ri-arrow-right-line"></i></a></div>
+      <div class="t-grid">
+        <div class="teacher"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="" /><h4>Sara Lindqvist</h4><span>Product Designer, ex-Lumen</span><div class="teacher__stats"><div><b>4.9</b>Rating</div><div><b>86k</b>Students</div><div><b>6</b>Courses</div></div></div>
+        <div class="teacher"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="" /><h4>Daniel Osei</h4><span>Senior Engineer, Arcade</span><div class="teacher__stats"><div><b>4.8</b>Rating</div><div><b>120k</b>Students</div><div><b>9</b>Courses</div></div></div>
+        <div class="teacher"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="" /><h4>Maya Rodriguez</h4><span>Growth Lead, Orbit</span><div class="teacher__stats"><div><b>4.9</b>Rating</div><div><b>64k</b>Students</div><div><b>4</b>Courses</div></div></div>
+        <div class="teacher"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="" /><h4>Leo Hartmann</h4><span>Data Scientist, Northwind</span><div class="teacher__stats"><div><b>4.8</b>Rating</div><div><b>98k</b>Students</div><div><b>7</b>Courses</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="sh" style="justify-content:center;text-align:center"><div><span class="tag">Pricing</span><h2>One plan, every course</h2></div></div>
+      <div class="plans">
+        <div class="plan"><h3>Free</h3><div class="p">$0</div><span>Forever</span><ul><li><i class="ri-check-line"></i> 120+ free courses</li><li><i class="ri-check-line"></i> Community forums</li><li><i class="ri-check-line"></i> Mobile app</li></ul><a href="#" class="btn btn--ghost">Get started</a></div>
+        <div class="plan plan--pro"><h3>Pro</h3><div class="p">$19<small> /month</small></div><span>Billed annually · 7-day free trial</span><ul><li><i class="ri-check-line"></i> All 1,200+ courses</li><li><i class="ri-check-line"></i> Verified certificates</li><li><i class="ri-check-line"></i> Project reviews by mentors</li><li><i class="ri-check-line"></i> Offline downloads</li></ul><a href="#" class="btn btn--yellow">Start free trial</a></div>
+        <div class="plan"><h3>Teams</h3><div class="p">$29<small> /user/mo</small></div><span>For 5+ people</span><ul><li><i class="ri-check-line"></i> Everything in Pro</li><li><i class="ri-check-line"></i> Admin dashboard &amp; analytics</li><li><i class="ri-check-line"></i> Custom learning paths</li><li><i class="ri-check-line"></i> SSO &amp; priority support</li></ul><a href="#" class="btn btn--ghost">Contact sales</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testi">
+    <div class="container">
+      <div class="sh"><div><span class="tag">Success stories</span><h2>Real people, real careers</h2></div></div>
+      <div class="t-cards">
+        <div class="tcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>"I switched from teaching to UX design in eight months. The portfolio projects got me three interviews in my first week of applying."</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>Emma Wilson</b>Now UX Designer at Fieldnote</div></div></div>
+        <div class="tcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>"The Python course was the first one I actually finished. Short lessons, real projects, zero fluff."</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>Ahmed Karim</b>Data Analyst</div></div></div>
+        <div class="tcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><p>"We rolled Learnly out to 200 people. Completion rates are 3× higher than our old LMS."</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>Claire Dubois</b>Head of L&amp;D, Northwind</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta">
+      <div><h2>Start learning today — your first course is free.</h2><p style="color:var(--ink);margin-top:10px">No credit card required. Cancel anytime.</p></div>
+      <form id="ctaForm"><input type="email" placeholder="Your email address" required /><button class="btn">Join free</button></form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#" class="logo"><i class="ri-graduation-cap-fill"></i>learnly</a><p>Practical online courses from people who do the work.</p></div>
+        <div><h4>Learn</h4><ul><li><a href="#courses">All courses</a></li><li><a href="#">Certificates</a></li><li><a href="#">Learning paths</a></li></ul></div>
+        <div><h4>Teach</h4><ul><li><a href="#">Become an instructor</a></li><li><a href="#">Instructor hub</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Help centre</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Learnly Inc.</span><span>Privacy · Terms · Cookies</span></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const CATS = [["All", "ri-apps-2-line"], ["Design", "ri-palette-line"], ["Development", "ri-code-s-slash-line"], ["Business", "ri-briefcase-line"], ["Marketing", "ri-megaphone-line"], ["Data", "ri-bar-chart-box-line"]];
+    const T = { sara: ["Sara Lindqvist", "1534528741775-53994a69daeb"], dan: ["Daniel Osei", "1507003211169-0a1dd7228f2d"], maya: ["Maya Rodriguez", "1580489944761-15a19d654956"], leo: ["Leo Hartmann", "1506794778202-cad84cf45f1d"] };
+    const COURSES = [
+      { t: "UX Design Fundamentals: From Research to Prototype", c: "Design", img: "1561070791-2526d30994b5", by: "sara", r: 4.9, n: "12.4k", l: 42, h: 14, p: 89, old: 129 },
+      { t: "Modern JavaScript & React — The Complete Guide", c: "Development", img: "1498050108023-c5249f4df085", by: "dan", r: 4.8, n: "31k", l: 120, h: 38, p: 99, old: 149 },
+      { t: "Growth Marketing: Acquisition to Retention", c: "Marketing", img: "1552664730-d307ca884978", by: "maya", r: 4.9, n: "8.2k", l: 36, h: 11, p: 79 },
+      { t: "Python for Data Analysis with Pandas", c: "Data", img: "1461749280684-dccba630e2f6", by: "leo", r: 4.8, n: "22k", l: 64, h: 21, p: 0 },
+      { t: "Design Systems in Figma", c: "Design", img: "1609921212029-bb5a28e60960", by: "sara", r: 4.9, n: "6.1k", l: 28, h: 9, p: 69 },
+      { t: "Startup Finance & Fundraising", c: "Business", img: "1450101499163-c8848c66ca85", by: "maya", r: 4.7, n: "4.9k", l: 24, h: 8, p: 59 },
+      { t: "Node.js APIs: Build & Deploy to Production", c: "Development", img: "1555066931-4365d14bab8c", by: "dan", r: 4.8, n: "14k", l: 74, h: 26, p: 89 },
+      { t: "Machine Learning: A Practical Introduction", c: "Data", img: "1517694712202-14dd9538aa97", by: "leo", r: 4.7, n: "18k", l: 88, h: 30, p: 109, old: 149 },
+      { t: "Leading Remote Teams", c: "Business", img: "1522071820081-009f0129c71c", by: "maya", r: 4.8, n: "3.2k", l: 18, h: 5, p: 0 },
+      { t: "Content Marketing That Converts", c: "Marketing", img: "1501504905252-473c47e087f8", by: "maya", r: 4.6, n: "5.5k", l: 30, h: 9, p: 49 },
+      { t: "Illustration on iPad with Procreate", c: "Design", img: "1558655146-9f40138edfeb", by: "sara", r: 4.9, n: "9.8k", l: 34, h: 10, p: 59 },
+      { t: "SQL for Everyone", c: "Data", img: "1516321318423-f06f85e504b3", by: "leo", r: 4.8, n: "26k", l: 40, h: 12, p: 0 },
+    ];
+    const state = { cat: "All", q: "" };
+    const enrolled = new Set();
+    const $ = (id) => document.getElementById(id);
+
+    function renderCats() {
+      $("cats").innerHTML = CATS.map(([c, icon]) => {
+        const n = c === "All" ? COURSES.length : COURSES.filter((x) => x.c === c).length;
+        return `<button class="cat ${c === state.cat ? "on" : ""}" data-c="${c}"><i class="${icon}"></i><b>${c === "All" ? "All topics" : c}</b><span>${n} courses</span></button>`;
+      }).join("");
+    }
+    function renderCourses() {
+      const q = state.q.toLowerCase();
+      const list = COURSES.filter((x) => (state.cat === "All" || x.c === state.cat) && (x.t + x.c).toLowerCase().includes(q));
+      $("courseTitle").textContent = state.q ? `Results for "${state.q}"` : state.cat === "All" ? "Most popular right now" : `Top ${state.cat} courses`;
+      $("courseCount").textContent = `${list.length} courses`;
+      $("courseGrid").innerHTML = list.length ? list.map((x, i) => {
+        const [name, face] = T[x.by], on = enrolled.has(x.t);
+        return `<article class="course" style="animation-delay:${i * 40}ms">
+          <div class="course__img"><img src="${U(x.img)}" alt="" loading="lazy" /><span class="course__cat">${x.c}</span></div>
+          <div class="course__body">
+            <div class="course__meta"><span><i class="ri-book-open-line"></i>${x.l} lessons</span><span><i class="ri-time-line"></i>${x.h}h</span></div>
+            <h3>${x.t}</h3>
+            <div class="course__teacher"><img src="${U(face, 80)}" alt="" />${name}</div>
+            <div class="course__foot"><span class="rating"><i class="ri-star-fill"></i>${x.r} <small>(${x.n})</small></span>
+              <span class="cprice ${x.p ? "" : "free"}">${x.old ? `<s>$${x.old}</s>` : ""}${x.p ? "$" + x.p : "Free"}</span></div>
+            <button class="btn enroll ${on ? "done" : ""}" data-t="${x.t}">${on ? '<i class="ri-check-line"></i> Enrolled' : "Enroll now"}</button>
+          </div></article>`;
+      }).join("") : `<div class="empty"><h3>No courses found</h3><p>Try a different keyword or category.</p></div>`;
+    }
+    function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(t.tm); t.tm = setTimeout(() => t.classList.remove("on"), 2000); }
+
+    $("cats").addEventListener("click", (e) => { const b = e.target.closest(".cat"); if (!b) return; state.cat = b.dataset.c; renderCats(); renderCourses(); });
+    $("courseGrid").addEventListener("click", (e) => {
+      const b = e.target.closest(".enroll"); if (!b) return;
+      if (enrolled.has(b.dataset.t)) return;
+      enrolled.add(b.dataset.t); renderCourses(); toast("You're enrolled! Check your dashboard to start learning.");
+    });
+    $("heroSearch").addEventListener("submit", (e) => { e.preventDefault(); state.q = $("heroQ").value.trim(); state.cat = "All"; renderCats(); renderCourses(); $("courses").scrollIntoView({ behavior: "smooth" }); });
+    document.querySelectorAll(".popular button").forEach((b) => b.onclick = () => { $("heroQ").value = b.textContent; $("heroSearch").requestSubmit(); });
+    $("ctaForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Welcome to Learnly! Check your inbox."); e.target.reset(); });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    renderCats(); renderCourses();
+
+    /* Lesson preview player: progress runs, play/pause toggles */
+    (() => {
+      const total = 680; let t = 214, playing = !matchMedia("(prefers-reduced-motion: reduce)").matches, timer;
+      const fmt = (x) => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, "0")}`;
+      const draw = () => { document.getElementById("pBar").style.width = (t / total) * 100 + "%"; document.getElementById("pTime").textContent = `${fmt(t)} / ${fmt(total)}`; document.getElementById("pPlay").innerHTML = `<i class="ri-${playing ? "pause" : "play"}-fill"></i>`; };
+      const run = () => { clearInterval(timer); if (playing) timer = setInterval(() => { t = t >= total ? 0 : t + 1; draw(); }, 1000); };
+      document.getElementById("pPlay").addEventListener("click", () => { playing = !playing; draw(); run(); });
+      draw(); run();
+    })();
+    /* Scroll reveals */
+    document.querySelectorAll(".sh, .cat-grid, .course, .how__step, .teacher, .plan, .tcard, .cta").forEach((el, i) => { el.classList.add("reveal"); el.style.setProperty("--d", (i % 4) * 0.07 + "s"); });
+    const lrIo = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); lrIo.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => lrIo.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasa — Steakhouse &amp; Smokehouse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="brand"><span class="brand__icon"><i class="ri-fire-fill"></i></span><span><b>BRASA</b><small>Steakhouse</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#" class="active">Home</a><a href="#about">About</a><a href="#cuts">Our Cuts</a><a href="#menu">Menu</a><a href="#events">Events</a><a href="#book">Contact</a>
+      </nav>
+      <div class="header__right">
+        <a href="tel:+13125550188" class="phone"><i class="ri-phone-line"></i> +1 312 555 0188</a>
+        <a href="#book" class="btn">Book A Table</a>
+        <button class="toggle" id="toggle" aria-label="Menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__shade"></div>
+    <div class="container">
+      <span class="sub"><i class="ri-fire-line"></i> Since 1987 · Chicago</span>
+      <h1>Prime Steaks &amp; <em>Smoked</em> BBQ</h1>
+      <p>Dry-aged in-house for 45 days, seared over white oak and served the way it should be — simply, with respect for the cut.</p>
+      <div class="hero__btns">
+        <a href="#book" class="btn">Reserve A Table <i class="ri-arrow-right-line"></i></a>
+        <a href="#menu" class="btn btn--ghost">View Menu</a>
+      </div>
+    </div>
+    <div class="hero__strip">
+      <div class="container">
+        <div><i class="ri-time-line"></i><p><b>Open Daily</b><span>5:00 PM — 11:30 PM</span></p></div>
+        <div><i class="ri-map-pin-2-line"></i><p><b>West Loop</b><span>820 W Randolph St, Chicago</span></p></div>
+        <div><i class="ri-phone-line"></i><p><b>Reservations</b><span>+1 312 555 0188</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flavours" id="about">
+    <div class="container">
+      <div class="flavours__img">
+        <div class="frame"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="Steak plated" /></div>
+        <img class="small" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Smoked ribs" />
+      </div>
+      <div>
+        <span class="sub"><i class="ri-fire-line"></i> About Us</span>
+        <h2>Variety Of Flavours From American Cuisine</h2>
+        <p>Every dish is not just prepared — it's a crafted experience. We source from small Midwestern ranches, butcher whole primals in-house and let our oak-fired grill do the rest.</p>
+        <div class="flavours__list">
+          <div class="fl"><i class="ri-medal-2-line"></i><div><h4>USDA Prime Beef</h4><p>Top 2% of all American beef, hand selected.</p></div></div>
+          <div class="fl"><i class="ri-temp-hot-line"></i><div><h4>45-Day Dry Aged</h4><p>Aged on-site in our Himalayan salt chamber.</p></div></div>
+          <div class="fl"><i class="ri-fire-line"></i><div><h4>Oak-Fired Grill</h4><p>Seared at 900°F for that perfect crust.</p></div></div>
+          <div class="fl"><i class="ri-goblet-line"></i><div><h4>400+ Wines</h4><p>A cellar built to pair with red meat.</p></div></div>
+        </div>
+        <a href="#menu" class="btn">Discover More <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cuts" id="cuts">
+    <div class="container">
+      <div class="cuts__head">
+        <div><span class="sub"><i class="ri-fire-line"></i> Signature Cuts</span><h2>The Butcher's Selection</h2></div>
+        <p>All steaks come with a choice of sauce — béarnaise, peppercorn or chimichurri — and one classic side.</p>
+      </div>
+      <div class="cuts__grid">
+        <div class="cut"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=80" alt="" /><div class="cut__body"><span class="cut__weight">16 OZ</span><h3>Bone-In Ribeye</h3><p class="cut__more">Rich marbling, deep beefy flavour. Our most popular cut.</p><div class="cut__price">$64</div></div></div>
+        <div class="cut"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=700&q=80" alt="" /><div class="cut__body"><span class="cut__weight">10 OZ</span><h3>Filet Mignon</h3><p class="cut__more">The most tender cut, lean and buttery. Center-cut tenderloin.</p><div class="cut__price">$58</div></div></div>
+        <div class="cut"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=700&q=80" alt="" /><div class="cut__body"><span class="cut__weight">32 OZ</span><h3>Tomahawk</h3><p class="cut__more">Built to share. Long-bone ribeye carved tableside.</p><div class="cut__price">$128</div></div></div>
+        <div class="cut"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="" /><div class="cut__body"><span class="cut__weight">FULL RACK</span><h3>Smoked Ribs</h3><p class="cut__more">12 hours over hickory, glazed with our house BBQ sauce.</p><div class="cut__price">$42</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="container">
+      <a href="#" class="play" aria-label="Play video"><i class="ri-play-fill"></i></a>
+      <blockquote>"Fire, salt and patience. That's the whole recipe — the rest is just respect for the animal."</blockquote>
+      <cite>— Chef Marcus Hale, Executive Chef</cite>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="center"><span class="sub"><i class="ri-fire-line"></i> Our Menu <i class="ri-fire-line"></i></span><h2>Dinner &amp; Drinks</h2></div>
+      <div class="mtabs" id="mtabs">
+        <button class="active" data-t="starters">Starters</button>
+        <button data-t="grill">From The Grill</button>
+        <button data-t="sides">Sides</button>
+        <button data-t="drinks">Drinks</button>
+      </div>
+      <div class="mgrid" id="mgrid"></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div><b data-n="37">0</b><span>Years of fire</span></div>
+      <div><b data-n="45">0</b><span>Days dry aged</span></div>
+      <div><b data-n="420">0</b><span>Wines in cellar</span></div>
+      <div><b data-n="18">0</b><span>Industry awards</span></div>
+    </div>
+  </section>
+
+  <section class="events" id="events">
+    <div class="container">
+      <div class="events__img"></div>
+      <div class="events__body">
+        <span class="sub"><i class="ri-fire-line"></i> Private Dining</span>
+        <h2>Host Your Next Event With Us</h2>
+        <p>From intimate dinners to full buyouts for 120 guests, our events team handles every detail so you can enjoy the night.</p>
+        <ul>
+          <li><i class="ri-checkbox-circle-fill"></i> Private wine room for up to 18 guests</li>
+          <li><i class="ri-checkbox-circle-fill"></i> Custom tasting menus by Chef Hale</li>
+          <li><i class="ri-checkbox-circle-fill"></i> AV equipment for presentations</li>
+          <li><i class="ri-checkbox-circle-fill"></i> Dedicated sommelier service</li>
+        </ul>
+        <a href="#book" class="btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <div class="center"><span class="sub"><i class="ri-fire-line"></i> Testimonials <i class="ri-fire-line"></i></span><h2>What Guests Say</h2></div>
+      <div class="reviews__grid">
+        <div class="rv"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>The 45-day ribeye was the best steak I've had in Chicago, and I've tried them all. Service was flawless from start to finish.</p><div class="rv__who"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="" /><div><h4>Robert Hayes</h4><span>Chicago Tribune</span></div></div></div>
+        <div class="rv"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>We hosted our company dinner in the wine room. The tasting menu and pairings were spectacular — everyone is still talking about it.</p><div class="rv__who"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="" /><div><h4>Claire Donovan</h4><span>Event Organiser</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="container">
+      <h3><span>Reservations</span>Book Your Table</h3>
+      <form id="bookForm">
+        <input placeholder="Your name" required />
+        <input type="date" required />
+        <select><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select>
+        <select><option>2 Guests</option><option>4 Guests</option><option>6 Guests</option><option>8+ Guests</option></select>
+        <button class="btn">Book Now</button>
+        <p class="note" id="note"><i class="ri-checkbox-circle-fill"></i> Your table is reserved. See you soon!</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#" class="brand"><span class="brand__icon"><i class="ri-fire-fill"></i></span><span><b>BRASA</b><small>Steakhouse</small></span></a>
+          <p>Chicago's oak-fired steakhouse. Dry-aged beef, smoked BBQ and a cellar to match.</p>
+          <div class="social"><a href="#"><i class="ri-facebook-fill"></i></a><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-twitter-x-line"></i></a></div>
+        </div>
+        <div><h4>Visit</h4><ul><li>820 W Randolph St</li><li>Chicago, IL 60607</li><li>Valet parking available</li></ul></div>
+        <div><h4>Hours</h4><ul><li>Mon — Thu: 5pm — 11pm</li><li>Fri — Sat: 5pm — 12am</li><li>Sunday: 4pm — 10pm</li></ul></div>
+        <div><h4>Explore</h4><ul><li><a href="#menu">Menu</a></li><li><a href="#events">Private Events</a></li><li><a href="#">Gift Cards</a></li><li><a href="#">Careers</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Brasa Steakhouse. All rights reserved.</span><span>Please drink responsibly.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menu = {
+      starters: [["Beef Tartare", 22, "Quail egg, capers, grilled sourdough", ""], ["Smoked Wings", 16, "Hickory smoked, Alabama white sauce", ""], ["Shrimp Cocktail", 24, "Jumbo prawns, horseradish cocktail sauce", ""], ["Wedge Salad", 15, "Iceberg, bacon, blue cheese, tomato", ""], ["Bone Marrow", 19, "Roasted, parsley salad, toast", "CHEF'S PICK"], ["French Onion Soup", 14, "Gruyère crust, beef broth", ""]],
+      grill: [["Bone-In Ribeye 16oz", 64, "45-day dry aged, oak-fired", "SIGNATURE"], ["Filet Mignon 10oz", 58, "Center-cut tenderloin", ""], ["NY Strip 14oz", 54, "Firm texture, bold flavour", ""], ["Tomahawk 32oz", 128, "For two, carved tableside", "SHARE"], ["Smoked Brisket", 36, "14-hour post oak, pickles", ""], ["Half Chicken", 29, "Brined, piri piri glaze", ""]],
+      sides: [["Truffle Fries", 12, "Parmesan, black truffle oil", ""], ["Creamed Spinach", 11, "Nutmeg, garlic, cream", ""], ["Mac &amp; Cheese", 13, "Four cheeses, crispy crumb", ""], ["Grilled Asparagus", 12, "Lemon butter, sea salt", ""], ["Loaded Potato", 10, "Sour cream, chives, bacon", ""], ["Onion Rings", 9, "Beer battered, chipotle mayo", ""]],
+      drinks: [["Smoked Old Fashioned", 18, "Bourbon, demerara, orange, oak smoke", "HOUSE"], ["Classic Martini", 16, "Gin or vodka, dry vermouth", ""], ["Napa Cabernet (glass)", 22, "Full-bodied, dark fruit", ""], ["Malbec (glass)", 15, "Mendoza, plum and spice", ""], ["Craft IPA", 9, "Local brewery, rotating tap", ""], ["Espresso Martini", 17, "Vodka, coffee liqueur, espresso", ""]],
+    };
+    const mgrid = document.getElementById("mgrid");
+    const render = (k) => mgrid.innerHTML = menu[k].map(([n, p, d, t], i) => `
+      <div class="mrow" style="animation-delay:${i * 50}ms"><div class="mrow__top"><h4>${n}${t ? `<span class="tag">${t}</span>` : ""}</h4><b>$${p}</b></div><p>${d}</p></div>`).join("");
+    document.getElementById("mtabs").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      document.querySelector("#mtabs .active").classList.remove("active");
+      b.classList.add("active"); render(b.dataset.t);
+    });
+    render("starters");
+
+    /* Count-up stats */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const el = en.target, target = +el.dataset.n, start = performance.now();
+      const step = (t) => { const p = Math.min((t - start) / 1400, 1); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step); io.unobserve(el);
+    }), { threshold: .5 });
+    document.querySelectorAll("[data-n]").forEach((el) => io.observe(el));
+
+    document.getElementById("bookForm").addEventListener("submit", (e) => { e.preventDefault(); document.getElementById("note").style.display = "block"; });
+    addEventListener("scroll", () => document.getElementById("header").classList.toggle("solid", scrollY > 80));
+    document.getElementById("toggle").onclick = () => document.getElementById("nav").classList.toggle("open");
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monarch — Fine Luxury Watches</title>
+  <meta name="description" content="New and certified pre-owned Rolex, Omega and Breitling watches. Every piece authenticated, insured worldwide delivery, trade-in and private sourcing from our Dubai and Geneva boutiques." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar__in">
+      <span><i class="ri-shield-check-line"></i> Every watch authenticated &amp; certified</span>
+      <span class="topbar__mid">Complimentary insured delivery worldwide</span>
+      <div class="currency" id="currency" role="group" aria-label="Currency">
+        <button class="on" data-c="USD">USD</button><button data-c="EUR">EUR</button><button data-c="AED">AED</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__crown"><i class="ri-vip-crown-2-line"></i></span><span>MONARCH<small>Fine Watches</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#spotlight">Spotlight</a>
+        <a href="#sell">Sell / Trade</a>
+        <a href="#concierge">Concierge</a>
+        <a href="#boutiques">Boutiques</a>
+      </nav>
+      <div class="icons">
+        <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <button id="wishBtn" aria-label="Wishlist"><i class="ri-heart-line"></i><span id="wishCount">0</span></button>
+        <button id="bagBtn" aria-label="Shopping bag"><i class="ri-shopping-bag-line"></i><span id="bagCount">0</span></button>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+    <div class="search" id="search"><div class="container"><i class="ri-search-line"></i><input type="search" id="searchInput" placeholder="Search by brand, model or reference…" aria-label="Search watches" /><button id="searchClose" aria-label="Close search"><i class="ri-close-line"></i></button></div></div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg"><img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&w=1800&q=80" alt="Rolex Explorer on a black background" /></div>
+    <div class="container hero__in">
+      <div class="hero__text">
+        <span class="eyebrow">Rolex · Omega · Breitling · Patek Philippe</span>
+        <h1>The art of <span>fine timekeeping</span></h1>
+        <p>New and certified pre-owned luxury watches, authenticated by our in-house watchmakers and delivered fully insured to your door.</p>
+        <div class="hero__btns">
+          <a href="#collection" class="btn">Explore the collection</a>
+          <a href="#boutiques" class="btn btn--ghost"><i class="ri-calendar-event-line"></i> Book a private viewing</a>
+        </div>
+        <div class="hero__stats">
+          <div><strong>4,200+</strong><small>Watches authenticated</small></div>
+          <div><strong>18 yrs</strong><small>Trusted dealer</small></div>
+          <div><strong>64</strong><small>Countries delivered</small></div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <small>Featured</small>
+        <strong>Rolex Explorer</strong>
+        <span>Ref. 214270 · 39 mm · Oystersteel</span>
+        <em class="price" data-usd="8400"></em>
+        <button class="hero__card-btn" data-qv="3">View details <i class="ri-arrow-right-up-line"></i></button>
+      </div>
+    </div>
+    <a href="#brands" class="scroll" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- Brands -->
+  <section class="brands" id="brands">
+    <div class="brands__track">
+      <span>ROLEX</span><i></i><span>OMEGA</span><i></i><span>BREITLING</span><i></i><span>PATEK PHILIPPE</span><i></i><span>AUDEMARS PIGUET</span><i></i><span>CARTIER</span><i></i><span>TUDOR</span><i></i><span>IWC</span><i></i>
+      <span>ROLEX</span><i></i><span>OMEGA</span><i></i><span>BREITLING</span><i></i><span>PATEK PHILIPPE</span><i></i><span>AUDEMARS PIGUET</span><i></i><span>CARTIER</span><i></i><span>TUDOR</span><i></i><span>IWC</span><i></i>
+    </div>
+  </section>
+
+  <!-- Promise -->
+  <section class="promise">
+    <div class="container promise__in">
+      <div class="reveal"><i class="ri-shield-star-line"></i><h3>Guaranteed authentic</h3><p>30-point inspection by certified watchmakers.</p></div>
+      <div class="reveal"><i class="ri-award-line"></i><h3>2-year warranty</h3><p>On every new and pre-owned timepiece.</p></div>
+      <div class="reveal"><i class="ri-plane-line"></i><h3>Insured delivery</h3><p>Discreet, fully insured shipping worldwide.</p></div>
+      <div class="reveal"><i class="ri-exchange-line"></i><h3>Trade-in welcome</h3><p>Part-exchange your watch towards a new one.</p></div>
+    </div>
+  </section>
+
+  <!-- Collection -->
+  <section class="section" id="collection">
+    <div class="container">
+      <div class="head reveal">
+        <div><span class="eyebrow">The collection</span><h2>Available <span>timepieces</span></h2></div>
+        <p>Each watch is photographed, inspected and certified in our Geneva workshop. Prices include VAT and insured delivery.</p>
+      </div>
+      <div class="filters reveal">
+        <div class="chips" id="brandChips"></div>
+        <div class="filters__right">
+          <div class="seg" id="condSeg"><button class="on" data-v="all">All</button><button data-v="New">New</button><button data-v="Pre-owned">Pre-owned</button></div>
+          <select id="sort" aria-label="Sort watches"><option value="feat">Featured</option><option value="high">Price: high to low</option><option value="low">Price: low to high</option></select>
+        </div>
+      </div>
+      <p class="count" id="count"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- Spotlight -->
+  <section class="spot" id="spotlight">
+    <div class="container spot__in">
+      <div class="spot__img reveal">
+        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=1100&q=80" alt="Rolex Datejust 36 Everose Rolesor with chocolate diamond dial" loading="lazy" />
+        <span class="spot__tag">Watch of the month</span>
+      </div>
+      <div class="spot__text reveal">
+        <span class="eyebrow">Spotlight</span>
+        <h2>Rolex Datejust 36 <span>Everose Rolesor</span></h2>
+        <p>A chocolate sunburst dial set with diamond hour markers, framed by a fluted 18 ct Everose gold bezel. Full set with box and papers, 2023.</p>
+        <dl class="specs">
+          <div><dt>Reference</dt><dd>126231</dd></div>
+          <div><dt>Case</dt><dd>36 mm · Oystersteel &amp; Everose gold</dd></div>
+          <div><dt>Movement</dt><dd>Calibre 3235 · Automatic</dd></div>
+          <div><dt>Power reserve</dt><dd>70 hours</dd></div>
+          <div><dt>Bracelet</dt><dd>Jubilee</dd></div>
+          <div><dt>Condition</dt><dd>Pre-owned · Unworn</dd></div>
+        </dl>
+        <div class="spot__buy">
+          <div><small>Price</small><strong class="price" data-usd="16900"></strong><small class="monthly" data-usd-m="16900"></small></div>
+          <button class="btn" data-add="6"><i class="ri-shopping-bag-line"></i> Add to bag</button>
+          <button class="btn btn--ghost" data-enquire="Rolex Datejust 36 Everose Rolesor">Enquire</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--alt" id="process">
+    <div class="container">
+      <div class="head head--center reveal"><div><span class="eyebrow">Our standard</span><h2>How every watch is <span>certified</span></h2></div></div>
+      <div class="steps">
+        <div class="step reveal"><span>01</span><i class="ri-search-eye-line"></i><h3>Sourced</h3><p>From authorised dealers and verified private collectors only.</p></div>
+        <div class="step reveal"><span>02</span><i class="ri-microscope-line"></i><h3>Inspected</h3><p>30-point check of movement, case, dial and serial numbers.</p></div>
+        <div class="step reveal"><span>03</span><i class="ri-tools-line"></i><h3>Serviced</h3><p>Timed on a Witschi analyser and serviced where needed.</p></div>
+        <div class="step reveal"><span>04</span><i class="ri-file-shield-2-line"></i><h3>Certified</h3><p>Delivered with our certificate and 2-year warranty.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial banner -->
+  <section class="editorial">
+    <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?auto=format&fit=crop&w=1800&q=80" alt="Rolex Submariner Date on a dark desk" loading="lazy" />
+    <div class="container editorial__in reveal">
+      <span class="eyebrow">Icon of the deep</span>
+      <h2>The Submariner, <span>since 1953</span></h2>
+      <p>The benchmark dive watch, waterproof to 300 metres. Explore new and pre-owned references.</p>
+      <button class="btn" id="subBtn">Shop Submariner</button>
+    </div>
+  </section>
+
+  <!-- Sell / trade-in -->
+  <section class="section" id="sell">
+    <div class="container sell">
+      <div class="sell__text reveal">
+        <span class="eyebrow">Sell or trade-in</span>
+        <h2>Get an instant <span>valuation</span></h2>
+        <p>Tell us about your watch and see an estimated offer straight away. Final offers are confirmed after inspection — payment within 24 hours.</p>
+        <ul class="ticks">
+          <li><i class="ri-check-line"></i> Free insured collection worldwide</li>
+          <li><i class="ri-check-line"></i> +8% bonus when trading towards a new watch</li>
+          <li><i class="ri-check-line"></i> Bank transfer within 24 hours</li>
+        </ul>
+      </div>
+      <form class="val reveal" id="valForm">
+        <div class="row">
+          <label>Brand<select id="vBrand"></select></label>
+          <label>Model<select id="vModel"></select></label>
+        </div>
+        <div class="row">
+          <label>Year<select id="vYear"></select></label>
+          <label>Condition<select id="vCond"><option value="1">Unworn</option><option value="0.92" selected>Excellent</option><option value="0.82">Good</option><option value="0.7">Fair</option></select></label>
+        </div>
+        <div class="toggles">
+          <label class="tg"><input type="checkbox" id="vBox" checked /><span></span> Original box</label>
+          <label class="tg"><input type="checkbox" id="vPapers" checked /><span></span> Papers / warranty card</label>
+          <label class="tg"><input type="checkbox" id="vTrade" /><span></span> Trade towards a new watch</label>
+        </div>
+        <div class="val__out">
+          <div><small>Estimated offer</small><strong id="valOut">—</strong></div>
+          <button class="btn" type="submit">Request firm offer</button>
+        </div>
+        <p class="form-msg" id="valMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Concierge -->
+  <section class="section section--alt" id="concierge">
+    <div class="container conc">
+      <div class="conc__img reveal">
+        <img src="https://images.unsplash.com/photo-1680810897186-372717262131?auto=format&fit=crop&w=900&q=80" alt="Luxury watch presented in a wooden box" loading="lazy" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Private concierge</span>
+        <h2>Looking for a <span>specific reference?</span></h2>
+        <p class="conc__lead">Patek Philippe Nautilus, Audemars Piguet Royal Oak, Rolex Daytona — our sourcing team finds rare and waitlisted pieces through a private network of collectors.</p>
+        <form class="conc__form" id="concForm">
+          <div class="row">
+            <select required aria-label="Brand"><option value="">Brand</option><option>Patek Philippe</option><option>Audemars Piguet</option><option>Rolex</option><option>Richard Mille</option><option>Cartier</option><option>Omega</option><option>Other</option></select>
+            <input type="text" required placeholder="Model / reference (e.g. 5711/1A)" aria-label="Model or reference" />
+          </div>
+          <div class="row">
+            <input type="text" required placeholder="Full name" aria-label="Full name" />
+            <input type="email" required placeholder="Email" aria-label="Email" />
+          </div>
+          <select aria-label="Budget"><option>Budget: up to $25,000</option><option>$25,000 – $75,000</option><option>$75,000 – $150,000</option><option>$150,000+</option></select>
+          <button class="btn btn--full" type="submit">Send sourcing request</button>
+          <p class="form-msg" id="concMsg"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="head head--center reveal"><div><span class="eyebrow">Client stories</span><h2>Trusted by <span>collectors</span></h2></div></div>
+      <div class="reviews" id="reviews-row"></div>
+      <div class="rating reveal"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><span><strong>4.9 / 5</strong> from 1,870 verified reviews</span></div>
+    </div>
+  </section>
+
+  <!-- Boutiques -->
+  <section class="section section--alt" id="boutiques">
+    <div class="container">
+      <div class="head reveal">
+        <div><span class="eyebrow">Visit us</span><h2>Our <span>boutiques</span></h2></div>
+        <p>Book a private appointment and try any watch from the collection with a glass of champagne and no pressure.</p>
+      </div>
+      <div class="shops">
+        <div class="shop reveal">
+          <div class="shop__top"><h3>Dubai</h3><span class="open" id="openDXB"></span></div>
+          <p><i class="ri-map-pin-2-line"></i> Fashion Avenue, The Dubai Mall, Level 1</p>
+          <p><i class="ri-phone-line"></i> +971 4 555 0192</p>
+          <p><i class="ri-time-line"></i> Daily 10:00 – 23:00</p>
+        </div>
+        <div class="shop reveal">
+          <div class="shop__top"><h3>Geneva</h3><span class="open" id="openGVA"></span></div>
+          <p><i class="ri-map-pin-2-line"></i> Rue du Rhône 48, 1204 Genève</p>
+          <p><i class="ri-phone-line"></i> +41 22 555 0148</p>
+          <p><i class="ri-time-line"></i> Mon – Sat 10:00 – 19:00</p>
+        </div>
+        <form class="shop shop--form reveal" id="apptForm">
+          <h3>Private viewing</h3>
+          <select required aria-label="Boutique"><option value="">Choose boutique</option><option>Dubai</option><option>Geneva</option><option>Video call</option></select>
+          <input type="date" id="apptDate" required aria-label="Date" />
+          <input type="text" required placeholder="Your name" aria-label="Your name" />
+          <button class="btn btn--full" type="submit">Request appointment</button>
+          <p class="form-msg" id="apptMsg"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="news">
+    <div class="container news__in reveal">
+      <div><span class="eyebrow">The Monarch List</span><h2>First access to <span>new arrivals</span></h2><p>Rare pieces often sell within hours. Members hear about them first.</p></div>
+      <form id="newsForm"><input type="email" required placeholder="Email address" aria-label="Email" /><button class="btn" type="submit">Join</button></form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo"><span class="logo__crown"><i class="ri-vip-crown-2-line"></i></span><span>MONARCH<small>Fine Watches</small></span></a>
+        <p>Independent dealer of new and certified pre-owned luxury watches. Dubai · Geneva · Worldwide.</p>
+        <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a><a href="#" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a></div>
+      </div>
+      <div><h4>Brands</h4><a href="#collection">Rolex</a><a href="#collection">Omega</a><a href="#collection">Breitling</a><a href="#concierge">Patek Philippe</a><a href="#concierge">Audemars Piguet</a></div>
+      <div><h4>Services</h4><a href="#sell">Sell your watch</a><a href="#sell">Trade-in</a><a href="#concierge">Private sourcing</a><a href="#process">Authentication</a><a href="#boutiques">Appointments</a></div>
+      <div><h4>Client care</h4><a href="#">Shipping &amp; insurance</a><a href="#">Warranty</a><a href="#">Returns</a><a href="#">Payment options</a><a href="#">FAQ</a></div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Monarch Fine Watches. Monarch is an independent dealer and is not affiliated with the brands it sells. All trademarks belong to their respective owners.</p>
+      <div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-apple-fill"></i><i class="ri-bank-line"></i></div>
+    </div>
+  </footer>
+
+  <!-- Quick view -->
+  <div class="overlay" id="overlay"></div>
+  <div class="qv" id="qv" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <button class="qv__close" id="qvClose" aria-label="Close"><i class="ri-close-line"></i></button>
+    <div class="qv__img"><img id="qvImg" src="" alt="" /></div>
+    <div class="qv__body">
+      <small id="qvBrand"></small>
+      <h3 id="qvTitle"></h3>
+      <p class="qv__ref" id="qvRef"></p>
+      <strong class="qv__price" id="qvPrice"></strong>
+      <small class="monthly" id="qvMonthly"></small>
+      <p id="qvDesc"></p>
+      <dl class="specs specs--sm" id="qvSpecs"></dl>
+      <div class="qv__btns"><button class="btn" id="qvAdd"><i class="ri-shopping-bag-line"></i> Add to bag</button><button class="btn btn--ghost" id="qvEnq">Enquire</button></div>
+      <p class="qv__trust"><i class="ri-shield-check-line"></i> Authenticity guaranteed · 2-year warranty · Insured delivery</p>
+    </div>
+  </div>
+
+  <!-- Bag -->
+  <aside class="bag" id="bag" aria-label="Shopping bag">
+    <div class="bag__head"><h3>Your bag</h3><button id="bagClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="bag__list" id="bagList"></div>
+    <div class="bag__foot">
+      <div class="row2"><span>Subtotal</span><strong id="bagSub"></strong></div>
+      <div class="row2"><span>Insured delivery</span><span>Complimentary</span></div>
+      <div class="row2 row2--total"><span>Total</span><strong id="bagTotal"></strong></div>
+      <button class="btn btn--full" id="checkout">Secure checkout <i class="ri-lock-line"></i></button>
+      <p class="bag__note">Or pay in 12 interest-free instalments</p>
+    </div>
+  </aside>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Data */
+    const watches = [
+      { id: 1, b: "Rolex", n: "Submariner Date", ref: "126610LN", p: 14950, cond: "Pre-owned", year: 2022, set: "Box & papers", img: "1526045431048-f857369baa09", tag: "Iconic", feat: 10,
+        d: "The definitive dive watch with black Cerachrom bezel, 300 m water resistance and the Calibre 3235.", sp: [["Case", "41 mm Oystersteel"], ["Movement", "Calibre 3235"], ["Power reserve", "70 h"], ["Water resistance", "300 m"]] },
+      { id: 2, b: "Rolex", n: "Submariner Date Rolesor", ref: "126613LN", p: 18400, cond: "New", year: 2025, set: "Full set", img: "1639006570490-79c0c53f1080", tag: "New", feat: 9,
+        d: "Oystersteel and 18 ct yellow gold with a black dial and Cerachrom bezel — the Submariner at its boldest.", sp: [["Case", "41 mm Yellow Rolesor"], ["Movement", "Calibre 3235"], ["Power reserve", "70 h"], ["Water resistance", "300 m"]] },
+      { id: 3, b: "Rolex", n: "Explorer", ref: "214270", p: 8400, cond: "Pre-owned", year: 2019, set: "Box & papers", img: "1587836374828-4dbafa94cf0e", tag: "", feat: 8,
+        d: "Born on Everest. A clean black dial with luminous 3-6-9 numerals on a 39 mm Oystersteel case.", sp: [["Case", "39 mm Oystersteel"], ["Movement", "Calibre 3132"], ["Power reserve", "48 h"], ["Water resistance", "100 m"]] },
+      { id: 4, b: "Omega", n: "Seamaster Planet Ocean 600M", ref: "215.30.44.21.01.001", p: 6900, cond: "New", year: 2025, set: "Full set", img: "1548171915-e79a380a2a4b", tag: "New", feat: 7,
+        d: "Master Chronometer certified diver with helium escape valve and orange accents.", sp: [["Case", "43.5 mm Steel"], ["Movement", "Calibre 8900"], ["Power reserve", "60 h"], ["Water resistance", "600 m"]] },
+      { id: 5, b: "Rolex", n: "Oyster Perpetual 41", ref: "124300", p: 7600, cond: "Pre-owned", year: 2021, set: "Box & papers", img: "1547996160-81dfa63595aa", tag: "", feat: 6,
+        d: "Rolex in its purest form — a 41 mm Oystersteel case with a smooth bezel and sunray dial.", sp: [["Case", "41 mm Oystersteel"], ["Movement", "Calibre 3230"], ["Power reserve", "70 h"], ["Water resistance", "100 m"]] },
+      { id: 6, b: "Rolex", n: "Datejust 36 Everose", ref: "126231", p: 16900, cond: "Pre-owned", year: 2023, set: "Full set", img: "1600003014755-ba31aa59c4b6", tag: "Diamond dial", feat: 9,
+        d: "Chocolate dial with diamond markers, fluted Everose gold bezel and Jubilee bracelet.", sp: [["Case", "36 mm Everose Rolesor"], ["Movement", "Calibre 3235"], ["Power reserve", "70 h"], ["Water resistance", "100 m"]] },
+      { id: 7, b: "Rolex", n: "Datejust 41 Rolesor", ref: "126333", p: 13800, cond: "Pre-owned", year: 2020, set: "Box & papers", img: "1620625515032-6ed0c1790c75", tag: "", feat: 5,
+        d: "Silver dial with yellow gold fluted bezel and Jubilee bracelet — the classic two-tone Datejust.", sp: [["Case", "41 mm Yellow Rolesor"], ["Movement", "Calibre 3235"], ["Power reserve", "70 h"], ["Water resistance", "100 m"]] },
+      { id: 8, b: "Breitling", n: "Superocean Heritage Chronograph", ref: "AB0162", p: 5900, cond: "New", year: 2025, set: "Full set", img: "1548169874-53e85f753f1e", tag: "", feat: 4,
+        d: "A COSC-certified chronograph with a 70-hour power reserve and vintage-inspired dive bezel.", sp: [["Case", "44 mm Steel"], ["Movement", "Breitling 01"], ["Power reserve", "70 h"], ["Water resistance", "200 m"]] },
+    ];
+    const valModels = {
+      Rolex: [["Submariner Date", 12500], ["Daytona", 26000], ["GMT-Master II", 17000], ["Datejust 41", 9800], ["Explorer", 7200], ["Oyster Perpetual", 6200]],
+      "Patek Philippe": [["Nautilus 5711", 95000], ["Aquanaut 5167", 52000], ["Calatrava 5227", 28000]],
+      "Audemars Piguet": [["Royal Oak 15500", 42000], ["Royal Oak Offshore", 30000]],
+      Omega: [["Speedmaster Moonwatch", 5200], ["Seamaster 300M", 3900], ["Planet Ocean", 4800]],
+      Breitling: [["Navitimer", 5400], ["Superocean", 3200]],
+      Cartier: [["Santos", 5600], ["Tank", 3600]],
+    };
+    const reviews = [
+      { q: "Bought a pre-owned Submariner — arrived in Riyadh in two days, sealed and insured, exactly as photographed. The certificate and warranty gave me total confidence.", n: "Faisal A.", r: "Rolex Submariner Date", img: "1507003211169-0a1dd7228f2d" },
+      { q: "Their concierge found me a Royal Oak 15500 in under three weeks when every boutique had a two-year list. Professional from start to finish.", n: "Daniel M.", r: "Private sourcing", img: "1500648767791-00dcc994a43e" },
+      { q: "I traded my Explorer towards a Datejust. The valuation matched the online estimate and the whole process took one afternoon at the Dubai boutique.", n: "Sara K.", r: "Trade-in", img: "1573496359142-b8d87734a5a2" },
+    ];
+
+    /* Currency */
+    const rates = { USD: [1, "$"], EUR: [0.92, "€"], AED: [3.6725, "AED "] };
+    let cur = "USD";
+    try { cur = localStorage.getItem("monarch-cur") || "USD"; } catch {}
+    const fmt = (usd) => { const [r, s] = rates[cur]; return s + Math.round(usd * r).toLocaleString("en-US"); };
+    const paintPrices = () => {
+      document.querySelectorAll("[data-usd]").forEach((el) => (el.textContent = fmt(+el.dataset.usd)));
+      document.querySelectorAll("[data-usd-m]").forEach((el) => (el.textContent = `or ${fmt(+el.dataset.usdM / 12)} / month × 12`));
+      document.querySelectorAll("#currency button").forEach((b) => b.classList.toggle("on", b.dataset.c === cur));
+    };
+    $("currency").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      cur = b.dataset.c; try { localStorage.setItem("monarch-cur", cur); } catch {}
+      paintPrices(); renderBag(); if (qvW) fillQV(); calcVal();
+    });
+
+    /* Storage */
+    const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch { return d; } };
+    const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+    let bag = load("monarch-bag", []), wish = new Set(load("monarch-wish", []));
+
+    /* Collection */
+    let brand = "All", cond = "all", sortBy = "feat", q = "";
+    const brands = ["All", ...new Set(watches.map((w) => w.b))];
+    $("brandChips").innerHTML = brands.map((b) => `<button class="${b === "All" ? "on" : ""}" data-b="${b}">${b}</button>`).join("");
+    const setBrand = (b) => { brand = b; document.querySelectorAll("#brandChips button").forEach((x) => x.classList.toggle("on", x.dataset.b === b)); renderGrid(); };
+    const renderGrid = () => {
+      let list = watches.filter((w) => (brand === "All" || w.b === brand) && (cond === "all" || w.cond === cond) && (!q || `${w.b} ${w.n} ${w.ref}`.toLowerCase().includes(q)));
+      list.sort((a, b) => sortBy === "high" ? b.p - a.p : sortBy === "low" ? a.p - b.p : b.feat - a.feat);
+      $("count").textContent = `${list.length} timepiece${list.length === 1 ? "" : "s"}${q ? ` matching “${q}”` : ""}`;
+      $("grid").innerHTML = list.length ? list.map((w) => `
+        <article class="card">
+          <div class="card__img">
+            <span class="card__cond ${w.cond === "New" ? "is-new" : ""}">${w.cond}</span>
+            <button class="card__wish ${wish.has(w.id) ? "on" : ""}" data-wish="${w.id}" aria-label="Save ${w.b} ${w.n}"><i class="ri-heart-${wish.has(w.id) ? "fill" : "line"}"></i></button>
+            <img src="${U(w.img, 700)}" alt="${w.b} ${w.n}" loading="lazy" />
+            <button class="card__qv" data-qv="${w.id}">Quick view</button>
+          </div>
+          <div class="card__body">
+            <small>${w.b}</small>
+            <h3>${w.n}</h3>
+            <p>Ref. ${w.ref} · ${w.year} · ${w.set}</p>
+            <div class="card__foot"><strong data-usd="${w.p}">${fmt(w.p)}</strong><button class="card__add" data-add="${w.id}" aria-label="Add ${w.b} ${w.n} to bag"><i class="ri-shopping-bag-line"></i></button></div>
+          </div>
+        </article>`).join("") : `<div class="empty"><i class="ri-search-line"></i><p>No watches match. Our concierge can source it for you.</p><a href="#concierge" class="btn">Request a watch</a></div>`;
+    };
+    $("brandChips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setBrand(b.dataset.b); });
+    $("condSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; cond = b.dataset.v; document.querySelectorAll("#condSeg button").forEach((x) => x.classList.toggle("on", x === b)); renderGrid(); });
+    $("sort").addEventListener("change", (e) => { sortBy = e.target.value; renderGrid(); });
+    $("subBtn").addEventListener("click", () => { q = "submariner"; $("searchInput").value = "Submariner"; setBrand("All"); $("collection").scrollIntoView({ behavior: "smooth" }); });
+
+    /* Search */
+    $("searchBtn").onclick = () => { $("search").classList.add("open"); setTimeout(() => $("searchInput").focus(), 150); };
+    $("searchClose").onclick = () => $("search").classList.remove("open");
+    $("searchInput").addEventListener("input", (e) => { q = e.target.value.trim().toLowerCase(); renderGrid(); });
+    $("searchInput").addEventListener("keydown", (e) => { if (e.key === "Enter") { $("search").classList.remove("open"); $("collection").scrollIntoView({ behavior: "smooth" }); } });
+
+    /* Global click actions (grid, hero, spotlight) */
+    document.addEventListener("click", (e) => {
+      const w = e.target.closest("[data-wish]"), a = e.target.closest("[data-add]"), v = e.target.closest("[data-qv]"), enq = e.target.closest("[data-enquire]");
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); save("monarch-wish", [...wish]); renderGrid(); badges(); toast(wish.has(id) ? "Saved to your wishlist" : "Removed from wishlist"); }
+      if (a) addToBag(+a.dataset.add);
+      if (v) openQV(+v.dataset.qv);
+      if (enq) enquire(enq.dataset.enquire);
+    });
+
+    /* Quick view */
+    let qvW = null;
+    const fillQV = () => {
+      $("qvImg").src = U(qvW.img, 1000); $("qvImg").alt = `${qvW.b} ${qvW.n}`;
+      $("qvBrand").textContent = qvW.b; $("qvTitle").textContent = qvW.n;
+      $("qvRef").textContent = `Ref. ${qvW.ref} · ${qvW.cond} · ${qvW.year} · ${qvW.set}`;
+      $("qvPrice").textContent = fmt(qvW.p);
+      $("qvMonthly").textContent = `or ${fmt(qvW.p / 12)} / month × 12, interest-free`;
+      $("qvDesc").textContent = qvW.d;
+      $("qvSpecs").innerHTML = qvW.sp.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+    };
+    const openQV = (id) => { qvW = watches.find((w) => w.id === id); fillQV(); $("qv").classList.add("open"); $("overlay").classList.add("show"); document.body.style.overflow = "hidden"; };
+    $("qvClose").onclick = () => closeAll();
+    $("qvAdd").onclick = () => { addToBag(qvW.id); };
+    $("qvEnq").onclick = () => enquire(`${qvW.b} ${qvW.n} (${qvW.ref})`);
+    const enquire = (name) => { closeAll(); toast(`Thank you — a specialist will contact you about the ${name} within the hour.`); };
+
+    /* Bag */
+    const addToBag = (id) => {
+      if (bag.includes(id)) { toast("This piece is already in your bag — each watch is one of a kind."); return openBag(); }
+      bag.push(id); save("monarch-bag", bag); renderBag(); openBag();
+    };
+    const renderBag = () => {
+      const items = bag.map((id) => watches.find((w) => w.id === id));
+      const sub = items.reduce((s, w) => s + w.p, 0);
+      $("bagList").innerHTML = items.length ? items.map((w) => `
+        <div class="bi"><img src="${U(w.img, 200)}" alt="${w.b} ${w.n}" />
+          <div><small>${w.b}</small><h4>${w.n}</h4><span>Ref. ${w.ref} · ${w.cond}</span></div>
+          <div class="bi__end"><strong>${fmt(w.p)}</strong><button data-rm="${w.id}" aria-label="Remove"><i class="ri-delete-bin-line"></i></button></div></div>`).join("")
+        : `<div class="empty"><i class="ri-shopping-bag-line"></i><p>Your bag is empty.</p></div>`;
+      $("bagSub").textContent = fmt(sub); $("bagTotal").textContent = fmt(sub);
+      badges();
+    };
+    const badges = () => { $("bagCount").textContent = bag.length; $("wishCount").textContent = wish.size; };
+    $("bagList").addEventListener("click", (e) => { const b = e.target.closest("[data-rm]"); if (!b) return; bag = bag.filter((id) => id !== +b.dataset.rm); save("monarch-bag", bag); renderBag(); });
+    const openBag = () => { $("qv").classList.remove("open"); $("bag").classList.add("open"); $("overlay").classList.add("show"); document.body.style.overflow = "hidden"; };
+    const closeAll = () => { ["qv", "bag", "search"].forEach((id) => $(id).classList.remove("open")); $("overlay").classList.remove("show"); document.body.style.overflow = ""; };
+    $("bagBtn").onclick = openBag; $("bagClose").onclick = closeAll; $("overlay").onclick = closeAll;
+    $("wishBtn").onclick = () => toast(wish.size ? `${wish.size} watch${wish.size > 1 ? "es" : ""} in your wishlist` : "Tap ♡ on any watch to save it");
+    $("checkout").onclick = () => { if (!bag.length) return toast("Your bag is empty"); bag = []; save("monarch-bag", bag); renderBag(); closeAll(); toast("Order received. Your client advisor will call to arrange insured delivery."); };
+
+    /* Valuation */
+    $("vBrand").innerHTML = Object.keys(valModels).map((b) => `<option>${b}</option>`).join("");
+    $("vYear").innerHTML = Array.from({ length: 16 }, (_, i) => 2026 - i).map((y) => `<option ${y === 2021 ? "selected" : ""}>${y}</option>`).join("") + `<option value="2005">Before 2011</option>`;
+    const fillModels = () => { $("vModel").innerHTML = valModels[$("vBrand").value].map(([m, v], i) => `<option value="${v}">${m}</option>`).join(""); };
+    const calcVal = () => {
+      const base = +$("vModel").value, age = Math.max(0, 2026 - +$("vYear").value);
+      let v = base * +$("vCond").value * Math.max(0.72, 1 - age * 0.018);
+      if (!$("vBox").checked) v *= 0.94;
+      if (!$("vPapers").checked) v *= 0.9;
+      if ($("vTrade").checked) v *= 1.08;
+      $("valOut").textContent = `${fmt(v * 0.94)} – ${fmt(v * 1.04)}`;
+    };
+    $("vBrand").addEventListener("change", () => { fillModels(); calcVal(); });
+    ["vModel", "vYear", "vCond", "vBox", "vPapers", "vTrade"].forEach((id) => $(id).addEventListener("change", calcVal));
+    fillModels(); calcVal();
+    $("valForm").addEventListener("submit", (e) => { e.preventDefault(); $("valMsg").innerHTML = `<i class="ri-checkbox-circle-line"></i> Request received for your ${$("vBrand").value} ${$("vModel").selectedOptions[0].text}. Our specialist will confirm a firm offer within 24 hours.`; });
+
+    /* Forms */
+    $("concForm").addEventListener("submit", (e) => { e.preventDefault(); $("concMsg").innerHTML = '<i class="ri-checkbox-circle-line"></i> Request received. Our sourcing team will reply within 24 hours, in strict confidence.'; e.target.reset(); });
+    $("apptDate").min = new Date().toISOString().slice(0, 10);
+    $("apptForm").addEventListener("submit", (e) => { e.preventDefault(); $("apptMsg").innerHTML = '<i class="ri-checkbox-circle-line"></i> Appointment requested — we\'ll confirm by phone.'; e.target.reset(); });
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); toast("Welcome to the Monarch List."); e.target.reset(); });
+
+    /* Boutique open-now (local time per city) */
+    const openState = (tz, from, to, days) => {
+      try {
+        const parts = new Intl.DateTimeFormat("en-US", { timeZone: tz, hour: "numeric", hourCycle: "h23", weekday: "short" }).formatToParts(new Date());
+        const h = +parts.find((p) => p.type === "hour").value, wd = parts.find((p) => p.type === "weekday").value;
+        return days.includes(wd) && h >= from && h < to;
+      } catch { return false; }
+    };
+    const setOpen = (id, ok) => { $(id).innerHTML = ok ? '<i></i> Open now' : '<i></i> Closed'; $(id).classList.toggle("is-open", ok); };
+    setOpen("openDXB", openState("Asia/Dubai", 10, 23, ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]));
+    setOpen("openGVA", openState("Europe/Zurich", 10, 19, ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]));
+
+    /* Reviews */
+    $("reviews-row").innerHTML = reviews.map((r) => `
+      <div class="review reveal"><i class="ri-double-quotes-l"></i><p>${r.q}</p>
+        <div class="review__who"><img src="${U(r.img, 120)}" alt="${r.n}" loading="lazy" /><div><strong>${r.n}</strong><small>${r.r}</small></div></div></div>`).join("");
+
+    /* Toast */
+    function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 3600); }
+
+    /* Header, nav */
+    const links = [...document.querySelectorAll(".nav a")];
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("toTop").classList.toggle("show", scrollY > 800);
+      let curS = "home";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.offsetTop - 140 <= scrollY) curS = s.id; });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + curS));
+    };
+    addEventListener("scroll", onScroll); onScroll();
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    links.forEach((a) => a.addEventListener("click", () => $("nav").classList.remove("open")));
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeAll(); $("nav").classList.remove("open"); } });
+    $("toTop").onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
+    /* Reveal */
+    const io = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    renderGrid(); renderBag(); paintPrices();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

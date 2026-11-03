@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monivo — The Budgeting App That Saves For You</title>
+  <meta name="description" content="Monivo is the money app that tracks your spending, builds smart budgets and automatically saves towards your goals. Free on iOS and Android." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo"><span><i class="ri-leaf-fill"></i></span>monivo</a>
+      <nav class="nav" id="nav">
+        <a href="#features" class="active">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#calculator">Savings calculator</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header__cta">
+        <a href="#">Log in</a>
+        <a href="#download" class="btn">Get the App</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="reveal">
+        <span class="pill"><b>New</b> Round-ups now save into any goal <i class="ri-arrow-right-s-line"></i></span>
+        <h1>Spend Smarter. <span>Save Automatically.</span></h1>
+        <p>Monivo connects all your accounts, sorts every purchase into a budget and quietly moves spare change into your goals — so saving happens without thinking about it.</p>
+        <div class="stores">
+          <a href="#download" class="store"><i class="ri-apple-fill"></i><span><small>Download on the</small><b>App Store</b></span></a>
+          <a href="#download" class="store"><i class="ri-google-play-fill"></i><span><small>Get it on</small><b>Google Play</b></span></a>
+        </div>
+        <div class="hero__rating">
+          <div class="avatars">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="User" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User" />
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="User" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="User" />
+          </div>
+          <div><b>4.8 <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></b><small>from 38,000+ ratings · 1.2M users</small></div>
+        </div>
+      </div>
+      <div class="phones reveal">
+        <div class="phone phone--back"><div class="phone__screen" id="hero-back"></div></div>
+        <div class="phone phone--front"><div class="phone__screen" id="hero-front"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <div class="logos">
+    <div class="container">
+      <p>As seen in</p>
+      <div class="logos__row">
+        <span><i class="ri-compass-3-fill"></i>Northwind</span>
+        <span><i class="ri-sun-fill"></i>Lumen</span>
+        <span><i class="ri-planet-fill"></i>Orbit</span>
+        <span><i class="ri-flashlight-fill"></i>Voltra</span>
+        <span><i class="ri-leaf-fill"></i>Fieldnote</span>
+        <span><i class="ri-gamepad-fill"></i>Arcade</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="section section--light" id="features">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">Features</span><h2>Everything Your Money Needs, <span>In One App</span></h2><p>No spreadsheets, no guilt. Just a clear picture of where your money goes and a plan that works on autopilot.</p></div>
+      <div class="feat__grid" id="feat-grid"></div>
+    </div>
+  </section>
+
+  <!-- Showcase tabs -->
+  <section class="section" id="showcase">
+    <div class="container show">
+      <div class="reveal">
+        <span class="kicker">Take a look inside</span>
+        <h2 class="h2">Designed to Make Money <span>Feel Simple</span></h2>
+        <div class="tabs" id="tabs"></div>
+      </div>
+      <div class="show__phone reveal">
+        <div class="phone"><div class="phone__screen" id="show-screen"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--light" id="how">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">How it works</span><h2>Up and Running in <span>3 Minutes</span></h2></div>
+      <div class="steps">
+        <div class="stepc reveal"><span><i class="ri-download-cloud-2-line"></i></span><h3>Download Monivo</h3><p>Free on iOS and Android. Sign up with your email or Apple / Google account.</p></div>
+        <div class="stepc reveal"><span><i class="ri-bank-line"></i></span><h3>Connect Your Accounts</h3><p>Securely link 2,400+ banks and cards with read-only Open Banking access.</p></div>
+        <div class="stepc reveal"><span><i class="ri-magic-line"></i></span><h3>Let It Work</h3><p>Monivo builds your budgets, finds savings and starts moving money to your goals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Savings calculator -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">Savings calculator</span><h2>How Fast Could You <span>Reach Your Goal?</span></h2><p>Pick a goal and see how much to put away — and how much faster round-ups get you there.</p></div>
+      <div class="calc reveal">
+        <div class="calc__in">
+          <h3>Plan your goal</h3>
+          <p>Drag the sliders — results update instantly.</p>
+          <div class="goals" id="goals"></div>
+          <div class="field"><label for="c-amount">Goal amount <b id="o-amount"></b></label><input type="range" id="c-amount" min="500" max="20000" step="250" value="3000" /></div>
+          <div class="field"><label for="c-saved">Already saved <b id="o-saved"></b></label><input type="range" id="c-saved" min="0" max="5000" step="50" value="400" /></div>
+          <div class="field"><label for="c-months">Reach it in <b id="o-months"></b></label><input type="range" id="c-months" min="3" max="36" value="12" /></div>
+          <label class="switch"><span><b>Turn on round-ups</b><small>Avg. Monivo user saves £31 / month from spare change</small></span><input type="checkbox" id="c-round" checked /></label>
+        </div>
+        <div class="calc__out">
+          <div class="calc__big"><small>You need to save</small><b id="r-month">£0</b><span id="r-week"></span></div>
+          <div class="calc__stats">
+            <div><b id="r-round">£0</b><small>from round-ups</small></div>
+            <div><b id="r-date">—</b><small>goal reached</small></div>
+          </div>
+          <div class="calc__bars" id="bars"></div>
+          <div class="calc__axis"><span>Today</span><span id="axis-end"></span></div>
+          <a href="#download" class="btn" style="position:relative">Start This Goal in Monivo <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats band -->
+
+  <!-- Security -->
+  <section class="section">
+    <div class="container secure">
+      <div class="secure__visual reveal">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80" alt="Paying securely online with a card" loading="lazy" />
+        <div class="secure__badge"><i class="ri-shield-check-fill"></i><div><b>FCA-authorised &amp; Open Banking certified</b><small>Firm reference no. 912047 (demo)</small></div></div>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Security first</span>
+        <h2 class="h2">Your Money Is <span>Safe With Us</span></h2>
+        <p style="margin-top:16px">We never see your bank login details and never sell your data. Your savings are held with our partner bank and protected up to £85,000 by the FSCS.</p>
+        <div class="secure__list">
+          <div><i class="ri-lock-2-line"></i><b>256-bit encryption</b><p>The same standard used by the world's biggest banks.</p></div>
+          <div><i class="ri-eye-off-line"></i><b>Read-only access</b><p>We can see transactions, but can never move your money without you.</p></div>
+          <div><i class="ri-fingerprint-line"></i><b>Face ID &amp; biometrics</b><p>Lock the app with your face or fingerprint on every open.</p></div>
+          <div><i class="ri-bank-line"></i><b>FSCS protected</b><p>Savings pots are covered up to £85,000 per person.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">Reviews</span><h2>Loved by <span>1.2 Million</span> Savers</h2></div>
+      <div class="rev__wrap"><div class="rev__track" id="rev-track"></div></div>
+      <div class="rev__nav"><button id="rev-prev" aria-label="Previous reviews"><i class="ri-arrow-left-line"></i></button><span id="rev-count"></span><button id="rev-next" aria-label="Next reviews"><i class="ri-arrow-right-line"></i></button></div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">Pricing</span><h2>Start Free. <span>Upgrade Anytime.</span></h2></div>
+      <div class="bill"><span>Monthly</span><label class="switch"><input type="checkbox" id="yearly" aria-label="Bill yearly" /></label><span>Yearly</span><em>2 months free</em></div>
+      <div class="plans" id="plans"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light" id="faq">
+    <div class="container">
+      <div class="title reveal"><span class="kicker">FAQ</span><h2>Questions? <span>We've Got Answers</span></h2></div>
+      <div class="faq reveal" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="cta reveal">
+        <div>
+          <h2>Your Future Self Will Thank You</h2>
+          <p>Join 1.2 million people who've stopped wondering where their money went. Free forever, set up in three minutes.</p>
+          <div class="stores">
+            <a href="#" class="store store--light"><i class="ri-apple-fill"></i><span><small>Download on the</small><b>App Store</b></span></a>
+            <a href="#" class="store"><i class="ri-google-play-fill"></i><span><small>Get it on</small><b>Google Play</b></span></a>
+          </div>
+        </div>
+        <div class="sms">
+          <b>Text me the download link</b>
+          We'll send a one-time link to your phone. No spam, ever.
+          <form id="sms-form">
+            <select aria-label="Country code"><option>🇬🇧 +44</option><option>🇮🇪 +353</option><option>🇺🇸 +1</option><option>🇦🇪 +971</option></select>
+            <input type="tel" id="sms-tel" required pattern="[0-9 ]{7,14}" placeholder="7700 900123" aria-label="Phone number" />
+            <button class="btn btn--dark" type="submit">Send</button>
+          </form>
+          <small>Standard message rates may apply.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo"><span><i class="ri-leaf-fill"></i></span>monivo</a>
+        <p>The budgeting app that saves for you. Made with care in Manchester, UK.</p>
+        <div class="socials"><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></div>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#calculator">Savings calculator</a></li><li><a href="#">Security</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a> </li><li><a href="#">Press kit</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="#faq">Help centre</a></li><li><a href="#">Contact us</a></li><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of use</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><span>© 2026 Monivo Ltd. Demo template — not a real financial service.</span><span>Made for iOS 17+ and Android 10+</span></div></div>
+  </footer>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const gbp = (n, d = 0) => "£" + n.toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d });
+
+    /* Phone screens */
+    const nav = (on) => `<div class="ui__nav">${["ri-home-5-fill", "ri-pie-chart-2-fill", "ri-flag-2-fill", "ri-calendar-2-fill", "ri-user-3-fill"].map((i, k) => `<i class="${i} ${k === on ? "on" : ""}"></i>`).join("")}</div>`;
+    const uiTop = (t) => `<div class="ui__top"><b>${t}</b><img src="${U("1494790108377-be9c29b29330", 80)}" alt="" /></div>`;
+    const row = (ico, bg, col, t, s, a, plus) => `<div class="ui__row"><span class="ui__ico" style="background:${bg};color:${col}"><i class="${ico}"></i></span><div><b>${t}</b><small>${s}</small></div><span class="ui__amt ${plus ? "plus" : ""}">${a}</span></div>`;
+    const bar = (t, used, max, col) => `<div><div class="ui__h"><span>${t}</span><small style="color:var(--text)">${gbp(used)} / ${gbp(max)}</small></div><div class="ui__bar"><span style="width:${Math.min(100, (used / max) * 100)}%;background:${col}"></span></div></div>`;
+    const screens = {
+      home: () => `<div class="ui">${uiTop("Hi, Emma")}
+        <div class="ui__bal">Total balance<b>£8,426.50</b><span>▲ £312 this month</span></div>
+        <div class="ui__card"><div class="ui__h">Spending this week <small>See all</small></div><div class="ui__chart">${[40, 65, 30, 80, 55, 90, 45].map((h, i) => `<span class="${i === 5 ? "on" : ""}" style="height:${h}%"></span>`).join("")}</div></div>
+        <div class="ui__card"><div class="ui__h">Recent</div>
+          ${row("ri-shopping-basket-2-line", "#e8f8f0", "#12b76a", "Tesco Express", "Groceries · 09:41", "−£23.40")}
+          ${row("ri-money-pound-circle-line", "#fff7ed", "#f79009", "Salary", "Northwind Ltd", "+£2,850", 1)}
+        </div>${nav(0)}</div>`,
+      budgets: () => `<div class="ui">${uiTop("October budgets")}
+        <div class="ui__card"><div class="ui__h">Left to spend <small>12 days left</small></div><b style="font-size:24px;color:var(--dark)">£642.10</b><div class="ui__bar"><span style="width:62%;background:#12b76a"></span></div></div>
+        <div class="ui__card" style="display:grid;gap:12px">
+          ${bar("Groceries", 286, 400, "#12b76a")}
+          ${bar("Eating out", 168, 150, "#f04438")}
+          ${bar("Transport", 74, 120, "#7a5af8")}
+          ${bar("Entertainment", 41, 80, "#f79009")}
+          ${bar("Shopping", 112, 200, "#0b1b32")}
+        </div>
+        <div class="ui__alert"><i class="ri-error-warning-fill"></i> Eating out is £18 over budget</div>${nav(1)}</div>`,
+      insights: () => `<div class="ui">${uiTop("Insights")}
+        <div class="ui__card"><div class="ui__h">Where it went <small>Oct</small></div>
+          <div class="ui__donut" style="background:conic-gradient(#12b76a 0 34%,#7a5af8 0 52%,#f79009 0 70%,#f04438 0 84%,#0b1b32 0)"><b>£1,846<small>spent</small></b></div>
+          <div class="ui__legend"><span><i style="background:#12b76a"></i>Bills 34%</span><span><i style="background:#7a5af8"></i>Food 18%</span><span><i style="background:#f79009"></i>Travel 18%</span><span><i style="background:#f04438"></i>Fun 14%</span></div>
+        </div>
+        <div class="ui__card">${row("ri-lightbulb-flash-line", "#e8f8f0", "#12b76a", "You spent 22% less", "on takeaways than September", "")}${row("ri-repeat-2-line", "#fff7ed", "#f79009", "3 unused subscriptions", "Cancel to save £27/mo", "")}</div>
+        ${nav(1)}</div>`,
+      goals: () => `<div class="ui">${uiTop("My goals")}
+        <div class="ui__bal">Saved in goals<b>£3,140.00</b><span>▲ £186 from round-ups</span></div>
+        ${[["ri-plane-line", "#e8f8f0", "#12b76a", "Lisbon trip", 860, 1200], ["ri-home-4-line", "#f4f0ff", "#7a5af8", "House deposit", 1940, 15000], ["ri-macbook-line", "#fff7ed", "#f79009", "New laptop", 340, 1400]].map(([i, bg, c, t, s, g]) => `
+          <div class="ui__card"><div class="ui__goal"><span class="ui__ico" style="background:${bg};color:${c}"><i class="${i}"></i></span><div style="flex:1"><div class="ui__h">${t}<small>${Math.round((s / g) * 100)}%</small></div><small>${gbp(s)} of ${gbp(g)}</small><div class="ui__bar"><span style="width:${(s / g) * 100}%;background:${c}"></span></div></div></div></div>`).join("")}
+        ${nav(2)}</div>`,
+      bills: () => `<div class="ui">${uiTop("Upcoming bills")}
+        <div class="ui__card"><div class="ui__h">Due in next 14 days <small>5 bills</small></div><b style="font-size:24px;color:var(--dark)">£1,212.97</b></div>
+        <div class="ui__card">
+          ${row("ri-home-2-line", "#e8f8f0", "#12b76a", "Rent", "Fri 24 Oct", "£950.00")}
+          ${row("ri-flashlight-line", "#fff7ed", "#f79009", "Octopus Energy", "Mon 27 Oct", "£86.00")}
+          ${row("ri-wifi-line", "#f4f0ff", "#7a5af8", "Broadband", "Tue 28 Oct", "£32.00")}
+          ${row("ri-netflix-fill", "#fef3f2", "#f04438", "Netflix", "Tomorrow", "£10.99")}
+          ${row("ri-music-2-line", "#e8f8f0", "#12b76a", "Spotify", "Sun 2 Nov", "£11.99")}
+        </div>
+        <div class="ui__alert" style="background:#e8f8f0;color:#0e9a58"><i class="ri-checkbox-circle-fill"></i> You'll have £742 left after bills</div>${nav(3)}</div>`,
+    };
+    $("hero-front").innerHTML = screens.home();
+    $("hero-back").innerHTML = screens.goals();
+
+    /* Features */
+    const feats = [
+      ["ri-bank-card-line", "#e8f8f0", "#12b76a", "All accounts in one place", "Link current accounts, credit cards and savings from 2,400+ banks and see your full balance."],
+      ["ri-pie-chart-2-line", "#f4f0ff", "#7a5af8", "Smart budgets", "Monivo learns your spending and suggests realistic budgets that adjust every month."],
+      ["ri-coins-line", "#fff7ed", "#f79009", "Automatic round-ups", "Every purchase is rounded up to the nearest pound and the change goes to your goals."],
+      ["ri-calendar-check-line", "#fef3f2", "#f04438", "Bill reminders", "Never get caught out — see every bill and subscription before it leaves your account."],
+      ["ri-line-chart-line", "#eef4ff", "#2e6bf0", "Spending insights", "Weekly reports show where your money went and simple ways to keep more of it."],
+      ["ri-group-line", "#e8f8f0", "#0b1b32", "Shared goals", "Save with your partner or friends towards a holiday, home or wedding — together."],
+    ];
+    $("feat-grid").innerHTML = feats.map(([i, bg, c, t, d]) => `<div class="feat reveal"><div class="feat__ico" style="background:${bg};color:${c}"><i class="${i}"></i></div><h3>${t}</h3><p>${d}</p></div>`).join("");
+
+    /* Tabs showcase */
+    const tabs = [
+      ["budgets", "ri-pie-chart-2-line", "Budgets that adapt", "Set limits per category and get a gentle nudge before you overspend — not after."],
+      ["insights", "ri-line-chart-line", "Insights that make sense", "A clear monthly breakdown, unused subscriptions flagged and tips tailored to your habits."],
+      ["goals", "ri-flag-2-line", "Goals on autopilot", "Create unlimited savings pots. Round-ups and scheduled transfers fill them automatically."],
+      ["bills", "ri-calendar-2-line", "Bills, sorted", "See what's due in the next two weeks and how much you'll have left after payday."],
+    ];
+    $("tabs").innerHTML = tabs.map(([k, i, t, d], n) => `<button class="tab ${n ? "" : "active"}" data-k="${k}"><i class="${i}"></i><span><b>${t}</b><p>${d}</p></span></button>`).join("");
+    const showTab = (k) => { $("show-screen").innerHTML = screens[k](); };
+    let tabTimer;
+    function selectTab(btn) {
+      document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === btn));
+      showTab(btn.dataset.k);
+    }
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest(".tab"); if (b) { clearInterval(tabTimer); selectTab(b); } });
+    showTab("budgets");
+    tabTimer = setInterval(() => {
+      const all = [...document.querySelectorAll(".tab")], cur = all.findIndex((x) => x.classList.contains("active"));
+      selectTab(all[(cur + 1) % all.length]);
+    }, 5000);
+
+    /* Savings calculator */
+    const goalPresets = [["ri-plane-line", "Holiday", 3000, 12], ["ri-home-4-line", "House deposit", 15000, 36], ["ri-car-line", "Car", 8000, 24], ["ri-heart-line", "Wedding", 12000, 24], ["ri-shield-line", "Emergency fund", 2500, 10]];
+    $("goals").innerHTML = goalPresets.map(([i, t], n) => `<button class="${n ? "" : "active"}" data-n="${n}"><i class="${i}"></i>${t}</button>`).join("");
+    $("goals").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      const [, , amt, m] = goalPresets[+b.dataset.n];
+      document.querySelectorAll("#goals button").forEach((x) => x.classList.toggle("active", x === b));
+      $("c-amount").value = amt; $("c-months").value = m; calc();
+    });
+    function calc() {
+      const amt = +$("c-amount").value, saved = Math.min(+$("c-saved").value, amt), months = +$("c-months").value, round = $("c-round").checked;
+      $("o-amount").textContent = gbp(amt); $("o-saved").textContent = gbp(saved); $("o-months").textContent = months + " months";
+      const roundTotal = round ? Math.min(31 * months, amt - saved) : 0;
+      const monthly = Math.max(0, (amt - saved - roundTotal) / months);
+      $("r-month").textContent = gbp(monthly) + "/mo";
+      $("r-week").textContent = `That's ${gbp(monthly / 4.345, 2)} a week${round ? " — round-ups do the rest" : ""}`;
+      $("r-round").textContent = gbp(roundTotal);
+      const end = new Date(); end.setMonth(end.getMonth() + months);
+      $("r-date").textContent = end.toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+      $("axis-end").textContent = end.toLocaleDateString("en-GB", { month: "short", year: "2-digit" });
+      const n = Math.min(months, 18);
+      $("bars").innerHTML = Array.from({ length: n }, (_, i) => {
+        const v = saved + ((amt - saved) * (i + 1)) / n;
+        return `<span class="${i === n - 1 ? "goal" : ""}" style="height:${Math.max(6, (v / amt) * 100)}%" title="${gbp(v)}"></span>`;
+      }).join("");
+    }
+    ["c-amount", "c-saved", "c-months", "c-round"].forEach((id) => $(id).addEventListener("input", calc));
+    calc();
+
+    /* Reviews */
+    const reviews = [
+      ["Finally a budget I stick to", "I've tried every budgeting app. Monivo is the first one I've used for more than a month. The round-ups paid for my flights to Lisbon!", "Emma R.", "App Store", "1494790108377-be9c29b29330"],
+      ["Found £34/month in subscriptions", "The insights flagged three subscriptions I'd completely forgotten about. Paid for the Plus plan in the first week.", "Marcus T.", "Google Play", "1500648767791-00dcc994a43e"],
+      ["Our house deposit is growing", "We set up a shared goal and both chip in automatically. Watching the progress bar fill up is genuinely motivating.", "Aisha & Tom", "App Store", "1544005313-94ddf0286df2"],
+      ["Clean, calm and simple", "No clutter and no judgement. It just tells me what I can spend this week. My anxiety about money has dropped massively.", "Jordan P.", "App Store", "1507003211169-0a1dd7228f2d"],
+      ["Bill reminders are a lifesaver", "I used to get hit with overdraft fees every month. Now I see every bill coming and Monivo warns me before payday.", "Chloe M.", "Google Play", "1438761681033-6461ffad8d80"],
+      ["Best finance app of the year", "Linked my four accounts in two minutes. Beautiful design, and the weekly report is the only email I actually open.", "Daniel K.", "App Store", "1472099645785-5658abf4ff4e"],
+    ];
+    $("rev-track").innerHTML = reviews.map(([h, p, n, s, img]) => `
+      <article class="rev"><div class="rev__top"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><small><i class="${s === "App Store" ? "ri-apple-fill" : "ri-google-play-fill"}"></i>${s}</small></div>
+      <h4>${h}</h4><p>${p}</p><div class="rev__who"><img src="${U(img, 100)}" alt="${n}" loading="lazy" /><div><b>${n}</b><small>Verified user</small></div></div></article>`).join("");
+    let rIdx = 0;
+    const per = () => (innerWidth <= 640 ? 1 : innerWidth <= 991 ? 2 : 3);
+    function moveRev() {
+      const max = reviews.length - per();
+      rIdx = rIdx > max ? 0 : rIdx < 0 ? max : rIdx;
+      const w = $("rev-track").children[0].offsetWidth + 24;
+      $("rev-track").style.transform = `translateX(-${rIdx * w}px)`;
+      $("rev-count").textContent = `${rIdx + 1} / ${max + 1}`;
+    }
+    $("rev-prev").onclick = () => { rIdx--; moveRev(); };
+    $("rev-next").onclick = () => { rIdx++; moveRev(); };
+    addEventListener("resize", moveRev);
+    moveRev();
+
+    /* Pricing */
+    const plans = [
+      { n: "Free", i: "ri-seedling-line", d: "Everything you need to get started.", m: 0, f: ["Link up to 2 accounts", "Smart budgets", "Bill reminders", "3 savings goals", "-Round-ups", "-Shared goals"] },
+      { n: "Plus", i: "ri-flashlight-line", d: "For people serious about saving.", m: 4.99, pop: true, f: ["Unlimited accounts", "Smart budgets", "Bill & subscription tracker", "Unlimited goals", "Automatic round-ups", "-Shared goals"] },
+      { n: "Family", i: "ri-team-line", d: "Up to 5 people, one plan.", m: 8.99, f: ["Everything in Plus", "5 member profiles", "Shared goals & budgets", "Kids' pocket money", "Priority support", "Family insights"] },
+    ];
+    function renderPlans() {
+      const y = $("yearly").checked;
+      $("plans").innerHTML = plans.map((p) => {
+        const price = y ? (p.m * 10) / 12 : p.m;
+        return `<div class="plan ${p.pop ? "plan--pop" : ""}">
+          <h3><i class="${p.i}"></i>${p.n}</h3><p>${p.d}</p>
+          <div class="plan__price"><b>${p.m ? gbp(price, 2) : "£0"}</b> <small>/ month</small></div>
+          <div class="plan__note">${p.m && y ? `Billed ${gbp(p.m * 10, 2)} yearly — save ${gbp(p.m * 2, 2)}` : p.m ? "Cancel anytime" : "Free forever"}</div>
+          <a href="#download" class="btn ${p.pop ? "" : "btn--ghost"}">${p.m ? "Start 30-day free trial" : "Get started free"}</a>
+          <ul>${p.f.map((x) => x.startsWith("-") ? `<li class="no"><i class="ri-close-circle-line"></i>${x.slice(1)}</li>` : `<li><i class="ri-checkbox-circle-fill"></i>${x}</li>`).join("")}</ul>
+        </div>`;
+      }).join("");
+    }
+    $("yearly").addEventListener("change", renderPlans);
+    renderPlans();
+
+    /* FAQ */
+    const faqs = [
+      ["Is Monivo really free?", "Yes. The Free plan includes budgets, bill reminders and up to three savings goals, forever. Plus and Family add unlimited accounts, round-ups and shared goals."],
+      ["How does Monivo connect to my bank?", "We use regulated Open Banking. You log in on your bank's own app or website and give read-only permission — we never see or store your password."],
+      ["Where is my saved money kept?", "Savings pots are held in ring-fenced accounts with our partner bank and protected by the FSCS up to £85,000."],
+      ["Can I cancel my subscription anytime?", "Of course. Cancel in two taps from Settings; you'll keep paid features until the end of your billing period."],
+      ["Which banks are supported?", "More than 2,400 banks and card providers across the UK and Europe, including all major high-street and digital banks."],
+    ];
+    $("faq-list").innerHTML = faqs.map(([q, a], i) => `<div class="acc ${i ? "" : "open"}"><button>${q}<i class="ri-add-line"></i></button><div class="acc__body"><p>${a}</p></div></div>`).join("");
+    const setAcc = (el, o) => { el.classList.toggle("open", o); const b = el.querySelector(".acc__body"); b.style.maxHeight = o ? b.scrollHeight + "px" : 0; };
+    document.querySelectorAll(".acc").forEach((a) => setAcc(a, a.classList.contains("open")));
+    $("faq-list").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      const acc = b.parentNode, o = !acc.classList.contains("open");
+      document.querySelectorAll(".acc").forEach((a) => setAcc(a, false)); setAcc(acc, o);
+    });
+
+    /* SMS form + toast */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3500); }
+    $("sms-form").addEventListener("submit", (e) => { e.preventDefault(); toast(`Link sent to ${$("sms-tel").value} — check your messages!`); e.target.reset(); });
+
+    /* Header, nav */
+    const links = [...document.querySelectorAll("#nav a")];
+    const secs = links.map((a) => document.querySelector(a.getAttribute("href")));
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let idx = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 150) idx = i; });
+      links.forEach((l, i) => l.classList.toggle("active", i === idx));
+    });
+    $("burger").onclick = () => $("nav").classList.toggle("open");
+    links.forEach((l) => l.addEventListener("click", () => $("nav").classList.remove("open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+
+    /* Reveal + counters */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach((c) => {
+        const end = +c.dataset.count, dec = +(c.dataset.dec || 0), t0 = performance.now();
+        const tick = (t) => { const p = Math.min((t - t0) / 1600, 1); c.textContent = (end * (1 - Math.pow(1 - p, 3))).toLocaleString("en-GB", { minimumFractionDigits: dec, maximumFractionDigits: dec }); if (p < 1) requestAnimationFrame(tick); };
+        requestAnimationFrame(tick);
+      });
+      io.unobserve(en.target);
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal, #band").forEach((el) => io.observe(el));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

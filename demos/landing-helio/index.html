@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helio Robotics — Autonomous Mobile Robots for Warehouses</title>
+  <meta name="description" content="Helio builds autonomous mobile robots that move totes, pallets and parcels around your warehouse. Live in 6 weeks, no floor changes, paid monthly per robot." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i></i><i></i></span>helio<span>robotics</span></a>
+      <nav class="nav" id="nav">
+        <a href="#robots">Robots</a>
+        <a href="#how">How it works</a>
+        <a href="#customers">Customers</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="tel:+17755550142" class="header__phone"><i class="ri-phone-line"></i> (775) 555-0142</a>
+      <a href="#demo" class="btn btn--sm">Book a demo</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__in">
+      <div class="hero__copy">
+        <p class="pill"><span class="pill__tag">New</span> Helio Lift 2 now moves 1.2 t pallets <i class="ri-arrow-right-line"></i></p>
+        <h1 class="hero__title"><span>Robots that walk</span> <span>the boring miles,</span> <span>so <em>your team</em> doesn't.</span></h1>
+        <p class="hero__lead">Helio's autonomous mobile robots carry totes, pallets and parcels between shelves, pick stations and docks. Live in six weeks, on your existing floor, paid monthly per robot.</p>
+        <div class="hero__ctas">
+          <a href="#demo" class="btn">Book a live demo <i class="ri-arrow-right-up-line"></i></a>
+          <a href="#robots" class="btn btn--ghost"><i class="ri-robot-2-line"></i> Meet the robots</a>
+        </div>
+        <ul class="hero__trust">
+          <li><strong data-count="2.8" data-dec="1">0</strong><span>picks moved last month</span></li>
+          <li><strong data-count="64">0</strong><span>sites in 9 countries</span></li>
+          <li><strong data-count="99.6" data-dec="1">0</strong><span>fleet uptime</span></li>
+        </ul>
+      </div>
+
+      <div class="floor" id="floor">
+        <div class="floor__bar">
+          <span class="live"><i></i> Live floor</span>
+          <span class="floor__site">Reno DC · Zone B</span>
+          <span class="floor__hint"><i class="ri-cursor-line"></i> Click the floor to send a robot</span>
+        </div>
+        <canvas id="floorCanvas" aria-label="Animated warehouse floor with robots. Click to send the nearest robot."></canvas>
+        <div class="floor__hud">
+          <div><span>Picks / hour</span><strong id="hudPicks">1,284</strong></div>
+          <div><span>Robots active</span><strong id="hudActive">6 / 6</strong></div>
+          <div><span>Avg. trip</span><strong id="hudTrip">38 s</strong></div>
+        </div>
+        <div class="floor__toast" id="floorToast"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="logos">
+    <p>Running 24/7 inside warehouses for</p>
+    <div class="logos__track" id="logos">
+      <div class="logos__row">
+        <span><i class="ri-compass-3-fill"></i> Northwind</span><span><i class="ri-sun-fill"></i> Lumen</span><span><i class="ri-planet-fill"></i> Orbit</span><span><i class="ri-leaf-fill"></i> Fieldnote</span><span><i class="ri-gamepad-fill"></i> Arcade</span><span><i class="ri-flashlight-fill"></i> Voltra</span><span><i class="ri-box-3-fill"></i> Parcelo</span><span><i class="ri-shirt-fill"></i> Threadly</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Robots -->
+  <section class="section" id="robots">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">The fleet</p>
+        <h2>Three robots. <span>One brain</span> running all of them.</h2>
+        <p>Every Helio shares the same navigation, safety system and fleet software, so you can mix them on one floor and add more as you grow.</p>
+      </div>
+
+      <div class="robots">
+        <div class="robots__tabs" id="robotTabs" role="tablist"></div>
+        <div class="robots__stage">
+          <div class="bot-view" id="botView">
+            <svg viewBox="0 0 520 300" class="bot" id="botSvg" aria-hidden="true">
+              <ellipse cx="260" cy="262" rx="190" ry="14" class="bot__shadow" />
+              <g class="bot__load" id="botLoad"></g>
+              <g class="bot__deck" id="botDeck">
+                <rect x="96" y="150" width="328" height="16" rx="5" class="bot__plate" />
+              </g>
+              <rect x="80" y="164" width="360" height="76" rx="22" class="bot__body" />
+              <rect x="110" y="182" width="120" height="10" rx="5" class="bot__stripe" />
+              <circle cx="400" cy="196" r="12" class="bot__eye" />
+              <circle cx="400" cy="196" r="5" class="bot__eye-in" />
+              <rect x="300" y="186" width="70" height="22" rx="6" class="bot__screen" />
+              <text x="335" y="201" class="bot__label" id="botLabel">TOTE</text>
+              <g class="bot__wheel" style="transform-origin:150px 244px"><circle cx="150" cy="244" r="20" /><path d="M150 228v32M134 244h32" /></g>
+              <g class="bot__wheel" style="transform-origin:370px 244px"><circle cx="370" cy="244" r="20" /><path d="M370 228v32M354 244h32" /></g>
+              <path class="bot__scan" d="M440 196 L520 160 L520 232 Z" />
+            </svg>
+            <div class="bot-view__floor"></div>
+          </div>
+          <div class="robots__info" id="robotInfo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--light" id="how">
+    <div class="container how">
+      <div class="how__media reveal-img">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1100&q=80" alt="Long warehouse aisle with tall racking" loading="lazy" />
+        <div class="how__route" aria-hidden="true">
+          <svg viewBox="0 0 400 260"><path id="routePath" d="M30 220 C 120 220, 110 60, 200 70 S 330 200, 370 40" /></svg>
+          <span class="how__dot" id="routeDot"></span>
+        </div>
+      </div>
+      <div class="how__copy">
+        <p class="kicker">How it works</p>
+        <h2 class="h2">From signed order to robots on the floor in <span>six weeks.</span></h2>
+        <div class="steps" id="steps">
+          <button class="step on" data-step="0"><span class="step__wk">Week 1</span><strong>We map your site</strong><p>An engineer walks the floor with a scanning cart. No QR stickers, magnets or tape on the ground — robots navigate by the racking you already have.</p></button>
+          <button class="step" data-step="1"><span class="step__wk">Weeks 2–3</span><strong>We connect your WMS</strong><p>Helio Fleet talks to SAP EWM, Manhattan, Blue Yonder and most homegrown systems over a REST API. Orders become robot missions automatically.</p></button>
+          <button class="step" data-step="2"><span class="step__wk">Weeks 4–5</span><strong>Pilot in one zone</strong><p>Robots run alongside your pickers in one zone while we tune routes and charging. Your team is trained in a single 90-minute session.</p></button>
+          <button class="step" data-step="3"><span class="step__wk">Week 6</span><strong>Go live, then scale</strong><p>Robots work every shift. Need more for peak season? Add them month-by-month and send them back in January.</p></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customers -->
+  <section class="section section--dark" id="customers">
+    <div class="container">
+      <div class="title title--light">
+        <p class="kicker">Customers</p>
+        <h2>Real floors. <span>Real numbers.</span></h2>
+      </div>
+      <div class="cases" id="cases"></div>
+
+      <div class="quote" id="quote">
+        <div class="quote__track" id="quoteTrack"></div>
+        <div class="quote__nav">
+          <button id="qPrev" aria-label="Previous quote"><i class="ri-arrow-left-line"></i></button>
+          <div class="quote__dots" id="qDots"></div>
+          <button id="qNext" aria-label="Next quote"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="title">
+        <p class="kicker">Pricing</p>
+        <h2>Robots-as-a-service. <span>No capex.</span></h2>
+        <p>One monthly price per robot covers hardware, software, maintenance and 24/7 remote support.</p>
+      </div>
+      <div class="bill" id="bill">
+        <button class="on" data-term="12">12-month term</button>
+        <button data-term="36">36-month term <em>−15%</em></button>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Pilot</h3>
+          <p class="plan__for">Prove it in one zone</p>
+          <p class="plan__price"><span class="cur">$</span><b data-p12="1690" data-p36="1690">1,690</b><small>/ robot / month</small></p>
+          <ul>
+            <li><i class="ri-check-line"></i> 3–8 robots, 3-month minimum</li>
+            <li><i class="ri-check-line"></i> Site mapping &amp; setup included</li>
+            <li><i class="ri-check-line"></i> CSV / API mission import</li>
+            <li><i class="ri-check-line"></i> Business-hours support</li>
+          </ul>
+          <a href="#demo" class="btn btn--ghost btn--block">Start a pilot</a>
+        </article>
+        <article class="plan plan--pop">
+          <span class="plan__tag">Most sites choose this</span>
+          <h3>Scale</h3>
+          <p class="plan__price"><span class="cur">$</span><b data-p12="1450" data-p36="1230">1,450</b><small>/ robot / month</small></p>
+          <p class="plan__for">For live operations, any mix of robots</p>
+          <ul>
+            <li><i class="ri-check-line"></i> 8–150 robots per site</li>
+            <li><i class="ri-check-line"></i> Native WMS connectors</li>
+            <li><i class="ri-check-line"></i> Peak-season robots, month-to-month</li>
+            <li><i class="ri-check-line"></i> 24/7 support, 4-hour on-site</li>
+            <li><i class="ri-check-line"></i> Fleet analytics dashboard</li>
+          </ul>
+          <a href="#demo" class="btn btn--block">Talk to sales</a>
+        </article>
+        <article class="plan">
+          <h3>Network</h3>
+          <p class="plan__for">Multi-site operators</p>
+          <p class="plan__price plan__price--text">Custom</p>
+          <ul>
+            <li><i class="ri-check-line"></i> 150+ robots across sites</li>
+            <li><i class="ri-check-line"></i> Move robots between buildings</li>
+            <li><i class="ri-check-line"></i> Dedicated solutions engineer</li>
+            <li><i class="ri-check-line"></i> SSO, audit log, private cloud</li>
+          </ul>
+          <a href="#demo" class="btn btn--ghost btn--block">Contact us</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light" id="faq">
+    <div class="container faq">
+      <div class="faq__head">
+        <p class="kicker">FAQ</p>
+        <h2 class="h2">Questions operations managers <span>ask us first.</span></h2>
+        <p>Still unsure? Our engineers will answer on the demo call — or visit a live Helio site near you.</p>
+        <a href="#demo" class="btn btn--ghost">Visit a live site</a>
+      </div>
+      <div class="acc" id="acc">
+        <details open><summary>Do we need to change our floor or racking?</summary><p>No. Helio robots use lidar and cameras to navigate by your existing racking and walls. We need a reasonably flat concrete floor and Wi-Fi in the zone — that's it.</p></details>
+        <details><summary>Is it safe for people to work next to the robots?</summary><p>Yes. Every robot is certified to ISO 3691-4, slows when people are within 2 metres and stops within 30 cm. Pickers don't need special training beyond our 90-minute session.</p></details>
+        <details><summary>What happens if a robot breaks down?</summary><p>The fleet re-routes its missions to other robots in seconds. On the Scale plan a technician is on site within 4 hours, and we keep spare robots at every regional hub.</p></details>
+        <details><summary>How do the robots charge?</summary><p>They dock themselves at chargers during quiet moments. A 12-minute top-up gives about 3 hours of work, so robots run all shifts without anyone plugging them in.</p></details>
+        <details><summary>Can we return robots after peak season?</summary><p>Yes. On the Scale plan you can add robots month-to-month for peak and send them back after, on top of your base fleet.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="section demo" id="demo">
+    <div class="container demo__in">
+      <div class="demo__copy">
+        <p class="kicker">Book a demo</p>
+        <h2 class="h2">See Helio move <span>your</span> orders.</h2>
+        <p>Send us a floor plan and an order export. In a 30-minute call we'll show a simulation of your site running with Helio — with real trip times.</p>
+        <ul class="demo__list">
+          <li><i class="ri-time-line"></i> 30-minute video call</li>
+          <li><i class="ri-map-2-line"></i> Simulation of your own floor</li>
+          <li><i class="ri-file-chart-line"></i> Written ROI report afterwards</li>
+        </ul>
+      </div>
+      <form class="form" id="demoForm">
+        <div class="form__row">
+          <label>Full name<input required name="name" placeholder="Dana Whitaker" /></label>
+          <label>Work email<input required type="email" name="email" placeholder="dana@company.com" /></label>
+        </div>
+        <div class="form__row">
+          <label>Company<input required name="company" placeholder="Northwind Fulfilment" /></label>
+          <label>Site size<select name="size"><option>Under 10,000 m²</option><option selected>10,000 – 40,000 m²</option><option>40,000 m² +</option><option>Several sites</option></select></label>
+        </div>
+        <span class="form__label">What do you want to move?</span>
+        <div class="chips" id="chips">
+          <button type="button" class="on">Totes</button><button type="button">Pallets</button><button type="button">Parcels</button><button type="button">Not sure yet</button>
+        </div>
+        <button class="btn btn--block" type="submit">Request my demo <i class="ri-send-plane-line"></i></button>
+        <p class="form__ok" id="demoOk"><i class="ri-checkbox-circle-fill"></i> Thanks! A solutions engineer will email you within one working day.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="logo logo--light"><span class="logo__mark"><i></i><i></i></span>helio<span>robotics</span></a>
+          <p>Autonomous mobile robots for warehouses and factories. Designed in Reno, Nevada.</p>
+          <div class="social">
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+            <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+          </div>
+        </div>
+        <div><h4>Robots</h4><a href="#robots">Helio Tote</a><a href="#robots">Helio Lift 2</a><a href="#robots">Helio Sort</a><a href="#how">Helio Fleet software</a></div>
+        <div><h4>Company</h4><a href="#customers">Customers</a><a href="#">Careers <em>12 open</em></a><a href="#">Safety &amp; certifications</a><a href="#">Press</a></div>
+        <div>
+          <h4>Monthly floor notes</h4>
+          <p>One email a month on warehouse automation. No fluff.</p>
+          <form class="news" id="news"><input type="email" required placeholder="you@company.com" aria-label="Email" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form>
+          <p class="news__ok" id="newsOk">You're on the list.</p>
+        </div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Helio Robotics Inc. · 1450 Kleppe Ln, Sparks, NV</span><span><a href="#">Privacy</a> · <a href="#">Terms</a></span></div>
+    </div>
+  </footer>
+
+  <button class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const fmt = (n) => Math.round(n).toLocaleString("en-US");
+
+    // Header, burger, back to top
+    const header = $("header");
+    addEventListener("scroll", () => {
+      header.classList.toggle("sticky", scrollY > 20);
+      $("totop").classList.toggle("on", scrollY > 700);
+      let cur = "";
+      document.querySelectorAll("section[id]").forEach((s) => { if (scrollY + 120 >= s.offsetTop) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    }, { passive: true });
+    $("burger").addEventListener("click", () => { $("nav").classList.toggle("open"); $("burger").innerHTML = $("nav").classList.contains("open") ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>'; });
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") { $("nav").classList.remove("open"); $("burger").innerHTML = '<i class="ri-menu-line"></i>'; } });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+    $("totop").addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Logos marquee: duplicate the row for a seamless loop
+    $("logos").append($("logos").firstElementChild.cloneNode(true));
+
+    // ---------- Live warehouse floor ----------
+    const cv = $("floorCanvas"), ctx = cv.getContext("2d");
+    const COLS = 26, ROWS = 16;
+    const grid = [];               // 1 = rack
+    const stations = [];           // pick stations on the left
+    for (let y = 0; y < ROWS; y++) { grid.push(new Array(COLS).fill(0)); }
+    for (let x = 6; x < COLS - 1; x += 4) for (let y = 1; y < ROWS - 1; y++) if (y !== 7 && y !== 8) { grid[y][x] = 1; grid[y][x + 1] = 1; }
+    [2, 5, 10, 13].forEach((y) => stations.push({ x: 1, y }));
+    const free = (x, y) => x >= 0 && y >= 0 && x < COLS && y < ROWS && !grid[y][x];
+    function bfs(sx, sy, tx, ty) {
+      const key = (x, y) => y * COLS + x, prev = new Map([[key(sx, sy), -1]]), q = [[sx, sy]];
+      while (q.length) {
+        const [x, y] = q.shift();
+        if (x === tx && y === ty) { const p = []; let k = key(x, y); while (k !== -1) { p.unshift({ x: k % COLS, y: Math.floor(k / COLS) }); k = prev.get(k); } return p; }
+        for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const nx = x + dx, ny = y + dy; if (free(nx, ny) && !prev.has(key(nx, ny))) { prev.set(key(nx, ny), key(x, y)); q.push([nx, ny]); } }
+      }
+      return null;
+    }
+    function nearestFree(x, y) {
+      for (let r = 0; r < 4; r++) for (let dy = -r; dy <= r; dy++) for (let dx = -r; dx <= r; dx++) if (free(x + dx, y + dy)) return { x: x + dx, y: y + dy };
+      return null;
+    }
+    const aisleCell = () => { let c; do { c = { x: 3 + Math.floor(Math.random() * (COLS - 4)), y: 1 + Math.floor(Math.random() * (ROWS - 2)) }; } while (!free(c.x, c.y) || !(free(c.x - 1, c.y) && !free(c.x + 1, c.y) || !free(c.x - 1, c.y) && free(c.x + 1, c.y))); return c; };
+    const bots = [[3, 2], [3, 13], [9, 7], [17, 8], [21, 3], [13, 12]].map(([x, y], i) => ({ id: "H-" + (101 + i), x, y, a: 0, path: [], wait: Math.random() * 60, carry: i % 2 === 0, manual: false, trail: [] }));
+    const pings = [];
+    let cell = 20, ox = 0, oy = 0, dpr = 1, picks = 1284, tripSum = 0, trips = 0;
+
+    function resize() {
+      dpr = Math.min(2, devicePixelRatio || 1);
+      const w = cv.clientWidth, h = cv.clientHeight;
+      cv.width = w * dpr; cv.height = h * dpr;
+      cell = Math.min(w / COLS, h / ROWS); ox = (w - cell * COLS) / 2; oy = (h - cell * ROWS) / 2;
+    }
+    function assign(b, target, manual = false) {
+      const p = bfs(Math.round(b.x), Math.round(b.y), target.x, target.y);
+      if (p) { b.path = p.slice(1); b.manual = manual; b.started = performance.now(); }
+    }
+    function nextTask(b) {
+      if (b.carry) { assign(b, stations[Math.floor(Math.random() * stations.length)]); }
+      else { assign(b, aisleCell()); }
+    }
+    function toast(t) { const el = $("floorToast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2200); }
+
+    cv.addEventListener("click", (e) => {
+      const r = cv.getBoundingClientRect();
+      const gx = Math.floor((e.clientX - r.left - ox) / cell), gy = Math.floor((e.clientY - r.top - oy) / cell);
+      const t = nearestFree(Math.max(0, Math.min(COLS - 1, gx)), Math.max(0, Math.min(ROWS - 1, gy)));
+      if (!t) return;
+      let best = null, bd = 1e9;
+      bots.forEach((b) => { const d = Math.abs(b.x - t.x) + Math.abs(b.y - t.y) + (b.manual ? 40 : 0); if (d < bd) { bd = d; best = b; } });
+      assign(best, t, true);
+      pings.push({ x: t.x, y: t.y, t: 0 });
+      toast(`${best.id} is on its way · ${best.path.length} m`);
+    });
+
+    function rr(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, y, w, h, r) : ctx.rect(x, y, w, h); }
+    function draw() {
+      const w = cv.width / dpr, h = cv.height / dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, w, h);
+      // floor dots
+      ctx.fillStyle = "rgba(18,20,23,.09)";
+      for (let y = 0; y <= ROWS; y++) for (let x = 0; x <= COLS; x++) ctx.fillRect(ox + x * cell - 1, oy + y * cell - 1, 2, 2);
+      // aisle line
+      ctx.strokeStyle = "rgba(255,77,46,.25)"; ctx.setLineDash([6, 6]); ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(ox + 2.5 * cell, oy + 7.5 * cell + cell * .5 - cell / 2); ctx.lineTo(ox + COLS * cell, oy + 7.5 * cell + cell * .5 - cell / 2); ctx.stroke(); ctx.setLineDash([]);
+      // racks
+      for (let x = 6; x < COLS - 1; x += 4) {
+        [[1, 6], [9, 14]].forEach(([y0, y1]) => {
+          rr(ox + x * cell + 2, oy + y0 * cell + 2, cell * 2 - 4, (y1 - y0 + 1) * cell - 4, 4);
+          ctx.fillStyle = "#e4dfd6"; ctx.fill();
+          ctx.fillStyle = "#cfc8bc";
+          for (let y = y0; y <= y1; y++) { ctx.fillRect(ox + x * cell + 5, oy + y * cell + cell * .3, cell * .7, cell * .4); ctx.fillRect(ox + (x + 1) * cell + cell * .2, oy + y * cell + cell * .3, cell * .7, cell * .4); }
+        });
+      }
+      // stations
+      stations.forEach((s) => {
+        rr(ox + 0.1 * cell, oy + (s.y - .4) * cell, cell * 1.3, cell * 1.8, 5); ctx.fillStyle = "#121417"; ctx.fill();
+        ctx.fillStyle = "#ff4d2e"; ctx.fillRect(ox + .35 * cell, oy + (s.y + .3) * cell, cell * .8, 3);
+      });
+      // pings
+      pings.forEach((p) => {
+        p.t += 1;
+        const cx = ox + (p.x + .5) * cell, cy = oy + (p.y + .5) * cell;
+        ctx.strokeStyle = `rgba(255,77,46,${Math.max(0, 1 - p.t / 60)})`; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(cx, cy, 4 + p.t * .5, 0, 7); ctx.stroke();
+        ctx.fillStyle = "#ff4d2e"; ctx.beginPath(); ctx.arc(cx, cy, 4, 0, 7); ctx.fill();
+      });
+      while (pings.length && pings[0].t > 60) pings.shift();
+      // paths + robots
+      bots.forEach((b) => {
+        if (b.path.length) {
+          ctx.strokeStyle = b.manual ? "rgba(255,77,46,.7)" : "rgba(18,20,23,.16)"; ctx.lineWidth = 2; ctx.setLineDash(b.manual ? [] : [3, 5]);
+          ctx.beginPath(); ctx.moveTo(ox + (b.x + .5) * cell, oy + (b.y + .5) * cell);
+          b.path.forEach((p) => ctx.lineTo(ox + (p.x + .5) * cell, oy + (p.y + .5) * cell)); ctx.stroke(); ctx.setLineDash([]);
+        }
+        const cx = ox + (b.x + .5) * cell, cy = oy + (b.y + .5) * cell, s = cell * .82;
+        ctx.save(); ctx.translate(cx, cy); ctx.rotate(b.a);
+        ctx.shadowColor = "rgba(0,0,0,.25)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3;
+        rr(-s / 2, -s / 2, s, s, s * .28); ctx.fillStyle = "#121417"; ctx.fill();
+        ctx.shadowColor = "transparent";
+        if (b.carry) { rr(-s * .32, -s * .32, s * .64, s * .64, 3); ctx.fillStyle = "#ff8a3d"; ctx.fill(); }
+        ctx.fillStyle = b.manual ? "#ffd166" : "#ff4d2e"; ctx.beginPath(); ctx.arc(s * .36, 0, s * .1, 0, 7); ctx.fill();
+        ctx.restore();
+      });
+    }
+    let last = performance.now();
+    function step(now) {
+      const dt = Math.min(64, now - last) / 1000; last = now;
+      bots.forEach((b) => {
+        if (!b.path.length) {
+          if (b.started) { trips++; tripSum += (now - b.started) / 1000; b.started = 0; if (b.carry && !b.manual) picks += 1; b.carry = !b.carry; b.wait = 0.6 + Math.random() * 1.2; b.manual = false; }
+          b.wait -= dt; if (b.wait <= 0) nextTask(b);
+          return;
+        }
+        const t = b.path[0], dx = t.x - b.x, dy = t.y - b.y, d = Math.hypot(dx, dy), sp = (b.manual ? 6 : 3.4) * dt;
+        const want = Math.atan2(dy, dx); let da = want - b.a; while (da > Math.PI) da -= Math.PI * 2; while (da < -Math.PI) da += Math.PI * 2; b.a += da * Math.min(1, dt * 12);
+        if (d <= sp) { b.x = t.x; b.y = t.y; b.path.shift(); } else { b.x += dx / d * sp; b.y += dy / d * sp; }
+      });
+      draw();
+      requestAnimationFrame(step);
+    }
+    resize(); addEventListener("resize", resize);
+    bots.forEach((b) => (b.wait = Math.random() * 1.5));
+    requestAnimationFrame(step);
+    setInterval(() => {
+      picks += Math.round(Math.random() * 6 - 2);
+      $("hudPicks").textContent = fmt(picks);
+      if (trips) $("hudTrip").textContent = Math.round(28 + (tripSum / trips) * 2) + " s";
+    }, 1500);
+
+    // ---------- Robots ----------
+    const ROBOTS = [
+      { id: "tote", name: "Helio Tote", label: "TOTE", tag: "Goods-to-person picking", desc: "Carries up to four totes between racking and pick stations, so pickers stay put and orders come to them.", specs: [["60", "kg payload"], ["2.0", "m/s top speed"], ["11", "h per charge"]], uses: ["E-commerce fulfilment", "Spare parts", "Pharma"], price: "from $1,230 / mo", load: "tote", lift: 0 },
+      { id: "lift", name: "Helio Lift 2", label: "LIFT", tag: "Pallet moves, dock to rack", desc: "Slides under a standard pallet, lifts it 9 cm and drives it from inbound docks to put-away — no forklift, no driver.", specs: [["1,200", "kg payload"], ["1.5", "m/s top speed"], ["9", "h per charge"]], uses: ["Inbound & put-away", "Line-side delivery", "Cold storage to −25 °C"], price: "from $2,190 / mo", load: "pallet", lift: -16 },
+      { id: "sort", name: "Helio Sort", label: "SORT", tag: "Parcel sorting without a conveyor", desc: "A swarm of small robots carry one parcel each to the right chute. Sort 2,000 parcels an hour in a space a conveyor never fits.", specs: [["30", "kg payload"], ["3.0", "m/s top speed"], ["2,000", "parcels / hour"]], uses: ["Parcel hubs", "Returns processing", "Retail cross-dock"], price: "from $890 / mo", load: "box", lift: 0 },
+    ];
+    let robotIdx = 0;
+    const LOADS = {
+      tote: '<rect x="130" y="96" width="110" height="54" rx="6" fill="#ff8a3d"/><rect x="130" y="96" width="110" height="12" rx="4" fill="#e66a22"/><rect x="250" y="96" width="110" height="54" rx="6" fill="#ff8a3d"/><rect x="250" y="96" width="110" height="12" rx="4" fill="#e66a22"/>',
+      pallet: '<rect x="110" y="134" width="300" height="16" rx="2" fill="#b58b5a"/><rect x="120" y="40" width="280" height="94" rx="4" fill="#e9dcc6"/><path d="M120 70h280M120 100h280M213 40v94M306 40v94" stroke="#d3c2a5" stroke-width="3"/>',
+      box: '<rect x="200" y="90" width="120" height="60" rx="4" fill="#d9a066"/><path d="M200 108h120M260 90v18" stroke="#b87f45" stroke-width="4"/><rect x="214" y="122" width="40" height="16" fill="#fff"/>',
+    };
+    function renderRobot() {
+      const r = ROBOTS[robotIdx];
+      $("robotTabs").innerHTML = ROBOTS.map((x, i) => `<button role="tab" class="${i === robotIdx ? "on" : ""}" data-i="${i}"><strong>${x.name}</strong><span>${x.tag}</span></button>`).join("");
+      $("robotInfo").innerHTML = `
+        <h3>${r.name}</h3><p>${r.desc}</p>
+        <div class="specs">${r.specs.map(([n, l]) => `<div><strong>${n}</strong><span>${l}</span></div>`).join("")}</div>
+        <ul class="uses">${r.uses.map((u) => `<li><i class="ri-checkbox-circle-fill"></i>${u}</li>`).join("")}</ul>
+        <div class="robots__foot"><span>${r.price}</span><a href="#demo" class="btn btn--sm">Request spec sheet</a></div>`;
+      $("robotInfo").classList.remove("swap"); void $("robotInfo").offsetWidth; $("robotInfo").classList.add("swap");
+      $("botLabel").textContent = r.label;
+      const v = $("botView"); v.classList.remove("drive"); void v.offsetWidth; v.classList.add("drive");
+      $("botLoad").innerHTML = LOADS[r.load];
+      $("botLoad").style.transform = $("botDeck").style.transform = `translateY(${r.lift}px)`;
+    }
+    $("robotTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-i]"); if (!b) return; robotIdx = +b.dataset.i; renderRobot(); });
+    renderRobot();
+
+    // ---------- How it works: steps + route dot ----------
+    const path = $("routePath"), dot = $("routeDot");
+    let stepIdx = 0, stepTimer;
+    function placeDot(t) {
+      const L = path.getTotalLength(), p = path.getPointAtLength(L * t), box = path.ownerSVGElement.getBoundingClientRect();
+      dot.style.left = (p.x / 400 * box.width) + "px"; dot.style.top = (p.y / 260 * box.height) + "px";
+      path.style.strokeDashoffset = L * (1 - t); path.style.strokeDasharray = L;
+    }
+    function setStep(i) {
+      stepIdx = i;
+      document.querySelectorAll(".step").forEach((s, k) => { s.classList.toggle("on", k === i); s.classList.toggle("done", k < i); });
+      const from = parseFloat(dot.dataset.t || 0), to = (i + 1) / 4, t0 = performance.now();
+      (function anim(n) { const k = Math.min(1, Math.max(0, (n - t0) / 700)), e = 1 - Math.pow(1 - k, 3), v = from + (to - from) * e; placeDot(v); dot.dataset.t = v; if (k < 1) requestAnimationFrame(anim); })(t0);
+    }
+    $("steps").addEventListener("click", (e) => { const b = e.target.closest(".step"); if (!b) return; setStep(+b.dataset.step); clearInterval(stepTimer); });
+    placeDot(.25); dot.dataset.t = .25;
+    stepTimer = setInterval(() => setStep((stepIdx + 1) % 4), 4200);
+    addEventListener("resize", () => placeDot(+dot.dataset.t));
+
+    // ---------- Customers ----------
+    const CASES = [
+      { img: "1586528116311-ad8dd3c8310d", co: "Parcelo · Fulfilment", stat: "+63%", what: "picks per labour hour", text: "38 Helio Totes across two shifts in a 22,000 m² e-commerce site in Leipzig." },
+      { img: "1567789884554-0b844b597180", co: "Voltra · EV parts", stat: "−71%", what: "forklift moves on the line", text: "Helio Lift 2 delivers battery modules line-side every 6 minutes, 24/7." },
+      { img: "1566576721346-d4a3b4eaeb55", co: "Northwind · Parcel hub", stat: "2,400", what: "parcels sorted per hour", text: "A 60-robot Helio Sort swarm replaced a conveyor quote 4× the cost." },
+    ];
+    $("cases").innerHTML = CASES.map((c) => `
+      <article class="case"><div class="case__img"><img src="${U(c.img, 700)}" alt="${c.co} site" loading="lazy" /></div>
+      <div class="case__body"><span>${c.co}</span><strong>${c.stat}</strong><em>${c.what}</em><p>${c.text}</p><a href="#demo">Read the story <i class="ri-arrow-right-line"></i></a></div></article>`).join("");
+    const QUOTES = [
+      { q: "We went live in the middle of Q4 prep and nobody noticed — except our pickers, who walked 9 km less a shift.", n: "Marta Lindqvist", r: "Head of Operations, Parcelo", img: "1494790108377-be9c29b29330" },
+      { q: "The Lift robots don't replace drivers, they replace the waiting. Our line hasn't starved for parts since March.", n: "Daniel Okafor", r: "Plant Manager, Voltra", img: "1507003211169-0a1dd7228f2d" },
+      { q: "Monthly pricing meant I could prove it on one zone before going to the board. Payback was 7 months.", n: "Priya Raman", r: "VP Supply Chain, Northwind", img: "1544005313-94ddf0286df2" },
+    ];
+    let qi = 0;
+    $("quoteTrack").innerHTML = QUOTES.map((q) => `<figure class="quote__item"><blockquote>“${q.q}”</blockquote><figcaption><img src="${U(q.img, 120)}" alt="${q.n}" loading="lazy" /><span><strong>${q.n}</strong>${q.r}</span></figcaption></figure>`).join("");
+    $("qDots").innerHTML = QUOTES.map((_, i) => `<button aria-label="Quote ${i + 1}" data-q="${i}"></button>`).join("");
+    function showQ(i) { qi = (i + QUOTES.length) % QUOTES.length; $("quoteTrack").style.transform = `translateX(-${qi * 100}%)`; document.querySelectorAll("#qDots button").forEach((b, k) => b.classList.toggle("on", k === qi)); }
+    $("qPrev").onclick = () => { showQ(qi - 1); clearInterval(qTimer); };
+    $("qNext").onclick = () => { showQ(qi + 1); clearInterval(qTimer); };
+    $("qDots").onclick = (e) => { const b = e.target.closest("[data-q]"); if (b) { showQ(+b.dataset.q); clearInterval(qTimer); } };
+    const qTimer = setInterval(() => showQ(qi + 1), 6000); showQ(0);
+
+    // ---------- Pricing toggle ----------
+    $("bill").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      document.querySelectorAll("#bill button").forEach((x) => x.classList.toggle("on", x === b));
+      document.querySelectorAll(".plan__price b").forEach((el) => { const v = +el.dataset["p" + b.dataset.term]; el.classList.remove("flip"); void el.offsetWidth; el.classList.add("flip"); el.textContent = fmt(v); });
+    });
+
+    // ---------- FAQ: one open at a time ----------
+    document.querySelectorAll("#acc details").forEach((d) => d.addEventListener("toggle", () => { if (d.open) document.querySelectorAll("#acc details").forEach((o) => o !== d && (o.open = false)); }));
+
+    // ---------- Forms ----------
+    $("chips").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") e.target.classList.toggle("on"); });
+    $("demoForm").addEventListener("submit", (e) => { e.preventDefault(); $("demoOk").classList.add("on"); e.target.querySelector("button[type=submit]").innerHTML = 'Request sent <i class="ri-check-line"></i>'; });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsOk").classList.add("on"); e.target.reset(); });
+
+    // ---------- Count-ups ----------
+    function countUp(el) {
+      const end = +el.dataset.count, dec = +(el.dataset.dec || 0), t0 = performance.now(), d = RM ? 1 : 1600;
+      (function tick(n) { const k = Math.min(1, Math.max(0, (n - t0) / d)), v = end * (1 - Math.pow(1 - k, 3)); el.textContent = v.toFixed(dec); if (k < 1) requestAnimationFrame(tick); })(t0);
+    }
+
+    // ---------- Scroll reveals ----------
+    const REVEAL = [".logos p", ".title", ".robots__tabs", ".robots__stage", ".how__copy > *", ".step", ".case", ".quote", ".bill", ".plan", ".faq__head > *", ".acc details", ".demo__copy > *", ".form", ".footer__grid > div"].join(",");
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      e.target.querySelectorAll && e.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(e.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(REVEAL).forEach((el) => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter((c) => c.matches(REVEAL));
+      el.style.setProperty("--i", Math.min(sibs.indexOf(el), 5));
+      io.observe(el);
+    });
+    document.querySelectorAll(".reveal-img").forEach((el) => io.observe(el));
+    requestAnimationFrame(() => { document.body.classList.add("loaded"); document.querySelectorAll(".hero__trust [data-count]").forEach(countUp); });
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

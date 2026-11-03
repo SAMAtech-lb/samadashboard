@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wok Street — Noodles, Ramen &amp; Sushi Delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span><i class="ri-e-bike-2-line"></i> Free delivery on orders over <b>$25</b> — today only</span>
+      <div><span><i class="ri-time-line"></i> 11:00 — 23:30</span><span><i class="ri-phone-line"></i> (415) 555-0193</span></div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo"><span><i class="ri-bowl-line"></i></span>Wok<em>Street</em></a>
+      <nav class="nav"><a href="#">Home</a><a href="#order">Order Online</a><a href="#deals">Deals</a><a href="#why">About</a><a href="#reviews">Reviews</a></nav>
+      <button class="cart-btn" onclick="document.getElementById('order').scrollIntoView()"><i class="ri-shopping-bag-3-fill"></i><span><small>My order</small><span id="headTotal">$0.00</span></span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="kicker"><i class="ri-fire-fill"></i> Hot from the wok</span>
+        <h1>Spicy Ramen &amp; <span>Wok Noodles</span></h1>
+        <p>Hand-pulled noodles, 18-hour pork broth and fiery wok-tossed classics — cooked to order and at your door in under 30 minutes.</p>
+        <div class="hero__chips">
+          <span class="chip"><i class="ri-timer-flash-line"></i> 25–30 min</span>
+          <span class="chip"><i class="ri-star-fill"></i> 4.8 rating</span>
+          <span class="chip"><i class="ri-leaf-line"></i> Vegan options</span>
+        </div>
+        <div class="hero__btns">
+          <a href="#order" class="btn">Order Now <i class="ri-arrow-right-line"></i></a>
+          <a href="#deals" class="btn btn--outline">Today's Deals</a>
+        </div>
+        <div class="avatars">
+          <div>
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" />
+          </div>
+          <div><b>18k+ happy eaters</b><span>Ordering every week</span></div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__circle"></div>
+        <img class="hero__bowl" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=80" alt="Ramen bowl" />
+        <div class="hero__burst">30%<small>OFF</small></div>
+        <div class="hero__card"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=150&q=80" alt="" /><div><b>Chili Wok Noodles</b><span>$13.90</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="deals" id="deals">
+    <div class="container">
+      <div class="deal"><div><small>Lunch Combo</small><h3>Ramen + Gyoza + Drink</h3><a href="#order">Order Now <i class="ri-arrow-right-line"></i></a></div><img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=400&q=80" alt="" /></div>
+      <div class="deal"><div><small>Sushi Night</small><h3>24pc Platter 40% Off</h3><a href="#order">Order Now <i class="ri-arrow-right-line"></i></a></div><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80" alt="" /></div>
+      <div class="deal"><div><small>Family Box</small><h3>Feeds 4 For $49</h3><a href="#order">Order Now <i class="ri-arrow-right-line"></i></a></div><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="" /></div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="container">
+      <div class="order__head">
+        <div><span class="kicker"><i class="ri-restaurant-line"></i> Order Online</span><h2>What Are You Craving?</h2></div>
+        <label class="search"><i class="ri-search-line"></i><input id="search" placeholder="Search dishes…" /></label>
+      </div>
+      <div class="order__layout">
+        <div class="cats" id="cats"></div>
+        <div class="items" id="items"></div>
+        <aside class="cart">
+          <h3>Your Order <span id="cartCount">0 items</span></h3>
+          <div class="cart__list" id="cartList"></div>
+          <div class="totals">
+            <div><span>Subtotal</span><span id="sub">$0.00</span></div>
+            <div><span>Delivery</span><span id="del">$0.00</span></div>
+            <div class="grand"><span>Total</span><span id="total">$0.00</span></div>
+          </div>
+          <button class="btn" id="checkout" disabled>Checkout <i class="ri-arrow-right-line"></i></button>
+          <p class="promo" id="promo">Add $25.00 more for free delivery</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="container">
+      <div><span class="kicker"><i class="ri-fire-fill"></i> Why Wok Street</span><h2>Street Food Soul, Restaurant Standards</h2></div>
+      <div class="why__grid">
+        <div class="why__card"><i class="ri-knife-line"></i><div><h4>Made To Order</h4><p>Nothing sits under a heat lamp. Your wok fires when you hit checkout.</p></div></div>
+        <div class="why__card"><i class="ri-e-bike-2-line"></i><div><h4>30-Min Delivery</h4><p>Our own riders, insulated bags, live order tracking.</p></div></div>
+        <div class="why__card"><i class="ri-leaf-line"></i><div><h4>Fresh Every Day</h4><p>Noodles pulled and broth simmered in-house each morning.</p></div></div>
+        <div class="why__card"><i class="ri-shield-check-line"></i><div><h4>Allergen Safe</h4><p>Clear labels and a separate prep line for allergies.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="top"><span class="kicker"><i class="ri-chat-heart-line"></i> Reviews</span><h2>Loved By Noodle Fans</h2></div>
+      <div class="rgrid">
+        <div class="rcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>The tonkotsu broth is rich enough to make me cancel dinner plans. Arrived piping hot in 22 minutes.</p><div class="rcard__who"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>Hannah Kim</b><span>Ordered 34 times</span></div></div></div>
+        <div class="rcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>The chili wok noodles are properly spicy — not "Western spicy". Love that they don't hold back.</p><div class="rcard__who"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>David Chen</b><span>Ordered 12 times</span></div></div></div>
+        <div class="rcard"><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><p>Family box is unbeatable value. Kids get their teriyaki, we get our ramen, everybody wins.</p><div class="rcard__who"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="" /><div><b>Maria Lopez</b><span>Ordered 8 times</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a href="#" class="logo"><span><i class="ri-bowl-line"></i></span>Wok<em>Street</em></a><p>Asian street food, cooked fresh and delivered fast across San Francisco since 2015.</p></div>
+      <div><h4>Menu</h4><ul><li><a href="#order">Ramen</a></li><li><a href="#order">Wok Noodles</a></li><li><a href="#order">Sushi</a></li><li><a href="#order">Rice Bowls</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#why">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Franchise</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h4>Get Exclusive Deals</h4><p>Join 20,000 noodle lovers getting weekly offers.</p><form onsubmit="event.preventDefault(); toast('Subscribed! Watch your inbox.')"><input type="email" placeholder="Email address" required /><button class="btn">Join</button></form></div>
+    </div>
+    <div class="footer__bottom">© 2026 Wok Street. All rights reserved.</div>
+  </footer>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span></span></div>
+
+  <script>
+    const img = (id, w = 300) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const CATS = [["all", "All Dishes", "ri-apps-2-line"], ["ramen", "Ramen", "ri-bowl-line"], ["noodles", "Wok Noodles", "ri-fire-line"], ["sushi", "Sushi", "ri-restaurant-2-line"], ["bowls", "Rice Bowls", "ri-leaf-line"], ["sweet", "Desserts", "ri-cake-3-line"]];
+    const DISHES = [
+      { id: 1, c: "ramen", n: "Tonkotsu Ramen", d: "18-hour pork broth, chashu, soft egg", p: 14.9, img: "1569718212165-3a8278d5f624", hot: 0 },
+      { id: 2, c: "ramen", n: "Spicy Miso Ramen", d: "Miso broth, chili oil, corn, bean sprouts", p: 15.5, img: "1557872943-16a5ac26437e", hot: 2 },
+      { id: 3, c: "noodles", n: "Chili Wok Noodles", d: "Hand-pulled noodles, garlic, chili crisp", p: 13.9, img: "1563379926898-05f4575a45d8", hot: 3 },
+      { id: 4, c: "noodles", n: "Prawn Pad Thai", d: "Rice noodles, tamarind, peanuts, lime", p: 16.5, img: "1559737558-2f5a35f4523b", hot: 1 },
+      { id: 5, c: "sushi", n: "Salmon Maki Set", d: "12 pieces, soy, wasabi, ginger", p: 18.0, img: "1579871494447-9811cf80d66c", hot: 0 },
+      { id: 6, c: "sushi", n: "Nigiri Selection", d: "Chef's choice of 8 nigiri", p: 22.0, img: "1617196034796-73dfa7b1fd56", hot: 0 },
+      { id: 7, c: "sushi", n: "Sushi Party Box", d: "24 mixed pieces for sharing", p: 39.0, img: "1553621042-f6e147245754", hot: 0 },
+      { id: 8, c: "bowls", n: "Teriyaki Chicken Bowl", d: "Rice, glazed chicken, pickles, sesame", p: 13.5, img: "1546069901-ba9599a7e63c", hot: 0 },
+      { id: 9, c: "bowls", n: "Poke Bowl", d: "Tuna, avocado, edamame, ponzu", p: 15.9, img: "1540189549336-e6e99c3679fe", hot: 0 },
+      { id: 10, c: "bowls", n: "Korean Fried Chicken", d: "Gochujang glaze, rice, kimchi", p: 14.5, img: "1569058242253-92a9c755a0ec", hot: 2 },
+      { id: 11, c: "sweet", n: "Matcha Panna Cotta", d: "Berries, black sesame crumble", p: 6.5, img: "1488477181946-6428a0291777", hot: 0 },
+      { id: 12, c: "sweet", n: "Mochi Donuts", d: "Three glazed mochi donuts", p: 7.0, img: "1551024601-bec78aea704b", hot: 0 },
+    ];
+    const FREE_OVER = 25, DELIVERY = 3.99;
+    const state = { cat: "all", q: "", cart: {} };
+    const $ = (id) => document.getElementById(id);
+    const money = (n) => `$${n.toFixed(2)}`;
+
+    function renderCats() {
+      $("cats").innerHTML = CATS.map(([k, label, icon]) => {
+        const count = k === "all" ? DISHES.length : DISHES.filter((d) => d.c === k).length;
+        return `<button class="${state.cat === k ? "active" : ""}" data-k="${k}"><i class="${icon}"></i>${label}<span>${count}</span></button>`;
+      }).join("");
+    }
+
+    function renderItems() {
+      const q = state.q.toLowerCase();
+      const list = DISHES.filter((d) => (state.cat === "all" || d.c === state.cat) && (d.n + d.d).toLowerCase().includes(q));
+      $("items").innerHTML = list.length ? list.map((d, i) => `
+        <div class="item" style="animation-delay:${i * 40}ms"><img src="${img(d.img)}" alt="${d.n}" />
+          <div class="item__body"><h4>${d.n}${d.hot ? `<span class="spicy">${'<i class="ri-fire-fill"></i>'.repeat(d.hot)}</span>` : ""}</h4><p>${d.d}</p>
+          <div class="item__foot"><b>${money(d.p)}</b><button class="plus" data-id="${d.id}" aria-label="Add ${d.n}"><i class="ri-add-line"></i></button></div></div>
+        </div>`).join("") : `<p class="empty-res">No dishes match "${state.q}".</p>`;
+    }
+
+    function renderCart() {
+      const entries = Object.entries(state.cart);
+      const count = entries.reduce((s, [, q]) => s + q, 0);
+      const sub = entries.reduce((s, [id, q]) => s + DISHES.find((d) => d.id == id).p * q, 0);
+      const del = sub === 0 || sub >= FREE_OVER ? 0 : DELIVERY;
+      $("cartList").innerHTML = entries.length ? entries.map(([id, q]) => {
+        const d = DISHES.find((x) => x.id == id);
+        return `<div class="ci"><img src="${img(d.img, 120)}" alt="" /><div class="ci__body"><b>${d.n}</b><span>${money(d.p * q)}</span></div>
+          <div class="qty"><button data-dec="${id}">−</button><b>${q}</b><button data-inc="${id}">+</button></div></div>`;
+      }).join("") : `<div class="cart__empty"><i class="ri-shopping-basket-2-line"></i>Your bag is empty.<br />Add something delicious!</div>`;
+      $("cartCount").textContent = `${count} item${count === 1 ? "" : "s"}`;
+      $("sub").textContent = money(sub);
+      $("del").textContent = del ? money(del) : "Free";
+      $("total").textContent = money(sub + del);
+      $("headTotal").textContent = money(sub + del);
+      $("checkout").disabled = !count;
+      $("promo").textContent = sub >= FREE_OVER ? "You've unlocked free delivery" : `Add ${money(FREE_OVER - sub)} more for free delivery`;
+    }
+
+    function toast(msg) {
+      const t = $("toast"); t.querySelector("span").textContent = msg; t.classList.add("show");
+      clearTimeout(t.timer); t.timer = setTimeout(() => t.classList.remove("show"), 2000);
+    }
+
+    $("cats").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; state.cat = b.dataset.k; renderCats(); renderItems(); });
+    $("search").addEventListener("input", (e) => { state.q = e.target.value; renderItems(); });
+    $("items").addEventListener("click", (e) => {
+      const b = e.target.closest(".plus"); if (!b) return;
+      state.cart[b.dataset.id] = (state.cart[b.dataset.id] || 0) + 1;
+      renderCart(); toast(`${DISHES.find((d) => d.id == b.dataset.id).n} added`);
+    });
+    $("cartList").addEventListener("click", (e) => {
+      const inc = e.target.dataset.inc, dec = e.target.dataset.dec;
+      if (inc) state.cart[inc]++;
+      if (dec && --state.cart[dec] <= 0) delete state.cart[dec];
+      renderCart();
+    });
+    $("checkout").onclick = () => { state.cart = {}; renderCart(); toast("Order placed! Your food is on its way"); };
+
+    renderCats(); renderItems(); renderCart();
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

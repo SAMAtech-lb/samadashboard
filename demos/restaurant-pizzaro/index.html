@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaro — Wood-Fired Pizza Since 1998</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo"><b><i class="ri-pie-chart-2-fill"></i>PIZZARO</b><small>WOOD FIRED</small></a>
+      <div class="nav-wrap" id="navWrap">
+        <nav class="left"><a href="#">Home</a><a href="#menu">Menu</a><a href="#deals">Deals</a></nav>
+        <nav class="right"><a href="#reviews">Reviews</a><a href="#book">Book</a><a href="tel:+12025550147" class="call"><i class="ri-phone-fill"></i>(202) 555-0147</a></nav>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="hero__tag"><i class="ri-fire-fill"></i> Fresh from our wood-fired oven</span>
+        <h1>Hot &amp; Spicy <span>Pizza</span></h1>
+        <p>Hand-stretched dough rested for 48 hours, San Marzano tomatoes and fior di latte — baked at 450°C in under 90 seconds.</p>
+        <div class="hero__btns">
+          <a href="#menu" class="btn btn--yellow">Order Now <i class="ri-arrow-right-line"></i></a>
+          <a href="#menu" class="btn btn--line">View Menu</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__pizza"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1000&q=80" alt="Pizza" /></div>
+        <div class="price-burst"><div>Only<b>$19</b></div></div>
+        <div class="hero__mini"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=200&q=80" alt="" /><div><b>Free delivery</b><span>On orders over $30</span></div></div>
+      </div>
+    </div>
+    <svg class="hero__wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 70V35C240 0 480 0 720 35s480 35 720 0v35z" fill="#fff"/></svg>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature"><i class="ri-leaf-line"></i><div><h4>Fresh Ingredients</h4><p>Local produce, delivered daily</p></div></div>
+      <div class="feature"><i class="ri-fire-line"></i><div><h4>Wood-Fired Oven</h4><p>Real oak, 450°C, 90 seconds</p></div></div>
+      <div class="feature"><i class="ri-e-bike-2-line"></i><div><h4>30 Min Delivery</h4><p>Or your next pizza is free</p></div></div>
+      <div class="feature"><i class="ri-award-line"></i><div><h4>Award Winning</h4><p>Best pizza in town, 2024 &amp; 2025</p></div></div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="title"><span class="eyebrow">Our Menu</span><h2>Choose Your Favourite</h2></div>
+      <div class="filters" id="filters">
+        <button class="active" data-f="all">All</button>
+        <button data-f="classic">Classic</button>
+        <button data-f="meat">Meat</button>
+        <button data-f="veggie">Veggie</button>
+        <button data-f="special">Special</button>
+      </div>
+      <div class="pizzas" id="pizzas"></div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="container">
+      <div class="title"><span class="eyebrow" style="color:var(--yellow)">How it works</span><h2>From Our Oven To Your Door</h2></div>
+      <div class="steps__grid">
+        <div class="step"><div class="step__icon"><i class="ri-file-list-3-line"></i><span class="step__num">01</span></div><h3>Choose Your Pizza</h3><p>Pick from 20+ recipes or build your own from scratch.</p></div>
+        <div class="step"><div class="step__icon"><i class="ri-fire-line"></i><span class="step__num">02</span></div><h3>We Bake It Fresh</h3><p>Hand-stretched and baked in our wood-fired oven.</p></div>
+        <div class="step"><div class="step__icon"><i class="ri-e-bike-2-line"></i><span class="step__num">03</span></div><h3>Fast Delivery</h3><p>Hot at your door in 30 minutes, guaranteed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="combos" id="deals">
+    <div class="container">
+      <div class="combo combo--yellow">
+        <span class="eyebrow">Family Combo</span>
+        <h3>2 Large Pizzas + Drinks</h3>
+        <p>Perfect for movie night. Any two large pizzas and a 1.5L drink.</p>
+        <a href="#menu" class="btn">Only $34.99</a>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="" />
+      </div>
+      <div class="combo combo--dark">
+        <span class="eyebrow" style="color:var(--yellow)">Tuesday Special</span>
+        <h3>Buy One Get One Free</h3>
+        <p>Every Tuesday, all day. Valid on any medium pizza for pickup.</p>
+        <a href="#menu" class="btn btn--yellow">Order Now</a>
+        <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=700&q=80" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="app">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Download our app</span>
+        <h2>Order Faster With The <span>Pizzaro</span> App</h2>
+        <p>Track your delivery live, save your favourite orders and earn a free pizza for every ten you buy.</p>
+        <div class="stores">
+          <a href="#" class="store"><i class="ri-apple-fill"></i><div><small>Download on the</small><b>App Store</b></div></a>
+          <a href="#" class="store"><i class="ri-google-play-fill"></i><div><small>Get it on</small><b>Google Play</b></div></a>
+        </div>
+      </div>
+      <div class="app__imgs">
+        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80" alt="" />
+        <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=500&q=80" alt="" />
+        <div class="rating"><b>4.9</b><div><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span>12,400+ reviews</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testi" id="reviews">
+    <div class="container">
+      <div class="title"><span class="eyebrow">Testimonials</span><h2>Our Customers Love Us</h2></div>
+      <div class="testi__grid">
+        <div class="tcard"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>The crust is unreal — light, airy and properly charred. Tastes exactly like the pizza I had in Naples.</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="" /><div><b>Laura Bennett</b><span>Food Critic</span></div></div></div>
+        <div class="tcard"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><p>Ordered at 8pm, it was at my door by 8:24 and still too hot to touch. The Tuesday deal is a steal.</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="" /><div><b>Mark Davies</b><span>Regular Customer</span></div></div></div>
+        <div class="tcard"><i class="ri-double-quotes-r"></i><div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><p>Great vegan options, which is rare. The Garden Veggie with vegan cheese is my weekly treat.</p><div class="tcard__who"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="" /><div><b>Nadia Ross</b><span>Yoga Teacher</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="book">
+    <div class="container">
+      <div class="booking__form">
+        <span class="eyebrow">Reservation</span>
+        <h2>Book A Table</h2>
+        <form id="bookForm" class="fields">
+          <input placeholder="Full name" required />
+          <input type="tel" placeholder="Phone number" required />
+          <input type="date" required />
+          <select><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select>
+          <select class="full"><option>2 People</option><option>3 People</option><option>4 People</option><option>6+ People</option></select>
+          <button class="btn btn--yellow full">Book Now <i class="ri-arrow-right-line"></i></button>
+        </form>
+        <p class="form-ok" id="formOk"><i class="ri-checkbox-circle-fill"></i> Table booked! We'll text you a confirmation.</p>
+      </div>
+      <iframe title="Map" loading="lazy" src="https://maps.google.com/maps?q=Little%20Italy%20New%20York&z=14&output=embed"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="logo"><b><i class="ri-pie-chart-2-fill"></i>PIZZARO</b><small>WOOD FIRED</small></a>
+        <p>Neapolitan-style pizza made the slow way, served fast. Family owned and operated since 1998.</p>
+        <div class="socials"><a href="#"><i class="ri-facebook-fill"></i></a><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i class="ri-tiktok-fill"></i></a></div>
+      </div>
+      <div><h4>Menu</h4><ul><li><a href="#menu">Classic Pizza</a></li><li><a href="#menu">Meat Lovers</a></li><li><a href="#menu">Veggie</a></li><li><a href="#deals">Deals</a></li></ul></div>
+      <div><h4>Hours</h4><ul><li>Mon — Thu: 11am — 11pm</li><li>Fri — Sat: 11am — 1am</li><li>Sunday: 12pm — 10pm</li></ul></div>
+      <div><h4>Contact</h4><ul><li>142 Mulberry St, New York</li><li>(202) 555-0147</li><li>ciao@pizzaro.com</li></ul></div>
+    </div>
+    <div class="copy">© 2026 Pizzaro. Made with <i class="ri-heart-fill" style="color:var(--red)"></i> and mozzarella.</div>
+  </footer>
+
+  <button class="cart-fab" id="cartFab" aria-label="Cart"><i class="ri-shopping-basket-2-line"></i><span id="cartCount">0</span></button>
+
+  <script>
+    const img = (id, w = 500) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const pizzas = [
+      { n: "Margherita", c: "classic", id: "1574071318508-1cdbab80d002", d: "Tomato, fior di latte, basil", p: 12, b: "" },
+      { n: "Pepperoni", c: "meat", id: "1565299624946-b28f40a0ae38", d: "Double pepperoni, oregano", p: 15, b: "hot" },
+      { n: "Garden Veggie", c: "veggie", id: "1593560708920-61dd98c46a4e", d: "Spinach, ricotta, peppers", p: 14, b: "veg" },
+      { n: "Diavola", c: "special", id: "1604382354936-07c5d9983bd3", d: "Spicy salami, chili, honey", p: 16, b: "hot" },
+      { n: "Quattro Formaggi", c: "classic", id: "1513104890138-7c749659a591", d: "Four cheeses, black pepper", p: 15, b: "" },
+      { n: "Rustica", c: "meat", id: "1595854341625-f33ee10dbf94", d: "Sausage, mushroom, rocket", p: 17, b: "" },
+      { n: "Pesto Verde", c: "veggie", id: "1585238342024-78d387f4a707", d: "Basil pesto, tomato, olives", p: 14, b: "veg" },
+      { n: "Chef's Special", c: "special", id: "1576458088443-04a19bb13da6", d: "Prosciutto, burrata, figs", p: 19, b: "new" },
+    ];
+    const sizeAdd = { S: -3, M: 0, L: 4 };
+    const grid = document.getElementById("pizzas");
+
+    function render(filter) {
+      grid.innerHTML = pizzas.filter((z) => filter === "all" || z.c === filter).map((z, i) => `
+        <div class="pizza" data-base="${z.p}" style="animation-delay:${i * 60}ms">
+          ${z.b ? `<span class="badge ${z.b === "hot" ? "hot" : ""}">${z.b === "hot" ? "Spicy" : z.b === "veg" ? "Veggie" : "New"}</span>` : ""}
+          <div class="pizza__img"><img src="${img(z.id)}" alt="${z.n}" /></div>
+          <h3>${z.n}</h3><p>${z.d}</p>
+          <div class="sizes"><button>S</button><button class="active">M</button><button>L</button></div>
+          <div class="pizza__foot"><span class="pizza__price">$${z.p}.00</span><button class="add" aria-label="Add"><i class="ri-add-line"></i></button></div>
+        </div>`).join("");
+    }
+
+    document.getElementById("filters").addEventListener("click", (e) => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      document.querySelector("#filters .active").classList.remove("active");
+      b.classList.add("active");
+      render(b.dataset.f);
+    });
+
+    let count = 0;
+    grid.addEventListener("click", (e) => {
+      const card = e.target.closest(".pizza");
+      if (!card) return;
+      const size = e.target.closest(".sizes button");
+      if (size) {
+        card.querySelectorAll(".sizes button").forEach((s) => s.classList.toggle("active", s === size));
+        card.querySelector(".pizza__price").textContent = `$${+card.dataset.base + sizeAdd[size.textContent]}.00`;
+      }
+      if (e.target.closest(".add")) {
+        document.getElementById("cartCount").textContent = ++count;
+        const fab = document.getElementById("cartFab");
+        fab.classList.remove("bump"); void fab.offsetWidth; fab.classList.add("bump");
+      }
+    });
+    render("all");
+
+    document.getElementById("bookForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("formOk").style.display = "block";
+      e.target.reset();
+    });
+
+    const header = document.getElementById("header");
+    addEventListener("scroll", () => header.classList.toggle("fixed", scrollY > 200));
+    document.getElementById("menuToggle").onclick = () => document.getElementById("navWrap").classList.toggle("open");
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>

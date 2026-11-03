@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Noor — Ready-to-wear, coats and leather goods</title>
+  <meta name="description" content="Atelier Noor designs ready-to-wear, outerwear and leather bags in Beirut and Paris. Complimentary shipping, returns and gift packaging on every order." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <nav class="nav" id="nav">
+        <a href="#shop" data-cat="all">New in</a>
+        <a href="#shop" data-cat="Dresses">Ready-to-wear</a>
+        <a href="#shop" data-cat="Coats">Coats</a>
+        <a href="#bags" data-cat="Bags">Bags</a>
+        <a href="#appointment">Appointments</a>
+      </nav>
+      <a href="#top" class="logo" aria-label="Atelier Noor home">ATELIER NOOR</a>
+      <div class="icons">
+        <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="#" class="hide-sm" aria-label="Account"><i class="ri-user-line"></i></a>
+        <button id="wishBtn" class="hide-sm" aria-label="Wishlist"><i class="ri-heart-line"></i><b id="wishCount">0</b></button>
+        <button id="bagBtn" aria-label="Open shopping bag"><i class="ri-handbag-line"></i><b id="bagCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__imgs">
+        <img src="https://images.unsplash.com/photo-1700748909575-67c4e07147e9?auto=format&fit=crop&w=1200&q=80" alt="Model in a sage pleated dress" />
+        <img src="https://images.unsplash.com/photo-1759771716258-a5fa301adc32?auto=format&fit=crop&w=1200&q=80" alt="Model in a black leather coat" />
+      </div>
+      <div class="hero__copy">
+        <span>Autumn / Winter 2026</span>
+        <h1>Quiet Layers</h1>
+        <p>Soft tailoring, long coats and leather made to be worn for years.</p>
+        <div><a href="#shop" class="btn btn--white" data-cat="all">Shop the collection</a></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+      <div class="container cats">
+        <a href="#shop" class="cat reveal" data-cat="Dresses"><div><img src="https://images.unsplash.com/photo-1700748910920-81f4826ede95?auto=format&fit=crop&w=800&q=80" alt="Model in a brown midi dress" loading="lazy" /></div><h3>Ready-to-wear</h3><span>Discover <i class="ri-arrow-right-line"></i></span></a>
+        <a href="#shop" class="cat reveal" data-cat="Coats"><div><img src="https://images.unsplash.com/photo-1771243791734-dfeebf162af0?auto=format&fit=crop&w=800&q=80" alt="Model in a trench coat seated on a chair" loading="lazy" /></div><h3>Outerwear</h3><span>Discover <i class="ri-arrow-right-line"></i></span></a>
+        <a href="#bags" class="cat reveal" data-cat="Bags"><div><img src="https://images.unsplash.com/photo-1691480150204-66dd1eb77391?auto=format&fit=crop&w=800&q=80" alt="Cognac leather handbag" loading="lazy" /></div><h3>Leather goods</h3><span>Discover <i class="ri-arrow-right-line"></i></span></a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section section--ivory" id="shop">
+      <div class="container">
+        <div class="head">
+          <h2 id="shopTitle">New arrivals</h2>
+          <div class="chips" id="chips"><button class="on" data-c="all">All</button><button data-c="Dresses">Ready-to-wear</button><button data-c="Coats">Coats</button><button data-c="Bags">Bags</button></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Editorial -->
+    <section class="edit">
+      <img src="https://images.unsplash.com/photo-1700748911489-0552c576f274?auto=format&fit=crop&w=1800&q=80" alt="Model in a trench coat" loading="lazy" />
+      <div class="container edit__in">
+        <div class="edit__card reveal">
+          <span class="kicker">The edit</span>
+          <h2>The trench, reworked</h2>
+          <p>Cut from water-repellent cotton gabardine with a detachable wool lining. Wear it open in October and buttoned up in January.</p>
+          <button class="btn" data-quick="4">Shop the trench</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bags -->
+    <section class="section" id="bags">
+      <div class="container">
+        <div class="head"><h2>Leather goods</h2><p class="head__p">Vegetable-tanned leather, cut and stitched by hand in our Beirut workshop.</p></div>
+        <div class="grid grid--bags" id="bagGrid"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container services__in">
+        <div><i class="ri-truck-line"></i><h4>Complimentary shipping</h4><p>Express delivery to 40 countries, free on every order.</p></div>
+        <div><i class="ri-arrow-go-back-line"></i><h4>Free returns</h4><p>Return within 30 days with a prepaid label.</p></div>
+        <div><i class="ri-gift-line"></i><h4>Gift packaging</h4><p>Every order arrives in our signature box.</p></div>
+        <div><i class="ri-customer-service-line"></i><h4>Client advisors</h4><p>Styling help by phone, chat or in person.</p></div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+    <section class="section section--ivory" id="appointment">
+      <div class="container appt">
+        <div class="appt__img reveal"><img src="https://images.unsplash.com/photo-1700748910941-44f7577b0ba2?auto=format&fit=crop&w=1000&q=80" alt="Model in a brown coat holding a black bag" loading="lazy" /></div>
+        <div class="appt__copy reveal">
+          <span class="kicker">Private appointments</span>
+          <h2>Visit our boutiques</h2>
+          <p>Book an hour with a client advisor in Beirut or Paris. We'll prepare pieces in your size before you arrive.</p>
+          <form class="form" id="apptForm">
+            <div class="form__row"><label>Name<input type="text" required placeholder="Your full name" /></label><label>Email<input type="email" required placeholder="you@email.com" /></label></div>
+            <div class="form__row"><label>Boutique<select required><option value="">Choose a boutique</option><option>Beirut · Saifi Village</option><option>Paris · Rue Saint-Honoré</option></select></label><label>Date<input type="date" required id="apptDate" /></label></div>
+            <button class="btn btn--full">Request appointment</button>
+            <p class="form__msg" id="apptMsg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__news">
+        <div><h3>Join the Atelier</h3><p>Early access to new collections and private sales.</p></div>
+        <form class="news" id="news"><input type="email" required placeholder="Email address" aria-label="Email" /><button class="btn btn--white">Subscribe</button></form>
+      </div>
+      <p class="form__msg form__msg--light" id="newsMsg"></p>
+      <div class="footer__grid">
+        <div><a href="#top" class="logo logo--light">ATELIER NOOR</a><p>Designed in Beirut, made in Lebanon and Italy.</p></div>
+        <div><h4>Client service</h4><a href="#">Contact us</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size guide</a></div>
+        <div><h4>The house</h4><a href="#">Our story</a><a href="#">Craftsmanship</a><a href="#">Sustainability</a><a href="#">Careers</a></div>
+        <div><h4>Boutiques</h4><p>Saifi Village, Beirut<br />+961 1 555 017</p><p>Rue Saint-Honoré, Paris<br />+33 1 55 50 17 70</p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Atelier Noor · Photography from Unsplash</p><div class="social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a></div></div>
+    </div>
+  </footer>
+
+  <!-- Search -->
+  <div class="search" id="search" aria-hidden="true">
+    <div class="container">
+      <div class="search__bar"><input id="searchInput" type="search" placeholder="Search Atelier Noor" aria-label="Search products" /><button id="searchClose" aria-label="Close search"><i class="ri-close-line"></i></button></div>
+      <div class="search__res" id="searchRes"><p class="search__hint">Try "coat", "dress" or "bag"</p></div>
+    </div>
+  </div>
+
+  <!-- Quick view -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__gal"><img id="mImg" src="" alt="" /><div class="modal__thumbs" id="mThumbs"></div></div>
+      <div class="modal__body">
+        <span class="kicker" id="mCat"></span>
+        <h3 id="mName"></h3>
+        <p class="price" id="mPrice"></p>
+        <p class="modal__col" id="mCol"></p>
+        <div class="modal__size" id="mSizeWrap"><div><span>Size</span><a href="#">Size guide</a></div><div class="sizes" id="mSizes"></div><p class="modal__err" id="mErr"></p></div>
+        <button class="btn btn--full" id="mAdd">Add to bag</button>
+        <details open><summary>Description</summary><p id="mDesc"></p></details>
+        <details><summary>Composition &amp; care</summary><p id="mComp"></p></details>
+        <details><summary>Shipping &amp; returns</summary><p>Complimentary express shipping in 2–4 business days. Free returns within 30 days.</p></details>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bag -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Shopping bag</h3><button id="drawerClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot"><div class="drawer__row"><span>Subtotal</span><b id="dSub">€0</b></div><p class="drawer__note">Complimentary shipping and returns. Duties included for EU orders.</p><button class="btn btn--full" id="checkout">Proceed to checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const eur = (n) => "€" + n.toLocaleString("en-US");
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2400); };
+
+    /* ---------- Products ---------- */
+    const CL = ["XS", "S", "M", "L", "XL"];
+    const P = [
+      { id: 1, n: "Pleated Wool Dress", cat: "Dresses", p: 1450, col: "Sage", img: "1700748909575-67c4e07147e9", alt: "1700748909387-7c3691ef29bc", sz: ["XS", "S", "M", "L"], tag: "New", d: "A long-sleeved midi dress in fine merino with knife pleats from the hip. Fitted through the bodice with a hidden side zip.", comp: "100% merino wool. Dry clean only." },
+      { id: 2, n: "Belted Midi Dress", cat: "Dresses", p: 1290, col: "Mocha", img: "1700748910920-81f4826ede95", alt: "1700748910236-3b744b8dacad", sz: ["XS", "S", "M"], d: "A relaxed shirt dress with a self-tie belt and deep pockets. Easy enough for every day, smart enough for dinner.", comp: "70% viscose, 30% linen. Dry clean." },
+      { id: 3, n: "Satin Mock-Neck Top", cat: "Dresses", p: 690, col: "Black", img: "1779912217721-a3cc453ae9d6", alt: "1603189343302-e603f7add05a", sz: ["XS", "S", "M", "L", "XL"], d: "A fluid satin top with a high neck and button back. Tuck it into tailoring or wear it loose.", comp: "100% silk satin. Hand wash cold." },
+      { id: 4, n: "Gabardine Trench", cat: "Coats", p: 2100, col: "Stone", img: "1700748911489-0552c576f274", alt: "1771243791734-dfeebf162af0", sz: ["XS", "S", "M", "L"], tag: "Bestseller", d: "Our signature trench in water-repellent cotton gabardine, with storm flap, belted cuffs and a detachable wool lining.", comp: "100% cotton gabardine; lining 100% wool. Dry clean." },
+      { id: 5, n: "Leather Car Coat", cat: "Coats", p: 3400, col: "Black", img: "1759771716258-a5fa301adc32", alt: "1603189343302-e603f7add05a", sz: ["S", "M", "L"], d: "A hip-length coat in supple lambskin with a wide collar and horn buttons.", comp: "100% lambskin leather; lining 100% cupro. Specialist leather clean." },
+      { id: 6, n: "Double-Face Wool Coat", cat: "Coats", p: 2450, col: "Rose", img: "1485462537746-965f33f7f6a7", alt: "1631277974569-5b571f9f5707", sz: ["XS", "S", "M", "L"], d: "Unlined double-face wool and cashmere, hand-finished at the seams. Light but very warm.", comp: "90% wool, 10% cashmere. Dry clean." },
+      { id: 7, n: "Single-Breasted Blazer", cat: "Coats", p: 1380, col: "Oxblood", img: "1580478491436-fd6a937acc9e", alt: "1613915617430-8ab0fd7c6baf", sz: ["XS", "S", "M", "L", "XL"], tag: "New", d: "A sharp, slightly oversized blazer with padded shoulders and a single button.", comp: "100% virgin wool; lining 100% cupro. Dry clean." },
+      { id: 8, n: "Camel Wrap Coat", cat: "Coats", p: 1950, col: "Camel", img: "1631277974569-5b571f9f5707", alt: "1485462537746-965f33f7f6a7", sz: ["XS", "S", "M", "L"], d: "A belted wrap coat with dropped shoulders and a shawl collar. Our most-requested piece every winter.", comp: "100% camel hair. Dry clean." },
+      { id: 9, n: "Noor Weekender", cat: "Bags", p: 1890, col: "Cognac", img: "1691480150204-66dd1eb77391", alt: "1691480250099-a63081ecfcb8", sz: [], tag: "Bestseller", d: "A structured top-handle bag with buckle straps and a detachable shoulder strap. Fits a 13-inch laptop.", comp: "Vegetable-tanned calf leather, brass hardware. 38 × 27 × 16 cm." },
+      { id: 10, n: "Everyday Tote", cat: "Bags", p: 980, col: "Tan", img: "1624687943971-e86af76d57de", alt: "1637759292654-a12cb2be085e", sz: [], d: "An unlined tote in thick, waxy leather that softens and darkens with use.", comp: "Full-grain leather. 40 × 34 × 12 cm." },
+      { id: 11, n: "Buckle Satchel", cat: "Bags", p: 1150, col: "Dove grey", img: "1605733513597-a8f8341084e6", alt: "1605733513597-a8f8341084e6", sz: [], d: "A compact satchel with two gold-tone buckles and an adjustable strap.", comp: "Pebbled calf leather. 26 × 19 × 9 cm." },
+      { id: 12, n: "Mini Top-Handle", cat: "Bags", p: 1240, col: "Blush", img: "1681747685985-a401c271156c", alt: "1681747685985-a401c271156c", sz: [], tag: "New", d: "A quilted mini bag with a drop-shaped clasp and a chain-and-leather strap.", comp: "Lambskin leather, gold-tone hardware. 20 × 15 × 8 cm." },
+    ];
+    let wish = new Set(), chip = "all";
+    try { wish = new Set(JSON.parse(localStorage.getItem("anWish") || "[]")); } catch (e) {}
+    const card = (x, i) => `<article class="card" style="--d:${i * 0.06}s">
+      <div class="card__media">
+        ${x.tag ? `<span class="tag">${x.tag}</span>` : ""}
+        <button class="card__wish ${wish.has(x.id) ? "on" : ""}" data-wish="${x.id}" aria-label="Save ${x.n}"><i class="ri-heart-${wish.has(x.id) ? "fill" : "line"}"></i></button>
+        <button class="card__open" data-quick="${x.id}" aria-label="View ${x.n}"><img src="${U(x.img)}" alt="${x.n} in ${x.col}" loading="lazy" />${x.alt !== x.img ? `<img class="card__alt" src="${U(x.alt)}" alt="" loading="lazy" />` : ""}</button>
+        <div class="card__sizes">${x.sz.length ? `<span>Quick add</span><div>${CL.map((s) => `<button data-qa="${x.id}" data-s="${s}" ${x.sz.includes(s) ? "" : "disabled"}>${s}</button>`).join("")}</div>` : `<button class="card__qa" data-qa="${x.id}">Add to bag</button>`}</div>
+      </div>
+      <div class="card__body"><h3><button data-quick="${x.id}">${x.n}</button></h3><p>${x.col}</p><b>${eur(x.p)}</b></div>
+    </article>`;
+    const render = () => {
+      const list = P.filter((x) => (chip === "all" ? x.cat !== "Bags" || x.tag : x.cat === chip)).slice(0, 8);
+      $("grid").innerHTML = list.map(card).join("");
+      $("shopTitle").textContent = { all: "New arrivals", Dresses: "Ready-to-wear", Coats: "Coats & jackets", Bags: "Bags" }[chip];
+      $("chips").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.c === chip));
+    };
+    $("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { chip = b.dataset.c; render(); } });
+    document.querySelectorAll("[data-cat]").forEach((a) => a.addEventListener("click", () => { if (a.dataset.cat !== "Bags") { chip = a.dataset.cat; render(); } closeNav(); }));
+    render();
+    $("bagGrid").innerHTML = P.filter((x) => x.cat === "Bags").map(card).join("");
+
+    /* ---------- Wishlist ---------- */
+    const renderWish = () => { $("wishCount").textContent = wish.size; $("wishCount").classList.toggle("on", wish.size > 0); try { localStorage.setItem("anWish", JSON.stringify([...wish])); } catch (e) {} };
+    renderWish();
+    $("wishBtn").addEventListener("click", () => { $("grid").innerHTML = wish.size ? P.filter((x) => wish.has(x.id)).map(card).join("") : '<p class="none">Your wishlist is empty. Tap the heart on any piece to save it.</p>'; $("shopTitle").textContent = "Wishlist"; $("chips").querySelectorAll("button").forEach((b) => b.classList.remove("on")); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* ---------- Bag ---------- */
+    let bag = [];
+    try { bag = JSON.parse(localStorage.getItem("anBag") || "[]"); } catch (e) {}
+    const renderBag = () => {
+      const n = bag.reduce((s, i) => s + i.q, 0), sub = bag.reduce((s, i) => s + i.q * i.p, 0);
+      $("bagCount").textContent = n; $("bagCount").classList.toggle("on", n > 0);
+      $("drawerList").innerHTML = bag.length ? bag.map((i, k) => `<li><img src="${U(i.img, 200)}" alt="" /><div><b>${i.n}</b><small>${i.col}${i.size ? " · Size " + i.size : ""}</small><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></div><div class="drawer__r"><span>${eur(i.p * i.q)}</span><button data-rm="${k}">Remove</button></div></li>`).join("") : `<li class="empty"><i class="ri-handbag-line"></i><p>Your shopping bag is empty.</p></li>`;
+      $("dSub").textContent = eur(sub);
+      try { localStorage.setItem("anBag", JSON.stringify(bag)); } catch (e) {}
+    };
+    const addToBag = (x, size) => {
+      const key = x.id + (size || ""), f = bag.find((i) => i.key === key);
+      f ? f.q++ : bag.push({ key, n: x.n, col: x.col, size, p: x.p, img: x.img, q: 1 });
+      renderBag(); toast(`${x.n}${size ? ", size " + size : ""} added to your bag`);
+      $("bagBtn").classList.remove("bump"); void $("bagBtn").offsetWidth; $("bagBtn").classList.add("bump");
+    };
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.rm !== undefined) bag.splice(+b.dataset.rm, 1); else { const i = bag[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) bag.splice(+b.dataset.k, 1); } renderBag(); });
+    const openBag = () => { closeModal(); document.body.classList.add("bag-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeBag = () => { document.body.classList.remove("bag-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("bagBtn").addEventListener("click", openBag); $("drawerClose").addEventListener("click", closeBag); $("scrim").addEventListener("click", closeBag);
+    $("checkout").addEventListener("click", () => { if (!bag.length) return; bag = []; renderBag(); closeBag(); toast("Thank you. Your order is confirmed."); });
+    renderBag();
+
+    /* ---------- Quick view ---------- */
+    let mItem = null, mSize = null;
+    const openModal = (x) => {
+      mItem = x; mSize = null; $("mErr").textContent = "";
+      $("mImg").src = U(x.img, 1000); $("mImg").alt = `${x.n} in ${x.col}`;
+      const ims = [...new Set([x.img, x.alt])];
+      $("mThumbs").innerHTML = ims.length > 1 ? ims.map((im, i) => `<button class="${i ? "" : "on"}" data-im="${im}"><img src="${U(im, 200)}" alt="" /></button>`).join("") : "";
+      $("mCat").textContent = x.cat === "Bags" ? "Leather goods" : x.cat === "Coats" ? "Outerwear" : "Ready-to-wear";
+      $("mName").textContent = x.n; $("mPrice").textContent = eur(x.p); $("mCol").innerHTML = `Colour: <b>${x.col}</b>`;
+      $("mSizeWrap").style.display = x.sz.length ? "" : "none";
+      $("mSizes").innerHTML = CL.map((s) => `<button data-s="${s}" ${x.sz.includes(s) ? "" : "disabled"}>${s}</button>`).join("");
+      $("mDesc").textContent = x.d; $("mComp").textContent = x.comp;
+      document.body.classList.add("modal-open"); $("modal").setAttribute("aria-hidden", "false");
+    };
+    const closeModal = () => { document.body.classList.remove("modal-open"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("mThumbs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; $("mImg").src = U(b.dataset.im, 1000); $("mThumbs").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); });
+    $("mSizes").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || b.disabled) return; mSize = b.dataset.s; $("mErr").textContent = ""; $("mSizes").querySelectorAll("button").forEach((t) => t.classList.toggle("on", t === b)); });
+    $("mAdd").addEventListener("click", () => { if (mItem.sz.length && !mSize) { $("mErr").textContent = "Please select a size."; return; } addToBag(mItem, mSize); closeModal(); });
+    $("modalClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+    document.addEventListener("click", (e) => {
+      const q = e.target.closest("[data-quick]"), a = e.target.closest("[data-qa]"), w = e.target.closest("[data-wish]");
+      if (q) { closeSearch(); openModal(P.find((x) => x.id === +q.dataset.quick)); }
+      if (a && !a.disabled) addToBag(P.find((x) => x.id === +a.dataset.qa), a.dataset.s);
+      if (w) { const id = +w.dataset.wish; wish.has(id) ? wish.delete(id) : wish.add(id); document.querySelectorAll(`[data-wish="${id}"]`).forEach((b) => { b.classList.toggle("on", wish.has(id)); b.innerHTML = `<i class="ri-heart-${wish.has(id) ? "fill" : "line"}"></i>`; }); renderWish(); toast(wish.has(id) ? "Saved to your wishlist" : "Removed from your wishlist"); }
+    });
+
+    /* ---------- Search ---------- */
+    const openSearch = () => { document.body.classList.add("search-open"); $("search").setAttribute("aria-hidden", "false"); setTimeout(() => $("searchInput").focus(), 150); };
+    const closeSearch = () => { document.body.classList.remove("search-open"); $("search").setAttribute("aria-hidden", "true"); };
+    $("searchBtn").addEventListener("click", openSearch); $("searchClose").addEventListener("click", closeSearch);
+    $("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase(), words = { coat: "Coats", coats: "Coats", dress: "Dresses", dresses: "Dresses", bag: "Bags", bags: "Bags" };
+      const res = q ? P.filter((x) => (x.n + " " + x.col).toLowerCase().includes(q) || x.cat === words[q]) : [];
+      $("searchRes").innerHTML = !q ? '<p class="search__hint">Try "coat", "dress" or "bag"</p>' : res.length ? `<div class="search__grid">${res.map((x) => `<button data-quick="${x.id}"><img src="${U(x.img, 300)}" alt="" /><b>${x.n}</b><span>${eur(x.p)}</span></button>`).join("")}</div>` : `<p class="search__hint">No results for "${e.target.value}".</p>`;
+    });
+
+    /* ---------- Appointment ---------- */
+    const d = new Date(); d.setDate(d.getDate() + 1); $("apptDate").min = d.toISOString().slice(0, 10);
+    $("apptForm").addEventListener("submit", (e) => { e.preventDefault(); $("apptMsg").textContent = "Thank you. A client advisor will confirm your appointment by email within 24 hours."; e.target.reset(); });
+
+    /* ---------- Misc ---------- */
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeBag(); closeSearch(); closeNav(); } });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 10), { passive: true });
+    document.querySelectorAll(".head, .services__in > div").forEach((el, i) => { el.classList.add("reveal"); el.style.setProperty("--d", (i % 4) * 0.08 + "s"); });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Welcome to the Atelier. Check your inbox."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<!--sama-pill--><script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script><!--/sama-pill-->
+</body>
+</html>
