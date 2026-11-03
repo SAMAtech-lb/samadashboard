@@ -10,13 +10,20 @@ The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web de
    - `CNAME` record for `www`: `samatech-lb.github.io`
 3. Back in **Settings → Pages**, confirm the custom domain is `samatechlb.com`, wait for the DNS check, then tick **Enforce HTTPS**.
 
+## Add or remove projects
+
+No subdomain or online admin is needed. Forma Studio on your computer is the dashboard.
+
+1. Open `studio-dashboard/index.html` and use **Add to portfolio** or **Remove from portfolio**.
+2. Click **Save to website** and save over `studio-dashboard/portfolio.js`.
+3. Double-click `publish.bat` in this folder.
+
 ## Change something
 
 | To change | Do this |
 | --- | --- |
 | Wording, email or WhatsApp number | Edit `tools/content.mjs`, then run `node tools/build.mjs` |
 | Add an icon | Add it to `tools/fetch_assets.mjs`, then run that file |
-| The list of projects (after changing it in Forma) | Run `node tools/import.mjs`, the capture steps below, then `node tools/build.mjs` |
 | Check for SEO mistakes and broken links | Run `node tools/check.mjs` |
 
 To refresh screenshots, run `python -m http.server 8123 --bind 127.0.0.1` in this folder, then `node tools/capture.mjs` and `python tools/images.py` in a second terminal.

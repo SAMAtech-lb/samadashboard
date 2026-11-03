@@ -12,7 +12,14 @@ def fit(im, w):
     return im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
 
 
+import json
+ids = {p["id"] for p in json.loads((root / "data" / "projects.json").read_text(encoding="utf8"))}
+
 for f in sorted(cache.glob("*.jpg")):
+    pid = f.stem[:-2] if f.stem.endswith("-m") else f.stem
+    done = out / (f"{f.stem}.webp" if f.stem.endswith("-m") else f"{f.stem}-900.webp")
+    if pid not in ids or done.exists():
+        continue
     im = Image.open(f).convert("RGB")
     if f.stem.endswith("-m"):
         fit(im, 360).save(out / f"{f.stem}.webp", quality=78, method=6)

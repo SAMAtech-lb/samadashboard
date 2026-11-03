@@ -1,6 +1,6 @@
 // Builds every page of samatechlb.com as plain HTML: node tools/build.mjs
 // The design is the SAMA site (studio-dashboard/sama), with its sections written into the page instead of drawn by JavaScript.
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, CATEGORIES, SERVICES, HOME_SERVICES, PROMISE, PROCESS, WHY, FORMATS, HOME_FAQ, ABOUT, SHOW } from "./content.mjs";
@@ -10,11 +10,20 @@ const projects = JSON.parse(readFileSync(join(root, "data", "projects.json"), "u
 const { icons, tech } = JSON.parse(readFileSync(join(root, "tools", "icons.json"), "utf8"));
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const abs = (path) => `${SITE.url}/${path}`;
+if (process.env.SAMA_UPDATED) SITE.updated = process.env.SAMA_UPDATED;
+for (const c of new Set(projects.map((p) => p.category))) {
+  if (CATEGORIES[c]) continue;
+  // A category with no wording yet still gets a working page; add proper wording in content.mjs
+  console.warn(`New category "${c}": using general wording. Add it to CATEGORIES in tools/content.mjs.`);
+  const label = c + " websites";
+  CATEGORIES[c] = { slug: c.toLowerCase().replace(/[^a-z0-9]+/g, "-") + "-websites", label, tab: c + " website designs", title: `${c} Website Design in Lebanon | SAMA`, meta: `${c} website designs by SAMA, a web design studio in Beirut, Lebanon. Open the live demos on any screen and get a fixed quote for your own site.`, h1: `${c} website <em>design</em> in Lebanon`, intro: `These ${c.toLowerCase()} website demos are working builds you can open and try on any screen. We adapt each one to your brand, your content and the way your business works.`, suits: `This design suits a ${c.toLowerCase()} business that wants customers to find what they need quickly and get in touch easily.` };
+}
 const cats = Object.keys(CATEGORIES).filter((c) => projects.some((p) => p.category === c));
 const catPath = (c) => `work/${CATEGORIES[c].slug}/`;
 const inCat = (c) => projects.filter((p) => p.category === c);
 const waNum = SITE.whatsapp.replace(/\D/g, "");
 const sitemap = [];
+rmSync(join(root, "work"), { recursive: true, force: true }); // fully generated: removed projects must not leave old pages behind
 const grad = (h) => h.replace(/<em>/g, '<span class="grad">').replace(/<\/em>/g, "</span>");
 
 /* Icons are written directly into the page, so no icon font has to download */
@@ -186,7 +195,8 @@ ${viewer}
 }
 
 /* ---------- Home: same sections, same order as the SAMA site, plus FAQ ---------- */
-const show = SHOW.map(([id, name, cat]) => ({ id, name, cat }));
+const show = SHOW.filter(([id]) => projects.some((p) => p.id === id)).map(([id, name, cat]) => ({ id, name, cat }));
+for (const p of projects) { if (show.length >= 5) break; if (!show.some((s) => s.id === p.id)) show.push({ id: p.id, name: p.name, cat: p.tags[0] }); }
 const techChips = (hidden) => tech.map((t) => `<span${hidden ? ' aria-hidden="true"' : ""}><svg class="ic" viewBox="${t.box}" fill="currentColor" aria-hidden="true">${t.body}</svg>${esc(t.label)}</span>`).join("");
 page({
   path: "",
@@ -245,7 +255,7 @@ page({
   <div class="services">${HOME_SERVICES.map((s, i) => `<article class="service reveal" style="--d:${(i * 0.08).toFixed(2)}s" data-tilt>
     <div class="service__top"><span class="service__icon">${svg(s.i)}</span><span class="service__n">0${i + 1}</span></div>
     <h3>${esc(s.t)}</h3><p>${esc(s.d)}</p>
-    <ul>${s.pts.map(([p, href]) => `<li>${ic("check-line")}${href ? `<a class="link" href="${base}${href}/">${esc(p)}</a>` : `<span>${esc(p)}</span>`}</li>`).join("")}</ul>
+    <ul>${s.pts.map(([p, href]) => `<li>${ic("check-line")}${href && (!href.startsWith("work/") || cats.some((c) => catPath(c) === href + "/")) ? `<a class="link" href="${base}${href}/">${esc(p)}</a>` : `<span>${esc(p)}</span>`}</li>`).join("")}</ul>
     <a href="${base}${s.slug}/" class="service__link">${esc(s.more)} ${ic("arrow-right-up-line")}</a>
   </article>`).join("")}</div>
 </div></section>
@@ -368,7 +378,9 @@ ${ctaBand(base, `Want a site like ${esc(p.name)}? Tell us about your business`)}
 /* ---------- Service pages ---------- */
 for (const s of SERVICES) {
   const crumbs = [["Home", ""], [s.tab, `${s.slug}/`]];
-  const list = s.examples.map((id) => projects.find((p) => p.id === id));
+  let list = s.examples.map((id) => projects.find((p) => p.id === id)).filter(Boolean);
+  if (!list.length) list = s.categories.flatMap(inCat).slice(0, 3);
+  if (!list.length) list = projects.slice(0, 3);
   page({
     path: `${s.slug}/`, title: s.title, description: s.meta,
     ld: [crumbsLd(crumbs), faqLd(s.faq), { "@type": "Service", "@id": abs(`${s.slug}/#service`), name: s.tab, serviceType: s.tab, description: s.meta, provider: { "@id": `${SITE.url}/#org` }, areaServed: [{ "@type": "Country", name: "Lebanon" }, { "@type": "Place", name: "Worldwide" }], url: abs(`${s.slug}/`) }],
