@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tidal Networks — Fibre, Mobile &amp; In-Building Telecom Engineering</title>
+  <meta name="description" content="Tidal Networks designs, builds and maintains telecom networks across Ireland and the UK: fibre rollout, 5G mast upgrades, in-building coverage and enterprise networks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo"><span class="logo__mark"><i></i><i></i><i></i></span>Tidal<b>Networks</b></a>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <!-- <a href="#build">How we build</a> -->
+        <a href="#projects">Projects</a>
+        <a href="#careers">Careers</a>
+      </nav>
+      <a href="tel:+35391755400" class="header__phone"><i class="ri-phone-line"></i> +353 91 755 400</a>
+      <a href="#rfq" class="btn btn--sm" data-magnet>Request a quote</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <img class="hero__bg" src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca?auto=format&fit=crop&w=2400&q=80" alt="" />
+      <canvas class="fibres" id="fibres" aria-hidden="true"></canvas>
+      <div class="hero__in">
+        <p class="tag reveal" style="--d:.05s"><span class="live"></span> 1,240 km of fibre live in 2026</p>
+        <h1 class="hero__title">
+          <span class="line"><span>We build the</span></span>
+          <span class="line"><span>networks <em class="grad">Ireland</em></span></span>
+          <span class="line"><span>runs on.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d:.5s">Fibre rollout, 5G mast upgrades and in-building coverage for operators, councils and large employers — designed, built and maintained by our own 260-strong crews.</p>
+        <div class="hero__cta reveal" style="--d:.62s">
+          <a href="#rfq" class="btn" data-magnet>Request a quote <i class="ri-arrow-right-line"></i></a>
+          <a href="#projects" class="btn btn--ghost"><i class="ri-map-2-line"></i> View projects</a>
+        </div>
+      </div>
+      <div class="hero__strip reveal" style="--d:.8s">
+        <div><b data-count="1240">0</b><span>km of fibre built</span></div>
+        <div><b data-count="2310">0</b><span>mobile sites upgraded</span></div>
+        <div><b data-count="260">0</b><span>engineers &amp; riggers</span></div>
+        <div><b data-count="0">0</b><span>lost-time injuries in 2025</span></div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients">
+      <p>Approved contractor to</p>
+      <div class="clients__view"><div class="clients__track" id="clients"></div></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="head">
+          <span class="kicker reveal">What we do</span>
+          <h2 class="h2 reveal">Four networks. <em class="grad">One contractor.</em></h2>
+        </div>
+        <div class="svc" id="svc"></div>
+      </div>
+    </section>
+
+    <!-- How we build (disabled): pinned street cross-section
+    <section class="build" id="build">
+      <div class="build__pin">
+        <div class="build__in">
+          <div class="build__copy">
+            <span class="kicker">How a fibre route gets built</span>
+            <div class="build__stage" id="stageTxt"></div>
+            <ol class="build__steps" id="stageList"></ol>
+          </div>
+          <div class="street">
+            <svg viewBox="0 0 1200 520" id="street" class="s0" aria-label="Cross-section of a street as a fibre route is built">
+              <defs>
+                <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2420" /><stop offset="1" stop-color="#14100d" /></linearGradient>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1a33" /><stop offset="1" stop-color="#11284a" /></linearGradient>
+                <linearGradient id="glow" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="1060" y2="0"><stop offset="0" stop-color="#00e5ff" /><stop offset="1" stop-color="#00ff9d" /></linearGradient>
+              </defs>
+              <rect width="1200" height="230" fill="url(#sky)" />
+              <g class="stars"><circle cx="90" cy="50" r="1.5" /><circle cx="300" cy="90" r="1.2" /><circle cx="520" cy="40" r="1.5" /><circle cx="700" cy="80" r="1" /><circle cx="840" cy="30" r="1.4" /></g>
+              [house]
+              <g class="house">
+                <path d="M930 230V130l90-60 90 60v100z" fill="#1c2f52" />
+                <path d="M915 135l105-72 105 72" fill="none" stroke="#2c4775" stroke-width="10" stroke-linejoin="round" />
+                <rect class="win" x="955" y="150" width="34" height="30" rx="3" /><rect class="win" x="1052" y="150" width="34" height="30" rx="3" />
+                <rect x="1004" y="182" width="32" height="48" rx="3" fill="#2c4775" />
+              </g>
+              [cabinet]
+              <g class="cab"><rect x="180" y="168" width="54" height="62" rx="4" fill="#1f6b55" /><rect x="188" y="178" width="38" height="4" fill="#36a585" /></g>
+              [road]
+              <rect y="230" width="1200" height="290" fill="url(#soil)" />
+              <rect y="222" width="1200" height="22" fill="#2b3038" />
+              <path d="M0 233h1200" stroke="#e8c547" stroke-width="2" stroke-dasharray="40 30" opacity=".5" />
+              <g class="strata" opacity=".5"><path d="M0 300 C200 290 400 310 600 298 S1000 290 1200 302" stroke="#3a2f27" stroke-width="2" fill="none" /><path d="M0 410 C250 400 500 420 750 405 S1050 400 1200 412" stroke="#3a2f27" stroke-width="2" fill="none" /></g>
+              <g class="stones" fill="#4a3d33"><circle cx="80" cy="270" r="5" /><circle cx="120" cy="450" r="7" /><circle cx="300" cy="480" r="4" /><circle cx="470" cy="455" r="6" /><circle cx="660" cy="490" r="5" /><circle cx="820" cy="470" r="7" /><circle cx="1100" cy="280" r="6" /><circle cx="1150" cy="460" r="4" /><circle cx="40" cy="380" r="4" /><circle cx="1080" cy="380" r="5" /></g>
+              <g class="services"><rect x="0" y="440" width="1200" height="16" rx="8" fill="#2563eb" opacity=".75" /><text x="20" y="476" font-family="Chakra Petch" font-size="14" fill="#7ea6ff">Existing water main</text><rect x="0" y="492" width="1200" height="10" rx="5" fill="#eab308" opacity=".75" /><text x="1010" y="486" font-family="Chakra Petch" font-size="14" fill="#f5d36b">Gas line</text></g>
+              [survey]
+              <g class="survey"><path d="M150 226h880" stroke="#ff4fd8" stroke-width="3" stroke-dasharray="14 10" /><g transform="translate(560 140)"><path d="M0 82L-22 0M0 82L22 0M0 82L0 0" stroke="#cfd8e6" stroke-width="3" /><rect x="-16" y="-18" width="32" height="20" rx="3" fill="#ffd60a" /></g></g>
+              [trench]
+              <rect class="cut" x="150" y="244" width="880" height="150" fill="#3a2f27" />
+              <g class="digger" id="digger"><rect x="-60" y="168" width="90" height="44" rx="6" fill="#ffb703" /><rect x="-40" y="140" width="40" height="32" rx="4" fill="#fb8500" /><circle cx="-40" cy="214" r="12" fill="#222" /><circle cx="15" cy="214" r="12" fill="#222" /><path d="M30 180l50-30 18 40" stroke="#fb8500" stroke-width="10" fill="none" stroke-linecap="round" /></g>
+              [duct]
+              <rect class="duct" x="160" y="340" width="860" height="28" rx="14" fill="#ff7a1a" />
+              [fibre]
+              <path class="fibre" d="M170 354H1010" stroke="url(#glow)" stroke-width="6" stroke-linecap="round" />
+              <path class="fibre fibre--pulse" d="M170 354H1010" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+              [backfill]
+              <rect class="fill" x="150" y="244" width="880" height="80" fill="#2a2420" />
+              [splice + drop to house]
+              <g class="splice"><rect x="1000" y="320" width="56" height="66" rx="8" fill="#0ea5e9" /><path d="M1028 320V230" stroke="url(#glow)" stroke-width="5" /><path d="M207 230v124" stroke="url(#glow)" stroke-width="5" /></g>
+              [labels]
+              <g class="labels" font-family="Chakra Petch" font-size="20" fill="#cfd8e6">
+                <text x="160" y="430" class="lb lb2">Trench 600 mm</text>
+                <text x="420" y="430" class="lb lb3">50 mm duct</text>
+                <text x="640" y="430" class="lb lb4">288-fibre cable</text>
+                <text x="900" y="430" class="lb lb5">Splice closure</text>
+              </g>
+            </svg>
+            <div class="street__bar"><i id="stageBar"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="head head--row">
+          <div><span class="kicker reveal">Projects</span><h2 class="h2 reveal">Recent work <em class="grad">on the ground.</em></h2></div>
+          <div class="filters reveal" id="filters"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Safety band -->
+    <section class="safety">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" />
+      <div class="container safety__in">
+        <h2 class="h2 reveal">Everyone goes <em class="grad">home safe.</em></h2>
+        <div class="certs" id="certs"></div>
+      </div>
+    </section>
+
+    <!-- Careers -->
+    <section class="section careers" id="careers">
+      <div class="container careers__in">
+        <div>
+          <span class="kicker reveal">Careers</span>
+          <h2 class="h2 reveal">Join the <em class="grad">crew.</em></h2>
+          <p class="reveal">Full training, a company van and a 4-on-3-off rota on most contracts. Apprenticeships start every September.</p>
+          <img class="reveal" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" alt="Tidal crew on a construction site" loading="lazy" />
+        </div>
+        <ul class="jobs" id="jobs"></ul>
+      </div>
+    </section>
+
+    <!-- RFQ -->
+    <section class="section rfq" id="rfq">
+      <div class="container rfq__in">
+        <div>
+          <span class="kicker reveal">Request a quote</span>
+          <h2 class="h2 reveal">Send us the <em class="grad">scope.</em></h2>
+          <p class="reveal">A bid manager replies within two working days and arranges a site survey where needed.</p>
+          <div class="depots reveal">
+            <div><b>Galway HQ</b><span>Mervue Business Park, H91 KX2C</span></div>
+            <div><b>Dublin</b><span>Ballycoolin Business Park, D15 R2T6</span></div>
+            <div><b>Belfast</b><span>Duncrue Crescent, BT3 9BW</span></div>
+          </div>
+        </div>
+        <form class="form reveal" id="form">
+          <div class="form__row"><label>Name<input required /></label><label>Organisation<input required /></label></div>
+          <label>Email<input type="email" required /></label>
+          <div class="chips" id="svcChips"><span>Service</span><button type="button" class="on">Fibre</button><button type="button">5G sites</button><button type="button">In-building</button><button type="button">Enterprise</button></div>
+          <label>Scope<textarea rows="4" required placeholder="e.g. 14 km duct and fibre between Oranmore and Athenry, 3 road crossings"></textarea></label>
+          <label class="file"><input type="file" id="file" multiple /><span><i class="ri-upload-cloud-2-line"></i> <b id="fileName">Drop drawings or tender documents</b></span></label>
+          <button class="btn" type="submit" data-magnet>Send request <i class="ri-send-plane-line"></i></button>
+          <p class="form__ok" id="ok" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__in">
+      <a href="#top" class="logo"><span class="logo__mark"><i></i><i></i><i></i></span>Tidal<b>Networks</b></a>
+      <nav><a href="#services">Services</a><a href="#projects">Projects</a><a href="#careers">Careers</a><a href="#">Safety statement</a></nav>
+      <span>© 2026 Tidal Networks Ltd · Reg. 389114</span>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal__box"><button class="modal__x" id="modalX" aria-label="Close"><i class="ri-close-line"></i></button><div id="modalBody"></div></div></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+    const SERVICES = [
+      { t: "Fibre rollout", d: "Ducting, aerial and underground cabling, splicing and testing — from road-opening licence to OTDR report.", img: "1504307651254-35680f356dfd", tags: ["FTTH", "Backhaul", "Directional drilling"] },
+      { t: "5G mast upgrades", d: "Antenna swaps, new builds and structural strengthening with GWO-certified riggers.", img: "1516216628859-9bccecab13ca", tags: ["Rooftop", "Greenfield", "Power"] },
+      { t: "In-building coverage", d: "Multi-operator DAS and small cells for hospitals, campuses and offices.", img: "1558494949-ef010cbdcc31", tags: ["iBwave design", "DAS", "Private 5G"] },
+      { t: "Enterprise networks", d: "Structured cabling, comms rooms and fibre rings between sites, with 24/7 maintenance.", img: "1544197150-b99a580bb7a8", tags: ["Cat6A", "Comms rooms", "SLA support"] },
+    ];
+    const STAGES = [
+      ["Survey", "We walk the route with GPR scanners, mark existing services in pink and agree the road-opening licence with the council."],
+      ["Dig", "A narrow 600 mm trench, opened and closed in the same day so traffic keeps moving."],
+      ["Duct", "50 mm ducts laid with spare capacity, so future upgrades never need another dig."],
+      ["Blow fibre", "A 288-fibre cable is blown through the duct with compressed air — up to 2 km in one shot."],
+      ["Splice", "Every fibre fusion-spliced in closures and tested end-to-end with an OTDR."],
+      ["Live", "Homes and businesses connected. As-built records and test results handed over the same week."],
+    ];
+    const PROJECTS = [
+      { n: "Galway–Athenry backhaul", c: "Lumen Fibre", cat: "Fibre", img: "1504307651254-35680f356dfd", y: "2026", specs: [["Length", "42 km"], ["Cable", "288-fibre"], ["Drilling", "14 km under N6"], ["Delivered", "3 weeks early"]] },
+      { n: "University Hospital Limerick", c: "HSE Mid-West", cat: "In-building", img: "1558494949-ef010cbdcc31", y: "2026", specs: [["Antennas", "1,140"], ["Operators", "4"], ["Buildings", "9"], ["Works", "Live wards"]] },
+      { n: "Western 5G upgrade, phase 2", c: "Orbit Mobile", cat: "5G sites", img: "1516216628859-9bccecab13ca", y: "2025", specs: [["Sites", "186"], ["Counties", "Galway, Mayo, Clare"], ["Crews", "14"], ["Duration", "11 months"]] },
+      { n: "Belfast Harbour campus", c: "Northwind Logistics", cat: "Enterprise", img: "1544197150-b99a580bb7a8", y: "2025", specs: [["Buildings", "6"], ["Fibre ring", "9 km"], ["Comms rooms", "11"], ["SLA", "4-hour"]] },
+      { n: "Rural broadband, Lot 7", c: "Galway County Council", cat: "Fibre", img: "1541888946425-d81bb19240f5", y: "2024", specs: [["Premises", "3,900"], ["Islands", "Inis Mór link"], ["Poles", "2,140"], ["Build", "Aerial + underground"]] },
+      { n: "Dublin Docklands small cells", c: "Northwind Telecom", cat: "5G sites", img: "1520869562399-e772f042f422", y: "2024", specs: [["Small cells", "64"], ["Mounting", "Lamp posts"], ["Works", "Night only"], ["Approval", "DCC licensed"]] },
+    ];
+    const CERTS = [["ISO 45001", "Health & safety"], ["ISO 9001", "Quality"], ["ISO 14001", "Environment"], ["Achilles UVDB", "Utilities verified"], ["Constructionline Gold", "UK public sector"]];
+    const JOBS = [["Fibre splicing technician", "Galway · €38k – €46k"], ["Telecom rigger (GWO)", "Dublin · €42k – €52k + allowances"], ["RF design engineer", "Belfast / hybrid · £45k – £58k"], ["Site supervisor, DAS", "Dublin · €50k – €60k"], ["Apprentice technician", "Galway · Sept 2027 intake"]];
+
+    /* ---------- Fibres canvas ---------- */
+    const cv = $("fibres"), cx = cv.getContext("2d");
+    let W = 0, H = 0, strands = [];
+    function size() {
+      const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0);
+      strands = Array.from({ length: 14 }, (_, i) => { const y0 = H * (.55 + i * .03), y1 = H * (.15 + i * .055); return { a: [-50, y0 + 60], c1: [W * .35, y0 - 40 + i * 6], c2: [W * .62, y1 + 120], b: [W + 50, y1], p: Math.random(), sp: .06 + Math.random() * .1, hue: 180 + i * 7 }; });
+    }
+    size(); addEventListener("resize", size);
+    const bez = (s, t) => { const u = 1 - t; return [u * u * u * s.a[0] + 3 * u * u * t * s.c1[0] + 3 * u * t * t * s.c2[0] + t * t * t * s.b[0], u * u * u * s.a[1] + 3 * u * u * t * s.c1[1] + 3 * u * t * t * s.c2[1] + t * t * t * s.b[1]]; };
+    let last = performance.now();
+    function fibreLoop(now) {
+      const dt = Math.min(.05, (now - last) / 1000); last = now;
+      cx.clearRect(0, 0, W, H);
+      strands.forEach((s) => {
+        cx.strokeStyle = `hsla(${s.hue},100%,60%,.12)`; cx.lineWidth = 1.2;
+        cx.beginPath(); cx.moveTo(...s.a); cx.bezierCurveTo(...s.c1, ...s.c2, ...s.b); cx.stroke();
+        s.p = (s.p + s.sp * dt) % 1;
+        for (let k = 0; k < 22; k++) {
+          const t = s.p - k * .006; if (t < 0) continue;
+          const [x, y] = bez(s, t), a = (1 - k / 22);
+          cx.fillStyle = `hsla(${s.hue},100%,${70 - k}%,${a})`;
+          cx.beginPath(); cx.arc(x, y, 2.6 * a + .4, 0, 7); cx.fill();
+        }
+      });
+      requestAnimationFrame(fibreLoop);
+    }
+    if (!reduced) requestAnimationFrame(fibreLoop);
+
+    /* ---------- Clients ---------- */
+    const CL = ["Northwind Telecom", "Orbit Mobile", "Lumen Fibre", "Galway County Council", "HSE", "Voltra Energy", "Northwind Logistics"];
+    const cl = CL.map((c) => `<span>${c}</span><i class="ri-checkbox-blank-circle-fill"></i>`).join("");
+    $("clients").innerHTML = cl + cl;
+
+    /* ---------- Services ---------- */
+    $("svc").innerHTML = SERVICES.map((s, i) => `
+      <article class="sv reveal" style="--d:${i * .08}s">
+        <img src="${U(s.img, 900)}" alt="${s.t}" loading="lazy" />
+        <div class="sv__body"><span class="sv__no">0${i + 1}</span><h3>${s.t}</h3><p>${s.d}</p><div class="sv__tags">${s.tags.map((t) => `<span>${t}</span>`).join("")}</div></div>
+      </article>`).join("");
+
+    /* ---------- Build stages ---------- */
+    const hasBuild = !!$("build");
+    if (hasBuild) $("stageList").innerHTML = STAGES.map(([t], i) => `<li data-i="${i}"><span>0${i + 1}</span>${t}</li>`).join("");
+    let curStage = -1;
+    function setStage(i) {
+      if (i === curStage) return; curStage = i;
+      $("street").setAttribute("class", "s" + (i + 1));
+      $("stageTxt").innerHTML = `<p class="build__no grad">0${i + 1}</p><h3>${STAGES[i][0]}</h3><p>${STAGES[i][1]}</p>`;
+      document.querySelectorAll("#stageList li").forEach((li, k) => { li.classList.toggle("on", k === i); li.classList.toggle("done", k < i); });
+    }
+    if (hasBuild) setStage(0);
+
+    /* ---------- Projects ---------- */
+    const CATS = ["All", ...new Set(PROJECTS.map((p) => p.cat))];
+    $("filters").innerHTML = CATS.map((c, i) => `<button class="${i ? "" : "on"}" data-c="${c}">${c}</button>`).join("");
+    function renderProj(cat) {
+      $("grid").innerHTML = PROJECTS.filter((p) => cat === "All" || p.cat === cat).map((p, i) => `
+        <article class="pj" data-n="${p.n}" style="--d:${i * .07}s">
+          <div class="pj__img"><img src="${U(p.img, 900)}" alt="${p.n}" loading="lazy" /><span class="pj__cat">${p.cat}</span></div>
+          <div class="pj__body"><span>${p.c} · ${p.y}</span><h3>${p.n}</h3><p>${p.specs[0][1]} ${p.specs[0][0].toLowerCase()} · ${p.specs[1][1]}</p><b>View specs <i class="ri-arrow-right-line"></i></b></div>
+        </article>`).join("");
+      requestAnimationFrame(() => document.querySelectorAll(".pj").forEach((el) => el.classList.add("in")));
+    }
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (!b) return; document.querySelectorAll("#filters button").forEach((x) => x.classList.toggle("on", x === b)); renderProj(b.dataset.c); });
+    renderProj("All");
+    $("grid").addEventListener("click", (e) => {
+      const el = e.target.closest(".pj"); if (!el) return; const p = PROJECTS.find((x) => x.n === el.dataset.n);
+      $("modalBody").innerHTML = `<img src="${U(p.img, 1400)}" alt="${p.n}" /><div class="modal__txt"><span class="kicker">${p.cat} · ${p.y}</span><h3>${p.n}</h3><p>Client: <b>${p.c}</b></p><dl>${p.specs.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl><a href="#rfq" class="btn" id="mCta">Quote a similar project</a></div>`;
+      $("modal").classList.add("on"); $("modal").setAttribute("aria-hidden", "false");
+    });
+    const closeM = () => { $("modal").classList.remove("on"); $("modal").setAttribute("aria-hidden", "true"); };
+    $("modalX").onclick = closeM; $("modal").addEventListener("click", (e) => { if (e.target === $("modal") || e.target.closest("#mCta")) closeM(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeM(); document.body.classList.remove("nav-open"); } });
+
+    $("certs").innerHTML = CERTS.map(([a, b], i) => `<div class="cert reveal" style="--d:${i * .08}s"><i class="ri-shield-check-fill"></i><b>${a}</b><span>${b}</span></div>`).join("");
+    $("jobs").innerHTML = JOBS.map(([t, m], i) => `<li class="reveal" style="--d:${i * .06}s"><a href="#rfq"><div><b>${t}</b><span>${m}</span></div><i class="ri-arrow-right-up-line"></i></a></li>`).join("");
+
+    /* ---------- Form ---------- */
+    $("svcChips").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") e.target.classList.toggle("on"); });
+    $("file").addEventListener("change", (e) => { const n = e.target.files.length; $("fileName").textContent = n ? (n === 1 ? e.target.files[0].name : `${n} files attached`) : "Drop drawings or tender documents"; });
+    $("form").addEventListener("submit", (e) => { e.preventDefault(); $("ok").textContent = "Thank you — a bid manager will reply within two working days."; e.target.querySelector(".btn").disabled = true; });
+
+    /* ---------- Scroll ---------- */
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      if (hasBuild) {
+        const b = $("build"), r = b.getBoundingClientRect();
+        const p = clamp(-r.top / Math.max(1, b.offsetHeight - vh), 0, .999);
+        setStage(Math.floor(p * STAGES.length));
+        $("stageBar").style.width = (p * 100) + "%";
+        $("digger").style.transform = `translateX(${150 + clamp((p * STAGES.length - 1), 0, 1) * 880}px)`;
+      }
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * .4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll); onScroll();
+
+    /* ---------- Reveal + counters ---------- */
+    function countUp(el) { const end = +el.dataset.count, t0 = performance.now(); (function k(n) { const q = clamp((n - t0) / 1800, 0, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - q, 3))).toLocaleString("en-IE"); if (q < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(e.target); }), { threshold: .15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* ---------- Magnet + nav ---------- */
+    if (!reduced && matchMedia("(pointer:fine)").matches) document.querySelectorAll("[data-magnet]").forEach((b) => {
+      b.addEventListener("pointermove", (e) => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      b.addEventListener("pointerleave", () => (b.style.transform = ""));
+    });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("nav-open"); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/landing-tidal/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

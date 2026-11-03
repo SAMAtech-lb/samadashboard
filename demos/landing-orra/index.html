@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orra — Business Accounts for Companies That Trade Abroad</title>
+  <meta name="description" content="Orra gives growing businesses multi-currency accounts, international payments at 0.35% over the mid-market rate, metal cards and approvals for finance teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo"><span class="logo__mark"></span>orra</a>
+      <nav class="nav" id="nav">
+        <a href="#product">Product</a>
+        <a href="#fx">Exchange</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#security">Security</a>
+      </nav>
+      <a href="#" class="header__login">Log in</a>
+      <a href="#open" class="btn btn--sm" data-magnet>Open account</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__in">
+        <div class="hero__copy">
+          <p class="pill reveal" style="--d:.05s"><span>New</span> Pay suppliers in 70 countries the same day</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Business money</span></span>
+            <span class="line"><span>without <em class="grad">borders.</em></span></span>
+          </h1>
+          <p class="hero__lead reveal" style="--d:.5s">Hold 24 currencies, pay suppliers at 0.35% over the mid-market rate and give your team metal cards with limits you set — all from one account.</p>
+          <div class="hero__cta reveal" style="--d:.62s">
+            <a href="#open" class="btn" data-magnet>Open an account <i class="ri-arrow-right-line"></i></a>
+            <a href="#fx" class="btn btn--ghost">Compare our rates</a>
+          </div>
+          <ul class="hero__proof reveal" style="--d:.75s">
+            <li><b data-count="9200">0</b><span>businesses</span></li>
+            <li><b>€<span data-count="2.1" data-dec="1">0</span>B</b><span>moved each month</span></li>
+            <li><b data-count="4.8" data-dec="1">0</b><span>Trustpilot</span></li>
+          </ul>
+        </div>
+
+        <div class="cardzone reveal" style="--d:.3s" id="cardzone">
+          <div class="card3d" id="card">
+            <div class="card3d__face">
+              <span class="card3d__sheen" id="sheen"></span>
+              <div class="card3d__top"><span class="card3d__logo">orra</span><i class="ri-contactless-fill"></i></div>
+              <span class="card3d__chip"></span>
+              <p class="card3d__num">•••• •••• •••• 4812</p>
+              <div class="card3d__bot"><span>ANNA LEWIS<br /><small>HARBOUR &amp; PINE LTD</small></span><b>VISA</b></div>
+            </div>
+          </div>
+          <div class="swatches" id="swatches"><button class="on" data-c="graphite" aria-label="Graphite card"></button><button data-c="lilac" aria-label="Lilac card"></button><button data-c="pearl" aria-label="Pearl card"></button></div>
+          <div class="feed" id="feed" aria-live="off"></div>
+        </div>
+      </div>
+      <div class="ticker" aria-label="Exchange rates"><div class="ticker__track" id="ticker"></div></div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos">
+      <p>Trusted by importers, exporters and agencies including</p>
+      <div class="logos__row"><span>Harbour &amp; Pine</span><span>Northwind Trading</span><span>Fieldnote</span><span>Arcade Toys</span><span>Lumen Home</span><span>Voltra</span></div>
+    </section>
+
+    <!-- Product: sticky phone -->
+    <section class="product" id="product">
+      <div class="product__in">
+        <div class="phone-wrap">
+          <div class="phone"><div class="phone__notch"></div><div class="phone__screen" id="screen"></div></div>
+        </div>
+        <div class="feats" id="feats"></div>
+      </div>
+    </section>
+
+    <!-- FX -->
+    <section class="section fx" id="fx">
+      <div class="container fx__in">
+        <div>
+          <span class="kicker reveal">Exchange</span>
+          <h2 class="h2 reveal">See exactly what <em class="grad">your bank keeps.</em></h2>
+          <p class="reveal">Banks hide a 2–4% margin in the exchange rate. We show ours: 0.35% over mid-market, plus a fixed €2 fee. Rates refresh every 30 seconds.</p>
+        </div>
+        <div class="conv reveal">
+          <div class="conv__row">
+            <label>You send<input id="amt" inputmode="decimal" value="50,000" aria-label="Amount to send" /></label>
+            <select id="from" aria-label="From currency"><option>EUR</option><option>GBP</option><option>USD</option></select>
+          </div>
+          <button class="conv__swap" id="swap" aria-label="Swap currencies"><i class="ri-arrow-up-down-line"></i></button>
+          <div class="conv__row">
+            <label>Supplier gets<output id="out">0</output></label>
+            <select id="to" aria-label="To currency"><option>CNY</option><option>USD</option><option>GBP</option><option>EUR</option><option>TRY</option><option>INR</option></select>
+          </div>
+          <div class="conv__lines">
+            <div><span>Mid-market rate</span><b id="rate">—</b></div>
+            <div><span>Orra fee (0.35% + €2)</span><b id="fee">—</b></div>
+            <div><span>Typical bank (2.9%)</span><b id="bank">—</b></div>
+          </div>
+          <div class="conv__save"><span>You keep</span><strong id="save">€0</strong><span>more than with your bank</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="head head--c">
+          <span class="kicker reveal">Pricing</span>
+          <h2 class="h2 reveal">Plans that <em class="grad">grow with you.</em></h2>
+        </div>
+        <div class="plans">
+          <article class="plan reveal" style="--d:.05s">
+            <h3>Starter</h3><p class="plan__price"><b>€0</b>/month</p><p class="plan__for">For freelancers and new companies</p>
+            <ul><li><i class="ri-check-line"></i>2 users, EUR · GBP · USD</li><li><i class="ri-check-line"></i>FX at 0.55% over mid-market</li><li><i class="ri-check-line"></i>2 virtual cards</li><li><i class="ri-check-line"></i>€4 per international transfer</li></ul>
+            <a href="#open" class="btn btn--ghost">Start free</a>
+          </article>
+          <article class="plan plan--pop reveal" style="--d:.12s">
+            <span class="plan__tag">Most popular</span>
+            <h3>Grow</h3><p class="plan__price"><b>€29</b>/month</p><p class="plan__for">For teams paying suppliers abroad</p>
+            <ul><li><i class="ri-check-line"></i>10 users, all 24 currencies</li><li><i class="ri-check-line"></i>FX at 0.35% over mid-market</li><li><i class="ri-check-line"></i>20 metal &amp; virtual cards</li><li><i class="ri-check-line"></i>20 free transfers, then €2</li><li><i class="ri-check-line"></i>Approvals &amp; Xero sync</li></ul>
+            <a href="#open" class="btn" data-magnet>Choose Grow</a>
+          </article>
+          <article class="plan reveal" style="--d:.19s">
+            <h3>Scale</h3><p class="plan__price"><b>€99</b>/month</p><p class="plan__for">For finance teams and multi-entity</p>
+            <ul><li><i class="ri-check-line"></i>Unlimited users &amp; cards</li><li><i class="ri-check-line"></i>FX at 0.25% over mid-market</li><li><i class="ri-check-line"></i>100 free transfers, then €1</li><li><i class="ri-check-line"></i>Multi-level approvals, API</li><li><i class="ri-check-line"></i>Named account manager</li></ul>
+            <a href="#open" class="btn btn--ghost">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section class="section security" id="security">
+      <div class="container sec__in">
+        <div class="vault reveal" aria-hidden="true">
+          <span class="vault__ring r1"></span><span class="vault__ring r2"></span><span class="vault__ring r3"></span>
+          <span class="vault__core"><i class="ri-shield-keyhole-fill"></i></span>
+        </div>
+        <div>
+          <span class="kicker reveal">Security</span>
+          <h2 class="h2 reveal">Your money, <em class="grad">locked down.</em></h2>
+          <div class="sec__list">
+            <div class="reveal" style="--d:.05s"><i class="ri-bank-line"></i><div><b>Safeguarded funds</b><p>Held in segregated accounts at tier-1 European banks, separate from Orra's own money.</p></div></div>
+            <div class="reveal" style="--d:.12s"><i class="ri-government-line"></i><div><b>Licensed &amp; regulated</b><p>Orra Payments UAB is authorised by the Bank of Lithuania as an Electronic Money Institution (licence 61).</p></div></div>
+            <div class="reveal" style="--d:.19s"><i class="ri-fingerprint-line"></i><div><b>Approvals &amp; 2FA</b><p>Biometric login, device approval and a second approver above your payment threshold.</p></div></div>
+            <div class="reveal" style="--d:.26s"><i class="ri-file-shield-2-line"></i><div><b>SOC 2 Type II</b><p>Audited yearly by an independent firm. Reports available on request.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews">
+      <div class="container">
+        <div class="head head--c"><span class="kicker reveal">Customers</span><h2 class="h2 reveal">Finance teams <em class="grad">sleep better.</em></h2></div>
+        <div class="rv" id="rv"></div>
+        <div class="rv__dots" id="rvDots"></div>
+      </div>
+    </section>
+
+    <!-- Open -->
+    <section class="section open" id="open">
+      <div class="container open__in">
+        <div>
+          <h2 class="open__title reveal">Open an account <em class="grad">in 10 minutes.</em></h2>
+          <p class="reveal">You'll need your company registration number and a photo ID for each director. Most accounts are approved within one working day.</p>
+          <div class="stores reveal"><a href="#"><i class="ri-apple-fill"></i><span><small>Download on the</small>App Store</span></a><a href="#"><i class="ri-google-play-fill"></i><span><small>Get it on</small>Google Play</span></a></div>
+        </div>
+        <form class="form reveal" id="form">
+          <label>Work email<input type="email" required placeholder="you@company.com" /></label>
+          <label>Company name<input required placeholder="Harbour & Pine Ltd" /></label>
+          <label>Country<select><option>Ireland</option><option>United Kingdom</option><option>Germany</option><option>Netherlands</option><option>Portugal</option><option>Spain</option></select></label>
+          <button class="btn" type="submit" data-magnet>Get started <i class="ri-arrow-right-line"></i></button>
+          <p class="form__ok" id="ok" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__in">
+      <div class="footer__top"><a href="#top" class="logo"><span class="logo__mark"></span>orra</a><nav><a href="#product">Product</a><a href="#pricing">Pricing</a><a href="#security">Security</a><a href="#">Careers</a><a href="#">Help</a><a href="#">Status</a></nav></div>
+      <p class="footer__legal">Orra Payments UAB is authorised by the Bank of Lithuania as an Electronic Money Institution (licence no. 61, company code 305614221), Gedimino pr. 20, Vilnius. Orra cards are issued pursuant to a licence by Visa Europe. E-money accounts are not covered by deposit guarantee schemes; your funds are protected by safeguarding. © 2026 Orra.</p>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 120) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+    /* ---------- 3D card ---------- */
+    const zone = $("cardzone"), card = $("card");
+    let tx = 0, ty = 0, cx = 0, cy = 0, hover = false;
+    zone.addEventListener("pointermove", (e) => { const r = card.getBoundingClientRect(); tx = (e.clientX - r.left) / r.width - .5; ty = (e.clientY - r.top) / r.height - .5; hover = true; });
+    zone.addEventListener("pointerleave", () => (hover = false));
+    (function tick(t) {
+      const ix = hover ? tx : Math.sin(t / 2400) * .25, iy = hover ? ty : Math.cos(t / 3100) * .18;
+      cx += (ix - cx) * .08; cy += (iy - cy) * .08;
+      card.style.transform = `rotateY(${cx * 34}deg) rotateX(${-cy * 26}deg)`;
+      $("sheen").style.background = `radial-gradient(circle at ${50 + cx * 120}% ${50 + cy * 120}%, rgba(255,255,255,.55), rgba(255,255,255,0) 45%), linear-gradient(${110 + cx * 80}deg, rgba(120,140,255,0) 30%, rgba(196,155,255,.35) 50%, rgba(120,220,255,.3) 58%, rgba(120,140,255,0) 72%)`;
+      requestAnimationFrame(tick);
+    })(0);
+    $("swatches").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (!b) return; document.querySelectorAll("#swatches button").forEach((x) => x.classList.toggle("on", x === b)); card.dataset.c = b.dataset.c; card.classList.remove("flip"); void card.offsetWidth; card.classList.add("flip"); });
+
+    /* ---------- Live payments feed ---------- */
+    const EVENTS = [
+      ["in", "Maison Durand SARL", "Invoice 2209", "+€8,940.00"], ["out", "Ningbo Lixin Furniture", "Paid in CNY · arrives today", "−¥72,000.00"],
+      ["card", "Lufthansa", "Card •4812 · Tom", "−€412.60"], ["in", "Crate & Co (US)", "Invoice 2201", "+$22,000.00"],
+      ["fx", "Converted EUR → USD", "Rate 1.0842 · fee €19.40", "€5,000 → $5,402"], ["out", "Móveis Porto Lda", "Order 4471", "−€14,200.00"],
+    ];
+    let ei = 0;
+    function pushEvent() {
+      const [k, n, d, a] = EVENTS[ei++ % EVENTS.length];
+      const icon = { in: "ri-arrow-left-down-line", out: "ri-arrow-right-up-line", card: "ri-bank-card-line", fx: "ri-exchange-line" }[k];
+      const el = document.createElement("div"); el.className = "note note--" + k;
+      el.innerHTML = `<span class="note__ico"><i class="${icon}"></i></span><div><b>${n}</b><span>${d}</span></div><strong>${a}</strong>`;
+      $("feed").prepend(el);
+      const all = $("feed").children; if (all.length > 3) all[all.length - 1].classList.add("gone");
+      setTimeout(() => { while ($("feed").children.length > 3) $("feed").lastElementChild.remove(); }, 700);
+    }
+    pushEvent(); setTimeout(pushEvent, 900); setInterval(pushEvent, 3000);
+
+    /* ---------- FX ticker ---------- */
+    const RATES = { EUR: 1, GBP: .8652, USD: 1.0842, CNY: 7.8641, TRY: 37.12, INR: 90.48, CHF: .9412, PLN: 4.312, AED: 3.982, JPY: 165.3 };
+    const pairs = [["EUR", "USD"], ["EUR", "GBP"], ["EUR", "CNY"], ["GBP", "USD"], ["EUR", "CHF"], ["EUR", "PLN"], ["USD", "AED"], ["EUR", "JPY"], ["EUR", "TRY"], ["GBP", "INR"]];
+    function tickerHTML() { return pairs.map(([a, b]) => { const r = RATES[b] / RATES[a] * (1 + (Math.random() - .5) * .002), up = Math.random() > .5; return `<span><b>${a}/${b}</b> ${r.toFixed(r > 20 ? 2 : 4)} <i class="${up ? "up ri-arrow-up-s-fill" : "dn ri-arrow-down-s-fill"}"></i></span>`; }).join(""); }
+    function ticker() { const h = tickerHTML(); $("ticker").innerHTML = h + h; }
+    ticker(); setInterval(ticker, 30000);
+
+    /* ---------- Product: sticky phone ---------- */
+    const FEATS = [
+      { t: "One account, 24 currencies", d: "Get local IBANs and account details in EUR, GBP and USD. Your customers pay a domestic transfer; you receive the full amount.", screen: `<div class="ap"><p class="ap__t">Balances</p><div class="ap__tot"><span>Total in EUR</span><b>€312,640.18</b></div><div class="ap__rows"><div><i class="f">€</i><span>Euro</span><b>€184,210.44</b></div><div><i class="f">£</i><span>Pound</span><b>£62,880.10</b></div><div><i class="f">$</i><span>US Dollar</span><b>$41,302.75</b></div><div><i class="f">¥</i><span>Yuan</span><b>¥96,500.00</b></div></div></div>` },
+      { t: "Pay suppliers anywhere", d: "Send to 70 countries, most arriving the same day. Batch-pay up to 500 invoices from a CSV or straight from Xero.", screen: `<div class="ap"><p class="ap__t">New payment</p><div class="ap__to"><span class="av">NL</span><div><b>Ningbo Lixin Furniture</b><span>China · CNY · ICBC</span></div></div><div class="ap__amt"><span>Amount</span><b>¥72,000.00</b><small>≈ €9,168.70 at 7.8641</small></div><div class="ap__eta"><i class="ri-flashlight-line"></i> Arrives today by 18:00 CST</div><div class="ap__btn">Send for approval</div></div>` },
+      { t: "Approvals your accountant loves", d: "Set who can create, approve and send payments, with limits per person. Every action is logged.", screen: `<div class="ap"><p class="ap__t">Needs your approval</p><div class="ap__appr"><div><b>¥72,000 → Ningbo Lixin</b><span>Requested by Tom · PI 2026-114</span></div><div class="ap__two"><span class="no">Decline</span><span class="yes">Approve</span></div></div><div class="ap__appr"><div><b>€14,200 → Móveis Porto</b><span>Requested by Sara · Order 4471</span></div><div class="ap__two"><span class="no">Decline</span><span class="yes">Approve</span></div></div><div class="ap__log"><i class="ri-history-line"></i> Audit log · 1,204 actions this year</div></div>` },
+      { t: "Metal cards with real limits", d: "Physical and virtual Visa cards in any currency you hold, with monthly limits and receipts captured automatically.", screen: `<div class="ap"><p class="ap__t">Team cards</p><div class="ap__card"><span>orra</span><b>•••• 4812</b><small>Tom · Travel</small></div><div class="ap__lim"><div><span>Spent this month</span><b>€1,840 / €3,000</b></div><i><b style="width:61%"></b></i></div><div class="ap__rows"><div><i class="f"><i class="ri-plane-line"></i></i><span>Lufthansa</span><b>−€412.60</b></div><div><i class="f"><i class="ri-hotel-line"></i></i><span>Hotel Lisboa</span><b>−€286.00</b></div></div></div>` },
+    ];
+    $("feats").innerHTML = FEATS.map((f, i) => `<article class="feat" data-i="${i}"><span class="feat__no">0${i + 1}</span><h3>${f.t}</h3><p>${f.d}</p></article>`).join("");
+    let curF = -1;
+    function setF(i) { if (i === curF) return; curF = i; $("screen").innerHTML = FEATS[i].screen; document.querySelectorAll(".feat").forEach((f, k) => f.classList.toggle("on", k === i)); }
+    setF(0);
+
+    /* ---------- FX converter ---------- */
+    const SYM = { EUR: "€", GBP: "£", USD: "$", CNY: "¥", TRY: "₺", INR: "₹" };
+    function conv() {
+      const amt = parseFloat($("amt").value.replace(/[^\d.]/g, "")) || 0, f = $("from").value, t = $("to").value;
+      const mid = RATES[t] / RATES[f], feeEur = amt / RATES[f] * .0035 * RATES.EUR + 2, feeF = feeEur * RATES[f];
+      const get = (amt - feeF) * mid, bank = amt * (1 - .029) * mid - 25 * RATES[t] / RATES.EUR;
+      const n = (v, c) => (SYM[c] || "") + v.toLocaleString("en-IE", { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+      $("out").textContent = n(Math.max(0, get), t);
+      $("rate").textContent = `1 ${f} = ${mid.toFixed(mid > 20 ? 2 : 4)} ${t}`;
+      $("fee").textContent = n(feeF, f);
+      $("bank").textContent = n(Math.max(0, bank), t);
+      $("save").textContent = n(Math.max(0, (get - bank) / mid), f);
+    }
+    ["amt", "from", "to"].forEach((id) => $(id).addEventListener("input", conv));
+    $("amt").addEventListener("blur", () => { const v = parseFloat($("amt").value.replace(/[^\d.]/g, "")) || 0; $("amt").value = v.toLocaleString("en-IE"); });
+    $("swap").onclick = () => { const a = $("from").value, b = $("to").value; if ([...$("from").options].some((o) => o.value === b)) { $("from").value = b; $("to").value = a; } $("swap").classList.toggle("turn"); conv(); };
+    conv();
+
+    /* ---------- Reviews ---------- */
+    const RV = [
+      ["We pay six factories in China and Portugal every month. Moving from our bank to Orra saved us €41,000 in the first year.", "Anna Lewis", "MD, Harbour & Pine", "1580489944761-15a19d654956"],
+      ["Half our clients are in the US. With USD details they pay us like a local supplier and we convert when the rate suits us.", "Rachel Okafor", "Co-founder, Fieldnote", "1544005313-94ddf0286df2"],
+      ["Approvals alone were worth switching. I see every payment before it leaves, from my phone, in two taps.", "Daniel Brooks", "CFO, Arcade Toys", "1507003211169-0a1dd7228f2d"],
+    ];
+    $("rv").innerHTML = RV.map(([q, n, r, img], i) => `<figure class="rv__item ${i ? "" : "on"}"><div class="rv__stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div><blockquote>“${q}”</blockquote><figcaption><img src="${U(img)}" alt="${n}" loading="lazy" /><span><b>${n}</b>${r}</span></figcaption></figure>`).join("");
+    $("rvDots").innerHTML = RV.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Review ${i + 1}"></button>`).join("");
+    let ri = 0;
+    const showR = (i) => { ri = (i + RV.length) % RV.length; document.querySelectorAll(".rv__item").forEach((x, k) => x.classList.toggle("on", k === ri)); document.querySelectorAll("#rvDots button").forEach((x, k) => x.classList.toggle("on", k === ri)); };
+    $("rvDots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { showR([...$("rvDots").children].indexOf(b)); clearInterval(rT); } });
+    const rT = setInterval(() => showR(ri + 1), 6000);
+
+    $("form").addEventListener("submit", (e) => { e.preventDefault(); $("ok").textContent = "Check your inbox — we've sent a secure link to continue your application."; e.target.querySelector(".btn").disabled = true; });
+
+    /* ---------- Scroll ---------- */
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      document.querySelectorAll(".feat").forEach((f) => { const r = f.getBoundingClientRect(); if (r.top < vh * .55 && r.bottom > vh * .45) setF(+f.dataset.i); });
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * .4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll); onScroll();
+
+    /* ---------- Reveal + counters ---------- */
+    function countUp(el) { const end = +el.dataset.count, dec = +(el.dataset.dec || 0), t0 = performance.now(); (function k(n) { const q = clamp((n - t0) / 1600, 0, 1), v = end * (1 - Math.pow(1 - q, 3)); el.textContent = dec ? v.toFixed(dec) : Math.round(v).toLocaleString("en-IE"); if (q < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(e.target); }), { threshold: .15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* ---------- Magnet + nav ---------- */
+    if (!reduced && matchMedia("(pointer:fine)").matches) document.querySelectorAll("[data-magnet]").forEach((b) => {
+      b.addEventListener("pointermove", (e) => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      b.addEventListener("pointerleave", () => (b.style.transform = ""));
+    });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("nav-open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") document.body.classList.remove("nav-open"); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/landing-orra/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

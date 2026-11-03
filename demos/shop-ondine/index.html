@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ondine — Women's, Men's Fashion, Shoes &amp; Accessories</title>
+  <meta name="description" content="Ondine is a multi-brand fashion store: coats, dresses, denim, sneakers, bags and sunglasses from our own studio label, Nike, Converse, Vans, Ray-Ban and more. Free shipping over $100 and 30-day returns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce" aria-live="off">
+    <span class="announce__msg on">Free standard shipping on orders over $100</span>
+    <span class="announce__msg">10% off your first order with code <strong>WELCOME10</strong></span>
+    <span class="announce__msg">Free 30-day returns on every order</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__row">
+      <button class="icon-btn burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+      <a href="#home" class="logo" aria-label="Ondine home">ondine<span>.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#home" class="nav__link">Home</a>
+        <div class="nav__item">
+          <a href="#shop" class="nav__link" data-shop="All">Shop <i class="ri-arrow-down-s-line"></i></a>
+          <div class="mega">
+            <div class="mega__col">
+              <h4>Women</h4>
+              <a href="#shop" data-shop="Women">All women</a>
+              <a href="#shop" data-shop="Women" data-q="coat">Coats</a>
+              <a href="#shop" data-shop="Women" data-q="dress">Dresses</a>
+              <a href="#shop" data-shop="Women" data-q="trousers">Trousers</a>
+            </div>
+            <div class="mega__col">
+              <h4>Men</h4>
+              <a href="#shop" data-shop="Men">All men</a>
+              <a href="#shop" data-shop="Men" data-q="jacket">Jackets</a>
+              <a href="#shop" data-shop="Men" data-q="tee">T-shirts</a>
+              <a href="#shop" data-shop="Men" data-q="jeans">Jeans</a>
+            </div>
+            <div class="mega__col">
+              <h4>Shoes &amp; more</h4>
+              <a href="#shop" data-shop="Shoes">Shoes</a>
+              <a href="#shop" data-shop="Bags">Bags</a>
+              <a href="#shop" data-shop="Accessories">Accessories</a>
+              <a href="#shop" data-shop="Sale">Sale</a>
+            </div>
+            <a href="#shop" class="mega__promo" data-shop="Shoes">
+              <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=560&q=75" alt="White Nike Air Force 1 React on a blue court" loading="lazy" />
+              <span>New in sneakers <i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+        <a href="#shop" class="nav__link nav__link--sale" data-shop="Sale">Sale</a>
+        <a href="#journal" class="nav__link">Journal</a>
+        <a href="#help" class="nav__link">Help</a>
+        <a href="#store" class="nav__link">Our store</a>
+      </nav>
+      <div class="header__icons">
+        <button class="icon-btn" id="openSearch" aria-label="Search products"><i class="ri-search-line"></i></button>
+        <button class="icon-btn hide-sm" id="openAccount" aria-label="Your account"><i class="ri-user-line"></i></button>
+        <button class="icon-btn" id="openWish" aria-label="Wishlist"><i class="ri-heart-line"></i><b class="count" id="wishCount" hidden>0</b></button>
+        <button class="icon-btn" id="openCart" aria-label="Shopping bag"><i class="ri-shopping-bag-line"></i><b class="count" id="cartCount" hidden>0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero slider -->
+    <section class="hero" id="home" aria-roledescription="carousel" aria-label="Featured collections">
+      <article class="slide slide--a active">
+        <div class="slide__text">
+          <span class="slide__kicker">Women · Autumn / Winter 2026</span>
+          <h1>Dress for the <em>days ahead.</em></h1>
+          <p>Coats, knitwear and easy dresses for the season, with new styles landing every week.</p>
+          <div class="slide__btns">
+            <a href="#shop" class="btn" data-shop="Women">Shop women <i class="ri-arrow-right-line"></i></a>
+            <a href="#shop" class="btn btn--outline" data-shop="All" data-sort="new">New arrivals</a>
+          </div>
+        </div>
+        <div class="slide__media"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1500&q=80" alt="Woman in a burgundy coat and sunglasses carrying shopping bags" /></div>
+      </article>
+      <article class="slide slide--b">
+        <div class="slide__text">
+          <span class="slide__kicker">Men · New season</span>
+          <h2 class="slide__h">Jackets made for <em>city layers.</em></h2>
+          <p>Bombers, biker leather and washed denim that work over everything you already own.</p>
+          <div class="slide__btns">
+            <a href="#shop" class="btn" data-shop="Men" data-q="jacket">Shop jackets <i class="ri-arrow-right-line"></i></a>
+            <a href="#shop" class="btn btn--outline" data-shop="Men">All men</a>
+          </div>
+        </div>
+        <div class="slide__media"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1500&q=80" alt="Man in a dark bomber jacket and cap sitting against a pale wall" loading="lazy" /></div>
+      </article>
+      <article class="slide slide--c">
+        <div class="slide__text">
+          <span class="slide__kicker">Ondine Studio · Best seller</span>
+          <h2 class="slide__h">The trench, <em>reworked.</em></h2>
+          <p>Water-resistant cotton, a softer shoulder and a belt that ties properly. From $189.</p>
+          <div class="slide__btns">
+            <a href="#shop" class="btn" data-open="w1">Shop the trench <i class="ri-arrow-right-line"></i></a>
+            <a href="#shop" class="btn btn--outline" data-shop="Women" data-q="coat">All coats</a>
+          </div>
+        </div>
+        <div class="slide__media"><img src="https://images.unsplash.com/photo-1771243791734-dfeebf162af0?auto=format&fit=crop&w=1500&q=80" alt="Woman in a belted beige trench coat sitting on a black chair" loading="lazy" /></div>
+      </article>
+      <div class="hero__controls">
+        <div class="hero__dots" id="heroDots"></div>
+        <div class="hero__arrows">
+          <button id="heroPrev" aria-label="Previous slide"><i class="ri-arrow-left-line"></i></button>
+          <button id="heroNext" aria-label="Next slide"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category banners -->
+    <section class="cats">
+      <div class="container cats__grid">
+        <a href="#shop" class="cat reveal" data-shop="Women">
+          <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=900&q=78" alt="Woman wearing an orange sweatshirt and jeans" loading="lazy" />
+          <div class="cat__text"><h3>Women</h3><p>Spring to winter, all in one place</p><span>Shop now <i class="ri-arrow-right-line"></i></span></div>
+        </a>
+        <a href="#shop" class="cat reveal" data-shop="Men">
+          <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=78" alt="Man in a navy two-piece suit walking" loading="lazy" />
+          <div class="cat__text"><h3>Men</h3><p>Sharp tailoring and off-duty staples</p><span>Shop now <i class="ri-arrow-right-line"></i></span></div>
+        </a>
+        <a href="#shop" class="cat reveal" data-shop="Bags">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=78" alt="Red top-handle leather bag" loading="lazy" />
+          <div class="cat__text"><h3>Bags</h3><p>Top-handles, totes and backpacks</p><span>Shop now <i class="ri-arrow-right-line"></i></span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="shop__head reveal">
+          <div>
+            <span class="sub-title">The full store</span>
+            <h2 class="h2">Product <span>overview</span></h2>
+          </div>
+          <p class="shop__result" id="resultCount" aria-live="polite"></p>
+        </div>
+
+        <div class="tabs reveal" id="tabs" role="tablist" aria-label="Product categories"></div>
+
+        <div class="toolbar reveal">
+          <button class="tool-btn" id="filterToggle" aria-expanded="false" aria-controls="filterPanel"><i class="ri-equalizer-line"></i> Filter <b id="filterBadge" hidden>0</b></button>
+          <label class="tool-search"><i class="ri-search-line"></i><input type="search" id="shopSearch" placeholder="Search coats, Nike, sunglasses..." aria-label="Search products" /></label>
+          <label class="tool-sort"><span>Sort by</span>
+            <select id="sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="new">Newest</option>
+              <option value="rating">Top rated</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filters" id="filterPanel">
+          <div class="filters__inner">
+            <div class="filters__group"><h4>Price</h4><div id="fPrice"></div></div>
+            <div class="filters__group"><h4>Colour</h4><div class="swatches" id="fColor"></div></div>
+            <div class="filters__group filters__group--brand"><h4>Brand</h4><div class="brand-list" id="fBrand"></div></div>
+          </div>
+        </div>
+
+        <div class="chips" id="chips"></div>
+        <div class="grid" id="grid"></div>
+        <div class="more" id="moreWrap">
+          <p id="moreText"></p>
+          <div class="more__bar"><span id="moreBar"></span></div>
+          <button class="btn btn--outline" id="loadMore">Load more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sale band -->
+    <section class="band" id="sale">
+      <div class="band__frame" id="bandFrame">
+        <img id="bandImg" src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?auto=format&fit=crop&w=2000&q=80" alt="Rail of jackets and shirts in rust, grey and cream" loading="lazy" />
+        <div class="container band__inner">
+          <div class="band__text reveal">
+            <span class="band__kicker">Mid-season sale</span>
+            <h2>Up to <em>40% off</em> selected styles</h2>
+            <p>Coats, denim and sneakers at their lowest price this season. Discount is already applied.</p>
+            <div class="timer" id="timer" role="timer" aria-label="Time left in the sale">
+              <div><b id="tD">00</b><span>Days</span></div>
+              <div><b id="tH">00</b><span>Hours</span></div>
+              <div><b id="tM">00</b><span>Mins</span></div>
+              <div><b id="tS">00</b><span>Secs</span></div>
+            </div>
+            <a href="#shop" class="btn btn--white" data-shop="Sale">Shop the sale <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best sellers -->
+    <section class="section">
+      <div class="container">
+        <div class="shop__head reveal">
+          <div>
+            <span class="sub-title">Most loved</span>
+            <h2 class="h2">This week's <span>best sellers</span></h2>
+          </div>
+          <div class="rail__arrows">
+            <button id="railPrev" aria-label="Previous products"><i class="ri-arrow-left-line"></i></button>
+            <button id="railNext" aria-label="Next products"><i class="ri-arrow-right-line"></i></button>
+          </div>
+        </div>
+        <div class="rail reveal" id="rail" tabindex="0" aria-label="Best selling products"></div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands" aria-label="Brands we stock">
+      <div class="brands__track" id="brandTrack"></div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--light" id="reviews">
+      <div class="container">
+        <div class="reviews__head reveal">
+          <div>
+            <span class="sub-title">Customer reviews</span>
+            <h2 class="h2">What our customers <span>actually say</span></h2>
+          </div>
+          <div class="score">
+            <strong><span data-count="4.8" data-dec="1">0</span></strong>
+            <div><div class="stars">★★★★★</div><p><span data-count="2146">0</span> verified reviews</p></div>
+          </div>
+        </div>
+        <div class="reviews" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container services__grid">
+        <div class="service reveal"><i class="ri-truck-line"></i><div><h4>Free shipping over $100</h4><p>Delivered in 2 to 4 working days</p></div></div>
+        <div class="service reveal"><i class="ri-arrow-go-back-line"></i><div><h4>30-day free returns</h4><p>Prepaid label in every parcel</p></div></div>
+        <div class="service reveal"><i class="ri-shield-check-line"></i><div><h4>Secure payment</h4><p>Cards, PayPal and Apple Pay</p></div></div>
+        <div class="service reveal"><i class="ri-customer-service-2-line"></i><div><h4>Real people, real help</h4><p>Mon to Sat, 9am to 7pm ET</p></div></div>
+      </div>
+    </section>
+
+    <!-- Journal -->
+    <section class="section" id="journal">
+      <div class="container">
+        <div class="title reveal">
+          <span class="sub-title">The journal</span>
+          <h2 class="h2">Style notes from <span>our buyers</span></h2>
+        </div>
+        <div class="posts" id="posts"></div>
+      </div>
+    </section>
+
+    <!-- Help -->
+    <section class="section section--light" id="help">
+      <div class="container help">
+        <div class="reveal">
+          <span class="sub-title">Help &amp; FAQs</span>
+          <h2 class="h2">Good to know <span>before you order</span></h2>
+          <p class="help__lead">Still stuck? Our team answers most messages within two working hours.</p>
+          <a href="#store" class="btn btn--outline">Contact us</a>
+        </div>
+        <div class="faq reveal" id="faq"></div>
+      </div>
+    </section>
+
+    <!-- Store + contact -->
+    <section class="section" id="store">
+      <div class="container store">
+        <div class="store__photo reveal">
+          <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=80" alt="Inside the Ondine store: clothing rails and pendant lights" loading="lazy" />
+        </div>
+        <div class="store__info reveal">
+          <span class="sub-title">Visit or message us</span>
+          <h2 class="h2">Our store on <span>Mercer Street</span></h2>
+          <ul class="store__list">
+            <li><i class="ri-map-pin-line"></i><span>214 Mercer Street, New York, NY 10012</span></li>
+            <li><i class="ri-phone-line"></i><a href="tel:+12125550147">+1 (212) 555-0147</a></li>
+            <li><i class="ri-mail-line"></i><a href="mailto:hello@ondinestore.com">hello@ondinestore.com</a></li>
+            <li><i class="ri-time-line"></i><span>Mon to Sat 10am to 8pm · Sun 11am to 6pm <b class="open-pill" id="openNow"></b></span></li>
+          </ul>
+          <form class="contact" id="contactForm">
+            <div class="field-row">
+              <label class="field"><span>Your name</span><input type="text" name="name" required autocomplete="name" /></label>
+              <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email" /></label>
+            </div>
+            <label class="field"><span>How can we help?</span><textarea name="msg" rows="3" required></textarea></label>
+            <button class="btn" type="submit">Send message</button>
+            <p class="form-ok" id="contactOk" role="status" hidden><i class="ri-checkbox-circle-fill"></i> Thanks, your message is on its way. We'll reply by email soon.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light">ondine<span>.</span></a>
+        <p class="footer__about">A multi-brand fashion store in New York, shipping across the US since 2017.</p>
+        <div class="socials">
+          <a href="#store" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#store" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#store" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+          <a href="#store" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop" data-shop="Women">Women</a>
+        <a href="#shop" data-shop="Men">Men</a>
+        <a href="#shop" data-shop="Shoes">Shoes</a>
+        <a href="#shop" data-shop="Bags">Bags</a>
+        <a href="#shop" data-shop="Accessories">Accessories</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#help" data-faq="0">Shipping</a>
+        <a href="#help" data-faq="1">Returns</a>
+        <a href="#help" data-faq="2">Size guide</a>
+        <a href="#help" data-faq="3">Track an order</a>
+        <a href="#store">Contact us</a>
+      </div>
+      <div>
+        <h4>Join the list</h4>
+        <p class="footer__about">New drops and early access to sales, about twice a month.</p>
+        <form class="news" id="newsForm">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address" autocomplete="email" />
+          <button type="submit" aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button>
+        </form>
+        <p class="news__ok" id="newsOk" role="status" hidden>You're on the list. Thank you.</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Ondine Retail LLC. All rights reserved.</p>
+      <div class="pay" aria-label="Accepted payment methods">
+        <i class="ri-visa-line" title="Visa"></i><i class="ri-mastercard-line" title="Mastercard"></i><i class="ri-paypal-line" title="PayPal"></i><i class="ri-apple-line" title="Apple Pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <!-- Overlays -->
+  <div class="scrim" id="scrim"></div>
+
+  <!-- Mobile menu -->
+  <aside class="drawer drawer--left" id="mobileNav" aria-label="Menu" aria-hidden="true">
+    <div class="drawer__head"><span class="logo">ondine<span>.</span></span><button class="icon-btn" data-close aria-label="Close menu"><i class="ri-close-line"></i></button></div>
+    <nav class="mnav">
+      <a href="#home">Home</a>
+      <a href="#shop" data-shop="All">Shop all</a>
+      <a href="#shop" data-shop="Women">Women</a>
+      <a href="#shop" data-shop="Men">Men</a>
+      <a href="#shop" data-shop="Shoes">Shoes</a>
+      <a href="#shop" data-shop="Bags">Bags</a>
+      <a href="#shop" data-shop="Accessories">Accessories</a>
+      <a href="#shop" data-shop="Sale" class="mnav__sale">Sale</a>
+      <a href="#journal">Journal</a>
+      <a href="#help">Help</a>
+      <a href="#store">Our store</a>
+      <a href="#account" id="mAccount">Your account</a>
+    </nav>
+  </aside>
+
+  <!-- Bag drawer -->
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Your bag <small id="cartHeadCount"></small></h3><button class="icon-btn" data-close aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="ship" id="shipBox"></div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- Wishlist drawer -->
+  <aside class="drawer" id="wishDrawer" aria-label="Wishlist" aria-hidden="true">
+    <div class="drawer__head"><h3>Wishlist</h3><button class="icon-btn" data-close aria-label="Close wishlist"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__body" id="wishBody"></div>
+  </aside>
+
+  <!-- Quick view -->
+  <div class="modal" id="qv" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
+    <div class="modal__box modal__box--wide">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="qv" id="qvBody"></div>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="search" id="searchBox" role="dialog" aria-modal="true" aria-label="Search" aria-hidden="true">
+    <div class="container">
+      <form class="search__form" id="searchForm">
+        <i class="ri-search-line"></i>
+        <input type="search" id="searchInput" placeholder="What are you looking for?" aria-label="Search products" autocomplete="off" />
+        <button type="button" class="icon-btn" data-close aria-label="Close search"><i class="ri-close-line"></i></button>
+      </form>
+      <div class="search__popular" id="searchPopular">
+        <span>Popular:</span>
+        <button type="button" data-term="Trench">Trench</button>
+        <button type="button" data-term="Nike">Nike</button>
+        <button type="button" data-term="Dress">Dress</button>
+        <button type="button" data-term="Ray-Ban">Ray-Ban</button>
+        <button type="button" data-term="Leather">Leather</button>
+      </div>
+      <div class="search__results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Checkout -->
+  <div class="modal" id="checkout" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal__box modal__box--wide">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="checkoutBody"></div>
+    </div>
+  </div>
+
+  <!-- Journal article -->
+  <div class="modal" id="article" role="dialog" aria-modal="true" aria-label="Article" aria-hidden="true">
+    <div class="modal__box">
+      <button class="icon-btn modal__close modal__close--float" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="articleBody"></div>
+    </div>
+  </div>
+
+  <!-- Account -->
+  <div class="modal" id="account" role="dialog" aria-modal="true" aria-label="Sign in" aria-hidden="true">
+    <div class="modal__box modal__box--small">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="account">
+        <h3>Sign in to Ondine</h3>
+        <p>Track orders, save addresses and check out faster.</p>
+        <form id="accountForm">
+          <label class="field"><span>Email</span><input type="email" required autocomplete="email" /></label>
+          <label class="field"><span>Password</span><input type="password" required autocomplete="current-password" /></label>
+          <button class="btn btn--full" type="submit">Sign in</button>
+          <p class="form-ok" id="accountOk" role="status" hidden><i class="ri-checkbox-circle-fill"></i> Thanks. Account sign-in goes live once the store platform is connected.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const U = (id, w = 700, extra = "") => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=75${extra}`;
+    const UC = (id, w = 700) => U(id, w, `&h=${Math.round(w * 1.25)}`);
+    const zoom = (id, w, x, y, z) => U(id, w, `&h=${Math.round(w * 1.25)}&crop=focalpoint&fp-x=${x}&fp-y=${y}&fp-z=${z}`);
+    const money = (n) => "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    /* ---------- Catalogue ---------- */
+    const WOMEN = ["XS", "S", "M", "L", "XL"], MEN = ["S", "M", "L", "XL", "XXL"], SHOES = ["38", "39", "40", "41", "42", "43", "44", "45"], WSHOES = ["36", "37", "38", "39", "40", "41"], ONE = ["One size"];
+    const C = { black: ["Black", "#16171c"], white: ["White", "#ffffff"], beige: ["Beige", "#d8c6a8"], brown: ["Brown", "#8a5a34"], green: ["Green", "#4d5c43"], red: ["Red", "#d0282e"], blue: ["Blue", "#2f4f8f"], grey: ["Grey", "#9a9da6"], orange: ["Orange", "#e9812a"], pink: ["Pink", "#e8b4ad"], purple: ["Purple", "#5d1c52"] };
+    const col = (key, img) => ({ key, name: C[key][0], hex: C[key][1], img });
+
+    const PRODUCTS = [
+      { id: "w1", cat: "Women", brand: "Ondine Studio", name: "Belted Cotton Trench Coat", price: 189, rating: 4.9, reviews: 312, best: 1, colors: [col("beige", "1771243791734-dfeebf162af0")], sizes: WOMEN, desc: "Our best-selling trench in water-resistant cotton gabardine, with a softer shoulder, storm flap and a wide belt that ties properly.", details: ["100% cotton gabardine, water-resistant finish", "Regular fit, falls below the knee", "Machine wash cold"] },
+      { id: "s1", cat: "Shoes", brand: "Nike", name: "Air Force 1 React", price: 130, rating: 4.8, reviews: 486, best: 1, colors: [col("white", "1579338559194-a162d19bf842")], sizes: SHOES, desc: "The hoops icon with a lighter ride. A clean white upper, bold outlined Swoosh and soft React foam underfoot.", details: ["Leather and textile upper", "Nike React foam midsole", "True to size"] },
+      { id: "s9", cat: "Shoes", brand: "Nike", name: "Air Force 1 '07 Wheat", price: 115, isNew: 1, rating: 4.7, reviews: 193, colors: [col("brown", "1549298916-b41d501d3772")], sizes: SHOES, desc: "The hoops original in a warm wheat nubuck, with a matching Swoosh and a gum-toned outsole. Made for autumn.", details: ["Nubuck leather upper", "Nike Air unit in the sole", "True to size"] },
+      { id: "m4", cat: "Men", brand: "Zara", name: "Leather Biker Jacket", price: 129, rating: 4.7, reviews: 148, best: 1, colors: [col("black", "1551028719-00167b16eac5")], sizes: MEN, desc: "A classic asymmetric biker in soft, lightly grained leather. Heavy zips, a clean collar and a cut that gets better with wear.", details: ["Leather outer, cotton lining", "Slim fit, size up for layering", "Specialist leather clean only"] },
+      { id: "b1", cat: "Bags", brand: "Gucci", name: "GG Marmont Small Shoulder Bag", price: 1590, rating: 4.9, reviews: 64, colors: [col("black", "1548036328-c9fa89d128fa")], sizes: ONE, desc: "Chevron matelassé leather with the Double G hardware in antique gold and a sliding chain strap you can wear long or doubled.", details: ["Matelassé leather with heart detail", "24 × 13 × 6 cm", "Includes dust bag and authenticity card"] },
+      { id: "w4", cat: "Women", brand: "Ondine Studio", name: "Floral Belted Tea Dress", price: 89, was: 128, rating: 4.6, reviews: 201, colors: [col("red", "1572804013309-59a88b7e92f1")], sizes: WOMEN, desc: "A full-skirted tea dress in a red floral print, with a fitted waist, a fabric belt and sleeves that sit just off the shoulder.", details: ["100% viscose crepe", "Fitted waist, midi length", "Hand wash cold"] },
+      { id: "m1", cat: "Men", brand: "Ondine Studio", name: "Supima Crew Neck Tee", price: 24, rating: 4.8, reviews: 534, best: 1, colors: [col("white", "1521572163474-6864f9cf17ab"), col("black", "1618354691373-d851c5c3a990")], sizes: MEN, desc: "The everyday tee, in a mid-weight long-staple Supima cotton that holds its shape wash after wash.", details: ["100% Supima cotton, 180 gsm", "Regular fit", "Machine wash warm"] },
+      { id: "s2", cat: "Shoes", brand: "Converse", name: "Chuck 70 High Top", price: 90, rating: 4.8, reviews: 398, best: 1, colors: [col("green", "1463100099107-aa0980c362e6"), col("red", "1607522370275-f14206abe5d3")], sizes: SHOES, desc: "The 1970s version of the original All Star: heavier canvas, a thicker rubber foxing and extra cushioning in the insole.", details: ["12 oz organic canvas", "OrthoLite cushioned insole", "Runs half a size large"] },
+      { id: "a1", cat: "Accessories", brand: "Ray-Ban", name: "Wayfarer Classic RB2140", price: 171, rating: 4.9, reviews: 277, best: 1, colors: [col("black", "1572635196237-14b3f281503f")], sizes: ONE, desc: "The shape everybody recognises. Polished black acetate with crystal green G-15 lenses and full UV protection.", details: ["Acetate frame, glass lenses", "100% UV protection", "Includes case and cloth"] },
+      { id: "w2", cat: "Women", brand: "Ondine Studio", name: "Longline Utility Coat", price: 131, was: 219, rating: 4.5, reviews: 87, colors: [col("green", "1700748909575-67c4e07147e9")], sizes: WOMEN, desc: "An olive longline coat with a knitted sleeve, drawcord waist and deep patch pockets. Enough room for a chunky sweater underneath.", details: ["70% cotton, 30% nylon twill", "Relaxed fit, ankle length", "Machine wash cold"] },
+      { id: "m8", cat: "Men", brand: "Ondine Studio", name: "Slim Selvedge Jeans", price: 85, rating: 4.7, reviews: 263, photos: ["1624378439575-d8705ad7ae80", "1624378441864-6eda7eac51cb"], colors: [col("blue", "1624378439575-d8705ad7ae80")], sizes: ["30", "31", "32", "33", "34", "36"], desc: "Dark indigo Japanese selvedge with a slim leg and a mid rise. Stiff for the first few wears, then all yours.", details: ["100% cotton selvedge denim, 13 oz", "Slim fit, 32 in inseam", "Wash inside out, as rarely as you can"] },
+      { id: "w5", cat: "Women", brand: "Ondine Studio", name: "Chiffon Swing Maxi Dress", price: 119, isNew: 1, rating: 4.7, reviews: 56, colors: [col("red", "1595777457583-95e059d581b8")], sizes: WOMEN, desc: "A weightless red maxi with a full circle skirt that moves when you do. Made for weddings, dinners and long evenings.", details: ["100% recycled polyester chiffon, fully lined", "Fitted bodice, floor length", "Dry clean recommended"] },
+      { id: "s3", cat: "Shoes", brand: "Vans", name: "Old Skool", price: 75, rating: 4.7, reviews: 342, colors: [col("red", "1525966222134-fcfa99b8ae77")], sizes: SHOES, desc: "The skate classic with the sidestripe, in burgundy suede and canvas with a white waffle-grip sole.", details: ["Suede and canvas upper", "Vulcanised waffle outsole", "True to size"] },
+      { id: "m3", cat: "Men", brand: "Ondine Studio", name: "Rust Satin Bomber", price: 98, isNew: 1, rating: 4.6, reviews: 74, colors: [col("orange", "1591047139829-d91aecb6caea")], sizes: MEN, desc: "A light, slightly shiny bomber in a warm rust, with a ribbed collar and hem and a two-way zip. Works from September to first frost.", details: ["100% nylon satin, mesh lining", "Regular fit", "Machine wash cold"] },
+      { id: "b2", cat: "Bags", brand: "Ondine Studio", name: "Cognac Leather Satchel", price: 189, rating: 4.8, reviews: 119, best: 1, colors: [col("brown", "1691480150204-66dd1eb77391")], sizes: ONE, desc: "Vegetable-tanned leather in deep cognac, with rolled handles, buckled side straps and room for a 13 in laptop.", details: ["Full-grain leather, cotton lining", "33 × 25 × 14 cm", "Detachable shoulder strap"] },
+      { id: "w8", cat: "Women", brand: "Ondine Studio", name: "Striped Poplin Shirt", price: 49, rating: 4.5, reviews: 92, colors: [col("grey", "1583496661160-fb5886a0aaaa")], sizes: WOMEN, desc: "A crisp, fine-striped cotton poplin shirt that tucks neatly into a skirt or stays loose over jeans.", details: ["100% cotton poplin", "Regular fit, button cuffs", "Machine wash warm"] },
+      { id: "a3", cat: "Accessories", brand: "Ondine Studio", name: "Slim Leather Strap Watch", price: 129, isNew: 1, rating: 4.6, reviews: 48, colors: [col("brown", "1524592094714-0f0654e20314")], sizes: ONE, desc: "A clean 38 mm dial, a thin steel case and a soft taupe leather strap that you can swap without tools.", details: ["Japanese quartz movement", "38 mm steel case, 5 ATM", "2-year warranty"] },
+      { id: "m9", cat: "Men", brand: "Ondine Studio", name: "Two-Piece Navy Suit", price: 279, was: 329, rating: 4.8, reviews: 103, colors: [col("blue", "1617137968427-85924c800a22")], sizes: ["36", "38", "40", "42", "44", "46"], desc: "A half-lined two-button suit in a light Italian wool blend, with a slim lapel and a tapered, flat-front trouser.", details: ["80% wool, 20% polyester", "Slim fit, trousers unhemmed", "Free hemming in store"] },
+      { id: "s6", cat: "Shoes", brand: "Nike", name: "Free RN Flyknit", price: 110, rating: 4.6, reviews: 215, colors: [col("red", "1542291026-7eec264c27ff")], sizes: SHOES, desc: "A sock-like Flyknit upper over a flexible foam sole with deep grooves, for easy miles that feel close to barefoot.", details: ["Flyknit upper", "Flexible foam midsole", "True to size, snug at first"] },
+      { id: "w9", cat: "Women", brand: "Ondine Studio", name: "Heavyweight Sweatshirt", price: 45, rating: 4.7, reviews: 188, colors: [col("orange", "1578587018452-892bacefd3f2")], sizes: WOMEN, desc: "A garment-dyed loopback sweatshirt in bright tangerine. Slightly boxy, slightly cropped, and very warm.", details: ["100% brushed-back cotton, 400 gsm", "Boxy fit", "Machine wash cold"] },
+      { id: "b3", cat: "Bags", brand: "Ondine Studio", name: "Red Top-Handle Bag", price: 111, was: 139, rating: 4.5, reviews: 58, colors: [col("red", "1584917865442-de89df76afd3")], sizes: ONE, desc: "A structured top-handle in glossy red leather, with a polished clasp and a removable strap for wearing cross-body.", details: ["Coated leather, suede lining", "24 × 19 × 10 cm", "Detachable strap"] },
+      { id: "m5", cat: "Men", brand: "Ondine Studio", name: "Washed Denim Trucker", price: 79, rating: 4.6, reviews: 167, colors: [col("blue", "1543076447-215ad9ba6923")], sizes: MEN, desc: "A light-wash trucker with the classic chest pockets. Soft from the first wear and only better after that.", details: ["100% cotton denim, 12 oz", "Regular fit", "Machine wash cold"] },
+      { id: "s7", cat: "Shoes", brand: "Ondine Studio", name: "Tan Suede Chelsea Boots", price: 108, was: 135, rating: 4.7, reviews: 129, colors: [col("brown", "1608629601270-a0007becead3")], sizes: SHOES, desc: "Water-repellent suede with elastic gussets and a stacked leather heel. Smart enough for a suit, easy with jeans.", details: ["Suede upper, leather lining", "Blake-stitched rubber sole", "True to size"] },
+      { id: "w7", cat: "Women", brand: "Ondine Studio", name: "Off-Shoulder Jersey Dress", price: 69, isNew: 1, rating: 4.4, reviews: 41, colors: [col("purple", "1566174053879-31528523f8ae")], sizes: WOMEN, desc: "A bodycon dress in a deep plum, with a clean off-shoulder neckline in a stretch jersey that doesn't need a hanger.", details: ["95% viscose, 5% elastane", "Slim fit, midi length", "Machine wash cold"] },
+      { id: "a2", cat: "Accessories", brand: "Ray-Ban", name: "Round Metal RB3447", price: 163, rating: 4.8, reviews: 156, colors: [col("green", "1511499767150-a48a237f0083")], sizes: ONE, desc: "Thin gold-tone metal, perfectly round G-15 green lenses and adjustable nose pads. A John Lennon favourite.", details: ["Metal frame, glass lenses", "100% UV protection", "Includes case and cloth"] },
+      { id: "m7", cat: "Men", brand: "Ondine Studio", name: "Grey Marl Pullover Hoodie", price: 62, rating: 4.7, reviews: 224, colors: [col("grey", "1556821840-3a63f95609a7")], sizes: MEN, desc: "A soft fleece hoodie with a double-lined hood, ribbed cuffs and a roomy kangaroo pocket.", details: ["80% cotton, 20% polyester fleece", "Regular fit", "Machine wash warm"] },
+      { id: "b4", cat: "Bags", brand: "Ondine Studio", name: "Wicker & Leather Tote", price: 89, isNew: 1, rating: 4.5, reviews: 37, colors: [col("orange", "1590874103328-eac38a683ce7")], sizes: ONE, desc: "A hand-woven basket body with a smooth leather flap and handle. Holds more than it looks like it should.", details: ["Woven rattan, leather trim", "28 × 26 × 14 cm", "Wipe clean with a dry cloth"] },
+      { id: "w6", cat: "Women", brand: "Ondine Studio", name: "Pale Blue Wrap Maxi Dress", price: 45, was: 75, rating: 4.3, reviews: 66, colors: [col("blue", "1539008835657-9e8e9680c956")], sizes: WOMEN, desc: "A lightweight wrap dress with a deep V neck and a side slit. Packs down to nothing for a holiday.", details: ["100% cotton lawn", "Wrap fit, ankle length", "Machine wash cold"] },
+      { id: "s4", cat: "Shoes", brand: "Jordan", name: "Air Jordan 1 Mid", price: 125, rating: 4.9, reviews: 411, colors: [col("red", "1552346154-21d32810aba3")], sizes: SHOES, desc: "The red, black and white that started it all, with a padded collar, Air-Sole cushioning and a leather upper.", details: ["Leather and synthetic upper", "Encapsulated Air-Sole unit", "True to size"] },
+      { id: "a5", cat: "Accessories", brand: "Levi's", name: "Core Ribbed Beanie", price: 24, rating: 4.6, reviews: 142, colors: [col("pink", "1576871337632-b9aef4c17ab9")], sizes: ONE, desc: "A soft, chunky-ribbed beanie with the small red tab on the cuff. Warm without the itch.", details: ["100% acrylic", "Stretches to fit", "Hand wash cold"] },
+      { id: "m6", cat: "Men", brand: "Ondine Studio", name: "Chambray Dot Shirt", price: 54, rating: 4.5, reviews: 78, colors: [col("blue", "1596755094514-f87e34085b2c")], sizes: MEN, desc: "A washed chambray shirt in mid blue with a tiny printed dot, chest pockets and a soft collar.", details: ["100% cotton chambray", "Regular fit", "Machine wash warm"] },
+      { id: "a4", cat: "Accessories", brand: "Ondine Studio", name: "Washed Cotton Cap", price: 22, rating: 4.6, reviews: 95, colors: [col("grey", "1521369909029-2afed882baee")], sizes: ONE, desc: "A six-panel dad cap in faded charcoal, with a low crown, a curved peak and an adjustable strap.", details: ["100% washed cotton", "Adjustable strap", "Hand wash cold"] },
+      { id: "s5", cat: "Shoes", brand: "Puma", name: "Court Classic Leather", price: 56, was: 70, rating: 4.4, reviews: 88, colors: [col("white", "1608231387042-66d1773070a5")], sizes: SHOES, desc: "A clean white court sneaker in perforated leather with a soft foam insole. Goes with whatever you own.", details: ["Leather upper", "SoftFoam+ sockliner", "True to size"] },
+      { id: "s8", cat: "Shoes", brand: "Ondine Studio", name: "Black Zip Ankle Boots", price: 110, isNew: 1, rating: 4.5, reviews: 52, colors: [col("black", "1605732440685-d0654d81aa30")], sizes: WSHOES, desc: "Smooth black leather ankle boots with an inside zip and a low block heel that you can actually walk in all day.", details: ["Leather upper and lining", "3.5 cm block heel", "True to size"] },
+      { id: "b5", cat: "Bags", brand: "Ondine Studio", name: "Navy Everyday Backpack", price: 58, rating: 4.7, reviews: 133, colors: [col("blue", "1553062407-98eeb64c6a62")], sizes: ONE, desc: "A recycled-nylon daypack with a padded 15 in laptop sleeve, a hidden back pocket and straps that don't dig in.", details: ["Recycled nylon, water-repellent", "42 × 30 × 14 cm", "Lifetime zip warranty"] },
+      { id: "w3", cat: "Women", brand: "Ondine Studio", name: "Wide-Leg Pleated Trousers", price: 64, rating: 4.6, reviews: 98, colors: [col("beige", "1614251055880-ee96e4803393")], sizes: WOMEN, desc: "High-waisted, double-pleated trousers in a soft peach-sand twill, with a wide leg that falls straight from the hip.", details: ["65% lyocell, 35% linen", "High waist, wide leg", "Machine wash cold"] },
+    ];
+    const byId = (id) => PRODUCTS.find((p) => p.id === id);
+    const NEW_ORDER = PRODUCTS.filter((p) => p.isNew).map((p) => p.id);
+    const COUNT_STEP = 12;
+    const PRICE_BANDS = [
+      { id: "all", label: "All prices", test: () => true },
+      { id: "0", label: "Under $50", test: (n) => n < 50 },
+      { id: "50", label: "$50 to $100", test: (n) => n >= 50 && n < 100 },
+      { id: "100", label: "$100 to $200", test: (n) => n >= 100 && n < 200 },
+      { id: "200", label: "$200 and up", test: (n) => n >= 200 },
+    ];
+    const pct = (p) => (p.was ? Math.round((1 - p.price / p.was) * 100) : 0);
+    const stars = (r) => `<span class="stars" aria-label="Rated ${r} out of 5">★★★★★<span style="width:${(r / 5) * 100}%">★★★★★</span></span>`;
+
+    /* ---------- Storage ---------- */
+    const store = {
+      get(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v === null ? d : v; } catch (e) { return d; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    };
+    let cart = store.get("ondine_cart", []).filter((l) => byId(l.id));
+    let wish = store.get("ondine_wish", []).filter((id) => byId(id));
+    let promo = store.get("ondine_promo", "");
+
+    /* ---------- Product cards ---------- */
+    const isGarment = (p) => p.cat === "Women" || p.cat === "Men";
+    const hoverImg = (p, c) => (isGarment(p) ? zoom(c.img, 560, 0.5, 0.42, 1.7) : zoom(c.img, 560, 0.5, 0.5, 1.45));
+    const cardHTML = (p, i = 0) => {
+      const c = p.colors[0];
+      const second = p.photos && p.photos[1] ? UC(p.photos[1], 560) : hoverImg(p, c);
+      return `<article class="card" style="--i:${i % COUNT_STEP}" data-card="${p.id}">
+        <div class="card__media">
+          <button class="card__open" data-open="${p.id}" aria-label="View ${esc(p.name)}">
+            <img class="card__img" src="${UC(c.img, 560)}" alt="${esc(p.brand)} ${esc(p.name)}, ${c.name.toLowerCase()}" loading="lazy" />
+            <img class="card__img2" src="${second}" alt="" loading="lazy" />
+          </button>
+          <div class="card__flags">${p.was ? `<span class="flag flag--sale">-${pct(p)}%</span>` : ""}${p.isNew ? `<span class="flag">New</span>` : ""}</div>
+          <button class="heart ${wish.includes(p.id) ? "on" : ""}" data-wish="${p.id}" aria-label="Save ${esc(p.name)} to wishlist" aria-pressed="${wish.includes(p.id)}"><i class="${wish.includes(p.id) ? "ri-heart-fill" : "ri-heart-line"}"></i></button>
+          <button class="card__quick" data-open="${p.id}">Quick view</button>
+        </div>
+        <div class="card__body">
+          <span class="card__brand">${esc(p.brand)}</span>
+          <h3><button data-open="${p.id}">${esc(p.name)}</button></h3>
+          <div class="card__rate">${stars(p.rating)}<span>(${p.reviews})</span></div>
+          <div class="card__foot">
+            <div class="price">${money(p.price)}${p.was ? `<del>${money(p.was)}</del>` : ""}</div>
+            <button class="card__add" data-add="${p.id}" aria-label="Add ${esc(p.name)} to bag"><i class="ri-shopping-bag-line"></i></button>
+          </div>
+          ${p.colors.length > 1 ? `<div class="dots">${p.colors.map((x, n) => `<button class="dot ${n === 0 ? "on" : ""}" style="--c:${x.hex}" data-swap="${p.id}" data-idx="${n}" aria-label="${x.name}" title="${x.name}"></button>`).join("")}</div>` : ""}
+        </div>
+      </article>`;
+    };
+
+    /* ---------- Shop state ---------- */
+    const TABS = ["All", "Women", "Men", "Shoes", "Bags", "Accessories", "Sale"];
+    const shop = { cat: "All", q: "", price: "all", color: "", brand: "", sort: "featured", shown: COUNT_STEP };
+    const inCat = (p, cat) => cat === "All" || (cat === "Sale" ? !!p.was : p.cat === cat);
+    const matches = (p, q) => {
+      if (!q) return true;
+      const hay = `${p.name} ${p.brand} ${p.cat} ${p.colors.map((c) => c.name).join(" ")}`.toLowerCase();
+      return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
+    };
+    const filtered = () => {
+      const band = PRICE_BANDS.find((b) => b.id === shop.price);
+      const list = PRODUCTS.filter((p) => inCat(p, shop.cat) && matches(p, shop.q) && band.test(p.price)
+        && (!shop.color || p.colors.some((c) => c.key === shop.color)) && (!shop.brand || p.brand === shop.brand));
+      const s = shop.sort;
+      if (s === "low") list.sort((a, b) => a.price - b.price);
+      if (s === "high") list.sort((a, b) => b.price - a.price);
+      if (s === "rating") list.sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+      if (s === "new") list.sort((a, b) => (NEW_ORDER.includes(b.id) ? 1 : 0) - (NEW_ORDER.includes(a.id) ? 1 : 0));
+      return list;
+    };
+
+    const renderTabs = () => {
+      const el = $("tabs");
+      el.innerHTML = TABS.map((t) => `<button role="tab" aria-selected="${shop.cat === t}" class="tab ${shop.cat === t ? "on" : ""} ${t === "Sale" ? "tab--sale" : ""}" data-tab="${t}">${t}<small>${PRODUCTS.filter((p) => inCat(p, t)).length}</small></button>`).join("") + `<span class="tabs__line" id="tabLine"></span>`;
+      moveTabLine();
+    };
+    const moveTabLine = () => {
+      const on = $("tabs").querySelector(".tab.on"), line = $("tabLine");
+      if (on && line) { line.style.width = on.offsetWidth + "px"; line.style.transform = `translateX(${on.offsetLeft}px)`; }
+    };
+
+    const renderFilters = () => {
+      $("fPrice").innerHTML = PRICE_BANDS.map((b) => `<button class="opt ${shop.price === b.id ? "on" : ""}" data-price="${b.id}">${b.label}</button>`).join("");
+      const keys = [...new Set(PRODUCTS.flatMap((p) => p.colors.map((c) => c.key)))];
+      $("fColor").innerHTML = keys.map((k) => `<button class="swatch ${shop.color === k ? "on" : ""}" style="--c:${C[k][1]}" data-color="${k}" aria-label="${C[k][0]}" aria-pressed="${shop.color === k}" title="${C[k][0]}"></button>`).join("");
+      const brands = [...new Set(PRODUCTS.map((p) => p.brand))].sort();
+      $("fBrand").innerHTML = brands.map((b) => `<button class="opt ${shop.brand === b ? "on" : ""}" data-brand="${esc(b)}">${esc(b)}</button>`).join("");
+    };
+
+    const renderChips = () => {
+      const chips = [];
+      if (shop.q) chips.push(["q", `"${esc(shop.q)}"`]);
+      if (shop.price !== "all") chips.push(["price", PRICE_BANDS.find((b) => b.id === shop.price).label]);
+      if (shop.color) chips.push(["color", C[shop.color][0]]);
+      if (shop.brand) chips.push(["brand", esc(shop.brand)]);
+      const n = chips.length - (shop.q ? 1 : 0);
+      $("filterBadge").hidden = n === 0;
+      $("filterBadge").textContent = n;
+      $("chips").innerHTML = chips.length ? chips.map(([k, l]) => `<button class="chip" data-chip="${k}">${l}<i class="ri-close-line"></i></button>`).join("") + `<button class="chip chip--clear" data-chip="all">Clear all</button>` : "";
+    };
+
+    const renderGrid = (animateFrom = 0) => {
+      const list = filtered();
+      const visible = list.slice(0, shop.shown);
+      $("resultCount").textContent = `${list.length} ${list.length === 1 ? "product" : "products"}`;
+      if (!list.length) {
+        $("grid").innerHTML = `<div class="empty"><i class="ri-search-eye-line"></i><h3>No products match those filters</h3><p>Try a different search term or clear a filter.</p><button class="btn btn--outline" data-chip="all">Clear all filters</button></div>`;
+      } else {
+        $("grid").innerHTML = visible.map((p, i) => cardHTML(p, Math.max(0, i - animateFrom))).join("");
+        $("grid").querySelectorAll(".card").forEach((c, i) => { if (i < animateFrom) c.classList.add("still"); });
+      }
+      const wrap = $("moreWrap");
+      wrap.hidden = !list.length;
+      $("moreText").textContent = `Showing ${visible.length} of ${list.length}`;
+      $("moreBar").style.width = list.length ? (visible.length / list.length) * 100 + "%" : "0";
+      $("loadMore").hidden = visible.length >= list.length;
+    };
+
+    const refreshShop = () => { shop.shown = COUNT_STEP; renderTabs(); renderFilters(); renderChips(); renderGrid(); };
+
+    const goShop = (opts = {}) => {
+      if (opts.cat) shop.cat = opts.cat;
+      shop.q = opts.q || "";
+      shop.price = "all"; shop.color = ""; shop.brand = "";
+      if (opts.sort) { shop.sort = opts.sort; $("sort").value = opts.sort; }
+      $("shopSearch").value = shop.q;
+      refreshShop();
+    };
+
+    $("loadMore").addEventListener("click", () => {
+      const from = shop.shown;
+      shop.shown += COUNT_STEP;
+      renderGrid(from);
+    });
+    $("sort").addEventListener("change", (e) => { shop.sort = e.target.value; shop.shown = COUNT_STEP; renderGrid(); });
+    $("shopSearch").addEventListener("input", (e) => { shop.q = e.target.value.trim(); shop.shown = COUNT_STEP; renderChips(); renderGrid(); });
+    $("filterToggle").addEventListener("click", () => {
+      const panel = $("filterPanel");
+      const open = panel.classList.toggle("open");
+      $("filterToggle").setAttribute("aria-expanded", open);
+      $("filterToggle").classList.toggle("on", open);
+    });
+
+    /* ---------- Overlay handling ---------- */
+    let openLayer = null, lastFocus = null;
+    const openOverlay = (el) => {
+      if (openLayer && openLayer !== el) closeOverlay(false);
+      if (!openLayer) lastFocus = document.activeElement;
+      openLayer = el;
+      el.classList.add("open");
+      el.setAttribute("aria-hidden", "false");
+      $("scrim").classList.add("open");
+      document.body.classList.add("locked");
+      const f = el.querySelector("[data-focus], input[type=search], .icon-btn[data-close]");
+      if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
+    };
+    const closeOverlay = (restore = true) => {
+      if (!openLayer) return;
+      openLayer.classList.remove("open");
+      openLayer.setAttribute("aria-hidden", "true");
+      openLayer = null;
+      $("scrim").classList.remove("open");
+      document.body.classList.remove("locked");
+      if (restore && lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+    };
+    $("scrim").addEventListener("click", () => closeOverlay());
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeOverlay();
+      if (e.key === "Tab" && openLayer) {
+        const items = [...openLayer.querySelectorAll("a[href],button:not([disabled]),input,select,textarea")].filter((n) => n.offsetParent !== null && !n.hidden);
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    document.querySelectorAll(".modal").forEach((m) => m.addEventListener("click", (e) => { if (e.target === m) closeOverlay(); }));
+    $("burger").addEventListener("click", () => openOverlay($("mobileNav")));
+    $("openSearch").addEventListener("click", () => openOverlay($("searchBox")));
+    $("openAccount").addEventListener("click", () => openOverlay($("account")));
+    $("openWish").addEventListener("click", () => { renderWish(); openOverlay($("wishDrawer")); });
+    $("openCart").addEventListener("click", () => { renderCart(); openOverlay($("cartDrawer")); });
+
+    /* ---------- Quick view ---------- */
+    let qv = null;
+    const gallery = (p, c) => {
+      if (p.photos) return p.photos.map((x) => UC(x, 900)).concat(zoom(p.photos[0], 900, 0.5, 0.3, 2.2));
+      if (!isGarment(p)) return [UC(c.img, 900), zoom(c.img, 900, 0.5, 0.5, 1.6)];
+      return [UC(c.img, 900), zoom(c.img, 900, 0.5, 0.32, 2.1), zoom(c.img, 900, 0.5, 0.68, 2.1)];
+    };
+    const deliveryRange = () => {
+      const d = (n) => { const x = new Date(); x.setDate(x.getDate() + n); return x.toLocaleDateString("en-US", { month: "short", day: "numeric" }); };
+      return `${d(3)} to ${d(6)}`;
+    };
+    const openQV = (id, colorIdx = 0, needSize = false) => {
+      const p = byId(id);
+      if (!p) return;
+      qv = { p, colorIdx, size: p.sizes.length === 1 ? p.sizes[0] : "", qty: 1, img: 0, needSize };
+      renderQV();
+      openOverlay($("qv"));
+    };
+    const renderQV = () => {
+      const { p, colorIdx, size, qty, img, needSize } = qv;
+      const c = p.colors[colorIdx], imgs = gallery(p, c);
+      const saved = wish.includes(p.id);
+      const related = PRODUCTS.filter((x) => x.cat === p.cat && x.id !== p.id).slice(0, 3);
+      $("qvBody").innerHTML = `
+        <div class="qv__gallery">
+          <div class="qv__thumbs">${imgs.map((src, i) => `<button class="${i === img ? "on" : ""}" data-qvimg="${i}" aria-label="Photo ${i + 1}"><img src="${src.replace("w=900", "w=160").replace(/h=\d+/, "h=200")}" alt="" /></button>`).join("")}</div>
+          <div class="qv__main"><img id="qvMain" src="${imgs[img]}" alt="${esc(p.brand)} ${esc(p.name)}" /></div>
+        </div>
+        <div class="qv__info">
+          <span class="card__brand">${esc(p.brand)}</span>
+          <h2>${esc(p.name)}</h2>
+          <div class="card__rate">${stars(p.rating)}<span>${p.rating} (${p.reviews} reviews)</span></div>
+          <div class="price price--lg">${money(p.price)}${p.was ? `<del>${money(p.was)}</del><span class="flag flag--sale">Save ${pct(p)}%</span>` : ""}</div>
+          <p class="qv__desc">${esc(p.desc)}</p>
+          <div class="qv__opt">
+            <h4>Colour: <span>${c.name}</span></h4>
+            <div class="swatches">${p.colors.map((x, i) => `<button class="swatch ${i === colorIdx ? "on" : ""}" style="--c:${x.hex}" data-qvcolor="${i}" aria-label="${x.name}" aria-pressed="${i === colorIdx}"></button>`).join("")}</div>
+          </div>
+          ${p.sizes.length > 1 ? `<div class="qv__opt ${needSize && !size ? "need" : ""}" id="qvSizeBox">
+            <h4>Size: <span>${size || "Select a size"}</span></h4>
+            <div class="sizes">${p.sizes.map((s) => `<button class="size ${size === s ? "on" : ""}" data-qvsize="${s}" aria-pressed="${size === s}">${s}</button>`).join("")}</div>
+          </div>` : `<div class="qv__opt"><h4>Size: <span>One size</span></h4></div>`}
+          <div class="qv__buy">
+            <div class="qty"><button data-qvqty="-1" aria-label="Decrease quantity"><i class="ri-subtract-line"></i></button><b>${qty}</b><button data-qvqty="1" aria-label="Increase quantity"><i class="ri-add-line"></i></button></div>
+            <button class="btn btn--grow" data-qvadd>Add to bag · ${money(p.price * qty)}</button>
+            <button class="heart heart--box ${saved ? "on" : ""}" data-wish="${p.id}" aria-label="Save to wishlist" aria-pressed="${saved}"><i class="${saved ? "ri-heart-fill" : "ri-heart-line"}"></i></button>
+          </div>
+          <ul class="qv__meta">
+            <li><i class="ri-truck-line"></i> Arrives ${deliveryRange()}</li>
+            <li><i class="ri-arrow-go-back-line"></i> Free returns within 30 days</li>
+          </ul>
+          <ul class="qv__details">${p.details.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
+          <div class="qv__related"><h4>You may also like</h4><div>${related.map((r) => `<button data-open="${r.id}"><img src="${UC(r.colors[0].img, 200)}" alt="" loading="lazy" /><span>${esc(r.name)}</span><b>${money(r.price)}</b></button>`).join("")}</div></div>
+        </div>`;
+    };
+
+    /* ---------- Bag ---------- */
+    const lineKey = (l) => `${l.id}|${l.color}|${l.size}`;
+    const FREE_OVER = 100;
+    const totals = (method = "standard") => {
+      const sub = cart.reduce((s, l) => s + byId(l.id).price * l.qty, 0);
+      const disc = promo === "WELCOME10" ? +(sub * 0.1).toFixed(2) : 0;
+      const after = sub - disc;
+      const ship = !cart.length ? 0 : method === "express" ? 18 : after >= FREE_OVER ? 0 : 8;
+      return { sub, disc, after, ship, total: after + ship };
+    };
+    const saveCart = () => { store.set("ondine_cart", cart); store.set("ondine_promo", promo); updateCounts(); };
+    const updateCounts = () => {
+      const n = cart.reduce((s, l) => s + l.qty, 0);
+      const el = $("cartCount");
+      el.hidden = n === 0; el.textContent = n;
+      el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+      $("wishCount").hidden = wish.length === 0; $("wishCount").textContent = wish.length;
+    };
+    const addToCart = (id, colorIdx, size, qty = 1) => {
+      const line = { id, color: colorIdx, size, qty };
+      const hit = cart.find((l) => lineKey(l) === lineKey(line));
+      if (hit) hit.qty += qty; else cart.push(line);
+      saveCart(); renderCart();
+      openOverlay($("cartDrawer"));
+    };
+    const renderCart = () => {
+      const t = totals();
+      const n = cart.reduce((s, l) => s + l.qty, 0);
+      $("cartHeadCount").textContent = n ? `(${n})` : "";
+      const left = Math.max(0, FREE_OVER - t.after);
+      $("shipBox").hidden = !cart.length;
+      $("shipBox").innerHTML = `<p>${left > 0 ? `You're <b>${money(left)}</b> away from free standard shipping` : `<i class="ri-checkbox-circle-fill"></i> You've unlocked <b>free standard shipping</b>`}</p><div class="ship__bar"><span style="width:${Math.min(100, (t.after / FREE_OVER) * 100)}%"></span></div>`;
+      if (!cart.length) {
+        $("cartBody").innerHTML = `<div class="drawer__empty"><i class="ri-shopping-bag-line"></i><h4>Your bag is empty</h4><p>Have a look around. New styles land every week.</p><a href="#shop" class="btn" data-shop="All">Start shopping</a></div>`;
+        $("cartFoot").innerHTML = "";
+        return;
+      }
+      $("cartBody").innerHTML = cart.map((l, i) => {
+        const p = byId(l.id), c = p.colors[l.color] || p.colors[0];
+        return `<div class="line">
+          <button class="line__img" data-open="${p.id}" aria-label="View ${esc(p.name)}"><img src="${UC(c.img, 180)}" alt="" /></button>
+          <div class="line__info">
+            <span class="card__brand">${esc(p.brand)}</span>
+            <h4>${esc(p.name)}</h4>
+            <p>${c.name}${l.size !== "One size" ? ` · Size ${l.size}` : ""}</p>
+            <div class="line__row">
+              <div class="qty qty--sm"><button data-lineqty="${i}" data-d="-1" aria-label="Decrease quantity"><i class="ri-subtract-line"></i></button><b>${l.qty}</b><button data-lineqty="${i}" data-d="1" aria-label="Increase quantity"><i class="ri-add-line"></i></button></div>
+              <b class="line__price">${money(p.price * l.qty)}</b>
+            </div>
+          </div>
+          <button class="line__rm" data-rm="${i}" aria-label="Remove ${esc(p.name)}"><i class="ri-delete-bin-line"></i></button>
+        </div>`;
+      }).join("");
+      $("cartFoot").innerHTML = `
+        <form class="promo" id="promoForm">
+          <input id="promoInput" placeholder="Promo code" aria-label="Promo code" value="${esc(promo)}" />
+          <button type="submit">${promo ? "Remove" : "Apply"}</button>
+        </form>
+        <p class="promo__msg" id="promoMsg" role="status"></p>
+        <dl class="sum">
+          <div><dt>Subtotal</dt><dd>${money(t.sub)}</dd></div>
+          ${t.disc ? `<div class="sum__disc"><dt>WELCOME10</dt><dd>-${money(t.disc)}</dd></div>` : ""}
+          <div><dt>Standard shipping</dt><dd>${t.ship ? money(t.ship) : "Free"}</dd></div>
+          <div class="sum__total"><dt>Total</dt><dd>${money(t.total)}</dd></div>
+        </dl>
+        <button class="btn btn--full" id="goCheckout">Checkout <i class="ri-lock-line"></i></button>
+        <p class="drawer__note">Taxes calculated at checkout where they apply.</p>`;
+    };
+    document.addEventListener("submit", (e) => {
+      if (e.target.id !== "promoForm") return;
+      e.preventDefault();
+      if (promo) { promo = ""; saveCart(); renderCart(); return; }
+      const code = $("promoInput").value.trim().toUpperCase();
+      if (code === "WELCOME10") { promo = code; saveCart(); renderCart(); }
+      else { $("promoMsg").textContent = code ? "That code isn't valid. Try WELCOME10." : "Enter a code first."; }
+    });
+
+    const toggleWish = (id) => {
+      wish = wish.includes(id) ? wish.filter((x) => x !== id) : [...wish, id];
+      store.set("ondine_wish", wish);
+      updateCounts();
+      const on = wish.includes(id);
+      document.querySelectorAll(`[data-wish="${id}"]`).forEach((b) => {
+        b.classList.toggle("on", on);
+        b.setAttribute("aria-pressed", on);
+        b.querySelector("i").className = on ? "ri-heart-fill" : "ri-heart-line";
+      });
+      if (openLayer === $("wishDrawer")) renderWish();
+    };
+    const renderWish = () => {
+      if (!wish.length) {
+        $("wishBody").innerHTML = `<div class="drawer__empty"><i class="ri-heart-line"></i><h4>Nothing saved yet</h4><p>Tap the heart on any product to keep it here.</p><a href="#shop" class="btn" data-shop="All">Browse products</a></div>`;
+        return;
+      }
+      $("wishBody").innerHTML = wish.map((id) => {
+        const p = byId(id);
+        return `<div class="line">
+          <button class="line__img" data-open="${p.id}" aria-label="View ${esc(p.name)}"><img src="${UC(p.colors[0].img, 180)}" alt="" /></button>
+          <div class="line__info">
+            <span class="card__brand">${esc(p.brand)}</span>
+            <h4>${esc(p.name)}</h4>
+            <div class="price">${money(p.price)}${p.was ? `<del>${money(p.was)}</del>` : ""}</div>
+            <button class="link-btn" data-add="${p.id}">Add to bag</button>
+          </div>
+          <button class="line__rm" data-wish="${p.id}" aria-label="Remove ${esc(p.name)} from wishlist"><i class="ri-delete-bin-line"></i></button>
+        </div>`;
+      }).join("");
+    };
+
+    /* ---------- Checkout ---------- */
+    let shipMethod = "standard";
+    const summaryHTML = () => {
+      const t = totals(shipMethod);
+      return `<div class="co__lines">${cart.map((l) => {
+        const p = byId(l.id), c = p.colors[l.color] || p.colors[0];
+        return `<div class="co__line"><img src="${UC(c.img, 120)}" alt="" /><div><h5>${esc(p.name)}</h5><p>${c.name}${l.size !== "One size" ? ` · ${l.size}` : ""} · Qty ${l.qty}</p></div><b>${money(p.price * l.qty)}</b></div>`;
+      }).join("")}</div>
+      <dl class="sum">
+        <div><dt>Subtotal</dt><dd>${money(t.sub)}</dd></div>
+        ${t.disc ? `<div class="sum__disc"><dt>WELCOME10</dt><dd>-${money(t.disc)}</dd></div>` : ""}
+        <div><dt>${shipMethod === "express" ? "Express" : "Standard"} shipping</dt><dd>${t.ship ? money(t.ship) : "Free"}</dd></div>
+        <div class="sum__total"><dt>Total</dt><dd>${money(t.total)}</dd></div>
+      </dl>`;
+    };
+    const renderCheckout = () => {
+      const t = totals("standard");
+      $("checkoutBody").innerHTML = `<div class="co">
+        <form class="co__form" id="checkoutForm">
+          <h2>Checkout</h2>
+          <h4>Contact</h4>
+          <label class="field"><span>Email</span><input type="email" required autocomplete="email" name="email" data-focus /></label>
+          <h4>Delivery address</h4>
+          <div class="field-row">
+            <label class="field"><span>First name</span><input required autocomplete="given-name" /></label>
+            <label class="field"><span>Last name</span><input required autocomplete="family-name" /></label>
+          </div>
+          <label class="field"><span>Address</span><input required autocomplete="street-address" /></label>
+          <div class="field-row field-row--3">
+            <label class="field"><span>City</span><input required autocomplete="address-level2" /></label>
+            <label class="field"><span>State</span><input required autocomplete="address-level1" /></label>
+            <label class="field"><span>ZIP code</span><input required autocomplete="postal-code" inputmode="numeric" /></label>
+          </div>
+          <h4>Shipping method</h4>
+          <label class="radio"><input type="radio" name="ship" value="standard" ${shipMethod === "standard" ? "checked" : ""} /><span><b>Standard</b> 2 to 4 working days</span><em>${t.after >= FREE_OVER ? "Free" : money(8)}</em></label>
+          <label class="radio"><input type="radio" name="ship" value="express" ${shipMethod === "express" ? "checked" : ""} /><span><b>Express</b> Next working day</span><em>${money(18)}</em></label>
+          <h4>Payment</h4>
+          <label class="radio"><input type="radio" name="pay" value="Card" checked /><span><b>Credit or debit card</b> Entered on the secure payment page</span><em><i class="ri-bank-card-line"></i></em></label>
+          <label class="radio"><input type="radio" name="pay" value="PayPal" /><span><b>PayPal</b> Pay with your PayPal account</span><em><i class="ri-paypal-line"></i></em></label>
+          <button class="btn btn--full" type="submit" id="placeOrder">Place order · ${money(totals(shipMethod).total)}</button>
+          <p class="drawer__note">By placing your order you agree to our terms and returns policy.</p>
+        </form>
+        <aside class="co__sum"><h4>Order summary</h4><div id="coSummary">${summaryHTML()}</div></aside>
+      </div>`;
+    };
+    document.addEventListener("change", (e) => {
+      if (e.target.name === "ship") {
+        shipMethod = e.target.value;
+        $("coSummary").innerHTML = summaryHTML();
+        $("placeOrder").textContent = `Place order · ${money(totals(shipMethod).total)}`;
+      }
+    });
+    document.addEventListener("submit", (e) => {
+      if (e.target.id !== "checkoutForm") return;
+      e.preventDefault();
+      const email = e.target.elements.email.value;
+      const num = "ON-" + String(Date.now()).slice(-6);
+      const total = totals(shipMethod).total;
+      const days = shipMethod === "express" ? "tomorrow" : deliveryRange();
+      cart = []; promo = ""; saveCart(); renderCart();
+      $("checkoutBody").innerHTML = `<div class="done">
+        <span class="done__icon"><i class="ri-check-line"></i></span>
+        <h2>Thank you, your order is in.</h2>
+        <p>Order <b>${num}</b> for <b>${money(total)}</b> is confirmed, and a receipt is on its way to <b>${esc(email)}</b>.</p>
+        <p>Expected delivery: <b>${days}</b>.</p>
+        <button class="btn" data-close>Continue shopping</button>
+      </div>`;
+    });
+
+    /* ---------- Delegated clicks ---------- */
+    document.addEventListener("click", (e) => {
+      const t = e.target.closest("button,a");
+      if (!t) return;
+      const d = t.dataset;
+
+      if ("close" in d) { closeOverlay(); return; }
+      if (d.open) { e.preventDefault(); const card = t.closest("[data-card]"); const on = card && card.querySelector(".dot.on"); openQV(d.open, on ? +on.dataset.idx : 0); return; }
+      if (d.wish) { toggleWish(d.wish); return; }
+      if (d.add) {
+        const p = byId(d.add), card = t.closest("[data-card]"), on = card && card.querySelector(".dot.on");
+        const idx = on ? +on.dataset.idx : 0;
+        if (p.sizes.length > 1) openQV(p.id, idx, true); else addToCart(p.id, idx, p.sizes[0]);
+        return;
+      }
+      if (d.swap) {
+        const p = byId(d.swap), card = t.closest("[data-card]"), c = p.colors[+d.idx];
+        card.querySelector(".card__img").src = UC(c.img, 560);
+        card.querySelector(".card__img2").src = hoverImg(p, c);
+        card.querySelectorAll(".dot").forEach((x) => x.classList.toggle("on", x === t));
+        return;
+      }
+      if (d.shop) {
+        goShop({ cat: d.shop, q: d.q, sort: d.sort });
+        closeOverlay(false);
+        return;
+      }
+      if (d.tab) { goShop({ cat: d.tab }); return; }
+      if (d.price) { shop.price = d.price; refreshShop(); return; }
+      if (d.color) { shop.color = shop.color === d.color ? "" : d.color; refreshShop(); return; }
+      if (d.brand) { shop.brand = shop.brand === d.brand ? "" : d.brand; refreshShop(); return; }
+      if (d.chip) {
+        if (d.chip === "all") { shop.q = ""; shop.price = "all"; shop.color = ""; shop.brand = ""; $("shopSearch").value = ""; }
+        else if (d.chip === "q") { shop.q = ""; $("shopSearch").value = ""; }
+        else if (d.chip === "price") shop.price = "all";
+        else shop[d.chip] = "";
+        refreshShop();
+        return;
+      }
+      if (d.brandgo) { goShop({ cat: "All" }); shop.brand = d.brandgo; refreshShop(); return; }
+
+      /* quick view */
+      if (d.qvimg) { qv.img = +d.qvimg; renderQV(); return; }
+      if (d.qvcolor) { qv.colorIdx = +d.qvcolor; qv.img = 0; renderQV(); return; }
+      if (d.qvsize) { qv.size = d.qvsize; qv.needSize = false; renderQV(); return; }
+      if (d.qvqty) { qv.qty = Math.max(1, Math.min(9, qv.qty + +d.qvqty)); renderQV(); return; }
+      if ("qvadd" in d) {
+        if (!qv.size) { qv.needSize = true; renderQV(); const b = $("qvSizeBox"); if (b) { b.scrollIntoView({ block: "center", behavior: "smooth" }); } return; }
+        addToCart(qv.p.id, qv.colorIdx, qv.size, qv.qty);
+        return;
+      }
+
+      /* bag */
+      if (d.lineqty !== undefined) {
+        const l = cart[+d.lineqty];
+        l.qty += +d.d;
+        if (l.qty < 1) cart.splice(+d.lineqty, 1);
+        saveCart(); renderCart();
+        return;
+      }
+      if (d.rm !== undefined) { cart.splice(+d.rm, 1); saveCart(); renderCart(); return; }
+      if (t.id === "goCheckout") { shipMethod = "standard"; renderCheckout(); openOverlay($("checkout")); return; }
+      if (t.id === "mAccount") { e.preventDefault(); openOverlay($("account")); return; }
+
+      /* search */
+      if (d.term) { $("searchInput").value = d.term; renderSearch(); $("searchInput").focus(); return; }
+
+      /* journal + faq */
+      if (d.post) { openArticle(+d.post); return; }
+      if (d.faq !== undefined && t.tagName === "A") { toggleFaq(+d.faq, true); return; }
+      if (d.faqbtn !== undefined) { toggleFaq(+d.faqbtn); return; }
+    });
+
+    /* Close overlays when following a page link from inside one */
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[href^='#']");
+      if (a && a.id !== "mAccount" && openLayer && openLayer.contains(a)) closeOverlay(false);
+    });
+
+    /* ---------- Search overlay ---------- */
+    const renderSearch = () => {
+      const q = $("searchInput").value.trim();
+      $("searchPopular").hidden = !!q;
+      if (!q) { $("searchResults").innerHTML = ""; return; }
+      const hits = PRODUCTS.filter((p) => matches(p, q));
+      if (!hits.length) { $("searchResults").innerHTML = `<p class="search__none">No results for "${esc(q)}". Try a brand or a type of clothing.</p>`; return; }
+      $("searchResults").innerHTML = `<div class="search__grid">${hits.slice(0, 6).map((p) => `<button class="hit" data-open="${p.id}"><img src="${UC(p.colors[0].img, 160)}" alt="" /><span><small>${esc(p.brand)}</small>${esc(p.name)}<b>${money(p.price)}</b></span></button>`).join("")}</div><button class="link-btn search__all" type="submit">See all ${hits.length} results</button>`;
+    };
+    $("searchInput").addEventListener("input", renderSearch);
+    $("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = $("searchInput").value.trim();
+      goShop({ cat: "All", q });
+      closeOverlay(false);
+      $("shop").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    });
+
+    /* ---------- Hero ---------- */
+    const slides = [...document.querySelectorAll(".slide")];
+    let cur = 0, heroTimer = null;
+    $("heroDots").innerHTML = slides.map((_, i) => `<button class="hdot ${i === 0 ? "on" : ""}" data-slide="${i}" aria-label="Go to slide ${i + 1}"><span>0${i + 1}</span><i></i></button>`).join("");
+    const showSlide = (n) => {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle("active", i === cur));
+      document.querySelectorAll(".hdot").forEach((d, i) => { d.classList.remove("on"); if (i === cur) { void d.offsetWidth; d.classList.add("on"); } });
+    };
+    const startHero = () => { stopHero(); if (!reduced) heroTimer = setInterval(() => showSlide(cur + 1), 6500); };
+    const stopHero = () => clearInterval(heroTimer);
+    $("heroPrev").addEventListener("click", () => { showSlide(cur - 1); startHero(); });
+    $("heroNext").addEventListener("click", () => { showSlide(cur + 1); startHero(); });
+    $("heroDots").addEventListener("click", (e) => { const b = e.target.closest("[data-slide]"); if (b) { showSlide(+b.dataset.slide); startHero(); } });
+    const heroEl = $("home");
+    heroEl.addEventListener("mouseenter", () => { stopHero(); heroEl.classList.add("paused"); });
+    heroEl.addEventListener("mouseleave", () => { startHero(); heroEl.classList.remove("paused"); });
+    startHero();
+    requestAnimationFrame(() => document.body.classList.add("ready"));
+
+    /* ---------- Announcement ---------- */
+    const msgs = [...document.querySelectorAll(".announce__msg")];
+    let msgI = 0;
+    if (!reduced) setInterval(() => { msgs[msgI].classList.remove("on"); msgI = (msgI + 1) % msgs.length; msgs[msgI].classList.add("on"); }, 4500);
+
+    /* ---------- Countdown: sale ends next Sunday at midnight ---------- */
+    const saleEnd = (() => { const d = new Date(); d.setDate(d.getDate() + ((7 - d.getDay()) % 7 || 7)); d.setHours(23, 59, 59, 0); return d; })();
+    const pad = (n) => String(n).padStart(2, "0");
+    const tick = () => {
+      const s = Math.max(0, Math.floor((saleEnd - Date.now()) / 1000));
+      $("tD").textContent = pad(Math.floor(s / 86400));
+      $("tH").textContent = pad(Math.floor((s % 86400) / 3600));
+      $("tM").textContent = pad(Math.floor((s % 3600) / 60));
+      $("tS").textContent = pad(s % 60);
+    };
+    tick(); setInterval(tick, 1000);
+
+    /* ---------- Rails, brands, reviews, journal, FAQ ---------- */
+    $("rail").innerHTML = ["m1", "s2", "a1", "b2", "s1", "w1", "m4"].map((id, i) => cardHTML(byId(id), i)).join("");
+    const railMove = (dir) => {
+      const rail = $("rail");
+      const w = rail.querySelector(".card").offsetWidth + 24;
+      rail.scrollBy({ left: dir * w * 2, behavior: reduced ? "auto" : "smooth" });
+    };
+    $("railPrev").addEventListener("click", () => railMove(-1));
+    $("railNext").addEventListener("click", () => railMove(1));
+
+    const BRANDS = ["Nike", "Converse", "Vans", "Ray-Ban", "Jordan", "Gucci", "Levi's", "Puma", "Zara"];
+    const brandRow = BRANDS.map((b) => `<a href="#shop" data-brandgo="${esc(b)}">${esc(b)}</a>`).join("");
+    $("brandTrack").innerHTML = `<div>${brandRow}</div><div aria-hidden="true">${brandRow}</div>`;
+
+    const REVIEWS = [
+      { n: "Hannah R.", city: "Brooklyn, NY", p: "w1", r: 5, t: "Worth every cent", b: "I've been looking for a proper trench for years. The fit is flattering without being tight, and it kept me dry through a real downpour. I went with my usual size." },
+      { n: "Daniel M.", city: "Austin, TX", p: "s1", r: 5, t: "Arrived in two days", b: "Ordered the Air Force 1s on Tuesday and wore them on Thursday. They're authentic, boxed properly, and customer service was quick to answer my sizing question." },
+      { n: "Priya S.", city: "Chicago, IL", p: "b2", r: 4, t: "Beautiful leather", b: "The colour is even richer in person and it fits my laptop. One star off because the strap is a little stiff at first, but it has already started to soften." },
+      { n: "Marcus T.", city: "Seattle, WA", p: "m8", r: 5, t: "Great jeans, easy exchange", b: "My first pair was a size too small. I used the prepaid label, and the new pair turned up within the week. The denim is really nice and heavy." },
+    ];
+    $("reviewGrid").innerHTML = REVIEWS.map((v, i) => {
+      const p = byId(v.p);
+      return `<article class="review reveal" style="--d:${i * 80}ms">
+        <div class="stars-static" aria-label="${v.r} out of 5 stars">${"★".repeat(v.r)}<i>${"★".repeat(5 - v.r)}</i></div>
+        <h3>${v.t}</h3>
+        <p>${v.b}</p>
+        <footer><b>${v.n}</b><span>${v.city} · Verified buyer</span></footer>
+        <button class="review__prod" data-open="${p.id}"><img src="${UC(p.colors[0].img, 120)}" alt="" loading="lazy" /><span>${esc(p.name)}<i class="ri-arrow-right-up-line"></i></span></button>
+      </article>`;
+    }).join("");
+
+    const POSTS = [
+      { img: "1490481651871-ab68de25d43d", cat: "Wardrobe", date: "Oct 28, 2026", read: "4 min", t: "How to build a capsule wardrobe from 12 pieces", p: ["A capsule wardrobe isn't about owning less for the sake of it. It's about never standing in front of a full closet with nothing to wear.", "Start with three neutral bases that all work together: we like navy, cream and soft black. Then add two trousers, one pair of jeans, three tops, one knit, one jacket, and one coat.", "Finish with shoes you can walk in and a single bag that goes with everything. Everything else is a bonus, including the one bright piece that makes the rest feel new."] },
+      { img: "1485462537746-965f33f7f6a7", cat: "Buying guide", date: "Oct 14, 2026", read: "5 min", t: "Choosing a winter coat that lasts past this season", p: ["The fabric matters more than the label. For dry cold, look for at least 60% wool. If you get a lot of rain, a tightly woven cotton gabardine with a water-resistant finish will serve you better.", "Try it on over your thickest sweater, and check that you can still cross your arms in front of you without the back pulling tight.", "A good coat should reach at least mid-thigh, have proper lining at the shoulders, and use buttons that are stitched on with a shank. These are small details, but they're the ones that wear out first."] },
+      { img: "1525966222134-fcfa99b8ae77", cat: "Care", date: "Sep 30, 2026", read: "3 min", t: "Keeping your sneakers clean, without the washing machine", p: ["Washing machines weaken the glue and warp the sole. A soft brush, a bowl of warm water and a drop of mild soap will do a better job in about ten minutes.", "Take out the laces and wash them separately. Work from the top down, wipe away the foam as you go, and leave them to dry at room temperature, stuffed with paper.", "For suede, skip the water and use a suede eraser and brush. A protective spray at the start of the season does more than any clean afterwards."] },
+    ];
+    $("posts").innerHTML = POSTS.map((p, i) => `<article class="post reveal" style="--d:${i * 90}ms">
+      <button data-post="${i}" class="post__img" aria-label="Read: ${esc(p.t)}"><img src="${U(p.img, 800, "&h=560")}" alt="" loading="lazy" /></button>
+      <div class="post__meta"><span>${p.cat}</span>${p.date} · ${p.read} read</div>
+      <h3><button data-post="${i}">${esc(p.t)}</button></h3>
+    </article>`).join("");
+    const openArticle = (i) => {
+      const p = POSTS[i];
+      $("articleBody").innerHTML = `<img class="article__img" src="${U(p.img, 1000, "&h=500")}" alt="" />
+        <div class="article"><div class="post__meta"><span>${p.cat}</span>${p.date} · ${p.read} read</div><h2>${esc(p.t)}</h2>${p.p.map((x) => `<p>${esc(x)}</p>`).join("")}
+        <a href="#shop" class="btn" data-shop="All">Shop the store</a></div>`;
+      openOverlay($("article"));
+    };
+
+    const FAQS = [
+      { q: "How much is shipping and how long does it take?", a: "Standard shipping costs $8, or it's free on orders over $100, and takes 2 to 4 working days. Express is $18 and arrives the next working day if you order before 2pm ET." },
+      { q: "What's your returns policy?", a: "You have 30 days from delivery to return anything unworn with the tags attached. Every parcel includes a prepaid label, and refunds reach your original payment method within 5 working days of us receiving it." },
+      { q: "How do I find my size?", a: "Women's clothing runs XS (US 2) to XL (US 14), and men's runs S (chest 36 in) to XXL (chest 48 in). Shoes are listed in EU sizes: EU 42 is about US men's 9. Fit notes for each style are in its product details." },
+      { q: "How do I track my order?", a: "We email a tracking link as soon as your parcel ships. If you can't find it, send us your order number at hello@ondinestore.com and we'll look it up for you." },
+      { q: "Are the branded products authentic?", a: "Yes. We buy every Nike, Converse, Vans, Ray-Ban, Gucci, Levi's, Jordan, Puma and Zara item from the brand or its authorized distributors, and we can provide proof of purchase on request." },
+    ];
+    $("faq").innerHTML = FAQS.map((f, i) => `<div class="faq__item ${i === 0 ? "open" : ""}">
+      <button data-faqbtn="${i}" aria-expanded="${i === 0}">${esc(f.q)}<i class="ri-add-line"></i></button>
+      <div class="faq__a"><div><p>${esc(f.a)}</p></div></div>
+    </div>`).join("");
+    const toggleFaq = (i, force) => {
+      document.querySelectorAll(".faq__item").forEach((el, n) => {
+        const open = n === i ? (force ? true : !el.classList.contains("open")) : false;
+        el.classList.toggle("open", open);
+        el.querySelector("button").setAttribute("aria-expanded", open);
+      });
+    };
+
+    /* ---------- Forms ---------- */
+    $("contactForm").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("contactOk").hidden = false; });
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("newsOk").hidden = false; });
+    $("accountForm").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("accountOk").hidden = false; });
+
+    /* ---------- Store hours (New York time) ---------- */
+    (() => {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+      const day = parts.find((p) => p.type === "weekday").value;
+      const hour = +parts.find((p) => p.type === "hour").value;
+      const open = day === "Sun" ? hour >= 11 && hour < 18 : hour >= 10 && hour < 20;
+      const el = $("openNow");
+      el.textContent = open ? "Open now" : "Closed now";
+      el.classList.toggle("off", !open);
+    })();
+
+    /* ---------- Scroll: header, active nav, band, reveal ---------- */
+    const header = $("header"), toTop = $("toTop");
+    const navLinks = [...document.querySelectorAll(".nav > a.nav__link, .nav__item > a.nav__link")];
+    const spy = ["home", "shop", "journal", "help", "store"].map((id) => $(id));
+    const frame = $("bandFrame"), bandImg = $("bandImg");
+    let ticking = false;
+    const onScroll = () => {
+      ticking = false;
+      const y = scrollY;
+      header.classList.toggle("sticky", y > 40);
+      toTop.classList.toggle("on", y > 700);
+      const probe = y + innerHeight * 0.35;
+      let curId = "home";
+      spy.forEach((s) => { if (s.offsetTop <= probe) curId = s.id; });
+      navLinks.forEach((a) => {
+        const h = a.getAttribute("href").slice(1);
+        a.classList.toggle("active", h === curId && !a.classList.contains("nav__link--sale"));
+      });
+      if (!reduced && innerWidth > 640) {
+        const r = frame.parentElement.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * 0.85)));
+        const inset = (1 - p) * 5;
+        frame.style.clipPath = `inset(${inset * 1.2}% ${inset}% round ${(1 - p) * 28}px)`;
+        bandImg.style.transform = `scale(${1.12 - p * 0.12})`;
+      }
+    };
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", () => { moveTabLine(); onScroll(); });
+    toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }));
+
+    const countUp = (el) => {
+      const end = +el.dataset.count, dec = +el.dataset.dec || 0;
+      if (reduced) { el.textContent = end.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }); return; }
+      const start = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - start) / 1200), v = end * (1 - Math.pow(1 - k, 3));
+        el.textContent = v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
+        if (k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("in");
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { countUp(en.target); cio.unobserve(en.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll("[data-count]").forEach((el) => cio.observe(el));
+
+    /* ---------- Start ---------- */
+    refreshShop();
+    updateCounts();
+    $("cartCount").classList.remove("bump");
+    onScroll();
+    document.fonts && document.fonts.ready.then(moveTabLine);
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/shop-ondine/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

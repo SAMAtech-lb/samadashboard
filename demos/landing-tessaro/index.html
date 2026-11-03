@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tessaro Line — Container Shipping, Port to Port</title>
+  <meta name="description" content="Tessaro Line is a container shipping company running four weekly trade lanes between Asia, Europe, the Gulf and the Americas. Find a sailing, track a container and book space online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo" aria-label="Tessaro Line home"><span class="logo__mark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/><path d="M4 12h16M5.6 7.6c3.9 1.6 8.9 1.6 12.8 0"/></svg></span><span class="logo__txt">TESSARO<small>LINE</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#schedules">Schedules</a>
+        <a href="#track">Tracking</a>
+        <a href="#network">Network</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:+390105573000" class="header__phone"><i class="ri-customer-service-2-line"></i><span><small>Booking desk</small>+39 010 557 3000</span></a>
+      <a href="#contact" class="btn btn--sm">Request a quote</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__frame">
+        <div class="container hero__in">
+          <div class="hero__copy">
+            <p class="hero__kicker"><span></span>Container line · Genoa · Since 1962</p>
+            <h1 class="hero__title">
+              <span class="hero__thin"><i>The ocean carrier for</i></span>
+              <span class="hero__bold"><i>cargo that</i></span>
+              <span class="hero__bold"><i>can't <em>wait.</em></i></span>
+            </h1>
+            <p class="hero__lead">48 vessels on four weekly trade lanes, linking Asia, Europe, the Gulf and the Americas. Book space online, follow your box and talk to the same desk from booking to delivery.</p>
+            <div class="hero__btns">
+              <a href="#schedules" class="btn">Find a sailing <i class="ri-arrow-right-line"></i></a>
+              <a href="#track" class="btn btn--ghost"><i class="ri-search-line"></i> Track a container</a>
+            </div>
+            <p class="hero__next" id="heroNext"><i class="ri-ship-2-line"></i> <span>Next departure</span> <b id="nextDep">—</b></p>
+          </div>
+
+          <div class="globe" id="globe">
+            <span class="globe__halo"></span>
+            <span class="globe__orbit globe__orbit--a"></span>
+            <span class="globe__orbit globe__orbit--b"></span>
+            <div class="globe__sphere"><canvas id="globeCanvas" aria-label="Rotating globe showing Tessaro Line trade lanes, ports and vessels at sea"></canvas></div>
+            <div class="globe__chips" id="chips"></div>
+            <div class="globe__card" id="laneCard" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients">
+      <div class="container clients__in">
+        <p>Carrying for importers and exporters in 54 countries</p>
+        <div class="clients__row"><span><i class="ri-compass-3-line"></i>Northwind</span><span><i class="ri-sun-line"></i>Lumen</span><span><i class="ri-planet-line"></i>Orbit</span><span><i class="ri-leaf-line"></i>Fieldnote</span><span><i class="ri-building-2-line"></i>Arcade</span><span><i class="ri-flashlight-line"></i>Voltra</span></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="head reveal">
+          <div><p class="label">What we carry</p><h2 class="h2">One carrier, <span>door to door.</span></h2></div>
+          <p class="head__p">We own the ships and run the schedule, so the slot you book is the slot you get. Inland trucks and rail on both ends are arranged by the same booking desk.</p>
+        </div>
+        <div class="svc" id="svc"></div>
+      </div>
+    </section>
+
+    <!-- Schedules -->
+    <section class="section section--light" id="schedules">
+      <div class="container">
+        <div class="head reveal">
+          <div><p class="label">Sailing schedules</p><h2 class="h2">Find your <span>next sailing.</span></h2></div>
+          <p class="head__p">Weekly departures on every lane. Pick a port of loading and a port of discharge; we show direct calls and the fastest transshipment.</p>
+        </div>
+        <form class="sched reveal" id="schedForm">
+          <label><span>Port of loading</span><select id="pol" aria-label="Port of loading"></select></label>
+          <button type="button" class="sched__swap" id="swap" aria-label="Swap ports"><i class="ri-arrow-left-right-line"></i></button>
+          <label><span>Port of discharge</span><select id="pod" aria-label="Port of discharge"></select></label>
+          <label><span>Departing from</span><input type="date" id="from" aria-label="Departing from" /></label>
+          <button class="btn" type="submit"><i class="ri-search-line"></i> Search</button>
+        </form>
+        <div class="results reveal" id="results"></div>
+      </div>
+    </section>
+
+    <!-- Tracking -->
+    <section class="section" id="track">
+      <div class="container track">
+        <div class="track__intro reveal">
+          <p class="label">Track &amp; trace</p>
+          <h2 class="h2">Where is <span>my container?</span></h2>
+          <p>Enter a container or booking number. Positions update every time the box is scanned at a gate, crane or rail ramp.</p>
+          <form class="track__form" id="trackForm">
+            <input id="trackIn" placeholder="e.g. TSRU 482193 6" aria-label="Container number" autocomplete="off" />
+            <button class="btn" type="submit">Track</button>
+          </form>
+          <p class="track__try">Try: <button type="button" data-c="TSRU4821936">TSRU 482193 6</button><button type="button" data-c="TSRU1157203">TSRU 115720 3</button><button type="button" data-c="TGHU9033118">TGHU 903311 8</button></p>
+        </div>
+        <div class="tcard reveal" id="tcard"></div>
+      </div>
+    </section>
+
+    <!-- Network -->
+    <section class="section section--navy" id="network">
+      <div class="container">
+        <div class="head head--light reveal">
+          <div><p class="label">Our network</p><h2 class="h2">Four lanes, <span>weekly.</span></h2></div>
+          <p class="head__p">Fixed departure days and hub connections in Singapore, Colombo and Rotterdam.</p>
+        </div>
+        <div class="lanes" id="lanes"></div>
+      </div>
+    </section>
+
+    <!-- Fleet -->
+    <section class="section" id="fleet">
+      <div class="container fleet">
+        <div class="fleet__media reveal">
+          <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=1400&q=80" alt="Fully loaded container ship at sea" loading="lazy" />
+          <div class="fleet__nums">
+            <div><b data-count="48">0</b><span>vessels</span></div>
+            <div><b data-count="246800">0</b><span>TEU capacity</span></div>
+            <div><b data-count="96">0</b><span>ports of call</span></div>
+          </div>
+        </div>
+        <div class="fleet__copy reveal">
+          <p class="label">The fleet</p>
+          <h2 class="h2">Ships we own, <span>crews we know.</span></h2>
+          <p>Average fleet age is 7.4 years. Our six newest ships run on LNG and all of them plug into shore power where the port offers it.</p>
+          <div class="ftabs" id="ftabs"></div>
+          <div class="ftable" id="ftable"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / sustainability -->
+    <section class="section section--light" id="about">
+      <div class="container about">
+        <div class="about__img reveal"><img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1400&q=80" alt="Container terminal from above with cranes and stacked containers" loading="lazy" /></div>
+        <div class="about__copy reveal">
+          <p class="label">Since 1962</p>
+          <h2 class="h2">A family line <span>that kept its word.</span></h2>
+          <p>Giulio Tessaro started with one 400-ton coaster between Genoa and Tunis. Three generations later we still answer our own phones, publish schedule reliability every month and keep a booking desk in every country we call at.</p>
+          <ul class="about__list">
+            <li><i class="ri-time-line"></i><div><b>On-time arrival, last 12 months</b><span>Within 24 hours of the published ETA on 81% of port calls.</span></div></li>
+            <li><i class="ri-leaf-line"></i><div><b>CO₂ on every bill of lading</b><span>Actual fuel burn per voyage, split per container, in the B/L and your invoice.</span></div></li>
+            <li><i class="ri-plug-line"></i><div><b>Shore power at berth</b><span>Engines off in Genoa, Rotterdam, Los Angeles and Oakland.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="head reveal">
+          <div><p class="label">Shippers say</p><h2 class="h2">Booked once, <span>then booked again.</span></h2></div>
+          <div class="rv__nav"><button id="rvPrev" aria-label="Previous review"><i class="ri-arrow-left-line"></i></button><button id="rvNext" aria-label="Next review"><i class="ri-arrow-right-line"></i></button></div>
+        </div>
+        <div class="rv reveal"><div class="rv__track" id="rvTrack"></div></div>
+      </div>
+    </section>
+
+    <!-- Quote + contact -->
+    <section class="section section--light" id="contact">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <p class="label">Request a quote</p>
+          <h2 class="h2">Rates back <span>within four hours.</span></h2>
+          <p>Tell us what's moving and when. A trade-lane specialist replies with an all-in rate, free time at both ends and the next three sailings.</p>
+          <div class="offices" id="offices"></div>
+        </div>
+        <form class="quote reveal" id="quote">
+          <div class="quote__row">
+            <label><span>From</span><select id="qFrom" required></select></label>
+            <label><span>To</span><select id="qTo" required></select></label>
+          </div>
+          <div class="quote__row">
+            <label><span>Container</span><select id="qType"><option>20' Dry</option><option selected>40' Dry</option><option>40' High Cube</option><option>40' Reefer</option><option>LCL (part load)</option></select></label>
+            <label><span>Quantity</span><input type="number" min="1" max="200" value="2" required /></label>
+            <label><span>Cargo ready</span><input type="date" id="qDate" required /></label>
+          </div>
+          <label><span>Commodity</span><input placeholder="e.g. ceramic tiles, 21 t per box" required /></label>
+          <div class="quote__row">
+            <label><span>Name</span><input required autocomplete="name" /></label>
+            <label><span>Company</span><input required autocomplete="organization" /></label>
+          </div>
+          <label><span>Email</span><input type="email" required autocomplete="email" /></label>
+          <button class="btn btn--wide" type="submit">Send request <i class="ri-send-plane-line"></i></button>
+          <p class="quote__ok" id="quoteOk"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="section" id="news">
+      <div class="container">
+        <div class="head reveal">
+          <div><p class="label">Customer advisories</p><h2 class="h2">News from <span>the line.</span></h2></div>
+          <a href="#" class="link">All advisories <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="news" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--light" id="faq">
+      <div class="container faq">
+        <div class="reveal"><p class="label">FAQ</p><h2 class="h2">Before <span>you book.</span></h2><p class="faq__p">Can't find it? Call the booking desk on <a href="tel:+390105573000">+39 010 557 3000</a>, Monday to Saturday.</p></div>
+        <div class="faq__list reveal" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="logo logo--light"><span class="logo__mark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/><path d="M4 12h16M5.6 7.6c3.9 1.6 8.9 1.6 12.8 0"/></svg></span><span class="logo__txt">TESSARO<small>LINE</small></span></a>
+          <p>Container shipping between Asia, Europe, the Gulf and the Americas since 1962.</p>
+          <div class="social"><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></div>
+        </div>
+        <div><h4>Shipping</h4><a href="#services">Full container load</a><a href="#services">Part loads (LCL)</a><a href="#services">Reefer</a><a href="#services">Inland haulage</a></div>
+        <div><h4>Tools</h4><a href="#schedules">Sailing schedules</a><a href="#track">Track a container</a><a href="#contact">Request a quote</a><a href="#faq">Free time &amp; demurrage</a></div>
+        <div>
+          <h4>Schedule updates</h4>
+          <p>One email a week with blank sailings, port omissions and new calls.</p>
+          <form class="nl" id="nl"><input type="email" required placeholder="Email address" aria-label="Email address" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form>
+          <p class="nl__ok" id="nlOk"></p>
+        </div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Tessaro Line S.p.A. · Via Albertazzi 3, 16149 Genova</span><span><a href="#">Privacy</a> · <a href="#">Terms of carriage</a> · <a href="#">Tariffs</a></span></div>
+    </div>
+  </footer>
+
+  <button class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <!-- Booking modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal__x" id="modalX" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const DAY = 864e5;
+    const fmtD = (d) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+    const fmtDW = (d) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const iso = (d) => new Date(d - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+    /* ---------- Data ---------- */
+    const PORTS = {
+      SHA: ["Shanghai", "China", [121.6, 31.2]], NGB: ["Ningbo", "China", [122.0, 29.9]], PUS: ["Busan", "South Korea", [129.05, 35.1]],
+      SIN: ["Singapore", "Singapore", [103.85, 1.25]], CMB: ["Colombo", "Sri Lanka", [79.85, 6.95]], JED: ["Jeddah", "Saudi Arabia", [39.15, 21.5]],
+      PIR: ["Piraeus", "Greece", [23.6, 37.94]], GOA: ["Genoa", "Italy", [8.9, 44.4]], VLC: ["Valencia", "Spain", [-0.3, 39.45]],
+      RTM: ["Rotterdam", "Netherlands", [4.05, 51.95]], ANR: ["Antwerp", "Belgium", [4.3, 51.3]], LEH: ["Le Havre", "France", [0.1, 49.48]],
+      NYC: ["New York", "United States", [-74.05, 40.6]], SAV: ["Savannah", "United States", [-80.9, 32.05]], JEA: ["Jebel Ali", "UAE", [55.03, 25.0]],
+      DMM: ["Dammam", "Saudi Arabia", [50.2, 26.45]], MUN: ["Mundra", "India", [69.7, 22.75]], NSA: ["Nhava Sheva", "India", [72.95, 18.95]],
+      LAX: ["Los Angeles", "United States", [-118.27, 33.73]], OAK: ["Oakland", "United States", [-122.3, 37.8]],
+    };
+    const LANES = [
+      { code: "AEX", name: "Asia – Europe Express", day: 0, ret: 3, color: "#5ee0cf",
+        ports: [["SHA", 0], ["NGB", 2], ["SIN", 7], ["CMB", 11], ["JED", 18], ["PIR", 23], ["GOA", 26], ["VLC", 28], ["RTM", 34]],
+        path: [[121.6, 31.2], [122.4, 30.4], [122, 29.9], [121.3, 26], [119.8, 24.2], [116, 20], [110, 12], [105.5, 4], [103.85, 1.25], [100.5, 3.2], [97.5, 5.8], [88, 6.4], [79.85, 6.95], [70, 11], [52, 12.8], [43.4, 12.6], [40, 17.5], [39.15, 21.5], [35.6, 26.5], [32.55, 29.9], [32.3, 31.4], [27, 33.6], [23.6, 37.94], [20, 36.6], [15.6, 37.2], [12.2, 38.5], [10.2, 41.5], [8.9, 44.4], [6.5, 41.8], [2.5, 39.6], [-0.3, 39.45], [-1.6, 37], [-5.6, 35.95], [-9.4, 37], [-9.8, 43.2], [-5.5, 48.5], [-1, 50.1], [1.6, 51], [4.05, 51.95]],
+        vessels: ["Tessaro Aurora", "Tessaro Boreas", "Tessaro Calypso", "Tessaro Delfina", "Tessaro Eolo", "Tessaro Fenice"] },
+      { code: "TAX", name: "Transatlantic Express", day: 3, ret: 6, color: "#8fb2ff",
+        ports: [["RTM", 0], ["ANR", 1], ["LEH", 2], ["NYC", 11], ["SAV", 14]],
+        path: [[4.05, 51.95], [3.3, 51.6], [4.3, 51.3], [1.6, 51], [0.1, 49.48], [-5.5, 48.8], [-20, 46], [-45, 42.5], [-65, 40.4], [-74.05, 40.6], [-74, 37], [-77.6, 32.6], [-80.9, 32.05]],
+        vessels: ["Genova Bay", "Genova Star", "Genova Wind", "Genova Light"] },
+      { code: "GIX", name: "Gulf – India Express", day: 4, ret: 1, color: "#ffc86b",
+        ports: [["JEA", 0], ["DMM", 2], ["MUN", 5], ["NSA", 7], ["CMB", 10], ["SIN", 14]],
+        path: [[55.03, 25.0], [53, 26.4], [50.2, 26.45], [53, 26.6], [56.4, 26.4], [59, 24], [66, 22.6], [69.7, 22.75], [69.6, 20.6], [72.95, 18.95], [72.2, 12], [76, 7.4], [79.85, 6.95], [88, 6.3], [97.5, 5.8], [100.5, 3.2], [103.85, 1.25]],
+        vessels: ["Levante Sun", "Levante Rose", "Levante Pearl"] },
+      { code: "TPX", name: "Transpacific Express", day: 5, ret: 2, color: "#ff9aa8",
+        ports: [["SIN", 0], ["SHA", 5], ["PUS", 7], ["LAX", 19], ["OAK", 21]],
+        path: [[103.85, 1.25], [106, 4.5], [110, 12], [116, 20], [119.8, 24.2], [122.3, 28.5], [121.6, 31.2], [124.5, 33.4], [129.05, 35.1], [129.6, 33.4], [133, 31.4], [145, 34.5], [160, 40], [-170, 42.5], [-145, 40], [-126, 35.5], [-118.27, 33.73], [-120.8, 34.4], [-122.6, 37.6], [-122.3, 37.8]],
+        vessels: ["Tessaro Gaia", "Genova Coast", "Genova Tide", "Genova Bell", "Genova Isle"] },
+    ];
+
+    /* ---------- Globe ---------- */
+    const G = (() => {
+      const wrap = $("globe"), canvas = $("globeCanvas"), ctx = canvas.getContext("2d");
+      const ok = typeof d3 !== "undefined";
+      let W = 0, dpr = 1, land = null, active = 0, cur = [-60, -22], tgt = [-60, -22], drag = null, idleAt = 0, visible = true, t0 = performance.now();
+      const proj = ok ? d3.geoOrthographic().clipAngle(90).precision(0.3) : null;
+      const path = ok ? d3.geoPath(proj, ctx) : null;
+      const grat = ok ? d3.geoGraticule10() : null;
+      /* precompute lane lengths for moving ships */
+      const lanes = LANES.map((l) => {
+        if (!ok) return { seg: [], len: 0 };
+        let len = 0; const seg = l.path.slice(1).map((b, i) => { const a = l.path[i], d = d3.geoDistance(a, b); len += d; return { a, b, d, ip: d3.geoInterpolate(a, b) }; });
+        return { seg, len, mid: d3.geoCentroid({ type: "LineString", coordinates: l.path }) };
+      });
+      const along = (li, f) => { const L = lanes[li]; let s = f * L.len; for (const g of L.seg) { if (s <= g.d) return g.ip(s / g.d); s -= g.d; } return LANES[li].path.at(-1); };
+      function size() {
+        W = canvas.clientWidth; dpr = Math.min(2, devicePixelRatio || 1);
+        canvas.width = canvas.height = Math.round(W * dpr);
+        if (ok) proj.translate([W / 2, W / 2]).scale(W / 2 - 1);
+      }
+      function focus(i, user) {
+        active = i; if (user) idleAt = performance.now() + 9000;
+        if (ok) { const m = lanes[i].mid; tgt = [-m[0], -Math.max(-35, Math.min(35, m[1])) * 0.85]; }
+        document.querySelectorAll(".chip").forEach((c, k) => c.classList.toggle("on", k === i));
+        const l = LANES[i], a = PORTS[l.ports[0][0]][0], b = PORTS[l.ports.at(-1)[0]][0];
+        $("laneCard").innerHTML = `<span class="globe__dot" style="--c:${l.color}"></span><div><b>${l.code} · ${l.name}</b><small>${a} → ${b} · ${l.ports.at(-1)[1]} days · weekly, ${["Sundays", "Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays"][l.day]}</small></div><a href="#schedules" data-lane="${i}" aria-label="See ${l.code} schedule"><i class="ri-arrow-right-up-line"></i></a>`;
+      }
+      const vis = (c) => d3.geoDistance(c, [-cur[0], -cur[1]]) < Math.PI / 2 - 0.02;
+      function glowDot(x, y, r, col, a = 1) {
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r * 4); g.addColorStop(0, col); g.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.globalAlpha = a * 0.55; ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r * 4, 0, 7); ctx.fill();
+        ctx.globalAlpha = a; ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); ctx.globalAlpha = 1;
+      }
+      function draw(now) {
+        const t = (now - t0) / 1000, R = W / 2, c = W / 2;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, W);
+        /* body */
+        let g = ctx.createRadialGradient(c - R * 0.38, c - R * 0.42, R * 0.05, c, c, R);
+        g.addColorStop(0, "#4f68ee"); g.addColorStop(0.5, "#2537a6"); g.addColorStop(1, "#0c165c");
+        ctx.fillStyle = g; ctx.beginPath(); path({ type: "Sphere" }); ctx.fill();
+        ctx.save(); ctx.beginPath(); path({ type: "Sphere" }); ctx.clip();
+        ctx.beginPath(); path(grat); ctx.strokeStyle = "rgba(255,255,255,.09)"; ctx.lineWidth = 0.7; ctx.stroke();
+        if (land) {
+          g = ctx.createRadialGradient(c - R * 0.35, c - R * 0.4, R * 0.1, c, c, R * 1.05);
+          g.addColorStop(0, "rgba(226,233,255,.92)"); g.addColorStop(0.6, "rgba(170,186,246,.62)"); g.addColorStop(1, "rgba(120,140,225,.35)");
+          ctx.beginPath(); path(land); ctx.fillStyle = g; ctx.fill(); ctx.strokeStyle = "rgba(255,255,255,.35)"; ctx.lineWidth = 0.5; ctx.stroke();
+        }
+        /* lanes */
+        LANES.forEach((l, i) => {
+          const on = i === active; ctx.beginPath(); path({ type: "LineString", coordinates: l.path });
+          ctx.setLineDash(on ? [] : [3, 5]); ctx.lineWidth = on ? 2.2 : 1.1; ctx.strokeStyle = on ? l.color : "rgba(205,218,255,.5)"; ctx.stroke();
+        });
+        ctx.setLineDash([]);
+        /* ports */
+        const onPorts = new Set(LANES[active].ports.map((p) => p[0]));
+        for (const k in PORTS) {
+          const co = PORTS[k][2]; if (!vis(co)) continue; const [x, y] = proj(co), on = onPorts.has(k);
+          if (on && !RM) { const p = (t * 0.6 + x * 0.01) % 1; ctx.strokeStyle = `rgba(255,255,255,${0.6 * (1 - p)})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(x, y, 3 + p * 12, 0, 7); ctx.stroke(); }
+          glowDot(x, y, on ? 2.6 : 1.8, on ? "rgba(140,220,255,1)" : "rgba(150,190,255,.9)", on ? 1 : 0.75);
+        }
+        /* ships */
+        LANES.forEach((l, i) => [0, 0.5].forEach((o) => {
+          const f = RM ? (o + 0.3) % 1 : (t / (40 + i * 6) + o + i * 0.17) % 1, p = along(i, f); if (!vis(p)) return;
+          const [x, y] = proj(p); ctx.fillStyle = i === active ? l.color : "#fff"; ctx.globalAlpha = i === active ? 1 : 0.7;
+          ctx.beginPath(); ctx.arc(x, y, i === active ? 3.4 : 2.3, 0, 7); ctx.fill(); ctx.globalAlpha = 1;
+        }));
+        /* end-port labels */
+        ctx.font = "600 11px Inter, sans-serif"; ctx.textBaseline = "middle";
+        [LANES[active].ports[0][0], LANES[active].ports.at(-1)[0]].forEach((k) => {
+          const co = PORTS[k][2]; if (!vis(co)) return; const [x, y] = proj(co), txt = PORTS[k][0], w = ctx.measureText(txt).width + 14;
+          const lx = x + 9 + w > W ? x - 9 - w : x + 9;
+          ctx.fillStyle = "rgba(10,20,80,.72)"; ctx.beginPath(); ctx.roundRect(lx, y - 10, w, 20, 10); ctx.fill(); ctx.fillStyle = "#fff"; ctx.fillText(txt, lx + 7, y + 0.5);
+        });
+        /* light + rim */
+        g = ctx.createRadialGradient(c - R * 0.45, c - R * 0.5, 0, c - R * 0.45, c - R * 0.5, R * 0.9);
+        g.addColorStop(0, "rgba(255,255,255,.22)"); g.addColorStop(1, "rgba(255,255,255,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, W);
+        g = ctx.createRadialGradient(c, c, R * 0.72, c, c, R); g.addColorStop(0, "rgba(6,12,60,0)"); g.addColorStop(1, "rgba(6,12,60,.42)");
+        ctx.fillStyle = g; ctx.fillRect(0, 0, W, W);
+        ctx.restore();
+      }
+      function loop(now) {
+        if (visible && ok) {
+          if (!drag) {
+            if (!RM && now > idleAt && now - (loop.last || 0) > 7000) { loop.last = now; if (loop.started) focus((active + 1) % LANES.length); loop.started = true; }
+            if (!RM) tgt[0] += 0.012;
+            cur[0] += (tgt[0] - cur[0]) * 0.045; cur[1] += (tgt[1] - cur[1]) * 0.045;
+          }
+          proj.rotate(cur); draw(now);
+        }
+        requestAnimationFrame(loop);
+      }
+      function init() {
+        size(); addEventListener("resize", size);
+        new IntersectionObserver((e) => (visible = e[0].isIntersecting)).observe(wrap);
+        $("chips").innerHTML = LANES.map((l, i) => `<button class="chip chip--${i}" data-i="${i}" style="--c:${l.color}"><i class="ri-ship-2-line"></i><b>${l.code}</b><span>${l.name.replace(" Express", "")}</span></button>`).join("");
+        $("chips").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (b) focus(+b.dataset.i, true); });
+        $("laneCard").addEventListener("click", (e) => { const a = e.target.closest("[data-lane]"); if (a) Sched.lane(+a.dataset.lane); });
+        focus(0); cur = tgt.slice(); cur[0] -= 40;
+        if (!ok) { wrap.classList.add("no-js-globe"); return; }
+        canvas.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, y: e.clientY }; canvas.setPointerCapture(e.pointerId); idleAt = performance.now() + 9000; });
+        canvas.addEventListener("pointermove", (e) => { if (!drag) return; cur[0] += (e.clientX - drag.x) * 0.35; cur[1] = Math.max(-60, Math.min(60, cur[1] - (e.clientY - drag.y) * 0.35)); tgt = cur.slice(); drag = { x: e.clientX, y: e.clientY }; });
+        ["pointerup", "pointercancel"].forEach((ev) => canvas.addEventListener(ev, () => { drag = null; idleAt = performance.now() + 9000; }));
+        fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-110m.json").then((r) => r.json()).then((topo) => (land = topojson.feature(topo, topo.objects.land))).catch(() => {});
+        requestAnimationFrame(loop);
+      }
+      return { init, focus };
+    })();
+
+    /* ---------- Services ---------- */
+    const SERVICES = [
+      ["1605745341112-85968b19335b", "Full container load", "20', 40' and high-cube boxes on fixed weekly sailings, with online booking and 7 days of free time at destination.", ["20' / 40' / 40' HC", "Online booking", "Free time 7 days"]],
+      ["1494961104209-3c223057bd26", "Part loads (LCL)", "Not enough for a full box? We consolidate in Shanghai, Singapore, Jebel Ali and Rotterdam every week.", ["From 1 m³", "Weekly consolidation", "Bonded CFS"]],
+      ["1606185540834-d6e7483ee1a4", "Reefer", "2,400 reefer plugs for fruit, pharma and frozen cargo. Temperature is logged every 15 minutes and visible in tracking.", ["−30 °C to +30 °C", "Live temperature", "Pre-trip inspected"]],
+      ["1592838064575-70ed626d3a0e", "Inland haulage & rail", "We collect from your factory and deliver to the warehouse door, by truck or block train, on one bill of lading.", ["Door to door", "Rail to 40 inland hubs", "One B/L"]],
+    ];
+    $("svc").innerHTML = SERVICES.map(([img, t, d, tags], i) => `
+      <article class="sv reveal" style="--d:${i * 0.08}s">
+        <div class="sv__img"><img src="${U(img, 900)}" alt="${t}" loading="lazy" /></div>
+        <div class="sv__body"><h3>${t}</h3><p>${d}</p><ul>${tags.map((x) => `<li><i class="ri-check-line"></i>${x}</li>`).join("")}</ul></div>
+      </article>`).join("");
+
+    /* ---------- Schedules ---------- */
+    const Sched = (() => {
+      const portList = Object.keys(PORTS).sort((a, b) => PORTS[a][0].localeCompare(PORTS[b][0]));
+      const opts = (sel) => portList.map((k) => `<option value="${k}" ${k === sel ? "selected" : ""}>${PORTS[k][0]}, ${PORTS[k][1]}</option>`).join("");
+      $("pol").innerHTML = opts("SHA"); $("pod").innerHTML = opts("GOA");
+      $("qFrom").innerHTML = opts("SHA"); $("qTo").innerHTML = opts("RTM");
+      $("from").value = iso(today); $("qDate").value = iso(new Date(+today + 7 * DAY));
+      /* every direct leg between two ports: lane, direction, offsets */
+      function legs(a, b) {
+        const out = [];
+        LANES.forEach((l, li) => {
+          const ia = l.ports.findIndex((p) => p[0] === a), ib = l.ports.findIndex((p) => p[0] === b);
+          if (ia < 0 || ib < 0 || ia === ib) return;
+          const total = l.ports.at(-1)[1], fwd = ia < ib;
+          const off = (i) => (fwd ? l.ports[i][1] : total - l.ports[i][1]);
+          out.push({ li, dir: fwd ? "E" : "W", start: fwd ? l.day : l.ret, oa: off(ia), ob: off(ib) });
+        });
+        return out;
+      }
+      /* next departure of a leg on/after a date */
+      function next(leg, after) {
+        const first = new Date(+after - leg.oa * DAY); const shift = (leg.start - first.getDay() + 7) % 7;
+        const dep = new Date(+first + shift * DAY + leg.oa * DAY);
+        if (dep < after) dep.setDate(dep.getDate() + 7);
+        return dep;
+      }
+      const wk = (d) => Math.floor(+d / (7 * DAY));
+      function sailing(leg, after) {
+        const dep = next(leg, after), l = LANES[leg.li], w = wk(dep);
+        return { dep, arr: new Date(+dep + (leg.ob - leg.oa) * DAY), lane: l, vessel: l.vessels[w % l.vessels.length], voy: `${(w % 900) + 100}${leg.dir}` };
+      }
+      function search(a, b, from) {
+        const res = [];
+        for (let k = 0; k < 6; k++) {
+          const after = new Date(+from + k * 7 * DAY), opts = [];
+          legs(a, b).forEach((lg) => opts.push({ legs: [sailing(lg, after)] }));
+          if (!opts.length) for (const h of Object.keys(PORTS)) {
+            if (h === a || h === b) continue;
+            const l1 = legs(a, h), l2 = legs(h, b); if (!l1.length || !l2.length) continue;
+            l1.forEach((x) => l2.forEach((y) => { if (x.li === y.li) return; const s1 = sailing(x, after), s2 = sailing(y, new Date(+s1.arr + DAY)); opts.push({ legs: [s1, s2], via: h }); }));
+          }
+          opts.forEach((o) => { o.dep = o.legs[0].dep; o.arr = o.legs.at(-1).arr; o.days = Math.round((o.arr - o.dep) / DAY); });
+          opts.sort((x, y) => x.arr - y.arr);
+          if (opts[0] && !res.some((r) => +r.dep === +opts[0].dep)) res.push(opts[0]);
+        }
+        return res.sort((x, y) => x.dep - y.dep).slice(0, 5);
+      }
+      let last = [];
+      function render() {
+        const a = $("pol").value, b = $("pod").value, from = new Date($("from").value || iso(today)); from.setHours(0, 0, 0, 0);
+        if (a === b) { $("results").innerHTML = `<p class="results__empty"><i class="ri-information-line"></i> Choose two different ports.</p>`; return; }
+        last = search(a, b, from);
+        if (!last.length) { $("results").innerHTML = `<p class="results__empty"><i class="ri-information-line"></i> No service between these ports yet. <a href="#contact">Ask the booking desk</a> for a routing.</p>`; return; }
+        $("results").innerHTML = `
+          <div class="results__head"><b>${PORTS[a][0]} → ${PORTS[b][0]}</b><span>${last.length} sailings · ${last[0].via ? "via " + PORTS[last[0].via][0] : "direct service"}</span></div>
+          <div class="rtable">
+            <div class="rrow rrow--h"><span>Vessel / voyage</span><span>Departs</span><span>Arrives</span><span>Transit</span><span>Cut-off</span><span></span></div>
+            ${last.map((r, i) => `<div class="rrow" style="--d:${i * 0.05}s">
+              <span class="rv1"><i class="ri-ship-2-line"></i><div><b>${r.legs[0].vessel}</b><small>${r.legs[0].lane.code} ${r.legs[0].voy}${r.via ? ` · then ${r.legs[1].lane.code} via ${PORTS[r.via][0]}` : ""}</small></div></span>
+              <span data-l="Departs">${fmtDW(r.dep)}</span><span data-l="Arrives">${fmtDW(r.arr)}</span>
+              <span data-l="Transit"><b class="days">${r.days} days</b>${r.via ? '<em class="tag">1 stop</em>' : '<em class="tag tag--ok">Direct</em>'}</span>
+              <span data-l="Cut-off">${fmtD(new Date(+r.dep - 2 * DAY))}, 16:00</span>
+              <span><button class="btn btn--sm" data-book="${i}">Book</button></span>
+            </div>`).join("")}
+          </div>`;
+      }
+      $("schedForm").addEventListener("submit", (e) => { e.preventDefault(); render(); });
+      ["pol", "pod", "from"].forEach((id) => $(id).addEventListener("change", render));
+      $("swap").onclick = () => { const a = $("pol").value; $("pol").value = $("pod").value; $("pod").value = a; render(); };
+      $("results").addEventListener("click", (e) => { const b = e.target.closest("[data-book]"); if (b) book(last[+b.dataset.book]); });
+      function lane(i) { const p = LANES[i].ports; $("pol").value = p[0][0]; $("pod").value = p.at(-1)[0]; render(); }
+      /* next departure anywhere, for the hero line */
+      const soon = LANES.map((l, li) => sailing({ li, dir: "E", start: l.day, oa: 0, ob: l.ports.at(-1)[1] }, today)).sort((x, y) => x.dep - y.dep)[0];
+      $("nextDep").textContent = `${soon.vessel} · ${PORTS[soon.lane.ports[0][0]][0]} → ${PORTS[soon.lane.ports.at(-1)[0]][0]}, ${fmtDW(soon.dep)}`;
+      render();
+      return { lane, render };
+    })();
+
+    /* ---------- Booking modal ---------- */
+    function openModal(html) { $("modalBody").innerHTML = html; $("modal").classList.add("on"); $("modal").setAttribute("aria-hidden", "false"); }
+    function closeModal() { $("modal").classList.remove("on"); $("modal").setAttribute("aria-hidden", "true"); }
+    function book(r) {
+      openModal(`
+        <p class="label">Book space</p><h3 id="mTitle">${r.legs[0].vessel} <small>${r.legs[0].lane.code} ${r.legs[0].voy}</small></h3>
+        <div class="msum"><div><span>Departs</span><b>${fmtDW(r.dep)}</b></div><div><span>Arrives</span><b>${fmtDW(r.arr)}</b></div><div><span>Transit</span><b>${r.days} days</b></div></div>
+        <form class="mform" id="bookForm">
+          <div class="quote__row"><label><span>Container</span><select><option>20' Dry</option><option selected>40' Dry</option><option>40' High Cube</option><option>40' Reefer</option></select></label>
+          <label><span>Quantity</span><input type="number" min="1" max="200" value="1" required /></label></div>
+          <label><span>Commodity</span><input required placeholder="e.g. furniture, 12 t" /></label>
+          <div class="quote__row"><label><span>Company</span><input required /></label><label><span>Email</span><input type="email" required /></label></div>
+          <button class="btn btn--wide">Request booking</button>
+        </form>`);
+      $("bookForm").addEventListener("submit", (e) => {
+        e.preventDefault(); const ref = "TSR" + String(Date.now()).slice(-7);
+        e.target.outerHTML = `<div class="mdone"><i class="ri-checkbox-circle-fill"></i><b>Booking request ${ref} received</b><p>The booking desk confirms the slot and sends release orders for empty pick-up within two working hours.</p></div>`;
+      });
+    }
+    $("modalX").onclick = closeModal;
+    $("modal").addEventListener("click", (e) => { if (e.target === $("modal")) closeModal(); });
+
+    /* ---------- Tracking ---------- */
+    const TRACK = {
+      TSRU4821936: { type: "40' High Cube", lane: 0, from: "SHA", to: "GOA", vessel: "Tessaro Calypso", start: -19, steps: [["Empty container released", "Shanghai depot", 0], ["Gate in, full", "Yangshan terminal", 2], ["Loaded on vessel", "Shanghai", 3], ["Departed", "Shanghai", 3], ["Transit call", "Singapore", 10], ["Transit call", "Jeddah", 21], ["Arriving", "Genoa, PSA Pra'", 29], ["Discharged", "Genoa", 30], ["Delivered", "Milan, consignee", 32]] },
+      TSRU1157203: { type: "40' Reefer · −18 °C", lane: 1, from: "RTM", to: "NYC", vessel: "Genova Star", start: -14, steps: [["Empty container released", "Rotterdam depot", 0], ["Gate in, full", "Maasvlakte II", 1], ["Loaded on vessel", "Rotterdam", 2], ["Departed", "Rotterdam", 2], ["Transit call", "Le Havre", 4], ["Arriving", "New York, Port Newark", 13], ["Discharged", "New York", 14], ["Delivered", "Edison NJ, consignee", 15]] },
+      TGHU9033118: { type: "20' Dry", lane: 2, from: "JEA", to: "NSA", vessel: "Levante Pearl", start: -9, steps: [["Empty container released", "Jebel Ali depot", 0], ["Gate in, full", "Jebel Ali T3", 1], ["Loaded on vessel", "Jebel Ali", 2], ["Departed", "Jebel Ali", 2], ["Transit call", "Mundra", 7], ["Arrived", "Nhava Sheva, JNPT", 9], ["Discharged", "Nhava Sheva", 9], ["Delivered", "Pune, consignee", 11]] },
+    };
+    function track(raw) {
+      const id = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+      if (!/^[A-Z]{4}\d{7}$/.test(id)) { $("tcard").innerHTML = `<div class="tcard__empty"><i class="ri-error-warning-line"></i><b>Check the number</b><p>A container number is 4 letters and 7 digits, like TSRU 482193 6.</p></div>`; return; }
+      const c = TRACK[id];
+      if (!c) { $("tcard").innerHTML = `<div class="tcard__empty"><i class="ri-search-eye-line"></i><b>${id} isn't on a Tessaro sailing</b><p>If you booked through a forwarder, ask them for the Tessaro booking number, or call +39 010 557 3000.</p></div>`; return; }
+      const base = new Date(+today + c.start * DAY), dates = c.steps.map((s) => new Date(+base + s[2] * DAY));
+      let now = dates.findLastIndex((d) => d <= today); now = Math.max(0, now);
+      const dep = dates[3], arr = dates[c.steps.findIndex((s) => /Arriv/.test(s[0]))];
+      const pct = Math.max(0, Math.min(100, ((today - dep) / (arr - dep)) * 100));
+      const status = now >= c.steps.length - 1 ? "Delivered" : today < dep ? "At origin" : today < arr ? "On the water" : "At destination";
+      $("tcard").innerHTML = `
+        <div class="tcard__top"><div><small>Container</small><b>${id.slice(0, 4)} ${id.slice(4, 10)} ${id.slice(10)}</b><span>${c.type}</span></div><em class="pill">${status}</em></div>
+        <div class="tcard__route">
+          <div><small>From</small><b>${PORTS[c.from][0]}</b><span>${fmtD(dep)}</span></div>
+          <div class="tcard__bar"><i style="width:${pct}%"></i><span class="tcard__ship" style="left:${pct}%"><i class="ri-ship-2-fill"></i></span></div>
+          <div class="ta-r"><small>To</small><b>${PORTS[c.to][0]}</b><span>ETA ${fmtD(arr)}</span></div>
+        </div>
+        <p class="tcard__vsl"><i class="ri-anchor-line"></i> ${c.vessel} · ${LANES[c.lane].code} service</p>
+        <ol class="tsteps">${c.steps.map((s, i) => `<li class="${i < now ? "done" : i === now ? "now" : ""}"><span></span><div><b>${s[0]}</b><small>${s[1]}</small></div><time>${fmtD(dates[i])}</time></li>`).join("")}</ol>`;
+    }
+    $("trackForm").addEventListener("submit", (e) => { e.preventDefault(); track($("trackIn").value); });
+    document.querySelector(".track__try").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (b) { $("trackIn").value = b.textContent; track(b.dataset.c); } });
+    track("TSRU4821936"); $("trackIn").value = "TSRU 482193 6";
+
+    /* ---------- Network ---------- */
+    $("lanes").innerHTML = LANES.map((l, i) => `
+      <article class="lane reveal" style="--d:${i * 0.08}s;--c:${l.color}">
+        <span class="lane__code">${l.code}</span>
+        <h3>${PORTS[l.ports[0][0]][0]} <i class="ri-arrow-right-line"></i> ${PORTS[l.ports.at(-1)[0]][0]}</h3>
+        <p>${l.ports.at(-1)[1]} days · every ${["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][l.day]} · ${l.ports.length} ports</p>
+        <button class="lane__btn" data-lane="${i}" aria-label="See ${l.name} sailings">See sailings <i class="ri-arrow-right-up-line"></i></button>
+      </article>`).join("");
+    $("lanes").addEventListener("click", (e) => { const b = e.target.closest("[data-lane]"); if (!b) return; Sched.lane(+b.dataset.lane); $("schedules").scrollIntoView({ behavior: RM ? "auto" : "smooth" }); });
+
+    /* ---------- Fleet ---------- */
+    const FLEET = [
+      ["Aurora class", "LNG dual-fuel", 14000, 6, "2019–21", 366, "AEX"],
+      ["Genova class", "Container", 8500, 10, "2012–16", 300, "TAX · TPX"],
+      ["Levante class", "Container", 4250, 12, "2010–18", 260, "GIX · feeders"],
+      ["Polar class", "Reefer", 1700, 8, "2015–20", 172, "Reefer feeders"],
+      ["Coastal class", "Feeder", 1100, 12, "2008–17", 148, "Med & North Europe"],
+    ];
+    const FT = ["All", "LNG dual-fuel", "Container", "Reefer", "Feeder"];
+    $("ftabs").innerHTML = FT.map((t, i) => `<button class="${i ? "" : "on"}" data-t="${t}">${t}</button>`).join("");
+    function fleet(t) {
+      $("ftable").innerHTML = `<div class="frow frow--h"><span>Class</span><span>TEU</span><span>Ships</span><span>Built</span><span>Length</span></div>` +
+        FLEET.filter((f) => t === "All" || f[1] === t).map((f) => `<div class="frow"><span><b>${f[0]}</b><small>${f[1]} · ${f[6]}</small></span><span>${f[2].toLocaleString("en-US")}</span><span>${f[3]}</span><span>${f[4]}</span><span>${f[5]} m</span></div>`).join("");
+    }
+    $("ftabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; $("ftabs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); fleet(b.dataset.t); });
+    fleet("All");
+
+    /* ---------- Reviews ---------- */
+    const REVIEWS = [
+      ["We moved 1,200 boxes of tiles from Shanghai to Genoa last year. Two rolled sailings, both flagged a week ahead with a new slot already held for us.", "Chiara Benedetti", "Logistics manager, Arcade Ceramiche", "1494790108377-be9c29b29330"],
+      ["The reefer temperature log in tracking is what sold us. Our QA team checks it before the box even lands in Newark.", "Daniel Hart", "Supply chain lead, Fieldnote Foods", "1500648767791-00dcc994a43e"],
+      ["Our booking desk contact in Jebel Ali has been the same person for four years. That alone is worth a few dollars a box.", "Rashid Al-Mansoori", "Import director, Northwind Trading", "1507003211169-0a1dd7228f2d"],
+      ["Clear free time, clear demurrage, and the CO₂ figure on every bill of lading for our annual report.", "Anna Kovač", "Sustainability manager, Voltra Energy", "1544005313-94ddf0286df2"],
+    ];
+    $("rvTrack").innerHTML = REVIEWS.map(([q, n, r, img]) => `<figure class="rvc"><i class="ri-double-quotes-l"></i><blockquote>${q}</blockquote><figcaption><img src="${U(img, 120)}" alt="${n}" loading="lazy" /><div><b>${n}</b><span>${r}</span></div></figcaption></figure>`).join("");
+    let rvI = 0;
+    const rvPer = () => (innerWidth < 760 ? 1 : 2);
+    function rvGo(i) { const max = REVIEWS.length - rvPer(); rvI = i < 0 ? max : i > max ? 0 : i; const card = $("rvTrack").children[0]; $("rvTrack").style.transform = `translateX(${-rvI * (card.offsetWidth + 24)}px)`; }
+    $("rvPrev").onclick = () => rvGo(rvI - 1); $("rvNext").onclick = () => rvGo(rvI + 1);
+    addEventListener("resize", () => rvGo(rvI));
+    if (!RM) setInterval(() => { if (!document.hidden) rvGo(rvI + 1); }, 7000);
+
+    /* ---------- Offices + quote ---------- */
+    const OFFICES = [["Genoa", "Head office", "Europe/Rome", "+39 010 557 3000"], ["Rotterdam", "North Europe", "Europe/Amsterdam", "+31 10 448 2200"], ["Jebel Ali", "Gulf & India", "Asia/Dubai", "+971 4 881 7300"], ["Singapore", "Asia hub", "Asia/Singapore", "+65 6221 8400"], ["Shanghai", "China desk", "Asia/Shanghai", "+86 21 6330 5100"], ["Los Angeles", "Americas", "America/Los_Angeles", "+1 310 555 0190"]];
+    function offices() {
+      const now = new Date();
+      $("offices").innerHTML = OFFICES.map(([c, r, tz, ph]) => {
+        const h = +now.toLocaleString("en-GB", { timeZone: tz, hour: "2-digit", hour12: false }), wd = now.toLocaleString("en-GB", { timeZone: tz, weekday: "short" });
+        const open = h >= 8 && h < 18 && wd !== "Sun";
+        return `<div class="off"><div><b>${c}</b><small>${r}</small></div><a href="tel:${ph.replace(/\s/g, "")}">${ph}</a><span class="off__t ${open ? "open" : ""}">${now.toLocaleTimeString("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit" })}<em>${open ? "Open" : "Closed"}</em></span></div>`;
+      }).join("");
+    }
+    offices(); setInterval(offices, 30000);
+    $("quote").addEventListener("submit", (e) => {
+      e.preventDefault(); const a = PORTS[$("qFrom").value][0], b = PORTS[$("qTo").value][0];
+      $("quoteOk").innerHTML = `<i class="ri-checkbox-circle-fill"></i> Thanks. Your ${a} → ${b} request is with our trade-lane team; expect a rate by email within four working hours.`;
+      e.target.querySelector(".btn").disabled = true;
+    });
+
+    /* ---------- News ---------- */
+    const NEWS = [
+      ["1578575437130-527eed3abbec", "Network", "AEX adds a direct Jeddah call from week 2", "From January the Asia – Europe Express calls Jeddah eastbound and westbound, cutting Red Sea transit by four days.", -3],
+      ["1590496793929-36417d3117de", "Tariffs", "Peak-season surcharge ends on 15 December", "The USD 300 per FEU peak-season surcharge on Asia – Europe cargo is withdrawn for sailings from 15 December.", -9],
+      ["1559297434-fae8a1916a79", "Sustainability", "Shore power now live at our Genoa berth", "Every Tessaro call in Genoa now plugs in at the berth, saving about 38 tonnes of CO₂ per ship each year.", -17],
+    ];
+    $("newsGrid").innerHTML = NEWS.map(([img, cat, t, d, ago], i) => `
+      <article class="nw reveal" style="--d:${i * 0.08}s"><a href="#"><div class="nw__img"><img src="${U(img, 800)}" alt="${t}" loading="lazy" /><span>${cat}</span></div>
+      <div class="nw__body"><time>${fmtD(new Date(+today + ago * DAY))} ${today.getFullYear()}</time><h3>${t}</h3><p>${d}</p><b>Read advisory <i class="ri-arrow-right-line"></i></b></div></a></article>`).join("");
+
+    /* ---------- FAQ ---------- */
+    const FAQ = [
+      ["How much free time do I get?", "Seven days combined demurrage and detention at destination on dry boxes, five days on reefers. Longer free time can be agreed in your contract or bought per booking."],
+      ["When is the cut-off for my cargo?", "Full containers must be gated in at the terminal by 16:00 two days before the vessel departs. VGM and shipping instructions close 24 hours before the gate cut-off."],
+      ["Can I book without a forwarder?", "Yes. Any registered company can open an account in a day and book directly online or through the desk. Forwarders and NVOCCs are also welcome."],
+      ["What happens if my sailing is rolled?", "We tell you at least five days ahead, hold space on the next departure at the same rate and waive storage at the port of loading for the extra week."],
+      ["How do you calculate CO₂ per container?", "We take the actual fuel burnt on the voyage, apply IMO emission factors and split it across containers by weight and distance. The figure is printed on the bill of lading."],
+    ];
+    $("faqList").innerHTML = FAQ.map(([q, a], i) => `<div class="fq ${i ? "" : "open"}"><button aria-expanded="${!i}">${q}<i class="ri-add-line"></i></button><div class="fq__a"><p>${a}</p></div></div>`).join("");
+    $("faqList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const f = b.parentElement, o = !f.classList.contains("open"); $("faqList").querySelectorAll(".fq").forEach((x) => { x.classList.remove("open"); x.querySelector("button").setAttribute("aria-expanded", "false"); }); if (o) { f.classList.add("open"); b.setAttribute("aria-expanded", "true"); } });
+
+    /* ---------- Newsletter ---------- */
+    $("nl").addEventListener("submit", (e) => { e.preventDefault(); $("nlOk").textContent = "Subscribed. First update arrives Monday."; e.target.reset(); });
+
+    /* ---------- Header, nav, reveal, counters ---------- */
+    function onScroll() {
+      $("header").classList.toggle("sticky", scrollY > 20); $("totop").classList.toggle("on", scrollY > 800);
+      let cur = ""; document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < innerHeight * 0.4) cur = s.id; });
+      document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    $("totop").onclick = () => scrollTo({ top: 0, behavior: RM ? "auto" : "smooth" });
+    $("burger").onclick = () => document.body.classList.toggle("nav-open");
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("nav-open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); document.body.classList.remove("nav-open"); } });
+    function countUp(el) { const end = +el.dataset.count, t0 = performance.now(); (function k(n) { const p = Math.min((n - t0) / 1600, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("en-US"); if (p < 1) requestAnimationFrame(k); })(t0); }
+    const io = new IntersectionObserver((es) => es.forEach((x) => { if (!x.isIntersecting) return; x.target.classList.add("in"); x.target.querySelectorAll("[data-count]").forEach(countUp); io.unobserve(x.target); }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    G.init();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/landing-tessaro/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

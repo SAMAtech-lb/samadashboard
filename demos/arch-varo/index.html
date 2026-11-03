@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varo Architects — Homes, Workplaces and Public Buildings</title>
+  <meta name="description" content="Varo is a 24-person architecture studio in Lisbon designing homes, workplaces and public buildings across Portugal and Spain. Projects, process, team and new project enquiries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Varo Architects home"><span class="logo__mark"><i></i><i></i><i></i></span>VARO<small>Architects</small></a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#process">Process</a>
+        <a href="#studio">Studio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--sm">Start a project <i class="ri-arrow-right-up-line"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero: title, then the photo opens to full bleed as you scroll -->
+    <section class="hero" id="hero">
+      <div class="hero__sticky">
+        <div class="hero__head">
+          <p class="hero__kicker hero__fade"><span>Lisbon</span><span>Architecture &amp; interiors</span><span>Est. 2009</span></p>
+          <h1 class="hero__title"><span class="line"><span>Buildings that</span></span><span class="line"><span>age <em>well.</em></span></span></h1>
+        </div>
+        <figure class="hero__frame" id="heroFrame">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=75" alt="Casa Alvor, a timber and concrete family home lit at dusk" />
+          <figcaption class="hero__cap"><b>Casa Alvor</b><span>Family home · Algarve · 2025</span><a href="#work" class="hero__link">See the project <i class="ri-arrow-right-line"></i></a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section intro">
+      <div class="container intro__in">
+        <p class="label reveal">The studio</p>
+        <p class="intro__big reveal">We are 24 architects and interior designers making <b>homes, workplaces and public buildings</b> across Portugal and Spain. Fewer, better materials. Daylight first. Buildings that are cheaper to run than the ones they replace.</p>
+        <div class="intro__facts reveal">
+          <div><b>140+</b><span>buildings completed</span></div>
+          <div><b>62%</b><span>less energy than local code on average</span></div>
+          <div><b>17 yrs</b><span>working from the same studio in Alcântara</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section work-sec" id="work">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="label reveal">Selected work</p>
+            <h2 class="h2 reveal">Projects</h2>
+          </div>
+          <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects"></div>
+        </div>
+        <div class="work" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- Sketch vs built -->
+    <section class="section approach" id="approach">
+      <div class="container approach__in">
+        <div class="approach__copy">
+          <p class="label reveal">Approach</p>
+          <h2 class="h2 reveal">From the first line <em>to the last brick.</em></h2>
+          <p class="reveal">Every project starts as a hand sketch on the site itself. Drag across the image to compare our first concept drawing for Casa Pinhal with the finished house, 26 months later.</p>
+          <ul class="principles">
+            <li class="reveal"><span>01</span><div><h3>Read the site</h3><p>Sun, wind, slope and neighbours decide the shape before we do.</p></div></li>
+            <li class="reveal"><span>02</span><div><h3>Few materials, done well</h3><p>Usually three: one for structure, one for skin, one for the hand.</p></div></li>
+            <li class="reveal"><span>03</span><div><h3>Cost you can see</h3><p>A live budget from the first meeting. No surprises at tender.</p></div></li>
+          </ul>
+        </div>
+        <div class="compare reveal" id="compare" aria-label="Drag to compare concept sketch and finished building">
+          <img class="compare__built" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80" alt="Casa Pinhal, finished" />
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="pencil" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feConvolveMatrix order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" preserveAlpha="true"/><feComponentTransfer><feFuncR type="linear" slope="-4" intercept="1"/><feFuncG type="linear" slope="-4" intercept="1"/><feFuncB type="linear" slope="-4" intercept="1"/></feComponentTransfer></filter></svg>
+          <div class="compare__sketch" id="sketch"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80" alt="" /></div>
+          <span class="compare__tag compare__tag--l">Concept sketch · 2022</span>
+          <span class="compare__tag compare__tag--r">Built · 2024</span>
+          <button class="compare__handle" id="handle" aria-label="Drag to compare" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="ri-arrow-left-right-line"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section process-sec" id="process">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="label reveal">Process</p>
+            <h2 class="h2 reveal">Five stages. <em>One team.</em></h2>
+          </div>
+          <p class="head__p reveal">The same architect leads your project from the first visit to handing you the keys. Here's what each stage involves and how long it usually takes.</p>
+        </div>
+        <div class="stages" id="stages"></div>
+      </div>
+    </section>
+
+    <!-- Studio / team -->
+    <section class="section studio-sec" id="studio">
+      <div class="container studio">
+        <figure class="studio__img reveal"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80" alt="The Varo studio in Alcântara, Lisbon" loading="lazy" /></figure>
+        <div>
+          <p class="label reveal">Partners</p>
+          <h2 class="h2 reveal">The people who <em>draw the first line.</em></h2>
+          <div class="team" id="team"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journal -->
+    <section class="section journal-sec">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="label reveal">Journal</p>
+            <h2 class="h2 reveal">Notes from the studio</h2>
+          </div>
+          <a href="#" class="link reveal">All articles <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="posts" id="posts"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-sec" id="contact">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="label reveal">New projects</p>
+          <h2 class="h2 reveal">Have a site, <em>or just an idea?</em></h2>
+          <p class="reveal">Tell us a little about it. A partner reads every enquiry and replies within three working days, usually with a few questions and a date for a site visit.</p>
+          <div class="office reveal">
+            <div><small>Studio</small><b>Rua da Junqueira 214<br />1300-338 Lisboa</b></div>
+            <div><small>Call</small><a href="tel:+351213555019">+351 21 355 5019</a></div>
+            <div><small>Write</small><a href="mailto:studio@varo.pt">studio@varo.pt</a></div>
+          </div>
+        </div>
+        <form class="enquiry reveal" id="enquiry" novalidate>
+          <label>Type of project</label>
+          <div class="chips" data-g="type"><button type="button" class="on">New home</button><button type="button">Renovation</button><button type="button">Workplace</button><button type="button">Hospitality</button><button type="button">Public / cultural</button></div>
+          <label>Do you have a site?</label>
+          <div class="chips" data-g="site"><button type="button" class="on">Yes, we own it</button><button type="button">Looking for one</button><button type="button">Not yet</button></div>
+          <label>Construction budget</label>
+          <div class="chips" data-g="budget"><button type="button">Under €400k</button><button type="button" class="on">€400k – €1M</button><button type="button">€1M – €3M</button><button type="button">€3M+</button></div>
+          <div class="row">
+            <input id="eName" placeholder="Your name" aria-label="Your name" />
+            <input id="eEmail" type="email" placeholder="Email" aria-label="Email" />
+          </div>
+          <textarea id="eMsg" rows="4" placeholder="Where is it, and what would you like to build?" aria-label="Project details"></textarea>
+          <button class="btn btn--full" type="submit">Send enquiry <i class="ri-arrow-right-up-line"></i></button>
+          <p class="form-msg" id="eOut"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__word" aria-hidden="true">VARO</p>
+      <div class="footer__grid">
+        <p>© <span id="year"></span> Varo Arquitetos, Lda.<br />Member of the Ordem dos Arquitectos.</p>
+        <nav><a href="#work">Work</a><a href="#approach">Approach</a><a href="#process">Process</a><a href="#studio">Studio</a><a href="#">Careers <em>2 open</em></a></nav>
+        <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div class="modal" id="modal" hidden>
+    <article class="proj" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+      <button class="proj__close" id="pClose" aria-label="Close project"><i class="ri-close-line"></i></button>
+      <div id="pBody"></div>
+      <div class="proj__nav"><button id="pPrev"><i class="ri-arrow-left-line"></i> Previous</button><button id="pNext">Next project <i class="ri-arrow-right-line"></i></button></div>
+    </article>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const PROJECTS = [
+      { id: "alvor", name: "Casa Alvor", type: "Residential", place: "Algarve, PT", year: 2025, area: "410 m²", status: "Completed", img: "1600585154340-be6161a56a0c", more: ["1600607687939-ce8a6c25118c", "1600047509807-ba8f99d2cdde"],
+        text: "A family home on a pine-covered slope above the sea. The house steps down the hill in three timber volumes so every bedroom gets morning sun and the living room opens fully to the terrace.", facts: ["Cross-laminated timber on a concrete plinth", "Heat pump + 18 kW of solar, net-zero over the year", "Built in 14 months"] },
+      { id: "arcos", name: "Galeria dos Arcos", type: "Cultural", place: "Évora, PT", year: 2024, area: "1,250 m²", status: "Completed", img: "1524230572899-a752b3835840", more: ["1487958449943-2429e8be8625", "1518005020951-eccb494ad742"],
+        text: "A contemporary art gallery inside a 17th-century convent. We kept the vaults, cleaned them back to the original lime and slid a new steel-and-glass mezzanine between them without touching the old walls.", facts: ["Listed building, fully reversible insertions", "Natural ventilation through the old chimneys", "Shortlisted for the national heritage prize"] },
+      { id: "pinhal", name: "Casa Pinhal", type: "Residential", place: "Sintra, PT", year: 2024, area: "290 m²", status: "Completed", img: "1600566753190-17f0baa2a6c3", more: ["1600607687939-ce8a6c25118c", "1613490493576-7fde63acd811"],
+        text: "A weekend house for a couple of retired doctors, wrapped in charred pine and set low under the trees so it disappears from the road.", facts: ["Charred-pine cladding, no paint, no maintenance", "Rainwater harvesting for the whole garden", "Single level, fully step-free"] },
+      { id: "doca", name: "Doca 7 Offices", type: "Workplace", place: "Lisbon, PT", year: 2023, area: "6,800 m²", status: "Completed", img: "1497366216548-37526070297c", more: ["1511818966892-d7d671e672a2", "1486325212027-8081e485255e"],
+        text: "A 1950s warehouse on the river turned into workspace for 600 people. We opened a central light well through all four floors and gave every desk a view of the water or the courtyard.", facts: ["Reused 85% of the original structure", "BREEAM Excellent", "Roof garden open to the neighbourhood"] },
+      { id: "marina", name: "Marina Residences", type: "Residential", place: "Valencia, ES", year: 2026, area: "9,400 m²", status: "On site", img: "1545324418-cc1a3fa10c00", more: ["1460317442991-0ec209397118", "1512917774080-9991f1c4c750"],
+        text: "Ninety-two apartments around a shaded courtyard near the port. Deep balconies work as outdoor rooms and keep the summer sun off the glass.", facts: ["Every apartment has two orientations", "Passive cooling, no AC in common areas", "Completion spring 2027"] },
+      { id: "solar", name: "Hotel Solar", type: "Hospitality", place: "Comporta, PT", year: 2025, area: "3,100 m²", status: "Completed", img: "1600596542815-ffad4c1539a9", more: ["1613490493576-7fde63acd811", "1512917774080-9991f1c4c750"],
+        text: "Twenty-eight rooms in low white pavilions among the rice fields, each with its own patio and a pool shared with just three others.", facts: ["Lime render and local reed ceilings", "Grey-water reuse for irrigation", "Opened June 2025"] },
+    ];
+    const STAGES = [
+      ["01", "Feasibility", "2–4 weeks", "Site visit, measured survey, what the planning rules allow and a first cost range."],
+      ["02", "Concept", "6–8 weeks", "Sketches and models of two or three options until one feels right. You see it in 3D from week two."],
+      ["03", "Licensing", "3–6 months", "We prepare and submit the planning application and handle every question from the council."],
+      ["04", "Technical design", "2–3 months", "Construction drawings, engineers coordinated, and a tender to three builders we trust."],
+      ["05", "On site", "10–24 months", "A Varo architect on site every week, approving every change and every invoice until handover."],
+    ];
+    const TEAM = [
+      ["Inês Varela", "Founding partner", "1438761681033-6461ffad8d80"],
+      ["Tomás Rocha", "Partner, residential", "1507003211169-0a1dd7228f2d"],
+      ["Marta Oliveira", "Partner, interiors", "1494790108377-be9c29b29330"],
+    ];
+    const POSTS = [
+      ["Jan 2027", "Why we design most homes in timber now", "1600047509807-ba8f99d2cdde"],
+      ["Nov 2026", "How much does it really cost to build a house in Portugal?", "1503387762-592deb58ef4e"],
+      ["Sep 2026", "Restoring Évora's convent without touching a single wall", "1524230572899-a752b3835840"],
+    ];
+
+    /* =====================================================
+       Hero: frame opens to full bleed on scroll
+       ===================================================== */
+    (() => {
+      const hero = $("hero"), frame = $("heroFrame");
+      const upd = () => {
+        const r = hero.getBoundingClientRect(), total = hero.offsetHeight - innerHeight;
+        const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total)));
+        frame.style.setProperty("--p", reduce ? 1 : p.toFixed(3));
+        hero.classList.toggle("open", p > 0.6);
+      };
+      addEventListener("scroll", upd, { passive: true }); addEventListener("resize", upd); upd();
+    })();
+
+    /* =====================================================
+       Work grid + filters + modal
+       ===================================================== */
+    const TYPES = ["All", ...new Set(PROJECTS.map((p) => p.type))];
+    let type = "All", cur = 0;
+    const renderWork = () => {
+      $("filters").innerHTML = TYPES.map((t) => `<button role="tab" class="${t === type ? "on" : ""}" aria-selected="${t === type}">${t}<sup>${t === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.type === t).length}</sup></button>`).join("");
+      $("workGrid").innerHTML = PROJECTS.filter((p) => type === "All" || p.type === type).map((p, i) => `
+        <button class="card ${i % 3 === 0 ? "card--wide" : ""}" data-id="${p.id}" style="--d:${i * 0.06}s" aria-label="Open ${p.name}">
+          <span class="card__img"><img src="${U(p.img, 1300)}" alt="${p.name}" loading="lazy" /></span>
+          <span class="card__meta"><b>${p.name}</b><span>${p.type} · ${p.place}</span><em>${p.year}</em></span>
+        </button>`).join("");
+    };
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; type = TYPES[[...$("filters").children].indexOf(b)]; renderWork(); });
+    const openProj = (i) => {
+      cur = (i + PROJECTS.length) % PROJECTS.length; const p = PROJECTS[cur];
+      $("pBody").innerHTML = `
+        <img class="proj__hero" src="${U(p.img, 1800)}" alt="${p.name}" />
+        <div class="proj__in">
+          <div class="proj__head"><div><p class="label">${p.type}</p><h3 id="pTitle">${p.name}</h3></div>
+          <dl class="proj__dl"><div><dt>Location</dt><dd>${p.place}</dd></div><div><dt>Area</dt><dd>${p.area}</dd></div><div><dt>Year</dt><dd>${p.year}</dd></div><div><dt>Status</dt><dd>${p.status}</dd></div></dl></div>
+          <p class="proj__text">${p.text}</p>
+          <ul class="proj__facts">${p.facts.map((f) => `<li><i class="ri-checkbox-blank-fill"></i>${f}</li>`).join("")}</ul>
+          <div class="proj__imgs">${p.more.map((m) => `<img src="${U(m, 1000)}" alt="" loading="lazy" />`).join("")}</div>
+        </div>`;
+      $("modal").hidden = false; document.querySelector(".proj").scrollTop = 0; document.body.style.overflow = "hidden"; $("pClose").focus();
+    };
+    const closeProj = () => { $("modal").hidden = true; document.body.style.overflow = ""; };
+    $("workGrid").addEventListener("click", (e) => { const c = e.target.closest(".card"); if (c) openProj(PROJECTS.findIndex((p) => p.id === c.dataset.id)); });
+    document.querySelector(".hero__link").addEventListener("click", (e) => { e.preventDefault(); openProj(0); });
+    $("pClose").addEventListener("click", closeProj);
+    $("pPrev").addEventListener("click", () => openProj(cur - 1));
+    $("pNext").addEventListener("click", () => openProj(cur + 1));
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeProj(); });
+    renderWork();
+
+    /* =====================================================
+       Sketch / built compare (drag, click or arrow keys)
+       ===================================================== */
+    (() => {
+      const box = $("compare"), sketch = $("sketch"), handle = $("handle");
+      let pos = 50, drag = false;
+      const set = (p) => { pos = Math.max(0, Math.min(100, p)); sketch.style.clipPath = `inset(0 ${100 - pos}% 0 0)`; handle.style.left = pos + "%"; handle.setAttribute("aria-valuenow", Math.round(pos)); };
+      const fromEvent = (e) => { const r = box.getBoundingClientRect(); set(((e.clientX - r.left) / r.width) * 100); };
+      box.addEventListener("pointerdown", (e) => { drag = true; box.setPointerCapture(e.pointerId); fromEvent(e); });
+      box.addEventListener("pointermove", (e) => { if (drag) fromEvent(e); });
+      box.addEventListener("pointerup", () => (drag = false));
+      handle.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") set(pos - 5); if (e.key === "ArrowRight") set(pos + 5); });
+      set(50);
+      // a gentle sweep the first time it scrolls into view, so people see it moves
+      new IntersectionObserver(([en], o) => { if (!en.isIntersecting || reduce) return; o.disconnect(); const t0 = performance.now(); const sw = (t) => { const k = (t - t0) / 1600; if (k >= 1 || drag) return; set(50 + Math.sin(k * Math.PI * 2) * 22); requestAnimationFrame(sw); }; requestAnimationFrame(sw); }, { threshold: 0.6 }).observe(box);
+    })();
+
+    /* =====================================================
+       Process, team, journal
+       ===================================================== */
+    $("stages").innerHTML = STAGES.map(([n, t, d, p], i) => `<article class="stage reveal ${i === 0 ? "on" : ""}" style="--d:${i * 0.06}s"><span class="stage__n">${n}</span><h3>${t}</h3><small>${d}</small><p>${p}</p></article>`).join("");
+    $("stages").addEventListener("pointerover", (e) => { const s = e.target.closest(".stage"); if (!s) return; $("stages").querySelectorAll(".stage").forEach((x) => x.classList.toggle("on", x === s)); });
+    $("team").innerHTML = TEAM.map(([n, r, img], i) => `<figure class="member reveal" style="--d:${i * 0.08}s"><span><img src="${U(img, 500)}" alt="${n}" loading="lazy" /></span><figcaption><b>${n}</b>${r}</figcaption></figure>`).join("");
+    $("posts").innerHTML = POSTS.map(([d, t, img], i) => `<a href="#" class="post reveal" style="--d:${i * 0.07}s"><span class="post__img"><img src="${U(img, 900)}" alt="" loading="lazy" /></span><small>${d}</small><h3>${t}</h3></a>`).join("");
+
+    /* =====================================================
+       Enquiry form
+       ===================================================== */
+    document.querySelectorAll(".chips").forEach((g) => g.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) g.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); }));
+    $("enquiry").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const n = $("eName").value.trim(), m = $("eEmail").value.trim(), out = $("eOut");
+      if (!n || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = "Please add your name and a valid email."; out.className = "form-msg err"; return; }
+      const t = e.target.querySelector('[data-g="type"] .on').textContent.toLowerCase();
+      out.textContent = `Thank you, ${n.split(" ")[0]}. Your ${t} enquiry is with our partners. Expect a reply at ${m} within three working days.`; out.className = "form-msg ok";
+      $("eName").value = $("eEmail").value = $("eMsg").value = "";
+    });
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeProj(); closeNav(); }
+      if (!$("modal").hidden && e.key === "ArrowRight") openProj(cur + 1);
+      if (!$("modal").hidden && e.key === "ArrowLeft") openProj(cur - 1);
+    });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > innerHeight * 0.5);
+      let c = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * 0.4) c = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === c));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/arch-varo/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

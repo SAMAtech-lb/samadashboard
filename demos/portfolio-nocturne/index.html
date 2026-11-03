@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idris Qasem — Frontend Developer</title>
+  <meta name="description" content="Idris Qasem is a frontend developer who builds fast, accessible websites and products in React and TypeScript. See live projects and get in touch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        if (location.search.indexOf("nointro") < 0 && !location.hash && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("intro-on");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Opening -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg viewBox="0 0 320 130"><polyline points="10,30 85,105 160,50 235,115 310,20" /><circle cx="10" cy="30" r="3.2" style="--n:0" /><circle cx="85" cy="105" r="3.2" style="--n:1" /><circle cx="160" cy="50" r="3.2" style="--n:2" /><circle cx="235" cy="115" r="3.2" style="--n:3" /><circle cx="310" cy="20" r="3.2" style="--n:4" /></svg>
+  </div>
+  <canvas id="nightCanvas" aria-hidden="true"></canvas>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Idris Qasem home">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3d7bff"/><stop offset="1" stop-color="#9cc4ff"/></linearGradient></defs><path d="M26 5a15 15 0 1 0 9 26A13 13 0 0 1 26 5Z" fill="url(#lg)"/><path d="M30 9l1.2 2.8L34 13l-2.8 1.2L30 17l-1.2-2.8L26 13l2.8-1.2Z" fill="#fff"/></svg>
+        <span>IDRIS QASEM</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header__tel" href="mailto:idris@qasem.dev"><i class="ri-mail-line"></i> idris@qasem.dev</a>
+      <a href="#contact" class="btn btn--sm">Hire me</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <canvas id="skyCanvas" aria-hidden="true"></canvas>
+      <svg class="hero__ridge" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
+        <path class="r1" d="M0 150 L70 140 L110 96 L150 92 L178 130 L260 136 L300 70 L330 62 L352 74 L380 128 L470 140 L540 120 L600 124 L640 84 L700 80 L726 118 L820 132 L900 104 L940 100 L980 132 L1080 138 L1130 88 L1170 76 L1200 82 L1236 130 L1330 120 L1380 96 L1440 104 L1440 240 L0 240Z"/>
+        <path class="r2" d="M0 196 L120 186 L200 160 L260 178 L380 182 L470 166 L560 184 L700 176 L780 150 L840 170 L980 186 L1100 170 L1180 184 L1300 174 L1440 186 L1440 240 L0 240Z"/>
+      </svg>
+      <div class="hero__tag" id="constTag" aria-live="polite"><b></b><span></span></div>
+      <div class="container hero__in">
+        <p class="label hero__kicker"><i class="ri-code-s-slash-line"></i> Available from January · Amman, Jordan</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Idris Qasem,</span></span>
+          <span class="line"><span>frontend <em class="grad">dev.</em></span></span>
+        </h1>
+        <p class="hero__lead">I build fast, accessible websites and products in React and TypeScript, for teams who care how things feel to use.</p>
+        <div class="hero__cta">
+          <a href="#work" class="btn">See my work <i class="ri-arrow-right-up-line"></i></a>
+          <a href="#contact" class="btn btn--ghost">Hire me</a>
+        </div>
+        <p class="hero__hint"><i class="ri-cursor-line"></i> Move across the sky to find the constellations</p>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="trust" aria-label="Companies I've worked with">
+      <div class="container trust__in reveal">
+        <p>Shipped with</p>
+        <ul><li>Northwind</li><li>Lumen</li><li>Orbit Air</li><li>Fieldnote</li><li>Arcade</li><li>Voltra</li></ul>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="sec" id="work">
+      <div class="container">
+        <div class="shead reveal">
+          <div>
+            <p class="label">Selected work</p>
+            <h2 class="h2">Sites I've built, <span class="grad">live.</span></h2>
+          </div>
+          <p class="shead__p">Hover over a project to scroll through it, or open the real thing.</p>
+        </div>
+        <div class="projects" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="sec" id="stack">
+      <div class="container">
+        <div class="shead reveal">
+          <div>
+            <p class="label">Stack</p>
+            <h2 class="h2">The tools I <span class="grad">reach for.</span></h2>
+          </div>
+        </div>
+        <div class="sky reveal">
+          <div class="sky__map"><svg id="skyMap" viewBox="0 0 800 500" role="img" aria-label="Star map of the tools I use, grouped into four constellations"></svg></div>
+          <div>
+            <div class="sky__tabs" id="skyTabs" role="tablist" aria-label="Choose a group"></div>
+            <div class="sky__panel" id="skyPanel" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="sec" id="experience">
+      <div class="container exp">
+        <div class="reveal">
+          <p class="label">Experience</p>
+          <h2 class="h2">Ten years of <span class="grad">shipping.</span></h2>
+          <p class="exp__lead">I've worked in-house and freelance, on teams of two and teams of forty. I like being close to designers, and I'm happiest when I own a feature from the first prototype to the production dashboard.</p>
+          <a class="btn btn--ghost" href="mailto:idris@qasem.dev?subject=Could%20you%20send%20your%20CV%3F">Ask for my CV</a>
+        </div>
+        <ol class="jobs" id="jobs"></ol>
+      </div>
+    </section>
+
+    <!-- Words -->
+    <section class="sec" id="words">
+      <div class="container">
+        <div class="shead reveal"><div><p class="label">References</p><h2 class="h2">People I've <span class="grad">built with.</span></h2></div></div>
+        <div class="words" id="wordsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec" id="contact">
+      <div class="container contact">
+        <div class="reveal">
+          <p class="label">Contact</p>
+          <h2 class="h2">Have something to <span class="grad">build?</span></h2>
+          <p class="exp__lead">I'm booking contract work from January, and I'm open to the right senior role. I'll reply within a working day.</p>
+          <ul class="reach">
+            <li><i class="ri-mail-line"></i><a href="mailto:idris@qasem.dev">idris@qasem.dev</a></li>
+            <li><i class="ri-github-fill"></i><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><i class="ri-linkedin-fill"></i><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><i class="ri-map-pin-line"></i><span>Amman, Jordan · Remote, GMT+3</span></li>
+          </ul>
+        </div>
+        <form class="cform reveal" id="cform">
+          <label><span>Your name</span><input required autocomplete="name" /></label>
+          <label><span>Email</span><input type="email" required autocomplete="email" /></label>
+          <label><span>What do you need?</span><select required><option value="">Choose one</option><option>A new website or app</option><option>Help on an existing product</option><option>Performance or accessibility fixes</option><option>A full-time role</option></select></label>
+          <label><span>Budget</span><select><option value="">Prefer to discuss</option><option>Under $5,000</option><option>$5,000 to $15,000</option><option>$15,000 to $40,000</option><option>$40,000 and up</option></select></label>
+          <label class="cform__full"><span>Tell me about it</span><textarea rows="4" required placeholder="What you're building, your stack and your timeline"></textarea></label>
+          <button class="btn" type="submit">Send message <i class="ri-arrow-right-up-line"></i></button>
+          <p class="cform__ok" id="cOk" role="status" hidden><i class="ri-checkbox-circle-fill"></i> Thanks, your message is on its way. I'll reply within a working day.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__in">
+      <a href="#top" class="logo" aria-label="Idris Qasem home"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M26 5a15 15 0 1 0 9 26A13 13 0 0 1 26 5Z" fill="url(#lg)"/><path d="M30 9l1.2 2.8L34 13l-2.8 1.2L30 17l-1.2-2.8L26 13l2.8-1.2Z" fill="#fff"/></svg><span>IDRIS QASEM</span></a>
+      <nav aria-label="Footer"><a href="#work">Work</a><a href="#stack">Stack</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+      <p>© <span id="year"></span> Idris Qasem. Hand-built, no page builders.</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1000) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* =====================================================
+       Hero: interactive constellation sky
+       ===================================================== */
+    const CONST = [
+      { name: "Orion", note: "The Hunter · Nov – Mar", at: [.66, .3], pts: [[0, 0], [.13, .02], [.065, -.07], [.045, .15], [.075, .14], [.105, .13], [.025, .3], [.155, .28]], ln: [[0, 2], [2, 1], [0, 3], [1, 5], [3, 4], [4, 5], [3, 6], [5, 7]] },
+      { name: "The Plough", note: "Ursa Major · all year", at: [.42, .12], pts: [[0, .02], [.05, 0], [.09, .01], [.13, .03], [.14, .09], [.21, .09], [.21, .02]], ln: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 3]] },
+      { name: "Cassiopeia", note: "The Queen · Aug – Feb", at: [.8, .1], pts: [[0, .03], [.04, .08], [.08, .04], [.12, .09], [.16, .02]], ln: [[0, 1], [1, 2], [2, 3], [3, 4]] },
+      { name: "Scorpius", note: "The Scorpion · May – Sep", at: [.86, .44], pts: [[0, 0], [.01, .05], [0, .1], [.045, .08], [.07, .12], [.09, .17], [.1, .22], [.09, .27], [.06, .3], [.035, .29], [.025, .26]], ln: [[0, 1], [1, 2], [1, 3], [3, 4], [4, 5], [5, 6], [6, 7], [7, 8], [8, 9], [9, 10]] },
+      { name: "Cygnus", note: "The Swan · Jun – Nov", at: [.12, .1], pts: [[.06, 0], [.06, .08], [.06, .2], [0, .1], [.12, .06]], ln: [[0, 1], [1, 2], [3, 1], [1, 4]] },
+    ];
+    (() => {
+      const cv = $("skyCanvas"), ctx = cv.getContext("2d"), tag = $("constTag"), hero = $("hero");
+      let W, H, S, dpr, stars = [], band, mx = -1e4, my = -1e4, ox = 0, oy = 0, active = -1, lastMove = 0, auto = 0, running = true, shoot = null, nextShoot = 3000;
+      const resize = () => {
+        dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight; S = Math.min(W, H) * (W < 700 ? .9 : 1.05);
+        cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const n = Math.min(1100, Math.round((W * H) / 1700));
+        stars = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H * .92, r: Math.random() ** 3 * 1.5 + .3, a: Math.random() * .6 + .25, t: Math.random() * 6.3, s: Math.random() * 1.5 + .4, z: Math.random() * .8 + .2 }));
+        band = document.createElement("canvas"); band.width = W; band.height = H; const b = band.getContext("2d");
+        b.translate(W * .5, H * .45); b.rotate(-.5);
+        for (let i = 0; i < 9; i++) { const g = b.createRadialGradient(0, 0, 0, 0, 0, 1); g.addColorStop(0, `rgba(${i % 2 ? "156,196,255" : "120,110,255"},.05)`); g.addColorStop(1, "rgba(0,0,0,0)"); b.save(); b.translate((i - 4) * W * .14, (Math.random() - .5) * 40); b.scale(W * .22, H * .12); b.fillStyle = g; b.fillRect(-1, -1, 2, 2); b.restore(); }
+        for (let i = 0; i < 2200; i++) { const x = (Math.random() - .5) * W * 1.6, y = (Math.random() + Math.random() + Math.random() - 1.5) * H * .09; b.fillStyle = `rgba(220,230,255,${Math.random() * .35})`; b.fillRect(x, y, .8, .8); }
+        CONST.forEach((c) => { c.p = c.pts.map(([x, y]) => [c.at[0] * W + x * S, c.at[1] * H + y * S]); c.cx = c.p.reduce((s, q) => s + q[0], 0) / c.p.length; c.cy = c.p.reduce((s, q) => s + q[1], 0) / c.p.length; c.v = c.v || 0; });
+      };
+      resize(); addEventListener("resize", resize);
+      hero.addEventListener("pointermove", (e) => { const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; lastMove = performance.now(); });
+      hero.addEventListener("pointerleave", () => { mx = my = -1e4; });
+      new IntersectionObserver(([e]) => { running = e.isIntersecting; if (running) requestAnimationFrame(frame); }).observe(hero);
+      let prev = performance.now();
+      function frame(now) {
+        const dt = Math.min(now - prev, 50); prev = now;
+        ctx.clearRect(0, 0, W, H);
+        const tx = mx > -1e3 && !reduce ? (mx / W - .5) * -14 : 0, ty = my > -1e3 && !reduce ? (my / H - .5) * -10 : 0;
+        ox += (tx - ox) * .05; oy += (ty - oy) * .05;
+        ctx.drawImage(band, ox * .5, oy * .5, W, H);
+        for (const s of stars) {
+          const tw = reduce ? 1 : .65 + .35 * Math.sin(now * .001 * s.s + s.t);
+          ctx.globalAlpha = s.a * tw; ctx.fillStyle = "#e6eeff";
+          ctx.beginPath(); ctx.arc(s.x + ox * s.z, s.y + oy * s.z, s.r, 0, 6.283); ctx.fill();
+        }
+        // pick constellation
+        let near = -1, best = 1e9;
+        CONST.forEach((c, i) => { const d = Math.hypot(mx - c.cx - ox, my - c.cy - oy); if (d < Math.max(130, S * .2) && d < best) { best = d; near = i; } });
+        if (near < 0 && !reduce && now - lastMove > 2500) { if (now - auto > 3800) { auto = now; active = (active + 1) % CONST.length; } near = active; }
+        CONST.forEach((c, i) => {
+          c.v += ((i === near ? 1 : 0) - c.v) * Math.min(1, dt / 160);
+          const P = c.p.map(([x, y]) => [x + ox, y + oy]);
+          if (c.v > .01) {
+            ctx.globalAlpha = c.v * .75; ctx.strokeStyle = "#7fa8ff"; ctx.lineWidth = 1.2;
+            ctx.beginPath(); c.ln.forEach(([a, b]) => { const [x1, y1] = P[a], [x2, y2] = P[b]; ctx.moveTo(x1, y1); ctx.lineTo(x1 + (x2 - x1) * c.v, y1 + (y2 - y1) * c.v); }); ctx.stroke();
+          }
+          P.forEach(([x, y]) => { ctx.globalAlpha = .85 + c.v * .15; const g = ctx.createRadialGradient(x, y, 0, x, y, 6 + c.v * 4); g.addColorStop(0, "rgba(220,232,255,.9)"); g.addColorStop(1, "rgba(120,160,255,0)"); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 6 + c.v * 4, 0, 6.283); ctx.fill(); ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(x, y, 1.6, 0, 6.283); ctx.fill(); });
+        });
+        if (near >= 0 && CONST[near].v > .3) {
+          const c = CONST[near], maxY = Math.max(...c.p.map((q) => q[1]));
+          tag.querySelector("b").textContent = c.name; tag.querySelector("span").textContent = c.note;
+          tag.style.transform = `translate(${Math.min(W - 190, Math.max(12, c.cx + ox - 70))}px, ${maxY + oy + 18}px)`; tag.classList.add("on");
+        } else tag.classList.remove("on");
+        // shooting star
+        if (!reduce) {
+          nextShoot -= dt;
+          if (!shoot && nextShoot < 0) { shoot = { x: Math.random() * W * .7 + W * .2, y: Math.random() * H * .3, l: 0 }; nextShoot = 5000 + Math.random() * 5000; }
+          if (shoot) {
+            shoot.l += dt / 700; const k = shoot.l, x = shoot.x - k * 260, y = shoot.y + k * 120;
+            const g = ctx.createLinearGradient(x, y, x + 90, y - 42); g.addColorStop(0, "rgba(255,255,255,.9)"); g.addColorStop(1, "rgba(255,255,255,0)");
+            ctx.globalAlpha = Math.sin(Math.PI * Math.min(k, 1)); ctx.strokeStyle = g; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 90, y - 42); ctx.stroke();
+            if (k > 1) shoot = null;
+          }
+        }
+        ctx.globalAlpha = 1;
+        if (running) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    /* =====================================================
+       Projects
+       ===================================================== */
+    const PROJECTS = [
+      { img: "shop-norde", href: "../shop-norde/index.html", name: "Norde", type: "Fashion store", role: "Lead frontend, 4 months", text: "A fast online store with a full-width product wall, one-click sizes on hover and a checkout that keeps people moving. I built it without a framework, so pages stay light on mobile.", did: ["Product filters, search and bag with no page reloads", "Keyboard and screen-reader friendly overlays", "A full-page product view on every device"], stats: [["0.9 s", "largest paint"], ["+22%", "mobile checkout"], ["98", "Lighthouse score"]], tags: ["Vanilla JS", "CSS Grid", "Web Vitals"] },
+      { img: "realestate-havenly", href: "../realestate-havenly/index.html", name: "Havenly", type: "Real estate", role: "Frontend developer, 6 months", text: "A property search for a Miami brokerage. Buyers filter thousands of listings and open full details instantly, while agents get their leads straight from the page.", did: ["Instant search across neighbourhood, type, price and beds", "Listing details and saved homes", "Image loading that stays smooth on slow connections"], stats: [["2,400", "listings"], ["-41%", "bounce rate"], ["1.3 s", "to first search"]], tags: ["React", "TypeScript", "TanStack Query"] },
+      { img: "dashboard-kora", href: "../dashboard-kora/index.html", name: "Kora", type: "Admin dashboard", role: "Frontend lead, 8 months", text: "A sales dashboard for store owners, with live charts, an orders table that stays fast with bulk actions, and full light and dark themes built on one set of tokens.", did: ["Sortable, filterable orders with CSV export", "A shared component library used by three teams", "Charts that stay readable in both themes"], stats: [["60 fps", "table scrolling"], ["3", "teams on the library"], ["AA", "contrast, both themes"]], tags: ["React", "Chart.js", "Design tokens"] },
+      { img: "clinic-stride", href: "../clinic-stride/index.html", name: "Stride Physio", type: "Clinic and booking", role: "Solo developer, 10 weeks", text: "A clinic site where patients find the right treatment and book a time in four short steps. The phone lines got quieter, and online booking became the main way in.", did: ["A four-step booking flow that keeps your progress", "Conditions explorer with real prices", "Clear form errors, tested with a screen reader"], stats: [["63%", "of bookings online"], ["4", "steps to book"], ["100", "accessibility score"]], tags: ["Astro", "TypeScript", "Playwright"] },
+    ];
+    $("projects").innerHTML = PROJECTS.map((p, i) => `<article class="pj ${i % 2 ? "pj--flip" : ""} reveal">
+      <a class="pj__screen" href="${p.href}" target="_blank" rel="noopener" aria-label="Open ${p.name} live in a new tab">
+        <span class="pj__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="pj__view"><img src="img/${p.img}.webp" alt="Full-length screenshot of the ${p.name} website" width="1100" height="2062" loading="lazy" /></span>
+      </a>
+      <div class="pj__body">
+        <p class="pj__type">${p.type} · ${p.role}</p>
+        <h3>${p.name}</h3>
+        <p>${p.text}</p>
+        <ul class="pj__did">${p.did.map((d) => `<li><i class="ri-check-line"></i>${d}</li>`).join("")}</ul>
+        <dl>${p.stats.map(([v, l]) => `<div><dd>${v}</dd><dt>${l}</dt></div>`).join("")}</dl>
+        <div class="pj__foot"><span class="pj__tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</span><a class="btn btn--sm" href="${p.href}" target="_blank" rel="noopener">View live <i class="ri-arrow-right-up-line"></i></a></div>
+      </div>
+    </article>`).join("");
+    /* Scroll each screenshot by exactly its own height, at the same reading speed */
+    const fitScreens = () => document.querySelectorAll(".pj__view").forEach((v) => {
+      const img = v.querySelector("img"), shift = Math.max(0, img.offsetHeight - v.offsetHeight);
+      v.style.setProperty("--shift", `-${shift}px`); v.style.setProperty("--time", `${Math.max(2, shift / 170)}s`);
+    });
+    document.querySelectorAll(".pj__view img").forEach((im) => im.addEventListener("load", fitScreens));
+    addEventListener("resize", fitScreens); fitScreens();
+
+    /* =====================================================
+       Stack: tools as constellations, in the hero's style
+       ===================================================== */
+    const GROUPS = [
+      { name: "Core", text: "The platform comes first. I write semantic HTML and modern CSS, and I reach for JavaScript only when it earns its weight.",
+        stars: [["HTML", 90, 110], ["CSS", 205, 60], ["JavaScript", 300, 130], ["TypeScript", 175, 195]], lines: [[0, 1], [1, 2], [2, 3], [3, 0]] },
+      { name: "Frameworks", text: "React and Next.js for products, Astro for content sites. I choose by what the project needs, not what's new this month.",
+        stars: [["React", 500, 60], ["Next.js", 625, 105], ["Astro", 725, 55], ["TanStack Query", 570, 195]], lines: [[0, 1], [1, 2], [0, 3], [3, 1]] },
+      { name: "Quality", text: "Fast and accessible by default. I test against real user journeys, and I track Core Web Vitals after launch as well as before.",
+        stars: [["Accessibility", 110, 320], ["Core Web Vitals", 240, 280], ["Playwright", 335, 375], ["Vitest", 190, 425]], lines: [[0, 1], [1, 2], [2, 3], [3, 0]] },
+      { name: "Motion & design", text: "I work straight from Figma with designers, build the design system with them, and add motion only where it helps people.",
+        stars: [["Figma", 500, 300], ["Design tokens", 625, 270], ["GSAP", 725, 350], ["Canvas & WebGL", 575, 420]], lines: [[0, 1], [1, 2], [2, 3], [3, 0]] },
+    ];
+    let skyOn = 0, skyAuto = null;
+    const skyMap = $("skyMap");
+    const dust = Array.from({ length: 90 }, (_, i) => { const a = Math.sin(i * 91.7) * 1e4, b = Math.sin(i * 47.3) * 1e4; return `<circle cx="${((a - Math.floor(a)) * 800).toFixed(0)}" cy="${((b - Math.floor(b)) * 500).toFixed(0)}" r="${(i % 7 ? .8 : 1.3)}" class="sky__dust" />`; }).join("");
+    skyMap.innerHTML = dust + GROUPS.map((g, gi) => `<g class="sky__g" data-g="${gi}" tabindex="-1">
+      <rect x="${Math.min(...g.stars.map((s) => s[1])) - 50}" y="${Math.min(...g.stars.map((s) => s[2])) - 40}" width="${Math.max(...g.stars.map((s) => s[1])) - Math.min(...g.stars.map((s) => s[1])) + 100}" height="${Math.max(...g.stars.map((s) => s[2])) - Math.min(...g.stars.map((s) => s[2])) + 90}" fill="transparent" />
+      ${g.lines.map(([a, b]) => { const A = g.stars[a], B = g.stars[b], len = Math.hypot(A[1] - B[1], A[2] - B[2]); return `<line x1="${A[1]}" y1="${A[2]}" x2="${B[1]}" y2="${B[2]}" pathLength="1" />`; }).join("")}
+      ${g.stars.map(([n, x, y]) => `<circle cx="${x}" cy="${y}" r="4.5" class="sky__star" /><text x="${x}" y="${y + 24}" text-anchor="middle">${n}</text>`).join("")}
+    </g>`).join("");
+    const renderSky = () => {
+      const g = GROUPS[skyOn];
+      skyMap.querySelectorAll(".sky__g").forEach((el, i) => el.classList.toggle("on", i === skyOn));
+      $("skyTabs").innerHTML = GROUPS.map((x, i) => `<button role="tab" aria-selected="${i === skyOn}" class="${i === skyOn ? "on" : ""}" data-sky="${i}">${x.name}</button>`).join("");
+      $("skyPanel").innerHTML = `<h3>${g.name}</h3><p>${g.text}</p><ul>${g.stars.map((s) => `<li>${s[0]}</li>`).join("")}</ul>`;
+    };
+    const pickSky = (i) => { skyOn = i; renderSky(); };
+    const stopSky = () => clearInterval(skyAuto);
+    $("skyTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-sky]"); if (b) { stopSky(); pickSky(+b.dataset.sky); } });
+    skyMap.addEventListener("pointerover", (e) => { const g = e.target.closest(".sky__g"); if (g && +g.dataset.g !== skyOn) { stopSky(); pickSky(+g.dataset.g); } });
+    renderSky();
+    if (!reduce) skyAuto = setInterval(() => pickSky((skyOn + 1) % GROUPS.length), 4200);
+
+    /* =====================================================
+       Experience and references
+       ===================================================== */
+    const JOBS = [
+      ["2023 to now", "Freelance frontend developer", "Remote", "Stores, booking systems and dashboards for clients in Europe and the Gulf. Usually embedded with the client's own designers."],
+      ["2020 to 2023", "Senior frontend engineer", "Lumen", "Led the design system used across six products, and cut the median page load from 3.4 to 1.2 seconds."],
+      ["2018 to 2020", "Frontend engineer", "Orbit Air", "Rebuilt the booking flow in React. Mobile bookings grew by 30% in the first year."],
+      ["2016 to 2018", "Web developer", "Fieldnote", "Built editorial templates for a magazine with four million monthly readers."],
+    ];
+    $("jobs").innerHTML = JOBS.map(([d, r, c, t], i) => `<li class="reveal" style="--d:${i * .06}s"><time>${d}</time><div><h3>${r} <span>${c}</span></h3><p>${t}</p></div></li>`).join("");
+    const WORDS = [
+      ["Idris spots the awkward state in a design before we've even finished presenting it. Everything he ships feels the way we pictured it.", "Sara Lindqvist", "Head of Design, Lumen"],
+      ["He joined two months before launch, found our biggest performance problem in a day and left the codebase easier to work in.", "Marcus Bell", "CTO, Northwind"],
+      ["Clear estimates, no drama and no surprises. Our patients now book online without ever calling us, which was the whole point.", "Noor Hadid", "Director, Stride Physio"],
+    ];
+    $("wordsGrid").innerHTML = WORDS.map(([q, n, r], i) => `<figure class="word reveal" style="--d:${i * .08}s"><blockquote>${q}</blockquote><figcaption><b>${n}</b>${r}</figcaption></figure>`).join("");
+    $("cform").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("cOk").hidden = false; });
+
+    /* =====================================================
+       The sky behind the page: stars join up near the cursor
+       ===================================================== */
+    (() => {
+      const cv = $("nightCanvas"), ctx = cv.getContext("2d");
+      let W, H, dpr, stars = [], mx = -1e4, my = -1e4, gx = -1e4, gy = -1e4, inHero = true, running = false;
+      const R = 190, LINK = 118;
+      const resize = () => {
+        dpr = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
+        cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        stars = Array.from({ length: Math.min(340, Math.round((W * H) / 4200)) }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() ** 3 * 1.5 + .35, a: Math.random() * .5 + .2, t: Math.random() * 6.3, s: Math.random() * 1.4 + .3 }));
+        if (reduce) draw(0);
+      };
+      const draw = (now) => {
+        ctx.clearRect(0, 0, W, H);
+        gx += (mx - gx) * .14; gy += (my - gy) * .14;
+        if (mx < -1e3) { gx = mx; gy = my; }
+        const near = [];
+        for (const s of stars) {
+          const d = Math.hypot(s.x - gx, s.y - gy), k = d < R ? 1 - d / R : 0;
+          if (k > 0) near.push({ s, k });
+          ctx.globalAlpha = Math.min(1, s.a * (reduce ? 1 : .65 + .35 * Math.sin(now * .001 * s.s + s.t)) + k * .7);
+          ctx.fillStyle = "#e6eeff"; ctx.beginPath(); ctx.arc(s.x, s.y, s.r + k * 1.1, 0, 6.283); ctx.fill();
+        }
+        ctx.strokeStyle = "#7fa8ff"; ctx.lineWidth = 1;
+        const used = new Map();
+        for (let i = 0; i < near.length; i++) for (let j = i + 1; j < near.length; j++) {
+          const a = near[i], b = near[j], d = Math.hypot(a.s.x - b.s.x, a.s.y - b.s.y);
+          if (d > LINK || (used.get(a) || 0) > 1 || (used.get(b) || 0) > 1) continue;
+          used.set(a, (used.get(a) || 0) + 1); used.set(b, (used.get(b) || 0) + 1);
+          ctx.globalAlpha = Math.min(1, Math.min(a.k, b.k) * 1.5) * (1 - d / LINK / 1.8);
+          ctx.beginPath(); ctx.moveTo(a.s.x, a.s.y); ctx.lineTo(b.s.x, b.s.y); ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+      };
+      const loop = (now) => { if (inHero || reduce || document.hidden) { running = false; return; } draw(now); requestAnimationFrame(loop); };
+      const start = () => { if (!running && !inHero && !reduce) { running = true; requestAnimationFrame(loop); } };
+      resize(); addEventListener("resize", resize);
+      addEventListener("pointermove", (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+      document.addEventListener("pointerleave", () => { mx = my = -1e4; });
+      document.addEventListener("visibilitychange", start);
+      new IntersectionObserver(([e]) => { inHero = e.intersectionRatio > .98; start(); }, { threshold: [.98] }).observe($("hero"));
+      window.__sky = { get running() { return running; }, near: () => stars.filter((s) => Math.hypot(s.x - gx, s.y - gy) < R).length };
+    })();
+
+    /* =====================================================
+       Header, reveal, count-ups, opening
+       ===================================================== */
+    const header = $("header"), links = [...document.querySelectorAll(".nav a")];
+    $("burger").addEventListener("click", () => { const o = document.body.classList.toggle("nav-open"); $("burger").setAttribute("aria-expanded", o); });
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    const onScroll = () => {
+      header.classList.toggle("sticky", scrollY > 40);
+      $("totop").classList.toggle("show", scrollY > 900);
+      let cur = "";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === cur));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    $("year").textContent = new Date().getFullYear();
+
+    const countUp = (el) => {
+      const end = +el.dataset.count;
+      if (reduce) { el.textContent = end; return; }
+      const t0 = performance.now();
+      const k = (n) => { const p = Math.min(1, (n - t0) / 1300); el.textContent = Math.round(end * (1 - (1 - p) ** 3)); if (p < 1) requestAnimationFrame(k); };
+      requestAnimationFrame(k);
+    };
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      e.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(e.target);
+    }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* Opening: one constellation draws itself, then the sky opens */
+    const root = document.documentElement, reveal = () => document.body.classList.add("loaded");
+    if (root.classList.contains("intro-on")) {
+      const skips = ["pointerdown", "wheel", "touchstart", "keydown"];
+      const finish = () => { skips.forEach((ev) => removeEventListener(ev, finish)); root.classList.remove("intro-on"); $("intro").remove(); reveal(); };
+      skips.forEach((ev) => addEventListener(ev, finish, { passive: true }));
+      setTimeout(reveal, 950);
+      setTimeout(finish, 1500);
+    } else { $("intro").remove(); requestAnimationFrame(reveal); }
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-nocturne/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

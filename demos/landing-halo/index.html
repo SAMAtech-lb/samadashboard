@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo Telecom — 5G Mobile, Phones &amp; Fibre Broadband in Ireland</title>
+  <meta name="description" content="Halo Telecom runs Ireland's fastest 5G network. SIM-only plans from €15, the latest iPhone and Samsung Galaxy phones, home fibre and business connectivity, with support from a real team in Cork." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i></i></span>halo<b>telecom</b></a>
+      <nav class="nav" id="nav">
+        <a href="#plans">SIM only</a>
+        <a href="#phones">Phones</a>
+        <a href="#broadband">Broadband</a>
+        <a href="#business">Business</a>
+        <a href="#team">Support</a>
+      </nav>
+      <a href="tel:1800425600" class="header__phone"><i class="ri-phone-line"></i> 1800 425 600</a>
+      <a href="#plans" class="btn btn--sm">Join Halo</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__in">
+      <div class="hero__copy">
+        <p class="hero__badge"><span>Opensignal 2026</span> Fastest 5G network in Ireland</p>
+        <h1>Ireland's fastest 5G. <span>Unlimited from €25.</span></h1>
+        <p class="hero__lead">Halo runs its own network of 2,900 masts, from Malin Head to Mizen. Unlimited 5G data, free EU roaming and a support team in Cork that actually picks up.</p>
+        <div class="hero__ctas">
+          <a href="#plans" class="btn">See SIM-only plans <i class="ri-arrow-right-line"></i></a>
+          <a href="#phones" class="btn btn--ghost">Shop phones</a>
+        </div>
+        <ul class="hero__facts">
+          <li><strong>99.6%</strong><span>population coverage</span></li>
+          <li><strong>412 Mbps</strong><span>average 5G download</span></li>
+          <li><strong>4.8★</strong><span>Trustpilot, 21k reviews</span></li>
+        </ul>
+      </div>
+      <div class="netmap" id="netmap">
+        <canvas id="map" aria-label="Map of the Halo network across Ireland"></canvas>
+        <div class="netmap__tip" id="mapTip"></div>
+        <div class="netmap__legend"><span><i class="l5"></i>5G</span><span><i class="l4"></i>4G+</span><span class="netmap__live"><i></i> Live network traffic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="logos">
+    <div class="container logos__in">
+      <p>Connecting 4,000+ Irish businesses</p>
+      <div class="logos__list"><span><i class="ri-compass-3-fill"></i> Northwind</span><span><i class="ri-sun-fill"></i> Lumen</span><span><i class="ri-planet-fill"></i> Orbit</span><span><i class="ri-leaf-fill"></i> Fieldnote</span><span><i class="ri-gamepad-fill"></i> Arcade</span><span><i class="ri-flashlight-fill"></i> Voltra</span></div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="title">
+        <p class="sub-title">SIM-only plans</p>
+        <h2>Simple plans. <span>No surprises.</span></h2>
+        <p>All plans include unlimited calls and texts in Ireland, 5G at no extra cost and EU roaming. 12-month plans shown; 30-day rolling plans are €5 more.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Essential</h3>
+          <p class="plan__data">30<small>GB</small></p>
+          <p class="plan__price"><b>€15</b>/month</p>
+          <ul><li><i class="ri-check-line"></i>Unlimited calls &amp; texts</li><li><i class="ri-check-line"></i>EU roaming 15GB</li><li><i class="ri-check-line"></i>5G included</li></ul>
+          <a href="#order" class="btn btn--line btn--block" data-plan="Essential 30GB · €15/month">Choose Essential</a>
+        </article>
+        <article class="plan">
+          <h3>Plus</h3>
+          <p class="plan__data">120<small>GB</small></p>
+          <p class="plan__price"><b>€20</b>/month</p>
+          <ul><li><i class="ri-check-line"></i>Unlimited calls &amp; texts</li><li><i class="ri-check-line"></i>EU roaming 30GB</li><li><i class="ri-check-line"></i>Data rollover</li></ul>
+          <a href="#order" class="btn btn--line btn--block" data-plan="Plus 120GB · €20/month">Choose Plus</a>
+        </article>
+        <article class="plan plan--pop">
+          <span class="plan__tag">Most popular</span>
+          <h3>Unlimited</h3>
+          <p class="plan__data">Unlimited</p>
+          <p class="plan__price"><b>€25</b>/month</p>
+          <ul><li><i class="ri-check-line"></i>Unlimited 5G data, no caps</li><li><i class="ri-check-line"></i>EU roaming 45GB</li><li><i class="ri-check-line"></i>Unlimited hotspot</li></ul>
+          <a href="#order" class="btn btn--block" data-plan="Unlimited · €25/month">Choose Unlimited</a>
+        </article>
+        <article class="plan">
+          <h3>Unlimited Max</h3>
+          <p class="plan__data">Unlimited</p>
+          <p class="plan__price"><b>€35</b>/month</p>
+          <ul><li><i class="ri-check-line"></i>Roaming in 70 destinations</li><li><i class="ri-check-line"></i>Extra eSIM for your watch</li><li><i class="ri-check-line"></i>Netflix Standard included</li></ul>
+          <a href="#order" class="btn btn--line btn--block" data-plan="Unlimited Max · €35/month">Choose Max</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phones -->
+  <section class="section section--light" id="phones">
+    <div class="container">
+      <div class="head">
+        <div>
+          <p class="sub-title">Phones</p>
+          <h2 class="h2">The latest phones, <span>€0 upfront.</span></h2>
+        </div>
+        <div class="tabs" id="brandTabs"><button class="on" data-b="all">All</button><button data-b="Apple">Apple</button><button data-b="Samsung">Samsung</button><button data-b="Google">Google</button></div>
+      </div>
+      <div class="phones" id="phones-grid"></div>
+      <p class="note">Monthly price on a 36-month plan with Unlimited 5G, 0% APR. Free next-day delivery or click &amp; collect in 2 hours.</p>
+    </div>
+  </section>
+
+  <!-- Broadband -->
+  <section class="section" id="broadband">
+    <div class="container bb">
+      <div class="bb__img reveal-img"><img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=1200&q=80" alt="Laptop on a wooden table showing a video call" loading="lazy" /></div>
+      <div class="bb__copy">
+        <p class="sub-title">Home broadband</p>
+        <h2 class="h2">Full fibre to your door, <span>up to 2 Gbps.</span></h2>
+        <p>Halo Fibre reaches 1.1 million Irish homes. Where fibre isn't available yet, Halo 5G Home gets you online with a plug-in router — no engineer needed.</p>
+        <form class="eir" id="eirForm">
+          <label for="eir">Check your address</label>
+          <div class="eir__row"><i class="ri-map-pin-line"></i><input id="eir" placeholder="Eircode, e.g. T12 X4D2" autocomplete="off" /><button class="btn" type="submit">Check</button></div>
+          <p class="eir__res" id="eirRes"></p>
+        </form>
+        <table class="speeds">
+          <thead><tr><th>Package</th><th>Speed</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Fibre 500</td><td>500 Mbps</td><td>€40/mo</td></tr>
+            <tr><td>Fibre 1 Gig</td><td>1,000 Mbps</td><td>€50/mo</td></tr>
+            <tr><td>Fibre 2 Gig</td><td>2,000 Mbps</td><td>€65/mo</td></tr>
+            <tr><td>5G Home</td><td>up to 550 Mbps</td><td>€35/mo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business stories -->
+  <section class="section section--light" id="business">
+    <div class="container">
+      <div class="head">
+        <div>
+          <p class="sub-title">Halo Business</p>
+          <h2 class="h2">Businesses that <span>run on Halo.</span></h2>
+        </div>
+        <p class="head__p">Mobile fleets, fibre for offices and private 5G for warehouses — with one account manager who knows your setup.</p>
+      </div>
+      <div class="stories" id="stories"></div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="title">
+        <p class="sub-title">Support</p>
+        <h2>Real people in Cork, <span>not a call centre abroad.</span></h2>
+        <p>Our 140-person care team answers chat in under a minute and phone calls in under 2 minutes, 8am – 10pm, 7 days a week.</p>
+      </div>
+      <div class="team" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--dark">
+    <div class="container rev">
+      <div class="rev__side">
+        <p class="sub-title">Reviews</p>
+        <h2 class="h2">Rated <span>Excellent</span> on Trustpilot</h2>
+        <p class="rev__score"><b>4.8</b><span><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><br />from 21,340 reviews</span></p>
+        <div class="rev__nav"><button id="rPrev" aria-label="Previous review"><i class="ri-arrow-left-line"></i></button><button id="rNext" aria-label="Next review"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+      <div class="rev__view"><div class="rev__track" id="revTrack"></div></div>
+    </div>
+  </section>
+
+  <!-- Order / FAQ -->
+  <section class="section" id="order">
+    <div class="container order">
+      <div class="order__faq">
+        <p class="sub-title">Switching to Halo</p>
+        <h2 class="h2">Switch in <span>10 minutes.</span></h2>
+        <div class="acc" id="acc">
+          <details open><summary>Can I keep my number?</summary><p>Yes. Text "PAC" to 50123 from your current network, add the code to your order and we move your number within one working day.</p></details>
+          <details><summary>Do I need to cancel my old contract?</summary><p>No. When your number moves to Halo, your old network closes your account automatically. Check if you have early-exit fees left.</p></details>
+          <details><summary>eSIM or physical SIM?</summary><p>Both are free. eSIM arrives by email in minutes; a physical SIM arrives next working day by An Post.</p></details>
+          <details><summary>Is there a credit check?</summary><p>For 12-month SIM-only plans and phones, yes — a soft check that doesn't affect your credit score. 30-day plans need no credit check.</p></details>
+        </div>
+      </div>
+      <form class="form" id="orderForm">
+        <h3>Order your SIM</h3>
+        <label>Plan
+          <select id="planSel">
+            <option>Essential 30GB · €15/month</option><option>Plus 120GB · €20/month</option><option selected>Unlimited · €25/month</option><option>Unlimited Max · €35/month</option>
+          </select>
+        </label>
+        <div class="form__row"><label>Full name<input required placeholder="Aoife Byrne" /></label><label>Mobile number to keep<input placeholder="087 123 4567" /></label></div>
+        <div class="form__row"><label>Email<input type="email" required placeholder="aoife@email.ie" /></label><label>Eircode<input required placeholder="T12 X4D2" /></label></div>
+        <div class="seg" id="simType"><button type="button" class="on">eSIM</button><button type="button">Physical SIM</button></div>
+        <button class="btn btn--block" type="submit">Place order</button>
+        <p class="form__ok" id="orderOk"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="logo logo--light"><span class="logo__mark"><i></i></span>halo<b>telecom</b></a>
+          <p>Irish-owned mobile and broadband network. 12 Lapp's Quay, Cork.</p>
+          <div class="social"><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></div>
+        </div>
+        <div><h4>Shop</h4><a href="#plans">SIM only</a><a href="#phones">Phones</a><a href="#broadband">Broadband</a><a href="#business">Business</a></div>
+        <div><h4>Help</h4><a href="#order">Switching</a><a href="#">Network status</a><a href="#">Roaming</a><a href="#team">Contact us</a></div>
+        <div><h4>Get the Halo app</h4><p>Track usage, pay bills and chat with us.</p><div class="apps"><a href="#"><i class="ri-apple-fill"></i> App Store</a><a href="#"><i class="ri-google-play-fill"></i> Google Play</a></div></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Halo Telecom DAC · Regulated by ComReg</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Code of practice</a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Header
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 20);
+      let cur = ""; document.querySelectorAll("section[id]").forEach((s) => { if (scrollY + 130 >= s.offsetTop) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    }, { passive: true });
+    $("burger").addEventListener("click", () => $("nav").classList.toggle("open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") $("nav").classList.remove("open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+
+    // ---------- Network map (signature visual) ----------
+    const OUT = [[-7.37, 55.38], [-6.9, 55.22], [-6.15, 55.2], [-5.6, 54.75], [-5.45, 54.35], [-6.1, 54.05], [-6.25, 53.9], [-6.05, 53.35], [-6.0, 52.95], [-6.36, 52.17], [-7.1, 52.13], [-8.0, 51.8], [-8.9, 51.55], [-9.8, 51.45], [-10.35, 51.85], [-9.95, 52.2], [-9.9, 52.56], [-9.3, 53.15], [-10.15, 53.4], [-10.05, 53.95], [-9.9, 54.28], [-8.6, 54.3], [-8.75, 54.62], [-8.3, 55.15]];
+    const CITIES = [
+      { n: "Dublin", ll: [-6.26, 53.35], g: 5, mbps: 486, hub: true }, { n: "Cork", ll: [-8.47, 51.9], g: 5, mbps: 452, hub: true }, { n: "Galway", ll: [-9.05, 53.27], g: 5, mbps: 418 },
+      { n: "Limerick", ll: [-8.63, 52.66], g: 5, mbps: 395 }, { n: "Waterford", ll: [-7.11, 52.26], g: 5, mbps: 370 }, { n: "Sligo", ll: [-8.47, 54.27], g: 4, mbps: 210 },
+      { n: "Athlone", ll: [-7.94, 53.42], g: 5, mbps: 340 }, { n: "Letterkenny", ll: [-7.73, 54.95], g: 4, mbps: 190 }, { n: "Kilkenny", ll: [-7.25, 52.65], g: 4, mbps: 240 }, { n: "Killarney", ll: [-9.51, 52.06], g: 4, mbps: 205 },
+    ];
+    const LINKS = [[0, 1], [0, 2], [0, 4], [0, 6], [1, 3], [1, 9], [2, 5], [2, 3], [6, 2], [0, 8], [5, 7], [4, 1]];
+    const cv = $("map"), ctx = cv.getContext("2d");
+    let W = 0, H = 0, dots = [], pts = [], hover = null, tx = 0, ty = 0, mx = 0, my = 0;
+    const L0 = -10.6, L1 = -5.3, A0 = 51.3, A1 = 55.5;
+    function proj([lon, lat]) { const w = (L1 - L0) * .6, h = A1 - A0, s = Math.min(W / w, H / h) * .94, ox = (W - w * s) / 2, oy = (H - h * s) / 2; return [ox + (lon - L0) * .6 * s, oy + (A1 - lat) * s]; }
+    function inPoly(x, y, p) { let c = false; for (let i = 0, j = p.length - 1; i < p.length; j = i++) { const [xi, yi] = p[i], [xj, yj] = p[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; }
+    function build() {
+      const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+      const poly = OUT.map(proj); pts = CITIES.map((c) => ({ ...c, p: proj(c.ll) }));
+      const gap = Math.max(7, W / 64); dots = [];
+      for (let y = gap / 2; y < H; y += gap) for (let x = gap / 2; x < W; x += gap) if (inPoly(x, y, poly)) {
+        let near = 1e9; pts.forEach((c) => (near = Math.min(near, Math.hypot(c.p[0] - x, c.p[1] - y))));
+        dots.push({ x, y, k: Math.max(0, 1 - near / (W * .12)), s: Math.random() });
+      }
+    }
+    const pulses = LINKS.map((l, i) => ({ l, t: (i * .37) % 1, sp: .18 + (i % 4) * .05 }));
+    let t0 = performance.now(), born = performance.now();
+    function arc(a, b) { const mxp = (a[0] + b[0]) / 2, myp = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1]; return [mxp - dy * .18, myp + dx * .18]; }
+    function qpt(a, c, b, t) { const u = 1 - t; return [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]]; }
+    function draw(now) {
+      const dt = Math.min(.05, (now - t0) / 1000); t0 = now;
+      const intro = Math.min(1, (now - born) / 1800);
+      mx += (tx - mx) * .06; my += (ty - my) * .06;
+      ctx.clearRect(0, 0, W, H);
+      ctx.save(); ctx.translate(mx * 10, my * 10);
+      dots.forEach((d) => {
+        const a = Math.min(1, Math.max(0, intro * 2.2 - d.y / H - d.s * .2));
+        if (!a) return;
+        ctx.fillStyle = `rgba(${d.k > .35 ? "255,77,94" : "160,182,230"},${(.18 + d.k * .6) * a})`;
+        ctx.beginPath(); ctx.arc(d.x, d.y, 1.3 + d.k * 1.2, 0, 7); ctx.fill();
+      });
+      if (intro > .5) {
+        const la = Math.min(1, (intro - .5) * 2);
+        LINKS.forEach(([i, j]) => { const a = pts[i].p, b = pts[j].p, c = arc(a, b); ctx.strokeStyle = `rgba(255,255,255,${.12 * la})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(...a); ctx.quadraticCurveTo(...c, ...b); ctx.stroke(); });
+        pulses.forEach((p) => {
+          p.t = (p.t + p.sp * dt) % 1;
+          const [i, j] = p.l, a = pts[i].p, b = pts[j].p, c = arc(a, b);
+          for (let k = 0; k < 8; k++) { const tt = p.t - k * .018; if (tt < 0) continue; const q = qpt(a, c, b, tt); ctx.fillStyle = `rgba(255,77,94,${(1 - k / 8) * .9 * la})`; ctx.beginPath(); ctx.arc(q[0], q[1], 2.6 - k * .25, 0, 7); ctx.fill(); }
+        });
+        pts.forEach((c, i) => {
+          const r = c.hub ? 6 : 4.5, ph = ((now / 1000) * .6 + i * .17) % 1;
+          ctx.strokeStyle = `rgba(255,77,94,${(1 - ph) * .6 * la})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(c.p[0], c.p[1], r + ph * 16, 0, 7); ctx.stroke();
+          ctx.fillStyle = hover === c ? "#fff" : "#ff4d5e"; ctx.beginPath(); ctx.arc(c.p[0], c.p[1], hover === c ? r + 2 : r, 0, 7); ctx.fill();
+          if (c.hub || hover === c) { ctx.font = "600 13px Poppins, sans-serif"; ctx.fillStyle = `rgba(255,255,255,${.9 * la})`; ctx.fillText(c.n, c.p[0] + 12, c.p[1] + 4); }
+        });
+      }
+      ctx.restore();
+      requestAnimationFrame(draw);
+    }
+    $("netmap").addEventListener("pointermove", (e) => {
+      const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      tx = (x / r.width - .5); ty = (y / r.height - .5);
+      hover = null; let bd = 22; pts.forEach((c) => { const d = Math.hypot(c.p[0] + mx * 10 - x, c.p[1] + my * 10 - y); if (d < bd) { bd = d; hover = c; } });
+      const tip = $("mapTip");
+      if (hover) { tip.innerHTML = `<strong>${hover.n}</strong><span>${hover.g === 5 ? "5G" : "4G+"} · avg ${hover.mbps} Mbps</span>`; tip.style.left = hover.p[0] + mx * 10 + "px"; tip.style.top = hover.p[1] + my * 10 + "px"; tip.classList.add("on"); cv.style.cursor = "pointer"; }
+      else { tip.classList.remove("on"); cv.style.cursor = "default"; }
+    });
+    $("netmap").addEventListener("pointerleave", () => { tx = ty = 0; hover = null; $("mapTip").classList.remove("on"); });
+    build(); requestAnimationFrame(draw); addEventListener("resize", build);
+
+    // ---------- Plans → order form ----------
+    document.querySelectorAll("[data-plan]").forEach((a) => a.addEventListener("click", () => { $("planSel").value = a.dataset.plan; }));
+
+    // ---------- Phones ----------
+    const PHONES = [
+      { b: "Apple", n: "iPhone 15 Pro", s: "128GB · Natural Titanium", img: "1592750475338-74b7b21085ab", mo: 39, tag: "Bestseller" },
+      { b: "Apple", n: "iPhone 15", s: "128GB · White", img: "1591337676887-a217a6970a8a", mo: 32 },
+      { b: "Samsung", n: "Galaxy S23 Ultra", s: "256GB · Phantom Black", img: "1678911820864-e2c567c655d7", mo: 36, tag: "Price drop" },
+      { b: "Samsung", n: "Galaxy S24", s: "128GB · Cobalt Violet", img: "1610945265064-0e34e5519bbf", mo: 29 },
+      { b: "Google", n: "Pixel 8 Pro", s: "128GB · Obsidian", img: "1598327105666-5b89351aff97", mo: 31 },
+      { b: "Apple", n: "iPhone 13", s: "128GB · Midnight", img: "1565849904461-04a58ad377e0", mo: 24, tag: "Great value" },
+    ];
+    let brand = "all";
+    function renderPhones(anim) {
+      $("phones-grid").innerHTML = PHONES.filter((p) => brand === "all" || p.b === brand).map((p, i) => `
+        <article class="ph ${anim ? "ph--in" : ""}" style="--d:${i}">
+          <div class="ph__img">${p.tag ? `<span>${p.tag}</span>` : ""}<img src="${U(p.img, 700)}" alt="${p.n}" loading="lazy" /></div>
+          <div class="ph__body"><small>${p.b}</small><h3>${p.n}</h3><p>${p.s}</p>
+          <div class="ph__foot"><div><b>€${p.mo}</b>/month<span>€0 upfront</span></div><a href="#order" class="btn btn--sm">Order</a></div></div>
+        </article>`).join("");
+    }
+    $("brandTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-b]"); if (!b) return; brand = b.dataset.b; document.querySelectorAll("#brandTabs button").forEach((x) => x.classList.toggle("on", x === b)); renderPhones(true); });
+    renderPhones(false);
+
+    // ---------- Broadband check ----------
+    $("eirForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = $("eir").value.trim().toUpperCase(), res = $("eirRes");
+      if (!/^[A-Z]\d{2}\s?[A-Z0-9]{4}$/.test(v)) { res.className = "eir__res bad"; res.innerHTML = '<i class="ri-error-warning-line"></i> Please enter a valid Eircode, like T12 X4D2.'; return; }
+      const fibre = "DTHVP".includes(v[0]);
+      res.className = "eir__res ok";
+      res.innerHTML = fibre ? `<i class="ri-checkbox-circle-fill"></i> <span><b>Full fibre is available at ${v}.</b> Choose up to Fibre 2 Gig.</span>` : `<i class="ri-checkbox-circle-fill"></i> <span><b>5G Home is available at ${v}.</b> Fibre is planned for your area in 2027.</span>`;
+    });
+
+    // ---------- Business stories ----------
+    const STORIES = [
+      { img: "1586528116311-ad8dd3c8310d", tag: "Private 5G", co: "Northwind Logistics", t: "Private 5G across a 40,000 m² warehouse", m: [["0", "Wi-Fi dead zones"], ["−38%", "scanner downtime"]], big: true },
+      { img: "1559839734-2b71ea197ec2", tag: "Fibre + mobile", co: "Lumen Clinics", t: "Fibre and 220 mobiles for 14 clinics", m: [["1 Gbps", "per clinic"], ["€41k", "saved a year"]] },
+      { img: "1517248135467-4c7edcad34c4", tag: "Fixed wireless", co: "Fieldnote Restaurants", t: "Card payments that never drop, in 9 restaurants", m: [["99.99%", "uptime"], ["6 days", "to go live"]] },
+      { img: "1556761175-5973dc0f32e7", tag: "Mobile fleet", co: "Voltra Energy", t: "One account for 600 field engineers", m: [["600", "SIMs managed"], ["24h", "replacement SIMs"]] },
+    ];
+    $("stories").innerHTML = STORIES.map((s) => `
+      <article class="story ${s.big ? "story--big" : ""}">
+        <div class="story__img"><img src="${U(s.img, s.big ? 1400 : 800)}" alt="${s.co}" loading="lazy" /><span class="story__tag">${s.tag}</span>
+          <div class="story__m">${s.m.map(([a, b]) => `<div><strong>${a}</strong><span>${b}</span></div>`).join("")}</div></div>
+        <div class="story__body"><span>${s.co}</span><h3>${s.t}</h3><a href="#order">Read the case study <i class="ri-arrow-right-up-line"></i></a></div>
+      </article>`).join("");
+
+    // ---------- Team ----------
+    const TEAM = [
+      { n: "Siobhán Murphy", r: "Head of Customer Care", img: "1573496359142-b8d87734a5a2", q: "Leads the 140-person team in Cork." },
+      { n: "Darragh Kelly", r: "Network Operations", img: "1507003211169-0a1dd7228f2d", q: "Watches the network 24/7 from our NOC." },
+      { n: "Aisha Okonkwo", r: "Business Accounts", img: "1544005313-94ddf0286df2", q: "Account manager for 300 Irish SMEs." },
+      { n: "Liam O'Brien", r: "Store Lead, Grafton St", img: "1500648767791-00dcc994a43e", q: "Sets up 40 new phones a day." },
+    ];
+    $("teamGrid").innerHTML = TEAM.map((p) => `<figure class="member"><div class="member__img"><img src="${U(p.img, 600)}" alt="${p.n}" loading="lazy" /></div><figcaption><strong>${p.n}</strong><span>${p.r}</span><p>${p.q}</p></figcaption></figure>`).join("");
+
+    // ---------- Reviews ----------
+    const REV = [
+      ["Switched from one of the big three. Same coverage in Connemara, half the bill, and the porting took under an hour.", "Ciara Walsh", "Galway"],
+      ["Rang support on a Sunday evening, got a real person in Cork in about a minute. That alone is worth it.", "Mark Doyle", "Dublin"],
+      ["We moved 60 company phones to Halo Business. Our account manager sorted everything in one week.", "Niamh Brennan", "Operations, Lumen Clinics"],
+      ["Fibre 1 Gig installed in four days. Consistently getting 930 Mbps on a cable.", "Tom Fitzgerald", "Cork"],
+    ];
+    $("revTrack").innerHTML = REV.map(([q, n, w]) => `<figure class="rcard"><span class="rcard__stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</span><blockquote>“${q}”</blockquote><figcaption><b>${n.split(" ").map((x) => x[0]).join("")}</b><span><strong>${n}</strong>${w}</span></figcaption></figure>`).join("");
+    let ri = 0;
+    function showR(i) { const per = innerWidth < 900 ? 1 : 2, max = REV.length - per; ri = i < 0 ? max : i > max ? 0 : i; const c = $("revTrack").children[0]; $("revTrack").style.transform = `translateX(-${ri * (c.offsetWidth + 24)}px)`; }
+    $("rPrev").onclick = () => { showR(ri - 1); clearInterval(rT); };
+    $("rNext").onclick = () => { showR(ri + 1); clearInterval(rT); };
+    const rT = setInterval(() => showR(ri + 1), 6000);
+    addEventListener("resize", () => showR(ri));
+
+    // ---------- FAQ + order ----------
+    document.querySelectorAll("#acc details").forEach((d) => d.addEventListener("toggle", () => { if (d.open) document.querySelectorAll("#acc details").forEach((o) => o !== d && (o.open = false)); }));
+    $("simType").addEventListener("click", (e) => { if (e.target.tagName !== "BUTTON") return; document.querySelectorAll("#simType button").forEach((b) => b.classList.toggle("on", b === e.target)); });
+    $("orderForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const ok = $("orderOk"), esim = document.querySelector("#simType .on").textContent === "eSIM";
+      ok.innerHTML = `<i class="ri-checkbox-circle-fill"></i> Order received for <b>${$("planSel").value}</b>. ${esim ? "Your eSIM QR code is on its way by email." : "Your SIM arrives next working day."}`;
+      ok.classList.add("on");
+    });
+
+    // ---------- Scroll reveals ----------
+    const REVEAL = [".logos__in", ".title", ".head", ".plan", ".bb__copy > *", ".story", ".member", ".rev__side > *", ".rcard", ".order__faq > *", ".form", ".footer__grid > div"].join(",");
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(REVEAL).forEach((el) => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter((c) => c.matches(REVEAL));
+      el.style.setProperty("--i", Math.min(sibs.indexOf(el), 5));
+      io.observe(el);
+    });
+    document.querySelectorAll(".reveal-img").forEach((el) => io.observe(el));
+    const pio = new IntersectionObserver((es) => { if (es[0].isIntersecting) { renderPhones(true); pio.disconnect(); } }, { threshold: .1 });
+    pio.observe($("phones-grid"));
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/landing-halo/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

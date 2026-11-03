@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nook — Furniture Made to Live With</title>
+  <meta name="description" content="Nook makes sofas, chairs and tables in small batches in Porto, delivered across Europe in 2–4 weeks. Shop the room, check if it fits, order free fabric samples." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#top" class="logo" aria-label="Nook home">nook<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#shop">Shop</a>
+        <a href="#room">Shop the room</a>
+        <a href="#fit">Will it fit?</a>
+        <a href="#samples">Free samples</a>
+        <a href="#showrooms">Showrooms</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Open cart"><i class="ri-shopping-bag-line"></i><b id="cartCount">0</b></button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+    <form class="search" id="search"><i class="ri-search-line"></i><input id="searchIn" placeholder="Search sofas, chairs, tables…" aria-label="Search products" /><button type="button" id="searchClose" aria-label="Close search"><i class="ri-close-line"></i></button></form>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__in">
+        <div class="hero__copy">
+          <p class="eyebrow hero__fade">Made in Porto · delivered in 2–4 weeks</p>
+          <h1 class="hero__title"><span class="line"><span>Furniture you'll</span></span><span class="line"><span><em>sink into</em></span></span><span class="line"><span>for years.</span></span></h1>
+          <p class="hero__lead hero__fade">Solid wood frames, feather-wrapped cushions and fabrics you can wash. Built in small batches by a family workshop, with a 10-year frame guarantee.</p>
+          <div class="hero__cta hero__fade"><a href="#shop" class="btn">Shop sofas <i class="ri-arrow-right-line"></i></a><a href="#room" class="btn btn--ghost">Shop the room</a></div>
+          <ul class="hero__perks hero__fade">
+            <li><i class="ri-truck-line"></i>Free delivery &amp; setup</li>
+            <li><i class="ri-arrow-go-back-line"></i>100-night trial</li>
+            <li><i class="ri-shield-check-line"></i>10-year frame guarantee</li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <div class="hero__slides" id="heroSlides"></div>
+          <div class="hero__product" id="heroProduct"></div>
+          <div class="hero__dots" id="heroDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="cats-sec">
+      <div class="container cats" id="cats"></div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="head">
+          <div><p class="eyebrow">The collection</p><h2 class="h2">Bestsellers, <em>made to order</em></h2></div>
+          <div class="tools">
+            <div class="filters" id="filters" role="tablist" aria-label="Filter by category"></div>
+            <label class="sort"><span>Sort</span><select id="sort"><option value="pop">Most popular</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+          </div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Shop the room -->
+    <section class="section room-sec" id="room">
+      <div class="container">
+        <div class="head head--c"><p class="eyebrow">Shop the room</p><h2 class="h2">The Lisbon living room, <em>piece by piece</em></h2><p class="head__p">Tap the dots to see each piece, then add the whole look in one go.</p></div>
+        <div class="room">
+          <div class="room__img" id="roomImg">
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1800&q=80" alt="A warm living room with a low sofa, armchairs, rug and plants" loading="lazy" />
+          </div>
+          <aside class="room__list">
+            <h3>In this room</h3>
+            <ul id="roomList"></ul>
+            <div class="room__total"><span>Complete look</span><b id="roomTotal">€0</b></div>
+            <button class="btn btn--full" id="roomAdd">Add all to bag <i class="ri-shopping-bag-line"></i></button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Will it fit -->
+    <section class="section fit-sec" id="fit">
+      <div class="container fit">
+        <div class="fit__copy">
+          <p class="eyebrow">Will it fit?</p>
+          <h2 class="h2">Measure once, <em>buy with confidence.</em></h2>
+          <p>Pick a sofa and enter the width of your wall. We'll draw both to scale and tell you how much room is left for a side table or a walkway.</p>
+          <div class="fit__form">
+            <label>Sofa</label>
+            <div class="chips" id="fitSofas"></div>
+            <label for="wall">Your wall width</label>
+            <div class="wall"><input id="wall" type="number" inputmode="numeric" min="120" max="900" value="320" /><span>cm</span>
+              <div class="wall__quick"><button type="button" data-w="260">260</button><button type="button" data-w="320">320</button><button type="button" data-w="420">420</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="fit__plan">
+          <svg viewBox="0 0 600 300" id="plan" role="img" aria-label="Floor plan showing the sofa against your wall"></svg>
+          <p class="fit__verdict" id="verdict"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story">
+      <div class="container story__in">
+        <figure class="story__img"><img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1200&q=80" alt="Inside the Nook workshop" loading="lazy" /></figure>
+        <div>
+          <p class="eyebrow">The workshop</p>
+          <h2 class="h2">Three generations, <em>one workshop.</em></h2>
+          <p>Every Nook piece is built by the Soares family in Paredes, the furniture capital of Portugal. Kiln-dried beech frames, pocket-sprung seats wrapped in feather, and covers that zip off so you can wash them.</p>
+          <ul class="story__list">
+            <li><b>FSC</b><span>certified beech and oak only</span></li>
+            <li><b>38 hrs</b><span>of handwork in every sofa</span></li>
+            <li><b>0</b><span>flat-pack. We deliver it built.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Samples -->
+    <section class="section samples-sec" id="samples">
+      <div class="container samples">
+        <div>
+          <p class="eyebrow">Free fabric samples</p>
+          <h2 class="h2">Feel it <em>before you buy.</em></h2>
+          <p>Choose up to five fabrics and we'll post them free, anywhere in Europe, within two days.</p>
+          <p class="samples__count"><b id="sCount">0</b> / 5 chosen</p>
+          <button class="btn" id="sOrder" disabled>Send my samples <i class="ri-mail-send-line"></i></button>
+        </div>
+        <div class="swatches" id="swatches"></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section">
+      <div class="container">
+        <div class="head"><div><p class="eyebrow">Reviews</p><h2 class="h2">4.8 out of 5 from <em>6,200 homes</em></h2></div><a href="#" class="link">Read all reviews <i class="ri-arrow-right-line"></i></a></div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Showrooms -->
+    <section class="section showrooms-sec" id="showrooms">
+      <div class="container">
+        <div class="head"><div><p class="eyebrow">Showrooms</p><h2 class="h2">Sit on it <em>first.</em></h2></div></div>
+        <div class="shows" id="shows"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__news">
+        <h3>10% off your first order</h3>
+        <p>New fabrics, restocks and the occasional sample sale. No spam.</p>
+        <form class="news" id="news"><input type="email" required placeholder="Your email" aria-label="Your email" /><button class="btn">Subscribe</button></form>
+        <p class="form-msg" id="newsMsg"></p>
+      </div>
+      <div class="footer__grid">
+        <div><a href="#top" class="logo">nook<span>.</span></a><p>Small-batch furniture from Porto, delivered built across Europe.</p></div>
+        <div><h4>Shop</h4><a href="#shop">Sofas</a><a href="#shop">Armchairs</a><a href="#shop">Tables</a><a href="#shop">Lighting</a></div>
+        <div><h4>Help</h4><a href="#">Delivery</a><a href="#">100-night trial</a><a href="#">Care guide</a><a href="#">Contact</a></div>
+        <div><h4>Nook</h4><a href="#">Our workshop</a><a href="#showrooms">Showrooms</a><a href="#">Trade programme</a><a href="#">Careers</a></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Nook Living, Lda.</p><div class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-fill"></i></div></div>
+    </div>
+  </footer>
+
+  <!-- Quick view -->
+  <div class="modal" id="qv" hidden>
+    <article class="qv" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+      <button class="qv__close" id="qvClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="qvBody"></div>
+    </article>
+  </div>
+
+  <!-- Cart -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Your bag</h3><button id="drawerClose" aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="freebar"><p id="freeText"></p><span><i id="freeFill"></i></span></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__row"><span>Subtotal</span><b id="dSub">€0</b></div>
+      <p class="drawer__eta"><i class="ri-calendar-check-line"></i> <span id="eta"></span></p>
+      <button class="btn btn--full" id="checkout">Checkout <i class="ri-lock-line"></i></button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const eur = (n) => "€" + n.toLocaleString("en-GB");
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2400); };
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const ROOMIMG = "1618220179428-22790b461013";
+    const PRODUCTS = [
+      { id: "alma", name: "Alma 3-seater sofa", cat: "Sofas", price: 1890, was: 2190, img: "1555041469-a586c61ea9bc", pop: 1, w: 214, colors: [["Forest velvet", "#1f4a3d"], ["Oat linen", "#d9cdb6"], ["Rust velvet", "#a9502e"]], tag: "Bestseller" },
+      { id: "costa", name: "Costa leather sofa", cat: "Sofas", price: 2450, img: "1540574163026-643ea20ade25", pop: 3, w: 228, colors: [["Cognac leather", "#a8672f"], ["Espresso leather", "#4a2c1d"]] },
+      { id: "nuvem", name: "Nuvem sofa", cat: "Sofas", price: 1590, img: "1550254478-ead40cc54513", pop: 4, w: 196, colors: [["Olive linen", "#6b6a3f"], ["Sand linen", "#d8c8a8"]], tag: "New" },
+      { id: "rio", name: "Rio lounge chair", cat: "Chairs", price: 790, img: ROOMIMG, pos: "72% 86%", pop: 2, colors: [["Rust velvet", "#c0562a"], ["Moss velvet", "#5b6b4a"]] },
+      { id: "sol", name: "Sol tufted armchair", cat: "Chairs", price: 690, img: "1567538096630-e0c55bd6374c", pop: 5, colors: [["Ivory boucle", "#efe9df"], ["Blush velvet", "#d9a7a0"]] },
+      { id: "onda", name: "Onda shell chair", cat: "Chairs", price: 260, img: "1592078615290-033ee584e267", pop: 7, colors: [["Black", "#1d1d1d"], ["Chalk", "#ece6dc"]] },
+      { id: "bica", name: "Bica bar stool", cat: "Chairs", price: 190, img: "1581539250439-c96689b516dd", pop: 9, colors: [["Black & oak", "#1d1d1d"]] },
+      { id: "ribeira", name: "Ribeira rattan sideboard", cat: "Storage", price: 1150, img: ROOMIMG, pos: "36% 64%", pop: 6, colors: [["Natural rattan & oak", "#c49a6c"]] },
+      { id: "lua", name: "Lua round mirror", cat: "Storage", price: 320, img: ROOMIMG, pos: "50% 30%", pop: 10, colors: [["Brass", "#b8933f"]] },
+      { id: "farol", name: "Farol floor lamp", cat: "Lighting", price: 240, img: "1507473885765-e6ed057f782c", pop: 8, colors: [["Graphite", "#3a3d40"], ["Clay", "#b8724e"]] },
+    ];
+    const CATS = [["Sofas", "1555041469-a586c61ea9bc", "From €1,590"], ["Chairs", "1567538096630-e0c55bd6374c", "From €190"], ["Storage", ROOMIMG, "From €320", "36% 64%"], ["Lighting", "1507473885765-e6ed057f782c", "From €240"]];
+    const HERO = [
+      { img: "1555041469-a586c61ea9bc", pid: "alma", note: "Alma sofa in Forest velvet" },
+      { img: ROOMIMG, pid: "rio", note: "Rio lounge chair in Rust velvet" },
+      { img: "1540574163026-643ea20ade25", pid: "costa", note: "Costa sofa in Cognac leather" },
+    ];
+    const ROOM = [
+      { pid: "lua", x: 50, y: 32 }, { pid: "ribeira", x: 36, y: 74 }, { pid: "rio", x: 70, y: 84 }, { pid: "onda", x: 88, y: 60, hide: true },
+    ].filter((r) => !r.hide);
+    const FABRICS = [["Forest velvet", "#1f4a3d"], ["Rust velvet", "#a9502e"], ["Oat linen", "#d9cdb6"], ["Sky boucle", "#a9bfd3"], ["Chalk boucle", "#ece6dc"], ["Mustard wool", "#d4a02a"], ["Ink cotton", "#283240"], ["Moss linen", "#5b6b4a"], ["Blush velvet", "#d9a7a0"], ["Cognac leather", "#a8672f"]];
+    const REVIEWS = [
+      ["The Alma is even nicer in person. Delivered built, carried upstairs, wrapping taken away. Two years in and it still looks new.", "Clara B.", "Alma sofa · Lyon"],
+      ["Ordered five samples, picked the rust velvet, sofa arrived in 17 days. The 'will it fit' tool saved me from buying one 20 cm too long.", "Tom H.", "Alma sofa · Amsterdam"],
+      ["Spilled red wine on the chalk boucle in week one. Zipped the cover off, washed it at 30°, gone. That alone sold me.", "Sofia R.", "Nuvem sofa · Madrid"],
+    ];
+    const SHOWS = [["Porto", "Rua de Miguel Bombarda 412", "1586023492125-27b2c045efd7", "Open today 10:00–19:00"], ["Lisbon", "Rua da Escola Politécnica 88", "1616486338812-3dadae4b4ace", "Open today 10:00–20:00"], ["Madrid", "Calle de Jorge Juan 31", "1493663284031-b7e3aefcae8e", "Opening March 2027"]];
+    const P = (id) => PRODUCTS.find((p) => p.id === id);
+    const pimg = (p, w, alt = "") => `<img src="${U(p.img, w)}" alt="${alt}" loading="lazy"${p.pos ? ` style="object-position:${p.pos}${w >= 800 ? `;transform-origin:${p.pos};scale:1.9` : ""}"` : ""} />`;
+
+    /* =====================================================
+       Hero slideshow with product tag
+       ===================================================== */
+    let hs = 0, hsT;
+    $("heroSlides").innerHTML = HERO.map((s, i) => `<img src="${U(s.img, 1400)}" alt="${s.note}" class="${i ? "" : "on"}" />`).join("");
+    $("heroDots").innerHTML = HERO.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Slide ${i + 1}"></button>`).join("");
+    const showHero = (i) => {
+      hs = (i + HERO.length) % HERO.length; const p = P(HERO[hs].pid);
+      [...$("heroSlides").children].forEach((im, k) => im.classList.toggle("on", k === hs));
+      [...$("heroDots").children].forEach((d, k) => d.classList.toggle("on", k === hs));
+      $("heroProduct").innerHTML = `<span><small>${HERO[hs].note}</small><b>${eur(p.price)}</b></span><button data-qv="${p.id}" aria-label="View ${p.name}"><i class="ri-arrow-right-up-line"></i></button>`;
+      $("heroProduct").classList.remove("pop"); void $("heroProduct").offsetWidth; $("heroProduct").classList.add("pop");
+      clearInterval(hsT); if (!reduce) hsT = setInterval(() => showHero(hs + 1), 5000);
+    };
+    $("heroDots").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) showHero([...$("heroDots").children].indexOf(b)); });
+    showHero(0);
+
+    /* =====================================================
+       Categories + grid + filters + search
+       ===================================================== */
+    let cat = "All", sort = "pop", query = "";
+    $("cats").innerHTML = CATS.map(([n, img, f, pos], i) => `<button class="cat reveal" style="--d:${i * 0.06}s" data-cat="${n}"><span class="cat__img"><img src="${U(img, pos ? 1400 : 600)}" alt="" loading="lazy"${pos ? ` style="object-position:${pos};transform-origin:${pos};scale:1.7"` : ""} /></span><b>${n}</b><small>${f}</small></button>`).join("");
+    $("cats").addEventListener("click", (e) => { const b = e.target.closest(".cat"); if (!b) return; cat = b.dataset.cat; renderGrid(); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+    const renderGrid = () => {
+      const cats = ["All", ...new Set(PRODUCTS.map((p) => p.cat))];
+      $("filters").innerHTML = cats.map((c) => `<button role="tab" class="${c === cat ? "on" : ""}" aria-selected="${c === cat}">${c}</button>`).join("");
+      let list = PRODUCTS.filter((p) => (cat === "All" || p.cat === cat) && p.name.toLowerCase().includes(query));
+      list.sort((a, b) => (sort === "low" ? a.price - b.price : sort === "high" ? b.price - a.price : a.pop - b.pop));
+      $("grid").innerHTML = list.length ? list.map((p, i) => `
+        <article class="card" style="--d:${i * 0.05}s">
+          <button class="card__img" data-qv="${p.id}" aria-label="Quick view ${p.name}">${pimg(p, 800, p.name)}${p.tag ? `<span class="card__tag">${p.tag}</span>` : ""}<span class="card__quick">Quick view</span></button>
+          <div class="card__body">
+            <div class="card__dots">${p.colors.map((c) => `<i style="background:${c[1]}" title="${c[0]}"></i>`).join("")}</div>
+            <h3>${p.name}</h3>
+            <p class="card__price">${p.was ? `<s>${eur(p.was)}</s>` : ""}${eur(p.price)}</p>
+            <button class="card__add" data-add="${p.id}"><i class="ri-add-line"></i> Add to bag</button>
+          </div>
+        </article>`).join("") : `<p class="empty">No pieces match “${query}”. Try “sofa” or “oak”.</p>`;
+    };
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { cat = b.textContent; renderGrid(); } });
+    $("sort").addEventListener("change", (e) => { sort = e.target.value; renderGrid(); });
+    $("searchBtn").addEventListener("click", () => { document.body.classList.add("search-open"); setTimeout(() => $("searchIn").focus(), 200); });
+    $("searchClose").addEventListener("click", () => { document.body.classList.remove("search-open"); query = ""; $("searchIn").value = ""; renderGrid(); });
+    $("searchIn").addEventListener("input", (e) => { query = e.target.value.trim().toLowerCase(); cat = "All"; renderGrid(); });
+    $("search").addEventListener("submit", (e) => { e.preventDefault(); $("shop").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+    renderGrid();
+
+    /* =====================================================
+       Cart
+       ===================================================== */
+    let cart = [];
+    try { cart = JSON.parse(localStorage.getItem("nookCart") || "[]"); } catch (e) {}
+    const FREE = 1500;
+    const renderCart = () => {
+      const count = cart.reduce((s, i) => s + i.q, 0), sub = cart.reduce((s, i) => s + i.q * i.price, 0);
+      $("cartCount").textContent = count; $("cartCount").classList.toggle("on", count > 0);
+      $("drawerList").innerHTML = cart.length ? cart.map((i, k) => `<li>${pimg(P(i.id), 200)}<div><b>${P(i.id).name}</b><small><i style="background:${i.hex}"></i>${i.color}</small><span>${eur(i.price)}</span></div><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-sofa-line"></i>Your bag is empty.</li>`;
+      $("dSub").textContent = eur(sub);
+      $("freeText").innerHTML = sub >= FREE || !sub ? (sub ? `<i class="ri-checkbox-circle-fill"></i> Free white-glove delivery unlocked` : `Free white-glove delivery over ${eur(FREE)}`) : `You're <b>${eur(FREE - sub)}</b> away from free white-glove delivery`;
+      $("freeFill").style.width = Math.min(100, (sub / FREE) * 100) + "%";
+      const d = new Date(); d.setDate(d.getDate() + (cart.some((i) => P(i.id).cat === "Sofas") ? 21 : 7));
+      $("eta").textContent = `Arrives by ${d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" })}`;
+      try { localStorage.setItem("nookCart", JSON.stringify(cart)); } catch (e) {}
+    };
+    const add = (id, colorIdx = 0, silent) => {
+      const p = P(id), [color, hex] = p.colors[colorIdx];
+      const f = cart.find((i) => i.id === id && i.color === color); f ? f.q++ : cart.push({ id, color, hex, price: p.price, q: 1 });
+      renderCart(); if (!silent) toast(`${p.name} added to your bag`);
+      $("cartBtn").classList.remove("bump"); void $("cartBtn").offsetWidth; $("cartBtn").classList.add("bump");
+    };
+    const openCart = () => { document.body.classList.add("cart-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { document.body.classList.remove("cart-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    $("cartBtn").addEventListener("click", openCart); $("drawerClose").addEventListener("click", closeCart); $("scrim").addEventListener("click", closeCart);
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const i = cart[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) cart.splice(+b.dataset.k, 1); renderCart(); });
+    $("checkout").addEventListener("click", () => { if (!cart.length) return toast("Your bag is empty"); cart = []; renderCart(); closeCart(); toast("Order placed. Confirmation sent to your email"); });
+    document.addEventListener("click", (e) => { const a = e.target.closest("[data-add]"); if (a) add(a.dataset.add); });
+    renderCart();
+
+    /* =====================================================
+       Quick view
+       ===================================================== */
+    const openQV = (id) => {
+      const p = P(id); let ci = 0;
+      const draw = () => {
+        $("qvBody").innerHTML = `
+          <div class="qv__img">${pimg(p, 1100, p.name)}</div>
+          <div class="qv__info">
+            <p class="eyebrow">${p.cat}</p><h3 id="qvTitle">${p.name}</h3>
+            <p class="qv__price">${p.was ? `<s>${eur(p.was)}</s>` : ""}${eur(p.price)}</p>
+            <p class="qv__label">Colour: <b>${p.colors[ci][0]}</b></p>
+            <div class="qv__swatches">${p.colors.map((c, k) => `<button class="${k === ci ? "on" : ""}" data-ci="${k}" style="--c:${c[1]}" aria-label="${c[0]}"></button>`).join("")}</div>
+            <ul class="qv__facts"><li><i class="ri-ruler-line"></i>${p.w ? `W ${p.w} × D 96 × H 82 cm` : "See size guide"}</li><li><i class="ri-truck-line"></i>${p.cat === "Sofas" ? "Made to order, delivered in 3 weeks" : "In stock, delivered in 5–7 days"}</li><li><i class="ri-arrow-go-back-line"></i>100-night home trial</li></ul>
+            <button class="btn btn--full" id="qvAdd">Add to bag · ${eur(p.price)}</button>
+            ${p.w ? `<a href="#fit" class="qv__fit" id="qvFit"><i class="ri-ruler-2-line"></i> Will it fit my wall?</a>` : ""}
+          </div>`;
+        $("qvBody").querySelectorAll("[data-ci]").forEach((b) => b.addEventListener("click", () => { ci = +b.dataset.ci; draw(); }));
+        $("qvAdd").addEventListener("click", () => { add(p.id, ci); closeQV(); });
+        $("qvFit")?.addEventListener("click", () => { closeQV(); fitSofa = p.id; renderFit(); });
+      };
+      draw(); $("qv").hidden = false; document.body.style.overflow = "hidden"; $("qvClose").focus();
+    };
+    const closeQV = () => { $("qv").hidden = true; document.body.style.overflow = ""; };
+    document.addEventListener("click", (e) => { const q = e.target.closest("[data-qv]"); if (q) openQV(q.dataset.qv); });
+    $("qvClose").addEventListener("click", closeQV);
+    $("qv").addEventListener("click", (e) => { if (e.target.id === "qv") closeQV(); });
+
+    /* =====================================================
+       Shop the room (hotspots)
+       ===================================================== */
+    $("roomImg").insertAdjacentHTML("beforeend", ROOM.map((r, i) => `<button class="spot" style="left:${r.x}%;top:${r.y}%;--d:${i * 0.4}s" data-spot="${i}" aria-label="${P(r.pid).name}"><i class="ri-add-line"></i><span class="spot__card">${pimg(P(r.pid), 200)}<span><b>${P(r.pid).name}</b>${eur(P(r.pid).price)}</span></span></button>`).join(""));
+    $("roomList").innerHTML = ROOM.map((r, i) => { const p = P(r.pid); return `<li data-spot="${i}">${pimg(p, 200)}<div><b>${p.name}</b><span>${eur(p.price)}</span></div><button data-add="${p.id}" aria-label="Add ${p.name}"><i class="ri-add-line"></i></button></li>`; }).join("");
+    $("roomTotal").textContent = eur(ROOM.reduce((s, r) => s + P(r.pid).price, 0));
+    const activeSpot = (i) => { document.querySelectorAll("[data-spot]").forEach((el) => el.classList.toggle("on", +el.dataset.spot === i)); };
+    $("roomImg").addEventListener("click", (e) => { const s = e.target.closest(".spot"); if (s) activeSpot(+s.dataset.spot); });
+    $("roomList").addEventListener("pointerover", (e) => { const li = e.target.closest("li"); if (li) activeSpot(+li.dataset.spot); });
+    $("roomAdd").addEventListener("click", () => { ROOM.forEach((r) => add(r.pid, 0, true)); toast("The whole room is in your bag"); openCart(); });
+
+    /* =====================================================
+       Will it fit? (to-scale SVG plan)
+       ===================================================== */
+    let fitSofa = "alma";
+    const sofas = PRODUCTS.filter((p) => p.w);
+    const renderFit = () => {
+      $("fitSofas").innerHTML = sofas.map((p) => `<button class="${p.id === fitSofa ? "on" : ""}" data-s="${p.id}">${p.name.replace(" 3-seater", "").replace(" sofa", "")}<small>${p.w} cm</small></button>`).join("");
+      const wall = Math.max(120, Math.min(900, +$("wall").value || 0)), s = P(fitSofa), sw = s.w, sd = 96;
+      const scale = 520 / Math.max(wall, sw + 20), W = wall * scale, x0 = (600 - W) / 2, sx = 300 - (sw * scale) / 2, swd = sw * scale, left = (wall - sw) / 2;
+      const fits = sw <= wall, roomy = left >= 45;
+      $("plan").innerHTML = `
+        <defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#c9bfae" stroke-width="2"/></pattern></defs>
+        <rect x="${x0}" y="40" width="${W}" height="14" fill="url(#hatch)" stroke="#3a3530" stroke-width="2"/>
+        <line x1="${x0}" y1="24" x2="${x0 + W}" y2="24" stroke="#3a3530" stroke-width="1.5"/><line x1="${x0}" y1="18" x2="${x0}" y2="30" stroke="#3a3530" stroke-width="1.5"/><line x1="${x0 + W}" y1="18" x2="${x0 + W}" y2="30" stroke="#3a3530" stroke-width="1.5"/>
+        <text x="300" y="16" text-anchor="middle" class="t">Wall ${wall} cm</text>
+        <g class="sofa ${fits ? "" : "bad"}">
+          <rect x="${sx}" y="56" width="${swd}" height="${sd * scale}" rx="10"/>
+          <rect x="${sx}" y="56" width="${swd}" height="${sd * scale * 0.28}" rx="8" class="back"/>
+          <rect x="${sx}" y="56" width="${14 * scale}" height="${sd * scale}" rx="8" class="arm"/><rect x="${sx + swd - 14 * scale}" y="56" width="${14 * scale}" height="${sd * scale}" rx="8" class="arm"/>
+        </g>
+        <text x="300" y="${76 + sd * scale}" text-anchor="middle" class="t t--b">${s.name.split(" ")[0]} · ${sw} cm</text>
+        ${fits && left > 0 ? `<line x1="${x0}" y1="${60 + (sd * scale) / 2}" x2="${sx}" y2="${60 + (sd * scale) / 2}" class="gap"/><text x="${(x0 + sx) / 2}" y="${52 + (sd * scale) / 2}" text-anchor="middle" class="t t--s">${Math.round(left)} cm</text><line x1="${sx + swd}" y1="${60 + (sd * scale) / 2}" x2="${x0 + W}" y2="${60 + (sd * scale) / 2}" class="gap"/><text x="${(sx + swd + x0 + W) / 2}" y="${52 + (sd * scale) / 2}" text-anchor="middle" class="t t--s">${Math.round(left)} cm</text>` : ""}`;
+      $("verdict").className = "fit__verdict " + (fits ? (roomy ? "ok" : "tight") : "no");
+      $("verdict").innerHTML = !fits ? `<i class="ri-close-circle-fill"></i> Too long by ${sw - wall} cm. Try the ${sofas.filter((p) => p.w <= wall).sort((a, b) => b.w - a.w)[0]?.name || "Sol armchair"}.` : roomy ? `<i class="ri-checkbox-circle-fill"></i> Fits, with ${Math.round(left)} cm each side for a side table or lamp.` : `<i class="ri-error-warning-fill"></i> Fits, but only ${Math.round(left)} cm each side. Snug, no side tables.`;
+    };
+    $("fitSofas").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { fitSofa = b.dataset.s; renderFit(); } });
+    $("wall").addEventListener("input", renderFit);
+    document.querySelectorAll(".wall__quick button").forEach((b) => b.addEventListener("click", () => { $("wall").value = b.dataset.w; renderFit(); }));
+    renderFit();
+
+    /* =====================================================
+       Samples, reviews, showrooms
+       ===================================================== */
+    const picked = new Set();
+    $("swatches").innerHTML = FABRICS.map(([n, c], i) => `<button class="sw reveal" style="--c:${c};--d:${i * 0.04}s" data-n="${n}"><span></span><small>${n}</small></button>`).join("");
+    $("swatches").addEventListener("click", (e) => {
+      const b = e.target.closest(".sw"); if (!b) return; const n = b.dataset.n;
+      if (picked.has(n)) picked.delete(n); else if (picked.size < 5) picked.add(n); else return toast("Five samples max. Remove one first");
+      b.classList.toggle("on", picked.has(n)); $("sCount").textContent = picked.size; $("sOrder").disabled = !picked.size;
+    });
+    $("sOrder").addEventListener("click", () => { toast(`${picked.size} samples on their way, arriving in 2 days`); picked.clear(); document.querySelectorAll(".sw.on").forEach((b) => b.classList.remove("on")); $("sCount").textContent = 0; $("sOrder").disabled = true; });
+    $("reviews").innerHTML = REVIEWS.map(([q, n, p], i) => `<figure class="review reveal" style="--d:${i * 0.08}s"><div class="stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div><blockquote>${q}</blockquote><figcaption><b>${n}</b>${p}</figcaption></figure>`).join("");
+    $("shows").innerHTML = SHOWS.map(([c, a, img, h], i) => `<article class="show reveal" style="--d:${i * 0.08}s"><span class="show__img"><img src="${U(img, 900)}" alt="${c} showroom" loading="lazy" /></span><h3>${c}</h3><p>${a}</p><small><i class="ri-time-line"></i>${h}</small><a href="#" class="link">Book a visit <i class="ri-arrow-right-line"></i></a></article>`).join("");
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Welcome! Your 10% code is on its way."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeQV(); closeCart(); closeNav(); document.body.classList.remove("search-open"); } });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 20);
+      let c = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * 0.4) c = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === c));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .section .h2, .section .eyebrow, .room, .fit__plan, .story__img").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/shop-nook/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

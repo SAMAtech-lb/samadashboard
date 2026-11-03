@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Bay — Seafront Hotel in Cala d'Or, Mallorca</title>
+  <meta name="description" content="Azure Bay is a 48-room seafront hotel above the coves of Cala d'Or, Mallorca. Sea-view rooms, a cliff-edge pool, a fish restaurant and the best rate when you book direct." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo" aria-label="Azure Bay home"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="15" r="7" fill="currentColor" class="sun"/><path d="M2 26c4-3 8-3 12 0s8 3 12 0 8-3 12 0M2 33c4-3 8-3 12 0s8 3 12 0 8-3 12 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Azure Bay</a>
+      <nav class="nav" id="nav">
+        <a href="#rooms">Rooms</a>
+        <a href="#day">The day</a>
+        <a href="#dining">Dining</a>
+        <a href="#offers">Offers</a>
+        <a href="#location">Location</a>
+      </nav>
+      <a href="tel:+34971555018" class="header__tel"><i class="ri-phone-line"></i> +34 971 555 018</a>
+      <a href="#book" class="btn btn--sm">Book direct</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__slides" id="heroSlides"></div>
+      <div class="hero__shade"></div>
+      <div class="container hero__in">
+        <p class="hero__kicker hero__fade"><i class="ri-map-pin-line"></i> Cala d'Or · Mallorca</p>
+        <h1 class="hero__title"><span class="line"><span>Wake up</span></span><span class="line"><span>above the <em>sea.</em></span></span></h1>
+        <p class="hero__lead hero__fade">48 rooms on the cliffs over two turquoise coves. Breakfast on your terrace, a pool that spills into the horizon, and the beach 90 steps below.</p>
+      </div>
+      <!-- Quick booking bar -->
+      <form class="qbar hero__fade" id="qbar">
+        <button type="button" class="qbar__f" data-open="cal"><small>Check in</small><b id="qIn">Add date</b></button>
+        <button type="button" class="qbar__f" data-open="cal"><small>Check out</small><b id="qOut">Add date</b></button>
+        <div class="qbar__f qbar__g"><small>Guests</small><div class="step"><button type="button" id="gMinus" aria-label="Fewer guests"><i class="ri-subtract-line"></i></button><b id="gCount">2</b><button type="button" id="gPlus" aria-label="More guests"><i class="ri-add-line"></i></button></div></div>
+        <a href="#book" class="btn">Check availability</a>
+      </form>
+    </section>
+
+    <!-- Live conditions -->
+    <section class="live" aria-label="Today at the bay">
+      <div class="container live__in">
+        <span class="live__badge"><i></i> Live from the bay</span>
+        <div><small>Air</small><b id="lAir">--°</b></div>
+        <div><small>Sea</small><b id="lSea">--°</b></div>
+        <div><small>Sunset</small><b id="lSun">--:--</b></div>
+        <div><small>Local time</small><b id="lTime">--:--</b></div>
+        <svg class="live__waves" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 37.5 5 75 20 T 150 20 T 225 20 T 300 20 V40 H0Z"/><path d="M0 26 Q 37.5 12 75 26 T 150 26 T 225 26 T 300 26 V40 H0Z"/></svg>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section intro">
+      <div class="container intro__in">
+        <div>
+          <p class="label reveal">The hotel</p>
+          <h2 class="h2 reveal">A family hotel since 1971, <em>rebuilt around the view.</em></h2>
+        </div>
+        <div class="intro__copy reveal">
+          <p>The Ferrer family opened Azure Bay with twelve rooms and a fishing boat. Today it has 48, but the idea hasn't changed: every room faces the sea, the fish comes from the harbour below, and you'll be greeted by name by the second morning.</p>
+          <a href="#rooms" class="link">See the rooms <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+      <div class="intro__strip" id="introStrip"></div>
+    </section>
+
+    <!-- Rooms -->
+    <section class="section rooms-sec" id="rooms">
+      <div class="container">
+        <div class="head">
+          <div><p class="label reveal">Rooms &amp; suites</p><h2 class="h2 reveal">Every one <em>faces the sea.</em></h2></div>
+          <div class="tabs" id="roomTabs" role="tablist" aria-label="Rooms"></div>
+        </div>
+        <div class="room" id="room"></div>
+      </div>
+    </section>
+
+    <!-- A day at Azure Bay (horizontal scroll) -->
+    <section class="day" id="day">
+      <div class="day__sticky">
+        <div class="container day__head"><p class="label">A day at Azure Bay</p><h2 class="h2">From first swim <em>to last light.</em></h2></div>
+        <div class="day__track" id="dayTrack"></div>
+        <div class="container"><div class="day__bar"><i id="dayBar"></i></div></div>
+      </div>
+    </section>
+
+    <!-- Dining -->
+    <section class="section dining" id="dining">
+      <div class="container dining__in">
+        <figure class="dining__img reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1300&q=80" alt="Dinner on the terrace at Sa Barca" loading="lazy" /><figcaption><b>Sa Barca</b> · terrace restaurant</figcaption></figure>
+        <div>
+          <p class="label reveal">Dining</p>
+          <h2 class="h2 reveal">Today's catch, <em>tonight.</em></h2>
+          <p class="reveal">Our chef Toni Ferrer buys from the boats in Portopetro every morning at 7. What's on the menu depends on what came in.</p>
+          <div class="catch reveal">
+            <div class="catch__head"><b>Today at Sa Barca</b><span id="catchDate"></span></div>
+            <ul id="catch"></ul>
+          </div>
+          <a href="#book" class="btn btn--line reveal">Reserve a table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section book-sec" id="book">
+      <div class="container">
+        <div class="head head--c"><p class="label reveal">Book direct</p><h2 class="h2 reveal">Best price, <em>always here.</em></h2><p class="head__p reveal">Book on our site and get breakfast included, free late check-out and 10% less than on booking platforms.</p></div>
+        <div class="book reveal">
+          <div class="cal">
+            <div class="cal__top"><button type="button" id="calPrev" aria-label="Previous months"><i class="ri-arrow-left-s-line"></i></button><p id="calHint">Choose your check-in date</p><button type="button" id="calNext" aria-label="Next months"><i class="ri-arrow-right-s-line"></i></button></div>
+            <div class="cal__months" id="calMonths"></div>
+            <p class="cal__legend"><span><i class="full"></i>Sold out</span><span>Season 1 April – 31 October · prices per night, Sea View Room</span></p>
+          </div>
+          <aside class="sum">
+            <h3>Your stay</h3>
+            <div class="sum__dates"><div><small>Check in</small><b id="sIn">—</b></div><i class="ri-arrow-right-line"></i><div><small>Check out</small><b id="sOut">—</b></div></div>
+            <label>Room</label>
+            <div class="sum__rooms" id="sRooms"></div>
+            <div class="sum__lines" id="sLines"></div>
+            <div class="sum__total"><span>Total</span><b id="sTotal">€0</b></div>
+            <button class="btn btn--full" id="sBook" disabled>Reserve now</button>
+            <ul class="sum__perks"><li><i class="ri-check-line"></i>Breakfast included</li><li><i class="ri-check-line"></i>Free cancellation until 7 days before</li><li><i class="ri-check-line"></i>Pay at the hotel</li></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="section" id="offers">
+      <div class="container">
+        <div class="head"><div><p class="label reveal">Offers</p><h2 class="h2 reveal">Stay longer, <em>pay less.</em></h2></div></div>
+        <div class="offers" id="offers-list"></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews-sec">
+      <div class="container">
+        <div class="score reveal"><b>9.4</b><div><strong>Exceptional</strong><span>from 2,140 verified stays</span></div></div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section loc-sec" id="location">
+      <div class="container loc">
+        <div>
+          <p class="label reveal">Getting here</p>
+          <h2 class="h2 reveal">55 minutes <em>from Palma airport.</em></h2>
+          <ul class="ways reveal">
+            <li><i class="ri-plane-line"></i><div><b>Airport transfer</b><span>Private car from €85, booked with your room.</span></div></li>
+            <li><i class="ri-car-line"></i><div><b>By car</b><span>Ma-19 then Ma-14 to Cala d'Or. Free parking.</span></div></li>
+            <li><i class="ri-sailboat-line"></i><div><b>By boat</b><span>Moor at Marina Cala d'Or, 10 minutes' walk.</span></div></li>
+          </ul>
+          <p class="addr reveal">Carrer de Cala Gran 18, 07660 Cala d'Or, Mallorca · <a href="mailto:stay@azurebay.es">stay@azurebay.es</a></p>
+        </div>
+        <div class="map reveal"><iframe title="Map of Cala d'Or" loading="lazy" src="https://maps.google.com/maps?q=Cala%20d%27Or%20Mallorca&z=13&output=embed"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#top" class="logo logo--light"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="15" r="7" fill="currentColor" class="sun"/><path d="M2 26c4-3 8-3 12 0s8 3 12 0 8-3 12 0M2 33c4-3 8-3 12 0s8 3 12 0 8-3 12 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Azure Bay</a>
+        <form class="news" id="news"><input type="email" required placeholder="Early access to summer dates" aria-label="Email" /><button class="btn">Sign up</button></form>
+      </div>
+      <div class="footer__grid">
+        <div><h4>Stay</h4><a href="#rooms">Rooms &amp; suites</a><a href="#offers">Offers</a><a href="#book">Book direct</a><a href="#">Gift vouchers</a></div>
+        <div><h4>Hotel</h4><a href="#dining">Sa Barca restaurant</a><a href="#day">Pool &amp; beach</a><a href="#">Spa</a><a href="#">Weddings</a></div>
+        <div><h4>Contact</h4><p>+34 971 555 018</p><p>stay@azurebay.es</p><p>Reception open 24 hours</p></div>
+        <div><h4>Season</h4><p>Open 1 April – 31 October</p><p>Winter enquiries answered within a day</p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Hotel Azure Bay S.L. · Family run since 1971</p><p class="news-msg" id="newsMsg"></p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></div></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 1400) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const eur = (n) => "€" + Math.round(n).toLocaleString("en-GB");
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2800); };
+    const fmt = (d, o = { day: "numeric", month: "short" }) => d.toLocaleDateString("en-GB", o);
+    const sameDay = (a, b) => a && b && a.toDateString() === b.toDateString();
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const HERO = ["1540541338287-41700207dee6", "1582719508461-905c673771fd", "1501117716987-c8c394bb29df"];
+    const ROOMS = [
+      { id: "sea", name: "Sea View Room", size: "28 m²", guests: 2, bed: "King or twin", view: "Balcony over the cove", k: 1, img: ["1501117716987-c8c394bb29df", "1559599238-308793637427", "1584622650111-993a426fbf0a"], text: "Our most booked room. Floor-to-ceiling doors open onto a private balcony right above Cala Gran." },
+      { id: "terrace", name: "Terrace Suite", size: "44 m²", guests: 3, bed: "King + day bed", view: "Private 20 m² terrace", k: 1.55, img: ["1596394516093-501ba68a0ba6", "1578683010236-d716f9a3f461", "1584622650111-993a426fbf0a"], text: "A wide terrace with an outdoor day bed, sun loungers and breakfast served out there every morning." },
+      { id: "cliff", name: "Cliff Pool Suite", size: "62 m²", guests: 4, bed: "King + sofa bed", view: "Plunge pool on the cliff edge", k: 2.4, img: ["1578683010236-d716f9a3f461", "1582719508461-905c673771fd", "1559599238-308793637427"], text: "Our two top suites sit right on the cliff, each with a heated plunge pool facing the sunset." },
+    ];
+    const DAY = [
+      ["07:30", "First swim", "The cove is glassy and empty. Towels and goggles wait at the top of the steps.", "1507525428034-b723cf961d3e"],
+      ["09:00", "Breakfast on the terrace", "Ensaïmadas from the village bakery, eggs any way, and fresh orange juice.", "1544148103-0773bf10d330"],
+      ["11:00", "The horizon pool", "Saltwater, 25 metres long, with sun loungers that are never reserved with towels.", "1540541338287-41700207dee6"],
+      ["15:00", "Boat to the hidden coves", "Our captain Miquel takes eight guests at a time to Cala Mondragó.", "1519046904884-53103b34b206"],
+      ["20:30", "Sunset at Sa Barca", "Today's catch, island wine, and the sky doing its thing.", "1582719508461-905c673771fd"],
+    ];
+    const CATCH = [["Red prawns from Sóller", "Grilled, sea salt, lemon", 28], ["Dentex for two", "Baked in salt, island potatoes", 64], ["Arròs brut", "Mallorcan rice with rabbit and snails", 24], ["Ensaïmada ice cream", "Almond praline, apricot", 9]];
+    const OFFERS = [
+      ["Stay 7, pay 6", "Your seventh night is on us, all season.", "−14%", "1540541338287-41700207dee6"],
+      ["Early summer", "Book before 31 January for June stays.", "−20%", "1519046904884-53103b34b206"],
+      ["Romance by the sea", "Champagne, sunset dinner and a late check-out.", "+€140", "1582719508461-905c673771fd"],
+    ];
+    const REVIEWS = [
+      ["We've stayed in a lot of hotels in Mallorca. This is the only one we've been back to four times. Ask for room 21.", "Sophie & Mark", "London · Sea View Room"],
+      ["The plunge pool at sunset is worth every cent. Staff remembered our kids' names from the year before.", "Lukas F.", "Munich · Cliff Pool Suite"],
+      ["Booked direct, got breakfast free and a later checkout. The prawns at Sa Barca are the best I've ever had.", "Clara R.", "Madrid · Terrace Suite"],
+    ];
+
+    /* =====================================================
+       Hero slideshow
+       ===================================================== */
+    $("heroSlides").innerHTML = HERO.map((id, i) => `<img src="${U(id, 2000)}" alt="" class="${i ? "" : "on"}" />`).join("");
+    let hs = 0; if (!reduce) setInterval(() => { hs = (hs + 1) % HERO.length; [...$("heroSlides").children].forEach((im, k) => im.classList.toggle("on", k === hs)); }, 6000);
+
+    /* Live strip (seasonal values for Mallorca) */
+    (() => {
+      const m = new Date().getMonth(), air = [15, 15, 17, 19, 23, 27, 30, 30, 27, 23, 19, 16][m], sea = [15, 14, 15, 16, 19, 23, 25, 26, 25, 22, 19, 16][m];
+      const sun = ["17:45", "18:20", "18:50", "20:20", "20:50", "21:15", "21:15", "20:45", "20:05", "19:20", "17:50", "17:35"][m];
+      $("lAir").textContent = air + "°"; $("lSea").textContent = sea + "°"; $("lSun").textContent = sun;
+      const t = () => ($("lTime").textContent = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Madrid" }));
+      t(); setInterval(t, 20000);
+    })();
+
+    /* Intro photo strip */
+    $("introStrip").innerHTML = ["1507525428034-b723cf961d3e", "1540541338287-41700207dee6", "1501117716987-c8c394bb29df", "1414235077428-338989a2e8c0", "1519046904884-53103b34b206", "1582719508461-905c673771fd"].map((id, i) => `<figure style="--d:${i * 0.06}s" class="reveal"><img src="${U(id, 700)}" alt="" loading="lazy" /></figure>`).join("");
+
+    /* =====================================================
+       Rooms (tabs + gallery)
+       ===================================================== */
+    let room = 0, gi = 0;
+    const renderRoom = () => {
+      const r = ROOMS[room];
+      $("roomTabs").innerHTML = ROOMS.map((x, i) => `<button role="tab" class="${i === room ? "on" : ""}" aria-selected="${i === room}">${x.name}</button>`).join("");
+      $("room").innerHTML = `
+        <div class="room__gal">
+          ${r.img.map((id, i) => `<img src="${U(id, 1500)}" alt="${r.name}" class="${i === gi ? "on" : ""}" />`).join("")}
+          <div class="room__thumbs">${r.img.map((id, i) => `<button class="${i === gi ? "on" : ""}" data-g="${i}" aria-label="Photo ${i + 1}"><img src="${U(id, 200)}" alt="" /></button>`).join("")}</div>
+        </div>
+        <div class="room__info">
+          <h3>${r.name}</h3>
+          <p>${r.text}</p>
+          <ul class="room__facts"><li><i class="ri-ruler-2-line"></i>${r.size}</li><li><i class="ri-user-line"></i>Up to ${r.guests} guests</li><li><i class="ri-hotel-bed-line"></i>${r.bed}</li><li><i class="ri-sun-line"></i>${r.view}</li></ul>
+          <div class="room__price"><small>From</small><b>${eur(rate(new Date(new Date().getFullYear(), 5, 3)) * r.k)}</b><small>/ night in June</small></div>
+          <a href="#book" class="btn" data-room="${i2(r.id)}">Choose dates</a>
+        </div>`;
+    };
+    const i2 = (id) => ROOMS.findIndex((r) => r.id === id);
+    $("roomTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; room = [...$("roomTabs").children].indexOf(b); gi = 0; renderRoom(); });
+    $("room").addEventListener("click", (e) => {
+      const g = e.target.closest("[data-g]"); if (g) { gi = +g.dataset.g; $("room").querySelectorAll(".room__gal > img").forEach((im, k) => im.classList.toggle("on", k === gi)); $("room").querySelectorAll("[data-g]").forEach((b, k) => b.classList.toggle("on", k === gi)); }
+      const c = e.target.closest("[data-room]"); if (c) { B.room = +c.dataset.room; renderSum(); }
+    });
+
+    /* =====================================================
+       A day at Azure Bay (pinned horizontal scroll)
+       ===================================================== */
+    $("dayTrack").innerHTML = DAY.map(([t, h, p, img]) => `<article class="moment"><span class="moment__img"><img src="${U(img, 1100)}" alt="${h}" loading="lazy" /></span><b>${t}</b><h3>${h}</h3><p>${p}</p></article>`).join("");
+    const dayScroll = () => {
+      const s = $("day"), track = $("dayTrack"), r = s.getBoundingClientRect(), total = s.offsetHeight - innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total)));
+      const max = Math.max(0, track.scrollWidth - innerWidth + 48);
+      track.style.transform = `translateX(${-p * max}px)`;
+      $("dayBar").style.width = p * 100 + "%";
+    };
+    const sizeDay = () => { $("day").style.height = innerWidth < 900 ? "auto" : `${100 + Math.max(0, $("dayTrack").scrollWidth - innerWidth) / innerHeight * 100}vh`; dayScroll(); };
+    addEventListener("scroll", dayScroll, { passive: true }); addEventListener("resize", sizeDay);
+
+    /* Dining */
+    $("catchDate").textContent = fmt(new Date(), { weekday: "long", day: "numeric", month: "long" });
+    $("catch").innerHTML = CATCH.map(([n, d, p]) => `<li><div><b>${n}</b><span>${d}</span></div><em>€${p}</em></li>`).join("");
+
+    /* =====================================================
+       Booking engine: two-month range calendar
+       ===================================================== */
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    function rate(d) {
+      const m = d.getMonth(), base = [0, 0, 0, 165, 190, 245, 310, 330, 255, 190, 0, 0][m] || 0, wk = [5, 6].includes(d.getDay()) ? 1.15 : 1;
+      return Math.round((base * wk) / 5) * 5;
+    }
+    const soldOut = (d) => { const x = Math.sin(d.getFullYear() * 7 + d.getMonth() * 31 + d.getDate() * 13) * 1e4; return x - Math.floor(x) < (d.getMonth() === 7 ? 0.35 : 0.1); };
+    const open = (d) => rate(d) > 0 && d >= today;
+    const B = { start: null, end: null, guests: 2, room: 0, view: null };
+    // a month is shown only if it has at least a week of bookable nights left
+    const openDays = (v) => { let n = 0; const days = new Date(v.getFullYear(), v.getMonth() + 1, 0).getDate(); for (let d = 1; d <= days; d++) if (open(new Date(v.getFullYear(), v.getMonth(), d))) n++; return n; };
+    const seek = (v, dir) => { const x = new Date(v); for (let i = 0; i < 14 && openDays(x) < 7; i++) x.setMonth(x.getMonth() + dir); return x; };
+    B.view = seek(new Date(today.getFullYear(), today.getMonth(), 1), 1);
+    const nights = () => (B.start && B.end ? Math.round((B.end - B.start) / 864e5) : 0);
+    const renderCal = () => {
+      let html = "";
+      for (let k = 0; k < (innerWidth < 900 ? 1 : 2); k++) {
+        const v = k ? seek(new Date(B.view.getFullYear(), B.view.getMonth() + 1, 1), 1) : B.view, first = (v.getDay() + 6) % 7, days = new Date(v.getFullYear(), v.getMonth() + 1, 0).getDate();
+        const prices = []; for (let d = 1; d <= days; d++) { const dt = new Date(v.getFullYear(), v.getMonth(), d); if (open(dt) && !soldOut(dt)) prices.push(rate(dt)); }
+        const low = Math.min(...prices);
+        let cells = "<span></span>".repeat(first);
+        for (let d = 1; d <= days; d++) {
+          const dt = new Date(v.getFullYear(), v.getMonth(), d), o = open(dt), so = o && soldOut(dt), r = rate(dt);
+          const inR = B.start && B.end && dt > B.start && dt < B.end, st = sameDay(dt, B.start), en = sameDay(dt, B.end);
+          cells += `<button type="button" class="d ${!o ? "d--off" : so ? "d--full" : ""} ${inR ? "d--in" : ""} ${st ? "d--s" : ""} ${en ? "d--e" : ""} ${o && !so && r === low ? "d--lo" : ""}" data-t="${dt.getTime()}" ${!o || (so && !(B.start && !B.end)) ? "disabled" : ""}><b>${d}</b><small>${o ? (so ? "full" : "€" + r) : ""}</small></button>`;
+        }
+        html += `<div class="m"><h4>${v.toLocaleDateString("en-GB", { month: "long", year: "numeric" })}</h4><div class="m__w"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div><div class="m__g">${cells}</div></div>`;
+      }
+      $("calMonths").innerHTML = html;
+      $("calHint").textContent = !B.start ? "Choose your check-in date" : !B.end ? "Now choose your check-out date" : `${nights()} night${nights() > 1 ? "s" : ""} selected`;
+      $("calPrev").disabled = seek(new Date(B.view.getFullYear(), B.view.getMonth() - 1, 1), -1) < seek(new Date(today.getFullYear(), today.getMonth(), 1), 1) || openDays(seek(new Date(B.view.getFullYear(), B.view.getMonth() - 1, 1), -1)) < 7;
+    };
+    const renderSum = () => {
+      $("sIn").textContent = B.start ? fmt(B.start, { weekday: "short", day: "numeric", month: "short" }) : "—";
+      $("sOut").textContent = B.end ? fmt(B.end, { weekday: "short", day: "numeric", month: "short" }) : "—";
+      $("qIn").textContent = B.start ? fmt(B.start) : "Add date"; $("qOut").textContent = B.end ? fmt(B.end) : "Add date";
+      $("gCount").textContent = B.guests; $("gMinus").disabled = B.guests <= 1; $("gPlus").disabled = B.guests >= 4;
+      if (ROOMS[B.room].guests < B.guests) B.room = ROOMS.findIndex((r) => r.guests >= B.guests);
+      $("sRooms").innerHTML = ROOMS.map((r, i) => `<button type="button" class="${i === B.room ? "on" : ""}" data-r="${i}" ${r.guests < B.guests ? "disabled" : ""}><img src="${U(r.img[0], 160)}" alt="" /><span><b>${r.name}</b><small>${r.size} · up to ${r.guests}</small></span></button>`).join("");
+      const n = nights(), r = ROOMS[B.room];
+      if (!n) { $("sLines").innerHTML = `<p class="sum__empty">Pick dates on the calendar to see your price.</p>`; $("sTotal").textContent = "€0"; $("sBook").disabled = true; return; }
+      let sum = 0; for (let i = 0; i < n; i++) { const d = new Date(B.start); d.setDate(d.getDate() + i); sum += rate(d) * r.k; }
+      const extra = B.guests > 2 ? (B.guests - 2) * 45 * n : 0, disc = n >= 7 ? sum / n : 0;
+      $("sLines").innerHTML = `<div><span>${n} night${n > 1 ? "s" : ""} · ${r.name}</span><b>${eur(sum)}</b></div>${extra ? `<div><span>Extra guest${B.guests > 3 ? "s" : ""}</span><b>${eur(extra)}</b></div>` : ""}${disc ? `<div class="sum__disc"><span>Stay 7, pay 6</span><b>−${eur(disc)}</b></div>` : ""}<div class="sum__disc"><span>Breakfast for ${B.guests}</span><b>Included</b></div>`;
+      $("sTotal").textContent = eur(sum + extra - disc); $("sBook").disabled = false;
+    };
+    $("calMonths").addEventListener("click", (e) => {
+      const b = e.target.closest(".d"); if (!b || b.disabled) return; const d = new Date(+b.dataset.t);
+      if (!B.start || B.end || d <= B.start) { if (b.classList.contains("d--full")) return; B.start = d; B.end = null; }
+      else {
+        // stop the range at the first sold-out night
+        let ok = true; for (let x = new Date(B.start); x < d; x.setDate(x.getDate() + 1)) if (soldOut(x)) ok = false;
+        if (!ok) { toast("Some nights in that range are sold out. Try other dates."); return; }
+        B.end = d;
+      }
+      renderCal(); renderSum();
+    });
+    $("calPrev").addEventListener("click", () => { B.view = seek(new Date(B.view.getFullYear(), B.view.getMonth() - 1, 1), -1); renderCal(); });
+    $("calNext").addEventListener("click", () => { B.view = seek(new Date(B.view.getFullYear(), B.view.getMonth() + 1, 1), 1); renderCal(); });
+    $("sRooms").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b && !b.disabled) { B.room = +b.dataset.r; renderSum(); } });
+    $("gMinus").addEventListener("click", () => { B.guests--; renderSum(); });
+    $("gPlus").addEventListener("click", () => { B.guests++; renderSum(); });
+    $("qbar").addEventListener("click", (e) => { if (e.target.closest("[data-open]")) $("book").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+    $("sBook").addEventListener("click", () => {
+      toast(`Reserved: ${ROOMS[B.room].name}, ${fmt(B.start)} – ${fmt(B.end)}. Confirmation on its way.`);
+      B.start = B.end = null; renderCal(); renderSum();
+    });
+    addEventListener("resize", renderCal);
+    renderCal(); renderSum(); renderRoom();
+
+    /* Offers + reviews */
+    $("offers-list").innerHTML = OFFERS.map(([t, p, tag, img], i) => `<article class="offer reveal" style="--d:${i * 0.08}s"><span class="offer__img"><img src="${U(img, 900)}" alt="" loading="lazy" /><em>${tag}</em></span><h3>${t}</h3><p>${p}</p><a href="#book" class="link">Book this offer <i class="ri-arrow-right-line"></i></a></article>`).join("");
+    $("reviews").innerHTML = REVIEWS.map(([q, n, s], i) => `<figure class="rev reveal" style="--d:${i * 0.08}s"><blockquote>“${q}”</blockquote><figcaption><b>${n}</b>${s}</figcaption></figure>`).join("");
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "You're on the list for summer."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 60);
+      let c = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * 0.4) c = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === c));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .room").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+    addEventListener("load", sizeDay); sizeDay();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/hotel-azure/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

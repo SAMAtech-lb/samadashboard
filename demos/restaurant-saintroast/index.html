@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Roast — Neighbourhood Coffee House, Portland</title>
+  <meta name="description" content="Saint Roast is a neighbourhood coffee house in Portland: slow-brewed specialty coffee, pastries baked at dawn, a sunny garden and Saturday latte-art workshops." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><i class="ri-cup-line"></i><span>Saint Roast<small>coffee house · est. 2016</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#menu">Menu</a>
+        <a href="#day">A day here</a>
+        <a href="#beans">Our coffee</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <span class="open-now" id="openNow"></span>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=2000&q=80" alt="Inside the Saint Roast coffee house" /></div>
+    <div class="container hero__in">
+      <p class="script">good morning, neighbour</p>
+      <h1>Slow coffee for<br />busy mornings.</h1>
+      <p class="hero__lead">Hand-roasted beans, pastries out of the oven at 6:30 and a corner table with your name on it. Come in, stay a while.</p>
+      <div class="hero__btns">
+        <a href="#menu" class="btn">See today's menu</a>
+        <a href="#visit" class="btn btn--ghost"><i class="ri-map-pin-line"></i> Find us on Alberta St</a>
+      </div>
+    </div>
+    <div class="hero__steam" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="hero__note">
+      <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=200&q=80" alt="" />
+      <div><span class="script">this week's single origin</span><strong>Ethiopia Guji · peach, jasmine, honey</strong></div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__row">
+      <span>flat white</span><i class="ri-star-s-fill"></i><span>cardamom buns</span><i class="ri-star-s-fill"></i><span>honey oat latte</span><i class="ri-star-s-fill"></i><span>pour-over of the week</span><i class="ri-star-s-fill"></i><span>sourdough toast</span><i class="ri-star-s-fill"></i><span>cold brew on tap</span><i class="ri-star-s-fill"></i>
+      <span>flat white</span><i class="ri-star-s-fill"></i><span>cardamom buns</span><i class="ri-star-s-fill"></i><span>honey oat latte</span><i class="ri-star-s-fill"></i><span>pour-over of the week</span><i class="ri-star-s-fill"></i><span>sourdough toast</span><i class="ri-star-s-fill"></i><span>cold brew on tap</span><i class="ri-star-s-fill"></i>
+    </div>
+  </div>
+
+  <!-- Welcome -->
+  <section class="section welcome">
+    <div class="container welcome__grid">
+      <div class="welcome__imgs">
+        <img class="w1" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=80" alt="Barista pouring latte art" loading="lazy" />
+        <img class="w2" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Fresh croissants" loading="lazy" />
+        <span class="stamp">roasted<br />on<br />site</span>
+      </div>
+      <div class="welcome__text">
+        <p class="script">our little corner</p>
+        <h2>A coffee house that feels like your <em>kitchen</em>.</h2>
+        <p>Saint Roast opened in 2016 in an old bicycle shop on Alberta Street. We kept the brick walls and the big front windows, added a Probat roaster in the back and a long oak table for everyone to share.</p>
+        <p>Our baristas know most regulars by name — and their order. The coffee is roasted every Tuesday in the room behind the counter, so the whole street smells like it.</p>
+        <ul class="facts">
+          <li><strong>9</strong><span>years on Alberta St</span></li>
+          <li><strong>40 kg</strong><span>roasted each week</span></li>
+          <li><strong>6:30</strong><span>first pastries out</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu board -->
+  <section class="board" id="menu">
+    <div class="container">
+      <div class="board__head">
+        <div><p class="script script--light">written fresh every morning</p><h2>Today's board</h2></div>
+        <div class="board__tabs" id="tabs">
+          <button class="on" data-t="coffee">Coffee</button>
+          <button data-t="other">Tea &amp; other</button>
+          <button data-t="bakery">From the oven</button>
+          <button data-t="plates">Small plates</button>
+        </div>
+      </div>
+      <div class="board__body">
+        <ul class="menu" id="menuList"></ul>
+        <div class="board__aside">
+          <img id="menuImg" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=700&q=80" alt="" />
+          <p class="script script--light" id="menuNote">oat, almond &amp; soy milk at no extra cost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A day here -->
+  <section class="section day" id="day">
+    <div class="container">
+      <div class="title">
+        <p class="script">from first light to last call</p>
+        <h2>A day at Saint Roast</h2>
+      </div>
+      <div class="day__track" id="dayTrack">
+        <article class="moment"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Pour-over coffee" loading="lazy" /><div><span class="moment__time">6:30 am</span><h3>First pour</h3><p>The roaster warms up, the first croissants come out and the early cyclists line up for a double espresso.</p></div></article>
+        <article class="moment"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=700&q=80" alt="Breakfast plate" loading="lazy" /><div><span class="moment__time">10:00 am</span><h3>Slow breakfast</h3><p>Eggs on sourdough, ricotta pancakes and the long table full of neighbours catching up.</p></div></article>
+        <article class="moment"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=700&q=80" alt="Sunny garden café" loading="lazy" /><div><span class="moment__time">1:00 pm</span><h3>Garden hours</h3><p>Laptops come out, the sun hits the back garden and the iced lattes start flowing.</p></div></article>
+        <article class="moment"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Café sign in the evening" loading="lazy" /><div><span class="moment__time">5:30 pm</span><h3>Last call</h3><p>Decaf cortados, the final cardamom bun and a record on the turntable while we close up.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beans -->
+  <section class="section beans" id="beans">
+    <div class="container beans__grid">
+      <div class="beans__text">
+        <p class="script">bean to cup</p>
+        <h2>We know every farm we buy from.</h2>
+        <p>We roast small batches of seasonal coffees from four farms we visit every harvest. Here's how a bean gets from a hillside in Huila to your cup.</p>
+        <ol class="steps">
+          <li><b>1</b><div><strong>Picked ripe</strong><span>Only red cherries, hand-picked by the Pérez family in Huila, Colombia.</span></div></li>
+          <li><b>2</b><div><strong>Roasted Tuesday</strong><span>In 12 kg batches on our 1962 Probat, right behind the counter.</span></div></li>
+          <li><b>3</b><div><strong>Rested 5 days</strong><span>So the flavour opens up before it reaches your espresso.</span></div></li>
+          <li><b>4</b><div><strong>Brewed to order</strong><span>Weighed, timed and tasted every morning by the barista on shift.</span></div></li>
+        </ol>
+      </div>
+      <div class="bags" id="bags">
+        <article class="bag"><img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=500&q=80" alt="Roasted coffee beans" loading="lazy" /><div><span>Colombia · Huila</span><h3>House Blend</h3><p>milk chocolate · red apple · caramel</p><div class="bag__foot"><strong>$17</strong><button class="pill-btn" data-bag="House Blend">Reserve a bag</button></div></div></article>
+        <article class="bag"><img src="https://images.unsplash.com/photo-1606791405792-1004f1718d0c?auto=format&fit=crop&w=500&q=80" alt="Coffee beans and grounds" loading="lazy" /><div><span>Ethiopia · Guji</span><h3>Morning Peach</h3><p>peach · jasmine · honey</p><div class="bag__foot"><strong>$21</strong><button class="pill-btn" data-bag="Morning Peach">Reserve a bag</button></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote">
+    <div class="container quote__in">
+      <i class="ri-double-quotes-l"></i>
+      <blockquote id="quoteText">The kind of place where you come for one coffee and leave three hours later with a new friend.</blockquote>
+      <p class="quote__by" id="quoteBy">— Ellie, regular since 2017</p>
+      <div class="quote__dots" id="quoteDots"><button class="on" aria-label="Quote 1"></button><button aria-label="Quote 2"></button><button aria-label="Quote 3"></button></div>
+    </div>
+  </section>
+
+  <!-- Workshops -->
+  <section class="section workshops" id="workshops">
+    <div class="container ws">
+      <div class="ws__img"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=900&q=80" alt="Latte art in a cup" loading="lazy" /></div>
+      <div class="ws__text">
+        <p class="script">saturday mornings</p>
+        <h2>Latte art &amp; home brewing workshops</h2>
+        <p>Two hours behind the bar with our head barista. Small groups of six, all coffee and pastries included. You'll leave with a bag of beans and a heart (or tulip) you poured yourself.</p>
+        <form class="ws__form" id="wsForm" novalidate>
+          <div class="ws__dates" id="wsDates"></div>
+          <div class="ws__row">
+            <select name="type" aria-label="Workshop"><option value="Latte art basics">Latte art basics · $55</option><option value="Pour-over at home">Pour-over at home · $45</option></select>
+            <select name="people" aria-label="People"><option>1 person</option><option>2 people</option><option>3 people</option></select>
+          </div>
+          <div class="ws__row">
+            <input name="name" placeholder="Your name" aria-label="Your name" />
+            <input name="email" type="email" placeholder="Email" aria-label="Email" />
+          </div>
+          <p class="ws__err" id="wsErr"></p>
+          <button class="btn" type="submit">Save my spot</button>
+          <p class="ws__ok" id="wsOk" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="gallery__grid">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=75" alt="Lattes on a table" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=600&q=75" alt="Coffee bar" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=75" alt="Cookies" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=75" alt="Friends toasting with coffee" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=600&q=75" alt="Coffee and beans" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section visit" id="visit">
+    <div class="container visit__grid">
+      <div>
+        <p class="script">come say hello</p>
+        <h2>Visit us</h2>
+        <ul class="visit__list">
+          <li><i class="ri-map-pin-2-line"></i><div><strong>2214 NE Alberta St</strong><span>Portland, OR 97211 · bike racks out front</span></div></li>
+          <li><i class="ri-phone-line"></i><div><strong>(503) 555-0161</strong><span>Call ahead for large orders</span></div></li>
+          <li><i class="ri-wifi-line"></i><div><strong>Free wifi</strong><span>Laptops welcome until 2 pm on weekends</span></div></li>
+          <li><i class="ri-bear-smile-line"></i><div><strong>Dog friendly</strong><span>Water bowls and treats in the garden</span></div></li>
+        </ul>
+      </div>
+      <div class="hours">
+        <h3>Opening hours</h3>
+        <table id="hours"></table>
+        <a href="#" class="btn btn--block"><i class="ri-direction-line"></i> Get directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <a href="#home" class="logo logo--light"><i class="ri-cup-line"></i><span>Saint Roast<small>coffee house · est. 2016</small></span></a>
+        <p class="script script--light">see you tomorrow morning</p>
+      </div>
+      <nav><a href="#menu">Menu</a><a href="#day">A day here</a><a href="#beans">Our coffee</a><a href="#workshops">Workshops</a><a href="#visit">Visit</a></nav>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a><a href="#" aria-label="Spotify playlist"><i class="ri-spotify-line"></i></a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Saint Roast Coffee House</span><span>Roasted with care in Portland, Oregon</span></div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 700) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    /* Menu board */
+    const MENU = {
+      coffee: { img: "1485808191679-5f86510681a2", note: "oat, almond & soy milk at no extra cost", items: [["Espresso", "double shot of the house blend", "3.25"], ["Cortado", "equal parts espresso & steamed milk", "4.00"], ["Flat White", "our most-ordered cup", "4.50"], ["Honey Oat Latte", "local wildflower honey, oat milk", "5.50", "fav"], ["Pour-over", "single origin of the week, 10 oz", "5.75"], ["Cold Brew", "steeped 18 hours, on tap", "4.75"]] },
+      other: { img: "1515823064-d6e0c04616a7", note: "all teas loose-leaf from Steep & Co.", items: [["Matcha Latte", "ceremonial grade, whisked to order", "5.50", "fav"], ["Masala Chai", "house-spiced, brewed in milk", "4.75"], ["Hot Chocolate", "70% dark, whipped cream optional", "4.50"], ["Earl Grey", "pot for one", "3.75"], ["Fresh Mint Tea", "a big handful of garden mint", "3.50"]] },
+      bakery: { img: "1555507036-ab1f4038808a", note: "baked from 4:30 am — gone by noon", items: [["Butter Croissant", "three-day laminated dough", "3.75"], ["Cardamom Bun", "Swedish-style, pearl sugar", "4.25", "fav"], ["Pain au Chocolat", "two batons of dark chocolate", "4.25"], ["Brown Butter Cookie", "sea salt, dark chocolate chunks", "3.25"], ["Banana Bread", "toasted, with salted butter", "4.00"]] },
+      plates: { img: "1533089860892-a7c6f0a88666", note: "served until 2 pm every day", items: [["Eggs on Sourdough", "two fried eggs, tomato, greens", "12.00"], ["Avocado Toast", "chili, lime, feta, seeds", "11.50"], ["Ricotta Pancakes", "berries, maple, whipped butter", "13.00", "fav"], ["Granola Bowl", "house granola, yoghurt, fruit", "9.50"], ["Ham & Gruyère Toastie", "on rye, with pickles", "11.00"]] },
+    };
+    function renderMenu(t) {
+      const m = MENU[t];
+      $("tabs").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.t === t));
+      $("menuList").innerHTML = m.items.map(([n, d, p, fav]) => `<li><div><strong>${n}${fav ? ' <em>barista\'s pick</em>' : ""}</strong><span>${d}</span></div><i></i><b>$${p}</b></li>`).join("");
+      $("menuImg").src = U(m.img); $("menuNote").textContent = m.note;
+    }
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) renderMenu(b.dataset.t); });
+    renderMenu("coffee");
+
+    /* Opening hours + open now */
+    const HOURS = [[8, 15], [6.5, 18], [6.5, 18], [6.5, 18], [6.5, 18], [6.5, 19], [7.5, 19]];
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const fmt = (h) => { const hh = Math.floor(h), mm = h % 1 ? "30" : "00"; return `${hh > 12 ? hh - 12 : hh}:${mm} ${hh >= 12 ? "pm" : "am"}`; };
+    const now = new Date(), d = now.getDay(), hr = now.getHours() + now.getMinutes() / 60;
+    $("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map((i) => `<tr class="${i === d ? "today" : ""}"><td>${DAYS[i]}</td><td>${fmt(HOURS[i][0])} – ${fmt(HOURS[i][1])}</td></tr>`).join("");
+    const open = hr >= HOURS[d][0] && hr < HOURS[d][1];
+    $("openNow").innerHTML = open ? `<i></i> Open now · until ${fmt(HOURS[d][1])}` : `<i class="off"></i> Closed · opens ${fmt(HOURS[(d + (hr >= HOURS[d][1] ? 1 : 0)) % 7][0])}`;
+
+    /* Quotes */
+    const QUOTES = [["The kind of place where you come for one coffee and leave three hours later with a new friend.", "— Ellie, regular since 2017"], ["Best cardamom bun in Portland. I've tried them all, it's not even close.", "— Marcus, comes in every Saturday"], ["My kids call it 'the cookie café'. I call it the only flat white worth crossing town for.", "— Priya, Alberta Arts District"]];
+    let qi = 0;
+    function showQuote(i) {
+      qi = i; const box = $("quoteText");
+      box.style.opacity = 0;
+      setTimeout(() => { box.textContent = QUOTES[i][0]; $("quoteBy").textContent = QUOTES[i][1]; box.style.opacity = 1; }, 200);
+      [...$("quoteDots").children].forEach((b, k) => b.classList.toggle("on", k === i));
+    }
+    [...$("quoteDots").children].forEach((b, k) => b.addEventListener("click", () => { showQuote(k); clearInterval(qt); }));
+    const qt = setInterval(() => showQuote((qi + 1) % QUOTES.length), 6000);
+
+    /* Workshop dates: next 4 Saturdays */
+    const sats = []; const s = new Date(); s.setHours(0, 0, 0, 0);
+    while (sats.length < 4) { s.setDate(s.getDate() + 1); if (s.getDay() === 6) sats.push(new Date(s)); }
+    const left = [2, 5, 0, 4];
+    let pickDate = 0;
+    function renderDates() {
+      $("wsDates").innerHTML = sats.map((x, i) => `<button type="button" class="${i === pickDate ? "on" : ""}" data-i="${i}" ${left[i] ? "" : "disabled"}><strong>${x.toLocaleDateString("en-US", { month: "short", day: "numeric" })}</strong><small>${left[i] ? `${left[i]} spots left` : "Fully booked"}</small></button>`).join("");
+    }
+    $("wsDates").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b && !b.disabled) { pickDate = +b.dataset.i; renderDates(); } });
+    renderDates();
+    $("wsForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const f = e.target, errs = [];
+      f.querySelectorAll(".bad").forEach((x) => x.classList.remove("bad"));
+      if (!f.name.value.trim()) { errs.push("your name"); f.name.classList.add("bad"); }
+      if (!/^\S+@\S+\.\S+$/.test(f.email.value)) { errs.push("a valid email"); f.email.classList.add("bad"); }
+      const n = parseInt(f.people.value, 10);
+      if (n > left[pickDate]) errs.push(`fewer people (only ${left[pickDate]} spots left)`);
+      $("wsErr").textContent = errs.length ? `Please add ${errs.join(", ")}.` : "";
+      if (errs.length) return;
+      left[pickDate] -= n; renderDates();
+      $("wsOk").textContent = `You're in, ${f.name.value.trim().split(" ")[0]}! ${f.type.value} on ${sats[pickDate].toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at 9:00 am for ${f.people.value}. Pay on the day.`;
+      $("wsOk").hidden = false; f.name.value = ""; f.email.value = "";
+    });
+
+    /* Reserve a bag */
+    $("bags").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-bag]"); if (!b) return;
+      b.innerHTML = '<i class="ri-check-line"></i> Reserved'; b.disabled = true;
+      $("toast").textContent = `${b.dataset.bag} is set aside for you at the counter for 48 hours.`;
+      $("toast").classList.add("show"); clearTimeout(window.__t); window.__t = setTimeout(() => $("toast").classList.remove("show"), 3000);
+    });
+
+    /* Header, menu */
+    addEventListener("scroll", () => $("header").classList.toggle("solid", scrollY > 40), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/restaurant-saintroast/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

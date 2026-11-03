@@ -1,0 +1,23 @@
+# samadashboard
+
+The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web design and development studio in Beirut, Lebanon. It uses the same design as Forma Studio, shows only the top 30 projects, and is plain static HTML, CSS and JavaScript.
+
+## Publish on GitHub Pages
+
+1. In this repository, open **Settings → Pages**. Under Source choose **Deploy from a branch**, then `main` and `/ (root)`.
+2. At your domain registrar, add these DNS records:
+   - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` record for `www`: `samatech-lb.github.io`
+3. Back in **Settings → Pages**, confirm the custom domain is `samatechlb.com`, wait for the DNS check, then tick **Enforce HTTPS**.
+
+## Change something
+
+| To change | Do this |
+| --- | --- |
+| Wording, email or WhatsApp number | Edit `tools/content.mjs`, then run `node tools/build.mjs` |
+| The list of projects (after changing it in Forma) | Run `node tools/import.mjs`, the capture steps below, then `node tools/build.mjs` |
+| Check for SEO mistakes and broken links | Run `node tools/check.mjs` |
+
+To refresh screenshots, run `python -m http.server 8123 --bind 127.0.0.1` in this folder, then `node tools/capture.mjs` and `python tools/images.py` in a second terminal.
+
+Pages at the site root, `work/`, the service folders, `about/` and `contact/` are generated, so edit `tools/` rather than those files. Demos in `demos/` are copied from Forma and carry a `noindex` tag, because they show fictional businesses.

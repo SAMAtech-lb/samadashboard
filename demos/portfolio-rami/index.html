@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rami Aziz — Full-Stack Developer</title>
+  <meta name="description" content="Rami Aziz is a full-stack developer building fast web apps, APIs and SaaS platforms with React, Next.js, Node, Laravel and PostgreSQL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs><linearGradient id="sparkGrad" x1="0" x2="1"><stop offset="0" stop-color="#3affa0" /><stop offset="1" stop-color="#d4ff3a" /></linearGradient></defs>
+  </svg>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo">rami<b>.</b>aziz<span class="caret"></span></a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#playground">API</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="header__cta">
+        <span class="status">Open to work</span>
+        <a href="#contact" class="btn" data-magnet>Hire me <i class="ri-arrow-right-up-line"></i></a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__grid" id="heroGrid"></div>
+      <div class="hero__glow"></div>
+      <div class="hero__in">
+        <div>
+          <span class="pill reveal"><b>NEW</b> Booking projects for January 2027</span>
+          <h1 class="display">
+            <span class="line"><span class="silver" style="--d:.1s">I build</span></span>
+            <span class="line"><span style="--d:.22s"><span class="slot" id="slot"><span>products</span><span class="next">APIs</span><span class="next">platforms</span><span class="next">dashboards</span></span></span></span>
+            <span class="line"><span class="silver" style="--d:.34s">that scale.</span></span>
+          </h1>
+          <p class="hero__lead reveal" style="--d:.5s">I'm Rami — a <b>full-stack developer</b> who takes products from a blank repo to millions of requests a day. Clean architecture, fast interfaces, zero drama deploys.</p>
+          <div class="hero__btns reveal" style="--d:.6s">
+            <a href="#work" class="btn" data-magnet>See my work <i class="ri-arrow-right-line"></i></a>
+            <a href="#playground" class="btn btn--ghost"><i class="ri-terminal-box-line"></i> Try my API</a>
+          </div>
+          <div class="hero__stack reveal" style="--d:.7s">
+            <small>daily stack →</small>
+            <i class="devicon-react-original" title="React"></i>
+            <i class="devicon-nextjs-plain" title="Next.js"></i>
+            <i class="devicon-typescript-plain" title="TypeScript"></i>
+            <i class="devicon-nodejs-plain" title="Node.js"></i>
+            <i class="devicon-laravel-plain" title="Laravel"></i>
+            <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
+            <i class="devicon-docker-plain" title="Docker"></i>
+          </div>
+        </div>
+
+        <div class="tilt reveal" style="--d:.4s">
+          <div class="code-card" id="codeCard">
+            <div class="code-card__bar"><i></i><i></i><i></i> api/projects.ts</div>
+            <pre id="code"></pre>
+            <div class="float-chip float-chip--a"><i class="ri-flashlight-fill"></i><div>98 / 100<small>Lighthouse score</small></div></div>
+            <div class="float-chip float-chip--b"><i class="ri-rocket-2-fill"></i><div>Deployed<small>main · 2 min ago</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics">
+      <div class="container metrics__row">
+        <div class="metric reveal"><small>uptime / client apps</small><b class="grad-text"><span data-count="99.98" data-dec="2">0</span>%</b><svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0 26 L20 24 L40 25 L60 20 L80 22 L100 14 L120 16 L140 10 L160 12 L180 6 L200 8" /></svg></div>
+        <div class="metric reveal" style="--d:.1s"><small>requests served</small><b class="silver"><span data-count="2.4" data-dec="1">0</span>B</b><svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0 32 L25 30 L50 28 L75 24 L100 22 L125 16 L150 14 L175 8 L200 3" /></svg></div>
+        <div class="metric reveal" style="--d:.2s"><small>deploys in 2026</small><b class="silver"><span data-count="312">0</span></b><svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0 20 L20 12 L40 24 L60 10 L80 18 L100 6 L120 22 L140 12 L160 16 L180 4 L200 14" /></svg></div>
+        <div class="metric reveal" style="--d:.3s"><small>p95 api latency</small><b class="silver"><span data-count="120">0</span>ms</b><svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0 6 L25 8 L50 12 L75 10 L100 18 L125 22 L150 24 L175 28 L200 30" /></svg></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about__in">
+        <div class="portrait reveal">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Rami Aziz" loading="lazy" />
+          <div class="portrait__badge"><div><b>8+</b>years<br />shipping</div></div>
+        </div>
+        <div>
+          <span class="label reveal">about.md</span>
+          <h2 class="display silver reveal">Code is<br />my craft</h2>
+          <p class="words" id="words">I started by breaking my dad's PC and never stopped. Today I design databases, write APIs and craft interfaces for startups and agencies across Europe and the Gulf. I care about *performance,* *readable* *code* and *shipping* *on* *time* — because the best feature is the one your users already have.</p>
+          <ul class="gitlog reveal">
+            <li><span>2026</span><b>Lead engineer</b> — Ledgerly, fintech SaaS (12 devs)</li>
+            <li><span>2023</span><b>Senior full-stack</b> — Northwind Commerce</li>
+            <li><span>2020</span><b>Freelance</b> — 40+ projects for agencies</li>
+            <li><span>2018</span><b>git init</b> — BSc Computer Science, AUB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="sec-head">
+          <span class="label reveal">services</span>
+          <h2 class="display sec-title reveal">What I ship</h2>
+          <p class="reveal">From the database schema to the last pixel — one developer, one point of contact, the whole stack.</p>
+        </div>
+        <div class="bento">
+          <article class="cell cell--wide cell--dark reveal">
+            <span class="cell__num">01</span>
+            <div class="cell__ic"><i class="ri-window-2-line"></i></div>
+            <h3>Web apps &amp; SaaS platforms</h3>
+            <p>Dashboards, multi-tenant SaaS, booking engines and internal tools — typed end to end and built to grow with your users.</p>
+            <div class="cell__tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>tRPC</span></div>
+            <code>$ npx create-your-next-big-thing</code>
+          </article>
+          <article class="cell reveal" style="--d:.08s">
+            <span class="cell__num">02</span>
+            <div class="cell__ic"><i class="ri-server-line"></i></div>
+            <h3>APIs &amp; backend</h3>
+            <p>REST and GraphQL APIs with auth, queues, payments and webhooks that don't fall over.</p>
+            <code>GET /v1/orders?status=paid → 200</code>
+          </article>
+          <article class="cell reveal" style="--d:.12s">
+            <span class="cell__num">03</span>
+            <div class="cell__ic"><i class="ri-cloud-line"></i></div>
+            <h3>DevOps &amp; cloud</h3>
+            <p>Docker, CI/CD pipelines and AWS setups that deploy on every merge.</p>
+            <code>✔ build · ✔ test · ✔ deploy (48s)</code>
+          </article>
+          <article class="cell reveal" style="--d:.16s">
+            <span class="cell__num">04</span>
+            <div class="cell__ic"><i class="ri-speed-up-line"></i></div>
+            <h3>Performance audits</h3>
+            <p>Slow pages and heavy queries found, fixed and measured.</p>
+            <code>LCP 4.1s → 1.2s</code>
+          </article>
+          <article class="cell reveal" style="--d:.2s">
+            <span class="cell__num">05</span>
+            <div class="cell__ic"><i class="ri-smartphone-line"></i></div>
+            <h3>Mobile apps</h3>
+            <p>React Native apps that share code and logic with your web product.</p>
+            <code>iOS ✔ Android ✔ one codebase</code>
+          </article>
+          <article class="cell cell--full cell--dark reveal" style="--d:.24s">
+            <div class="cell__ic"><i class="ri-compass-discover-line"></i></div>
+            <div><h3>Tech consulting</h3><p>Architecture reviews, hiring help and a second opinion before you commit to a stack.</p></div>
+            <code>// fewer rewrites, better sleep</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process: pinned horizontal scroll -->
+    <section class="process" id="process">
+      <div class="process__pin">
+        <div class="process__head">
+          <h2 class="display silver">How I ship</h2>
+          <span class="process__count">step <b id="stepNo">01</b> / 05</span>
+        </div>
+        <div class="process__track" id="track">
+          <article class="step"><span class="step__no display grad-text">01</span><h3>Discover</h3><p>A call, a workshop and a pile of questions. We agree on the problem, the users and what "done" looks like before a line of code.</p><span class="step__time">~ 3–5 days</span><ul><li>scope.md</li><li>user flows</li><li>estimate</li></ul></article>
+          <article class="step"><span class="step__no display grad-text">02</span><h3>Architect</h3><p>Data model, API contracts and the stack — chosen for your team and budget, not my CV. You get a clear diagram and a plan.</p><span class="step__time">~ 1 week</span><ul><li>ERD</li><li>API spec</li><li>infra plan</li></ul></article>
+          <article class="step"><span class="step__no display grad-text">03</span><h3>Build</h3><p>Weekly sprints with a live preview link for every feature. You see progress on Fridays, not at the end.</p><span class="step__time">~ 4–10 weeks</span><ul><li>preview URLs</li><li>weekly demo</li><li>changelog</li></ul></article>
+          <article class="step"><span class="step__no display grad-text">04</span><h3>Test</h3><p>Unit, integration and end-to-end tests, plus load testing on the endpoints that matter. Bugs die before launch.</p><span class="step__time">~ 1 week</span><ul><li>Playwright</li><li>k6 load tests</li><li>QA list</li></ul></article>
+          <article class="step"><span class="step__no display grad-text">05</span><h3>Ship &amp; support</h3><p>Zero-downtime launch, monitoring and alerts, then 30 days of free fixes. After that, a retainer if you want one.</p><span class="step__time">launch day + 30</span><ul><li>monitoring</li><li>docs</li><li>handover</li></ul></article>
+        </div>
+        <div class="process__bar"><span id="bar"></span></div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="sec-head">
+          <span class="label reveal">selected work</span>
+          <h2 class="display silver sec-title reveal">Builds</h2>
+        </div>
+        <div class="filters reveal" id="filters"></div>
+        <div class="plist" id="plist"></div>
+      </div>
+      <div class="peek" id="peek"><img id="peekImg" src="" alt="" /></div>
+    </section>
+
+    <!-- API playground -->
+    <section class="section" id="playground">
+      <div class="container">
+        <div class="sec-head">
+          <span class="label reveal">playground</span>
+          <h2 class="display silver sec-title reveal">Query me</h2>
+          <p class="reveal">I'm basically an API. Hit an endpoint and get to know me — responses are live from this page.</p>
+        </div>
+        <div class="play reveal">
+          <div class="endpoints" id="endpoints"></div>
+          <div class="term">
+            <div class="term__bar"><span>api.ramiaziz.dev — zsh</span><button id="curl"><i class="ri-file-copy-line"></i> copy cURL</button></div>
+            <div class="term__req" id="req"></div>
+            <pre id="res"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack orbit -->
+    <section class="section">
+      <div class="container orbit-wrap">
+        <div>
+          <span class="label reveal">stack</span>
+          <h2 class="display silver reveal" style="font-size:clamp(3.2rem,7vw,110px);margin-top:16px">Tools in<br />orbit</h2>
+          <div class="legend">
+            <div class="reveal"><b>inner ring</b><span>Frontend — React, Next.js, TypeScript, Tailwind, Vue</span></div>
+            <div class="reveal"><b>middle ring</b><span>Backend — Node, Laravel, PostgreSQL, Redis, GraphQL, Prisma</span></div>
+            <div class="reveal"><b>outer ring</b><span>Infra — Docker, Kubernetes, AWS, GitHub Actions, Nginx, Linux</span></div>
+          </div>
+        </div>
+        <div class="orbit reveal" id="orbit">
+          <div class="ring ring--3" data-ring="3"></div>
+          <div class="ring ring--2" data-ring="2"></div>
+          <div class="ring ring--1" data-ring="1"></div>
+          <div class="core">Full<br />stack</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container voices">
+        <div class="voices__intro">
+          <span class="label reveal">reviews</span>
+          <h2 class="display silver reveal">Merged with love</h2>
+          <p class="reveal">What founders, CTOs and agency leads say after we ship together.</p>
+          <div class="rating reveal"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i> 5.0 from 48 clients</div>
+        </div>
+        <div class="vcol reveal"><div class="vtrack" id="vcol1"></div></div>
+        <div class="vcol vcol--down reveal"><div class="vtrack" id="vcol2"></div></div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="sec-head">
+          <span class="label reveal">pricing</span>
+          <h2 class="display sec-title reveal">Work with me</h2>
+          <p class="reveal">Fixed-price projects or a monthly retainer — transparent rates, no surprise invoices.</p>
+          <div class="toggle reveal" id="toggle"><span class="toggle__knob" id="knob"></span><button class="on" data-m="project">Per project</button><button data-m="retainer">Monthly retainer</button></div>
+        </div>
+        <div class="plans" id="plans"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container" style="text-align:center">
+        <span class="label reveal">contact</span>
+        <h2 class="display silver reveal">git push<br />your idea</h2>
+        <form class="shell reveal" id="shell" style="text-align:left">
+          <div class="term__bar"><span>rami@studio: ~/new-project</span><span>zsh — 80×24</span></div>
+          <div class="shell__body">
+            <div class="q"><span>›</span><label for="hName">What's your name?</label><div class="ans"><input id="hName" required placeholder="type here…" autocomplete="name" /></div></div>
+            <div class="q"><span>›</span><label for="hMail">Where can I reply?</label><div class="ans"><input id="hMail" type="email" required placeholder="you@company.com" autocomplete="email" /></div></div>
+            <div class="q"><span>›</span><label>What are we building?</label><div class="ans opts" data-group="type"><button type="button" class="on">SaaS / web app</button><button type="button">API / backend</button><button type="button">E-commerce</button><button type="button">Mobile app</button><button type="button">Something else</button></div></div>
+            <div class="q"><span>›</span><label>Budget range?</label><div class="ans opts" data-group="budget"><button type="button">&lt; $5k</button><button type="button" class="on">$5k – $15k</button><button type="button">$15k – $40k</button><button type="button">$40k +</button></div></div>
+            <div class="q"><span>›</span><label for="hMsg">Tell me more</label><div class="ans"><textarea id="hMsg" placeholder="We need a customer portal connected to our Stripe and HubSpot…"></textarea></div></div>
+            <div class="log" id="log"></div>
+            <div class="shell__foot">
+              <span>press <kbd>Enter</kbd> or click to run</span>
+              <button class="btn" type="submit" data-magnet>./send-brief.sh <i class="ri-corner-down-left-line"></i></button>
+            </div>
+          </div>
+        </form>
+        <div class="contact__alt reveal">
+          <a href="mailto:hello@ramiaziz.dev" class="btn btn--ghost"><i class="ri-mail-line"></i> hello@ramiaziz.dev</a>
+          <a href="#" class="btn btn--ghost" id="cal"><i class="ri-calendar-line"></i> Book a 20-min call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a href="#top" class="logo">rami<b>.</b>aziz<span class="caret"></span></a>
+          <p>Full-stack developer building web apps, APIs and SaaS platforms. Based in Beirut, working worldwide.</p>
+          <div class="socials">
+            <a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+            <a href="#" aria-label="Dev.to"><i class="ri-code-s-slash-line"></i></a>
+          </div>
+        </div>
+        <div><h4>// sitemap</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
+        <div><h4>// contact</h4><ul><li><a href="mailto:hello@ramiaziz.dev">hello@ramiaziz.dev</a></li><li><a href="tel:+96170123456">+961 70 123 456</a></li><li>Beirut · UTC+3</li></ul></div>
+        <div><h4>// now</h4><ul><li>Building Ledgerly v3</li><li>Learning Rust</li><li>Reading "Designing Data-Intensive Apps"</li></ul></div>
+      </div>
+      <div class="wordmark display silver">Ship it.</div>
+      <div class="footer__bot"><span>© 2026 Rami Aziz. All rights reserved.</span><span>last deploy <b>a3f9c2e</b> · built with plain HTML, CSS &amp; JS</span></div>
+    </div>
+  </footer>
+
+  <!-- Case drawer -->
+  <aside class="drawer" id="drawer" aria-label="Case study">
+    <button class="drawer__x" id="drawerX" aria-label="Close case study"><i class="ri-close-line"></i></button>
+    <div id="drawerBody"></div>
+  </aside>
+  <div class="drawer-bg" id="drawerBg"></div>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span></span></div>
+  <a href="#top" class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const toast = (m) => { const t = $("toast"); t.querySelector("span").textContent = m; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2600); };
+
+    /* ---------- Hero: headline, word slot, spotlight grid ---------- */
+    requestAnimationFrame(() => document.querySelector(".hero").classList.add("loaded"));
+    const slotWords = [...$("slot").children];
+    let sw = 0;
+    setInterval(() => {
+      const cur = slotWords[sw], nxt = slotWords[(sw + 1) % slotWords.length];
+      cur.className = "prev";
+      nxt.className = "";
+      setTimeout(() => (cur.className = "next"), 700);
+      sw = (sw + 1) % slotWords.length;
+    }, 2200);
+    const hero = document.querySelector(".hero");
+    hero.addEventListener("mousemove", (e) => {
+      const r = hero.getBoundingClientRect();
+      $("heroGrid").style.setProperty("--mx", e.clientX - r.left + "px");
+      $("heroGrid").style.setProperty("--my", e.clientY - r.top + "px");
+    });
+
+    /* Code card: typed with syntax colours, tilts toward the cursor */
+    const CODE = [
+      [["tk-c", "// ship fast, sleep well"]],
+      [["tk-k", "export async function "], ["tk-f", "getProjects"], ["", "(req) {"]],
+      [["", "  "], ["tk-k", "const "], ["", "user = "], ["tk-k", "await "], ["tk-f", "auth"], ["", "(req);"]],
+      [["", "  "], ["tk-k", "const "], ["", "projects = "], ["tk-k", "await "], ["", "db.project."], ["tk-f", "findMany"], ["", "({"]],
+      [["", "    where: { owner: user.id, status: "], ["tk-s", "\"live\""], ["", " },"]],
+      [["", "    take: "], ["tk-n", "20"], ["", ", cache: "], ["tk-s", "\"60s\""]],
+      [["", "  });"]],
+      [["", "  "], ["tk-k", "return "], ["tk-f", "json"], ["", "(projects, { status: "], ["tk-n", "200"], ["", " });"]],
+      [["", "}"]],
+      [["tk-p", "✔ "], ["tk-c", "deployed to edge in 48ms"]],
+    ];
+    const codeEl = $("code");
+    function typeCode() {
+      let li = 0, si = 0, ci = 0, html = "";
+      const lines = CODE.map(() => "");
+      codeEl.classList.add("typing");
+      const step = () => {
+        if (li >= CODE.length) { codeEl.classList.remove("typing"); setTimeout(typeCode, 5000); return; }
+        const seg = CODE[li][si];
+        ci++;
+        lines[li] = CODE[li].slice(0, si).map(([c, t]) => `<span class="${c}">${t}</span>`).join("") + `<span class="${seg[0]}">${seg[1].slice(0, ci)}</span>`;
+        if (ci >= seg[1].length) { si++; ci = 0; if (si >= CODE[li].length) { li++; si = 0; } }
+        codeEl.innerHTML = lines.slice(0, Math.max(li + 1, 1)).map((l, i) => `<span class="ln">${String(i + 1).padStart(2, " ")}</span>${l}`).join("\n");
+        setTimeout(step, reduced ? 0 : 18 + Math.random() * 30);
+      };
+      step();
+    }
+    typeCode();
+    const card = $("codeCard");
+    const tiltBox = document.querySelector(".tilt");
+    tiltBox.addEventListener("mousemove", (e) => {
+      const r = tiltBox.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 12}deg)`;
+    });
+    tiltBox.addEventListener("mouseleave", () => (card.style.transform = "rotateY(-8deg) rotateX(4deg)"));
+    card.style.transform = "rotateY(-8deg) rotateX(4deg)";
+
+    /* ---------- About: words light up with scroll ---------- */
+    const wordsEl = $("words");
+    wordsEl.innerHTML = wordsEl.textContent.split(" ").map((w) => w.startsWith("*") ? `<span class="w hl">${w.replace(/\*/g, "")}</span>` : `<span class="w">${w}</span>`).join(" ");
+    const words = [...wordsEl.querySelectorAll(".w")];
+
+    /* ---------- Projects ---------- */
+    const PROJECTS = [
+      { name: "Ledgerly", sub: "Fintech SaaS for 6,000 small businesses", cat: "SaaS", y: 2026, img: "1551288049-bebda4e38f71", tags: ["Next.js", "tRPC", "PostgreSQL"], stats: [["6k", "Businesses"], ["−62%", "Close time"], ["99.99%", "Uptime"]], d: "Invoicing, bank sync and real-time cash-flow forecasts. I led a team of 12, rebuilt the ledger engine on PostgreSQL and cut month-end close from 3 days to under 1." },
+      { name: "Pulse Analytics", sub: "Privacy-first web analytics", cat: "SaaS", y: 2025, img: "1460925895917-afdab827c52f", tags: ["React", "Go", "ClickHouse"], stats: [["2.4B", "Events / mo"], ["38ms", "Query p95"], ["0", "Cookies"]], d: "A cookie-free analytics dashboard ingesting billions of events. Built the ingestion API in Go and the dashboard in React with streaming charts." },
+      { name: "Maison Store", sub: "Headless fashion e-commerce", cat: "E-commerce", y: 2025, img: "1490481651871-ab68de25d43d", tags: ["Next.js", "Shopify", "Algolia"], stats: [["+41%", "Conversion"], ["1.1s", "LCP"], ["14", "Countries"]], d: "A headless storefront on Shopify with instant search, multi-currency checkout and a 1.1s largest contentful paint on mobile." },
+      { name: "Clearview Care", sub: "Patient booking app", cat: "Mobile", y: 2024, img: "1512941937669-90a1b58e7e9c", tags: ["React Native", "Laravel", "Stripe"], stats: [["4.8★", "App Store"], ["20k", "Bookings"], ["−35%", "No-shows"]], d: "iOS and Android app for a dental group: online booking, reminders, payments and a staff dashboard, sharing one Laravel API." },
+      { name: "Flamebite Orders", sub: "Online ordering & kitchen display", cat: "E-commerce", y: 2024, img: "1504674900247-0877df9cc836", tags: ["Laravel", "Vue", "Redis"], stats: [["3", "Branches"], ["9k", "Orders / mo"], ["4 min", "Faster prep"]], d: "Ordering website with live kitchen screens via WebSockets, delivery zones, promo codes and Stripe payments for a 3-branch restaurant." },
+      { name: "Havenly CRM", sub: "Real-estate CRM & listings API", cat: "SaaS", y: 2023, img: "1600596542815-ffad4c1539a9", tags: ["Node.js", "GraphQL", "AWS"], stats: [["120", "Agents"], ["35k", "Listings"], ["5", "Portals synced"]], d: "Listings API syncing to 5 property portals, a lead pipeline for 120 agents and automatic matching between buyers and new listings." },
+    ];
+    const CATS = ["All", ...new Set(PROJECTS.map((p) => p.cat))];
+    $("filters").innerHTML = CATS.map((c, i) => `<button class="chip${i ? "" : " on"}" data-c="${c}">${c}</button>`).join("");
+    function renderProjects(cat) {
+      $("plist").innerHTML = PROJECTS.map((p, i) => ({ p, i })).filter(({ p }) => cat === "All" || p.cat === cat).map(({ p, i }, k) => `
+        <div class="prow" data-i="${i}" tabindex="0" role="button" aria-label="Open ${p.name} case study">
+          <span class="prow__no">${String(k + 1).padStart(2, "0")}/</span>
+          <h3>${p.name}<small>${p.sub}</small></h3>
+          <div class="prow__tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
+          <span class="prow__yr">${p.y}</span>
+          <span class="prow__go"><i class="ri-arrow-right-line"></i></span>
+        </div>`).join("");
+    }
+    renderProjects("All");
+    $("filters").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (!b) return; $("filters").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b)); renderProjects(b.dataset.c); });
+    // Cursor-following preview, eased so it trails the pointer.
+    const peek = $("peek");
+    let px = 0, py = 0, tx = 0, ty = 0;
+    $("plist").addEventListener("mousemove", (e) => {
+      tx = e.clientX + 30; ty = e.clientY - 120;
+      const row = e.target.closest(".prow");
+      if (row) { const src = U(PROJECTS[row.dataset.i].img, 700); if ($("peekImg").src !== src) $("peekImg").src = src; peek.classList.add("on"); }
+    });
+    $("plist").addEventListener("mouseleave", () => peek.classList.remove("on"));
+    (function follow() { px += (tx - px) * 0.14; py += (ty - py) * 0.14; peek.style.transform = `translate(${px}px, ${py}px)`; requestAnimationFrame(follow); })();
+    // Case-study drawer
+    const openCase = (i) => {
+      const p = PROJECTS[i];
+      $("drawerBody").innerHTML = `<img class="drawer__img" src="${U(p.img, 1200)}" alt="${p.name}" />
+        <div class="drawer__body"><span class="label">${p.cat.toLowerCase()} · ${p.y}</span><h3>${p.name}</h3><p>${p.d}</p>
+        <div class="drawer__stats">${p.stats.map(([b, s]) => `<div><b class="grad-text">${b}</b><span>${s}</span></div>`).join("")}</div>
+        <h4>// stack</h4><div class="prow__tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
+        <h4>// my role</h4><p>Architecture, backend and frontend development, CI/CD and launch support.</p>
+        <a href="#contact" class="btn" id="drawerCta" style="margin-top:14px">Build something similar <i class="ri-arrow-right-line"></i></a></div>`;
+      $("drawer").classList.add("open"); $("drawerBg").classList.add("open"); document.body.style.overflow = "hidden";
+      $("drawerCta").onclick = closeCase;
+    };
+    const closeCase = () => { $("drawer").classList.remove("open"); $("drawerBg").classList.remove("open"); document.body.style.overflow = ""; };
+    $("plist").addEventListener("click", (e) => { const r = e.target.closest(".prow"); if (r) { peek.classList.remove("on"); openCase(+r.dataset.i); } });
+    $("plist").addEventListener("keydown", (e) => { const r = e.target.closest(".prow"); if (r && e.key === "Enter") openCase(+r.dataset.i); });
+    $("drawerX").onclick = closeCase; $("drawerBg").onclick = closeCase;
+
+    /* ---------- API playground ---------- */
+    const API = [
+      ["GET", "/about", { name: "Rami Aziz", role: "Full-stack developer", based_in: "Beirut, LB", timezone: "UTC+3", languages: ["English", "Arabic", "French"], coffee_per_day: 3 }],
+      ["GET", "/stack", { frontend: ["React", "Next.js", "TypeScript", "Tailwind"], backend: ["Node.js", "Laravel", "PostgreSQL", "Redis"], infra: ["Docker", "AWS", "GitHub Actions"], favourite: "PostgreSQL" }],
+      ["GET", "/projects?limit=3", { total: 64, data: PROJECTS.slice(0, 3).map((p) => ({ name: p.name, year: p.y, stack: p.tags })) }],
+      ["GET", "/availability", { available: true, next_start: "2027-01-06", hours_per_week: 30, response_time: "< 24h" }],
+      ["POST", "/hire", { status: "accepted", message: "Great choice. Scroll down and send me a brief", next_step: "#contact" }],
+    ];
+    $("endpoints").innerHTML = API.map(([m, path], i) => `<button class="ep${i ? "" : " on"}" data-i="${i}"><em class="${m === "POST" ? "post" : ""}">${m}</em>${path}</button>`).join("");
+    const color = (json) => json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?)/g, (m) => {
+      let c = "j-n"; if (/^"/.test(m)) c = /:$/.test(m) ? "j-k" : "j-s"; else if (/true|false|null/.test(m)) c = "j-b";
+      return `<span class="${c}">${m}</span>`;
+    });
+    let apiTimer, apiCur = 0;
+    function callApi(i) {
+      apiCur = i;
+      clearInterval(apiTimer);
+      $("endpoints").querySelectorAll(".ep").forEach((b, j) => b.classList.toggle("on", j === i));
+      const [m, path, body] = API[i];
+      const ms = 18 + Math.floor(Math.random() * 60);
+      $("req").innerHTML = `<span>$ curl -X ${m} api.ramiaziz.dev${path}</span><span class="ok">${m === "POST" ? "201 Created" : "200 OK"}</span><span class="ms">${ms}ms</span>`;
+      const text = JSON.stringify(body, null, 2);
+      let n = 0;
+      apiTimer = setInterval(() => {
+        n = Math.min(text.length, n + 6);
+        $("res").innerHTML = color(text.slice(0, n).replace(/</g, "&lt;"));
+        if (n >= text.length) clearInterval(apiTimer);
+      }, 16);
+    }
+    $("endpoints").addEventListener("click", (e) => { const b = e.target.closest(".ep"); if (b) callApi(+b.dataset.i); });
+    $("curl").onclick = () => {
+      const [m, path] = API[apiCur];
+      const cmd = `curl -X ${m} https://api.ramiaziz.dev${path}`;
+      (navigator.clipboard ? navigator.clipboard.writeText(cmd) : Promise.reject()).then(() => toast("cURL copied to clipboard"), () => toast(cmd));
+    };
+    let apiStarted = false;
+    new IntersectionObserver(([en]) => { if (en.isIntersecting && !apiStarted) { apiStarted = true; callApi(0); } }, { threshold: 0.3 }).observe($("playground"));
+
+    /* ---------- Orbit ---------- */
+    const RINGS = {
+      1: [["react-original", "React"], ["nextjs-plain", "Next.js"], ["typescript-plain", "TypeScript"], ["tailwindcss-original", "Tailwind"], ["vuejs-plain", "Vue"]],
+      2: [["nodejs-plain", "Node.js"], ["laravel-plain", "Laravel"], ["postgresql-plain", "PostgreSQL"], ["redis-plain", "Redis"], ["graphql-plain", "GraphQL"], ["prisma-original", "Prisma"], ["php-plain", "PHP"]],
+      3: [["docker-plain", "Docker"], ["kubernetes-plain", "Kubernetes"], ["amazonwebservices-plain-wordmark", "AWS"], ["githubactions-plain", "GitHub Actions"], ["nginx-original", "Nginx"], ["linux-plain", "Linux"], ["git-plain", "Git"], ["vercel-original", "Vercel"]],
+    };
+    document.querySelectorAll(".ring").forEach((ring) => {
+      const list = RINGS[ring.dataset.ring];
+      ring.innerHTML = list.map(([ic, n], i) => `<span class="node" style="--a:${(360 / list.length) * i}deg"><i class="devicon-${ic} colored" data-n="${n}" aria-label="${n}"></i></span>`).join("");
+    });
+    const sizeRings = () => document.querySelectorAll(".ring").forEach((r) => r.style.setProperty("--r", r.offsetWidth / 2 + "px"));
+    sizeRings();
+
+    /* ---------- Testimonials ---------- */
+    const VOICES = [
+      ["Rami rebuilt our ledger engine without a single minute of downtime. Our month-end close went from three days to one.", "Marcus Hale", "CEO, Ledgerly", "1507003211169-0a1dd7228f2d"],
+      ["The weekly preview links were a game changer. We always knew exactly where the project stood.", "Sofia Almeida", "Founder, Maison", "1494790108377-be9c29b29330"],
+      ["Clean code, real tests and documentation our in-house team could actually pick up. Rare.", "Daniel Brooks", "CTO, Northwind", "1500648767791-00dcc994a43e"],
+      ["He pushed back on a feature we didn't need and saved us six weeks. Then delivered early.", "Amara Okafor", "Product Lead, Pulse", "1531123897727-8f129e1688ce"],
+      ["Our API went from timing out at 200 users to handling 20,000 without breaking a sweat.", "Theo Grant", "Founder, Havenly", "1506794778202-cad84cf45f1d"],
+      ["Best agency partner we've had. We send Rami every project that needs a serious backend.", "Lina Saab", "Director, Arcade Studio", "1534528741775-53994a69daeb"],
+    ];
+    const vcard = ([q, n, r, img]) => `<article class="vcard"><p>“${q}”</p><footer><img src="${U(img, 100)}" alt="${n}" loading="lazy" /><div><b>${n}</b><small>${r}</small></div></footer></article>`;
+    const v1 = VOICES.slice(0, 3), v2 = VOICES.slice(3);
+    $("vcol1").innerHTML = [...v1, ...v1].map(vcard).join("");
+    $("vcol2").innerHTML = [...v2, ...v2].map(vcard).join("");
+
+    /* ---------- Pricing toggle ---------- */
+    const PLANS = {
+      project: [["ri-rocket-line", "Launch", "Landing pages & MVPs", "$4,900", "/ project", ["Up to 6 pages or 3 core features", "Design handoff from Figma", "CMS or simple backend", "2 weeks delivery"]],
+        ["ri-stack-line", "Product", "Full web apps & SaaS", "$14,500", "/ project", ["Auth, billing & dashboards", "API + database design", "Tests & CI/CD pipeline", "30 days free support"]],
+        ["ri-building-2-line", "Platform", "Complex & multi-team", "$32k+", "/ project", ["Multi-tenant architecture", "Integrations & data migrations", "Load testing & monitoring", "Dedicated Slack channel"]]],
+      retainer: [["ri-tools-line", "Maintain", "Keep things running", "$1,200", "/ month", ["10 hours of dev time", "Updates & security patches", "Uptime monitoring", "48h response time"]],
+        ["ri-stack-line", "Grow", "Ship features every week", "$4,800", "/ month", ["50 hours of dev time", "Weekly feature releases", "Priority bug fixes", "Monthly performance report"]],
+        ["ri-team-line", "Embedded", "Your part-time tech lead", "$8,500", "/ month", ["100 hours of dev time", "Architecture & code reviews", "Hiring & mentoring help", "Same-day response"]]],
+    };
+    function renderPlans(mode) {
+      $("plans").innerHTML = PLANS[mode].map(([ic, n, s, price, per, feats], i) => `
+        <article class="plan${i === 1 ? " plan--pop" : ""}">
+          ${i === 1 ? '<span class="plan__flag">Most popular</span>' : ""}
+          <div class="plan__ic"><i class="${ic}"></i></div>
+          <h3>${n}</h3><p>${s}</p>
+          <div class="plan__price">${price} <small>${per}</small></div>
+          <ul>${feats.map((f) => `<li><i class="ri-check-line"></i>${f}</li>`).join("")}</ul>
+          <a href="#contact" class="btn${i === 1 ? "" : " btn--dark"}">Start with ${n} <i class="ri-arrow-right-line"></i></a>
+        </article>`).join("");
+    }
+    renderPlans("project");
+    const knob = $("knob");
+    const placeKnob = () => { const b = $("toggle").querySelector(".on"); knob.style.left = b.offsetLeft + "px"; knob.style.width = b.offsetWidth + "px"; };
+    $("toggle").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      $("toggle").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      placeKnob(); renderPlans(b.dataset.m);
+    });
+
+    /* ---------- Contact shell ---------- */
+    document.querySelectorAll(".opts").forEach((g) => g.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; g.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); }));
+    $("shell").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = $("hName").value.trim().split(" ")[0];
+      const type = document.querySelector('[data-group="type"] .on').textContent;
+      const budget = document.querySelector('[data-group="budget"] .on').textContent;
+      const lines = [["", `$ ./send-brief.sh --name "${name}" --type "${type}"`], ["g", "✔ brief validated"], ["g", `✔ budget ${budget} noted`], ["g", "✔ added to Rami's inbox"], ["", `→ Thanks ${name}! Expect a reply within 24h.`]];
+      $("log").innerHTML = lines.map(([c, t], i) => `<div class="${c}" style="animation-delay:${i * 0.35}s">${t.replace(/</g, "&lt;")}</div>`).join("");
+      setTimeout(() => toast("Brief sent — talk soon!"), lines.length * 350);
+      e.target.reset();
+    });
+    $("cal").onclick = (e) => { e.preventDefault(); toast("Calendar link copied — pick any slot that works"); };
+
+    /* ---------- Scroll-driven motion ---------- */
+    const proc = $("process"), track = $("track");
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      // About words light up between 85% and 35% of the viewport.
+      const w = wordsEl.getBoundingClientRect();
+      const p = clamp((vh * 0.85 - w.top) / (w.height + vh * 0.5), 0, 1);
+      const lit = reduced ? words.length : Math.floor(p * words.length * 1.05);
+      words.forEach((el, i) => el.classList.toggle("on", i < lit));
+      // Process: vertical scroll drives the horizontal track.
+      const r = proc.getBoundingClientRect();
+      const prog = clamp(-r.top / (proc.offsetHeight - vh), 0, 1);
+      const max = track.scrollWidth - innerWidth + Math.max(20, (innerWidth - 1320) / 2);
+      track.style.transform = `translate3d(${-prog * Math.max(0, max)}px,0,0)`;
+      $("bar").style.width = prog * 100 + "%";
+      $("stepNo").textContent = String(Math.min(5, Math.floor(prog * 5) + 1)).padStart(2, "0");
+      // Header, back-to-top, active link.
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("toTop").classList.toggle("show", scrollY > vh);
+      let cur = "";
+      document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * 0.4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", () => { sizeRings(); placeKnob(); onScroll(); });
+
+    /* ---------- Reveal + count-up ---------- */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(en.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    function countUp(el) {
+      const end = +el.dataset.count, dec = +(el.dataset.dec || 0), t0 = performance.now();
+      const step = (t) => { const k = Math.min((t - t0) / 1800, 1); el.textContent = (end * (1 - Math.pow(1 - k, 3))).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }
+
+    /* ---------- Magnet ---------- */
+    document.querySelectorAll("[data-magnet]").forEach((el) => {
+      el.addEventListener("mousemove", (e) => { const b = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - b.left - b.width / 2) * 0.25}px, ${(e.clientY - b.top - b.height / 2) * 0.3}px)`; });
+      el.addEventListener("mouseleave", () => (el.style.transform = ""));
+    });
+
+    /* ---------- Menu + keys ---------- */
+    const setMenu = (o) => { $("nav").classList.toggle("open", o); $("burger").innerHTML = o ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>'; };
+    $("burger").onclick = () => setMenu(!$("nav").classList.contains("open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCase(); setMenu(false); } });
+
+    placeKnob();
+    onScroll();
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-rami/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

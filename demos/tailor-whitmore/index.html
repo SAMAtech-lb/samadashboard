@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whitmore &amp; Vale — Bespoke and Made-to-Measure Tailors, New York</title>
+  <meta name="description" content="Whitmore &amp; Vale has cut suits, overcoats and shirts by hand on Park Avenue since 1986. See our work and prices, and book a fitting online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var r = document.documentElement; r.classList.add("js");
+      try { if (location.search.indexOf("nointro") < 0 && !location.hash && !matchMedia("(prefers-reduced-motion: reduce)").matches) r.classList.add("intro-on"); } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Opening -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__in">
+      <span class="intro__name">Whitmore <em>&amp;</em> Vale</span>
+      <svg viewBox="0 0 400 4" preserveAspectRatio="none"><line x1="0" y1="2" x2="400" y2="2" /></svg>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__row">
+      <a href="#top" class="logo" aria-label="Whitmore and Vale home"><b>Whitmore <em>&amp;</em> Vale</b><small>Tailors · New York</small></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#make">What we make</a>
+        <a href="#work">Our work</a>
+        <a href="#cloth">Cloth</a>
+        <a href="#clients">Clients</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="header__tel" href="tel:+12125550148"><i class="ri-phone-line"></i> (212) 555-0148</a>
+      <a href="#book" class="btn btn--sm">Book a fitting</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow hero__in">Park Avenue, New York · Since 1986</p>
+        <h1 class="hero__in">A suit cut for <em>one person</em> only.</h1>
+        <p class="hero__lead hero__in">Bespoke and made-to-measure suits, overcoats and shirts, cut by hand in our Park Avenue workroom and fitted until they're right.</p>
+        <div class="hero__btns hero__in">
+          <a href="#book" class="btn">Book a fitting <i class="ri-arrow-right-line"></i></a>
+          <a href="#make" class="btn btn--line">See prices</a>
+        </div>
+        <p class="hero__rate hero__in"><span>★★★★★</span> 4.9 from 640 client reviews</p>
+      </div>
+      <div class="hero__photo"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1500&q=82" alt="Man in a navy suit and striped tie fastening his jacket" /></div>
+    </section>
+
+    <!-- What we make -->
+    <section class="section section--cream" id="make">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">What we make</p>
+            <h2>Four things, <em>made properly.</em></h2>
+          </div>
+          <p>Every price includes your measurements, your fittings and free alterations for the first year.</p>
+        </div>
+        <div class="make" id="makeGrid"></div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section section--navy" id="work">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">Our work</p>
+            <h2>Recently out of <em>the workroom.</em></h2>
+          </div>
+          <div class="tabs" id="workTabs" role="group" aria-label="Filter our work"></div>
+        </div>
+        <div class="work" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- Cloth -->
+    <section class="section" id="cloth">
+      <div class="container cloth">
+        <div class="cloth__img reveal"><img id="clothImg" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80" alt="Blue check wool three-piece suit" loading="lazy" /></div>
+        <div class="reveal">
+          <p class="eyebrow">The cloth</p>
+          <h2>4,000 cloths. <em>We'll narrow it down.</em></h2>
+          <p class="lead">We keep swatch books from English and Italian mills in the shop. Tell us where you'll wear it, and we'll bring out the few that suit.</p>
+          <div class="tabs tabs--dark" id="clothTabs" role="tablist" aria-label="Choose a cloth"></div>
+          <dl class="specs" id="clothSpecs"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="section section--cream" id="clients">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">Our clients</p>
+            <h2>In their <em>own words.</em></h2>
+          </div>
+          <p class="clients__score"><b>4.9</b><span><i>★★★★★</i>from 640 client reviews</span></p>
+        </div>
+        <div class="story reveal" id="story" aria-roledescription="carousel" aria-label="Client stories">
+          <div class="story__photo" id="storyPhoto"></div>
+          <div class="story__body">
+            <div id="storyText" aria-live="polite"></div>
+            <div class="story__nav">
+              <div class="story__thumbs" id="storyThumbs"></div>
+              <div class="story__arrows">
+                <button id="storyPrev" aria-label="Previous client"><i class="ri-arrow-left-line"></i></button>
+                <button id="storyNext" aria-label="Next client"><i class="ri-arrow-right-line"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section section--navy" id="book">
+      <div class="container book">
+        <div class="reveal">
+          <p class="eyebrow">Book a fitting</p>
+          <h2>Start with <em>an hour.</em></h2>
+          <p class="lead">Your first meeting is free, with no obligation to order. Bring a suit you like and one you don't.</p>
+          <ul class="book__list">
+            <li><i class="ri-time-line"></i>Takes about an hour</li>
+            <li><i class="ri-calendar-check-line"></i>Free to move or cancel, any time</li>
+            <li><i class="ri-map-pin-line"></i>Upstairs at 300 Park Avenue, New York</li>
+          </ul>
+        </div>
+        <form class="bform reveal" id="bookForm" novalidate>
+          <div class="f f--full"><span>What are you looking for?</span><div class="pick" id="pickWhat"></div></div>
+          <div class="f f--full"><span>Choose a day</span><div class="days" id="days"></div></div>
+          <div class="f f--full"><span>Choose a time</span><div class="times" id="times"></div></div>
+          <label class="f"><span>Your name</span><input id="bName" required autocomplete="name" /></label>
+          <label class="f"><span>Email</span><input id="bEmail" type="email" required autocomplete="email" /></label>
+          <label class="f f--full"><span>Phone</span><input id="bPhone" type="tel" required autocomplete="tel" /></label>
+          <button class="btn btn--full f--full" type="submit" id="bSend">Request this time</button>
+          <p class="berr f--full" id="bErr" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Visit + FAQ -->
+    <section class="section section--cream" id="visit">
+      <div class="container visit">
+        <div class="reveal">
+          <p class="eyebrow">Visit</p>
+          <h2>Find us on <em>Park Avenue.</em></h2>
+          <ul class="vlist">
+            <li><i class="ri-map-pin-line"></i><span>300 Park Avenue, 4th Floor<br />New York, NY 10022</span></li>
+            <li><i class="ri-time-line"></i><span>Mon to Fri 9:00 to 18:30<br />Sat 10:00 to 16:00 · Closed Sun</span></li>
+            <li><i class="ri-phone-line"></i><a href="tel:+12125550148">(212) 555-0148</a></li>
+            <li><i class="ri-mail-line"></i><a href="mailto:fittings@whitmorevale.com">fittings@whitmorevale.com</a></li>
+          </ul>
+          <h3 class="trunk__h">Trunk shows</h3>
+          <p class="trunk__p">Can't get to New York? Our cutters travel.</p>
+          <ul class="trunk" id="trunk"></ul>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2>Common <em>questions.</em></h2>
+          <div class="faq" id="faq"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__row">
+      <a href="#top" class="logo"><b>Whitmore <em>&amp;</em> Vale</b><small>Tailors · New York</small></a>
+      <nav aria-label="Footer"><a href="#make">What we make</a><a href="#work">Our work</a><a href="#book">Book a fitting</a><a href="#visit">Visit</a></nav>
+      <div class="socials"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a></div>
+    </div>
+    <p class="container footer__end">© <span id="year"></span> Whitmore &amp; Vale Tailors. All rights reserved.</p>
+  </footer>
+
+  <a href="#top" class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <!-- Work viewer -->
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Commission details" hidden>
+    <button class="vbtn vbtn--close" id="vClose" aria-label="Close"><i class="ri-close-line"></i></button>
+    <button class="vbtn vbtn--prev" id="vPrev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+    <button class="vbtn vbtn--next" id="vNext" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+    <div class="viewer__box"><img id="vImg" alt="" /><div class="viewer__info" id="vInfo"></div></div>
+  </div>
+
+  <!-- Booking confirmed -->
+  <div class="done" id="done" hidden>
+    <div class="done__box" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+      <i class="ri-check-line"></i>
+      <h3 id="dTitle">We've pencilled you in</h3>
+      <p id="dText"></p>
+      <button class="btn" id="dClose">Done</button>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ---------- What we make ---------- */
+    const MAKE = [
+      { img: "1617137968427-85924c800a22", t: "Suits", p: "From $1,850", d: "Two and three-piece suits for work, or for when you want to be noticed.", want: "A suit" },
+      { img: "1619603364904-c0498317e145", t: "Overcoats", p: "From $2,400", d: "Heavy wool and cashmere coats, cut to fit properly over a jacket.", want: "An overcoat" },
+      { img: "1600091166971-7f9faad6c1e2", t: "Wedding & black tie", p: "From $2,200", d: "Dinner suits and wedding suits, with a date-safe schedule from the first meeting.", want: "A wedding suit" },
+      { img: "1603252109303-2751441dd157", t: "Shirts", p: "From $190", d: "Your own shirt pattern, from a first order of three. Reorder any time.", want: "Shirts" },
+    ];
+    $("makeGrid").innerHTML = MAKE.map((m, i) => `<a href="#book" class="mk reveal" style="--d:${i * .07}s" data-want="${m.want}">
+      <span class="mk__img"><img src="${U(m.img, 700)}" alt="${m.t}" loading="lazy" /></span>
+      <span class="mk__row"><h3>${m.t}</h3><b>${m.p}</b></span>
+      <p>${m.d}</p>
+    </a>`).join("");
+
+    /* ---------- Work ---------- */
+    const WORK = [
+      { img: "1594938298603-c8148c4dae35", type: "Suits", t: "Three-piece in blue windowpane", cloth: "11 oz English worsted", cut: "Two-button, peak-free notch lapel", weeks: "Bespoke, 9 weeks" },
+      { img: "1593032465175-481ac7f401a0", type: "Suits", t: "Bottle-green two-piece", cloth: "9 oz Italian wool", cut: "Soft shoulder, single vent", weeks: "Made-to-measure, 5 weeks" },
+      { img: "1619603364904-c0498317e145", type: "Overcoats", t: "Camel single-breasted overcoat", cloth: "22 oz wool and cashmere", cut: "Fly front, knee length", weeks: "Bespoke, 10 weeks" },
+      { img: "1600091166971-7f9faad6c1e2", type: "Wedding", t: "Check dinner jacket", cloth: "10 oz silk and wool", cut: "Shawl lapel, one button", weeks: "Bespoke, 8 weeks" },
+      { img: "1592878904946-b3cd8ae243d0", type: "Suits", t: "Midnight check blazer", cloth: "10 oz English hopsack", cut: "Two-button, patch pockets", weeks: "Made-to-measure, 4 weeks" },
+      { img: "1608234808654-2a8875faa7fd", type: "Women", t: "Glen check double-breasted", cloth: "10 oz English worsted", cut: "Longline, nipped waist", weeks: "Bespoke, 9 weeks" },
+      { img: "1617127365659-c47fa864d8bc", type: "Suits", t: "Black two-button lounge suit", cloth: "9 oz Super 120s wool", cut: "Slim leg, high armhole", weeks: "Made-to-measure, 5 weeks" },
+      { img: "1598808503746-f34c53b9323e", type: "Wedding", t: "Black peak-lapel dinner suit", cloth: "11 oz barathea", cut: "Silk peak lapel, one button", weeks: "Bespoke, 10 weeks" },
+    ];
+    const TYPES = ["All", "Suits", "Overcoats", "Wedding", "Women"];
+    let wType = "All", shown = WORK, vi = 0, lastFocus = null;
+    const renderWork = () => {
+      shown = WORK.filter((w) => wType === "All" || w.type === wType);
+      $("workTabs").innerHTML = TYPES.map((t) => `<button class="${t === wType ? "on" : ""}" data-type="${t}" aria-pressed="${t === wType}">${t}</button>`).join("");
+      $("workGrid").innerHTML = shown.map((w, i) => `<button class="wk" style="--i:${i}" data-wk="${i}" aria-label="View ${w.t}"><img src="${U(w.img, 700)}" alt="${w.t}" loading="lazy" /><span><b>${w.t}</b><small>${w.weeks}</small></span></button>`).join("");
+    };
+    $("workTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-type]"); if (b) { wType = b.dataset.type; renderWork(); } });
+    const renderViewer = () => {
+      const w = shown[vi];
+      $("vImg").src = U(w.img, 1300); $("vImg").alt = w.t;
+      $("vInfo").innerHTML = `<p class="eyebrow">${w.type}</p><h3>${w.t}</h3><dl><div><dt>Cloth</dt><dd>${w.cloth}</dd></div><div><dt>Cut</dt><dd>${w.cut}</dd></div><div><dt>Commission</dt><dd>${w.weeks}</dd></div></dl><a href="#book" class="btn btn--full" id="vBook">Book a fitting</a><small>${vi + 1} of ${shown.length}</small>`;
+    };
+    const openViewer = (i) => { vi = i; lastFocus = document.activeElement; renderViewer(); $("viewer").hidden = false; document.body.classList.add("locked"); $("vClose").focus(); };
+    const closeViewer = () => { if ($("viewer").hidden) return; $("viewer").hidden = true; document.body.classList.remove("locked"); if (lastFocus) lastFocus.focus({ preventScroll: true }); };
+    const stepViewer = (d) => { vi = (vi + d + shown.length) % shown.length; renderViewer(); };
+    $("workGrid").addEventListener("click", (e) => { const b = e.target.closest("[data-wk]"); if (b) openViewer(+b.dataset.wk); });
+    $("vClose").addEventListener("click", closeViewer);
+    $("vPrev").addEventListener("click", () => stepViewer(-1));
+    $("vNext").addEventListener("click", () => stepViewer(1));
+    $("viewer").addEventListener("click", (e) => { if (e.target.id === "viewer" || e.target.id === "vBook") closeViewer(); });
+    renderWork();
+
+    /* ---------- Cloth ---------- */
+    const CLOTH = [
+      { n: "Worsted", img: "1594938298603-c8148c4dae35", w: "9 to 11 oz", when: "All year, day to day", feel: "Smooth, crisp and hard-wearing", add: "Included" },
+      { n: "Flannel", img: "1555069519-127aadedf1ee", w: "11 to 14 oz", when: "October to March", feel: "Soft, warm and slightly brushed", add: "Included" },
+      { n: "Tweed", img: "1505022610485-0249ba5b3675", w: "13 to 18 oz", when: "Weekends and cold days", feel: "Rugged, textured and very long-lasting", add: "+$250" },
+      { n: "Silk & wool", img: "1600091166971-7f9faad6c1e2", w: "8 to 10 oz", when: "Evenings and summer weddings", feel: "Light, with a slight sheen", add: "+$450" },
+    ];
+    let cl = 0;
+    const renderCloth = () => {
+      const c = CLOTH[cl];
+      $("clothTabs").innerHTML = CLOTH.map((x, i) => `<button role="tab" aria-selected="${i === cl}" class="${i === cl ? "on" : ""}" data-cl="${i}">${x.n}</button>`).join("");
+      $("clothSpecs").innerHTML = [["Weight", c.w], ["Best for", c.when], ["How it feels", c.feel], ["Price", c.add]].map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join("");
+      $("clothImg").src = U(c.img, 1000); $("clothImg").alt = `${c.n} cloth, made up as a jacket`;
+    };
+    $("clothTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-cl]"); if (b) { cl = +b.dataset.cl; renderCloth(); } });
+    renderCloth();
+
+    /* ---------- Client stories ---------- */
+    const STORIES = [
+      { img: "1617127365659-c47fa864d8bc", q: "I've always struggled with off-the-peg because of my shoulders. This is the first suit I've owned that I forget I'm wearing.", n: "Daniel R.", who: "Architect, Brooklyn", piece: "Black two-button suit, made-to-measure" },
+      { img: "1617137968427-85924c800a22", q: "They kept to the schedule for our wedding and moved a fitting when I was travelling. My father asked who made it before the speeches had even started.", n: "Tomás L.", who: "Groom, Hudson Valley", piece: "Navy wedding suit, bespoke" },
+      { img: "1608234808654-2a8875faa7fd", q: "I'd given up on tailoring that wasn't just a man's pattern made smaller. Mine was drafted for me from nothing, and it shows every time I walk into a room.", n: "Rachel K.", who: "Partner at a design firm", piece: "Glen check double-breasted, bespoke" },
+      { img: "1619603364904-c0498317e145", q: "Twelve years on, the overcoat still looks new. I had it relined last winter, and they still had my pattern on file.", n: "Matthew O.", who: "Client since 2014", piece: "Camel overcoat, bespoke" },
+    ];
+    let si = 0, sTimer = null;
+    STORIES.forEach((s) => { new Image().src = U(s.img, 1000); });
+    const renderStory = () => {
+      const s = STORIES[si];
+      $("storyPhoto").innerHTML = `<img src="${U(s.img, 1000)}" alt="${s.n} wearing a ${s.piece.split(",")[0].toLowerCase()}" />`;
+      $("storyText").innerHTML = `<div class="story__in"><blockquote>${s.q}</blockquote><p class="story__who"><b>${s.n}</b>${s.who}</p><p class="story__piece">${s.piece}</p></div>`;
+      $("storyThumbs").innerHTML = STORIES.map((x, i) => `<button class="${i === si ? "on" : ""}" data-s="${i}" aria-label="Read ${x.n}'s story" aria-pressed="${i === si}"><img src="${U(x.img, 160)}" alt="" loading="lazy" /></button>`).join("");
+    };
+    const goStory = (d) => { si = (si + d + STORIES.length) % STORIES.length; renderStory(); };
+    const playStory = () => { clearInterval(sTimer); if (!reduce) sTimer = setInterval(() => goStory(1), 7000); };
+    $("storyPrev").addEventListener("click", () => { goStory(-1); playStory(); });
+    $("storyNext").addEventListener("click", () => { goStory(1); playStory(); });
+    $("storyThumbs").addEventListener("click", (e) => { const b = e.target.closest("[data-s]"); if (b) { si = +b.dataset.s; renderStory(); playStory(); } });
+    $("story").addEventListener("pointerenter", () => clearInterval(sTimer));
+    $("story").addEventListener("pointerleave", playStory);
+    renderStory(); playStory();
+
+    /* ---------- Booking ---------- */
+    const WANTS = ["A suit", "An overcoat", "A wedding suit", "Shirts", "Not sure yet"];
+    const SLOTS = ["9:30", "11:00", "12:30", "14:30", "16:00", "17:30"];
+    const SAT = ["10:30", "12:00", "14:00"];
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const DAYS = [];
+    for (let i = 1; DAYS.length < 10 && i < 20; i++) { const d = new Date(today); d.setDate(d.getDate() + i); if (d.getDay() !== 0) DAYS.push(d); }
+    const B = { want: "", day: -1, time: "" };
+    const taken = (d, t) => { const x = Math.sin(d.getDate() * 12.9 + d.getMonth() * 3.1 + t.charCodeAt(0) * 4.7 + t.charCodeAt(1) * 7.3) * 1e4; return x - Math.floor(x) < .32; };
+    const renderBook = () => {
+      $("pickWhat").innerHTML = WANTS.map((w) => `<button type="button" class="${w === B.want ? "on" : ""}" data-w="${w}" aria-pressed="${w === B.want}">${w}</button>`).join("");
+      $("days").innerHTML = DAYS.map((d, i) => `<button type="button" class="${i === B.day ? "on" : ""}" data-d="${i}" aria-pressed="${i === B.day}"><small>${d.toLocaleDateString("en-US", { weekday: "short" })}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString("en-US", { month: "short" })}</small></button>`).join("");
+      if (B.day < 0) { $("times").innerHTML = `<p class="times__hint">Pick a day to see open times.</p>`; return; }
+      const d = DAYS[B.day], list = d.getDay() === 6 ? SAT : SLOTS;
+      $("times").innerHTML = list.map((t) => { const off = taken(d, t); return `<button type="button" class="${t === B.time ? "on" : ""}" data-t="${t}" ${off ? "disabled" : ""} aria-pressed="${t === B.time}">${t}</button>`; }).join("");
+    };
+    $("bookForm").addEventListener("click", (e) => {
+      const b = e.target.closest("button[type=button]"); if (!b) return;
+      if (b.dataset.w) B.want = b.dataset.w;
+      if (b.dataset.d !== undefined) { B.day = +b.dataset.d; B.time = ""; }
+      if (b.dataset.t) B.time = b.dataset.t;
+      $("bErr").textContent = ""; renderBook();
+    });
+    document.addEventListener("click", (e) => { const a = e.target.closest("[data-want]"); if (a) { B.want = a.dataset.want; renderBook(); } });
+    $("bookForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const miss = !B.want ? "Please tell us what you're looking for." : B.day < 0 ? "Please choose a day." : !B.time ? "Please choose a time." : ["bName", "bEmail", "bPhone"].some((id) => !$(id).checkValidity()) ? "Please add your name, email and phone so we can confirm." : "";
+      if (miss) { $("bErr").textContent = miss; return; }
+      const d = DAYS[B.day].toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+      $("dText").textContent = `${d} at ${B.time}, at 300 Park Avenue. We'll call or email within one working day to confirm.`;
+      $("done").hidden = false; $("dClose").focus();
+      e.target.reset(); B.want = ""; B.day = -1; B.time = ""; renderBook();
+    });
+    $("dClose").addEventListener("click", () => ($("done").hidden = true));
+    renderBook();
+
+    /* ---------- Trunk shows and FAQ ---------- */
+    const CITIES = ["Chicago, The Langham", "Boston, The Newbury", "San Francisco, Fairmont", "Dallas, The Adolphus"];
+    $("trunk").innerHTML = CITIES.map((c, i) => { const a = new Date(today.getFullYear(), today.getMonth() + 1 + i, 12 + i * 3), z = new Date(a); z.setDate(a.getDate() + 1); return `<li><b>${c}</b><span>${a.toLocaleDateString("en-US", { month: "short", day: "numeric" })} to ${z.getDate()}</span><a href="#book">Reserve</a></li>`; }).join("");
+    const FAQS = [
+      ["How much should I budget?", "A made-to-measure two-piece suit starts at $1,850, including fittings. The final price depends on the cloth, and we'll confirm it in writing before you pay anything."],
+      ["What's the difference between made-to-measure and bespoke?", "Made-to-measure adjusts our own pattern to you, with two fittings, from $1,850 and ready in 4 to 5 weeks. Bespoke drafts a new pattern from scratch and is sewn entirely by hand, with three or more fittings, from $3,900 and ready in 8 to 10 weeks."],
+      ["What happens at my first meeting?", "You'll spend about an hour with your cutter, talking through what you need, choosing the cloth and taking your measurements. It's free, and there's no obligation to order."],
+      ["How do I pay?", "A 50% deposit when you order, and the rest when you collect it. We take cards, bank transfer and checks."],
+      ["What if it doesn't fit?", "We keep working until it does, at no extra charge. Alterations are free for the first year, even if your size changes."],
+      ["I need a suit by a specific date. Can you do it?", "Often, yes. Made-to-measure can be rushed to three weeks for a $300 fee. For a wedding, we suggest starting at least three months ahead."],
+      ["Do you make suits for women?", "Yes. About a quarter of our commissions are for women, and every pattern is drafted separately."],
+    ];
+    $("faq").innerHTML = FAQS.map(([q, a], i) => `<div class="qa ${i === 0 ? "open" : ""}"><button aria-expanded="${i === 0}" data-qa="${i}">${q}<i class="ri-add-line"></i></button><div class="qa__a"><div><p>${a}</p></div></div></div>`).join("");
+    $("faq").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-qa]"); if (!b) return;
+      document.querySelectorAll(".qa").forEach((q, i) => { const o = i === +b.dataset.qa ? !q.classList.contains("open") : false; q.classList.toggle("open", o); q.querySelector("button").setAttribute("aria-expanded", o); });
+    });
+
+    /* ---------- Header, seam, reveal ---------- */
+    const header = $("header"), links = [...document.querySelectorAll(".nav a")], closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); $("burger").querySelector("i").className = "ri-menu-line"; };
+    $("burger").addEventListener("click", () => { const o = document.body.classList.toggle("nav-open"); $("burger").setAttribute("aria-expanded", o); $("burger").querySelector("i").className = o ? "ri-close-line" : "ri-menu-line"; });
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    const onScroll = () => {
+      header.classList.toggle("sticky", scrollY > 30);
+      $("totop").classList.toggle("show", scrollY > 900);
+      let cur = "";
+      links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === cur));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); addEventListener("resize", onScroll); onScroll();
+    addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeViewer(); $("done").hidden = true; closeNav(); }
+      if ($("viewer").hidden) return;
+      if (e.key === "ArrowLeft") stepViewer(-1);
+      if (e.key === "ArrowRight") stepViewer(1);
+    });
+    $("year").textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* Opening: a line of stitching runs under the name, then the page appears */
+    const root = document.documentElement, show = () => document.body.classList.add("ready");
+    if (root.classList.contains("intro-on")) {
+      const skips = ["pointerdown", "wheel", "touchstart", "keydown"];
+      const finish = () => { skips.forEach((ev) => removeEventListener(ev, finish)); root.classList.remove("intro-on"); $("intro").remove(); show(); };
+      skips.forEach((ev) => addEventListener(ev, finish, { passive: true }));
+      setTimeout(show, 850);
+      setTimeout(finish, 1450);
+    } else { $("intro").remove(); requestAnimationFrame(show); }
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/tailor-whitmore/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

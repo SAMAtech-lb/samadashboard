@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hannah Brooks — Austin Real Estate Agent</title>
+  <meta name="description" content="Hannah Brooks is a Realtor in Austin, Texas helping families buy and sell homes in Travis and Williamson County. See current listings or get a free home valuation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i class="ri-home-5-line"></i></span><span>Hannah Brooks<small>Realtor · Keystone Realty</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#listings">Listings</a>
+        <a href="#sell">Sell your home</a>
+        <a href="#areas">Neighborhoods</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <a href="tel:+15125550198" class="header__phone"><i class="ri-phone-fill"></i> (512) 555-0198</a>
+      <a href="#contact" class="btn btn--sm header__cta">Contact Hannah</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img class="hero__bg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" alt="Modern home at dusk in Austin" />
+    <div class="container hero__in">
+      <h1>Buying or selling a home in Austin?</h1>
+      <p>I've helped 340 families move in and around Austin since 2013. Search what's on the market now, or find out what your home is worth.</p>
+      <form class="search" id="search">
+        <label><span>Area</span><select name="area"><option value="all">All areas</option><option>Austin</option><option>Round Rock</option><option>Cedar Park</option><option>Georgetown</option></select></label>
+        <label><span>Bedrooms</span><select name="beds"><option value="0">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+        <label><span>Max price</span><select name="max"><option value="0">No max</option><option value="500000">$500,000</option><option value="750000">$750,000</option><option value="1000000">$1,000,000</option></select></label>
+        <button class="btn" type="submit"><i class="ri-search-line"></i> Search homes</button>
+      </form>
+      <a href="#sell" class="hero__sell"><i class="ri-line-chart-line"></i> Thinking of selling? Get a free home valuation <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="nums">
+    <div class="container nums__in">
+      <div><strong>$186M</strong><span>in homes sold</span></div>
+      <div><strong>340</strong><span>families helped</span></div>
+      <div><strong>101.4%</strong><span>average of list price</span></div>
+      <div><strong>17 days</strong><span>average time to sell</span></div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section class="section" id="listings">
+    <div class="container">
+      <div class="title title--row">
+        <div><h2>Current listings</h2><p id="resultCount">Homes I'm listing right now in the Austin area.</p></div>
+        <div class="tabs" id="tabs"><button class="on" data-s="sale">For sale</button><button data-s="sold">Recently sold</button></div>
+      </div>
+      <div class="listings" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- Sell -->
+  <section class="section section--soft" id="sell">
+    <div class="container sell">
+      <div class="sell__text">
+        <h2>What's your home worth?</h2>
+        <p>Online estimates can be off by $50,000 or more. I'll walk through your home, compare it with recent sales on your street and send you a written price range within 48 hours. Free, with no obligation to list.</p>
+        <h3>How I sell your home</h3>
+        <ol class="steps">
+          <li><b>1</b><div><strong>Pricing &amp; prep plan</strong><span>A clear price strategy and a list of small fixes that pay off.</span></div></li>
+          <li><b>2</b><div><strong>Professional marketing</strong><span>Staging advice, pro photos, video tour and a floor plan for every listing.</span></div></li>
+          <li><b>3</b><div><strong>Showings &amp; offers</strong><span>I handle every showing and negotiate the best terms, not just the best price.</span></div></li>
+          <li><b>4</b><div><strong>Closing day</strong><span>I coordinate inspection, appraisal and title so you close on time.</span></div></li>
+        </ol>
+      </div>
+      <form class="form" id="valForm" novalidate>
+        <h3>Free home valuation</h3>
+        <label><span>Property address</span><input name="address" placeholder="1204 Barton Hills Dr, Austin, TX" /></label>
+        <div class="form__row">
+          <label><span>Bedrooms</span><select name="beds"><option>2</option><option selected>3</option><option>4</option><option>5+</option></select></label>
+          <label><span>Bathrooms</span><select name="baths"><option>1</option><option selected>2</option><option>2.5</option><option>3+</option></select></label>
+        </div>
+        <label><span>When are you thinking of selling?</span><select name="when"><option>In the next 3 months</option><option>In 3–6 months</option><option>In 6–12 months</option><option>Just curious</option></select></label>
+        <div class="form__row">
+          <label><span>Your name</span><input name="name" autocomplete="name" /></label>
+          <label><span>Phone or email</span><input name="contact" /></label>
+        </div>
+        <p class="form__err" id="valErr"></p>
+        <button class="btn btn--block" type="submit">Get my home valuation</button>
+        <p class="form__ok" id="valOk" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section class="section" id="areas">
+    <div class="container">
+      <div class="title"><h2>Neighborhoods I know best</h2><p>Median prices from MLS sales in the last 12 months.</p></div>
+      <div class="areas">
+        <article class="area"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=700&q=80" alt="Home in Barton Hills" loading="lazy" /><div><h3>Barton Hills</h3><p>Leafy streets near the greenbelt and Zilker Park.</p><dl><div><dt>Median price</dt><dd>$865,000</dd></div><div><dt>Schools</dt><dd>Barton Hills Elem. A</dd></div></dl></div></article>
+        <article class="area"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80" alt="Home in Cedar Park" loading="lazy" /><div><h3>Cedar Park</h3><p>Family suburb with top schools and big lots.</p><dl><div><dt>Median price</dt><dd>$525,000</dd></div><div><dt>Schools</dt><dd>Leander ISD, A rated</dd></div></dl></div></article>
+        <article class="area"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80" alt="Home in Round Rock" loading="lazy" /><div><h3>Round Rock</h3><p>Great value, newer homes and an easy commute.</p><dl><div><dt>Median price</dt><dd>$445,000</dd></div><div><dt>Schools</dt><dd>Round Rock ISD, A rated</dd></div></dl></div></article>
+        <article class="area"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=700&q=80" alt="Home in Westlake" loading="lazy" /><div><h3>Westlake</h3><p>Hill Country views and some of Texas's best schools.</p><dl><div><dt>Median price</dt><dd>$1,650,000</dd></div><div><dt>Schools</dt><dd>Eanes ISD, A+ rated</dd></div></dl></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--navy" id="about">
+    <div class="container about">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Hannah Brooks, Realtor" loading="lazy" />
+      <div>
+        <h2>Hi, I'm Hannah</h2>
+        <p class="lead">I grew up in South Austin, sold my first house in 2013, and still answer my own phone.</p>
+        <p>Before real estate I spent six years as a mortgage loan officer, so I know how financing works and where deals fall apart. Today I work with a small team at Keystone Realty: a transaction coordinator, a stager and a photographer, all focused on my clients.</p>
+        <ul class="creds">
+          <li><i class="ri-shield-check-line"></i> Texas Real Estate License #0617284</li>
+          <li><i class="ri-award-line"></i> Austin Board of Realtors Platinum Top 50, 2022–2025</li>
+          <li><i class="ri-home-heart-line"></i> Certified First-Time Buyer Specialist</li>
+          <li><i class="ri-translate-2"></i> English and Spanish</li>
+        </ul>
+        <div class="about__btns"><a href="#contact" class="btn">Talk to Hannah</a><a href="tel:+15125550198" class="btn btn--line"><i class="ri-phone-line"></i> (512) 555-0198</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="title"><h2>What my clients say</h2><p><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span> 5.0 from 212 reviews on Zillow and Google</p></div>
+      <div class="reviews">
+        <figure class="review"><blockquote>“Hannah sold our house in nine days for $22,000 over asking. Her staging tips cost us $1,400 and easily paid for themselves.”</blockquote><figcaption><strong>The Martinez family</strong><span>Sold in Barton Hills</span></figcaption></figure>
+        <figure class="review"><blockquote>“As first-time buyers we had a hundred questions. She answered every one and found us a home before rates went up again.”</blockquote><figcaption><strong>Priya &amp; Sam</strong><span>Bought in Round Rock</span></figcaption></figure>
+        <figure class="review"><blockquote>“We were relocating from Chicago and couldn't visit often. Hannah's video tours were so honest we bought without seeing the house in person.”</blockquote><figcaption><strong>Daniel O.</strong><span>Bought in Cedar Park</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--soft" id="contact">
+    <div class="container contact">
+      <div>
+        <h2>Let's talk about your move</h2>
+        <p>Call, text or send a message. I usually reply within the hour during business days.</p>
+        <ul class="contact__list">
+          <li><i class="ri-phone-line"></i><div><strong>(512) 555-0198</strong><span>Call or text</span></div></li>
+          <li><i class="ri-mail-line"></i><div><strong>hannah@keystonerealty.com</strong><span>Email</span></div></li>
+          <li><i class="ri-building-line"></i><div><strong>Keystone Realty</strong><span>2101 S Lamar Blvd, Suite 300, Austin, TX 78704</span></div></li>
+        </ul>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <label><span>Name</span><input name="name" autocomplete="name" /></label>
+          <label><span>Phone</span><input name="phone" type="tel" autocomplete="tel" /></label>
+        </div>
+        <label><span>Email</span><input name="email" type="email" autocomplete="email" /></label>
+        <label><span>I'm looking to</span><select name="intent"><option>Buy a home</option><option>Sell my home</option><option>Buy and sell</option><option>Rent out my home</option></select></label>
+        <label><span>Message</span><textarea name="msg" rows="4" placeholder="Area, budget, timing — anything that helps."></textarea></label>
+        <p class="form__err" id="cErr"></p>
+        <button class="btn btn--block" type="submit">Send message</button>
+        <p class="form__ok" id="cOk" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <a href="#home" class="logo logo--light"><span class="logo__mark"><i class="ri-home-5-line"></i></span><span>Hannah Brooks<small>Realtor · Keystone Realty</small></span></a>
+      <nav><a href="#listings">Listings</a><a href="#sell">Sell</a><a href="#areas">Neighborhoods</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Hannah Brooks, Keystone Realty. Texas license #0617284.</span><span><a href="#">Information About Brokerage Services</a> · <a href="#">Consumer Protection Notice</a> · <i class="ri-home-4-line"></i> Equal Housing Opportunity</span></div>
+  </footer>
+
+  <!-- Listing modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal__close" id="mClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="gal"><img id="mMain" alt="" /><div class="gal__thumbs" id="mThumbs"></div></div>
+      <div class="modal__body">
+        <span class="badge" id="mBadge"></span>
+        <h3 id="mPrice"></h3>
+        <p class="modal__addr" id="mTitle"></p>
+        <ul class="facts" id="mFacts"></ul>
+        <p id="mDesc"></p>
+        <div class="showing" id="showing">
+          <h4>Schedule a showing</h4>
+          <div class="showing__days" id="sDays"></div>
+          <div class="showing__row"><select id="sTime" aria-label="Time"><option>10:00 am</option><option>12:30 pm</option><option>3:00 pm</option><option>5:30 pm</option></select><input id="sName" placeholder="Your name" aria-label="Your name" /><input id="sPhone" placeholder="Phone" aria-label="Phone" /></div>
+          <button class="btn btn--block" id="sBtn">Request showing</button>
+          <p class="form__err" id="sErr"></p>
+          <p class="form__ok" id="sOk" hidden></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const money = (n) => "$" + n.toLocaleString("en-US");
+
+    const HOMES = [
+      { id: 1, s: "sale", price: 1249000, addr: "4806 Ridge Oak Dr", area: "Austin", zip: "78731", beds: 4, baths: 3.5, sqft: 3420, lot: "0.31 acre", year: 2019, img: "1600596542815-ffad4c1539a9", more: ["1600607687939-ce8a6c25118c", "1556228453-efd6c1ff04f6"], tag: "New listing", d: "Modern Northwest Hills home with a pool, open kitchen and floor-to-ceiling windows overlooking the hills. Primary suite on the main floor and a separate office." },
+      { id: 2, s: "sale", price: 689000, addr: "2214 Willow Creek Ln", area: "Cedar Park", zip: "78613", beds: 4, baths: 3, sqft: 2780, lot: "0.24 acre", year: 2016, img: "1568605114967-8130f3a36994", more: ["1600210492486-724fe5c67fb0", "1554995207-c18c203602cb"], tag: "Open house Sat 1–3pm", d: "Bright family home on a quiet cul-de-sac, walking distance to Cypress Elementary. Updated kitchen, covered patio and a three-car garage." },
+      { id: 3, s: "sale", price: 465000, addr: "917 Sunflower Trl", area: "Round Rock", zip: "78664", beds: 3, baths: 2, sqft: 1890, lot: "0.18 acre", year: 2012, img: "1570129477492-45c003edd2be", more: ["1502672260266-1c1ef2d93688", "1556228453-efd6c1ff04f6"], tag: "Price reduced", d: "Single-story home with new flooring, fresh paint and a large backyard. Ten minutes to Dell and the Round Rock outlets." },
+      { id: 4, s: "sale", price: 2150000, addr: "312 Canyon Rim Ct", area: "Austin", zip: "78746", beds: 5, baths: 4.5, sqft: 4870, lot: "0.62 acre", year: 2021, img: "1613490493576-7fde63acd811", more: ["1600607687939-ce8a6c25118c", "1600210492486-724fe5c67fb0"], tag: "Pool & views", d: "Westlake contemporary with a resort-style pool, outdoor kitchen and views of the Hill Country. Eanes ISD schools." },
+      { id: 5, s: "sale", price: 545000, addr: "1608 Elm Ridge Way", area: "Georgetown", zip: "78628", beds: 3, baths: 2.5, sqft: 2210, lot: "0.21 acre", year: 2018, img: "1564013799919-ab600027ffc6", more: ["1554995207-c18c203602cb", "1502672260266-1c1ef2d93688"], tag: "", d: "Two-story home in Wolf Ranch with a game room, solar panels and community pools and trails." },
+      { id: 6, s: "sale", price: 829000, addr: "5102 Larkwood Dr", area: "Austin", zip: "78723", beds: 3, baths: 2, sqft: 1960, lot: "0.20 acre", year: 1958, img: "1580587771525-78b9dba3b914", more: ["1600210492486-724fe5c67fb0", "1556228453-efd6c1ff04f6"], tag: "Renovated", d: "Fully renovated mid-century home in Windsor Park with a new roof, HVAC and a backyard studio." },
+      { id: 7, s: "sold", price: 912000, addr: "1204 Barton Hills Dr", area: "Austin", zip: "78704", beds: 4, baths: 3, sqft: 2650, lot: "0.27 acre", year: 1974, img: "1600566753190-17f0baa2a6c3", more: [], tag: "Sold in 9 days", d: "Sold for $22,000 over asking with 7 offers." },
+      { id: 8, s: "sold", price: 498000, addr: "88 Brushy Creek Rd", area: "Round Rock", zip: "78681", beds: 3, baths: 2, sqft: 1980, lot: "0.19 acre", year: 2010, img: "1600585154340-be6161a56a0c", more: [], tag: "Sold in 14 days", d: "Sold at 100% of list price, buyers were first-time homeowners." },
+      { id: 9, s: "sold", price: 1385000, addr: "7 Rocky River Rd", area: "Austin", zip: "78746", beds: 5, baths: 4, sqft: 3990, lot: "0.48 acre", year: 2008, img: "1512917774080-9991f1c4c750", more: [], tag: "Sold off-market", d: "Sold privately to a relocating family before going on MLS." },
+    ];
+
+    let status = "sale", filt = { area: "all", beds: 0, max: 0 }, shown = [];
+    function render() {
+      $("tabs").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.s === status));
+      shown = HOMES.filter((h) => h.s === status && (status === "sold" || ((filt.area === "all" || h.area === filt.area) && h.beds >= filt.beds && (!filt.max || h.price <= filt.max))));
+      $("resultCount").textContent = status === "sold" ? `${shown.length} homes I've sold recently.` : `${shown.length} home${shown.length === 1 ? "" : "s"} for sale${filt.area !== "all" ? " in " + filt.area : ""}${filt.beds ? `, ${filt.beds}+ beds` : ""}${filt.max ? `, up to ${money(filt.max)}` : ""}.`;
+      $("grid").innerHTML = shown.length ? shown.map((h, i) => `
+        <article class="home${h.s === "sold" ? " home--sold" : ""}" data-i="${i}" tabindex="0">
+          <div class="home__img"><img src="${U(h.img, 800)}" alt="${h.addr}" loading="lazy" />${h.tag ? `<span class="home__tag">${h.tag}</span>` : ""}${h.s === "sold" ? `<span class="home__sold">Sold</span>` : ""}</div>
+          <div class="home__body">
+            <strong class="home__price">${money(h.price)}</strong>
+            <p class="home__addr">${h.addr}, ${h.area}, TX ${h.zip}</p>
+            <ul class="home__facts"><li><i class="ri-hotel-bed-line"></i> ${h.beds} bd</li><li><i class="ri-drop-line"></i> ${h.baths} ba</li><li><i class="ri-ruler-2-line"></i> ${h.sqft.toLocaleString("en-US")} sqft</li></ul>
+          </div>
+        </article>`).join("") : `<div class="empty"><i class="ri-home-4-line"></i><strong>No homes match right now</strong><span>Try a different area or price, or <a href="#contact">ask Hannah</a> about homes coming soon.</span></div>`;
+    }
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { status = b.dataset.s; render(); } });
+    $("search").addEventListener("submit", (e) => {
+      e.preventDefault(); const f = e.target;
+      filt = { area: f.area.value, beds: +f.beds.value, max: +f.max.value }; status = "sale"; render();
+      $("listings").scrollIntoView({ behavior: "smooth" });
+    });
+    render();
+
+    /* Listing modal + showing request */
+    const modal = $("modal");
+    let cur = null, sDay = 0;
+    const sDays = []; for (let i = 1; sDays.length < 5; i++) { const x = new Date(); x.setDate(x.getDate() + i); sDays.push(x); }
+    function openHome(i) {
+      const h = shown[i]; cur = h;
+      const imgs = [h.img, ...h.more];
+      $("mMain").src = U(h.img, 1200); $("mMain").alt = h.addr;
+      $("mThumbs").innerHTML = imgs.length > 1 ? imgs.map((m, k) => `<button class="${k ? "" : "on"}" data-m="${m}"><img src="${U(m, 200)}" alt="" /></button>`).join("") : "";
+      $("mBadge").textContent = h.s === "sold" ? "Sold" : "For sale"; $("mBadge").className = "badge" + (h.s === "sold" ? " badge--sold" : "");
+      $("mPrice").textContent = money(h.price); $("mTitle").textContent = `${h.addr}, ${h.area}, TX ${h.zip}`;
+      $("mFacts").innerHTML = [["Beds", h.beds], ["Baths", h.baths], ["Sq ft", h.sqft.toLocaleString("en-US")], ["Lot", h.lot], ["Built", h.year], ["Est. payment", h.s === "sale" ? money(Math.round(h.price * 0.8 * 0.00632 + h.price * 0.021 / 12)) + "/mo" : "—"]].map(([k, v]) => `<li><span>${k}</span><strong>${v}</strong></li>`).join("");
+      $("mDesc").textContent = h.d;
+      $("showing").hidden = h.s === "sold";
+      sDay = 0; renderSDays(); $("sOk").hidden = true; $("sErr").textContent = ""; $("sBtn").hidden = false;
+      modal.hidden = false; requestAnimationFrame(() => modal.classList.add("open")); document.body.style.overflow = "hidden"; $("mClose").focus();
+    }
+    function renderSDays() { $("sDays").innerHTML = sDays.map((x, k) => `<button class="${k === sDay ? "on" : ""}" data-k="${k}"><span>${x.toLocaleDateString("en-US", { weekday: "short" })}</span><strong>${x.getDate()}</strong></button>`).join(""); }
+    function closeHome() { modal.classList.remove("open"); document.body.style.overflow = ""; setTimeout(() => (modal.hidden = true), 200); }
+    $("grid").addEventListener("click", (e) => { const c = e.target.closest(".home"); if (c) openHome(+c.dataset.i); });
+    $("grid").addEventListener("keydown", (e) => { const c = e.target.closest(".home"); if (c && e.key === "Enter") openHome(+c.dataset.i); });
+    $("mThumbs").addEventListener("click", (e) => { const b = e.target.closest("[data-m]"); if (!b) return; $("mMain").src = U(b.dataset.m, 1200); $("mThumbs").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); });
+    $("sDays").addEventListener("click", (e) => { const b = e.target.closest("[data-k]"); if (b) { sDay = +b.dataset.k; renderSDays(); } });
+    $("sBtn").addEventListener("click", () => {
+      const n = $("sName").value.trim(), p = $("sPhone").value.replace(/\D/g, "");
+      if (!n || p.length < 7) { $("sErr").textContent = "Please add your name and a phone number."; return; }
+      $("sErr").textContent = "";
+      $("sOk").textContent = `Thanks ${n.split(" ")[0]}. Showing requested for ${sDays[sDay].toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at ${$("sTime").value}. Hannah will text you to confirm.`;
+      $("sOk").hidden = false; $("sBtn").hidden = true;
+    });
+    $("mClose").addEventListener("click", closeHome);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeHome(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) closeHome(); });
+
+    /* Forms */
+    function check(f, rules, errEl) {
+      f.querySelectorAll(".bad").forEach((x) => x.classList.remove("bad"));
+      const errs = rules.filter(([name, test]) => !test(f[name].value.trim())).map(([name, , label]) => { f[name].classList.add("bad"); return label; });
+      $(errEl).textContent = errs.length ? `Please add ${errs.join(", ")}.` : "";
+      return !errs.length;
+    }
+    $("valForm").addEventListener("submit", (e) => {
+      e.preventDefault(); const f = e.target;
+      if (!check(f, [["address", (v) => v.length > 5, "the property address"], ["name", (v) => !!v, "your name"], ["contact", (v) => v.length > 5, "a phone number or email"]], "valErr")) return;
+      $("valOk").textContent = `Thanks ${f.name.value.trim().split(" ")[0]}. I'll prepare a valuation for ${f.address.value.trim()} and be in touch within 48 hours.`;
+      $("valOk").hidden = false; f.reset();
+    });
+    $("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault(); const f = e.target;
+      if (!check(f, [["name", (v) => !!v, "your name"], ["email", (v) => /^\S+@\S+\.\S+$/.test(v), "a valid email"]], "cErr")) return;
+      $("cOk").textContent = `Thanks ${f.name.value.trim().split(" ")[0]}, your message is in. I'll reply today.`;
+      $("cOk").hidden = false; f.reset();
+    });
+
+    /* Header */
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 30), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-hannah/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

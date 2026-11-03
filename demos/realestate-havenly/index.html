@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Havenly — Miami Homes for Sale and Rent</title>
+  <meta name="description" content="Havenly is a Miami real estate brokerage. Search homes for sale and rent across Brickell, Coconut Grove, Coral Gables, Key Biscayne and Miami Beach, book tours and get a free home valuation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#top" class="logo" aria-label="Havenly home"><span class="logo__mark"><i class="ri-home-4-fill"></i></span>Havenly</a>
+      <nav class="nav" id="nav">
+        <a href="#search">Buy</a>
+        <a href="#search" data-mode="rent">Rent</a>
+        <a href="#areas">Neighborhoods</a>
+        <a href="#sell">Sell</a>
+        <a href="#agents">Agents</a>
+      </nav>
+      <button class="saved" id="savedBtn" aria-label="Saved homes"><i class="ri-heart-3-line"></i><b id="savedCount">0</b></button>
+      <a href="tel:+13055550172" class="header__tel"><i class="ri-phone-line"></i> (305) 555-0172</a>
+      <a href="#sell" class="btn btn--sm">Get a valuation</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero + search -->
+    <section class="hero">
+      <img class="hero__bg" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2200&q=80" alt="" />
+      <div class="container hero__in">
+        <p class="over over--light hero__fade">Miami-Dade's independent brokerage · since 2006</p>
+        <h1 class="hero__title"><span class="line"><span>Find a home that</span></span><span class="line"><span><em>fits</em> the way you live.</span></span></h1>
+        <form class="search hero__fade" id="search" role="search">
+          <div class="search__tabs" role="tablist" aria-label="Buy or rent"><button type="button" class="on" data-m="buy">Buy</button><button type="button" data-m="rent">Rent</button></div>
+          <div class="search__row">
+            <label class="f"><span>Neighborhood</span><select id="sArea"></select></label>
+            <label class="f"><span>Property type</span><select id="sType"><option value="">Any type</option><option>House</option><option>Villa</option><option>Condo</option><option>Loft</option></select></label>
+            <label class="f"><span>Bedrooms</span><select id="sBeds"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></label>
+            <label class="f"><span>Max price</span><select id="sMax"></select></label>
+            <button class="btn" type="submit"><i class="ri-search-line"></i> Search</button>
+          </div>
+        </form>
+        <ul class="hero__facts hero__fade"><li><b>2,600+</b> verified listings</li><li><b>48 h</b> average to book a tour</li><li><b>4.9</b> rating on 1,100 reviews</li></ul>
+      </div>
+    </section>
+
+    <!-- Results: grid + map -->
+    <section class="section results" id="results">
+      <div class="container">
+        <div class="bar">
+          <div><h2 class="bar__title" id="resTitle">Homes for sale in Miami</h2><p id="resCount"></p></div>
+          <div class="bar__tools">
+            <div class="chips" id="quick"><button type="button" data-q="pool">Pool</button><button type="button" data-q="water">Waterfront</button><button type="button" data-q="new">New listing</button></div>
+            <label class="sort">Sort <select id="sort"><option value="new">Newest</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="size">Largest</option></select></label>
+          </div>
+        </div>
+        <div class="res">
+          <div class="grid" id="grid"></div>
+          <div class="map" id="map" aria-label="Map of results">
+            <svg viewBox="0 0 400 520" class="map__svg" aria-hidden="true">
+              <rect width="400" height="520" fill="#d9e8f1"/>
+              <path d="M0 0 H250 C 240 60 252 120 236 170 C 222 220 236 260 222 310 C 208 360 222 410 206 460 L 190 520 H0Z" fill="#f4f1ea"/>
+              <path d="M290 40 C 300 120 296 200 304 280 C 312 360 302 430 312 520 H334 C 324 430 334 360 326 280 C 318 200 322 120 312 40Z" fill="#f4f1ea"/>
+              <path d="M262 380 C 280 372 296 392 290 420 C 284 446 262 452 254 436 C 246 418 248 388 262 380Z" fill="#f4f1ea"/>
+              <g stroke="#e3ddcf" stroke-width="2" fill="none"><path d="M20 0 V520 M80 0 V520 M140 0 V520 M200 0 V480 M0 90 H240 M0 170 H236 M0 250 H230 M0 330 H220 M0 410 H210"/></g>
+              <path d="M236 150 C 260 150 280 140 300 146" stroke="#c7b998" stroke-width="3" fill="none"/>
+              <g class="map__lbl"><text x="150" y="112">Wynwood</text><text x="176" y="196">Brickell</text><text x="112" y="300">Coconut Grove</text><text x="40" y="236">Coral Gables</text><text x="30" y="420">Pinecrest</text><text x="300" y="100">Miami Beach</text><text x="262" y="474">Key Biscayne</text><text x="60" y="40">Miami Shores</text></g>
+              <text x="262" y="270" class="map__water">Biscayne Bay</text>
+            </svg>
+            <div class="pins" id="pins"></div>
+            <p class="map__note"><i class="ri-cursor-line"></i> Hover a home to find it on the map</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="section areas-sec" id="areas">
+      <div class="container">
+        <div class="head"><div><span class="over">Neighborhood guides</span><h2>Where in Miami <em>should you live?</em></h2></div><p class="head__p">Median prices and what locals love, updated monthly from closed sales. Tap one to see what's for sale there.</p></div>
+        <div class="areas" id="areaList"></div>
+      </div>
+    </section>
+
+    <!-- Sell: valuation wizard -->
+    <section class="section sell" id="sell">
+      <div class="container sell__in">
+        <div class="sell__copy">
+          <span class="over over--light">Selling?</span>
+          <h2>What's your home <em>worth today?</em></h2>
+          <p>Answer four quick questions for an instant estimate based on recent sales nearby. A local agent then visits within 48 hours to give you an exact figure, free and with no obligation.</p>
+          <ul class="sell__list"><li><i class="ri-checkbox-circle-fill"></i>Average 9 days on market</li><li><i class="ri-checkbox-circle-fill"></i>Professional photos, video and floor plan included</li><li><i class="ri-checkbox-circle-fill"></i>2.5% fee, only when you sell</li></ul>
+        </div>
+        <form class="val" id="val" novalidate>
+          <div class="val__steps"><span class="on">1</span><span>2</span><span>3</span><span>4</span><i id="valBar"></i></div>
+          <div class="val__panes" id="valPanes">
+            <fieldset class="pane on"><legend>Where is the home?</legend><div class="opts" data-k="area"></div></fieldset>
+            <fieldset class="pane"><legend>What kind of home?</legend><div class="opts" data-k="type"><button type="button">House</button><button type="button">Villa</button><button type="button">Condo</button><button type="button">Townhouse</button></div><legend class="sub">Bedrooms</legend><div class="opts" data-k="beds"><button type="button">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5+</button></div></fieldset>
+            <fieldset class="pane"><legend>Roughly how big?</legend><div class="opts" data-k="size"><button type="button" data-v="900">Under 1,200 sqft</button><button type="button" data-v="1600">1,200 – 2,000</button><button type="button" data-v="2600">2,000 – 3,200</button><button type="button" data-v="4200">3,200 – 5,000</button><button type="button" data-v="6000">5,000+</button></div><legend class="sub">Condition</legend><div class="opts" data-k="cond"><button type="button" data-v=".9">Needs work</button><button type="button" data-v="1">Good</button><button type="button" data-v="1.12">Renovated</button></div></fieldset>
+            <fieldset class="pane"><legend>Your estimate</legend><div class="est" id="est"></div><div class="row"><input id="vName" placeholder="Your name" aria-label="Your name" /><input id="vPhone" type="tel" placeholder="Phone" aria-label="Phone" /></div><button class="btn btn--gold btn--full" type="submit">Book a free in-home valuation</button><p class="form-msg" id="vMsg"></p></fieldset>
+          </div>
+          <div class="val__nav"><button type="button" class="link" id="valBack" disabled><i class="ri-arrow-left-line"></i> Back</button><button type="button" class="btn btn--sm" id="valNext" disabled>Next <i class="ri-arrow-right-line"></i></button></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Agents -->
+    <section class="section" id="agents">
+      <div class="container">
+        <div class="head"><div><span class="over">Our team</span><h2>Local experts, <em>not call centres.</em></h2></div></div>
+        <div class="agents" id="agentList"></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews-sec">
+      <div class="container reviews" id="reviews"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#top" class="logo logo--light"><span class="logo__mark"><i class="ri-home-4-fill"></i></span>Havenly</a><p>Licensed real estate brokerage serving Miami-Dade since 2006. Equal Housing Opportunity.</p></div>
+        <div><h4>Search</h4><a href="#search">Homes for sale</a><a href="#search" data-mode="rent">Homes for rent</a><a href="#areas">Neighborhoods</a><a href="#results">New listings</a></div>
+        <div><h4>Company</h4><a href="#agents">Agents</a><a href="#sell">Sell with us</a><a href="#">Careers</a><a href="#">Blog</a></div>
+        <div><h4>Office</h4><p>1450 Brickell Ave, Suite 1100<br />Miami, FL 33131</p><p>(305) 555-0172</p><p>hello@havenly.com</p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Havenly Realty LLC · Licensed Real Estate Broker, Florida</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></div></div>
+    </div>
+  </footer>
+
+  <!-- Listing modal -->
+  <div class="modal" id="modal" hidden>
+    <article class="lst" role="dialog" aria-modal="true" aria-labelledby="lTitle">
+      <button class="lst__close" id="lClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="lBody"></div>
+    </article>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
+    const short = (n) => (n >= 1e6 ? "$" + (Math.round(n / 1e4) / 100) + "M" : n >= 1e3 ? "$" + (Math.round(n / 100) / 10) + "k" : "$" + n);
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2600); };
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const AREAS = {
+      "Key Biscayne": { x: 69, y: 88, median: 2950000, rent: 9800, img: "1613490493576-7fde63acd811", note: "Island living, quiet beaches, top-rated school." },
+      "Miami Beach": { x: 79, y: 22, median: 1650000, rent: 6200, img: "1580587771525-78b9dba3b914", note: "Art deco streets, ocean on one side, bay on the other." },
+      "Coral Gables": { x: 18, y: 45, median: 1880000, rent: 7400, img: "1564013799919-ab600027ffc6", note: "Tree-lined avenues and Mediterranean revival homes." },
+      "Coconut Grove": { x: 40, y: 59, median: 1420000, rent: 5900, img: "1512917774080-9991f1c4c750", note: "Leafy, walkable and right on the bay." },
+      Brickell: { x: 47, y: 36, median: 690000, rent: 4100, img: "1545324418-cc1a3fa10c00", note: "High-rise condos, offices and restaurants." },
+      Wynwood: { x: 42, y: 20, median: 560000, rent: 3400, img: "1502672260266-1c1ef2d93688", note: "Murals, galleries and converted warehouses." },
+      Pinecrest: { x: 14, y: 80, median: 2200000, rent: 8800, img: "1600585154340-be6161a56a0c", note: "Big lots, gardens and some of Miami's best schools." },
+      "Miami Shores": { x: 22, y: 7, median: 1050000, rent: 5200, img: "1600047509807-ba8f99d2cdde", note: "A village feel ten minutes from downtown." },
+    };
+    const L = [
+      { id: 1, mode: "buy", t: "Oceanview Modern Villa", area: "Key Biscayne", type: "Villa", price: 4250000, beds: 5, baths: 6, sqft: 5400, year: 2021, img: ["1613490493576-7fde63acd811", "1600573472550-8090b5e0745e", "1600210492486-724fe5c67fb0"], tags: ["pool", "water"], days: 3, desc: "Floor-to-ceiling glass on three sides, a 60-foot infinity pool and a private dock on the bay side of the island." },
+      { id: 2, mode: "buy", t: "Bay House on Sunset Islands", area: "Miami Beach", type: "Villa", price: 3180000, beds: 4, baths: 5, sqft: 4100, year: 2019, img: ["1580587771525-78b9dba3b914", "1600566753086-00f18fb6b3ea", "1556912173-46c336c7fd55"], tags: ["pool", "water"], days: 12, desc: "A two-storey modern home with a rooftop terrace, saltwater pool and 75 feet of seawall." },
+      { id: 3, mode: "buy", t: "Coral Gables Colonial", area: "Coral Gables", type: "House", price: 2750000, beds: 5, baths: 4, sqft: 4600, year: 1948, img: ["1564013799919-ab600027ffc6", "1560185007-cde436f6a4d0", "1560448204-e02f11c3d0e2"], tags: ["pool"], days: 6, desc: "A restored 1948 colonial on a half-acre lot with wraparound porches and a heated pool." },
+      { id: 4, mode: "buy", t: "Glass Pool House", area: "Coconut Grove", type: "House", price: 1890000, beds: 4, baths: 3, sqft: 3200, year: 2017, img: ["1512917774080-9991f1c4c750", "1600566753086-00f18fb6b3ea", "1484154218962-a197022b5858"], tags: ["pool", "new"], days: 1, desc: "Open-plan living that slides open onto a lap pool, three blocks from the Grove's cafés." },
+      { id: 5, mode: "buy", t: "White Cube Residence", area: "Miami Beach", type: "Villa", price: 2390000, beds: 4, baths: 4, sqft: 3600, year: 2022, img: ["1600596542815-ffad4c1539a9", "1600210492486-724fe5c67fb0", "1556912173-46c336c7fd55"], tags: ["pool", "new"], days: 2, desc: "Brand-new build with a roof deck, summer kitchen and smart-home everything." },
+      { id: 6, mode: "buy", t: "Craftsman Bungalow", area: "Coconut Grove", type: "House", price: 1240000, beds: 3, baths: 2, sqft: 2100, year: 1936, img: ["1583608205776-bfd35f0d9f83", "1560185007-cde436f6a4d0", "1484154218962-a197022b5858"], tags: [], days: 21, desc: "Original oak floors, a deep front porch and a lush garden with mango and avocado trees." },
+      { id: 7, mode: "buy", t: "Sky Residence 2104", area: "Brickell", type: "Condo", price: 1350000, beds: 2, baths: 2, sqft: 1450, year: 2018, img: ["1545324418-cc1a3fa10c00", "1560448204-e02f11c3d0e2", "1556912173-46c336c7fd55"], tags: ["water"], days: 9, desc: "21st-floor corner unit with bay views, a 300 sqft balcony and a 24-hour concierge." },
+      { id: 8, mode: "buy", t: "Timber House", area: "Pinecrest", type: "House", price: 2980000, beds: 5, baths: 5, sqft: 5100, year: 2020, img: ["1600585154340-be6161a56a0c", "1600210492486-724fe5c67fb0", "1560185007-cde436f6a4d0"], tags: ["pool"], days: 15, desc: "Architect-designed in cedar and glass on a one-acre lot with a 75-foot pool." },
+      { id: 9, mode: "buy", t: "Modern Duplex", area: "Miami Shores", type: "House", price: 1150000, beds: 3, baths: 3, sqft: 2400, year: 2016, img: ["1600047509807-ba8f99d2cdde", "1567767292278-a4f21aa2d36e", "1484154218962-a197022b5858"], tags: ["new"], days: 4, desc: "A crisp two-storey home with a garage, private garden and a home office." },
+      { id: 10, mode: "rent", t: "Edgewater Bay Condo", area: "Brickell", type: "Condo", price: 4800, beds: 2, baths: 2, sqft: 1200, year: 2019, img: ["1567767292278-a4f21aa2d36e", "1560448204-e02f11c3d0e2", "1556912173-46c336c7fd55"], tags: ["water", "new"], days: 2, desc: "Bright two-bed with bay views, pool and gym in the building. 12-month lease." },
+      { id: 11, mode: "rent", t: "Wynwood Loft", area: "Wynwood", type: "Loft", price: 3600, beds: 1, baths: 1, sqft: 980, year: 1962, img: ["1502672260266-1c1ef2d93688", "1502005229762-cf1b2da7c5d6", "1484154218962-a197022b5858"], tags: [], days: 5, desc: "Converted warehouse loft with 16-foot ceilings, steps from the galleries." },
+      { id: 12, mode: "rent", t: "Coral Way Family Home", area: "Coral Gables", type: "House", price: 9500, beds: 4, baths: 3, sqft: 3100, year: 1955, img: ["1570129477492-45c003edd2be", "1560185007-cde436f6a4d0", "1556912173-46c336c7fd55"], tags: ["pool"], days: 8, desc: "Classic family home with a pool, big garden and two-car garage. Pets welcome." },
+      { id: 13, mode: "rent", t: "Grove Garden Villa", area: "Coconut Grove", type: "Villa", price: 12000, beds: 4, baths: 4, sqft: 3400, year: 2015, img: ["1564013799919-ab600027ffc6", "1600566753086-00f18fb6b3ea", "1560448204-e02f11c3d0e2"], tags: ["pool", "new"], days: 1, desc: "Furnished villa with a pool and outdoor kitchen, available from January." },
+    ];
+    const AGENTS = [["Michael Torres", "Waterfront & luxury", "1560250097-0b93528c311a", 120], ["Rebecca Stone", "Brickell & Downtown", "1573496359142-b8d87734a5a2", 98], ["David Okafor", "Rentals", "1507003211169-0a1dd7228f2d", 210], ["Sofia Marín", "Coral Gables & Pinecrest", "1438761681033-6461ffad8d80", 84]];
+    const REVIEWS = [["Rebecca found us a Brickell condo in eleven days, and negotiated $40k off. She answered texts at 10pm.", "Laura & James K.", "Bought in Brickell"], ["We listed with Havenly on a Monday and had three offers by Friday. The video tour did the work.", "Carlos M.", "Sold in Coral Gables"], ["Moving from Chicago sight-unseen was scary. David did live video viewings of six apartments in one afternoon.", "Priya S.", "Rented in Wynwood"]];
+
+    /* =====================================================
+       Search state
+       ===================================================== */
+    const S = { mode: "buy", area: "", type: "", beds: 0, max: 0, quick: new Set(), sort: "new" };
+    const MAXES = { buy: [0, 750000, 1000000, 1500000, 2000000, 3000000, 5000000], rent: [0, 3500, 5000, 7500, 10000, 15000] };
+    let saved = new Set(); try { saved = new Set(JSON.parse(localStorage.getItem("havenlySaved") || "[]")); } catch (e) {}
+    const fillSelects = () => {
+      $("sArea").innerHTML = `<option value="">All of Miami</option>` + Object.keys(AREAS).map((a) => `<option ${a === S.area ? "selected" : ""}>${a}</option>`).join("");
+      $("sMax").innerHTML = MAXES[S.mode].map((m) => `<option value="${m}" ${m === S.max ? "selected" : ""}>${m ? (S.mode === "rent" ? usd(m) + "/mo" : short(m)) : "No max"}</option>`).join("");
+      document.querySelectorAll(".search__tabs button").forEach((b) => b.classList.toggle("on", b.dataset.m === S.mode));
+    };
+    const results = () => {
+      const r = L.filter((l) => l.mode === S.mode && (!S.area || l.area === S.area) && (!S.type || l.type === S.type) && l.beds >= S.beds && (!S.max || l.price <= S.max) && [...S.quick].every((q) => (q === "new" ? l.days <= 7 : l.tags.includes(q))));
+      r.sort((a, b) => (S.sort === "low" ? a.price - b.price : S.sort === "high" ? b.price - a.price : S.sort === "size" ? b.sqft - a.sqft : a.days - b.days));
+      return r;
+    };
+    const priceLabel = (l) => (l.mode === "rent" ? `${usd(l.price)}<small>/mo</small>` : usd(l.price));
+    const render = () => {
+      const r = results();
+      $("resTitle").textContent = `Homes for ${S.mode === "rent" ? "rent" : "sale"} in ${S.area || "Miami"}`;
+      $("resCount").textContent = `${r.length} ${r.length === 1 ? "home matches" : "homes match"} your search`;
+      $("grid").innerHTML = r.length ? r.map((l, i) => `
+        <article class="card" data-id="${l.id}" style="--d:${i * 0.05}s">
+          <button class="card__img" data-open="${l.id}" aria-label="Open ${l.t}"><img src="${U(l.img[0], 800)}" alt="${l.t}" loading="lazy" />${l.days <= 3 ? `<span class="tag tag--new">New · ${l.days}d ago</span>` : ""}<span class="tag tag--type">${l.type}</span></button>
+          <button class="fav ${saved.has(l.id) ? "on" : ""}" data-fav="${l.id}" aria-label="Save ${l.t}"><i class="ri-heart-3-${saved.has(l.id) ? "fill" : "line"}"></i></button>
+          <div class="card__body"><p class="card__price">${priceLabel(l)}</p><h3>${l.t}</h3><p class="card__area"><i class="ri-map-pin-line"></i>${l.area}</p>
+          <ul class="card__facts"><li><i class="ri-hotel-bed-line"></i>${l.beds} bd</li><li><i class="ri-drop-line"></i>${l.baths} ba</li><li><i class="ri-ruler-2-line"></i>${l.sqft.toLocaleString()} sqft</li></ul></div>
+        </article>`).join("") : `<div class="empty"><i class="ri-home-smile-line"></i><b>No homes match yet</b><p>Try a higher budget or another neighborhood.</p><button class="btn btn--sm" id="reset">Clear filters</button></div>`;
+      $("pins").innerHTML = r.map((l) => { const a = AREAS[l.area], j = (l.id % 5) * 2.2 - 4; return `<button class="pin" data-pin="${l.id}" style="left:${a.x + j}%;top:${a.y + ((l.id * 7) % 5) - 2}%">${short(l.price)}</button>`; }).join("");
+      $("quick").querySelectorAll("button").forEach((b) => b.classList.toggle("on", S.quick.has(b.dataset.q)));
+      $("savedCount").textContent = saved.size; $("savedCount").classList.toggle("on", saved.size > 0);
+      $("reset")?.addEventListener("click", () => { Object.assign(S, { area: "", type: "", beds: 0, max: 0 }); S.quick.clear(); $("sType").value = ""; $("sBeds").value = "0"; fillSelects(); render(); });
+    };
+    const clearHl = () => document.querySelectorAll(".pin.on, .card.hl").forEach((x) => x.classList.remove("on", "hl"));
+    const hl = (id) => { clearHl(); document.querySelector(`.pin[data-pin="${id}"]`)?.classList.add("on"); document.querySelector(`.card[data-id="${id}"]`)?.classList.add("hl"); };
+    $("grid").addEventListener("pointerover", (e) => { const c = e.target.closest(".card"); if (c) hl(c.dataset.id); });
+    $("pins").addEventListener("pointerover", (e) => { const p = e.target.closest(".pin"); if (p) hl(p.dataset.pin); });
+    $("pins").addEventListener("click", (e) => { const p = e.target.closest(".pin"); if (p) openListing(+p.dataset.pin); });
+    $("search").addEventListener("submit", (e) => { e.preventDefault(); S.area = $("sArea").value; S.type = $("sType").value; S.beds = +$("sBeds").value; S.max = +$("sMax").value; render(); $("results").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+    document.querySelector(".search__tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.mode = b.dataset.m; S.max = 0; fillSelects(); render(); });
+    document.querySelectorAll("[data-mode]").forEach((a) => a.addEventListener("click", () => { S.mode = a.dataset.mode; S.max = 0; fillSelects(); render(); }));
+    document.querySelectorAll('.nav a[href="#search"]:not([data-mode])').forEach((a) => a.addEventListener("click", () => { S.mode = "buy"; fillSelects(); render(); }));
+    $("quick").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.quick.has(b.dataset.q) ? S.quick.delete(b.dataset.q) : S.quick.add(b.dataset.q); render(); });
+    $("sort").addEventListener("change", (e) => { S.sort = e.target.value; render(); });
+    document.addEventListener("click", (e) => {
+      const f = e.target.closest("[data-fav]");
+      if (f) { const id = +f.dataset.fav; saved.has(id) ? saved.delete(id) : saved.add(id); try { localStorage.setItem("havenlySaved", JSON.stringify([...saved])); } catch (err) {} toast(saved.has(id) ? "Saved to your homes" : "Removed from saved"); render(); if (!$("modal").hidden) openListing(id); return; }
+      const o = e.target.closest("[data-open]"); if (o) openListing(+o.dataset.open);
+    });
+    $("savedBtn").addEventListener("click", () => {
+      if (!saved.size) return toast("Tap the heart on any home to save it");
+      const first = L.find((l) => saved.has(l.id)); S.mode = first.mode; S.area = ""; S.quick.clear(); fillSelects(); render();
+      $("results").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); toast(`${saved.size} saved home${saved.size > 1 ? "s" : ""}, marked with a heart`);
+    });
+
+    /* =====================================================
+       Listing detail
+       ===================================================== */
+    const monthly = (price, downPct, years) => { const loan = price * (1 - downPct), r = 0.0645 / 12, n = years * 12, pi = (loan * r) / (1 - Math.pow(1 + r, -n)), tax = (price * 0.019) / 12, ins = (price * 0.006) / 12; return { pi, tax, ins, total: pi + tax + ins }; };
+    function openListing(id) {
+      const l = L.find((x) => x.id === id); let gi = 0, down = 0.2, years = 30, day = 0, time = "";
+      const days = []; const d0 = new Date(); for (let i = 1; days.length < 5; i++) { const d = new Date(d0); d.setDate(d0.getDate() + i); days.push(d); }
+      const draw = () => {
+        const m = l.mode === "buy" ? monthly(l.price, down, years) : null;
+        $("lBody").innerHTML = `
+          <div class="lst__gal">${l.img.map((im, i) => `<img src="${U(im, 1600)}" alt="${l.t}" class="${i === gi ? "on" : ""}" />`).join("")}
+            <div class="lst__dots">${l.img.map((_, i) => `<button class="${i === gi ? "on" : ""}" data-gi="${i}" aria-label="Photo ${i + 1}"></button>`).join("")}</div>
+            <button class="lst__arrow lst__arrow--l" data-step="-1" aria-label="Previous photo"><i class="ri-arrow-left-s-line"></i></button><button class="lst__arrow lst__arrow--r" data-step="1" aria-label="Next photo"><i class="ri-arrow-right-s-line"></i></button></div>
+          <div class="lst__in">
+            <div class="lst__main">
+              <p class="lst__price">${priceLabel(l)}</p>
+              <h3 id="lTitle">${l.t}</h3>
+              <p class="lst__area"><i class="ri-map-pin-line"></i>${l.area}, Miami, FL · listed ${l.days} day${l.days > 1 ? "s" : ""} ago</p>
+              <ul class="lst__facts"><li><b>${l.beds}</b>Beds</li><li><b>${l.baths}</b>Baths</li><li><b>${l.sqft.toLocaleString()}</b>Sqft</li><li><b>${l.year}</b>Built</li>${l.mode === "buy" ? `<li><b>${usd(l.price / l.sqft)}</b>Per sqft</li>` : ""}</ul>
+              <p class="lst__desc">${l.desc}</p>
+              <p class="lst__feat">${["Central A/C", "Impact windows", l.tags.includes("pool") ? "Private pool" : "Shared pool", l.tags.includes("water") ? "Waterfront" : "Garden", "Parking for 2", "Laundry in unit"].map((f) => `<span><i class="ri-check-line"></i>${f}</span>`).join("")}</p>
+              ${m ? `<div class="mort"><h4>Estimated monthly cost</h4>
+                <div class="mort__ctrl"><span>Down payment</span>${[0.1, 0.2, 0.3].map((p) => `<button class="${p === down ? "on" : ""}" data-down="${p}">${Math.round(p * 100)}%</button>`).join("")}<span>Term</span>${[15, 30].map((y) => `<button class="${y === years ? "on" : ""}" data-years="${y}">${y} yr</button>`).join("")}</div>
+                <div class="mort__out"><b>${usd(m.total)}<small>/mo</small></b><div class="mort__bar"><i style="flex:${m.pi}" class="a"></i><i style="flex:${m.tax}" class="b"></i><i style="flex:${m.ins}" class="c"></i></div>
+                <p><span><i class="a"></i>Principal &amp; interest ${usd(m.pi)}</span><span><i class="b"></i>Property tax ${usd(m.tax)}</span><span><i class="c"></i>Insurance ${usd(m.ins)}</span></p><small>Based on 6.45% fixed with ${usd(l.price * down)} down. Your rate may differ.</small></div></div>` : ""}
+            </div>
+            <aside class="tour">
+              <h4>Book a tour</h4>
+              <div class="tour__days">${days.map((d, i) => `<button class="${i === day ? "on" : ""}" data-day="${i}"><small>${d.toLocaleDateString("en-US", { weekday: "short" })}</small>${d.getDate()}</button>`).join("")}</div>
+              <div class="tour__times">${["10:00", "11:30", "13:00", "15:30", "17:00"].map((t, i) => `<button class="${t === time ? "on" : ""}" data-time="${t}" ${(i + day + id) % 4 === 0 ? "disabled" : ""}>${t}</button>`).join("")}</div>
+              <div class="tour__mode"><label><input type="radio" name="tm" checked /> In person</label><label><input type="radio" name="tm" /> Video call</label></div>
+              <button class="btn btn--full" id="tourBtn">Request tour</button>
+              <button class="btn btn--line btn--full" data-fav="${l.id}"><i class="ri-heart-3-${saved.has(l.id) ? "fill" : "line"}"></i> ${saved.has(l.id) ? "Saved" : "Save home"}</button>
+              <div class="tour__agent"><img src="${U(AGENTS[id % 4][2], 160)}" alt="" /><div><b>${AGENTS[id % 4][0]}</b><span>Listing agent · replies in about an hour</span></div></div>
+            </aside>
+          </div>`;
+        const on = (sel, fn) => $("lBody").querySelectorAll(sel).forEach((b) => b.addEventListener("click", () => { fn(b); draw(); }));
+        on("[data-gi]", (b) => (gi = +b.dataset.gi));
+        on("[data-step]", (b) => (gi = (gi + +b.dataset.step + l.img.length) % l.img.length));
+        on("[data-down]", (b) => (down = +b.dataset.down));
+        on("[data-years]", (b) => (years = +b.dataset.years));
+        on("[data-day]", (b) => { day = +b.dataset.day; time = ""; });
+        on("[data-time]", (b) => (time = b.dataset.time));
+        $("tourBtn").addEventListener("click", () => { if (!time) return toast("Pick a time first"); toast(`Tour requested: ${days[day].toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })} at ${time}`); closeListing(); });
+      };
+      draw(); $("modal").hidden = false; document.querySelector(".lst").scrollTop = 0; document.body.style.overflow = "hidden"; $("lClose").focus();
+    }
+    const closeListing = () => { $("modal").hidden = true; document.body.style.overflow = ""; };
+    $("lClose").addEventListener("click", closeListing);
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeListing(); });
+
+    /* =====================================================
+       Neighborhoods
+       ===================================================== */
+    $("areaList").innerHTML = Object.entries(AREAS).map(([n, a], i) => { const count = L.filter((l) => l.area === n).length; return `<button class="area reveal" data-area="${n}" style="--d:${(i % 4) * 0.06}s"><span class="area__img"><img src="${U(a.img, 700)}" alt="" loading="lazy" /></span><span class="area__body"><b>${n}</b><small>${a.note}</small><span class="area__stats"><span><em>${short(a.median)}</em>median sale</span><span><em>${usd(a.rent)}</em>median rent</span></span><span class="area__go">${count} listing${count === 1 ? "" : "s"} <i class="ri-arrow-right-line"></i></span></span></button>`; }).join("");
+    $("areaList").addEventListener("click", (e) => { const b = e.target.closest(".area"); if (!b) return; S.area = b.dataset.area; fillSelects(); render(); $("results").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
+
+    /* =====================================================
+       Valuation wizard
+       ===================================================== */
+    const V = {}; let vs = 0;
+    document.querySelector('.opts[data-k="area"]').innerHTML = Object.keys(AREAS).map((a) => `<button type="button">${a}</button>`).join("");
+    const panes = [...document.querySelectorAll(".pane")], need = [["area"], ["type", "beds"], ["size", "cond"]];
+    const vRender = () => {
+      panes.forEach((p, i) => p.classList.toggle("on", i === vs));
+      document.querySelectorAll(".val__steps span").forEach((s, i) => s.classList.toggle("on", i <= vs));
+      $("valBar").style.width = (vs / 3) * 100 + "%";
+      $("valBack").disabled = vs === 0;
+      $("valNext").style.visibility = vs === 3 ? "hidden" : "visible";
+      $("valNext").disabled = vs < 3 && !need[vs].every((k) => V[k] !== undefined);
+      if (vs === 3) {
+        const a = AREAS[V.area], perSqft = a.median / (V.type === "Condo" ? 1300 : 3200), base = perSqft * +V.size * +V.cond * (V.type === "Villa" ? 1.12 : V.type === "Condo" ? 1.05 : 1);
+        const comps = L.filter((l) => l.mode === "buy" && l.area === V.area).slice(0, 2);
+        $("est").innerHTML = `<p>Estimated value of your ${V.beds}-bed ${V.type.toLowerCase()} in ${V.area}</p><b>${short(base * 0.93)} – ${short(base * 1.07)}</b><span>Most likely <em>${usd(Math.round(base / 5000) * 5000)}</em></span>${comps.length ? `<div class="est__comps"><small>Recent nearby</small>${comps.map((c) => `<span><img src="${U(c.img[0], 120)}" alt="" />${c.t}<em>${short(c.price)}</em></span>`).join("")}</div>` : ""}`;
+      }
+    };
+    document.querySelectorAll(".val .opts").forEach((g) => g.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; g.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); V[g.dataset.k] = b.dataset.v ?? b.textContent; vRender(); }));
+    $("valNext").addEventListener("click", () => { vs = Math.min(3, vs + 1); vRender(); });
+    $("valBack").addEventListener("click", () => { vs = Math.max(0, vs - 1); vRender(); });
+    $("val").addEventListener("submit", (e) => { e.preventDefault(); const n = $("vName").value.trim(), p = $("vPhone").value.trim(), m = $("vMsg"); if (!n || p.replace(/\D/g, "").length < 7) { m.textContent = "Please add your name and phone number."; m.className = "form-msg err"; return; } m.textContent = `Thanks ${n.split(" ")[0]}! A ${V.area} specialist will call you today to arrange the visit.`; m.className = "form-msg ok"; });
+    vRender();
+
+    /* Agents + reviews */
+    $("agentList").innerHTML = AGENTS.map(([n, r, img, s], i) => `<article class="agent reveal" style="--d:${i * 0.07}s"><span class="agent__img"><img src="${U(img, 600)}" alt="${n}" loading="lazy" /></span><h3>${n}</h3><p>${r}</p><small>${s} homes sold or let</small><div class="agent__links"><a href="#" aria-label="Call ${n}"><i class="ri-phone-line"></i></a><a href="#" aria-label="Email ${n}"><i class="ri-mail-line"></i></a><a href="#" aria-label="WhatsApp ${n}"><i class="ri-whatsapp-line"></i></a></div></article>`).join("");
+    $("reviews").innerHTML = REVIEWS.map(([q, n, s], i) => `<figure class="rev reveal" style="--d:${i * 0.08}s"><div class="stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div><blockquote>${q}</blockquote><figcaption><b>${n}</b>${s}</figcaption></figure>`).join("");
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeListing(); closeNav(); } });
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 40), { passive: true });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .head, .sell__copy, .val").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+    fillSelects(); render();
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/realestate-havenly/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

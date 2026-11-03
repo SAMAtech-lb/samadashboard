@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kessler Motors — Certified Pre-Owned Cars in Dbayeh</title>
+  <meta name="description" content="Kessler Motors sells inspected, certified pre-owned cars with a 12-month warranty. Browse 18 cars in stock, book a test drive, sell or trade in your car, and service it in our workshop." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__k">K</span><span>Kessler<b>Motors</b></span></a>
+      <nav class="nav" id="nav">
+        <a href="#stock">Cars in stock</a>
+        <a href="#sell">Sell your car</a>
+        <a href="#service">Service</a>
+        <a href="#certified">Why Kessler</a>
+        <a href="#visit">Visit us</a>
+      </nav>
+      <a href="tel:+9614555214" class="header__phone"><i class="ri-phone-line"></i><span><small>Call or WhatsApp</small>+961 4 555 214</span></a>
+      <button class="saved-btn" id="savedBtn" aria-label="Saved cars"><i class="ri-heart-line"></i><span id="savedCount">0</span></button>
+      <a href="#visit" class="btn btn--sm header__cta">Book a test drive</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img class="hero__bg" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=2400&q=80" alt="White Tesla Model 3 parked on a coastal road" />
+    <div class="container hero__in">
+      <p class="hero__kicker"><i class="ri-shield-check-fill"></i> Certified pre-owned since 2009 · Dbayeh, Metn</p>
+      <h1>Find a car you'll love.<br />Drive it home this week.</h1>
+      <p class="hero__lead">18 hand-picked cars, each inspected on 160 points and sold with a 12-month warranty.</p>
+      <div class="hero__quick">
+        <span>Popular:</span>
+        <a href="#stock" data-qbody="SUV">SUVs</a>
+        <a href="#stock" data-qbody="Sedan">Sedans</a>
+        <a href="#stock" data-qbody="Coupé">Sports cars</a>
+        <a href="#stock" data-qmax="30000">Under $30,000</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finder -->
+  <div class="container finder-wrap">
+    <form class="finder" id="finder">
+      <label><span>Make</span><select name="make" id="fMake"><option value="all">Any make</option></select></label>
+      <label><span>Body type</span><select name="body" id="fBody"><option value="all">Any body</option><option>Sedan</option><option>SUV</option><option>Coupé</option><option>Hatchback</option><option>Estate</option></select></label>
+      <label><span>Max price</span><select name="max" id="fMax"><option value="0">No limit</option><option value="30000">$30,000</option><option value="50000">$50,000</option><option value="80000">$80,000</option><option value="120000">$120,000</option></select></label>
+      <button class="btn" type="submit" id="finderBtn"><i class="ri-search-line"></i> Show 18 cars</button>
+    </form>
+  </div>
+
+  <!-- Makes -->
+  <section class="makes">
+    <div class="container makes__in" id="makes"></div>
+  </section>
+
+  <!-- Stock -->
+  <section class="section" id="stock">
+    <div class="container">
+      <div class="stock__head">
+        <div>
+          <p class="kicker">Cars in stock</p>
+          <h2 class="h2"><span id="stockCount">18</span> cars ready to drive away</h2>
+        </div>
+        <div class="stock__tools">
+          <div class="chips" id="chips"></div>
+          <label class="sort"><span>Sort</span>
+            <select id="sort">
+              <option value="new">Newest arrivals</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="km">Lowest mileage</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="cars" id="cars"></div>
+      <div class="more" id="more" hidden><button class="btn btn--outline" id="moreBtn">Show all cars</button></div>
+      <div class="empty" id="empty" hidden>
+        <i class="ri-car-line"></i>
+        <p>No cars match those filters right now. New cars arrive every week — <a href="#visit">tell us what you're after</a> and we'll call you first.</p>
+        <button class="btn btn--outline" id="reset">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified -->
+  <section class="section section--dark" id="certified">
+    <div class="container cert">
+      <div class="cert__img">
+        <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1100&q=80" alt="Mercedes saloon in the Kessler preparation bay" loading="lazy" />
+      </div>
+      <div class="cert__copy">
+        <p class="kicker">What “certified” means here</p>
+        <h2 class="h2">We turn away four out of five cars we're offered.</h2>
+        <p>A car only goes on sale after our own technicians have checked it. If anything fails, we fix it with original parts or we don't sell the car. You get the report with the keys.</p>
+        <ul class="cert__list">
+          <li><strong>160-point inspection</strong><span>Engine, gearbox, brakes, suspension, electronics, paint depth on every panel.</span></li>
+          <li><strong>12-month warranty</strong><span>Engine and gearbox covered, extendable to 36 months. Repairs done in our workshop.</span></li>
+          <li><strong>History you can verify</strong><span>Service book, previous owners and any accident record, checked by VIN.</span></li>
+          <li><strong>7-day exchange</strong><span>Not the right car? Swap it for another in stock within 7 days or 500 km.</span></li>
+        </ul>
+        <a href="#stock" class="btn">See certified cars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sell -->
+  <section class="section" id="sell">
+    <div class="container sell">
+      <div class="sell__copy">
+        <p class="kicker">Sell or trade in</p>
+        <h2 class="h2">Get an offer for your car within 24 hours.</h2>
+        <p>Send us the basics and a few photos on WhatsApp. One of our buyers will call you with a written offer, valid for 7 days. If you buy from us, the value goes straight against your next car.</p>
+        <div class="sell__facts">
+          <div><strong>24 h</strong><span>to a written offer</span></div>
+          <div><strong>Same day</strong><span>payment by bank transfer</span></div>
+          <div><strong>We handle</strong><span>the transfer of ownership</span></div>
+        </div>
+      </div>
+      <form class="card form" id="sellForm">
+        <h3>Your car</h3>
+        <div class="form__row">
+          <label><span>Make</span><input required name="make" placeholder="e.g. BMW" /></label>
+          <label><span>Model</span><input required name="model" placeholder="e.g. X5 xDrive40i" /></label>
+        </div>
+        <div class="form__row">
+          <label><span>Year</span><select name="year" id="sellYear"></select></label>
+          <label><span>Mileage (km)</span><input required name="km" inputmode="numeric" placeholder="e.g. 64,000" /></label>
+        </div>
+        <label><span>Condition</span>
+          <select name="cond"><option>Excellent — no repairs needed</option><option>Good — small marks</option><option>Needs work</option></select>
+        </label>
+        <div class="form__row">
+          <label><span>Your name</span><input required name="name" /></label>
+          <label><span>Phone</span><input required name="phone" type="tel" placeholder="+961" /></label>
+        </div>
+        <button class="btn btn--block" type="submit">Request my offer</button>
+        <p class="form__ok" id="sellOk" hidden><i class="ri-checkbox-circle-fill"></i> Thanks — a buyer will call you within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Service -->
+  <section class="section section--light" id="service">
+    <div class="container">
+      <div class="service__head">
+        <div>
+          <p class="kicker">Workshop</p>
+          <h2 class="h2">Service any car, not just the ones we sell.</h2>
+        </div>
+        <p>Six bays, manufacturer diagnostic tools and fixed prices before we start. Most services are done the same day while you wait in the lounge or take a courtesy car.</p>
+      </div>
+      <div class="service">
+        <div class="price-list">
+          <div class="price-list__row price-list__row--head"><span>Job</span><span>Time</span><span>From</span></div>
+          <div class="price-list__row"><span>Oil &amp; filter service</span><span>1 h</span><strong>$95</strong></div>
+          <div class="price-list__row"><span>Full annual service</span><span>3 h</span><strong>$260</strong></div>
+          <div class="price-list__row"><span>Brake pads, front axle</span><span>1.5 h</span><strong>$180</strong></div>
+          <div class="price-list__row"><span>Air-conditioning recharge</span><span>1 h</span><strong>$75</strong></div>
+          <div class="price-list__row"><span>Computer diagnostics</span><span>45 min</span><strong>$40</strong></div>
+          <div class="price-list__row"><span>Pre-purchase inspection</span><span>2 h</span><strong>$120</strong></div>
+          <p class="price-list__note">Prices include labour and VAT. Parts quoted separately for your exact model.</p>
+        </div>
+        <form class="card form" id="serviceForm">
+          <h3>Book a workshop slot</h3>
+          <label><span>Service</span>
+            <select name="job"><option>Oil &amp; filter service</option><option>Full annual service</option><option>Brake pads</option><option>Air-conditioning recharge</option><option>Computer diagnostics</option><option>Pre-purchase inspection</option><option>Something else</option></select>
+          </label>
+          <label><span>Car</span><input required name="car" placeholder="Make, model and year" /></label>
+          <div class="form__row">
+            <label><span>Day</span><input required type="date" name="date" id="serviceDate" /></label>
+            <label><span>Drop-off</span><select name="time"><option>08:30</option><option>10:00</option><option>12:00</option><option>14:00</option></select></label>
+          </div>
+          <label><span>Phone</span><input required type="tel" name="phone" placeholder="+961" /></label>
+          <button class="btn btn--block" type="submit">Book slot</button>
+          <p class="form__ok" id="serviceOk" hidden><i class="ri-checkbox-circle-fill"></i> Booked. We'll send a WhatsApp confirmation.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="reviews__head">
+        <div>
+          <p class="kicker">Reviews</p>
+          <h2 class="h2">4.9 from 612 Google reviews</h2>
+        </div>
+        <div class="reviews__nav">
+          <button id="revPrev" aria-label="Previous review"><i class="ri-arrow-left-line"></i></button>
+          <button id="revNext" aria-label="Next review"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+      <div class="reviews" id="reviewsTrack"></div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section section--light" id="visit">
+    <div class="container visit">
+      <div class="visit__info">
+        <p class="kicker">Showroom</p>
+        <h2 class="h2">Come and drive one.</h2>
+        <p>Test drives last 30 minutes on the coast road and the hills above Dbayeh. Bring your licence; we'll have the car washed and ready when you arrive.</p>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 – 19:00</td></tr>
+          <tr><td>Saturday</td><td>9:00 – 17:00</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+          <tr><td>Workshop</td><td>Mon–Sat from 8:00</td></tr>
+        </table>
+        <ul class="visit__contact">
+          <li><i class="ri-map-pin-line"></i> Dbayeh Highway, Kessler Building, Metn</li>
+          <li><i class="ri-phone-line"></i> <a href="tel:+9614555214">+961 4 555 214</a></li>
+          <li><i class="ri-whatsapp-line"></i> <a href="https://wa.me/96170555214">+961 70 555 214</a></li>
+          <li><i class="ri-mail-line"></i> <a href="mailto:sales@kesslermotors.com">sales@kesslermotors.com</a></li>
+        </ul>
+      </div>
+      <form class="card form" id="driveForm">
+        <h3>Book a test drive</h3>
+        <label><span>Car</span><select name="car" id="driveCar"></select></label>
+        <div class="form__row">
+          <label><span>Day</span><input required type="date" name="date" id="driveDate" /></label>
+          <label><span>Time</span><select name="time"><option>10:00</option><option>11:30</option><option>13:00</option><option>15:00</option><option>17:00</option></select></label>
+        </div>
+        <div class="form__row">
+          <label><span>Name</span><input required name="name" /></label>
+          <label><span>Phone</span><input required type="tel" name="phone" placeholder="+961" /></label>
+        </div>
+        <button class="btn btn--block" type="submit">Confirm test drive</button>
+        <p class="form__ok" id="driveOk" hidden><i class="ri-checkbox-circle-fill"></i> You're booked. We'll call to confirm.</p>
+      </form>
+    </div>
+    <div class="container">
+      <iframe class="map" title="Kessler Motors on the map" loading="lazy" src="https://maps.google.com/maps?q=Dbayeh%20Lebanon&z=14&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__k">K</span><span>Kessler<b>Motors</b></span></a>
+        <p>Family-run dealer of certified pre-owned cars on the Dbayeh highway since 2009.</p>
+      </div>
+      <div>
+        <h4>Buy</h4>
+        <a href="#stock">All cars in stock</a>
+        <a href="#stock" data-body="SUV">SUVs</a>
+        <a href="#stock" data-body="Coupé">Sports &amp; coupés</a>
+        <a href="#certified">Warranty</a>
+      </div>
+      <div>
+        <h4>Own</h4>
+        <a href="#sell">Sell or trade in</a>
+        <a href="#service">Book a service</a>
+        <a href="#service">Workshop prices</a>
+        <a href="#visit">Test drives</a>
+      </div>
+      <div>
+        <h4>New arrivals by email</h4>
+        <p>One short email when cars matching your search arrive.</p>
+        <form class="news" id="news"><input type="email" required placeholder="Email address" aria-label="Email address" /><button class="btn" aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form>
+        <p class="form__ok" id="newsOk" hidden>Subscribed.</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Kessler Motors SARL. Prices include VAT, excluding registration.</span>
+      <span><a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">YouTube</a></span>
+    </div>
+  </footer>
+
+  <!-- Car modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal__close" id="mClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="modal__img"><img id="mImg" alt="" /></div>
+      <div class="modal__body">
+        <p class="kicker" id="mYear"></p>
+        <h3 id="mTitle"></h3>
+        <p class="modal__price" id="mPrice"></p>
+        <dl class="specs" id="mSpecs"></dl>
+        <h4>Highlights</h4>
+        <ul class="feat" id="mFeat"></ul>
+        <div class="modal__ctas">
+          <a href="#visit" class="btn" id="mDrive">Book a test drive</a>
+          <a class="btn btn--outline" id="mWa" target="_blank" rel="noopener"><i class="ri-whatsapp-line"></i> Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const money = (n) => "$" + n.toLocaleString("en-US");
+
+    const CARS = [
+      { id: 1, make: "Mercedes-Benz", model: "AMG GT R", year: 2021, km: 18400, price: 139000, body: "Coupé", fuel: "Petrol", gear: "Automatic", power: "585 hp", color: "Selenite Grey", owners: 1, img: "1618843479313-40f8afb4b4d8", added: 18, feat: ["AMG track pace", "Carbon-ceramic brakes", "Burmester sound", "Full Mercedes service history"] },
+      { id: 2, make: "Porsche", model: "Panamera 4", year: 2022, km: 22900, price: 112500, body: "Sedan", fuel: "Petrol", gear: "PDK automatic", power: "330 hp", color: "Jet Black", owners: 1, img: "1503376780353-7e6692767b70", added: 17, feat: ["Sport Chrono package", "Adaptive air suspension", "Bose surround sound", "Porsche Approved until 2027"] },
+      { id: 3, make: "BMW", model: "M5 Competition", year: 2020, km: 41200, price: 84900, body: "Sedan", fuel: "Petrol", gear: "Automatic", power: "625 hp", color: "Frozen Brilliant White", owners: 2, img: "1555215695-3004980ad54e", added: 16, feat: ["M xDrive", "Harman Kardon", "Head-up display", "New tyres fitted"] },
+      { id: 4, make: "Audi", model: "RS 6 Avant", year: 2021, km: 33500, price: 98000, body: "Estate", fuel: "Petrol", gear: "Automatic", power: "600 hp", color: "Mythos Black", owners: 1, img: "1606664515524-ed2f786a0bd6", added: 15, feat: ["Dynamic package plus", "Panoramic roof", "Matrix LED lights", "Towbar"] },
+      { id: 5, make: "Audi", model: "RS 7 Sportback", year: 2022, km: 15800, price: 109000, body: "Sedan", fuel: "Petrol", gear: "Automatic", power: "600 hp", color: "Nardo Grey", owners: 1, img: "1606152421802-db97b9c7a11b", added: 14, feat: ["Bang & Olufsen 3D", "Ceramic brakes", "Night vision", "Remaining factory warranty"] },
+      { id: 6, make: "Porsche", model: "911 GT3 RS", year: 2019, km: 9600, price: 219000, body: "Coupé", fuel: "Petrol", gear: "PDK automatic", power: "520 hp", color: "Black", owners: 1, img: "1580274455191-1c62238fa333", added: 13, feat: ["Weissach package", "Front axle lift", "Clubsport package", "Never tracked"] },
+      { id: 7, make: "Tesla", model: "Model 3 Long Range", year: 2023, km: 12100, price: 41500, body: "Sedan", fuel: "Electric", gear: "Automatic", power: "498 km range", color: "Pearl White", owners: 1, img: "1560958089-b8a1929cea89", added: 12, feat: ["Dual motor AWD", "Battery health 97%", "Home charger included", "Glass roof"] },
+      { id: 8, make: "Range Rover", model: "Vogue P400", year: 2021, km: 38700, price: 96000, body: "SUV", fuel: "Mild hybrid", gear: "Automatic", power: "400 hp", color: "Santorini Black", owners: 1, img: "1563720360172-67b8f3dce741", added: 11, feat: ["Meridian sound", "Massage seats", "Air suspension", "Agency-serviced"] },
+      { id: 9, make: "Toyota", model: "Camry SE", year: 2022, km: 28300, price: 27900, body: "Sedan", fuel: "Petrol", gear: "Automatic", power: "203 hp", color: "Celestial Silver", owners: 1, img: "1621007947382-bb3c3994e3fb", added: 10, feat: ["Apple CarPlay", "Adaptive cruise", "Lane assist", "Toyota agency history"] },
+      { id: 10, make: "Mercedes-Benz", model: "GLE 53 Coupé", year: 2021, km: 36100, price: 78500, body: "SUV", fuel: "Mild hybrid", gear: "Automatic", power: "435 hp", color: "Polar White", owners: 1, img: "1590362891991-f776e747a588", added: 9, feat: ["AMG Night package", "Panoramic roof", "360° camera", "Burmester sound"] },
+      { id: 11, make: "BMW", model: "M4 Competition", year: 2020, km: 27400, price: 69900, body: "Coupé", fuel: "Petrol", gear: "Automatic", power: "450 hp", color: "Austin Yellow", owners: 2, img: "1568844293986-8d0400bd4745", added: 8, feat: ["Carbon roof", "M Driver's package", "Adaptive M suspension", "Full BMW history"] },
+      { id: 12, make: "Ford", model: "Mustang GT", year: 2019, km: 44800, price: 38900, body: "Coupé", fuel: "Petrol", gear: "Manual", power: "450 hp", color: "Need for Green", owners: 2, img: "1567818735868-e71b99932e29", added: 7, feat: ["5.0 V8", "Active valve exhaust", "Recaro seats", "6-speed manual"] },
+      { id: 13, make: "Nissan", model: "Juke Tekna", year: 2022, km: 19600, price: 21500, body: "SUV", fuel: "Petrol", gear: "Automatic", power: "114 hp", color: "Gun Metallic", owners: 1, img: "1609521263047-f8f205293f24", added: 6, feat: ["Bose headrest speakers", "ProPILOT assist", "Around-view camera", "Low running cost"] },
+      { id: 14, make: "Chevrolet", model: "Camaro SS", year: 2021, km: 26200, price: 36500, body: "Coupé", fuel: "Petrol", gear: "Automatic", power: "455 hp", color: "Riverside Blue", owners: 1, img: "1552519507-da3b142c6e3d", added: 5, feat: ["6.2 V8", "Magnetic ride", "Head-up display", "Agency-serviced"] },
+      { id: 15, make: "Hyundai", model: "i30 N Performance", year: 2021, km: 31000, price: 27400, body: "Hatchback", fuel: "Petrol", gear: "Manual", power: "280 hp", color: "Engine Red", owners: 1, img: "1550355291-bbee04a92027", added: 4, feat: ["Limited-slip diff", "N Corner Carving", "Rev matching", "Hyundai warranty to 2026"] },
+      { id: 16, make: "Ford", model: "Expedition Limited", year: 2020, km: 58300, price: 45900, body: "SUV", fuel: "Petrol", gear: "Automatic", power: "375 hp", color: "Star White", owners: 2, img: "1533473359331-0135ef1b58bf", added: 3, feat: ["8 seats", "4x4 with low range", "Towing package", "Rear entertainment"] },
+      { id: 17, make: "Audi", model: "R8 V10 Performance", year: 2021, km: 11300, price: 159000, body: "Coupé", fuel: "Petrol", gear: "Automatic", power: "620 hp", color: "Daytona Grey", owners: 1, img: "1603584173870-7f23fdae1b7a", added: 2, feat: ["Naturally aspirated V10", "Carbon side blades", "Laser lights", "Garage kept"] },
+      { id: 18, make: "Volkswagen", model: "Polo Highline", year: 2018, km: 62400, price: 13900, body: "Hatchback", fuel: "Petrol", gear: "Automatic", power: "95 hp", color: "Reef Blue", owners: 2, img: "1541899481282-d53bffe3c35d", added: 1, feat: ["First car favourite", "Parking sensors", "Low insurance group", "Timing belt done"] }
+    ];
+
+    const REVIEWS = [
+      { name: "Rami Abou Jaoude", car: "Bought a 2021 Range Rover", text: "They showed me the inspection report before I even asked and pointed out two stone chips I hadn't noticed. Car was exactly as described. Paperwork done in one afternoon." },
+      { name: "Maya Fakhoury", car: "Traded in a Kia, bought a Camry", text: "Got a fair price for my old car without haggling for a week. Ziad in sales was patient with all my questions about running costs." },
+      { name: "Karl Haddad", car: "Workshop customer", text: "I don't even own a car they sold, but I take my Golf there for every service now. Fixed price, done the same day, and they show you the old parts." },
+      { name: "Nadine Saab", car: "Bought a Tesla Model 3", text: "They printed the battery health report and installed the home charger the same week. First EV for us, and they made it easy." },
+      { name: "Georges Mrad", car: "Bought a BMW M4", text: "Second car I've bought from Kessler. The 12-month warranty actually works — a sensor failed at month 9 and they replaced it the next morning." }
+    ];
+
+    // Header + menu
+    const header = $("header");
+    addEventListener("scroll", () => header.classList.toggle("sticky", scrollY > 40), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("menu-open"); });
+
+    // Saved cars
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem("kessler-saved")) || []; } catch (e) {}
+    const persist = () => { try { localStorage.setItem("kessler-saved", JSON.stringify(saved)); } catch (e) {} };
+    const updateSaved = () => { $("savedCount").textContent = saved.length; $("savedBtn").classList.toggle("on", saved.length > 0); };
+
+    // Filters
+    const state = { make: "all", body: "all", max: 0, sort: "new", savedOnly: false, all: false };
+    const makes = [...new Set(CARS.map((c) => c.make))];
+    $("fMake").insertAdjacentHTML("beforeend", makes.map((m) => `<option>${m}</option>`).join(""));
+    $("makes").innerHTML = makes.map((m) => `<button data-make="${m}">${m}<small>${CARS.filter((c) => c.make === m).length}</small></button>`).join("");
+    $("chips").innerHTML = ["All", "Sedan", "SUV", "Coupé", "Hatchback", "Estate"].map((b) => `<button data-body="${b === "All" ? "all" : b}">${b}</button>`).join("");
+
+    const match = (c, s = state) => (s.make === "all" || c.make === s.make) && (s.body === "all" || c.body === s.body) && (!s.max || c.price <= s.max) && (!s.savedOnly || saved.includes(c.id));
+
+    function render() {
+      let list = CARS.filter((c) => match(c));
+      const sorters = { new: (a, b) => b.added - a.added, low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, km: (a, b) => a.km - b.km };
+      list.sort(sorters[state.sort]);
+      $("stockCount").textContent = list.length;
+      const limit = innerWidth < 640 ? 6 : 9;
+      $("more").hidden = state.all || list.length <= limit;
+      $("moreBtn").textContent = `Show all ${list.length} cars`;
+      if (!state.all) list = list.slice(0, limit);
+      $("empty").hidden = list.length > 0;
+      document.querySelectorAll("#chips button").forEach((b) => b.classList.toggle("on", b.dataset.body === state.body));
+      document.querySelectorAll("#makes button").forEach((b) => b.classList.toggle("on", b.dataset.make === state.make));
+      $("cars").innerHTML = list.map((c) => `
+        <article class="car" data-id="${c.id}">
+          <div class="car__img">
+            <img src="${U(c.img, 700)}" alt="${c.year} ${c.make} ${c.model}" loading="lazy" />
+            <button class="car__save ${saved.includes(c.id) ? "on" : ""}" data-save="${c.id}" aria-label="Save ${c.make} ${c.model}"><i class="ri-heart-${saved.includes(c.id) ? "fill" : "line"}"></i></button>
+            ${c.added > 15 ? '<span class="car__tag">Just arrived</span>' : ""}
+          </div>
+          <div class="car__body">
+            <h3>${c.make} ${c.model}</h3>
+            <ul class="car__meta"><li>${c.year}</li><li>${c.km.toLocaleString("en-US")} km</li><li>${c.fuel}</li><li>${c.gear.split(" ")[0]}</li></ul>
+            <div class="car__foot"><strong>${money(c.price)}</strong><span>View details <i class="ri-arrow-right-line"></i></span></div>
+          </div>
+        </article>`).join("");
+      if (window.__motion) revealAll($("cars"));
+    }
+
+    function finderCount() {
+      const s = { make: $("fMake").value, body: $("fBody").value, max: +$("fMax").value };
+      const n = CARS.filter((c) => match(c, { ...s, savedOnly: false })).length;
+      $("finderBtn").textContent = n ? `Show ${n} car${n === 1 ? "" : "s"}` : "No cars — try wider";
+      return s;
+    }
+    ["fMake", "fBody", "fMax"].forEach((id) => $(id).addEventListener("change", finderCount));
+    $("finder").addEventListener("submit", (e) => {
+      e.preventDefault();
+      Object.assign(state, finderCount(), { savedOnly: false });
+      render();
+      $("stock").scrollIntoView({ behavior: "smooth" });
+    });
+
+    $("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; state.body = b.dataset.body; state.savedOnly = false; render(); });
+    $("makes").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      state.make = state.make === b.dataset.make ? "all" : b.dataset.make; state.savedOnly = false;
+      render(); $("stock").scrollIntoView({ behavior: "smooth" });
+    });
+    $("moreBtn").addEventListener("click", () => { state.all = true; render(); });
+    $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+    $("reset").addEventListener("click", () => { Object.assign(state, { make: "all", body: "all", max: 0, savedOnly: false }); render(); });
+    document.querySelectorAll(".footer [data-body]").forEach((a) => a.addEventListener("click", () => { state.body = a.dataset.body; render(); }));
+    $("savedBtn").addEventListener("click", () => {
+      if (!saved.length) return toast("Tap the heart on any car to save it here.");
+      Object.assign(state, { make: "all", body: "all", max: 0, savedOnly: true }); render();
+      $("stock").scrollIntoView({ behavior: "smooth" });
+    });
+
+    $("cars").addEventListener("click", (e) => {
+      const s = e.target.closest("[data-save]");
+      if (s) {
+        const id = +s.dataset.save;
+        saved = saved.includes(id) ? saved.filter((x) => x !== id) : [...saved, id];
+        persist(); updateSaved(); render();
+        return;
+      }
+      const card = e.target.closest(".car");
+      if (card) openCar(+card.dataset.id);
+    });
+
+    // Modal
+    let lastFocus = null;
+    function openCar(id) {
+      const c = CARS.find((x) => x.id === id);
+      lastFocus = document.activeElement;
+      $("mImg").src = U(c.img, 1200); $("mImg").alt = `${c.year} ${c.make} ${c.model}`;
+      $("mYear").textContent = `${c.year} · ${c.body} · Stock no. KM-${2400 + c.id}`;
+      $("mTitle").textContent = `${c.make} ${c.model}`;
+      $("mPrice").textContent = money(c.price);
+      const specs = [["Mileage", c.km.toLocaleString("en-US") + " km"], ["Fuel", c.fuel], ["Gearbox", c.gear], [c.fuel === "Electric" ? "Range" : "Power", c.power], ["Colour", c.color], ["Owners", c.owners]];
+      $("mSpecs").innerHTML = specs.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+      $("mFeat").innerHTML = c.feat.map((f) => `<li><i class="ri-check-line"></i>${f}</li>`).join("");
+      $("mWa").href = `https://wa.me/96170555214?text=${encodeURIComponent(`Hi, is the ${c.year} ${c.make} ${c.model} (KM-${2400 + c.id}) still available?`)}`;
+      $("mDrive").onclick = () => { $("driveCar").value = id; closeModal(); };
+      $("modal").hidden = false; document.body.style.overflow = "hidden";
+      $("mClose").focus();
+    }
+    function closeModal() { $("modal").hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+    $("mClose").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("modal").hidden) closeModal(); });
+
+    // Hero quick links
+    document.querySelectorAll("[data-qbody],[data-qmax]").forEach((a) => a.addEventListener("click", () => {
+      Object.assign(state, { make: "all", body: a.dataset.qbody || "all", max: +(a.dataset.qmax || 0), savedOnly: false });
+      render();
+    }));
+
+    // Reviews slider
+    $("reviewsTrack").innerHTML = REVIEWS.map((r) => `
+      <figure class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>${r.text}</blockquote>
+        <figcaption><strong>${r.name}</strong><span>${r.car}</span></figcaption>
+      </figure>`).join("");
+    const step = () => $("reviewsTrack").firstElementChild.offsetWidth + 24;
+    $("revNext").addEventListener("click", () => $("reviewsTrack").scrollBy({ left: step(), behavior: "smooth" }));
+    $("revPrev").addEventListener("click", () => $("reviewsTrack").scrollBy({ left: -step(), behavior: "smooth" }));
+
+    // Forms
+    const thisYear = 2026;
+    $("sellYear").innerHTML = Array.from({ length: 16 }, (_, i) => `<option>${thisYear - i}</option>`).join("");
+    $("driveCar").innerHTML = CARS.map((c) => `<option value="${c.id}">${c.year} ${c.make} ${c.model} — ${money(c.price)}</option>`).join("");
+    const tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
+    ["driveDate", "serviceDate"].forEach((id) => { $(id).min = tomorrow; $(id).value = tomorrow; });
+    function toast(msg) { const t = $("toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove("on"), 2600); }
+    [["sellForm", "sellOk"], ["serviceForm", "serviceOk"], ["driveForm", "driveOk"], ["news", "newsOk"]].forEach(([f, ok]) => {
+      $(f).addEventListener("submit", (e) => { e.preventDefault(); $(ok).hidden = false; e.target.querySelectorAll("input:not([type=date])").forEach((i) => (i.value = "")); });
+    });
+
+    updateSaved(); render(); finderCount();
+
+    // Motion: scroll reveals
+    const REVEAL = [".makes__in",".stock__head",".car",".cert__copy > *",".cert__list li",".sell__copy > *",".sell .card",".service__head > *",".price-list",".service .card",".reviews__head",".review",".visit__info > *",".visit .card",".map",".footer__grid > div"].join(",");
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    function revealAll(root = document) {
+      root.querySelectorAll(REVEAL).forEach((el) => {
+        if (el.classList.contains("reveal")) return;
+        el.classList.add("reveal");
+        const sibs = [...el.parentElement.children].filter((c) => c.matches(REVEAL));
+        el.style.setProperty("--i", Math.min(sibs.indexOf(el), 5));
+        io.observe(el);
+      });
+    }
+    document.querySelectorAll(".cert__img").forEach((el) => { el.classList.add("reveal-img"); io.observe(el); });
+    revealAll(); window.__motion = true;
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/auto-kessler/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

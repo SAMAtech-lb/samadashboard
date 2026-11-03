@@ -1,0 +1,25 @@
+# SAMA
+
+> SAMA (سماء) is a web design and development studio in Beirut, Lebanon. It builds websites, online stores, mobile apps and interfaces, and edits video, for clients in Lebanon and worldwide.
+
+Contact: hello@samatechlb.com
+
+## Services
+- [Web design](https://samatechlb.com/web-design-lebanon/): Fast, responsive websites and landing pages that turn visitors into customers.
+- [E-commerce websites](https://samatechlb.com/ecommerce-website-lebanon/): Online stores with filters, product pages, cart and checkout that work on any phone.
+- [Mobile app development](https://samatechlb.com/mobile-app-development-lebanon/): iOS and Android apps, web apps and dashboards built to grow with your business.
+- [UI/UX design](https://samatechlb.com/ui-ux-design-lebanon/): User flows, wireframes and interfaces that are easy and enjoyable to use.
+- [Video editing](https://samatechlb.com/video-editing-lebanon/): Reels, ads and brand films with colour grading, motion graphics and captions.
+
+## Work
+Working demo websites with fictional businesses, grouped by industry.
+- [Landing page designs](https://samatechlb.com/work/landing-pages/)
+- [Online store designs](https://samatechlb.com/work/ecommerce-websites/)
+- [Business website designs](https://samatechlb.com/work/business-websites/)
+- [Portfolio website designs](https://samatechlb.com/work/portfolio-websites/)
+- [Dashboard designs](https://samatechlb.com/work/dashboards/)
+- [Restaurant website designs](https://samatechlb.com/work/restaurant-websites/)
+
+## Company
+- [About](https://samatechlb.com/about/)
+- [Contact](https://samatechlb.com/contact/)

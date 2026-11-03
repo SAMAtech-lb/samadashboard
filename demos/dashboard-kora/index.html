@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kora — Sales &amp; E-commerce Admin Dashboard</title>
+  <meta name="description" content="Kora is a clean, bright admin dashboard for online stores: revenue analytics, orders management, products, customers and store settings, with dark mode and multi-currency." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>try { const t = localStorage.getItem("kora-theme"); if (t) document.documentElement.dataset.theme = JSON.parse(t); } catch (e) {}</script>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- Sidebar -->
+  <aside class="side" id="side">
+    <a href="#overview" class="logo" aria-label="Kora home">
+      <span class="logo__mark"><i class="ri-shopping-bag-3-fill"></i></span>
+      <span class="logo__text">Kora<small>Store admin</small></span>
+    </a>
+    <nav class="side__nav" id="sideNav">
+      <p class="side__label">Main</p>
+      <a href="#overview" data-page="overview"><i class="ri-dashboard-3-line"></i><span>Overview</span></a>
+      <a href="#orders" data-page="orders"><i class="ri-file-list-3-line"></i><span>Orders</span><em id="pendingBadge">0</em></a>
+      <a href="#products" data-page="products"><i class="ri-price-tag-3-line"></i><span>Products</span></a>
+      <a href="#customers" data-page="customers"><i class="ri-group-line"></i><span>Customers</span></a>
+      <p class="side__label">Account</p>
+      <a href="#settings" data-page="settings"><i class="ri-settings-4-line"></i><span>Settings</span></a>
+      <a href="#" id="sideHelp"><i class="ri-question-line"></i><span>Help center</span></a>
+    </nav>
+    <div class="side__promo">
+      <span class="side__promo-ic"><i class="ri-rocket-2-line"></i></span>
+      <strong>Upgrade to Kora Pro</strong>
+      <p>Unlock forecasts, multiple stores and team roles.</p>
+      <button class="btn btn--sm btn--full" id="upgradeBtn">Upgrade now</button>
+    </div>
+  </aside>
+  <div class="side-overlay" id="sideOverlay"></div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <!-- Topbar -->
+    <header class="top" id="top">
+      <button class="icon-btn" id="burger" aria-label="Toggle menu"><i class="ri-menu-2-line"></i></button>
+      <form class="search" id="searchForm" role="search">
+        <i class="ri-search-line"></i>
+        <input id="searchInput" type="search" placeholder="Search orders, customers…" aria-label="Search orders and customers" />
+        <kbd>/</kbd>
+      </form>
+      <div class="top__right">
+        <select class="cur-select" id="topCurrency" aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option></select>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+        <div class="dd">
+          <button class="icon-btn" id="notifBtn" aria-label="Notifications"><i class="ri-notification-3-line"></i><span class="dot-badge" id="notifDot"></span></button>
+          <div class="dd__menu dd__menu--wide" id="notifMenu">
+            <div class="dd__head"><strong>Notifications</strong><button id="markRead">Mark all as read</button></div>
+            <div id="notifList"></div>
+          </div>
+        </div>
+        <div class="dd">
+          <button class="profile" id="profileBtn" aria-label="Account menu">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Sara Malik" />
+            <span><strong id="profileName">Sara Malik</strong><small>Store owner</small></span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="dd__menu" id="profileMenu">
+            <a href="#settings"><i class="ri-user-3-line"></i> My profile</a>
+            <a href="#settings"><i class="ri-settings-4-line"></i> Account settings</a>
+            <a href="#orders"><i class="ri-file-list-3-line"></i> My orders</a>
+            <hr />
+            <a href="#" id="signOut"><i class="ri-logout-box-r-line"></i> Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Overview -->
+      <section class="page" id="page-overview" hidden>
+        <div class="page__head">
+          <div><h1 id="greeting">Good morning, Sara</h1><p>Here's what's happening with <strong>Kora Store</strong> today.</p></div>
+          <div class="page__actions">
+            <span class="date-chip"><i class="ri-calendar-line"></i> <span id="dateChip"></span></span>
+            <button class="btn" id="exportReport"><i class="ri-download-2-line"></i> Export report</button>
+          </div>
+        </div>
+
+        <div class="kpis" id="kpis"></div>
+
+        <div class="grid grid--3">
+          <div class="card span-2">
+            <div class="card__head">
+              <div><h3>Revenue</h3><p class="rev-sum"><strong id="revTotal"></strong> <span class="delta" id="revDelta"></span> <small>vs previous period</small></p></div>
+              <div class="seg" id="rangeSeg"><button data-r="7D">7D</button><button data-r="30D" class="on">30D</button><button data-r="12M">12M</button></div>
+            </div>
+            <div class="legend"><span><i style="background:var(--primary)"></i>This period</span><span><i class="dash"></i>Previous period</span></div>
+            <div class="chart chart--lg"><canvas id="revChart" aria-label="Revenue chart" role="img"></canvas></div>
+          </div>
+          <div class="card goal">
+            <div class="card__head"><div><h3>Monthly goal</h3><p>October target</p></div><button class="icon-btn icon-btn--sm" id="editGoal" aria-label="Edit goal"><i class="ri-pencil-line"></i></button></div>
+            <div class="ring" id="goalRing">
+              <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" class="ring__bg" /><circle cx="60" cy="60" r="50" class="ring__fg" id="ringFg" /></svg>
+              <div class="ring__txt"><strong id="goalPct">0%</strong><small>of goal</small></div>
+            </div>
+            <p class="goal__line">You've made <strong id="goalNow"></strong> of <strong id="goalTarget"></strong> this month. Keep it up!</p>
+            <div class="goal__stats">
+              <div><small>Today</small><strong id="gToday"></strong><span class="delta up"><i class="ri-arrow-up-line"></i>6.2%</span></div>
+              <div><small>This week</small><strong id="gWeek"></strong><span class="delta up"><i class="ri-arrow-up-line"></i>3.8%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="card__head"><div><h3>Sales by category</h3><p>Share of revenue, last 30 days</p></div></div>
+            <div class="chart chart--donut"><canvas id="catChart" aria-label="Sales by category chart" role="img"></canvas><div class="donut__c"><small>Total</small><strong id="catTotal"></strong></div></div>
+            <ul class="cat-list" id="catList"></ul>
+          </div>
+          <div class="card">
+            <div class="card__head"><div><h3>Top products</h3><p>By units sold</p></div><a href="#products" class="link">View all</a></div>
+            <ul class="top-list" id="topProducts"></ul>
+          </div>
+          <div class="card">
+            <div class="card__head"><div><h3>Traffic sources</h3><p>Sessions, last 30 days</p></div></div>
+            <p class="big-num"><strong>48,392</strong> <span class="delta up"><i class="ri-arrow-up-line"></i>9.4%</span></p>
+            <ul class="bars" id="traffic"></ul>
+            <div class="mini-stats"><div><small>Bounce rate</small><strong>38.2%</strong></div><div><small>Avg. session</small><strong>3m 42s</strong></div></div>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card span-2 card--flush">
+            <div class="card__head card__head--pad"><div><h3>Recent orders</h3><p>Click an order to see details</p></div><a href="#orders" class="link">All orders <i class="ri-arrow-right-line"></i></a></div>
+            <div class="table-wrap"><table class="table" id="recentTable"></table></div>
+          </div>
+          <div class="card">
+            <div class="card__head"><div><h3>Activity</h3><p>Latest store events</p></div></div>
+            <ul class="feed" id="feed"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Orders -->
+      <section class="page" id="page-orders" hidden>
+        <div class="page__head">
+          <div><h1>Orders</h1><p>Manage, filter and update every order in your store.</p></div>
+          <div class="page__actions"><button class="btn btn--outline" id="exportCsv"><i class="ri-file-excel-2-line"></i> Export CSV</button></div>
+        </div>
+        <div class="mini-kpis" id="orderKpis"></div>
+        <div class="card card--flush">
+          <div class="toolbar">
+            <div class="tabs" id="statusTabs"></div>
+            <div class="toolbar__right">
+              <label class="field-search"><i class="ri-search-line"></i><input id="orderSearch" type="search" placeholder="Search order, customer…" aria-label="Search orders" /></label>
+              <select id="orderSort" aria-label="Sort orders"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="high">Total: high to low</option><option value="low">Total: low to high</option></select>
+            </div>
+          </div>
+          <div class="bulk" id="bulkBar" hidden><span><strong id="bulkCount">0</strong> selected</span><button class="btn btn--sm" id="bulkShip"><i class="ri-truck-line"></i> Mark as shipped</button><button class="btn btn--sm btn--ghost" id="bulkClear">Clear</button></div>
+          <div class="table-wrap"><table class="table table--orders" id="ordersTable"></table></div>
+          <div class="pager" id="pager"></div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="page" id="page-products" hidden>
+        <div class="page__head">
+          <div><h1>Products</h1><p>Track stock, prices and best sellers.</p></div>
+          <div class="page__actions"><button class="btn" id="addProductBtn"><i class="ri-add-line"></i> Add product</button></div>
+        </div>
+        <div class="toolbar toolbar--card">
+          <div class="tabs" id="catTabs"></div>
+          <div class="toolbar__right">
+            <label class="field-search"><i class="ri-search-line"></i><input id="productSearch" type="search" placeholder="Search products…" aria-label="Search products" /></label>
+            <select id="productSort" aria-label="Sort products"><option value="sold">Best selling</option><option value="stock">Lowest stock</option><option value="price-h">Price: high to low</option><option value="price-l">Price: low to high</option></select>
+          </div>
+        </div>
+        <div class="products" id="productGrid"></div>
+      </section>
+
+      <!-- Customers -->
+      <section class="page" id="page-customers" hidden>
+        <div class="page__head">
+          <div><h1>Customers</h1><p>Who buys from you, how often and how much.</p></div>
+          <div class="page__actions"><button class="btn btn--outline" id="inviteBtn"><i class="ri-mail-send-line"></i> Email customers</button></div>
+        </div>
+        <div class="grid grid--3">
+          <div class="card span-2">
+            <div class="card__head"><div><h3>New customers</h3><p>Sign-ups per month</p></div><p class="big-num big-num--sm"><strong>1,284</strong> <span class="delta up"><i class="ri-arrow-up-line"></i>18.6%</span></p></div>
+            <div class="chart"><canvas id="custChart" aria-label="New customers chart" role="img"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card__head"><div><h3>Top countries</h3><p>By revenue</p></div></div>
+            <ul class="bars bars--flags" id="countries"></ul>
+          </div>
+        </div>
+        <div class="card card--flush">
+          <div class="toolbar">
+            <div class="tabs" id="segTabs"></div>
+            <div class="toolbar__right"><label class="field-search"><i class="ri-search-line"></i><input id="custSearch" type="search" placeholder="Search name, email, country…" aria-label="Search customers" /></label></div>
+          </div>
+          <div class="table-wrap"><table class="table" id="custTable"></table></div>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section class="page" id="page-settings" hidden>
+        <div class="page__head"><div><h1>Settings</h1><p>Your profile, store preferences and notifications.</p></div></div>
+        <form class="settings" id="settingsForm">
+          <div class="card">
+            <h3 class="set__title">Profile</h3>
+            <div class="avatar-row">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Sara Malik" />
+              <div><strong>Profile photo</strong><small>JPG or PNG, at least 400 × 400 px.</small><div class="row-btns"><button type="button" class="btn btn--sm btn--outline" id="photoBtn">Change photo</button><button type="button" class="btn btn--sm btn--ghost" id="photoRemove">Remove</button></div></div>
+            </div>
+            <div class="form-grid">
+              <label>Full name<input id="setName" value="Sara Malik" required /></label>
+              <label>Email<input type="email" value="sara@korastore.com" required /></label>
+              <label>Phone<input value="+1 (415) 555-0142" /></label>
+              <label>Role<select><option>Store owner</option><option>Manager</option><option>Staff</option></select></label>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="set__title">Store</h3>
+            <div class="form-grid">
+              <label>Store name<input value="Kora Store" /></label>
+              <label>Store URL<input value="korastore.com" /></label>
+              <label>Currency<select id="setCurrency"><option value="USD">US Dollar (USD)</option><option value="EUR">Euro (EUR)</option><option value="GBP">British Pound (GBP)</option></select></label>
+              <label>Time zone<select><option>(GMT-08:00) Pacific Time</option><option>(GMT-05:00) Eastern Time</option><option>(GMT+00:00) London</option><option>(GMT+02:00) Beirut</option></select></label>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="set__title">Notifications</h3>
+            <div class="toggles" id="toggles"></div>
+          </div>
+          <div class="card">
+            <h3 class="set__title">Appearance</h3>
+            <div class="themes" id="themePick">
+              <label><input type="radio" name="theme" value="light" /><span class="tp tp--light"><i></i><i></i></span>Light</label>
+              <label><input type="radio" name="theme" value="dark" /><span class="tp tp--dark"><i></i><i></i></span>Dark</label>
+            </div>
+          </div>
+          <div class="settings__foot"><button type="reset" class="btn btn--outline">Cancel</button><button class="btn" type="submit"><i class="ri-check-line"></i> Save changes</button></div>
+        </form>
+      </section>
+
+      <footer class="foot"><p>© <span id="year"></span> Kora Store. All rights reserved.</p><p>Kora admin · v2.4</p></footer>
+    </div>
+  </div>
+</div>
+
+<!-- Order drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__head"><div><small>Order</small><h3 id="dTitle"></h3></div><button class="icon-btn" id="dClose" aria-label="Close order details"><i class="ri-close-line"></i></button></div>
+  <div class="drawer__body" id="dBody"></div>
+</aside>
+
+<!-- Add product modal -->
+<div class="modal" id="productModal" hidden>
+  <form class="modal__box" id="productForm">
+    <div class="modal__head"><h3>Add product</h3><button type="button" class="icon-btn" data-close aria-label="Close"><i class="ri-close-line"></i></button></div>
+    <div class="form-grid">
+      <label class="full">Product name<input id="pName" required placeholder="e.g. Canvas Tote Bag" /></label>
+      <label>Category<select id="pCat"></select></label>
+      <label>SKU<input id="pSku" placeholder="AC-TOTE-01" /></label>
+      <label>Price (USD)<input id="pPrice" type="number" min="1" step="0.01" required placeholder="49" /></label>
+      <label>Stock<input id="pStock" type="number" min="0" required placeholder="120" /></label>
+    </div>
+    <div class="modal__foot"><button type="button" class="btn btn--outline" data-close>Cancel</button><button class="btn" type="submit"><i class="ri-add-line"></i> Add product</button></div>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status"><i class="ri-checkbox-circle-fill"></i><span id="toastMsg"></span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const U = (id, w = 200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("kora-" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem("kora-" + k, JSON.stringify(v)); } catch (e) {} },
+  };
+  let seed = 2026;
+  const rnd = () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const pick = (a) => a[Math.floor(rnd() * a.length)];
+
+  /* ===== Currency ===== */
+  const RATES = { USD: 1, EUR: 0.92, GBP: 0.79 };
+  let currency = store.get("currency", "USD");
+  if (!RATES[currency]) currency = "USD";
+  const fmt = (v, d = 0) => new Intl.NumberFormat("en-US", { style: "currency", currency, minimumFractionDigits: d, maximumFractionDigits: d }).format(v * RATES[currency]);
+  const sym = () => new Intl.NumberFormat("en-US", { style: "currency", currency }).formatToParts(0).find((p) => p.type === "currency").value;
+  const short = (v) => { const x = v * RATES[currency]; return sym() + (x >= 1000 ? (x / 1000).toFixed(x >= 10000 ? 0 : 1) + "k" : Math.round(x)); };
+  const num = (v) => new Intl.NumberFormat("en-US").format(v);
+  const dShort = (d) => d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+  /* ===== Data ===== */
+  const CATS = ["Footwear", "Audio", "Accessories", "Apparel", "Home"];
+  const PRODUCTS = [
+    { id: 1, n: "Nike Flyknit Racer", c: "Footwear", p: 160, stock: 142, img: "1542291026-7eec264c27ff", sku: "NK-FKR-RD" },
+    { id: 2, n: "Arc Wireless Headphones", c: "Audio", p: 289, stock: 64, img: "1505740420928-5e560c06d30e", sku: "AU-ARC-BK" },
+    { id: 3, n: "Classic Leather Watch", c: "Accessories", p: 245, stock: 38, img: "1523275335684-37898b6baf30", sku: "AC-CLW-42" },
+    { id: 4, n: "Ray-Ban Wayfarer Classic", c: "Accessories", p: 163, stock: 210, img: "1572635196237-14b3f281503f", sku: "RB-2140-BK" },
+    { id: 5, n: "Nike Air Zoom Pegasus", c: "Footwear", p: 130, stock: 96, img: "1491553895911-0055eca6402d", sku: "NK-AZP-BK" },
+    { id: 6, n: "Linen Knit Sweater", c: "Apparel", p: 128, stock: 12, img: "1434389677669-e08b4cac3105", sku: "AP-LKS-M" },
+    { id: 7, n: "Lounge Armchair", c: "Home", p: 890, stock: 9, img: "1586023492125-27b2c045efd7", sku: "HM-LNG-OK" },
+    { id: 8, n: "Polaroid OneStep 2", c: "Audio", p: 99, stock: 7, img: "1526170375885-4d8ecf77b99f", sku: "AU-CAM-IN" },
+    { id: 9, n: "Apple Watch Series 5", c: "Accessories", p: 399, stock: 58, img: "1546868871-7041f2a55e12", sku: "AP-WS5-44" },
+    { id: 10, n: "Leather Backpack", c: "Accessories", p: 175, stock: 44, img: "1553062407-98eeb64c6a62", sku: "AC-BPK-BR" },
+    { id: 11, n: "Everyday Cotton Tee", c: "Apparel", p: 38, stock: 320, img: "1521572163474-6864f9cf17ab", sku: "AP-TEE-WH" },
+    { id: 12, n: "Ceramic Mug Set", c: "Home", p: 42, stock: 150, img: "1514228742587-6b1558fcca3d", sku: "HM-MUG-04" },
+  ];
+  PRODUCTS.forEach((p) => (p.sold = 0));
+  const AV = ["#3366ff", "#16a34a", "#f59e0b", "#0ea5e9", "#ef4444", "#64748b", "#0d9488", "#db2777"];
+  const CUSTOMERS = [
+    ["Emma Wilson", "United States", "US"], ["Liam Carter", "United Kingdom", "GB"], ["Sofia Rossi", "Italy", "IT"], ["Noah Becker", "Germany", "DE"],
+    ["Olivia Martin", "Canada", "CA"], ["Lucas Dubois", "France", "FR"], ["Mia Hernández", "Spain", "ES"], ["Ethan Brooks", "United States", "US"],
+    ["Ava Thompson", "Australia", "AU"], ["Omar Haddad", "UAE", "AE"], ["Chloe Nguyen", "United States", "US"], ["James Walker", "United Kingdom", "GB"],
+    ["Hana Sato", "Japan", "JP"], ["Daniel Kim", "Canada", "CA"], ["Layla Mansour", "Lebanon", "LB"], ["Jonas Berg", "Sweden", "SE"],
+    ["Grace Lee", "United States", "US"], ["Mateo Silva", "Brazil", "BR"], ["Isla Murphy", "Ireland", "IE"], ["Ryan Patel", "United States", "US"],
+  ].map(([n, country, cc], i) => ({
+    n, country, cc, e: n.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(" ", ".") + "@mail.com",
+    color: AV[i % AV.length], ini: n.split(" ").map((w) => w[0]).join(""), baseOrders: 1 + Math.floor(rnd() * 12), joined: new Date(Date.now() - (30 + rnd() * 700) * 864e5),
+  }));
+  CUSTOMERS.forEach((c, i) => { c.baseSpent = c.baseOrders * (90 + rnd() * 160); if (i % 6 === 5) { c.baseOrders = 0; c.baseSpent = 0; } });
+
+  const STATUS = { Pending: "orange", Processing: "blue", Shipped: "sky", Delivered: "green", Cancelled: "red" };
+  const now = new Date();
+  const ORDERS = Array.from({ length: 64 }, (_, i) => {
+    const items = [];
+    const n = 1 + Math.floor(rnd() * 3);
+    while (items.length < n) { const p = pick(PRODUCTS); if (!items.find((it) => it.p === p)) items.push({ p, q: rnd() < 0.2 ? 2 : 1 }); }
+    const sub = items.reduce((s, it) => s + it.p.p * it.q, 0);
+    const ship = sub >= 200 ? 0 : 9.9;
+    const status = i < 3 ? "Pending" : i < 8 ? pick(["Pending", "Processing"]) : i < 18 ? pick(["Processing", "Shipped", "Shipped"]) : rnd() < 0.08 ? "Cancelled" : "Delivered";
+    items.forEach((it) => (it.p.sold += it.q * 9));
+    return { id: 10482 - i, cu: pick(CUSTOMERS), items, sub, ship, tax: sub * 0.08, total: sub + ship + sub * 0.08,
+      date: new Date(now - (i ? i * 0.55 + rnd() * 0.4 : rnd() * 0.01) * 864e5 - 6e5), pay: pick(["Visa •• 4242", "Mastercard •• 8821", "PayPal", "Apple Pay"]), status };
+  });
+
+  /* Revenue series */
+  const sum = (a) => a.reduce((s, v) => s + v, 0);
+  const days = (n) => Array.from({ length: n }, (_, i) => new Date(now - (n - 1 - i) * 864e5));
+  const series = (n, lo, hi) => {
+    let v = lo + (hi - lo) * 0.45;
+    return Array.from({ length: n }, () => { v = Math.min(hi, Math.max(lo, v + (rnd() - 0.42) * (hi - lo) * 0.22)); return Math.round(v); });
+  };
+  const months = Array.from({ length: 12 }, (_, i) => new Date(now.getFullYear(), now.getMonth() - 11 + i, 1));
+  const RANGES = {
+    "30D": { labels: days(30).map(dShort), cur: series(30, 2600, 4600) },
+    "12M": { labels: months.map((d) => d.toLocaleDateString("en-US", { month: "short" })), cur: months.map((_, i) => Math.round(82000 + i * 3700 + rnd() * 7000)) },
+  };
+  const k30 = RANGES["12M"].cur[11] / sum(RANGES["30D"].cur);
+  RANGES["30D"].cur = RANGES["30D"].cur.map((v) => Math.round(v * k30));
+  RANGES["12M"].cur[11] = sum(RANGES["30D"].cur);
+  Object.values(RANGES).forEach((r) => (r.prev = r.cur.map((v) => Math.round(v * (0.8 + rnd() * 0.14)))));
+  RANGES["7D"] = { labels: days(7).map((d) => d.toLocaleDateString("en-US", { weekday: "short" })), cur: RANGES["30D"].cur.slice(-7), prev: RANGES["30D"].prev.slice(-7) };
+  const NEWCUST = series(12, 60, 160);
+  const YEAR_REV = sum(RANGES["12M"].cur);
+  let goal = store.get("goal", 140000);
+
+  /* ===== Helpers ===== */
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const rgba = (hex, a) => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+  const badge = (s) => `<span class="badge badge--${STATUS[s]}">${s}</span>`;
+  const avatar = (c) => `<span class="av" style="--c:${c.color}">${c.ini}</span>`;
+  const deltaHTML = (d) => `<span class="delta ${d >= 0 ? "up" : "down"}"><i class="ri-arrow-${d >= 0 ? "up" : "down"}-line"></i>${Math.abs(d).toFixed(1)}%</span>`;
+  const ago = (d) => { const m = Math.round((now - d) / 6e4); return m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago"; };
+  let toastT;
+  const toast = (msg, icon = "ri-checkbox-circle-fill") => {
+    $("toast").querySelector("i").className = icon; $("toastMsg").textContent = msg;
+    $("toast").classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => $("toast").classList.remove("show"), 2600);
+  };
+  const download = (name, text) => {
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type: "text/csv" })); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  };
+  const spark = (vals, color) => {
+    const max = Math.max(...vals), min = Math.min(...vals), w = 120, h = 40;
+    const pts = vals.map((v, i) => [(i / (vals.length - 1)) * w, h - 4 - ((v - min) / (max - min || 1)) * (h - 8)]);
+    const line = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${line} L${w} ${h} L0 ${h}Z" fill="${rgba(color, 0.12)}"/><path d="${line}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  };
+
+  /* ===== Overview ===== */
+  let range = "30D";
+  const catShare = [["Footwear", 32, "--primary"], ["Audio", 24, "--sky"], ["Accessories", 21, "--green"], ["Apparel", 14, "--orange"], ["Home", 9, "--slate"]];
+
+  function renderOverview() {
+    const h = now.getHours();
+    $("greeting").textContent = `${h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening"}, ${$("setName").value.split(" ")[0]}`;
+    $("dateChip").textContent = `${dShort(new Date(now - 29 * 864e5))} – ${dShort(now)}, ${now.getFullYear()}`;
+    const kp = [
+      ["ri-money-dollar-circle-line", "Total revenue", fmt(YEAR_REV), 12.4, RANGES["12M"].cur, "--primary"],
+      ["ri-shopping-cart-2-line", "Orders", num(8642), 8.1, series(12, 520, 860), "--green"],
+      ["ri-bank-card-line", "Avg. order value", fmt(YEAR_REV / 8642, 2), -2.3, series(12, 120, 150), "--orange"],
+      ["ri-user-add-line", "New customers", num(1284), 18.6, NEWCUST, "--sky"],
+    ];
+    $("kpis").innerHTML = kp.map(([i, l, v, d, s, c]) => `
+      <div class="kpi"><div class="kpi__top"><span class="kpi__ic" style="--c:var(${c})"><i class="${i}"></i></span>${deltaHTML(d)}</div>
+      <small>${l}</small><strong>${v}</strong><div class="kpi__foot"><span>vs last year</span>${spark(s, css(c))}</div></div>`).join("");
+
+    const r = RANGES[range], cur = sum(r.cur), prev = sum(r.prev);
+    $("revTotal").textContent = fmt(cur); $("revDelta").outerHTML = deltaHTML(((cur - prev) / prev) * 100).replace("<span ", '<span id="revDelta" ');
+
+    const month = RANGES["12M"].cur[11], pct = Math.min(100, Math.round((month / goal) * 100));
+    $("goalPct").textContent = pct + "%"; $("goalNow").textContent = fmt(month); $("goalTarget").textContent = fmt(goal);
+    $("ringFg").style.strokeDashoffset = 314.16 * (1 - pct / 100);
+    $("gToday").textContent = fmt(RANGES["7D"].cur[6]); $("gWeek").textContent = fmt(sum(RANGES["7D"].cur));
+
+    const catTotal = sum(RANGES["30D"].cur);
+    $("catTotal").textContent = short(catTotal);
+    $("catList").innerHTML = catShare.map(([n, p, c]) => `<li><i style="background:var(${c})"></i>${n}<span>${fmt((catTotal * p) / 100)}</span><b>${p}%</b></li>`).join("");
+
+    const top = [...PRODUCTS].sort((a, b) => b.sold - a.sold).slice(0, 5), maxSold = top[0].sold;
+    $("topProducts").innerHTML = top.map((p) => `<li><img src="${U(p.img, 120)}" alt="${p.n}" loading="lazy" /><div><strong>${p.n}</strong><small>${num(p.sold)} sold · ${fmt(p.p)}</small><span class="prog"><i style="width:${(p.sold / maxSold) * 100}%"></i></span></div><b>${short(p.sold * p.p)}</b></li>`).join("");
+
+    $("traffic").innerHTML = [["ri-global-line", "Direct", 34], ["ri-instagram-line", "Social", 27], ["ri-google-line", "Organic search", 22], ["ri-mail-line", "Email", 11], ["ri-links-line", "Referral", 6]]
+      .map(([i, n, p]) => `<li><span class="bars__l"><i class="${i}"></i>${n}</span><span class="bars__v">${p}%</span><span class="prog"><i style="width:${p * 2.5}%"></i></span></li>`).join("");
+
+    $("recentTable").innerHTML = `<thead><tr><th>Order</th><th>Customer</th><th class="hide-sm">Date</th><th>Total</th><th>Status</th></tr></thead><tbody>${ORDERS.slice(0, 6).map((o) => `
+      <tr data-o="${o.id}" tabindex="0"><td><b class="oid">#KR-${o.id}</b></td><td><div class="who">${avatar(o.cu)}<span>${o.cu.n}</span></div></td><td class="hide-sm">${dShort(o.date)}</td><td><b>${fmt(o.total, 2)}</b></td><td>${badge(o.status)}</td></tr>`).join("")}</tbody>`;
+
+    $("feed").innerHTML = activity().map(([i, c, t, time]) => `<li><span class="feed__ic" style="--c:var(${c})"><i class="${i}"></i></span><div><p>${t}</p><small>${time}</small></div></li>`).join("");
+  }
+
+  const activity = () => [
+    ["ri-shopping-bag-3-line", "--primary", `New order <b>#KR-${ORDERS[0].id}</b> from ${ORDERS[0].cu.n}`, ago(ORDERS[0].date)],
+    ["ri-error-warning-line", "--red", `Low stock: <b>Polaroid OneStep 2</b> has ${(PRODUCTS.find((p) => p.id === 8) || { stock: 7 }).stock} left`, "1 h ago"],
+    ["ri-star-line", "--orange", `New 5-star review on <b>Arc Wireless Headphones</b>`, "3 h ago"],
+    ["ri-truck-line", "--sky", `Order <b>#KR-${ORDERS[9].id}</b> was shipped via DHL`, "5 h ago"],
+    ["ri-bank-line", "--green", `Payout of <b>${fmt(12480)}</b> sent to your bank`, "Yesterday"],
+  ];
+
+  /* ===== Orders ===== */
+  const O = { q: "", st: "All", sort: "new", page: 1, per: 10, sel: new Set() };
+  const orderList = () => {
+    const q = O.q.toLowerCase();
+    const l = ORDERS.filter((o) => (O.st === "All" || o.status === O.st) && (!q || [o.id, o.cu.n, o.cu.e, o.cu.country, o.pay].join(" ").toLowerCase().includes(q)));
+    const s = { new: (a, b) => b.date - a.date, old: (a, b) => a.date - b.date, high: (a, b) => b.total - a.total, low: (a, b) => a.total - b.total }[O.sort];
+    return l.sort(s);
+  };
+  function renderOrders() {
+    const count = (s) => ORDERS.filter((o) => s === "All" || o.status === s).length;
+    $("pendingBadge").textContent = count("Pending");
+    $("statusTabs").innerHTML = ["All", ...Object.keys(STATUS)].map((s) => `<button class="${s === O.st ? "on" : ""}" data-s="${s}">${s}<em>${count(s)}</em></button>`).join("");
+    const rev = sum(ORDERS.filter((o) => o.status !== "Cancelled").map((o) => o.total));
+    $("orderKpis").innerHTML = [["ri-file-list-3-line", "--primary", "Total orders", num(ORDERS.length)], ["ri-time-line", "--orange", "Pending", count("Pending")], ["ri-truck-line", "--sky", "In transit", count("Shipped")], ["ri-wallet-3-line", "--green", "Revenue", fmt(rev)]]
+      .map(([i, c, l, v]) => `<div class="mini-kpi"><span class="kpi__ic" style="--c:var(${c})"><i class="${i}"></i></span><div><small>${l}</small><strong>${v}</strong></div></div>`).join("");
+
+    const list = orderList(), pages = Math.max(1, Math.ceil(list.length / O.per));
+    O.page = Math.min(O.page, pages);
+    const rows = list.slice((O.page - 1) * O.per, O.page * O.per);
+    const allOn = rows.length && rows.every((o) => O.sel.has(o.id));
+    $("ordersTable").innerHTML = `<thead><tr><th class="ck"><input type="checkbox" id="ckAll" ${allOn ? "checked" : ""} aria-label="Select all on page" /></th><th>Order</th><th>Customer</th><th class="hide-md">Date</th><th class="hide-md">Items</th><th class="hide-sm">Payment</th><th>Total</th><th>Status</th><th></th></tr></thead>
+      <tbody>${rows.map((o) => `<tr data-o="${o.id}" tabindex="0" class="${O.sel.has(o.id) ? "sel" : ""}">
+        <td class="ck"><input type="checkbox" data-ck="${o.id}" ${O.sel.has(o.id) ? "checked" : ""} aria-label="Select order ${o.id}" /></td>
+        <td><b class="oid">#KR-${o.id}</b></td>
+        <td><div class="who">${avatar(o.cu)}<span><b>${o.cu.n}</b><small>${o.cu.e}</small></span></div></td>
+        <td class="hide-md">${dShort(o.date)}<small class="block">${o.date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}</small></td>
+        <td class="hide-md"><div class="thumbs">${o.items.map((it) => `<img src="${U(it.p.img, 80)}" alt="${it.p.n}" loading="lazy" />`).join("")}</div></td>
+        <td class="hide-sm">${o.pay}</td><td><b>${fmt(o.total, 2)}</b></td><td>${badge(o.status)}</td>
+        <td><button class="icon-btn icon-btn--sm" data-view="${o.id}" aria-label="View order ${o.id}"><i class="ri-eye-line"></i></button></td></tr>`).join("") ||
+        `<tr class="empty"><td colspan="9"><i class="ri-search-eye-line"></i><strong>No orders found</strong><span>Try another search or status.</span></td></tr>`}</tbody>`;
+    const from = list.length ? (O.page - 1) * O.per + 1 : 0;
+    $("pager").innerHTML = `<span>Showing ${from}–${Math.min(O.page * O.per, list.length)} of ${list.length} orders</span><div>
+      <button data-p="${O.page - 1}" ${O.page === 1 ? "disabled" : ""} aria-label="Previous page"><i class="ri-arrow-left-s-line"></i></button>
+      ${Array.from({ length: pages }, (_, i) => `<button data-p="${i + 1}" class="${i + 1 === O.page ? "on" : ""}">${i + 1}</button>`).join("")}
+      <button data-p="${O.page + 1}" ${O.page === pages ? "disabled" : ""} aria-label="Next page"><i class="ri-arrow-right-s-line"></i></button></div>`;
+    $("bulkBar").hidden = !O.sel.size; $("bulkCount").textContent = O.sel.size;
+  }
+  $("statusTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; O.st = b.dataset.s; O.page = 1; renderOrders(); });
+  $("orderSearch").addEventListener("input", (e) => { O.q = e.target.value; O.page = 1; renderOrders(); });
+  $("orderSort").addEventListener("change", (e) => { O.sort = e.target.value; renderOrders(); });
+  $("pager").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || b.disabled) return; O.page = +b.dataset.p; renderOrders(); });
+  $("ordersTable").addEventListener("change", (e) => {
+    if (e.target.id === "ckAll") { orderList().slice((O.page - 1) * O.per, O.page * O.per).forEach((o) => (e.target.checked ? O.sel.add(o.id) : O.sel.delete(o.id))); }
+    else if (e.target.dataset.ck) { const id = +e.target.dataset.ck; e.target.checked ? O.sel.add(id) : O.sel.delete(id); }
+    renderOrders();
+  });
+  $("bulkShip").onclick = () => { let n = 0; ORDERS.forEach((o) => { if (O.sel.has(o.id) && ["Pending", "Processing"].includes(o.status)) { o.status = "Shipped"; n++; } }); O.sel.clear(); renderOrders(); renderOverview(); toast(n ? `${n} order${n > 1 ? "s" : ""} marked as shipped` : "Only pending or processing orders can be shipped", n ? undefined : "ri-information-line"); };
+  $("bulkClear").onclick = () => { O.sel.clear(); renderOrders(); };
+  $("exportCsv").onclick = () => {
+    const rows = [["Order", "Customer", "Email", "Country", "Date", "Items", "Payment", "Total (" + currency + ")", "Status"], ...orderList().map((o) => [`KR-${o.id}`, o.cu.n, o.cu.e, o.cu.country, o.date.toISOString().slice(0, 10), o.items.map((i) => `${i.q}x ${i.p.n}`).join("; "), o.pay, (o.total * RATES[currency]).toFixed(2), o.status])];
+    download("kora-orders.csv", rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n")); toast("Orders exported to CSV");
+  };
+
+  /* Drawer */
+  let openOrder = null;
+  function openDrawer(id) {
+    const o = ORDERS.find((x) => x.id === id); if (!o) return; openOrder = o;
+    $("dTitle").innerHTML = `#KR-${o.id} ${badge(o.status)}`;
+    const steps = ["Pending", "Processing", "Shipped", "Delivered"], at = steps.indexOf(o.status);
+    $("dBody").innerHTML = `
+      <p class="d-date"><i class="ri-calendar-line"></i> ${o.date.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}</p>
+      ${o.status === "Cancelled" ? `<div class="d-cancel"><i class="ri-close-circle-line"></i> This order was cancelled and refunded.</div>` :
+        `<ol class="track">${steps.map((s, i) => `<li class="${i <= at ? "done" : ""}"><span><i class="ri-${i <= at ? "check" : "time"}-line"></i></span>${s}</li>`).join("")}</ol>`}
+      <div class="d-box"><h4>Customer</h4><div class="who who--lg">${avatar(o.cu)}<span><b>${o.cu.n}</b><small>${o.cu.e}</small></span></div>
+        <p class="d-line"><i class="ri-map-pin-line"></i> ${120 + (o.id % 700)} Market Street, ${o.cu.country}</p><p class="d-line"><i class="ri-bank-card-line"></i> ${o.pay}</p></div>
+      <div class="d-box"><h4>Items (${o.items.length})</h4>${o.items.map((it) => `<div class="d-item"><img src="${U(it.p.img, 120)}" alt="${it.p.n}" /><div><b>${it.p.n}</b><small>${it.p.sku} · Qty ${it.q}</small></div><b>${fmt(it.p.p * it.q, 2)}</b></div>`).join("")}
+        <dl class="d-sum"><dt>Subtotal</dt><dd>${fmt(o.sub, 2)}</dd><dt>Shipping</dt><dd>${o.ship ? fmt(o.ship, 2) : "Free"}</dd><dt>Tax (8%)</dt><dd>${fmt(o.tax, 2)}</dd><dt class="tot">Total</dt><dd class="tot">${fmt(o.total, 2)}</dd></dl></div>
+      <div class="d-box"><h4>Update status</h4><div class="d-update"><select id="dStatus" aria-label="Order status">${Object.keys(STATUS).map((s) => `<option ${s === o.status ? "selected" : ""}>${s}</option>`).join("")}</select><button class="btn" id="dSave">Update</button></div></div>
+      <div class="d-actions"><button class="btn btn--outline" id="dInvoice"><i class="ri-mail-send-line"></i> Send invoice</button><button class="btn btn--outline" id="dPrint"><i class="ri-printer-line"></i> Print</button></div>`;
+    $("drawer").classList.add("open"); $("overlay").classList.add("show"); $("drawer").setAttribute("aria-hidden", "false");
+  }
+  const closeDrawer = () => { $("drawer").classList.remove("open"); $("overlay").classList.remove("show"); $("drawer").setAttribute("aria-hidden", "true"); };
+  $("dClose").onclick = closeDrawer; $("overlay").onclick = closeDrawer;
+  $("dBody").addEventListener("click", (e) => {
+    if (e.target.closest("#dSave")) { openOrder.status = $("dStatus").value; renderOrders(); renderOverview(); openDrawer(openOrder.id); toast(`Order #KR-${openOrder.id} set to ${openOrder.status}`); }
+    if (e.target.closest("#dInvoice")) toast(`Invoice sent to ${openOrder.cu.e}`, "ri-mail-check-line");
+    if (e.target.closest("#dPrint")) window.print();
+  });
+  ["recentTable", "ordersTable"].forEach((t) => {
+    $(t).addEventListener("click", (e) => { if (e.target.closest("input")) return; const r = e.target.closest("tr[data-o]"); if (r) openDrawer(+r.dataset.o); });
+    $(t).addEventListener("keydown", (e) => { const r = e.target.closest("tr[data-o]"); if (r && e.key === "Enter") openDrawer(+r.dataset.o); });
+  });
+
+  /* ===== Products ===== */
+  const P = { q: "", cat: "All", sort: "sold" };
+  function renderProducts() {
+    $("catTabs").innerHTML = ["All", ...CATS].map((c) => `<button class="${c === P.cat ? "on" : ""}" data-c="${c}">${c}<em>${c === "All" ? PRODUCTS.length : PRODUCTS.filter((p) => p.c === c).length}</em></button>`).join("");
+    const q = P.q.toLowerCase();
+    const s = { sold: (a, b) => b.sold - a.sold, stock: (a, b) => a.stock - b.stock, "price-h": (a, b) => b.p - a.p, "price-l": (a, b) => a.p - b.p }[P.sort];
+    const list = PRODUCTS.filter((p) => (P.cat === "All" || p.c === P.cat) && (!q || (p.n + p.sku + p.c).toLowerCase().includes(q))).sort(s);
+    $("productGrid").innerHTML = list.map((p) => {
+      const lvl = p.stock < 15 ? "red" : p.stock < 60 ? "orange" : "green";
+      return `<article class="prod">
+        <div class="prod__img">${p.img ? `<img src="${U(p.img, 500)}" alt="${p.n}" loading="lazy" />` : `<span class="prod__ph"><i class="ri-image-line"></i></span>`}
+          ${p.stock < 15 ? `<span class="badge badge--red">Low stock</span>` : p.isNew ? `<span class="badge badge--blue">New</span>` : ""}
+          <button class="prod__del" data-del="${p.id}" aria-label="Delete ${p.n}"><i class="ri-delete-bin-6-line"></i></button></div>
+        <div class="prod__body"><small>${p.c} · ${p.sku}</small><h4>${p.n}</h4>
+          <div class="prod__row"><strong>${fmt(p.p, 2)}</strong><span>${num(p.sold)} sold</span></div>
+          <div class="stock stock--${lvl}"><span class="prog"><i style="width:${Math.min(100, p.stock / 2)}%"></i></span><small>${p.stock} in stock</small></div></div>
+      </article>`;
+    }).join("") || `<div class="empty-box"><i class="ri-price-tag-3-line"></i><strong>No products found</strong><span>Try another search or category.</span></div>`;
+  }
+  $("catTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; P.cat = b.dataset.c; renderProducts(); });
+  $("productSearch").addEventListener("input", (e) => { P.q = e.target.value; renderProducts(); });
+  $("productSort").addEventListener("change", (e) => { P.sort = e.target.value; renderProducts(); });
+  $("productGrid").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-del]"); if (!b) return;
+    const i = PRODUCTS.findIndex((p) => p.id === +b.dataset.del);
+    if (i > -1 && confirm(`Delete "${PRODUCTS[i].n}"?`)) { const [p] = PRODUCTS.splice(i, 1); renderProducts(); toast(`"${p.n}" deleted`, "ri-delete-bin-6-line"); }
+  });
+  $("pCat").innerHTML = CATS.map((c) => `<option>${c}</option>`).join("");
+  const modal = (open) => { $("productModal").hidden = !open; if (open) setTimeout(() => $("pName").focus(), 50); };
+  $("addProductBtn").onclick = () => modal(true);
+  $("productModal").addEventListener("click", (e) => { if (e.target === $("productModal") || e.target.closest("[data-close]")) modal(false); });
+  $("productForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const p = { id: Date.now(), n: $("pName").value.trim(), c: $("pCat").value, p: +$("pPrice").value, stock: +$("pStock").value, sku: $("pSku").value.trim() || "NEW-" + String(Date.now()).slice(-4), sold: 0, img: "", isNew: true };
+    const twin = PRODUCTS.find((x) => x.c === p.c && x.img); if (twin) p.img = twin.img;
+    PRODUCTS.unshift(p); e.target.reset(); modal(false); P.cat = "All"; P.sort = "stock"; $("productSort").value = "stock";
+    renderProducts(); toast(`"${p.n}" added to your store`);
+  });
+
+  /* ===== Customers ===== */
+  const C = { q: "", seg: "All" };
+  const custStats = () => CUSTOMERS.map((c) => {
+    const os = ORDERS.filter((o) => o.cu === c && o.status !== "Cancelled");
+    const orders = c.baseOrders + os.length, spent = c.baseSpent + sum(os.map((o) => o.total));
+    const last = os.length ? os[0].date : new Date(now - (40 + (c.baseOrders * 13) % 90) * 864e5);
+    const seg = spent >= 5000 ? "VIP" : orders <= 2 ? "New" : "Returning";
+    return { ...c, orders, spent, last, seg };
+  });
+  function renderCustomers() {
+    const all = custStats(), segs = ["All", "VIP", "Returning", "New"];
+    $("segTabs").innerHTML = segs.map((s) => `<button class="${s === C.seg ? "on" : ""}" data-s="${s}">${s}<em>${s === "All" ? all.length : all.filter((c) => c.seg === s).length}</em></button>`).join("");
+    const q = C.q.toLowerCase();
+    const list = all.filter((c) => (C.seg === "All" || c.seg === C.seg) && (!q || (c.n + c.e + c.country).toLowerCase().includes(q))).sort((a, b) => b.spent - a.spent);
+    $("custTable").innerHTML = `<thead><tr><th>Customer</th><th class="hide-sm">Country</th><th>Orders</th><th>Total spent</th><th class="hide-md">Last order</th><th class="hide-sm">Segment</th></tr></thead><tbody>${list.map((c) => `
+      <tr><td><div class="who">${avatar(c)}<span><b>${c.n}</b><small>${c.e}</small></span></div></td><td class="hide-sm"><span class="cc">${c.cc}</span>${c.country}</td>
+      <td>${c.orders}</td><td><b>${fmt(c.spent, 2)}</b></td><td class="hide-md">${dShort(c.last)}</td><td class="hide-sm"><span class="badge badge--${{ VIP: "blue", Returning: "green", New: "orange" }[c.seg]}">${c.seg}</span></td></tr>`).join("") ||
+      `<tr class="empty"><td colspan="6"><i class="ri-user-search-line"></i><strong>No customers found</strong><span>Try another search or segment.</span></td></tr>`}</tbody>`;
+
+    const byC = {}; all.forEach((c) => (byC[c.country] = byC[c.country] || { cc: c.cc, v: 0 }, byC[c.country].v += c.spent));
+    const top = Object.entries(byC).sort((a, b) => b[1].v - a[1].v).slice(0, 6), max = top[0][1].v;
+    $("countries").innerHTML = top.map(([n, { cc, v }]) => `<li><span class="bars__l"><span class="cc">${cc}</span>${n}</span><span class="bars__v">${fmt(v)}</span><span class="prog"><i style="width:${(v / max) * 100}%"></i></span></li>`).join("");
+  }
+  $("segTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; C.seg = b.dataset.s; renderCustomers(); });
+  $("custSearch").addEventListener("input", (e) => { C.q = e.target.value; renderCustomers(); });
+  $("inviteBtn").onclick = () => toast(`Campaign draft created for ${CUSTOMERS.length} customers`, "ri-mail-check-line");
+
+  /* ===== Charts ===== */
+  const charts = {};
+  const tooltip = { backgroundColor: "#111a3a", padding: 12, cornerRadius: 10, titleFont: { weight: "700" }, boxPadding: 4 };
+  const CHARTS = {
+    overview() {
+      const r = RANGES[range];
+      const data = { labels: r.labels, datasets: [
+        { label: "This period", data: r.cur, borderColor: css("--primary"), backgroundColor: rgba(css("--primary"), 0.1), fill: true, tension: 0.4, pointRadius: 0, pointHoverRadius: 5, pointBackgroundColor: css("--primary"), borderWidth: 3 },
+        { label: "Previous period", data: r.prev, borderColor: css("--muted"), borderDash: [6, 6], pointRadius: 0, pointHoverRadius: 4, borderWidth: 2, tension: 0.4 } ] };
+      if (charts.rev) { charts.rev.data = data; charts.rev.update(); }
+      else charts.rev = new Chart($("revChart"), { type: "line", data, options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        plugins: { legend: { display: false }, tooltip: { ...tooltip, callbacks: { label: (c) => ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
+        scales: { x: { grid: { display: false }, ticks: { maxTicksLimit: 8, maxRotation: 0 } }, y: { border: { display: false }, ticks: { callback: (v) => short(v), maxTicksLimit: 6 } } } } });
+      if (!charts.cat) charts.cat = new Chart($("catChart"), { type: "doughnut",
+        data: { labels: catShare.map((c) => c[0]), datasets: [{ data: catShare.map((c) => c[1]), backgroundColor: catShare.map((c) => css(c[2])), borderColor: css("--card"), borderWidth: 4, hoverOffset: 6 }] },
+        options: { maintainAspectRatio: false, cutout: "74%", plugins: { legend: { display: false }, tooltip: { ...tooltip, callbacks: { label: (c) => ` ${c.label}: ${c.raw}%` } } } } });
+    },
+    customers() {
+      if (!charts.cust) charts.cust = new Chart($("custChart"), { type: "bar",
+        data: { labels: RANGES["12M"].labels, datasets: [{ label: "New customers", data: NEWCUST, backgroundColor: NEWCUST.map((_, i) => (i === 11 ? css("--primary") : rgba(css("--primary"), 0.22))), hoverBackgroundColor: css("--primary"), borderRadius: 8, maxBarThickness: 34 }] },
+        options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip }, scales: { x: { grid: { display: false } }, y: { border: { display: false }, ticks: { maxTicksLimit: 5 } } } } });
+    },
+  };
+  function drawCharts(page) {
+    if (typeof Chart === "undefined") return;
+    Chart.defaults.font.family = "'Public Sans', sans-serif"; Chart.defaults.color = css("--text"); Chart.defaults.borderColor = css("--line");
+    if (CHARTS[page]) CHARTS[page]();
+  }
+  const resetCharts = () => { Object.keys(charts).forEach((k) => { charts[k].destroy(); delete charts[k]; }); drawCharts(current); };
+  $("rangeSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return; range = b.dataset.r;
+    $("rangeSeg").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); renderOverview(); drawCharts("overview");
+  });
+
+  /* ===== Router ===== */
+  const PAGES = ["overview", "orders", "products", "customers", "settings"];
+  let current = "overview";
+  function route() {
+    const h = location.hash.slice(1); current = PAGES.includes(h) ? h : "overview";
+    document.querySelectorAll(".page").forEach((s) => (s.hidden = s.id !== "page-" + current));
+    document.querySelectorAll("#sideNav a[data-page]").forEach((a) => a.classList.toggle("active", a.dataset.page === current));
+    document.title = `${current[0].toUpperCase() + current.slice(1)} — Kora Admin`;
+    $("app").classList.remove("menu-open"); closeMenus(); scrollTo(0, 0); drawCharts(current);
+  }
+  addEventListener("hashchange", route);
+
+  /* ===== Topbar ===== */
+  const mobile = () => matchMedia("(max-width: 991px)").matches;
+  $("app").classList.toggle("mini", store.get("mini", false));
+  $("burger").onclick = () => { if (mobile()) $("app").classList.toggle("menu-open"); else { $("app").classList.toggle("mini"); store.set("mini", $("app").classList.contains("mini")); setTimeout(() => Object.values(charts).forEach((c) => c.resize()), 320); } };
+  $("sideOverlay").onclick = () => $("app").classList.remove("menu-open");
+  $("sideHelp").onclick = (e) => { e.preventDefault(); toast("Help center: docs.korastore.com — we reply within 2 hours", "ri-customer-service-2-line"); };
+  $("upgradeBtn").onclick = () => toast("Kora Pro: 14-day free trial started", "ri-vip-crown-line");
+  $("signOut").onclick = (e) => { e.preventDefault(); closeMenus(); toast("You've been signed out (demo)", "ri-logout-box-r-line"); };
+
+  const closeMenus = () => document.querySelectorAll(".dd__menu.open").forEach((m) => m.classList.remove("open"));
+  [["notifBtn", "notifMenu"], ["profileBtn", "profileMenu"]].forEach(([b, m]) => $(b).addEventListener("click", (e) => { e.stopPropagation(); const open = $(m).classList.contains("open"); closeMenus(); $(m).classList.toggle("open", !open); }));
+  document.addEventListener("click", (e) => { if (!e.target.closest(".dd__menu")) closeMenus(); });
+  const renderNotifs = () => { $("notifList").innerHTML = activity().slice(0, 4).map(([i, c, t, time], k) => `<a href="#${k === 1 ? "products" : "orders"}" class="notif ${notifRead ? "" : "unread"}"><span class="feed__ic" style="--c:var(${c})"><i class="${i}"></i></span><div><p>${t}</p><small>${time}</small></div></a>`).join(""); $("notifDot").hidden = notifRead; };
+  let notifRead = store.get("notifRead", false);
+  $("markRead").onclick = (e) => { e.stopPropagation(); notifRead = true; store.set("notifRead", true); renderNotifs(); };
+
+  $("searchForm").addEventListener("submit", (e) => {
+    e.preventDefault(); const q = $("searchInput").value.trim(); if (!q) return;
+    const isCust = CUSTOMERS.some((c) => c.n.toLowerCase().includes(q.toLowerCase())) && !/\d/.test(q);
+    O.q = q; O.st = "All"; O.page = 1; $("orderSearch").value = q;
+    if (isCust) { C.q = q; $("custSearch").value = q; }
+    location.hash = isCust ? "customers" : "orders"; renderOrders(); renderCustomers();
+  });
+  addEventListener("keydown", (e) => {
+    if (e.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); $("searchInput").focus(); }
+    if (e.key === "Escape") { closeDrawer(); modal(false); closeMenus(); $("app").classList.remove("menu-open"); }
+  });
+
+  /* Theme */
+  const setTheme = (t) => {
+    document.documentElement.dataset.theme = t; store.set("theme", t);
+    $("themeBtn").innerHTML = `<i class="ri-${t === "dark" ? "sun" : "moon"}-line"></i>`;
+    document.querySelectorAll('#themePick input').forEach((i) => (i.checked = i.value === t));
+    renderOverview(); resetCharts();
+  };
+  $("themeBtn").onclick = () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+  $("themePick").addEventListener("change", (e) => setTheme(e.target.value));
+
+  /* Currency */
+  const setCurrency = (c) => {
+    currency = c; store.set("currency", c); $("topCurrency").value = $("setCurrency").value = c;
+    renderAll(); if (openOrder && $("drawer").classList.contains("open")) openDrawer(openOrder.id); Object.values(charts).forEach((ch) => ch.update());
+  };
+  $("topCurrency").onchange = (e) => { setCurrency(e.target.value); toast(`Prices now shown in ${e.target.value}`, "ri-exchange-dollar-line"); };
+  $("setCurrency").onchange = (e) => setCurrency(e.target.value);
+  $("editGoal").onclick = () => {
+    const v = prompt(`Monthly revenue goal (USD)`, goal); const n = parseFloat(v);
+    if (n > 0) { goal = n; store.set("goal", n); renderOverview(); toast("Monthly goal updated", "ri-flag-line"); }
+  };
+  $("exportReport").onclick = () => {
+    const r = RANGES[range]; download(`kora-revenue-${range}.csv`, [["Period", "Revenue (" + currency + ")", "Previous (" + currency + ")"], ...r.labels.map((l, i) => [l, (r.cur[i] * RATES[currency]).toFixed(2), (r.prev[i] * RATES[currency]).toFixed(2)])].map((x) => x.join(",")).join("\n"));
+    toast("Revenue report downloaded", "ri-download-2-line");
+  };
+
+  /* Settings */
+  $("toggles").innerHTML = [["New orders", "Email me when a customer places an order", true], ["Low stock alerts", "When a product drops below 15 units", true], ["Weekly report", "Summary of sales every Monday morning", true], ["Product reviews", "When a customer leaves a review", false], ["Marketing tips", "Occasional ideas to grow your store", false]]
+    .map(([t, d, on], i) => `<label class="tgl"><span><strong>${t}</strong><small>${d}</small></span><input type="checkbox" ${on ? "checked" : ""} aria-label="${t}" /><i></i></label>`).join("");
+  $("settingsForm").addEventListener("submit", (e) => {
+    e.preventDefault(); const n = $("setName").value.trim(); $("profileName").textContent = n; renderOverview(); toast("Settings saved");
+  });
+  $("settingsForm").addEventListener("reset", () => setTimeout(() => { $("setCurrency").value = currency; toast("Changes discarded", "ri-arrow-go-back-line"); }));
+  $("photoBtn").onclick = () => toast("Photo upload opens your file picker in the live version", "ri-image-add-line");
+  $("photoRemove").onclick = () => toast("Profile photo removed (demo)", "ri-delete-bin-6-line");
+
+  /* ===== Init ===== */
+  function renderAll() { renderOverview(); renderOrders(); renderProducts(); renderCustomers(); renderNotifs(); }
+  $("year").textContent = now.getFullYear();
+  $("topCurrency").value = $("setCurrency").value = currency;
+  const theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  $("themeBtn").innerHTML = `<i class="ri-${theme === "dark" ? "sun" : "moon"}-line"></i>`;
+  document.querySelectorAll('#themePick input').forEach((i) => (i.checked = i.value === theme));
+  renderAll(); route();
+  if (document.fonts) document.fonts.ready.then(() => { if (charts.rev) resetCharts(); });
+</script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/dashboard-kora/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

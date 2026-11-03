@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rania Aziz — Immigration Lawyer, Toronto</title>
+  <meta name="description" content="Rania Aziz is a Toronto immigration lawyer helping families, students and skilled workers come to Canada. Work and study permits, spousal sponsorship, Express Entry, citizenship and refusals. Flat fees, consultations in English, French and Arabic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo">Rania Aziz<small>Barrister &amp; Solicitor · Immigration</small></a>
+      <nav class="nav" id="nav">
+        <a href="#services">How I can help</a>
+        <a href="#fees">Fees</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#book" class="btn btn--sm header__cta">Book a consultation</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="kicker">Canadian immigration lawyer · Toronto</p>
+        <h1>Your move to Canada, handled by a lawyer — not a call centre.</h1>
+        <p class="hero__lead">I help skilled workers, students and families get their applications right the first time, and fix the ones that went wrong. You deal with me directly, from the first call to the approval letter.</p>
+        <div class="hero__ctas">
+          <a href="#book" class="btn">Book a consultation</a>
+          <a href="#services" class="btn btn--line">Find your pathway <i class="ri-arrow-down-line"></i></a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt><span data-count="14">14</span> years</dt><dd>practising immigration law</dd></div>
+          <div><dt><span data-count="1900">1,900</span>+</dt><dd>applications filed</dd></div>
+          <div><dt>EN · FR · AR</dt><dd>consultations in three languages</dd></div>
+        </dl>
+      </div>
+      <figure class="hero__portrait">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80" alt="Rania Aziz, immigration lawyer, in her Toronto office" />
+        <figcaption><strong>Rania Aziz, JD</strong><span>Licensed by the Law Society of Ontario · LSO #71842P</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Pathways -->
+  <section class="section section--cream" id="services">
+    <div class="container">
+      <div class="head">
+        <p class="kicker">How I can help</p>
+        <h2 class="h2">What are you trying to do?</h2>
+        <p>Choose your situation to see what's involved, how long it takes and what I charge.</p>
+      </div>
+      <div class="paths" id="pathTabs" role="tablist"></div>
+      <article class="path" id="pathPanel" role="tabpanel"></article>
+    </div>
+  </section>
+
+  <!-- Fees -->
+  <section class="section" id="fees">
+    <div class="container fees">
+      <div class="fees__intro">
+        <p class="kicker">Fees</p>
+        <h2 class="h2">Flat fees, agreed in writing before we start.</h2>
+        <p>No hourly billing surprises. My fee covers the whole application — preparation, review, submission and every letter from IRCC until a decision. Pay in two or three instalments.</p>
+        <ul class="fees__notes">
+          <li><i class="ri-check-line"></i> Consultation fee credited if you hire me</li>
+          <li><i class="ri-check-line"></i> Government fees paid directly to IRCC, never marked up</li>
+          <li><i class="ri-check-line"></i> Family members added for a fixed extra fee</li>
+        </ul>
+      </div>
+      <div class="table-wrap">
+        <table class="fee-table">
+          <thead><tr><th>Application</th><th>My fee</th><th>Government fee</th></tr></thead>
+          <tbody id="feeRows"></tbody>
+        </table>
+        <p class="small">All amounts in Canadian dollars. HST applies to legal fees for clients in Canada. Government fees as published by IRCC and subject to change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--ink" id="process">
+    <div class="container process">
+      <div>
+        <p class="kicker">Working together</p>
+        <h2 class="h2">What happens after you hire me.</h2>
+        <p class="process__lead">Most clients tell me the hardest part was not knowing what was happening. So you get a shared checklist, a named deadline for every document, and an update every time IRCC moves.</p>
+        <a href="#book" class="btn">Start with a consultation</a>
+      </div>
+      <ol class="timeline">
+        <li><span>Day 1</span><strong>Consultation</strong><p>We go through your history, I tell you honestly whether you qualify and which route is strongest.</p></li>
+        <li><span>Week 1</span><strong>Retainer &amp; checklist</strong><p>You receive a written fee agreement and a personal document checklist in a secure client portal.</p></li>
+        <li><span>Weeks 2–6</span><strong>Building the file</strong><p>I review every document, draft your letters and forms, and flag anything that could cause a refusal.</p></li>
+        <li><span>Submission</span><strong>Filed with IRCC</strong><p>You approve the final package before I submit it. I'm the representative on file, so IRCC writes to me.</p></li>
+        <li><span>Decision</span><strong>Approval — or a plan</strong><p>I handle biometrics, medicals and requests for more information. If it's refused, we look at your options the same week.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section" id="results">
+    <div class="container">
+      <div class="head head--row">
+        <div>
+          <p class="kicker">Recent results</p>
+          <h2 class="h2">Real files, shared with permission.</h2>
+        </div>
+        <p>Names and details changed. Every case is different and past results don't guarantee a future outcome.</p>
+      </div>
+      <div class="cases" id="cases"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--cream" id="about">
+    <div class="container about">
+      <div class="about__img">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=80" alt="Rania Aziz law office on Adelaide Street West" loading="lazy" />
+      </div>
+      <div class="about__copy">
+        <p class="kicker">About Rania</p>
+        <h2 class="h2">I came to Canada on a study permit too.</h2>
+        <p>I arrived in Ottawa from Beirut at 19 with two suitcases and a letter of acceptance. Ten years later I was called to the Ontario bar, and I've practised nothing but immigration law since.</p>
+        <p>My practice is deliberately small: I take on a limited number of files each month so that I personally prepare every one of them. When you call, you speak to me or to Julien, my law clerk of eight years.</p>
+        <dl class="creds">
+          <div><dt>Education</dt><dd>JD, University of Ottawa, 2011</dd></div>
+          <div><dt>Called to the bar</dt><dd>Ontario, 2012</dd></div>
+          <div><dt>Memberships</dt><dd>Canadian Bar Association, Immigration Law Section</dd></div>
+          <div><dt>Languages</dt><dd>English, French, Arabic</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="quote" id="quote"></div>
+      <div class="quote__nav">
+        <button id="qPrev" aria-label="Previous review"><i class="ri-arrow-left-line"></i></button>
+        <span id="qNum">1 / 4</span>
+        <button id="qNext" aria-label="Next review"><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section class="section section--cream" id="insights">
+    <div class="container">
+      <div class="head head--row">
+        <div>
+          <p class="kicker">Notes</p>
+          <h2 class="h2">Plain-English updates</h2>
+        </div>
+        <a href="#" class="link">All articles <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="posts">
+        <a href="#" class="post">
+          <div><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Plane wing above the clouds" loading="lazy" /></div>
+          <span>Express Entry · 6 min read</span>
+          <h3>Category-based draws in 2026: who is actually getting invited</h3>
+        </a>
+        <a href="#" class="post">
+          <div><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80" alt="Family on a beach at sunset" loading="lazy" /></div>
+          <span>Family sponsorship · 8 min read</span>
+          <h3>Proving your relationship is genuine: what officers look for</h3>
+        </a>
+        <a href="#" class="post">
+          <div><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Signing an application form" loading="lazy" /></div>
+          <span>Refusals · 5 min read</span>
+          <h3>Refused? Reapply, reconsider or go to Federal Court</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div>
+        <p class="kicker">FAQ</p>
+        <h2 class="h2">Common questions</h2>
+      </div>
+      <div class="acc">
+        <details open><summary>Do I need a lawyer, or can I apply myself?</summary><p>Many people apply successfully on their own. A lawyer is worth it when your history is complicated — a previous refusal, a gap in status, a criminal record, or a relationship IRCC might question — or when you simply can't afford a mistake.</p></details>
+        <details><summary>Can you guarantee my application will be approved?</summary><p>No, and you should be wary of anyone who does. Decisions are made by IRCC officers. What I can promise is an honest assessment before you pay, and a complete, well-argued file.</p></details>
+        <details><summary>I'm outside Canada. Can you still help?</summary><p>Yes — about half of my clients are abroad. Consultations are by video and everything else is handled through the secure client portal.</p></details>
+        <details><summary>What's the difference between a lawyer and a consultant?</summary><p>Both can represent you before IRCC. Only a lawyer can represent you in Federal Court if an application is refused and you need a judicial review.</p></details>
+        <details><summary>How quickly can we start?</summary><p>Consultations are usually available within the week. Once you sign the retainer, you receive your document checklist the same day.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section class="section section--cream" id="book">
+    <div class="container book">
+      <div class="book__info">
+        <p class="kicker">Book a consultation</p>
+        <h2 class="h2">Get a straight answer about your options.</h2>
+        <p>You'll leave the consultation knowing whether you qualify, which programme fits, how long it takes and what it will cost. If you hire me, the consultation fee is credited to your file.</p>
+        <ul class="office">
+          <li><i class="ri-map-pin-line"></i><span>Suite 1410, 120 Adelaide Street West<br />Toronto, ON M5H 1T1</span></li>
+          <li><i class="ri-phone-line"></i><a href="tel:+14165550142">+1 416 555 0142</a></li>
+          <li><i class="ri-mail-line"></i><a href="mailto:office@raniaaziz.ca">office@raniaaziz.ca</a></li>
+          <li><i class="ri-time-line"></i><span>Mon–Fri 9:00–17:30 ET · Evening video calls on request</span></li>
+        </ul>
+      </div>
+      <form class="card form" id="bookForm">
+        <fieldset class="ctype" id="ctype">
+          <legend>Consultation</legend>
+          <label><input type="radio" name="ctype" value="video" checked /><span><strong>Video call</strong><em>45 min · $175</em></span></label>
+          <label><input type="radio" name="ctype" value="office" /><span><strong>In my office</strong><em>60 min · $225</em></span></label>
+        </fieldset>
+        <label><span>What is it about?</span>
+          <select name="matter" id="matter"></select>
+        </label>
+        <div class="form__label">Choose a day</div>
+        <div class="bdays" id="bdays"></div>
+        <div class="btimes" id="btimes"></div>
+        <div class="form__row">
+          <label><span>Full name</span><input required name="name" autocomplete="name" /></label>
+          <label><span>Email</span><input required type="email" name="email" autocomplete="email" /></label>
+        </div>
+        <label><span>Current country and status</span><input name="status" placeholder="e.g. In Canada on a work permit expiring March 2027" /></label>
+        <button class="btn btn--block" type="submit" id="bookBtn">Request this time</button>
+        <p class="form__ok" id="bookOk" hidden></p>
+        <p class="small">Booking a consultation does not create a lawyer–client relationship. Please don't send confidential documents until we've spoken.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__in">
+      <div>
+        <a href="#home" class="logo logo--light">Rania Aziz<small>Barrister &amp; Solicitor · Immigration</small></a>
+        <p>Rania Aziz Professional Corporation. Licensed by the Law Society of Ontario.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#services">How I can help</a>
+        <a href="#fees">Fees</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a href="#book">Book a consultation</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>The information on this website is general and is not legal advice. Every application depends on its own facts. © 2026 Rania Aziz Professional Corporation · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+    const PATHS = [
+      { key: "work", tab: "Work in Canada", icon: "ri-briefcase-4-line", title: "Work permits", text: "You have a Canadian job offer, or your employer wants to bring you over. I work out whether you need an LMIA or qualify for an exemption, and prepare the permit application for you and your family.", who: ["Employer-specific (LMIA) work permits", "Intra-company transfers", "CUSMA professionals", "Spousal open work permits"], docs: ["Job offer and employment contract", "Proof of qualifications and experience", "Passport and civil documents"], time: "Typically 2–4 months from outside Canada", fee: "$2,200" },
+      { key: "study", tab: "Study", icon: "ri-graduation-cap-line", title: "Study permits", text: "You've been accepted by a Canadian college or university. Study permit refusals are common — usually because the officer isn't convinced about your finances or your plans. We make both clear.", who: ["Undergraduate and graduate students", "Provincial attestation letters", "Bringing your spouse and children", "Post-graduation work permits"], docs: ["Letter of acceptance and PAL", "Proof of funds for tuition and living", "Study plan explaining your goals"], time: "Typically 6–12 weeks", fee: "$1,500" },
+      { key: "family", tab: "Sponsor family", icon: "ri-parent-line", title: "Spousal & family sponsorship", text: "You're a Canadian citizen or permanent resident and want to bring your husband, wife, partner or child to live with you. The strength of the relationship evidence decides most of these files.", who: ["Spouses and common-law partners", "Conjugal partners", "Dependent children", "Parents and grandparents (super visa or PGP)"], docs: ["Marriage or relationship evidence", "Photos, messages and travel history", "Sponsor's proof of status and income"], time: "Typically 10–14 months", fee: "$3,800" },
+      { key: "pr", tab: "Permanent residence", icon: "ri-home-heart-line", title: "Express Entry & provincial nominee", text: "You want to live in Canada permanently. I calculate your CRS score properly, find the provincial streams you qualify for, and prepare the application the moment you receive an invitation.", who: ["Federal Skilled Worker", "Canadian Experience Class", "Ontario Immigrant Nominee Program", "French-speaking candidates"], docs: ["Language test results (IELTS, CELPIP, TEF)", "Educational credential assessment", "Reference letters from employers"], time: "About 6 months after invitation", fee: "$3,500" },
+      { key: "cit", tab: "Citizenship", icon: "ri-flag-line", title: "Citizenship applications", text: "You've been a permanent resident long enough and want a Canadian passport. Straightforward for most — but travel history and tax filings need to match exactly.", who: ["Adults and minors", "Physical presence calculation", "Applications with long absences", "Proof of citizenship"], docs: ["PR card and travel history", "Tax notices of assessment", "Language proof (ages 18–54)"], time: "Typically 10–12 months to the oath", fee: "$1,200" },
+      { key: "ref", tab: "Refused or in trouble", icon: "ri-error-warning-line", title: "Refusals, appeals & status problems", text: "Your application was refused, your status is about to expire, or you've received a procedural fairness letter. Deadlines here are short — some are 15 days — so call as soon as you can.", who: ["Judicial review in Federal Court", "Reconsideration requests", "Restoration of status", "Inadmissibility and procedural fairness letters"], docs: ["The refusal letter and officer's notes (GCMS)", "Your full original application", "Any letters received from IRCC or CBSA"], time: "15–60 day deadlines apply", fee: "from $2,500" }
+    ];
+
+    const FEES = [
+      ["Work permit (LMIA-exempt or LMIA-based)", "$2,200", "$155"],
+      ["Study permit, incl. PAL review", "$1,500", "$150"],
+      ["Spousal or partner sponsorship", "$3,800", "$1,205"],
+      ["Express Entry permanent residence", "$3,500", "$1,525"],
+      ["Visitor visa or super visa", "$950", "$100"],
+      ["Citizenship application", "$1,200", "$649.75"],
+      ["Refusal: judicial review", "from $2,500", "$50"],
+      ["Each additional family member", "$500", "varies"]
+    ];
+
+    const CASES = [
+      { tag: "Spousal sponsorship", title: "Approved after a previous refusal", text: "Sponsorship of a husband in Lebanon had been refused for “insufficient evidence of a genuine relationship”. We rebuilt the file with 4 years of evidence and family statements.", time: "Approved in 11 months" },
+      { tag: "Study permit", title: "Third application, first approval", text: "A nursing student from Nigeria had two refusals on finances. We restructured the proof of funds and wrote a clear study plan tied to Ontario's nursing shortage.", time: "Approved in 7 weeks" },
+      { tag: "Judicial review", title: "Work permit refusal overturned", text: "An engineer's work permit was refused without reasons that matched the evidence. Federal Court sent it back to IRCC, and the permit was issued on redetermination.", time: "Resolved in 5 months" },
+      { tag: "Express Entry", title: "PR through French-language draw", text: "A Montréal-trained accountant with a CRS of 431 — too low for general draws. We identified the French-language category; she was invited in the next round.", time: "PR in 5 months" }
+    ];
+
+    const QUOTES = [
+      { text: "After my study permit was refused twice, I almost gave up. Rania read my old files and told me exactly what the officer was worried about. The third application was approved in seven weeks.", name: "Chidinma O.", role: "Nursing student, Humber College" },
+      { text: "She answered every email the same day, even on a Saturday when we got the request for medicals. My husband landed in Toronto in March.", name: "Lara K.", role: "Spousal sponsorship" },
+      { text: "Clear fee from the start, and she told me honestly that my first idea — the PNP — wasn't my best route. The French draw was. I'm a permanent resident now.", name: "Sophie M.", role: "Express Entry" },
+      { text: "Our company has used Rania for every international hire since 2019. She understands what employers need and keeps our people informed.", name: "David R.", role: "HR Director, software company" }
+    ];
+
+    // Header
+    addEventListener("scroll", () => $("header").classList.toggle("sticky", scrollY > 20), { passive: true });
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") document.body.classList.remove("menu-open"); });
+
+    // Pathways
+    $("pathTabs").innerHTML = PATHS.map((p, i) => `<button role="tab" data-i="${i}"><i class="${p.icon}"></i><span>${p.tab}</span></button>`).join("");
+    function showPath(i) {
+      const p = PATHS[i];
+      document.querySelectorAll("#pathTabs button").forEach((b) => { const on = +b.dataset.i === i; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
+      $("pathPanel").innerHTML = `
+        <div class="path__main">
+          <h3>${p.title}</h3>
+          <p>${p.text}</p>
+          <div class="path__cols">
+            <div><h4>I handle</h4><ul>${p.who.map((w) => `<li><i class="ri-check-line"></i>${w}</li>`).join("")}</ul></div>
+            <div><h4>You'll need</h4><ul>${p.docs.map((d) => `<li><i class="ri-file-text-line"></i>${d}</li>`).join("")}</ul></div>
+          </div>
+        </div>
+        <aside class="path__side">
+          <div><span>Processing time</span><strong>${p.time}</strong></div>
+          <div><span>My flat fee</span><strong class="path__fee">${p.fee}</strong><small>+ government fees · HST</small></div>
+          <button class="btn btn--block" data-book="${p.key}">Book a consultation</button>
+        </aside>`;
+    }
+    $("pathTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) showPath(+b.dataset.i); });
+    $("pathPanel").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-book]"); if (!b) return;
+      $("matter").value = b.dataset.book; $("book").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Fees, cases
+    $("feeRows").innerHTML = FEES.map(([a, f, g]) => `<tr><td>${a}</td><td><strong>${f}</strong></td><td>${g}</td></tr>`).join("");
+    $("cases").innerHTML = CASES.map((c) => `
+      <article class="case">
+        <div class="case__top"><span class="case__tag">${c.tag}</span><span class="case__ok"><i class="ri-checkbox-circle-fill"></i> ${c.time}</span></div>
+        <h3>${c.title}</h3>
+        <p>${c.text}</p>
+      </article>`).join("");
+
+    // Testimonials
+    let qi = 0;
+    function showQuote(i) {
+      qi = (i + QUOTES.length) % QUOTES.length; const q = QUOTES[qi];
+      $("quote").innerHTML = `<blockquote>“${q.text}”</blockquote><p><strong>${q.name}</strong> · ${q.role}</p>`;
+      $("qNum").textContent = `${qi + 1} / ${QUOTES.length}`;
+    }
+    $("qPrev").addEventListener("click", () => showQuote(qi - 1));
+    $("qNext").addEventListener("click", () => showQuote(qi + 1));
+
+    // Booking
+    $("matter").innerHTML = PATHS.map((p) => `<option value="${p.key}">${p.title}</option>`).join("") + `<option value="other">Something else</option>`;
+    const DN = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const days = []; const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + 1);
+    while (days.length < 8) { if (d.getDay() % 6) days.push(new Date(d)); d.setDate(d.getDate() + 1); }
+    const TIMES = ["09:30", "10:30", "11:30", "13:30", "14:30", "15:30", "16:30"];
+    const timesFor = (day, type) => TIMES.filter((t, i) => (day.getDate() + i * (type === "office" ? 3 : 2)) % 4 !== 0 && !(type === "office" && t === "16:30"));
+    let bday = days[0], btime = null;
+    const ctype = () => document.querySelector("[name=ctype]:checked").value;
+    function renderBook() {
+      $("bdays").innerHTML = days.map((x) => `<button type="button" class="${x === bday ? "on" : ""}" data-d="${x.getTime()}"><span>${DN[x.getDay()]}</span><strong>${x.getDate()}</strong><small>${MN[x.getMonth()]}</small></button>`).join("");
+      const ts = timesFor(bday, ctype());
+      if (!ts.includes(btime)) btime = null;
+      $("btimes").innerHTML = ts.map((t) => `<button type="button" class="${t === btime ? "on" : ""}" data-t="${t}">${t}</button>`).join("");
+      $("bookBtn").textContent = btime ? `Request ${DN[bday.getDay()]} ${bday.getDate()} ${MN[bday.getMonth()]} at ${btime}` : "Choose a time";
+      $("bookBtn").disabled = !btime;
+    }
+    $("bdays").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (!b) return; bday = days.find((x) => x.getTime() === +b.dataset.d); renderBook(); });
+    $("btimes").addEventListener("click", (e) => { const b = e.target.closest("[data-t]"); if (!b) return; btime = b.dataset.t; renderBook(); });
+    $("ctype").addEventListener("change", renderBook);
+    $("bookForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const ok = $("bookOk");
+      ok.innerHTML = `<i class="ri-checkbox-circle-fill"></i> Requested: ${ctype() === "video" ? "video call" : "office meeting"} on ${DN[bday.getDay()]} ${bday.getDate()} ${MN[bday.getMonth()]} at ${btime} ET. Julien will email you a confirmation and payment link within one business day.`;
+      ok.hidden = false;
+      e.target.querySelectorAll("input:not([type=radio])").forEach((i) => (i.value = ""));
+    });
+
+
+    // Motion: scroll reveals, count-ups, timeline progress
+    const revealSel = [".head", ".head--row", ".paths", ".path", ".fees__intro", ".table-wrap", ".process > div:first-child", ".timeline li", ".case", ".about__copy > *", ".creds > div", ".quote", ".quote__nav", ".post", ".faq > div:first-child", ".acc details", ".book__info", ".book .card", ".fee-table tbody tr"];
+    document.querySelectorAll(revealSel.join(",")).forEach((el) => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter((c) => c.matches(revealSel.join(",")));
+      el.style.setProperty("--i", Math.min(sibs.indexOf(el), 6));
+    });
+    document.querySelectorAll(".about__img").forEach((el) => el.classList.add("reveal-img"));
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .reveal-img").forEach((el) => io.observe(el));
+
+    document.querySelectorAll("[data-count]").forEach((el) => {
+      const end = +el.dataset.count, t0 = performance.now() + 500, dur = 1600;
+      const tick = (now) => { const p = Math.min(Math.max((now - t0) / dur, 0), 1), v = Math.round(end * (1 - Math.pow(1 - p, 3))); el.textContent = v.toLocaleString("en-US"); if (p < 1) requestAnimationFrame(tick); };
+      el.textContent = "0"; requestAnimationFrame(tick);
+    });
+
+    const tl = document.querySelector(".timeline");
+    const tlItems = [...tl.querySelectorAll("li")];
+    const onScroll = () => {
+      const r = tl.getBoundingClientRect(), mid = innerHeight * 0.6;
+      tl.style.setProperty("--p", Math.min(Math.max((mid - r.top) / r.height, 0), 1));
+      tlItems.forEach((li) => li.classList.toggle("lit", li.getBoundingClientRect().top < mid));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+    showPath(0); showQuote(0); renderBook();
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-rania/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

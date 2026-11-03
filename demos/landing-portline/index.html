@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portline Logistics — Ocean, Air &amp; Road Freight Forwarding</title>
+  <meta name="description" content="Portline Logistics moves containers, air cargo and truckloads between Asia, Europe and the Middle East. Track any shipment live and get an instant freight quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark"><i class="ri-ship-2-fill"></i></span>PORTLINE<small>Logistics</small></a>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#track">Tracking</a>
+        <a href="#quote">Get a quote</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:+31102345600" class="header__phone"><span><i class="ri-customer-service-2-line"></i></span><small>24/7 desk</small>+31 10 234 5600</a>
+      <a href="#quote" class="btn btn--sm">Get a quote</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg"><img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2400&q=80" alt="Aerial view of a container port with stacked containers and cranes" /></div>
+    <div class="container hero__in">
+      <div class="hero__copy">
+        <p class="hero__tag"><i class="ri-map-pin-2-fill"></i> Rotterdam · Shanghai · Dubai · since 1998</p>
+        <h1 class="hero__title"><span>Freight that keeps</span> <span>its <em>promises.</em></span></h1>
+        <p class="hero__lead">Ocean, air and road freight between Asia, Europe and the Gulf — with one team that answers the phone and a tracking page that's actually up to date.</p>
+        <div class="hero__ctas">
+          <a href="#quote" class="btn">Get an instant quote <i class="ri-arrow-right-line"></i></a>
+          <a href="#services" class="btn btn--glass">Our services</a>
+        </div>
+      </div>
+
+      <form class="trackbox" id="trackForm">
+        <div class="trackbox__tabs"><span class="on"><i class="ri-radar-line"></i> Track a shipment</span></div>
+        <label class="trackbox__field">
+          <i class="ri-barcode-line"></i>
+          <input id="trackInput" placeholder="Tracking, B/L or container no." aria-label="Tracking number" autocomplete="off" />
+          <button class="btn" type="submit">Track</button>
+        </label>
+        <p class="trackbox__try">Try: <button type="button" data-try="PL-48213">PL-48213</button><button type="button" data-try="PL-77105">PL-77105</button><button type="button" data-try="PL-20961">PL-20961</button></p>
+        <p class="trackbox__err" id="trackErr"></p>
+      </form>
+    </div>
+    <div class="hero__ticker">
+      <div class="ticker" id="ticker"></div>
+    </div>
+  </section>
+
+  <!-- Tracking -->
+  <section class="section track" id="track">
+    <div class="container">
+      <div class="track__head">
+        <div>
+          <p class="sub-title">Live tracking</p>
+          <h2 class="h2" id="tTitle">Shanghai <i class="ri-arrow-right-line"></i> Duisburg</h2>
+        </div>
+        <div class="track__meta" id="tMeta"></div>
+      </div>
+      <div class="track__grid">
+        <div class="route">
+          <div class="route__top">
+            <span class="route__status" id="tStatus"></span>
+            <span id="tEta"></span>
+          </div>
+          <div class="route__map">
+          <svg class="route__svg" id="routeSvg" viewBox="0 0 800 340" aria-label="Route diagram">
+            <defs>
+              <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" /></pattern>
+            </defs>
+            <rect width="800" height="340" fill="url(#dots)" class="route__dots" />
+            <path id="rLeft" class="route__left" />
+            <path id="rDone" class="route__done" />
+            <g id="rStops"></g>
+          </svg>
+          <span class="route__veh" id="rVehicle"><i id="rIcon"></i></span>
+          </div>
+          <div class="route__bar"><div class="route__fill" id="tFill"></div></div>
+          <div class="route__legend"><span id="tFrom"></span><span id="tPct"></span><span id="tTo"></span></div>
+        </div>
+        <div class="events">
+          <h3>Shipment history</h3>
+          <ol class="tl" id="tl"></ol>
+          <div class="events__btns">
+            <button class="btn btn--ghost btn--sm" id="notify"><i class="ri-notification-3-line"></i> Notify me</button>
+            <button class="btn btn--ghost btn--sm" id="share"><i class="ri-share-line"></i> Copy link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--light" id="services">
+    <div class="container">
+      <div class="title">
+        <p class="sub-title">What we move</p>
+        <h2>One forwarder for <span>every leg</span> of the journey.</h2>
+      </div>
+      <div class="svc" id="svc"></div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section" id="quote">
+    <div class="container quote">
+      <div class="quote__copy">
+        <p class="sub-title">Instant quote</p>
+        <h2 class="h2">Know the price <span>before you ask.</span></h2>
+        <p>Indicative all-in rates for this week, including fuel and terminal handling. Customs and insurance are optional extras. Lock a rate for 7 days with one click.</p>
+        <ul class="quote__list">
+          <li><i class="ri-checkbox-circle-fill"></i> Rates updated every Monday</li>
+          <li><i class="ri-checkbox-circle-fill"></i> No hidden port or documentation fees</li>
+          <li><i class="ri-checkbox-circle-fill"></i> Reply from a real person in under 2 hours</li>
+        </ul>
+      </div>
+      <form class="calc" id="calc">
+        <div class="calc__modes" id="modes">
+          <button type="button" class="on" data-mode="sea"><i class="ri-ship-line"></i> Sea</button>
+          <button type="button" data-mode="air"><i class="ri-plane-line"></i> Air</button>
+          <button type="button" data-mode="road"><i class="ri-truck-line"></i> Road</button>
+        </div>
+        <div class="calc__row">
+          <label>From<select id="qFrom"></select></label>
+          <button type="button" class="swap" id="swap" aria-label="Swap origin and destination"><i class="ri-arrow-left-right-line"></i></button>
+          <label>To<select id="qTo"></select></label>
+        </div>
+        <div class="calc__row calc__row--2">
+          <label id="loadLabel">Load<select id="qLoad"></select></label>
+          <label>Quantity<div class="qty"><button type="button" id="qMinus" aria-label="Less">−</button><input id="qQty" value="1" readonly /><button type="button" id="qPlus" aria-label="More">+</button></div></label>
+        </div>
+        <div class="calc__extras">
+          <label><input type="checkbox" id="xCustoms" /> <span>Customs clearance <b>+$185</b></span></label>
+          <label><input type="checkbox" id="xIns" /> <span>Cargo insurance <b>+0.3%</b></span></label>
+        </div>
+        <div class="calc__out">
+          <div><span>Estimated all-in</span><strong id="qPrice">$0</strong></div>
+          <div><span>Door to door</span><strong id="qDays">0 days</strong></div>
+          <div><span>CO₂e</span><strong id="qCo2">0 t</strong></div>
+        </div>
+        <button class="btn btn--block" type="submit">Lock this rate for 7 days</button>
+        <p class="calc__ok" id="calcOk"><i class="ri-checkbox-circle-fill"></i> Rate locked. Quote <b id="qRef"></b> is in your inbox.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Network -->
+  <section class="network">
+    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=75" alt="" loading="lazy" />
+    <div class="container network__in">
+      <div><strong data-count="140">0</strong><span>ports served in 62 countries</span></div>
+      <div><strong data-count="38">0</strong><span>bonded warehouses we run ourselves</span></div>
+      <div><strong data-count="96.4" data-dec="1">0</strong><span>on-time arrivals in 2025</span></div>
+      <div><strong data-count="410">0</strong><span>logistics people, 11 offices</span></div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="title">
+        <p class="sub-title">Industries</p>
+        <h2>We know the cargo <span>as well as the route.</span></h2>
+      </div>
+      <div class="ind" id="ind"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--light">
+    <div class="container tst">
+      <div class="tst__intro">
+        <p class="sub-title">Clients</p>
+        <h2 class="h2">Shippers stay <span>for years.</span></h2>
+        <p class="tst__score"><strong>4.8</strong><span><b>★★★★★</b>from 620 verified shippers</span></p>
+        <div class="tst__nav"><button id="tPrev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button><button id="tNext" aria-label="Next"><i class="ri-arrow-right-line"></i></button></div>
+      </div>
+      <div class="tst__view"><div class="tst__track" id="tstTrack"></div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div class="title">
+        <p class="sub-title">FAQ</p>
+        <h2>Before you <span>book.</span></h2>
+      </div>
+      <div class="acc" id="acc">
+        <details open><summary>What's the difference between FCL and LCL?</summary><p>FCL (full container load) means you rent a whole 20' or 40' container. LCL (less than container load) means your pallets share a container with other shippers — cheaper below about 13 m³, but 4–6 days slower because of consolidation.</p></details>
+        <details><summary>Do you handle customs clearance?</summary><p>Yes. We're a licensed customs broker in the Netherlands, Germany, Poland and the UAE, and work with vetted partners everywhere else. Add it to any quote for a fixed $185 per declaration.</p></details>
+        <details><summary>Can you ship dangerous goods or temperature-controlled cargo?</summary><p>We move IMO-classified goods by sea and road, and run reefer containers from −25 °C to +25 °C with live temperature logs on the tracking page.</p></details>
+        <details><summary>How accurate is the instant quote?</summary><p>For standard cargo, within ±5% of the final invoice. Oversized cargo, peak-season surcharges and remote pickups are confirmed by your account manager before booking.</p></details>
+        <details><summary>What happens if my shipment is delayed?</summary><p>You'll get an email and SMS the moment the ETA moves by more than 12 hours, with the reason and the new plan. Your account manager calls you for anything over 48 hours.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--navy" id="contact">
+    <div class="container contact">
+      <div class="contact__info">
+        <p class="sub-title">Talk to a forwarder</p>
+        <h2 class="h2">Your cargo, <span>one phone call away.</span></h2>
+        <div class="offices" id="offices"></div>
+      </div>
+      <form class="form" id="contactForm">
+        <h3>Send us your shipment details</h3>
+        <div class="form__row"><label>Name<input required placeholder="Lena Vogt" /></label><label>Company<input required placeholder="Fieldnote GmbH" /></label></div>
+        <div class="form__row"><label>Email<input type="email" required placeholder="lena@fieldnote.de" /></label><label>Phone<input placeholder="+49 30 1234 567" /></label></div>
+        <label>What are you shipping?<textarea rows="4" placeholder="e.g. 2 × 40' HC of furniture, Ningbo → Hamburg, ready 15 Dec"></textarea></label>
+        <button class="btn btn--block" type="submit">Send request <i class="ri-send-plane-fill"></i></button>
+        <p class="form__ok" id="contactOk"><i class="ri-checkbox-circle-fill"></i> Thanks — a forwarder will reply within 2 working hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="logo logo--light"><span class="logo__mark"><i class="ri-ship-2-fill"></i></span>PORTLINE<small>Logistics</small></a>
+          <p>Independent freight forwarder. FIATA member, AEO certified, ISO 9001.</p>
+          <div class="social"><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></div>
+        </div>
+        <div><h4>Services</h4><a href="#services">Ocean freight</a><a href="#services">Air freight</a><a href="#services">Road &amp; rail</a><a href="#services">Warehousing</a><a href="#faq">Customs</a></div>
+        <div><h4>Tools</h4><a href="#track">Track shipment</a><a href="#quote">Instant quote</a><a href="#">Container sizes</a><a href="#">Incoterms 2020 guide</a></div>
+        <div>
+          <h4>Rate alerts</h4>
+          <p>A short email when ocean rates move more than 10%.</p>
+          <form class="news" id="news"><input type="email" required placeholder="Email address" aria-label="Email" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form>
+          <p class="news__ok" id="newsOk">Subscribed. Next update Monday.</p>
+        </div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Portline Logistics B.V. · Waalhaven Z.z. 44, 3089 JH Rotterdam</span><span><a href="#">Privacy</a> · <a href="#">Terms of carriage</a></span></div>
+    </div>
+  </footer>
+
+  <button class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const fmt = (n) => Math.round(n).toLocaleString("en-US");
+    function toast(t) { const el = $("toast"); el.innerHTML = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2600); }
+
+    // Header
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("totop").classList.toggle("on", scrollY > 800);
+      let cur = ""; document.querySelectorAll("section[id]").forEach((s) => { if (scrollY + 130 >= s.offsetTop) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + cur));
+    }, { passive: true });
+    $("burger").addEventListener("click", () => $("nav").classList.toggle("open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.tagName === "A") $("nav").classList.remove("open"); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") $("nav").classList.remove("open"); });
+    $("totop").onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
+    // Ticker
+    const TICK = [["ri-ship-line", "MV Nordic Halden", "departed Singapore", "+0h"], ["ri-plane-line", "PL-77105", "delivered in Dubai", "on time"], ["ri-truck-line", "Truck WX-4471", "cleared Polish border", "-2h"], ["ri-ship-line", "MSC Aurelia", "berthed Rotterdam ECT", "+3h"], ["ri-temp-cold-line", "Reefer PLRU 220481", "steady at −18 °C", "ok"], ["ri-train-line", "Xi'an → Duisburg train", "crossing Kazakhstan", "on time"], ["ri-plane-line", "PL-66012", "loaded on LH8402 FRA", "on time"]];
+    const tick = TICK.map(([i, a, b, c]) => `<span><i class="${i}"></i><b>${a}</b> ${b} <em>${c}</em></span>`).join("");
+    $("ticker").innerHTML = tick + tick;
+
+    // ---------- Tracking ----------
+    const SHIP = {
+      "PL-48213": { mode: "sea", icon: "ri-ship-2-fill", from: "Shanghai, CN", to: "Duisburg, DE", title: "Shanghai → Duisburg", status: "In transit", eta: "ETA Tue 9 Dec · on schedule", pct: 0.58,
+        meta: [["Container", "PLRU 481 203-6 · 40' HC"], ["Vessel", "MV Nordic Halden · voy. 214W"], ["Cargo", "Furniture · 21,400 kg"]],
+        stops: [["Shanghai", 60, 250], ["Singapore", 220, 290], ["Colombo", 330, 230], ["Suez Canal", 500, 160], ["Rotterdam", 680, 80], ["Duisburg", 750, 130]],
+        events: [["done", "Picked up at shipper, Kunshan", "28 Oct · 09:12"], ["done", "Loaded on MV Nordic Halden, Shanghai Yangshan", "31 Oct · 22:40"], ["done", "Transshipment, Singapore PSA", "6 Nov · 04:15"], ["now", "Sailing · Arabian Sea", "Live · 14.2 kn"], ["next", "Suez Canal transit", "est. 21 Nov"], ["next", "Discharge, Rotterdam ECT Delta", "est. 4 Dec"], ["next", "Barge to Duisburg DIT, delivery", "est. 9 Dec"]] },
+      "PL-77105": { mode: "air", icon: "ri-plane-fill", from: "Chicago, US", to: "Dubai, AE", title: "Chicago → Dubai", status: "Delivered", eta: "Delivered Mon 24 Nov · 11:05", pct: 1,
+        meta: [["AWB", "020-4471 8823"], ["Flights", "LH431 ORD–FRA · LH630 FRA–DXB"], ["Cargo", "Medical devices · 640 kg"]],
+        stops: [["Chicago ORD", 70, 120], ["Frankfurt FRA", 420, 70], ["Dubai DXB", 720, 230]],
+        events: [["done", "Received at Portline ORD hub", "21 Nov · 15:30"], ["done", "Departed ORD on LH431", "21 Nov · 21:10"], ["done", "Transfer at Frankfurt", "22 Nov · 12:40"], ["done", "Arrived Dubai DXB, customs cleared", "23 Nov · 06:55"], ["done", "Delivered · signed by R. Haddad", "24 Nov · 11:05"]] },
+      "PL-20961": { mode: "road", icon: "ri-truck-fill", from: "Warsaw, PL", to: "Lyon, FR", title: "Warsaw → Lyon", status: "In transit", eta: "ETA Fri 28 Nov · 14:00", pct: 0.42,
+        meta: [["Truck", "WX-4471 · Mega trailer"], ["Driver", "Pawel K. · +48 600 112 233"], ["Cargo", "Auto parts · 33 pallets"]],
+        stops: [["Warsaw", 80, 110], ["Poznań", 220, 140], ["Berlin", 360, 110], ["Frankfurt", 520, 210], ["Lyon", 720, 280]],
+        events: [["done", "Loaded at Voltra plant, Warsaw", "26 Nov · 06:00"], ["done", "Passed Poznań", "26 Nov · 10:20"], ["now", "Driving · A10 near Berlin", "Live · 82 km/h"], ["next", "Driver rest, Frankfurt", "est. 27 Nov · 19:00"], ["next", "Delivery, Lyon Corbas", "est. 28 Nov · 14:00"]] },
+    };
+    let cur = null, anim = 0;
+    function smooth(pts) {
+      let d = `M${pts[0][1]} ${pts[0][2]}`;
+      for (let i = 1; i < pts.length; i++) { const [, x0, y0] = pts[i - 1], [, x1, y1] = pts[i], mx = (x0 + x1) / 2; d += ` C${mx} ${y0} ${mx} ${y1} ${x1} ${y1}`; }
+      return d;
+    }
+    function showShip(code, scroll) {
+      const s = SHIP[code]; if (!s) return false;
+      cur = s;
+      $("tTitle").innerHTML = s.title.replace("→", '<i class="ri-arrow-right-line"></i>') + ` <small>${code}</small>`;
+      $("tMeta").innerHTML = s.meta.map(([k, v]) => `<div><span>${k}</span><strong>${v}</strong></div>`).join("");
+      $("tStatus").innerHTML = `<i class="${s.pct >= 1 ? "ri-checkbox-circle-fill" : "ri-loader-4-line"}"></i> ${s.status}`;
+      $("tStatus").className = "route__status" + (s.pct >= 1 ? " ok" : "");
+      $("tEta").textContent = s.eta;
+      $("tFrom").textContent = s.from; $("tTo").textContent = s.to;
+      const d = smooth(s.stops);
+      $("rLeft").setAttribute("d", d); $("rDone").setAttribute("d", d);
+      $("rStops").innerHTML = s.stops.map(([n, x, y], i) => `<g class="stop" style="--d:${i}"><circle cx="${x}" cy="${y}" r="9" /><text x="${x}" y="${y + (y > 250 ? 34 : -20)}" text-anchor="middle">${n}</text></g>`).join("");
+      $("rIcon").className = s.icon;
+      $("tl").innerHTML = s.events.map(([st, t, when], i) => `<li class="${st}" style="--d:${i}"><span class="tl__dot"></span><div><strong>${t}</strong><span>${when}</span></div></li>`).join("");
+      $("track").classList.remove("go"); void $("track").offsetWidth; $("track").classList.add("go");
+      // animate the vehicle along the route
+      const path = $("rDone"), L = path.getTotalLength();
+      path.style.strokeDasharray = L;
+      const id = ++anim, t0 = performance.now(), dur = RM ? 1 : 2200;
+      (function step(n) {
+        if (id !== anim) return;
+        const k = Math.min(1, Math.max(0, (n - t0) / dur)), e = 1 - Math.pow(1 - k, 3), p = s.pct * e;
+        path.style.strokeDashoffset = L * (1 - p);
+        const pt = path.getPointAtLength(L * p);
+        $("rVehicle").style.left = pt.x / 8 + "%"; $("rVehicle").style.top = pt.y / 3.4 + "%";
+        $("tFill").style.width = p * 100 + "%";
+        $("tPct").textContent = Math.round(p * 100) + "% of route";
+        document.querySelectorAll("#rStops .stop").forEach((g, i) => { const sl = s.stops.length - 1; g.classList.toggle("passed", i / sl <= p + 0.001); });
+        if (k < 1) requestAnimationFrame(step);
+      })(t0);
+      if (scroll) $("track").scrollIntoView({ behavior: "smooth" });
+      return true;
+    }
+    $("trackForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = $("trackInput").value.trim().toUpperCase();
+      if (showShip(v, true)) { $("trackErr").textContent = ""; }
+      else { $("trackErr").textContent = v ? `We couldn't find “${v}”. Check the number or try a demo code above.` : "Enter a tracking number."; $("trackForm").classList.remove("shake"); void $("trackForm").offsetWidth; $("trackForm").classList.add("shake"); }
+    });
+    document.querySelectorAll("[data-try]").forEach((b) => b.addEventListener("click", () => { $("trackInput").value = b.dataset.try; $("trackForm").requestSubmit(); }));
+    $("notify").onclick = () => toast('<i class="ri-notification-3-fill"></i> You\'ll get an SMS at every milestone.');
+    $("share").onclick = () => { try { navigator.clipboard.writeText(location.href.split("#")[0] + "#track"); } catch (e) {} toast('<i class="ri-link"></i> Tracking link copied.'); };
+    // start tracking animation when the section comes into view
+    const tIO = new IntersectionObserver((es) => { if (es[0].isIntersecting) { showShip("PL-48213"); tIO.disconnect(); } }, { threshold: .3 });
+    tIO.observe($("track"));
+
+    // ---------- Services ----------
+    const SVC = [
+      { img: "1605745341112-85968b19335b", icon: "ri-ship-2-line", t: "Ocean freight", d: "FCL and LCL on weekly sailings from 40 Asian ports. Fixed-rate contracts or spot, your choice.", f: [["Shanghai → Rotterdam", "32–36 days"], ["Ningbo → Jebel Ali", "18–21 days"]] },
+      { img: "1436491865332-7a61a109cc05", icon: "ri-plane-line", t: "Air freight", d: "Consolidated and express air cargo with our own ULD space on 14 airlines. Dangerous goods certified.", f: [["Shanghai → Frankfurt", "2–3 days"], ["Chicago → Dubai", "3 days"]] },
+      { img: "1601584115197-04ecc0da31d7", icon: "ri-truck-line", t: "Road & rail", d: "Full and part loads across Europe, plus the China–Europe rail service when sea is too slow and air too costly.", f: [["Warsaw → Lyon", "2–3 days"], ["Xi'an → Duisburg rail", "16–18 days"]] },
+      { img: "1586528116311-ad8dd3c8310d", icon: "ri-community-line", t: "Warehousing", d: "38 bonded warehouses with pick & pack, cross-docking and Amazon FBA prep. Pay per pallet per week.", f: [["Storage", "from €4.20 / pallet / wk"], ["Pick & pack", "from €0.65 / order"]] },
+    ];
+    $("svc").innerHTML = SVC.map((s) => `
+      <article class="svc__card">
+        <div class="svc__img"><img src="${U(s.img, 700)}" alt="${s.t}" loading="lazy" /><span class="svc__icon"><i class="${s.icon}"></i></span></div>
+        <div class="svc__body"><h3>${s.t}</h3><p>${s.d}</p>
+          <dl>${s.f.map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join("")}</dl>
+          <a href="#quote" class="svc__link">Get a rate <i class="ri-arrow-right-up-line"></i></a></div>
+      </article>`).join("");
+
+    // ---------- Quote calculator ----------
+    const PORTS = { sea: ["Shanghai, CN", "Ningbo, CN", "Singapore, SG", "Jebel Ali, AE", "Rotterdam, NL", "Hamburg, DE"], air: ["Shanghai PVG", "Chicago ORD", "Frankfurt FRA", "Dubai DXB", "Amsterdam AMS"], road: ["Warsaw, PL", "Berlin, DE", "Rotterdam, NL", "Lyon, FR", "Milan, IT"] };
+    const LOADS = { sea: [["20' container", 1, 1350], ["40' container", 1.25, 1850], ["40' high cube", 1.3, 1950], ["LCL per m³", .06, 95]], air: [["100 kg", 1, 420], ["500 kg", 1, 1750], ["1,000 kg", 1, 3200]], road: [["Pallet (LTL)", 1, 140], ["Half truck", 1, 900], ["Full truck (FTL)", 1, 1650]] };
+    let mode = "sea";
+    const coord = (name) => [...name].reduce((a, c) => a + c.charCodeAt(0), 0);
+    function fill() {
+      $("qFrom").innerHTML = PORTS[mode].map((p) => `<option>${p}</option>`).join("");
+      $("qTo").innerHTML = PORTS[mode].map((p, i) => `<option ${i === PORTS[mode].length - 2 ? "selected" : ""}>${p}</option>`).join("");
+      $("qLoad").innerHTML = LOADS[mode].map(([n], i) => `<option value="${i}" ${i === 1 ? "selected" : ""}>${n}</option>`).join("");
+      calc();
+    }
+    let shown = 0;
+    function calc() {
+      const from = $("qFrom").value, to = $("qTo").value, q = +$("qQty").value;
+      const [, , base] = LOADS[mode][+$("qLoad").value];
+      if (from === to) { $("qPrice").textContent = "—"; $("qDays").textContent = "Pick two places"; $("qCo2").textContent = "—"; return; }
+      const dist = 0.7 + ((coord(from) * 7 + coord(to) * 3) % 100) / 120;   // deterministic per route
+      let price = base * dist * q;
+      if ($("xCustoms").checked) price += 185;
+      if ($("xIns").checked) price *= 1.003;
+      const days = { sea: [24, 40], air: [2, 5], road: [1, 4] }[mode];
+      const d0 = Math.round(days[0] + (days[1] - days[0]) * (dist - .7) / .83);
+      $("qDays").textContent = `${d0}–${d0 + (mode === "sea" ? 4 : 1)} days`;
+      $("qCo2").textContent = ({ sea: 0.4, air: 6.2, road: 1.1 }[mode] * dist * q).toFixed(1) + " t";
+      const start = shown, t0 = performance.now();
+      (function k(n) { const p = Math.min(1, Math.max(0, (n - t0) / 450)), v = start + (price - start) * (1 - Math.pow(1 - p, 3)); $("qPrice").textContent = "$" + fmt(v); if (p < 1) requestAnimationFrame(k); else shown = price; })(t0);
+    }
+    $("modes").addEventListener("click", (e) => { const b = e.target.closest("[data-mode]"); if (!b) return; mode = b.dataset.mode; document.querySelectorAll("#modes button").forEach((x) => x.classList.toggle("on", x === b)); $("qQty").value = 1; fill(); });
+    ["qFrom", "qTo", "qLoad", "xCustoms", "xIns"].forEach((id) => $(id).addEventListener("change", calc));
+    $("qMinus").onclick = () => { $("qQty").value = Math.max(1, +$("qQty").value - 1); calc(); };
+    $("qPlus").onclick = () => { $("qQty").value = Math.min(50, +$("qQty").value + 1); calc(); };
+    $("swap").onclick = () => { const a = $("qFrom").value; $("qFrom").value = $("qTo").value; $("qTo").value = a; $("swap").classList.toggle("turn"); calc(); };
+    $("calc").addEventListener("submit", (e) => { e.preventDefault(); $("qRef").textContent = "Q-" + Math.floor(100000 + Math.random() * 899999); $("calcOk").classList.add("on"); });
+    fill();
+
+    // ---------- Industries ----------
+    const IND = [
+      { img: "1566576721346-d4a3b4eaeb55", icon: "ri-shopping-bag-3-line", t: "Retail & e-commerce", d: "Consolidate suppliers in China, ship weekly, and land stock straight into our FBA-ready warehouses.", k: 2.4, ku: "M parcels a year", pts: ["Weekly LCL from 9 Chinese ports", "Amazon FBA prep & labelling"] },
+      { img: "1567789884554-0b844b597180", icon: "ri-car-line", t: "Automotive", d: "Just-in-time parts to assembly lines with hourly delivery windows and backup air capacity.", k: 99.1, ku: "% line-side on time", pts: ["Hourly milk runs to 14 plants", "Air backup within 6 hours"] },
+      { img: "1559297434-fae8a1916a79", icon: "ri-temp-cold-line", t: "Food & cold chain", d: "Reefer containers and trucks with live temperature logs and GDP-certified handling for pharma.", k: -25, ku: "°C to +25 °C, logged live", pts: ["GDP-certified pharma handling", "Temperature alerts by SMS"] },
+      { img: "1474487548417-781cb71495f3", icon: "ri-train-line", t: "Industrial & energy", d: "Project cargo, out-of-gauge machinery and the China–Europe rail corridor for heavy goods.", k: 120, ku: "t heavy lifts handled", pts: ["Out-of-gauge permits & escorts", "Xi'an → Duisburg rail every week"] },
+    ];
+    $("ind").innerHTML = IND.map((x, i) => `
+      <article class="ind__item ${i === 0 ? "on" : ""}" tabindex="0" style="--d:${i}">
+        <img src="${U(x.img, 1000)}" alt="${x.t}" loading="lazy" />
+        <span class="ind__icon"><i class="${x.icon}"></i></span>
+        <div class="ind__body">
+          <span class="ind__n">0${i + 1} / 04</span>
+          <h3>${x.t}</h3>
+          <div class="ind__more"><div>
+            <p>${x.d}</p>
+            <ul>${x.pts.map((p) => `<li><i class="ri-check-line"></i>${p}</li>`).join("")}</ul>
+            <div class="ind__kpi"><strong data-k="${x.k}">${x.k}</strong><span>${x.ku}</span></div>
+          </div></div>
+        </div>
+        <span class="ind__bar"><i></i></span>
+      </article>`).join("");
+    const indItems = [...document.querySelectorAll(".ind__item")];
+    let indIdx = 0, indTimer = null, indPaused = false;
+    function indKpi(el) {
+      const s = el.querySelector("[data-k]"), end = +s.dataset.k, dec = Number.isInteger(end) ? 0 : 1, t0 = performance.now();
+      (function k(n) { const p = Math.min(1, Math.max(0, (n - t0) / 1100)); s.textContent = (end * (1 - Math.pow(1 - p, 3))).toFixed(dec); if (p < 1) requestAnimationFrame(k); })(t0);
+    }
+    function indShow(i) {
+      const changed = indIdx !== i || !indItems[i].classList.contains("on");
+      indIdx = i;
+      indItems.forEach((o, k) => { o.classList.toggle("on", k === i); o.classList.remove("run"); });
+      void indItems[i].offsetWidth;
+      if (!indPaused) indItems[i].classList.add("run");
+      if (changed || !indShow.started) indKpi(indItems[i]);
+      indShow.started = true;
+    }
+    function indAuto() { clearInterval(indTimer); indTimer = setInterval(() => { if (!indPaused) indShow((indIdx + 1) % indItems.length); }, 5000); }
+    indItems.forEach((el, i) => {
+      el.addEventListener("mouseenter", () => { indPaused = true; if (indIdx !== i) indShow(i); el.classList.remove("run"); });
+      el.addEventListener("mouseleave", () => { indPaused = false; indShow(indIdx); indAuto(); });
+      el.addEventListener("focus", () => indShow(i));
+      el.addEventListener("click", () => { indShow(i); indAuto(); });
+    });
+    const indIO = new IntersectionObserver((es) => { if (es[0].isIntersecting) { $("ind").classList.add("live"); indShow(0); indAuto(); indIO.disconnect(); } }, { threshold: .3 });
+    indIO.observe($("ind"));
+
+    // ---------- Testimonials ----------
+    const TST = [
+      { q: "During the Red Sea diversions Portline rebooked 60 of our containers via the Cape before we'd even called. Every ETA change came with a reason.", n: "Sophie van Dijk", r: "Supply Chain Lead, Fieldnote Home", img: "1494790108377-be9c29b29330" },
+      { q: "The tracking page is the first one our customer service team actually trusts. We send the link straight to our customers.", n: "Omar Al-Rashid", r: "COO, Lumen Medical, Dubai", img: "1507003211169-0a1dd7228f2d" },
+      { q: "Instant quotes were within €40 of the invoice on every truckload last year. That's why we moved all of Poland–France to them.", n: "Agnieszka Nowak", r: "Logistics Manager, Voltra Parts", img: "1544005313-94ddf0286df2" },
+      { q: "Small importer, big-forwarder service. Our account manager picks up the phone on Saturday mornings.", n: "James Whitfield", r: "Founder, Arcade Toys", img: "1500648767791-00dcc994a43e" },
+    ];
+    $("tstTrack").innerHTML = TST.map((t) => `<figure class="tcard"><i class="ri-double-quotes-l"></i><blockquote>${t.q}</blockquote><figcaption><img src="${U(t.img, 120)}" alt="${t.n}" loading="lazy" /><span><strong>${t.n}</strong>${t.r}</span></figcaption></figure>`).join("");
+    let ti = 0;
+    function showT(i) { const per = innerWidth < 900 ? 1 : 2, max = TST.length - per; ti = i < 0 ? max : i > max ? 0 : i; const c = $("tstTrack").children[0]; $("tstTrack").style.transform = `translateX(-${ti * (c.offsetWidth + 24)}px)`; }
+    $("tPrev").onclick = () => { showT(ti - 1); clearInterval(tT); };
+    $("tNext").onclick = () => { showT(ti + 1); clearInterval(tT); };
+    const tT = setInterval(() => showT(ti + 1), 6000);
+    addEventListener("resize", () => showT(ti));
+
+    // ---------- Offices with live local time ----------
+    const OFF = [["Rotterdam", "HQ · Waalhaven Z.z. 44", "+31 10 234 5600", "Europe/Amsterdam"], ["Shanghai", "Room 1802, 99 Huaihai Rd", "+86 21 6012 3400", "Asia/Shanghai"], ["Dubai", "JAFZA One, Tower B", "+971 4 880 1200", "Asia/Dubai"]];
+    function offices() {
+      $("offices").innerHTML = OFF.map(([c, a, p, tz]) => {
+        const now = new Date(), t = now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: tz }), h = +t.slice(0, 2);
+        const open = h >= 8 && h < 18;
+        return `<div class="office"><div><strong>${c}</strong><span>${a}</span><a href="tel:${p.replace(/\s/g, "")}">${p}</a></div><p class="office__time"><b>${t}</b><em class="${open ? "open" : ""}">${open ? "Office open" : "24/7 desk only"}</em></p></div>`;
+      }).join("");
+    }
+    offices(); setInterval(offices, 30000);
+
+    // ---------- FAQ + forms ----------
+    document.querySelectorAll("#acc details").forEach((d) => d.addEventListener("toggle", () => { if (d.open) document.querySelectorAll("#acc details").forEach((o) => o !== d && (o.open = false)); }));
+    $("contactForm").addEventListener("submit", (e) => { e.preventDefault(); $("contactOk").classList.add("on"); e.target.reset(); });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsOk").classList.add("on"); e.target.reset(); });
+
+    // ---------- Count-ups + reveals ----------
+    function countUp(el) { const end = +el.dataset.count, dec = +(el.dataset.dec || 0), t = performance.now(), d = RM ? 1 : 1800; (function k(n) { const p = Math.min(1, Math.max(0, (n - t) / d)); el.textContent = (end * (1 - Math.pow(1 - p, 3))).toFixed(dec); if (p < 1) requestAnimationFrame(k); })(t); }
+    const REVEAL = [".track__head", ".route", ".events", ".title", ".svc__card", ".quote__copy > *", ".calc", ".network__in > div", ".tst__intro > *", ".tcard", ".acc details", ".contact__info > *", ".form", ".footer__grid > div"].join(",");
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      e.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(e.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(REVEAL).forEach((el) => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter((c) => c.matches(REVEAL));
+      el.style.setProperty("--i", Math.min(sibs.indexOf(el), 5));
+      io.observe(el);
+    });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+
+    // Gentle parallax on the hero photo
+    if (!RM) addEventListener("scroll", () => { if (scrollY < innerHeight) document.querySelector(".hero__bg img").style.transform = `translateY(${scrollY * 0.25}px) scale(1.08)`; }, { passive: true });
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/landing-portline/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

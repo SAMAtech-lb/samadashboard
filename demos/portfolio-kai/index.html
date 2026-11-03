@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kai Moreno — Director & Cinematographer</title>
+  <meta name="description" content="Kai Moreno is a Lisbon-based director and cinematographer making commercials, music videos, documentaries and brand films for brands that want to be felt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo">Kai Moreno <span class="rec">REC</span></a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn" data-magnet>Book a shoot <i class="ri-arrow-right-line"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__meta reveal" style="--d:.1s">
+        <span>Director · DP · Colourist</span>
+        <span>TC <b id="tc">00:00:00:00</b></span>
+        <span>Lisbon — worldwide</span>
+      </div>
+
+      <div class="hero__mask reveal" style="--d:.2s">
+        <img class="hero__poster" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80" alt="" />
+        <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80">
+          <source src="https://assets.mixkit.co/videos/41576/41576-720.mp4" type="video/mp4" />
+        </video>
+        <h1 class="hero__name display">Kai Moreno</h1>
+      </div>
+
+      <div class="hero__sub">
+        <p class="hero__tag reveal" style="--d:.4s">A filmmaker crafting <em>commercials, music videos</em> &amp; documentaries that people feel before they understand.</p>
+        <button class="reel-badge reveal" style="--d:.55s" id="openReel" data-magnet aria-label="Play showreel">
+          <svg viewBox="0 0 148 148" aria-hidden="true">
+            <defs><path id="circ" d="M74,74 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0" /></defs>
+            <text><textPath href="#circ" textLength="358">Play showreel · 2026 · Play showreel · 2026 ·</textPath></text>
+          </svg>
+          <span class="reel-badge__dot"><i class="ri-play-fill"></i></span>
+        </button>
+        <div class="hero__cta reveal" style="--d:.7s">
+          <a href="#work" class="btn btn--ghost">Selected work</a>
+          <a href="#contact" class="btn" data-magnet>Start a project <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+      <span class="hero__scroll">Scroll to roll</span>
+    </section>
+
+    <!-- Reel rows (scroll-driven) -->
+    <section class="rows" id="rows" aria-label="Stills from recent films">
+      <div class="row" id="row1"></div>
+      <div class="row" id="row2"></div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <figure class="polaroid polaroid--1 reveal from-l" style="--d:.1s"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=400&q=80" alt="Clapperboard on set" loading="lazy" /><span>Scene 12 · Take 4</span></figure>
+      <figure class="polaroid polaroid--2 reveal from-r" style="--d:.15s"><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=400&q=80" alt="Kai Moreno holding a camera" loading="lazy" /><span>Kai, on set</span></figure>
+      <figure class="polaroid polaroid--3 reveal from-l" style="--d:.25s"><img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=400&q=80" alt="35mm film reels" loading="lazy" /><span>Shot on 35mm</span></figure>
+      <figure class="polaroid polaroid--4 reveal from-r" style="--d:.3s"><img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=400&q=80" alt="Camera in hand" loading="lazy" /><span>B-cam ready</span></figure>
+
+      <div class="container about__in">
+        <span class="label reveal">About the director</span>
+        <h2 class="display silver sec-title reveal">Behind the lens</h2>
+        <p class="about__text" id="aboutText">For nine years I have been chasing light across four continents — directing and shooting films for brands, bands and people with something to say. I write, shoot and grade every frame myself, so the story you approve is the story you get. Small crew, big pictures, no wasted days.</p>
+        <div class="about__sig reveal">
+          <a href="#contact" class="btn" data-magnet>Let's make a film <i class="ri-arrow-right-line"></i></a>
+          <a href="#" class="btn btn--ghost" id="cvBtn"><i class="ri-download-2-line"></i> Director's deck</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="container">
+      <div class="stats">
+        <div class="stat reveal"><b class="display silver" data-count="140" data-suffix="+">0</b><span>Films delivered</span></div>
+        <div class="stat reveal" style="--d:.1s"><b class="display silver" data-count="38" data-suffix="M">0</b><span>Views online</span></div>
+        <div class="stat reveal" style="--d:.2s"><b class="display silver" data-count="12">0</b><span>Festival awards</span></div>
+        <div class="stat reveal" style="--d:.3s"><b class="display silver" data-count="9">0</b><span>Years behind camera</span></div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <h2 class="display sec-title reveal">Services</h2>
+        <div id="svcList"></div>
+      </div>
+    </section>
+
+    <!-- Gear marquee -->
+    <section class="gear" aria-label="Cameras and software">
+      <span class="label">The kit I shoot &amp; cut with</span>
+      <div class="marquee"><div class="track" id="gear1"></div></div>
+      <div class="marquee marquee--rev"><div class="track" id="gear2"></div></div>
+    </section>
+
+    <!-- Film strip toy -->
+    <section class="section toy" id="reel">
+      <div class="container">
+        <h2 class="display silver sec-title reveal">Scrub the reel</h2>
+        <p class="sec-intro reveal">Grab the film strip and throw it — or use the arrow keys. Every frame is from a real job.</p>
+        <div class="monitor reveal">
+          <img id="monImg" src="" alt="" />
+          <div class="monitor__hud">
+            <div><span class="rec">REC</span><span>4K · 24 FPS · 2.39:1</span></div>
+            <div><b id="monTitle">—</b><span class="tc" id="monTc">00:00:00:00</span></div>
+          </div>
+          <span class="monitor__corners"></span>
+        </div>
+      </div>
+      <div class="strip reveal" id="strip" tabindex="0" aria-label="Film strip, use left and right arrow keys">
+        <span class="strip__line"></span>
+        <div class="strip__track" id="stripTrack"></div>
+      </div>
+      <div class="toy__ctrl">
+        <button class="icon-btn" id="prevF" aria-label="Previous frame"><i class="ri-skip-back-fill"></i></button>
+        <button class="icon-btn play" id="playF" aria-label="Play through frames"><i class="ri-play-fill"></i></button>
+        <button class="icon-btn" id="nextF" aria-label="Next frame"><i class="ri-skip-forward-fill"></i></button>
+      </div>
+    </section>
+
+    <!-- Work — sticky stacked cards -->
+    <section class="section projects" id="work">
+      <div class="container">
+        <h2 class="display silver sec-title reveal">Selected work</h2>
+        <div class="filters reveal" id="filters"></div>
+      </div>
+      <div class="container stack" id="stack"></div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients">
+      <div class="container clients__row">
+        <span><i class="ri-flashlight-fill"></i>Voltra</span>
+        <span><i class="ri-compass-3-fill"></i>Northwind</span>
+        <span><i class="ri-sun-fill"></i>Lumen</span>
+        <span><i class="ri-planet-fill"></i>Orbit</span>
+        <span><i class="ri-quill-pen-fill"></i>Fieldnote</span>
+        <span><i class="ri-gamepad-fill"></i>Arcade</span>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section quotes">
+      <div class="container">
+        <span class="label reveal">Kind words from clients</span>
+        <div id="quoteList"></div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <h2 class="display sec-title reveal">Pricing</h2>
+        <p class="sec-intro reveal">Clear starting rates. Every quote is tailored after a free 20-minute call.</p>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Social cut</h3>
+            <div class="plan__price">$1,800<small>/ from</small></div>
+            <p>Punchy vertical and square edits for launches and campaigns.</p>
+            <ul>
+              <li><i class="ri-check-line"></i> Half-day shoot, solo crew</li>
+              <li><i class="ri-check-line"></i> 3 edits up to 30 seconds</li>
+              <li><i class="ri-check-line"></i> Licensed music &amp; captions</li>
+              <li><i class="ri-check-line"></i> 2 rounds of revisions</li>
+            </ul>
+            <a href="#contact" class="btn btn--dark" data-plan="Social cut">Choose plan</a>
+          </article>
+          <article class="plan plan--pop reveal" style="--d:.1s">
+            <span class="badge">Most booked</span>
+            <h3>Brand film</h3>
+            <div class="plan__price">$6,500<small>/ from</small></div>
+            <p>A 60–120 second hero film that tells your story properly.</p>
+            <ul>
+              <li><i class="ri-check-line"></i> Concept, script &amp; storyboard</li>
+              <li><i class="ri-check-line"></i> 2 shoot days, 3-person crew</li>
+              <li><i class="ri-check-line"></i> Cinema camera &amp; lighting package</li>
+              <li><i class="ri-check-line"></i> Colour grade &amp; sound mix</li>
+              <li><i class="ri-check-line"></i> 4 cut-downs for social</li>
+            </ul>
+            <a href="#contact" class="btn" data-plan="Brand film">Choose plan <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="plan reveal" style="--d:.2s">
+            <h3>Campaign</h3>
+            <div class="plan__price">$14k<small>/ from</small></div>
+            <p>Multi-day productions for TV, cinema and global launches.</p>
+            <ul>
+              <li><i class="ri-check-line"></i> Full production management</li>
+              <li><i class="ri-check-line"></i> Casting, locations &amp; permits</li>
+              <li><i class="ri-check-line"></i> Drone, gimbal &amp; car rigs</li>
+              <li><i class="ri-check-line"></i> HDR grade, 5.1 sound mix</li>
+            </ul>
+            <a href="#contact" class="btn btn--dark" data-plan="Campaign">Choose plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <span class="label reveal">Got a story? Let's roll</span>
+        <div><a href="mailto:hello@kaimoreno.film" class="email display reveal" id="email">
+          <span class="email__line">hello@kaimoreno.film</span>
+          <span class="email__fill" aria-hidden="true">hello@kaimoreno.film</span>
+        </a></div>
+        <span class="copy-note">Click to copy · replies within 24h</span>
+
+        <form class="brief reveal" id="brief">
+          <h3>Send a quick brief</h3>
+          <p>Tell me what you're making — I'll come back with ideas and a quote.</p>
+          <div class="brief__grid">
+            <div class="field"><label for="fName">Your name</label><input id="fName" required placeholder="Sofia Almeida" /></div>
+            <div class="field"><label for="fMail">Email</label><input id="fMail" type="email" required placeholder="sofia@brand.com" /></div>
+            <div class="field field--full">
+              <span class="lbl">Type of film</span>
+              <div class="types" id="types">
+                <button type="button" class="chip on">Commercial</button>
+                <button type="button" class="chip">Music video</button>
+                <button type="button" class="chip">Documentary</button>
+                <button type="button" class="chip">Brand film</button>
+                <button type="button" class="chip">Wedding</button>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label>Budget</label>
+              <div class="types" id="fBudget">
+                <button type="button" class="chip" data-v="1800">Under $3k</button>
+                <button type="button" class="chip on" data-v="6500">$3k – $10k</button>
+                <button type="button" class="chip" data-v="14000">$10k – $20k</button>
+                <button type="button" class="chip" data-v="30000">$20k+</button>
+              </div>
+            </div>
+            <div class="field"><label for="fDate">Ideal shoot date</label><input id="fDate" type="date" /></div>
+            <div class="field"><label for="fPlan">Package</label>
+              <select id="fPlan"><option>Not sure yet</option><option>Social cut</option><option>Brand film</option><option>Campaign</option></select>
+            </div>
+            <div class="field field--full"><label for="fMsg">The idea</label><textarea id="fMsg" placeholder="A 90-second launch film for our new trail shoe, shot in the Azores…"></textarea></div>
+          </div>
+          <div class="brief__foot">
+            <small><i class="ri-shield-check-line"></i> No spam. Your brief stays between us.</small>
+            <button class="btn" type="submit" data-magnet>Send brief <i class="ri-send-plane-2-line"></i></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a href="#top" class="logo">Kai Moreno <span class="rec">REC</span></a>
+          <p>Director &amp; cinematographer making commercials, music videos and documentaries from Lisbon, for the world.</p>
+          <div class="socials">
+            <a href="#" aria-label="Vimeo"><i class="ri-vimeo-fill"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#pricing">Pricing</a></li></ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul><li>Rua da Rosa 112</li><li>1200-389 Lisbon, PT</li><li><a href="tel:+351912345678">+351 912 345 678</a></li><li>Local time <b id="clock">--:--</b></li></ul>
+        </div>
+        <div>
+          <h4>Availability</h4>
+          <ul><li>Booking Nov 2026 →</li><li>Travel worldwide</li><li>EN · PT · ES</li></ul>
+        </div>
+      </div>
+      <div class="wordmark display silver">Let's roll</div>
+      <div class="footer__bot"><span>© 2026 Kai Moreno Films. All rights reserved.</span><span>Stills via Unsplash · Footage via Mixkit</span></div>
+    </div>
+  </footer>
+
+  <!-- Showreel modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Showreel">
+    <button class="modal__x" id="closeReel" aria-label="Close showreel"><i class="ri-close-line"></i></button>
+    <video id="reelVideo" controls playsinline preload="none" poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80">
+      <source src="https://assets.mixkit.co/videos/41576/41576-720.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span></span></div>
+  <a href="#top" class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+    /* ---------- Data ---------- */
+    const STILLS = [
+      ["1536440136628-849c177e76a1", "Central Cinema"], ["1478720568477-152d9b164e26", "Projection"], ["1542051841857-5f90071e7989", "Tokyo nights"],
+      ["1492144534655-ae79c964c9d7", "Voltra — Night Drive"], ["1470229722913-7c0e2dbbafd3", "Loud Hours"], ["1601506521937-0121a7fc2a6b", "Studio day"],
+      ["1551698618-1dfe5d97d256", "Into the Cold"], ["1502680390469-be75c86b636f", "Salt & Swell"], ["1514525253161-7a46d19cd819", "Festival"],
+      ["1509347528160-9a9e33742cdb", "Night shoot"], ["1493225457124-a3eb161ffa5f", "Live set"],
+      ["1503376780353-7e6692767b70", "Voltra — Coast"], ["1519681393784-d120267933ba", "Aoraki"], ["1574717024653-61fd2cf4d44d", "Edit bay"],
+      ["1517649763962-0c623066013b", "Ride as One"], ["1511285560929-80b456fea0bc", "Vows"], ["1489599849927-2ee91cede3ba", "Screening"],
+      ["1501281668745-f7f57925c3b4", "Encore"], ["1523712999610-f77fbcfc3843", "Golden hour"], ["1533174072545-7a4b6ad7a6c3", "Confetti"],
+      ["1519501025264-65ba15a82390", "Downtown"], ["1440404653325-ab127d49abc1", "Archive"],
+    ];
+
+    const SERVICES = [
+      ["Commercials", "TV and online spots for brands that need to stop the scroll — from treatment to final HDR master.", ["Automotive", "Sport", "Product"], "1503376780353-7e6692767b70"],
+      ["Music videos", "Performance and narrative videos built around the track, with the energy of a live show and the polish of a film.", ["Narrative", "Performance", "Live"], "1501281668745-f7f57925c3b4"],
+      ["Documentary", "Character-led short docs and series, shot with a small crew so real moments stay real.", ["Short doc", "Series", "Branded doc"], "1551698618-1dfe5d97d256"],
+      ["Brand films", "Hero films that explain who you are and why it matters — the video your About page has been missing.", ["Hero film", "Founder story", "Launch"], "1502680390469-be75c86b636f"],
+      ["Colour & post", "Editing, DaVinci colour grading, sound design and motion titles for your own footage or mine.", ["Edit", "Grade", "Sound"], "1574717024653-61fd2cf4d44d"],
+    ];
+
+    const GEAR = ["ARRI Alexa Mini", "RED Komodo", "Sony FX6", "DJI Ronin 4D", "Zeiss Supreme", "Aputure", "Easyrig"];
+    const SOFT = ["DaVinci Resolve", "Premiere Pro", "After Effects", "Frame.io", "Pro Tools", "Cinema 4D", "Blackmagic"];
+
+    const PROJECTS = [
+      { cat: "Commercial", name: "Voltra — Night Drive", client: "Voltra Motors", run: "01:30", imgs: ["1492144534655-ae79c964c9d7", "1500530855697-b586d89ba3ee", "1503376780353-7e6692767b70"] },
+      { cat: "Music video", name: "Loud Hours — Aftermovie", client: "Arcade Festival", run: "03:45", imgs: ["1470229722913-7c0e2dbbafd3", "1514525253161-7a46d19cd819", "1501281668745-f7f57925c3b4"] },
+      { cat: "Documentary", name: "Into the Cold", client: "Northwind Outdoor", run: "24:10", imgs: ["1551698618-1dfe5d97d256", "1506905925346-21bda4d32df4", "1519681393784-d120267933ba"] },
+      { cat: "Brand film", name: "Salt & Swell", client: "Fieldnote Surf Co.", run: "02:20", imgs: ["1502680390469-be75c86b636f", "1470071459604-3b5ec3a7fe05", "1507525428034-b723cf961d3e"] },
+      { cat: "Commercial", name: "Orbit — Ride as One", client: "Orbit Cycling", run: "01:00", imgs: ["1517649763962-0c623066013b", "1449824913935-59a10b8d2000", "1542051841857-5f90071e7989"] },
+      { cat: "Wedding", name: "Vows in Sintra", client: "Lumen Weddings", run: "06:30", imgs: ["1511285560929-80b456fea0bc", "1469371670807-013ccf25f16a", "1519741497674-611481863552"] },
+    ];
+
+    const QUOTES = [
+      ["Kai pitched an idea we'd never have thought of, shot it in two days and delivered a film our whole company now shows at every all-hands.", "Marcus Hale", "Head of Brand, Voltra Motors", "1507003211169-0a1dd7228f2d"],
+      ["The aftermovie did 4 million views in a week. Kai somehow made 40,000 people feel like a private story.", "Sofia Almeida", "Marketing Director, Arcade Festival", "1494790108377-be9c29b29330"],
+      ["Calm on set, ruthless in the edit, and the grade is unreal. We've booked Kai for every campaign since.", "Daniel Brooks", "Founder, Fieldnote Surf Co.", "1506794778202-cad84cf45f1d"],
+    ];
+
+    /* ---------- Render ---------- */
+    const fig = ([id, cap]) => `<figure><img src="${U(id, 700)}" alt="${cap}" loading="lazy" /><figcaption>${cap}</figcaption></figure>`;
+    const half1 = STILLS.slice(0, 11), half2 = STILLS.slice(11);
+    $("row1").innerHTML = [...half1, ...half1, ...half1].map(fig).join("");
+    $("row2").innerHTML = [...half2, ...half2, ...half2].map(fig).join("");
+
+    $("svcList").innerHTML = SERVICES.map(([t, d, tags, img], i) => `
+      <div class="svc reveal" style="--d:${i * 0.08}s">
+        <span class="svc__no display">0${i + 1}</span>
+        <div><h3>${t}</h3><p>${d}</p><div class="svc__tags">${tags.map((x) => `<span>${x}</span>`).join("")}</div></div>
+        <div class="svc__thumb"><img src="${U(img, 400)}" alt="" loading="lazy" /></div>
+      </div>`).join("");
+
+    const words = (arr) => { const html = arr.map((w) => `<span class="word">${w}</span><span class="sep"><i class="ri-record-circle-fill"></i></span>`).join(""); return html + html; };
+    $("gear1").innerHTML = words(GEAR);
+    $("gear2").innerHTML = words(SOFT);
+
+    const quoteList = $("quoteList"), dots = $("dots");
+    quoteList.innerHTML = QUOTES.map(([q, n, r, img], i) => `
+      <blockquote class="quote${i ? "" : " on"}"><p>${q}</p>
+      <div class="quote__who"><img src="${U(img, 120)}" alt="${n}" loading="lazy" /><div><b>${n}</b><span>${r}</span></div></div></blockquote>`).join("");
+    dots.innerHTML = QUOTES.map((_, i) => `<button class="${i ? "" : "on"}" aria-label="Testimonial ${i + 1}"></button>`).join("");
+    let qi = 0;
+    const showQuote = (i) => {
+      qi = (i + QUOTES.length) % QUOTES.length;
+      quoteList.querySelectorAll(".quote").forEach((q, j) => q.classList.toggle("on", j === qi));
+      dots.querySelectorAll("button").forEach((d, j) => d.classList.toggle("on", j === qi));
+    };
+    dots.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { showQuote([...dots.children].indexOf(b)); clearInterval(qTimer); } });
+    const qTimer = setInterval(() => showQuote(qi + 1), 6500);
+
+    /* ---------- Projects: filter + sticky stack ---------- */
+    const CATS = ["All", ...new Set(PROJECTS.map((p) => p.cat))];
+    $("filters").innerHTML = CATS.map((c, i) => `<button class="chip${i ? "" : " on"}" data-c="${c}">${c}</button>`).join("");
+    let cards = [];
+    function renderStack(cat) {
+      const list = PROJECTS.filter((p) => cat === "All" || p.cat === cat);
+      $("stack").innerHTML = list.map((p, i) => `
+        <div class="stack__item">
+          <article class="card">
+            <div class="card__head">
+              <div class="card__id">
+                <span class="card__no display silver">${String(i + 1).padStart(2, "0")}</span>
+                <div class="card__meta"><span>${p.cat} · ${p.client}</span><h3>${p.name}</h3></div>
+              </div>
+              <button class="btn" data-play="${p.name}"><span>Watch film</span> <i class="ri-play-fill"></i></button>
+            </div>
+            <div class="card__body">
+              <div class="card__col"><img src="${U(p.imgs[1], 800)}" alt="" loading="lazy" /><img src="${U(p.imgs[2], 800)}" alt="" loading="lazy" /></div>
+              <div class="card__big" data-runtime="RUNTIME ${p.run}"><img src="${U(p.imgs[0], 1400)}" alt="${p.name}" loading="lazy" /></div>
+            </div>
+          </article>
+        </div>`).join("") + `<div class="stack__end" aria-hidden="true"></div>`;
+      cards = [...$("stack").querySelectorAll(".card")];
+      onScroll();
+    }
+    $("filters").addEventListener("click", (e) => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      $("filters").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
+      renderStack(b.dataset.c);
+      const top = $("stack").getBoundingClientRect().top + scrollY - 140;
+      if (scrollY > top) scrollTo({ top, behavior: "smooth" });
+    });
+    $("stack").addEventListener("click", (e) => { if (e.target.closest("[data-play]")) openReel(); });
+
+    /* ---------- About: letter-by-letter reveal ---------- */
+    const aboutText = $("aboutText");
+    aboutText.innerHTML = aboutText.textContent.split(" ").map((w) => `<span style="display:inline-block">${[...w].map((c) => `<span class="ch">${c}</span>`).join("")}</span>`).join(" ");
+    const chars = [...aboutText.querySelectorAll(".ch")];
+
+    /* ---------- Scroll-driven motion ---------- */
+    const row1 = $("row1"), row2 = $("row2"), rows = $("rows");
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      // Marquee rows slide in opposite directions with scroll.
+      const r = rows.getBoundingClientRect();
+      const off = (vh - r.top) * 0.3;
+      row1.style.transform = `translate3d(${off - 420}px,0,0)`;
+      row2.style.transform = `translate3d(${-(off - 200)}px,0,0)`;
+      // Letters brighten one by one between 80% and 20% of the viewport.
+      const a = aboutText.getBoundingClientRect();
+      const p = clamp((vh * 0.8 - a.top) / (a.height + vh * 0.6), 0, 1);
+      const lit = reduced ? chars.length : Math.floor(p * chars.length);
+      chars.forEach((c, i) => (c.style.opacity = i < lit ? 1 : 0.16));
+      // Sticky cards: the one underneath shrinks as the next slides over it.
+      const st = $("stack").getBoundingClientRect();
+      const total = cards.length;
+      const sp = clamp(-st.top / Math.max(1, st.height - vh), 0, 1);
+      cards.forEach((c, i) => {
+        const start = i / total;
+        const local = clamp((sp - start) / (1 - start || 1), 0, 1);
+        c.style.transform = `scale(${1 - (total - 1 - i) * 0.045 * local})`;
+      });
+      // Header + back to top + active link.
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("toTop").classList.toggle("show", scrollY > vh);
+      let cur = "";
+      document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * 0.4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll);
+
+    /* ---------- Reveal + count-up ---------- */
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach(countUp);
+      io.unobserve(en.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    const observeReveals = () => document.querySelectorAll(".reveal:not(.in)").forEach((el) => io.observe(el));
+    observeReveals();
+    function countUp(el) {
+      const end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now();
+      const step = (t) => { const k = Math.min((t - t0) / 1600, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }
+
+    /* ---------- Magnet ---------- */
+    document.querySelectorAll("[data-magnet]").forEach((el) => {
+      el.addEventListener("mousemove", (e) => {
+        const b = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - b.left - b.width / 2) * 0.3}px, ${(e.clientY - b.top - b.height / 2) * 0.35}px)`;
+      });
+      el.addEventListener("mouseleave", () => (el.style.transform = ""));
+    });
+
+    /* ---------- Hero timecode ---------- */
+    const tcEl = $("tc"), t0 = performance.now();
+    const tc = (ms) => { const f = Math.floor(ms / (1000 / 24)); const s = Math.floor(f / 24); return [Math.floor(s / 3600), Math.floor(s / 60) % 60, s % 60, f % 24].map((n) => String(n).padStart(2, "0")).join(":"); };
+    (function tick() { tcEl.textContent = tc(performance.now() - t0); requestAnimationFrame(tick); })();
+
+    /* ---------- Film strip toy ---------- */
+    const FRAMES = [
+      ["1492144534655-ae79c964c9d7", "Night Drive"], ["1503376780353-7e6692767b70", "Coast road"], ["1500530855697-b586d89ba3ee", "Valley of Fire"],
+      ["1470229722913-7c0e2dbbafd3", "Loud Hours"], ["1501281668745-f7f57925c3b4", "Encore"], ["1493225457124-a3eb161ffa5f", "Live set"],
+      ["1551698618-1dfe5d97d256", "Into the Cold"], ["1519681393784-d120267933ba", "Aoraki"], ["1506905925346-21bda4d32df4", "Above clouds"],
+      ["1502680390469-be75c86b636f", "Salt & Swell"], ["1470071459604-3b5ec3a7fe05", "Faroe cliffs"], ["1517649763962-0c623066013b", "Ride as One"],
+      ["1542051841857-5f90071e7989", "Shibuya"], ["1509347528160-9a9e33742cdb", "Night shoot"], ["1511285560929-80b456fea0bc", "Vows"],
+      ["1523712999610-f77fbcfc3843", "Golden hour"],
+    ];
+    const strip = $("strip"), track = $("stripTrack");
+    track.innerHTML = FRAMES.map(([id, t], i) => `<div class="frame" data-i="${i}"><img src="${U(id, 400)}" alt="${t}" draggable="false" /><span>${String(i + 1).padStart(2, "0")}</span></div>`).join("");
+    const frames = [...track.children];
+    let x = 0, v = 0, dragging = false, lastX = 0, active = -1, snapTo = null;
+    const frameW = () => frames[0].offsetWidth + 10;
+    const centerX = (i) => strip.clientWidth / 2 - (i * frameW() + frames[0].offsetWidth / 2);
+    const limits = () => [centerX(frames.length - 1), centerX(0)];
+    function setActive(i) {
+      if (i === active) return;
+      active = i;
+      frames.forEach((f, j) => f.classList.toggle("on", j === i));
+      $("monImg").src = U(FRAMES[i][0], 1400);
+      $("monImg").alt = FRAMES[i][1];
+      $("monTitle").textContent = FRAMES[i][1];
+      $("monTc").textContent = tc(i * 7340 + 1250);
+    }
+    function render() {
+      const [min, max] = limits();
+      if (!dragging) {
+        if (snapTo !== null) { x += (centerX(snapTo) - x) * 0.14; if (Math.abs(centerX(snapTo) - x) < 0.5) { x = centerX(snapTo); snapTo = null; } }
+        else if (Math.abs(v) > 0.2) { x += v; v *= 0.94; }
+        else { v = 0; const i = clamp(Math.round((strip.clientWidth / 2 - frames[0].offsetWidth / 2 - x) / frameW()), 0, frames.length - 1); x += (centerX(i) - x) * 0.12; }
+        if (x > max) { x += (max - x) * 0.2; v = 0; } else if (x < min) { x += (min - x) * 0.2; v = 0; }
+      }
+      track.style.transform = `translate3d(${x}px,0,0)`;
+      setActive(clamp(Math.round((strip.clientWidth / 2 - frames[0].offsetWidth / 2 - x) / frameW()), 0, frames.length - 1));
+      requestAnimationFrame(render);
+    }
+    x = centerX(2);
+    strip.addEventListener("pointerdown", (e) => { dragging = true; snapTo = null; lastX = e.clientX; v = 0; strip.setPointerCapture(e.pointerId); stopPlay(); });
+    strip.addEventListener("pointermove", (e) => { if (!dragging) return; const dx = e.clientX - lastX; x += dx; v = dx; lastX = e.clientX; });
+    const endDrag = () => { dragging = false; v = clamp(v, -60, 60); };
+    strip.addEventListener("pointerup", endDrag);
+    strip.addEventListener("pointercancel", endDrag);
+    strip.addEventListener("click", (e) => { const f = e.target.closest(".frame"); if (f && Math.abs(v) < 2) snapTo = +f.dataset.i; });
+    const go = (d) => { snapTo = clamp((snapTo ?? active) + d, 0, frames.length - 1); v = 0; };
+    $("prevF").onclick = () => { stopPlay(); go(-1); };
+    $("nextF").onclick = () => { stopPlay(); go(1); };
+    strip.addEventListener("keydown", (e) => { if (e.key === "ArrowRight") { e.preventDefault(); go(1); } if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); } });
+    let playTimer = null;
+    function stopPlay() { clearInterval(playTimer); playTimer = null; $("playF").innerHTML = '<i class="ri-play-fill"></i>'; }
+    $("playF").onclick = () => {
+      if (playTimer) return stopPlay();
+      $("playF").innerHTML = '<i class="ri-pause-fill"></i>';
+      playTimer = setInterval(() => { snapTo = active >= frames.length - 1 ? 0 : active + 1; }, 1100);
+    };
+    requestAnimationFrame(render);
+
+    /* ---------- Showreel modal ---------- */
+    const modal = $("modal"), reel = $("reelVideo");
+    function openReel() { modal.classList.add("open"); document.body.style.overflow = "hidden"; reel.play().catch(() => {}); }
+    function closeReel() { modal.classList.remove("open"); document.body.style.overflow = ""; reel.pause(); }
+    $("openReel").onclick = openReel;
+    $("closeReel").onclick = closeReel;
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeReel(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") { closeReel(); $("nav").classList.remove("open"); } });
+
+    /* ---------- Menu ---------- */
+    $("burger").onclick = () => { const o = $("nav").classList.toggle("open"); $("burger").innerHTML = o ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-4-line"></i>'; };
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) { $("nav").classList.remove("open"); $("burger").innerHTML = '<i class="ri-menu-4-line"></i>'; } });
+
+    /* ---------- Contact ---------- */
+    const toast = (m) => { const t = $("toast"); t.querySelector("span").textContent = m; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2600); };
+    $("email").addEventListener("click", (e) => {
+      if (!navigator.clipboard) return;
+      e.preventDefault();
+      navigator.clipboard.writeText("hello@kaimoreno.film").then(() => toast("Email copied — talk soon"), () => (location.href = "mailto:hello@kaimoreno.film"));
+    });
+    $("cvBtn").onclick = (e) => { e.preventDefault(); toast("Director's deck is on its way to your inbox"); };
+    $("types").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (!b) return; $("types").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b)); });
+    const setBudget = (v) => $("fBudget").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", +c.dataset.v === v));
+    const updBudget = () => setBudget(6500);
+    $("fBudget").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (b) setBudget(+b.dataset.v); });
+    document.querySelectorAll("[data-plan]").forEach((b) => b.addEventListener("click", () => {
+      $("fPlan").value = b.dataset.plan;
+      setBudget({ "Social cut": 1800, "Brand film": 6500, Campaign: 14000 }[b.dataset.plan] || 6500);
+    }));
+    $("brief").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = $("fName").value.trim().split(" ")[0];
+      toast(`Thanks ${name} — your ${$("types").querySelector(".on").textContent.toLowerCase()} brief is in. Reply within 24h.`);
+      e.target.reset(); updBudget();
+    });
+
+    /* ---------- Clock ---------- */
+    const clock = () => { try { $("clock").textContent = new Date().toLocaleTimeString("en-GB", { timeZone: "Europe/Lisbon", hour: "2-digit", minute: "2-digit" }); } catch (_) {} };
+    clock(); setInterval(clock, 30000);
+
+    renderStack("All");
+    observeReveals();
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-kai/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

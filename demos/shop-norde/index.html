@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norde — Clothing, Shoes and Bags for Women and Men</title>
+  <meta name="description" content="Norde is a Brooklyn clothing store: coats, tailoring, denim, shoes and bags, styled into complete looks. Free shipping over $100 and 30-day returns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__row">
+      <nav class="nav" aria-label="Main">
+        <button class="txt-btn burger" id="burger" aria-label="Open menu">Menu</button>
+        <a href="#shop" data-shop="Women">Women</a>
+        <a href="#shop" data-shop="Men">Men</a>
+        <a href="#shop" data-shop="Shoes">Shoes</a>
+        <a href="#shop" data-shop="Bags">Bags</a>
+        <a href="#looks">Looks</a>
+        <a href="#shop" data-shop="Sale">Sale</a>
+      </nav>
+      <a href="#home" class="logo" aria-label="Norde home">NORDE</a>
+      <div class="tools">
+        <button class="txt-btn" id="openSearch">Search</button>
+        <button class="txt-btn hide-sm" id="openAccount">Account</button>
+        <button class="txt-btn hide-sm" id="openWish">Saved<b class="count" id="wishCount" hidden>0</b></button>
+        <button class="txt-btn" id="openCart">Bag<b class="count" id="cartCount" hidden>0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__media"><img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=2200&q=82" alt="Person in an olive cotton field jacket with rolled cuffs against a pale wall" /></div>
+      <div class="hero__text">
+        <span>Autumn / Winter 2026</span>
+        <h1>Easy layers for the new season.</h1>
+        <p>Field jackets, soft tailoring and good coats, picked to work together.</p>
+        <div class="hero__btns">
+          <a href="#shop" class="btn" data-shop="Women">Shop women</a>
+          <a href="#shop" class="btn" data-shop="Men">Shop men</a>
+        </div>
+      </div>
+      <button class="hero__tag" data-open="m8">Olive Field Jacket, $138 <i class="ri-arrow-right-line"></i></button>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement">
+      <p class="reveal">Clothes picked to work together, from our own studio and a few labels we actually wear. <a href="#looks">See how we style them</a></p>
+    </section>
+
+    <!-- Product wall -->
+    <section class="wall" id="shop">
+      <div class="bar">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Product categories"></div>
+        <div class="bar__end">
+          <span id="resultCount" aria-live="polite"></span>
+          <label class="sort"><span>Sort</span>
+            <select id="sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="new">Newest</option>
+              <option value="rating">Top rated</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </label>
+          <button class="txt-btn" id="filterToggle">Filter<b class="count" id="filterBadge" hidden>0</b></button>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid"></div>
+      <div class="more" id="moreWrap">
+        <p id="moreText"></p>
+        <div class="more__bar"><span id="moreBar"></span></div>
+        <button class="btn" id="loadMore">Show more</button>
+      </div>
+    </section>
+
+    <!-- Look one -->
+    <section class="look" id="looks">
+      <div class="look__img reveal"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80" alt="Woman in a burgundy coat and red sunglasses carrying shopping bags" loading="lazy" /></div>
+      <div class="look__body reveal">
+        <span class="eyebrow">Look 01</span>
+        <h2>The Saturday coat</h2>
+        <p>A statement coat does most of the work. Keep the rest simple and let one bag do the talking.</p>
+        <div class="look__list" data-look="w2,s8,b1,a2"></div>
+      </div>
+    </section>
+
+    <!-- Sale bar -->
+    <section class="salebar" id="sale">
+      <p><strong>Mid-season sale.</strong> Up to 40% off selected styles.</p>
+      <div class="salebar__time" id="timer" role="timer" aria-label="Time left in the sale"><span><b id="tD">00</b>d</span><span><b id="tH">00</b>h</span><span><b id="tM">00</b>m</span><span><b id="tS">00</b>s</span></div>
+      <a href="#shop" data-shop="Sale">Shop the sale <i class="ri-arrow-right-line"></i></a>
+    </section>
+
+    <!-- Look two -->
+    <section class="look look--flip">
+      <div class="look__img reveal"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1400&q=80" alt="Man in a dark zip jacket and tan trousers against a pale wall" loading="lazy" /></div>
+      <div class="look__body reveal">
+        <span class="eyebrow">Look 02</span>
+        <h2>The easy weekend</h2>
+        <p>One good jacket over a clean sweatshirt, finished with shoes you can walk all day in.</p>
+        <div class="look__list" data-look="m3,m6,s1,a3"></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="words">
+      <div class="words__head reveal">
+        <strong>4.7<span> / 5</span></strong>
+        <p>from 1,920 verified customer reviews</p>
+      </div>
+      <blockquote class="reveal">"The coat looks far more expensive than it was. I've been stopped twice and asked where it's from."<cite>Elena P., Brooklyn</cite></blockquote>
+      <blockquote class="reveal">"Sizing notes were spot on. My exchange was at my door within the week, and the label was free."<cite>Tom W., Denver</cite></blockquote>
+      <blockquote class="reveal">"Everything I've bought here goes with everything else, which is more than I can say for my closet."<cite>Sade A., Atlanta</cite></blockquote>
+    </section>
+
+    <!-- Journal -->
+    <section class="story" id="journal">
+      <button class="story__lead reveal" data-post="0" aria-label="Read: How we choose a coat">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1500&q=80" alt="Pale clothes hanging on a simple rail" loading="lazy" />
+      </button>
+      <div class="story__list reveal">
+        <span class="eyebrow">Journal</span>
+        <button data-post="0"><small>Buying guide</small>How we choose a coat that lasts</button>
+        <button data-post="1"><small>Wardrobe</small>Ten pieces that make thirty outfits</button>
+        <button data-post="2"><small>Care</small>What to do before you wash wool</button>
+      </div>
+    </section>
+
+    <!-- Customer care -->
+    <section class="care" id="help">
+      <div class="care__faq reveal">
+        <h2>Customer care</h2>
+        <div id="faq"></div>
+      </div>
+      <div class="care__visit reveal" id="store">
+        <h2>Visit the store</h2>
+        <p>88 Wythe Avenue<br />Brooklyn, NY 11249</p>
+        <p>Mon to Sat, 10am to 8pm<br />Sun, 11am to 6pm <b class="open-pill" id="openNow"></b></p>
+        <p><a href="tel:+17185550184">+1 (718) 555-0184</a><br /><a href="mailto:care@nordestore.com">care@nordestore.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__perks">
+      <span>Free shipping over $100</span><span>30-day free returns</span><span>Secure checkout</span><span>Free hemming in store</span>
+    </div>
+    <div class="footer__grid">
+      <form class="news" id="newsForm">
+        <label for="newsEmail">New arrivals and early sale access, twice a month.</label>
+        <div><input id="newsEmail" type="email" required placeholder="Email address" autocomplete="email" /><button class="btn" type="submit">Sign up</button></div>
+        <p id="newsOk" role="status" hidden>You're signed up. Thank you.</p>
+      </form>
+      <div><h4>Shop</h4><a href="#shop" data-shop="Women">Women</a><a href="#shop" data-shop="Men">Men</a><a href="#shop" data-shop="Shoes">Shoes</a><a href="#shop" data-shop="Bags">Bags</a></div>
+      <div><h4>Help</h4><a href="#help" data-faq="0">Shipping</a><a href="#help" data-faq="1">Returns</a><a href="#help" data-faq="2">Sizing</a><a href="#store">Store</a></div>
+      <div><h4>Follow</h4><a href="#store">Instagram</a><a href="#store">Pinterest</a><a href="#store">TikTok</a></div>
+    </div>
+    <div class="footer__end"><a href="#home" class="logo">NORDE</a><p>© 2026 Norde Retail LLC</p><div class="pay" aria-label="Accepted payment methods"><i class="ri-visa-line" title="Visa"></i><i class="ri-mastercard-line" title="Mastercard"></i><i class="ri-paypal-line" title="PayPal"></i><i class="ri-apple-line" title="Apple Pay"></i></div></div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <!-- Filter drawer -->
+  <aside class="drawer drawer--left" id="filterPanel" aria-label="Filter products" aria-hidden="true">
+    <div class="drawer__head"><h3>Filter</h3><button class="icon-btn" data-close aria-label="Close filters"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__body fbody">
+      <label class="field"><span>Search</span><input type="search" id="shopSearch" placeholder="Coat, Nike, denim..." /></label>
+      <div class="fgroup"><h4>Colour</h4><div class="swatches" id="fColor"></div></div>
+      <div class="fgroup"><h4>Price</h4><div class="opts" id="fPrice"></div></div>
+      <div class="fgroup"><h4>Brand</h4><div class="opts" id="fBrand"></div></div>
+    </div>
+    <div class="drawer__foot"><button class="btn btn--full" data-close>Show results</button></div>
+  </aside>
+
+  <!-- Overlays -->
+  <div class="scrim" id="scrim"></div>
+
+  <!-- Mobile menu -->
+  <aside class="drawer drawer--left" id="mobileNav" aria-label="Menu" aria-hidden="true">
+    <div class="drawer__head"><span class="logo">NORDE</span><button class="icon-btn" data-close aria-label="Close menu"><i class="ri-close-line"></i></button></div>
+    <nav class="mnav">
+      <a href="#home">Home</a>
+      <a href="#shop" data-shop="All">Shop all</a>
+      <a href="#shop" data-shop="Women">Women</a>
+      <a href="#shop" data-shop="Men">Men</a>
+      <a href="#shop" data-shop="Shoes">Shoes</a>
+      <a href="#shop" data-shop="Bags">Bags</a>
+      <a href="#shop" data-shop="Accessories">Accessories</a>
+      <a href="#shop" data-shop="Sale" class="mnav__sale">Sale</a>
+      <a href="#best">Best sellers</a>
+      <a href="#journal">Journal</a>
+      <a href="#help">Help</a>
+      <a href="#store">Our store</a>
+      <a href="#account" id="mAccount">Your account</a>
+    </nav>
+  </aside>
+
+  <!-- Bag drawer -->
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head"><h3>Your bag <small id="cartHeadCount"></small></h3><button class="icon-btn" data-close aria-label="Close bag"><i class="ri-close-line"></i></button></div>
+    <div class="ship" id="shipBox"></div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- Wishlist drawer -->
+  <aside class="drawer" id="wishDrawer" aria-label="Wishlist" aria-hidden="true">
+    <div class="drawer__head"><h3>Wishlist</h3><button class="icon-btn" data-close aria-label="Close wishlist"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__body" id="wishBody"></div>
+  </aside>
+
+  <!-- Quick view -->
+  <div class="modal" id="qv" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
+    <div class="modal__box modal__box--wide">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="qv" id="qvBody"></div>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="search" id="searchBox" role="dialog" aria-modal="true" aria-label="Search" aria-hidden="true">
+    <div class="container">
+      <form class="search__form" id="searchForm">
+        <i class="ri-search-line"></i>
+        <input type="search" id="searchInput" placeholder="What are you looking for?" aria-label="Search products" autocomplete="off" />
+        <button type="button" class="icon-btn" data-close aria-label="Close search"><i class="ri-close-line"></i></button>
+      </form>
+      <div class="search__popular" id="searchPopular">
+        <span>Popular:</span>
+        <button type="button" data-term="Trench">Trench</button>
+        <button type="button" data-term="Nike">Nike</button>
+        <button type="button" data-term="Dress">Dress</button>
+        <button type="button" data-term="Ray-Ban">Ray-Ban</button>
+        <button type="button" data-term="Leather">Leather</button>
+      </div>
+      <div class="search__results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Checkout -->
+  <div class="modal" id="checkout" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal__box modal__box--wide">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="checkoutBody"></div>
+    </div>
+  </div>
+
+  <!-- Journal article -->
+  <div class="modal" id="article" role="dialog" aria-modal="true" aria-label="Article" aria-hidden="true">
+    <div class="modal__box">
+      <button class="icon-btn modal__close modal__close--float" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div id="articleBody"></div>
+    </div>
+  </div>
+
+  <!-- Account -->
+  <div class="modal" id="account" role="dialog" aria-modal="true" aria-label="Sign in" aria-hidden="true">
+    <div class="modal__box modal__box--small">
+      <button class="icon-btn modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="account">
+        <h3>Sign in to Norde</h3>
+        <p>Track orders, save addresses and check out faster.</p>
+        <form id="accountForm">
+          <label class="field"><span>Email</span><input type="email" required autocomplete="email" /></label>
+          <label class="field"><span>Password</span><input type="password" required autocomplete="current-password" /></label>
+          <button class="btn btn--full" type="submit">Sign in</button>
+          <p class="form-ok" id="accountOk" role="status" hidden><i class="ri-checkbox-circle-fill"></i> Thanks. Account sign-in goes live once the store platform is connected.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const U = (id, w = 700, extra = "") => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=75${extra}`;
+    const UC = (id, w = 700) => U(id, w, `&h=${Math.round(w * 1.25)}`);
+    const zoom = (id, w, x, y, z) => U(id, w, `&h=${Math.round(w * 1.25)}&crop=focalpoint&fp-x=${x}&fp-y=${y}&fp-z=${z}`);
+    const money = (n) => "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    /* ---------- Catalogue ---------- */
+    const WOMEN = ["XS", "S", "M", "L", "XL"], MEN = ["S", "M", "L", "XL", "XXL"], SHOES = ["39", "40", "41", "42", "43", "44", "45"], WSHOES = ["36", "37", "38", "39", "40", "41"], ONE = ["One size"];
+    const C = { black: ["Black", "#17171a"], white: ["White", "#ffffff"], camel: ["Camel", "#b98a56"], blue: ["Blue", "#6f9cc4"], navy: ["Navy", "#1f3050"], red: ["Red", "#c8202c"], burgundy: ["Burgundy", "#5e1a26"], pink: ["Rose", "#d9a6a6"], yellow: ["Saffron", "#e8ad1f"], grey: ["Grey", "#94979c"], olive: ["Olive", "#5f5a36"] };
+    const col = (key, img) => ({ key, name: C[key][0], hex: C[key][1], img });
+    const HOUSE = "Norde";
+    const PRODUCTS = [
+      { id: "w2", cat: "Women", brand: HOUSE, name: "Burgundy Shearling Coat", price: 320, isNew: 1, rating: 4.9, reviews: 96, colors: [col("burgundy", "1483985988355-763728e1935b")], sizes: WOMEN, desc: "A deep burgundy coat with a shearling collar that stands up on its own. Warm enough to skip the scarf.", details: ["Wool blend with shearling trim", "Regular fit, knee length", "Specialist clean only"] },
+      { id: "m2", cat: "Men", brand: HOUSE, name: "Black Peak-Lapel Suit", price: 349, was: 429, rating: 4.8, reviews: 121, colors: [col("black", "1617127365659-c47fa864d8bc")], sizes: ["36", "38", "40", "42", "44", "46"], desc: "A sharp, half-canvas suit with a peak lapel and a clean, tapered trouser. Made for evenings out.", details: ["98% wool, 2% elastane", "Slim fit, trousers unhemmed", "Free hemming in store"] },
+      { id: "b1", cat: "Bags", brand: HOUSE, name: "Botanical Print Tote", price: 165, rating: 4.5, reviews: 58, colors: [col("pink", "1591561954557-26941169b49e")], sizes: ONE, desc: "A structured top-handle tote in a painted botanical print, with a metal clasp and suede interior.", details: ["Printed leather, suede lining", "29 × 24 × 12 cm", "Comes with a dust bag"] },
+      { id: "w3", cat: "Women", brand: HOUSE, name: "Red Column Evening Gown", price: 265, rating: 4.8, reviews: 44, colors: [col("red", "1612336307429-8a898d10e223")], sizes: WOMEN, desc: "A sculpted long-sleeve gown with a front overlay and a train that falls away from the hip.", details: ["95% polyester crepe, 5% elastane", "Fitted, floor length", "Dry clean only"] },
+      { id: "m3", cat: "Men", brand: HOUSE, name: "Navy Zip Harrington", price: 118, isNew: 1, rating: 4.6, reviews: 83, colors: [col("navy", "1488161628813-04466f872be2")], sizes: MEN, desc: "A cotton-twill Harrington with a contrast zip and a clean collar. Light enough for most of the year.", details: ["100% cotton twill, cotton lining", "Regular fit", "Machine wash cold"] },
+      { id: "s2", cat: "Shoes", brand: "Nike", name: "Air Zoom Runner", price: 150, isNew: 1, rating: 4.6, reviews: 118, colors: [col("black", "1491553895911-0055eca6402d")], sizes: SHOES, desc: "A sleek, light daily trainer with a responsive Zoom Air unit and a breathable knit upper.", details: ["Engineered knit upper", "Nike Zoom Air cushioning", "True to size"] },
+      { id: "w4", cat: "Women", brand: HOUSE, name: "Oversized Denim Jacket", price: 98, rating: 4.7, reviews: 175, colors: [col("blue", "1517841905240-472988babdf9")], sizes: WOMEN, desc: "A roomy, mid-wash jacket with deep chest pockets. Big enough to layer over a hoodie.", details: ["100% cotton denim, 12 oz", "Oversized fit", "Machine wash cold"] },
+      { id: "a1", cat: "Accessories", brand: "Ray-Ban", name: "Round Metal RB3447", price: 163, rating: 4.8, reviews: 156, colors: [col("black", "1511499767150-a48a237f0083")], sizes: ONE, desc: "Thin metal, perfectly round lenses and adjustable nose pads. A shape that has never gone away.", details: ["Metal frame, glass lenses", "100% UV protection", "Includes case and cloth"] },
+      { id: "m4", cat: "Men", brand: HOUSE, name: "White Non-Iron Dress Shirt", price: 64, rating: 4.7, reviews: 142, colors: [col("white", "1598033129183-c4f50c736f10")], sizes: MEN, desc: "A crisp cotton poplin shirt with a semi-spread collar that holds its shape all day.", details: ["100% cotton poplin", "Slim fit, button cuffs", "Machine wash warm"] },
+      { id: "w1", cat: "Women", brand: HOUSE, name: "Sky Blue Longline Coat", price: 198, rating: 4.8, reviews: 214, colors: [col("blue", "1539109136881-3be0616acf4b")], sizes: WOMEN, desc: "A soft, drop-shoulder coat in brushed wool blend, cut long with a self-tie waist. The one you'll be asked about.", details: ["60% wool, 40% polyester", "Relaxed fit, mid-calf length", "Dry clean only"] },
+      { id: "m1", cat: "Men", brand: HOUSE, name: "Camel Unlined Blazer", price: 225, rating: 4.7, reviews: 142, colors: [col("camel", "1552374196-1ab2a1c593e8")], sizes: MEN, desc: "An unstructured two-button blazer in a light wool-cotton hopsack. Sharp with trousers and easy over a T-shirt.", details: ["55% wool, 45% cotton", "Regular fit, unlined", "Dry clean only"] },
+      { id: "s1", cat: "Shoes", brand: "Nike", name: "Kyrie 7", price: 130, rating: 4.7, reviews: 188, colors: [col("black", "1605348532760-6753d2c43329")], sizes: SHOES, desc: "A court shoe with a curved outsole for quick cuts and Zoom Air cushioning at the forefoot.", details: ["Textile and synthetic upper", "Nike Zoom Air unit", "True to size"] },
+      { id: "w5", cat: "Women", brand: HOUSE, name: "Saffron Cropped Hoodie Set", price: 54, was: 88, rating: 4.4, reviews: 71, colors: [col("yellow", "1515886657613-9f3515b0c78f")], sizes: WOMEN, desc: "A matching cropped hoodie and jogger in bright saffron fleece. Sold as a set, easy to wear apart.", details: ["80% cotton, 20% polyester", "Relaxed fit", "Machine wash cold"] },
+      { id: "s3", cat: "Shoes", brand: HOUSE, name: "Black Lace-Up Boots", price: 145, rating: 4.7, reviews: 129, colors: [col("black", "1608256246200-53e635b5b65f")], sizes: SHOES, desc: "Polished black leather boots on a commando sole, with a welt that can be resoled for years.", details: ["Full-grain leather upper", "Goodyear-welted rubber sole", "True to size"] },
+      { id: "m5", cat: "Men", brand: HOUSE, name: "Washed Black Overshirt", price: 79, was: 110, rating: 4.6, reviews: 67, colors: [col("black", "1507680434567-5739c80be1ac")], sizes: MEN, desc: "A heavy washed-cotton overshirt with press studs and two chest pockets. Works as a shirt or a light jacket.", details: ["100% cotton twill", "Regular fit", "Machine wash cold"] },
+      { id: "w6", cat: "Women", brand: HOUSE, name: "Long Rose Wool Coat", price: 245, rating: 4.8, reviews: 88, colors: [col("pink", "1485462537746-965f33f7f6a7")], sizes: WOMEN, desc: "A long, dusty-rose coat in double-faced wool, with a clean collar and no lining to weigh it down.", details: ["80% wool, 20% polyamide", "Regular fit, below the knee", "Dry clean only"] },
+      { id: "b2", cat: "Bags", brand: HOUSE, name: "Wicker & Leather Basket Bag", price: 92, rating: 4.4, reviews: 49, colors: [col("camel", "1590874103328-eac38a683ce7")], sizes: ONE, desc: "A hand-woven basket with a smooth leather flap and handle. It holds more than it looks like it should.", details: ["Woven rattan, leather trim", "28 × 26 × 14 cm", "Wipe with a dry cloth"] },
+      { id: "m6", cat: "Men", brand: HOUSE, name: "Heavyweight White Sweatshirt", price: 58, rating: 4.7, reviews: 96, colors: [col("white", "1620799140408-edc6dcb6d633")], sizes: MEN, desc: "A dense loopback crewneck in optic white, with ribbed cuffs and a little more room through the body.", details: ["100% brushed-back cotton, 400 gsm", "Relaxed fit", "Machine wash cold"] },
+      { id: "s4", cat: "Shoes", brand: HOUSE, name: "Horsebit Leather Loafers", price: 119, was: 150, rating: 4.6, reviews: 76, colors: [col("camel", "1616406432452-07bc5938759d")], sizes: SHOES, desc: "Polished tan leather loafers with a metal bit across the vamp. Dressy enough for most offices.", details: ["Leather upper and lining", "Stitched leather sole", "Half a size down is best"] },
+      { id: "w7", cat: "Women", brand: HOUSE, name: "Striped Satin Shirt", price: 72, isNew: 1, rating: 4.5, reviews: 39, colors: [col("black", "1544005313-94ddf0286df2")], sizes: WOMEN, desc: "A fluid black-and-white striped shirt with a soft collar and a slightly longer back.", details: ["100% viscose satin", "Relaxed fit", "Hand wash cold"] },
+      { id: "a2", cat: "Accessories", brand: HOUSE, name: "Knit Beanie & Scarf Set", price: 48, rating: 4.6, reviews: 104, colors: [col("black", "1487412720507-e7ab37603c6f")], sizes: ONE, desc: "A rib-knit black beanie paired with a long, soft grey scarf. Warm without the itch.", details: ["70% wool, 30% acrylic", "One size", "Hand wash cold"] },
+      { id: "s8", cat: "Shoes", brand: HOUSE, name: "Black Zip Ankle Boots", price: 110, rating: 4.5, reviews: 52, colors: [col("black", "1605732440685-d0654d81aa30")], sizes: WSHOES, desc: "Smooth leather ankle boots with an inside zip and a low block heel you can walk in all day.", details: ["Leather upper and lining", "3.5 cm block heel", "True to size"] },
+      { id: "m8", cat: "Men", brand: HOUSE, name: "Olive Field Jacket", price: 138, isNew: 1, rating: 4.8, reviews: 67, colors: [col("olive", "1544022613-e87ca75a784a")], sizes: MEN, desc: "A washed cotton field jacket with four patch pockets and sleeves made to be rolled. It looks better the more you wear it.", details: ["100% washed cotton twill", "Relaxed fit", "Machine wash cold"] },
+      { id: "m7", cat: "Men", brand: HOUSE, name: "Black Chest-Print Tee", price: 32, rating: 4.5, reviews: 81, colors: [col("black", "1583743814966-8936f5b7be1a")], sizes: MEN, desc: "A soft, slightly boxy tee with a small print on the chest. Pre-shrunk, so it stays the size you bought.", details: ["100% combed cotton, 200 gsm", "Boxy fit", "Machine wash cold"] },
+      { id: "a3", cat: "Accessories", brand: HOUSE, name: "Washed Cotton Cap", price: 26, rating: 4.6, reviews: 95, colors: [col("grey", "1521369909029-2afed882baee")], sizes: ONE, desc: "A six-panel cap in faded charcoal, with a low crown, a curved peak and an adjustable strap.", details: ["100% washed cotton", "Adjustable strap", "Hand wash cold"] },
+    ];
+    const byId = (id) => PRODUCTS.find((p) => p.id === id);
+    const NEW_ORDER = PRODUCTS.filter((p) => p.isNew).map((p) => p.id);
+    const COUNT_STEP = 12;
+    const PRICE_BANDS = [
+      { id: "all", label: "All prices", test: () => true },
+      { id: "0", label: "Under $50", test: (n) => n < 50 },
+      { id: "50", label: "$50 to $100", test: (n) => n >= 50 && n < 100 },
+      { id: "100", label: "$100 to $200", test: (n) => n >= 100 && n < 200 },
+      { id: "200", label: "$200 and up", test: (n) => n >= 200 },
+    ];
+    const pct = (p) => (p.was ? Math.round((1 - p.price / p.was) * 100) : 0);
+    const stars = (r) => `<span class="stars" aria-label="Rated ${r} out of 5">★★★★★<span style="width:${(r / 5) * 100}%">★★★★★</span></span>`;
+
+    /* ---------- Storage ---------- */
+    const store = {
+      get(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v === null ? d : v; } catch (e) { return d; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    };
+    let cart = store.get("norde_cart", []).filter((l) => byId(l.id));
+    let wish = store.get("norde_wish", []).filter((id) => byId(id));
+    let promo = store.get("norde_promo", "");
+
+    /* ---------- Product cards ---------- */
+    const isGarment = (p) => p.cat === "Women" || p.cat === "Men";
+    const hoverImg = (p, c) => (isGarment(p) ? zoom(c.img, 560, 0.5, 0.42, 1.7) : zoom(c.img, 560, 0.5, 0.5, 1.45));
+    const cardHTML = (p, i = 0) => {
+      const c = p.colors[0], saved = wish.includes(p.id), oneSize = p.sizes.length === 1;
+      return `<article class="card" style="--i:${i % COUNT_STEP}" data-card="${p.id}">
+        <div class="card__media">
+          <button class="card__open" data-open="${p.id}" aria-label="View ${esc(p.name)}">
+            <img class="card__img" src="${UC(c.img, 640)}" alt="${esc(p.brand)} ${esc(p.name)}" loading="lazy" />
+            <img class="card__img2" src="${hoverImg(p, c)}" alt="" loading="lazy" />
+          </button>
+          <div class="card__flags">${p.was ? `<span class="flag">-${pct(p)}%</span>` : ""}${p.isNew ? `<span class="flag">New</span>` : ""}</div>
+          <button class="save" data-wish="${p.id}" aria-label="Save ${esc(p.name)}" aria-pressed="${saved}"><i class="${saved ? "ri-heart-fill" : "ri-heart-line"}"></i></button>
+          <div class="pick">${oneSize ? `<button class="btn" data-add="${p.id}">Add to bag</button>` : `<small>Add to bag: choose a size</small><div class="pick__sizes">${p.sizes.map((s) => `<button data-quick="${p.id}" data-size="${s}">${s}</button>`).join("")}</div>`}</div>
+          <button class="card__add" data-add="${p.id}" aria-label="Add ${esc(p.name)} to bag"><i class="ri-add-line"></i></button>
+        </div>
+        <div class="card__info">
+          <h3><button data-open="${p.id}">${esc(p.name)}</button></h3>
+          <div class="price">${money(p.price)}${p.was ? `<del>${money(p.was)}</del>` : ""}</div>
+          <div class="card__meta"><span>${esc(p.brand)}</span></div>
+        </div>
+      </article>`;
+    };
+
+    /* ---------- Shop state ---------- */
+    const TABS = ["All", "New", "Women", "Men", "Shoes", "Bags", "Accessories", "Sale"];
+    const shop = { cat: "All", q: "", price: "all", color: "", brand: "", sort: "featured", shown: COUNT_STEP };
+    const inCat = (p, cat) => cat === "All" || (cat === "Sale" ? !!p.was : cat === "New" ? !!p.isNew : p.cat === cat);
+    const matches = (p, q) => {
+      if (!q) return true;
+      const hay = `${p.name} ${p.brand} ${p.cat} ${p.colors.map((c) => c.name).join(" ")}`.toLowerCase();
+      return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
+    };
+    const filtered = () => {
+      const band = PRICE_BANDS.find((b) => b.id === shop.price);
+      const list = PRODUCTS.filter((p) => inCat(p, shop.cat) && matches(p, shop.q) && band.test(p.price)
+        && (!shop.color || p.colors.some((c) => c.key === shop.color)) && (!shop.brand || p.brand === shop.brand));
+      const s = shop.sort;
+      if (s === "low") list.sort((a, b) => a.price - b.price);
+      if (s === "high") list.sort((a, b) => b.price - a.price);
+      if (s === "rating") list.sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+      if (s === "new") list.sort((a, b) => (NEW_ORDER.includes(b.id) ? 1 : 0) - (NEW_ORDER.includes(a.id) ? 1 : 0));
+      return list;
+    };
+
+    const renderTabs = () => {
+      const el = $("tabs");
+      el.innerHTML = TABS.map((t) => `<button role="tab" aria-selected="${shop.cat === t}" class="tab ${shop.cat === t ? "on" : ""} ${t === "Sale" ? "tab--sale" : ""}" data-tab="${t}">${t}<small>${PRODUCTS.filter((p) => inCat(p, t)).length}</small></button>`).join("") + `<span class="tabs__line" id="tabLine"></span>`;
+      moveTabLine();
+    };
+    const moveTabLine = () => {
+      const on = $("tabs").querySelector(".tab.on"), line = $("tabLine");
+      if (on && line) { line.style.width = on.offsetWidth + "px"; line.style.transform = `translateX(${on.offsetLeft}px)`; }
+    };
+
+    const renderFilters = () => {
+      $("fPrice").innerHTML = PRICE_BANDS.map((b) => `<button class="opt ${shop.price === b.id ? "on" : ""}" data-price="${b.id}">${b.label}</button>`).join("");
+      const keys = [...new Set(PRODUCTS.flatMap((p) => p.colors.map((c) => c.key)))];
+      $("fColor").innerHTML = keys.map((k) => `<button class="swatch ${shop.color === k ? "on" : ""}" style="--c:${C[k][1]}" data-color="${k}" aria-label="${C[k][0]}" aria-pressed="${shop.color === k}" title="${C[k][0]}"></button>`).join("");
+      const brands = [...new Set(PRODUCTS.map((p) => p.brand))].sort();
+      $("fBrand").innerHTML = brands.map((b) => `<button class="opt ${shop.brand === b ? "on" : ""}" data-brand="${esc(b)}">${esc(b)}</button>`).join("");
+    };
+
+    const renderChips = () => {
+      const chips = [];
+      if (shop.q) chips.push(["q", `"${esc(shop.q)}"`]);
+      if (shop.price !== "all") chips.push(["price", PRICE_BANDS.find((b) => b.id === shop.price).label]);
+      if (shop.color) chips.push(["color", C[shop.color][0]]);
+      if (shop.brand) chips.push(["brand", esc(shop.brand)]);
+      const n = chips.length - (shop.q ? 1 : 0);
+      $("filterBadge").hidden = n === 0;
+      $("filterBadge").textContent = n;
+      $("chips").innerHTML = chips.length ? chips.map(([k, l]) => `<button class="chip" data-chip="${k}">${l}<i class="ri-close-line"></i></button>`).join("") + `<button class="chip chip--clear" data-chip="all">Clear all</button>` : "";
+    };
+
+    const renderGrid = (animateFrom = 0) => {
+      const list = filtered();
+      const visible = list.slice(0, shop.shown);
+      $("resultCount").textContent = `${list.length} ${list.length === 1 ? "item" : "items"}`;
+      if (!list.length) {
+        $("grid").innerHTML = `<div class="empty"><i class="ri-search-eye-line"></i><h3>Nothing matches those filters</h3><p>Try a different search or clear a filter.</p><button class="btn" data-chip="all">Clear all filters</button></div>`;
+      } else {
+        $("grid").innerHTML = visible.map((p, i) => cardHTML(p, Math.max(0, i - animateFrom))).join("");
+        $("grid").querySelectorAll(".card").forEach((c, i) => { if (i < animateFrom) c.classList.add("still"); });
+      }
+      const wrap = $("moreWrap");
+      wrap.hidden = !list.length;
+      $("moreText").textContent = `Showing ${visible.length} of ${list.length}`;
+      $("moreBar").style.width = list.length ? (visible.length / list.length) * 100 + "%" : "0";
+      $("loadMore").hidden = visible.length >= list.length;
+    };
+
+    const refreshShop = () => { shop.shown = COUNT_STEP; renderTabs(); renderFilters(); renderChips(); renderGrid(); };
+
+    const goShop = (opts = {}) => {
+      if (opts.cat) shop.cat = opts.cat;
+      shop.q = opts.q || "";
+      shop.price = "all"; shop.color = ""; shop.brand = "";
+      if (opts.sort) { shop.sort = opts.sort; $("sort").value = opts.sort; }
+      $("shopSearch").value = shop.q;
+      refreshShop();
+    };
+
+    $("loadMore").addEventListener("click", () => {
+      const from = shop.shown;
+      shop.shown += COUNT_STEP;
+      renderGrid(from);
+    });
+    $("sort").addEventListener("change", (e) => { shop.sort = e.target.value; shop.shown = COUNT_STEP; renderGrid(); });
+    $("shopSearch").addEventListener("input", (e) => { shop.q = e.target.value.trim(); shop.shown = COUNT_STEP; renderChips(); renderGrid(); });
+    $("filterToggle").addEventListener("click", () => openOverlay($("filterPanel")));
+
+    /* ---------- Overlay handling ---------- */
+    let openLayer = null, lastFocus = null;
+    const openOverlay = (el) => {
+      if (openLayer && openLayer !== el) closeOverlay(false);
+      if (!openLayer) lastFocus = document.activeElement;
+      openLayer = el;
+      el.classList.add("open");
+      el.setAttribute("aria-hidden", "false");
+      $("scrim").classList.add("open");
+      document.body.classList.add("locked");
+      const f = el.querySelector("[data-focus], .search input[type=search], .icon-btn[data-close]") || el.querySelector("input[type=search]");
+      if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
+    };
+    const closeOverlay = (restore = true) => {
+      if (!openLayer) return;
+      openLayer.classList.remove("open");
+      openLayer.setAttribute("aria-hidden", "true");
+      openLayer = null;
+      $("scrim").classList.remove("open");
+      document.body.classList.remove("locked");
+      if (restore && lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+    };
+    $("scrim").addEventListener("click", () => closeOverlay());
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeOverlay();
+      if (e.key === "Tab" && openLayer) {
+        const items = [...openLayer.querySelectorAll("a[href],button:not([disabled]),input,select,textarea")].filter((n) => n.offsetParent !== null && !n.hidden);
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    document.querySelectorAll(".modal").forEach((m) => m.addEventListener("click", (e) => { if (e.target === m) closeOverlay(); }));
+    $("burger").addEventListener("click", () => openOverlay($("mobileNav")));
+    $("openSearch").addEventListener("click", () => openOverlay($("searchBox")));
+    $("openAccount").addEventListener("click", () => openOverlay($("account")));
+    $("openWish").addEventListener("click", () => { renderWish(); openOverlay($("wishDrawer")); });
+    $("openCart").addEventListener("click", () => { renderCart(); openOverlay($("cartDrawer")); });
+
+    /* ---------- Quick view ---------- */
+    let qv = null;
+    const gallery = (p, c) => {
+      if (p.photos) return p.photos.map((x) => UC(x, 900)).concat(zoom(p.photos[0], 900, 0.5, 0.3, 2.2));
+      if (!isGarment(p)) return [UC(c.img, 900), zoom(c.img, 900, 0.5, 0.5, 1.6)];
+      return [UC(c.img, 900), zoom(c.img, 900, 0.5, 0.32, 2.1), zoom(c.img, 900, 0.5, 0.68, 2.1)];
+    };
+    const deliveryRange = () => {
+      const d = (n) => { const x = new Date(); x.setDate(x.getDate() + n); return x.toLocaleDateString("en-US", { month: "short", day: "numeric" }); };
+      return `${d(3)} to ${d(6)}`;
+    };
+    const openQV = (id, colorIdx = 0, needSize = false) => {
+      const p = byId(id);
+      if (!p) return;
+      qv = { p, colorIdx, size: p.sizes.length === 1 ? p.sizes[0] : "", qty: 1, img: 0, needSize };
+      renderQV();
+      openOverlay($("qv"));
+    };
+    const renderQV = () => {
+      const { p, colorIdx, size, qty, needSize } = qv;
+      const c = p.colors[colorIdx], imgs = gallery(p, c), saved = wish.includes(p.id);
+      $("qvBody").innerHTML = `<div class="pv">
+        <div class="pv__photos">${imgs.map((src, i) => `<img src="${src}" alt="${i === 0 ? esc(p.brand + " " + p.name) : ""}" />`).join("")}</div>
+        <div class="pv__info">
+          <span class="card__brand">${esc(p.brand)}</span>
+          <h2>${esc(p.name)}</h2>
+          <div class="pv__rate">${stars(p.rating)}<span>${p.rating} (${p.reviews} reviews)</span></div>
+          <div class="pv__price">${money(p.price)}${p.was ? `<del>${money(p.was)}</del><span class="flag">-${pct(p)}%</span>` : ""}</div>
+          <p class="pv__desc">${esc(p.desc)}</p>
+          <div class="pv__opt"><h4>Colour: <span>${c.name}</span></h4>${p.colors.length > 1 ? `<div class="swatches">${p.colors.map((x, i) => `<button class="swatch ${i === colorIdx ? "on" : ""}" style="--c:${x.hex}" data-qvcolor="${i}" aria-label="${x.name}" aria-pressed="${i === colorIdx}"></button>`).join("")}</div>` : ""}</div>
+          ${p.sizes.length > 1 ? `<div class="pv__opt ${needSize && !size ? "need" : ""}" id="qvSizeBox"><h4>Size: <span>${size || "Select a size"}</span></h4><div class="sizes">${p.sizes.map((s) => `<button class="size ${size === s ? "on" : ""}" data-qvsize="${s}" aria-pressed="${size === s}">${s}</button>`).join("")}</div></div>` : ""}
+          <div class="pv__buy">
+            <button class="btn btn--grow" data-qvadd>Add to bag · ${money(p.price * qty)}</button>
+            <button class="pv__save" data-wish="${p.id}" aria-label="Save ${esc(p.name)}" aria-pressed="${saved}"><i class="${saved ? "ri-heart-fill" : "ri-heart-line"}"></i></button>
+          </div>
+          <ul class="pv__meta">
+            <li>Arrives ${deliveryRange()}. Free returns within 30 days.</li>
+            ${p.details.map((d) => `<li>${esc(d)}</li>`).join("")}
+          </ul>
+        </div>
+      </div>`;
+    };
+
+    /* ---------- Bag ---------- */
+    const lineKey = (l) => `${l.id}|${l.color}|${l.size}`;
+    const FREE_OVER = 100;
+    const totals = (method = "standard") => {
+      const sub = cart.reduce((s, l) => s + byId(l.id).price * l.qty, 0);
+      const disc = promo === "WELCOME10" ? +(sub * 0.1).toFixed(2) : 0;
+      const after = sub - disc;
+      const ship = !cart.length ? 0 : method === "express" ? 18 : after >= FREE_OVER ? 0 : 8;
+      return { sub, disc, after, ship, total: after + ship };
+    };
+    const saveCart = () => { store.set("norde_cart", cart); store.set("norde_promo", promo); updateCounts(); };
+    const updateCounts = () => {
+      const n = cart.reduce((s, l) => s + l.qty, 0);
+      const el = $("cartCount");
+      el.hidden = n === 0; el.textContent = n;
+      el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+      $("wishCount").hidden = wish.length === 0; $("wishCount").textContent = wish.length;
+    };
+    const addToCart = (id, colorIdx, size, qty = 1) => {
+      const line = { id, color: colorIdx, size, qty };
+      const hit = cart.find((l) => lineKey(l) === lineKey(line));
+      if (hit) hit.qty += qty; else cart.push(line);
+      saveCart(); renderCart();
+      openOverlay($("cartDrawer"));
+    };
+    const renderCart = () => {
+      const t = totals();
+      const n = cart.reduce((s, l) => s + l.qty, 0);
+      $("cartHeadCount").textContent = n ? `(${n})` : "";
+      const left = Math.max(0, FREE_OVER - t.after);
+      $("shipBox").hidden = !cart.length;
+      $("shipBox").innerHTML = `<p>${left > 0 ? `You're <b>${money(left)}</b> away from free standard shipping` : `<i class="ri-checkbox-circle-fill"></i> You've unlocked <b>free standard shipping</b>`}</p><div class="ship__bar"><span style="width:${Math.min(100, (t.after / FREE_OVER) * 100)}%"></span></div>`;
+      if (!cart.length) {
+        $("cartBody").innerHTML = `<div class="drawer__empty"><i class="ri-shopping-bag-line"></i><h4>Your bag is empty</h4><p>Have a look around. New styles land every week.</p><a href="#shop" class="btn" data-shop="All">Start shopping</a></div>`;
+        $("cartFoot").innerHTML = "";
+        return;
+      }
+      $("cartBody").innerHTML = cart.map((l, i) => {
+        const p = byId(l.id), c = p.colors[l.color] || p.colors[0];
+        return `<div class="line">
+          <button class="line__img" data-open="${p.id}" aria-label="View ${esc(p.name)}"><img src="${UC(c.img, 180)}" alt="" /></button>
+          <div class="line__info">
+            <span class="card__brand">${esc(p.brand)}</span>
+            <h4>${esc(p.name)}</h4>
+            <p>${c.name}${l.size !== "One size" ? ` · Size ${l.size}` : ""}</p>
+            <div class="line__row">
+              <div class="qty qty--sm"><button data-lineqty="${i}" data-d="-1" aria-label="Decrease quantity"><i class="ri-subtract-line"></i></button><b>${l.qty}</b><button data-lineqty="${i}" data-d="1" aria-label="Increase quantity"><i class="ri-add-line"></i></button></div>
+              <b class="line__price">${money(p.price * l.qty)}</b>
+            </div>
+          </div>
+          <button class="line__rm" data-rm="${i}" aria-label="Remove ${esc(p.name)}"><i class="ri-delete-bin-line"></i></button>
+        </div>`;
+      }).join("");
+      $("cartFoot").innerHTML = `
+        <form class="promo" id="promoForm">
+          <input id="promoInput" placeholder="Promo code" aria-label="Promo code" value="${esc(promo)}" />
+          <button type="submit">${promo ? "Remove" : "Apply"}</button>
+        </form>
+        <p class="promo__msg" id="promoMsg" role="status"></p>
+        <dl class="sum">
+          <div><dt>Subtotal</dt><dd>${money(t.sub)}</dd></div>
+          ${t.disc ? `<div class="sum__disc"><dt>WELCOME10</dt><dd>-${money(t.disc)}</dd></div>` : ""}
+          <div><dt>Standard shipping</dt><dd>${t.ship ? money(t.ship) : "Free"}</dd></div>
+          <div class="sum__total"><dt>Total</dt><dd>${money(t.total)}</dd></div>
+        </dl>
+        <button class="btn btn--full" id="goCheckout">Checkout <i class="ri-lock-line"></i></button>
+        <p class="drawer__note">Taxes calculated at checkout where they apply.</p>`;
+    };
+    document.addEventListener("submit", (e) => {
+      if (e.target.id !== "promoForm") return;
+      e.preventDefault();
+      if (promo) { promo = ""; saveCart(); renderCart(); return; }
+      const code = $("promoInput").value.trim().toUpperCase();
+      if (code === "WELCOME10") { promo = code; saveCart(); renderCart(); }
+      else { $("promoMsg").textContent = code ? "That code isn't valid. Try WELCOME10." : "Enter a code first."; }
+    });
+
+    const toggleWish = (id) => {
+      wish = wish.includes(id) ? wish.filter((x) => x !== id) : [...wish, id];
+      store.set("norde_wish", wish);
+      updateCounts();
+      const on = wish.includes(id);
+      document.querySelectorAll(`[data-wish="${id}"]`).forEach((b) => {
+        b.classList.toggle("on", on);
+        b.setAttribute("aria-pressed", on);
+        b.querySelector("i").className = on ? "ri-heart-fill" : "ri-heart-line";
+      });
+      if (openLayer === $("wishDrawer")) renderWish();
+    };
+    const renderWish = () => {
+      if (!wish.length) {
+        $("wishBody").innerHTML = `<div class="drawer__empty"><i class="ri-heart-line"></i><h4>Nothing saved yet</h4><p>Tap the heart on any product to keep it here.</p><a href="#shop" class="btn" data-shop="All">Browse products</a></div>`;
+        return;
+      }
+      $("wishBody").innerHTML = wish.map((id) => {
+        const p = byId(id);
+        return `<div class="line">
+          <button class="line__img" data-open="${p.id}" aria-label="View ${esc(p.name)}"><img src="${UC(p.colors[0].img, 180)}" alt="" /></button>
+          <div class="line__info">
+            <span class="card__brand">${esc(p.brand)}</span>
+            <h4>${esc(p.name)}</h4>
+            <div class="price">${money(p.price)}${p.was ? `<del>${money(p.was)}</del>` : ""}</div>
+            <button class="link-btn" data-add="${p.id}">Add to bag</button>
+          </div>
+          <button class="line__rm" data-wish="${p.id}" aria-label="Remove ${esc(p.name)} from wishlist"><i class="ri-delete-bin-line"></i></button>
+        </div>`;
+      }).join("");
+    };
+
+    /* ---------- Checkout ---------- */
+    let shipMethod = "standard";
+    const summaryHTML = () => {
+      const t = totals(shipMethod);
+      return `<div class="co__lines">${cart.map((l) => {
+        const p = byId(l.id), c = p.colors[l.color] || p.colors[0];
+        return `<div class="co__line"><img src="${UC(c.img, 120)}" alt="" /><div><h5>${esc(p.name)}</h5><p>${c.name}${l.size !== "One size" ? ` · ${l.size}` : ""} · Qty ${l.qty}</p></div><b>${money(p.price * l.qty)}</b></div>`;
+      }).join("")}</div>
+      <dl class="sum">
+        <div><dt>Subtotal</dt><dd>${money(t.sub)}</dd></div>
+        ${t.disc ? `<div class="sum__disc"><dt>WELCOME10</dt><dd>-${money(t.disc)}</dd></div>` : ""}
+        <div><dt>${shipMethod === "express" ? "Express" : "Standard"} shipping</dt><dd>${t.ship ? money(t.ship) : "Free"}</dd></div>
+        <div class="sum__total"><dt>Total</dt><dd>${money(t.total)}</dd></div>
+      </dl>`;
+    };
+    const renderCheckout = () => {
+      const t = totals("standard");
+      $("checkoutBody").innerHTML = `<div class="co">
+        <form class="co__form" id="checkoutForm">
+          <h2>Checkout</h2>
+          <h4>Contact</h4>
+          <label class="field"><span>Email</span><input type="email" required autocomplete="email" name="email" data-focus /></label>
+          <h4>Delivery address</h4>
+          <div class="field-row">
+            <label class="field"><span>First name</span><input required autocomplete="given-name" /></label>
+            <label class="field"><span>Last name</span><input required autocomplete="family-name" /></label>
+          </div>
+          <label class="field"><span>Address</span><input required autocomplete="street-address" /></label>
+          <div class="field-row field-row--3">
+            <label class="field"><span>City</span><input required autocomplete="address-level2" /></label>
+            <label class="field"><span>State</span><input required autocomplete="address-level1" /></label>
+            <label class="field"><span>ZIP code</span><input required autocomplete="postal-code" inputmode="numeric" /></label>
+          </div>
+          <h4>Shipping method</h4>
+          <label class="radio"><input type="radio" name="ship" value="standard" ${shipMethod === "standard" ? "checked" : ""} /><span><b>Standard</b> 2 to 4 working days</span><em>${t.after >= FREE_OVER ? "Free" : money(8)}</em></label>
+          <label class="radio"><input type="radio" name="ship" value="express" ${shipMethod === "express" ? "checked" : ""} /><span><b>Express</b> Next working day</span><em>${money(18)}</em></label>
+          <h4>Payment</h4>
+          <label class="radio"><input type="radio" name="pay" value="Card" checked /><span><b>Credit or debit card</b> Entered on the secure payment page</span><em><i class="ri-bank-card-line"></i></em></label>
+          <label class="radio"><input type="radio" name="pay" value="PayPal" /><span><b>PayPal</b> Pay with your PayPal account</span><em><i class="ri-paypal-line"></i></em></label>
+          <button class="btn btn--full" type="submit" id="placeOrder">Place order · ${money(totals(shipMethod).total)}</button>
+          <p class="drawer__note">By placing your order you agree to our terms and returns policy.</p>
+        </form>
+        <aside class="co__sum"><h4>Order summary</h4><div id="coSummary">${summaryHTML()}</div></aside>
+      </div>`;
+    };
+    document.addEventListener("change", (e) => {
+      if (e.target.name === "ship") {
+        shipMethod = e.target.value;
+        $("coSummary").innerHTML = summaryHTML();
+        $("placeOrder").textContent = `Place order · ${money(totals(shipMethod).total)}`;
+      }
+    });
+    document.addEventListener("submit", (e) => {
+      if (e.target.id !== "checkoutForm") return;
+      e.preventDefault();
+      const email = e.target.elements.email.value;
+      const num = "NR-" + String(Date.now()).slice(-6);
+      const total = totals(shipMethod).total;
+      const days = shipMethod === "express" ? "tomorrow" : deliveryRange();
+      cart = []; promo = ""; saveCart(); renderCart();
+      $("checkoutBody").innerHTML = `<div class="done">
+        <span class="done__icon"><i class="ri-check-line"></i></span>
+        <h2>Thank you, your order is in.</h2>
+        <p>Order <b>${num}</b> for <b>${money(total)}</b> is confirmed, and a receipt is on its way to <b>${esc(email)}</b>.</p>
+        <p>Expected delivery: <b>${days}</b>.</p>
+        <button class="btn" data-close>Continue shopping</button>
+      </div>`;
+    });
+
+    /* ---------- Delegated clicks ---------- */
+    document.addEventListener("click", (e) => {
+      const t = e.target.closest("button,a");
+      if (!t) return;
+      const d = t.dataset;
+
+      if ("close" in d) { closeOverlay(); return; }
+      if (d.quick) { addToCart(d.quick, 0, d.size); return; }
+      if (d.open) { e.preventDefault(); const card = t.closest("[data-card]"); const on = card && card.querySelector(".dot.on"); openQV(d.open, on ? +on.dataset.idx : 0); return; }
+      if (d.wish) { toggleWish(d.wish); return; }
+      if (d.add) {
+        const p = byId(d.add), card = t.closest("[data-card]"), on = card && card.querySelector(".dot.on");
+        const idx = on ? +on.dataset.idx : 0;
+        if (p.sizes.length > 1) openQV(p.id, idx, true); else addToCart(p.id, idx, p.sizes[0]);
+        return;
+      }
+      if (d.swap) {
+        const p = byId(d.swap), card = t.closest("[data-card]"), c = p.colors[+d.idx];
+        card.querySelector(".card__img").src = UC(c.img, 560);
+        card.querySelector(".card__img2").src = hoverImg(p, c);
+        card.querySelectorAll(".dot").forEach((x) => x.classList.toggle("on", x === t));
+        return;
+      }
+      if (d.shop) {
+        goShop({ cat: d.shop, q: d.q, sort: d.sort });
+        closeOverlay(false);
+        return;
+      }
+      if (d.tab) { goShop({ cat: d.tab }); return; }
+      if (d.price) { shop.price = d.price; refreshShop(); return; }
+      if (d.color) { shop.color = shop.color === d.color ? "" : d.color; refreshShop(); return; }
+      if (d.brand) { shop.brand = shop.brand === d.brand ? "" : d.brand; refreshShop(); return; }
+      if (d.chip) {
+        if (d.chip === "all") { shop.q = ""; shop.price = "all"; shop.color = ""; shop.brand = ""; $("shopSearch").value = ""; }
+        else if (d.chip === "q") { shop.q = ""; $("shopSearch").value = ""; }
+        else if (d.chip === "price") shop.price = "all";
+        else shop[d.chip] = "";
+        refreshShop();
+        return;
+      }
+      if (d.brandgo) { goShop({ cat: "All" }); shop.brand = d.brandgo; refreshShop(); return; }
+
+      /* quick view */
+      if (d.qvimg) { qv.img = +d.qvimg; renderQV(); return; }
+      if (d.qvcolor) { qv.colorIdx = +d.qvcolor; qv.img = 0; renderQV(); return; }
+      if (d.qvsize) { qv.size = d.qvsize; qv.needSize = false; renderQV(); return; }
+      if (d.qvqty) { qv.qty = Math.max(1, Math.min(9, qv.qty + +d.qvqty)); renderQV(); return; }
+      if ("qvadd" in d) {
+        if (!qv.size) { qv.needSize = true; renderQV(); const b = $("qvSizeBox"); if (b) { b.scrollIntoView({ block: "center", behavior: "smooth" }); } return; }
+        addToCart(qv.p.id, qv.colorIdx, qv.size, qv.qty);
+        return;
+      }
+
+      /* bag */
+      if (d.lineqty !== undefined) {
+        const l = cart[+d.lineqty];
+        l.qty += +d.d;
+        if (l.qty < 1) cart.splice(+d.lineqty, 1);
+        saveCart(); renderCart();
+        return;
+      }
+      if (d.rm !== undefined) { cart.splice(+d.rm, 1); saveCart(); renderCart(); return; }
+      if (t.id === "goCheckout") { shipMethod = "standard"; renderCheckout(); openOverlay($("checkout")); return; }
+      if (t.id === "mAccount") { e.preventDefault(); openOverlay($("account")); return; }
+
+      /* search */
+      if (d.term) { $("searchInput").value = d.term; renderSearch(); $("searchInput").focus(); return; }
+
+      /* journal + faq */
+      if (d.post) { openArticle(+d.post); return; }
+      if (d.faq !== undefined && t.tagName === "A") { toggleFaq(+d.faq, true); return; }
+      if (d.faqbtn !== undefined) { toggleFaq(+d.faqbtn); return; }
+    });
+
+    /* Close overlays when following a page link from inside one */
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[href^='#']");
+      if (a && a.id !== "mAccount" && openLayer && openLayer.contains(a)) closeOverlay(false);
+    });
+
+    /* ---------- Search overlay ---------- */
+    const renderSearch = () => {
+      const q = $("searchInput").value.trim();
+      $("searchPopular").hidden = !!q;
+      if (!q) { $("searchResults").innerHTML = ""; return; }
+      const hits = PRODUCTS.filter((p) => matches(p, q));
+      if (!hits.length) { $("searchResults").innerHTML = `<p class="search__none">No results for "${esc(q)}". Try a brand or a type of clothing.</p>`; return; }
+      $("searchResults").innerHTML = `<div class="search__grid">${hits.slice(0, 6).map((p) => `<button class="hit" data-open="${p.id}"><img src="${UC(p.colors[0].img, 160)}" alt="" /><span><small>${esc(p.brand)}</small>${esc(p.name)}<b>${money(p.price)}</b></span></button>`).join("")}</div><button class="link-btn search__all" type="submit">See all ${hits.length} results</button>`;
+    };
+    $("searchInput").addEventListener("input", renderSearch);
+    $("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = $("searchInput").value.trim();
+      goShop({ cat: "All", q });
+      closeOverlay(false);
+      $("shop").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    });
+
+    /* ---------- Sale countdown: ends next Sunday at midnight ---------- */
+    const saleEnd = (() => { const d = new Date(); d.setDate(d.getDate() + ((7 - d.getDay()) % 7 || 7)); d.setHours(23, 59, 59, 0); return d; })();
+    const pad = (n) => String(n).padStart(2, "0");
+    const tick = () => {
+      const s = Math.max(0, Math.floor((saleEnd - Date.now()) / 1000));
+      $("tD").textContent = pad(Math.floor(s / 86400));
+      $("tH").textContent = pad(Math.floor((s % 86400) / 3600));
+      $("tM").textContent = pad(Math.floor((s % 3600) / 60));
+      $("tS").textContent = pad(s % 60);
+    };
+    tick(); setInterval(tick, 1000);
+
+    /* ---------- Wear it with ---------- */
+    document.querySelectorAll("[data-look]").forEach((el) => {
+      el.innerHTML = el.dataset.look.split(",").map((id) => {
+        const p = byId(id);
+        return `<div class="lk" data-card="${p.id}">
+          <button class="lk__img" data-open="${p.id}" aria-label="View ${esc(p.name)}"><img src="${UC(p.colors[0].img, 200)}" alt="" loading="lazy" /></button>
+          <button class="lk__name" data-open="${p.id}">${esc(p.name)}<small>${money(p.price)}</small></button>
+          <button class="lk__add" data-add="${p.id}" aria-label="Add ${esc(p.name)} to bag"><i class="ri-add-line"></i></button>
+        </div>`;
+      }).join("");
+    });
+
+    /* ---------- Journal ---------- */
+    const POSTS = [
+      { img: "1490481651871-ab68de25d43d", cat: "Buying guide", t: "How we choose a coat that lasts", p: ["Before a coat reaches our rail, we check three things: the weight of the cloth, how the shoulder is set, and what's holding the buttons on.", "Try yours over your thickest sweater, then reach forward. If the back pulls tight, go up a size. Length matters less than you'd think, but mid-thigh is the shortest that really keeps you warm.", "Then look inside. A proper lining at the shoulders and a spare button are small signs that someone cared how it would wear in year three."] },
+      { img: "1485462537746-965f33f7f6a7", cat: "Wardrobe", t: "Ten pieces that make thirty outfits", p: ["Start with one coat, one jacket and two knits, in colours that sit together. Add two trousers, three shirts or tees, and one dress or suit.", "Pick two pairs of shoes that work with all of it, then a single bag. Every new piece has to work with at least three things you already own.", "One bright item keeps it interesting. The rest can stay quiet."] },
+      { img: "1578932750294-f5075e85f44a", cat: "Care", t: "What to do before you wash wool", p: ["Most wool doesn't need washing nearly as often as you think. Hang it outside the wardrobe for a day and most smells will be gone.", "Spot-clean first with cool water. If you do need to wash it, use cold water and a wool detergent, and never wring it. Roll it in a towel, then dry it flat.", "Store knits folded, not hung, and fold them with a cedar block between seasons to keep moths away."] },
+    ];
+    const openArticle = (i) => {
+      const p = POSTS[i];
+      $("articleBody").innerHTML = `<img class="article__img" src="${U(p.img, 1000, "&h=500")}" alt="" />
+        <div class="article"><span class="eyebrow">${p.cat}</span><h2>${esc(p.t)}</h2>${p.p.map((x) => `<p>${esc(x)}</p>`).join("")}</div>`;
+      openOverlay($("article"));
+    };
+
+    /* ---------- Customer care ---------- */
+    const FAQS = [
+      ["Shipping", "Standard delivery is $8, and free on orders over $100. It takes 2 to 4 working days. Express is $18 and arrives the next working day if you order before 2pm ET."],
+      ["Returns", "Send back anything unworn with its tags within 30 days, using the prepaid label in your parcel. Refunds reach you within 5 working days of us receiving it."],
+      ["Sizing", "Each product page has fit notes from our team. If you're between sizes, size up in coats and down in loafers. Women's XS to XL covers US 2 to 14, and shoes are listed in EU sizes."],
+      ["Tracking an order", "We email a tracking link when your parcel ships. Can't find it? Send your order number to care@nordestore.com and we'll look it up."],
+      ["Authenticity", "Every branded item comes from the brand or an authorized distributor, and we can provide proof of purchase on request."],
+    ];
+    $("faq").innerHTML = FAQS.map(([q, a], i) => `<div class="faq__item ${i === 0 ? "open" : ""}">
+      <button data-faqbtn="${i}" aria-expanded="${i === 0}">${q}<i class="ri-add-line"></i></button>
+      <div class="faq__a"><div><p>${a}</p></div></div>
+    </div>`).join("");
+    const toggleFaq = (i, force) => {
+      document.querySelectorAll(".faq__item").forEach((el, n) => {
+        const open = n === i ? (force ? true : !el.classList.contains("open")) : false;
+        el.classList.toggle("open", open);
+        el.querySelector("button").setAttribute("aria-expanded", open);
+      });
+    };
+
+    /* ---------- Forms + store hours ---------- */
+    $("newsForm").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("newsOk").hidden = false; });
+    $("accountForm").addEventListener("submit", (e) => { e.preventDefault(); e.target.reset(); $("accountOk").hidden = false; });
+    (() => {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+      const day = parts.find((p) => p.type === "weekday").value, hour = +parts.find((p) => p.type === "hour").value;
+      const open = day === "Sun" ? hour >= 11 && hour < 18 : hour >= 10 && hour < 20;
+      $("openNow").textContent = open ? "Open now" : "Closed now";
+    })();
+
+    /* ---------- Scroll + motion ---------- */
+    const header = $("header"), toTop = $("toTop");
+    addEventListener("scroll", () => {
+      header.classList.toggle("sticky", scrollY > 30);
+      toTop.classList.toggle("on", scrollY > 900);
+    }, { passive: true });
+    toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }));
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    /* ---------- Start ---------- */
+    refreshShop();
+    updateCounts();
+    $("cartCount").classList.remove("bump");
+    requestAnimationFrame(() => document.body.classList.add("ready"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/shop-norde/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

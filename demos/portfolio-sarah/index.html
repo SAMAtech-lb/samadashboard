@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarah Mitchell, CPA — Accountant for Small Businesses</title>
+  <meta name="description" content="Sarah Mitchell is a Certified Public Accountant in Denver helping small businesses and families with bookkeeping, tax returns, payroll and financial planning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#home" class="logo"><span class="logo__mark">SM</span><span>Sarah Mitchell<small>CPA · Tax &amp; Advisory</small></span></a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#deadlines">Deadlines</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#book">Contact</a>
+      </nav>
+      <a href="tel:+17205550143" class="header__phone"><i class="ri-phone-fill"></i><span><small>Call the office</small>(720) 555-0143</span></a>
+      <a href="#book" class="btn btn--sm header__cta">Book a call</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="pill"><i class="ri-shield-check-fill"></i> Certified Public Accountant · 12 years</span>
+        <h1>Less time on taxes. More time running your <span>business</span>.</h1>
+        <p class="hero__lead">I handle bookkeeping, tax returns and payroll for small businesses and families in Denver and across Colorado, so you always know where your money is going.</p>
+        <div class="hero__btns">
+          <a href="#book" class="btn">Book a free consultation <i class="ri-arrow-right-line"></i></a>
+          <a href="#services" class="btn btn--ghost"><i class="ri-play-circle-line"></i> See services</a>
+        </div>
+        <div class="hero__proof">
+          <div class="avatars">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="" />
+          </div>
+          <div><strong>4.9 <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></strong><span>from 180+ Google reviews</span></div>
+        </div>
+      </div>
+      <div class="hero__media">
+        <div class="hero__shape"></div>
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" alt="Sarah Mitchell, CPA" />
+        <div class="float float--a"><i class="ri-calendar-event-fill"></i><div><small>Next deadline</small><strong id="heroDeadline">—</strong></div></div>
+        <div class="float float--b"><i class="ri-money-dollar-circle-fill"></i><div><small>Avg. refund found in 2025</small><strong>$2,340</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software -->
+  <section class="tools">
+    <div class="container tools__in">
+      <p>Certified on the software you already use</p>
+      <ul>
+        <li><i class="ri-checkbox-circle-fill"></i> QuickBooks ProAdvisor</li>
+        <li><i class="ri-checkbox-circle-fill"></i> Xero Certified</li>
+        <li><i class="ri-checkbox-circle-fill"></i> Gusto Payroll</li>
+        <li><i class="ri-checkbox-circle-fill"></i> Stripe &amp; Square</li>
+        <li><i class="ri-checkbox-circle-fill"></i> IRS e-file</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="title">
+        <span class="sub">Services</span>
+        <h2>Accounting help for every <span>stage</span></h2>
+        <p>Pick who you are to see how I can help.</p>
+      </div>
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab active" role="tab" data-t="biz"><i class="ri-store-2-line"></i> Small businesses</button>
+        <button class="tab" role="tab" data-t="start"><i class="ri-rocket-2-line"></i> Startups &amp; freelancers</button>
+        <button class="tab" role="tab" data-t="ind"><i class="ri-home-heart-line"></i> Individuals &amp; families</button>
+      </div>
+      <div class="svc-panel" id="svcPanel"></div>
+    </div>
+  </section>
+
+  <!-- Deadlines -->
+  <section class="section section--tint" id="deadlines">
+    <div class="container deadlines">
+      <div class="deadlines__text">
+        <span class="sub">Tax calendar</span>
+        <h2 class="h2-left">Never miss an IRS <span>deadline</span> again</h2>
+        <p>Clients get a reminder two weeks before every date that applies to them, plus a checklist of the documents I need.</p>
+        <div class="next" id="nextCard"></div>
+        <a href="#book" class="btn">Get reminders as a client <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="deadlines__list">
+        <div class="dl__filters" id="dlFilters">
+          <button class="active" data-f="all">All</button>
+          <button data-f="biz">Business</button>
+          <button data-f="ind">Individual</button>
+          <button data-f="pay">Payroll</button>
+        </div>
+        <ul class="dl" id="dlList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__media">
+        <img class="about__a" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Calculator and financial documents" loading="lazy" />
+        <img class="about__b" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=700&q=80" alt="Meeting with clients" loading="lazy" />
+        <div class="about__exp"><strong>12</strong><span>years helping<br />local businesses</span></div>
+      </div>
+      <div>
+        <span class="sub">About me</span>
+        <h2 class="h2-left">Your numbers, explained in <span>plain English</span></h2>
+        <p>I'm Sarah, a Certified Public Accountant based in Denver. I started my career at a Big Four firm auditing large companies, then realised I'd rather help the people running coffee shops, clinics and design studios.</p>
+        <p>Since 2017 I've run my own practice with a small team of two bookkeepers. We look after 140 businesses and families, and every client has my direct number.</p>
+        <div class="creds">
+          <div><i class="ri-award-fill"></i><strong>CPA, Colorado</strong><span>License #0041872</span></div>
+          <div><i class="ri-government-fill"></i><strong>IRS Enrolled Agent</strong><span>Can represent you at audits</span></div>
+          <div><i class="ri-graduation-cap-fill"></i><strong>M.Acc., CU Boulder</strong><span>Taxation focus</span></div>
+          <div><i class="ri-team-fill"></i><strong>AICPA member</strong><span>Since 2014</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div><i class="ri-briefcase-4-line"></i><strong data-count="140">0</strong><span>Active clients</span></div>
+      <div><i class="ri-file-list-3-line"></i><strong data-count="2600" data-plus>0</strong><span>Tax returns filed</span></div>
+      <div><i class="ri-money-dollar-circle-line"></i><strong data-count="3.2" data-dec="1" data-pre="$" data-suf="M">0</strong><span>Saved for clients in 2025</span></div>
+      <div><i class="ri-emotion-happy-line"></i><strong data-count="97" data-suf="%">0</strong><span>Clients who renew each year</span></div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="title">
+        <span class="sub">Pricing</span>
+        <h2>Simple monthly <span>packages</span></h2>
+        <p>Fixed monthly fees, no hourly surprises. Billed monthly, cancel with 30 days' notice.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Essentials</h3>
+          <p class="plan__for">Freelancers and sole proprietors</p>
+          <div class="plan__price"><strong>$190</strong><span>/ month</span></div>
+          <ul>
+            <li><i class="ri-check-line"></i> Monthly bookkeeping (up to 100 transactions)</li>
+            <li><i class="ri-check-line"></i> Quarterly estimated tax payments</li>
+            <li><i class="ri-check-line"></i> Annual Schedule C tax return</li>
+            <li><i class="ri-check-line"></i> Email support, 2-day reply</li>
+          </ul>
+          <a href="#book" class="btn btn--outline btn--block">Get started</a>
+        </article>
+        <article class="plan plan--pop">
+          <span class="plan__badge">Most popular</span>
+          <h3>Growth</h3>
+          <p class="plan__for">Small businesses with staff</p>
+          <div class="plan__price"><strong>$450</strong><span>/ month</span></div>
+          <ul>
+            <li><i class="ri-check-line"></i> Bookkeeping (up to 400 transactions)</li>
+            <li><i class="ri-check-line"></i> Payroll for up to 10 employees</li>
+            <li><i class="ri-check-line"></i> Sales tax filings</li>
+            <li><i class="ri-check-line"></i> Business tax return (1120-S or 1065)</li>
+            <li><i class="ri-check-line"></i> Quarterly review call</li>
+          </ul>
+          <a href="#book" class="btn btn--block">Get started</a>
+        </article>
+        <article class="plan">
+          <h3>Advisory</h3>
+          <p class="plan__for">Growing companies</p>
+          <div class="plan__price"><strong>$890</strong><span>/ month</span></div>
+          <ul>
+            <li><i class="ri-check-line"></i> Everything in Growth</li>
+            <li><i class="ri-check-line"></i> Monthly management reports</li>
+            <li><i class="ri-check-line"></i> Cash-flow forecasting &amp; budgets</li>
+            <li><i class="ri-check-line"></i> Tax planning meetings</li>
+            <li><i class="ri-check-line"></i> Priority phone support</li>
+          </ul>
+          <a href="#book" class="btn btn--outline btn--block">Get started</a>
+        </article>
+      </div>
+      <p class="plans__note"><i class="ri-information-line"></i> Personal tax returns start at $350. Catch-up bookkeeping is quoted after a free review.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--tint" id="reviews">
+    <div class="container">
+      <div class="title">
+        <span class="sub">Reviews</span>
+        <h2>Clients who sleep better in <span>April</span></h2>
+      </div>
+      <div class="reviews" id="reviews-grid"></div>
+    </div>
+  </section>
+
+  <!-- Process + FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div>
+        <span class="sub">Getting started</span>
+        <h2 class="h2-left">Switching accountants is <span>easier</span> than you think</h2>
+        <ol class="steps">
+          <li><b>1</b><div><strong>Free 20-minute call</strong><span>We talk about your situation and what you need.</span></div></li>
+          <li><b>2</b><div><strong>Secure document upload</strong><span>Share last year's returns and bank access in our client portal.</span></div></li>
+          <li><b>3</b><div><strong>I take it from here</strong><span>I contact your previous accountant and set up your books within a week.</span></div></li>
+        </ol>
+      </div>
+      <div class="acc" id="acc"></div>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section class="section section--tint" id="insights">
+    <div class="container">
+      <div class="title title--row">
+        <div><span class="sub">Insights</span><h2>Tax tips &amp; <span>guides</span></h2></div>
+        <a href="#" class="btn btn--outline btn--sm">All articles</a>
+      </div>
+      <div class="posts">
+        <a class="post" href="#"><div class="post__img"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></div><div class="post__body"><span>Tax tips · 5 min read</span><h3>12 deductions small business owners forget every year</h3></div></a>
+        <a class="post" href="#"><div class="post__img"><img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></div><div class="post__body"><span>Planning · 7 min read</span><h3>S-corp or LLC? How to choose and when to switch</h3></div></a>
+        <a class="post" href="#"><div class="post__img"><img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy" /></div><div class="post__body"><span>Bookkeeping · 4 min read</span><h3>The 3 reports every owner should read each month</h3></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section" id="book">
+    <div class="container book">
+      <div class="book__info">
+        <span class="sub">Contact</span>
+        <h2 class="h2-left">Book a free <span>20&#8209;minute</span> call</h2>
+        <p>Pick a time that suits you. I'll call you at the number you leave — no sales pitch, just honest advice.</p>
+        <ul class="book__list">
+          <li><i class="ri-map-pin-2-fill"></i><span>1600 Champa St, Suite 340, Denver, CO 80202</span></li>
+          <li><i class="ri-phone-fill"></i><a href="tel:+17205550143">(720) 555-0143</a></li>
+          <li><i class="ri-mail-fill"></i><a href="mailto:hello@mitchellcpa.com">hello@mitchellcpa.com</a></li>
+          <li><i class="ri-time-fill"></i><span>Mon–Fri 9:00–17:00 · Saturdays in tax season</span></li>
+        </ul>
+      </div>
+      <form class="booking" id="booking" novalidate>
+        <div class="booking__step">
+          <h3><b>1</b> Choose a day</h3>
+          <div class="days" id="days"></div>
+        </div>
+        <div class="booking__step">
+          <h3><b>2</b> Choose a time <small>(Mountain Time)</small></h3>
+          <div class="slots" id="slots"></div>
+        </div>
+        <div class="booking__step">
+          <h3><b>3</b> Your details</h3>
+          <div class="frow">
+            <input name="name" placeholder="Full name" aria-label="Full name" required />
+            <input name="phone" type="tel" placeholder="Phone number" aria-label="Phone number" required />
+          </div>
+          <div class="frow">
+            <input name="email" type="email" placeholder="Email" aria-label="Email" required />
+            <select name="topic" aria-label="Topic"><option>Business bookkeeping &amp; tax</option><option>Payroll</option><option>Personal tax return</option><option>IRS letter or audit</option><option>Something else</option></select>
+          </div>
+        </div>
+        <p class="booking__err" id="bookErr"></p>
+        <button class="btn btn--block" type="submit">Confirm my call <i class="ri-calendar-check-line"></i></button>
+        <div class="booking__ok" id="bookOk" hidden></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__mark">SM</span><span>Sarah Mitchell<small>CPA · Tax &amp; Advisory</small></span></a>
+        <p>Bookkeeping, tax and payroll for small businesses and families in Colorado.</p>
+        <div class="socials"><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a></div>
+      </div>
+      <div><h4>Services</h4><a href="#services">Bookkeeping</a><a href="#services">Business tax</a><a href="#services">Payroll</a><a href="#services">Personal tax</a></div>
+      <div><h4>Resources</h4><a href="#deadlines">Tax calendar</a><a href="#insights">Articles</a><a href="#faq">FAQ</a><a href="#">Client portal</a></div>
+      <div>
+        <h4>Monthly tax tips</h4>
+        <p>One short email a month. Unsubscribe any time.</p>
+        <form class="news" id="news"><input type="email" placeholder="Your email" aria-label="Email" required /><button>Subscribe</button></form>
+        <p class="news__msg" id="newsMsg"></p>
+      </div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Mitchell CPA, LLC. All rights reserved.</span><span>This website does not provide tax advice. Please consult a professional about your situation.</span></div>
+  </footer>
+
+  <button class="totop" id="totop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (d, o) => d.toLocaleDateString("en-US", o);
+
+    /* Services tabs */
+    const SERVICES = {
+      biz: [
+        ["ri-book-2-line", "Monthly bookkeeping", "Reconciled accounts, categorised expenses and a clean profit & loss every month."],
+        ["ri-file-text-line", "Business tax returns", "S-corp, partnership and C-corp returns, plus Colorado state filings."],
+        ["ri-group-line", "Payroll", "Paychecks, W-2s and payroll taxes handled through Gusto or QuickBooks Payroll."],
+        ["ri-percent-line", "Sales tax", "Monthly or quarterly sales tax filings for Colorado and home-rule cities."],
+        ["ri-line-chart-line", "Cash-flow planning", "12-month forecasts so you know when you can hire or invest."],
+        ["ri-shield-user-line", "IRS representation", "Audits, notices and payment plans handled on your behalf."],
+      ],
+      start: [
+        ["ri-building-line", "Entity setup", "LLC or S-corp? I help you choose and register the right structure."],
+        ["ri-calculator-line", "Quarterly estimates", "Estimated tax payments calculated so there are no surprises in April."],
+        ["ri-bank-card-line", "Expense tracking", "Simple systems to separate personal and business spending from day one."],
+        ["ri-funds-line", "Investor-ready books", "Accrual accounting and monthly reports investors expect to see."],
+        ["ri-hand-coin-line", "R&D tax credits", "Find out if your product work qualifies for federal credits."],
+        ["ri-file-user-line", "1099 contractors", "Track contractors and file 1099s correctly every January."],
+      ],
+      ind: [
+        ["ri-file-list-2-line", "Personal tax returns", "Federal and state returns, including rental income and investments."],
+        ["ri-home-4-line", "Rental property", "Depreciation schedules and expense tracking for landlords."],
+        ["ri-heart-2-line", "Life changes", "Marriage, new baby, divorce or inheritance — plan the tax impact first."],
+        ["ri-plant-line", "Retirement planning", "Roth conversions, IRA contributions and withdrawal strategies."],
+        ["ri-mail-open-line", "IRS letters", "Received a notice? Send me a photo and I'll explain what it means."],
+        ["ri-history-line", "Prior-year returns", "Catch up on unfiled returns and get back in good standing."],
+      ],
+    };
+    function renderTab(t) {
+      $("svcPanel").innerHTML = SERVICES[t].map(([i, h, p]) => `
+        <article class="svc"><span class="svc__icon"><i class="${i}"></i></span><h3>${h}</h3><p>${p}</p><a href="#book">Learn more <i class="ri-arrow-right-line"></i></a></article>`).join("");
+    }
+    $("tabs").addEventListener("click", (e) => {
+      const b = e.target.closest(".tab"); if (!b) return;
+      $("tabs").querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === b));
+      renderTab(b.dataset.t);
+    });
+    renderTab("biz");
+
+    /* Tax deadlines (dates rolled forward to the next occurrence) */
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const DEADLINES = [
+      [0, 15, "ind", "Q4 estimated tax payment", "Form 1040-ES for the previous year's last quarter"],
+      [0, 31, "pay", "W-2 and 1099-NEC forms due", "Send to employees, contractors and the IRS"],
+      [2, 15, "biz", "S-corp & partnership returns", "Form 1120-S and Form 1065, or file an extension"],
+      [3, 15, "ind", "Individual tax returns", "Form 1040, IRA contributions and Q1 estimates"],
+      [3, 30, "pay", "Q1 payroll tax return", "Form 941 for January to March"],
+      [5, 15, "ind", "Q2 estimated tax payment", "Form 1040-ES for April and May income"],
+      [6, 31, "pay", "Q2 payroll tax return", "Form 941 for April to June"],
+      [8, 15, "biz", "Extended business returns", "Extended 1120-S and 1065 returns due"],
+      [9, 15, "ind", "Extended individual returns", "Last day for extended Form 1040"],
+      [9, 31, "pay", "Q3 payroll tax return", "Form 941 for July to September"],
+    ].map(([m, d, type, title, desc]) => {
+      let date = new Date(today.getFullYear(), m, d);
+      if (date < today) date = new Date(today.getFullYear() + 1, m, d);
+      return { date, type, title, desc };
+    }).sort((a, b) => a.date - b.date);
+    const TYPE = { biz: "Business", ind: "Individual", pay: "Payroll" };
+    const daysTo = (d) => Math.round((d - today) / 864e5);
+
+    const next = DEADLINES[0];
+    $("heroDeadline").textContent = `${fmt(next.date, { month: "short", day: "numeric" })} · ${next.title.split(" ").slice(0, 3).join(" ")}`;
+    $("nextCard").innerHTML = `
+      <div class="next__date"><span>${fmt(next.date, { month: "short" })}</span><strong>${next.date.getDate()}</strong></div>
+      <div><small>Next deadline · in ${daysTo(next.date)} days</small><strong>${next.title}</strong><span>${next.desc}</span></div>`;
+
+    function renderDeadlines(f) {
+      $("dlList").innerHTML = DEADLINES.filter((d) => f === "all" || d.type === f).slice(0, 6).map((d) => {
+        const n = daysTo(d.date);
+        return `<li class="${n <= 30 ? "soon" : ""}">
+          <div class="dl__date"><span>${fmt(d.date, { month: "short" })}</span><strong>${d.date.getDate()}</strong></div>
+          <div class="dl__body"><strong>${d.title}</strong><span>${d.desc}</span></div>
+          <div class="dl__meta"><em class="t-${d.type}">${TYPE[d.type]}</em><small>${n === 0 ? "Today" : `in ${n} days`}</small></div>
+        </li>`;
+      }).join("");
+    }
+    $("dlFilters").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      $("dlFilters").querySelectorAll("button").forEach((x) => x.classList.toggle("active", x === b));
+      renderDeadlines(b.dataset.f);
+    });
+    renderDeadlines("all");
+
+    /* Reviews */
+    const REVIEWS = [
+      ["Sarah untangled three years of messy books in a month and found $11,000 in deductions my old accountant missed.", "Daniel Reyes", "Owner, Reyes Coffee Co.", "1500648767791-00dcc994a43e"],
+      ["I finally understand my numbers. The monthly report is two pages and tells me exactly what I need to know.", "Emma Lawson", "Founder, Lumen Yoga Studio", "1494790108377-be9c29b29330"],
+      ["When the IRS sent us a letter, Sarah called them the same day and had it resolved within two weeks.", "Michael Chen", "Dentist, Highland Dental", "1507003211169-0a1dd7228f2d"],
+      ["Payroll for our 8 employees runs like clockwork now. I haven't thought about it in a year.", "Olivia Park", "Co-owner, Northwind Bakery", "1544005313-94ddf0286df2"],
+      ["Quick replies, fair fixed price and no jargon. Our family taxes take one meeting a year now.", "James & Ana Walker", "Personal tax clients", "1472099645785-5658abf4ff4e"],
+      ["She helped us switch to an S-corp and the savings paid for her fees three times over.", "Priya Shah", "Owner, Orbit Design Studio", "1580489944761-15a19d654956"],
+    ];
+    $("reviews-grid").innerHTML = REVIEWS.map(([q, n, r, img]) => `
+      <figure class="review">
+        <div class="review__stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div>
+        <blockquote>${q}</blockquote>
+        <figcaption><img src="https://images.unsplash.com/photo-${img}?auto=format&fit=crop&w=100&q=80" alt="${n}" loading="lazy" /><div><strong>${n}</strong><span>${r}</span></div></figcaption>
+      </figure>`).join("");
+
+    /* FAQ */
+    const FAQ = [
+      ["Do you work with clients outside Denver?", "Yes. Most of my clients never visit the office. We meet on video and share documents through a secure client portal, anywhere in Colorado and most other states."],
+      ["What if my books are behind?", "That's very common. I'll review your accounts for free and send a fixed quote to catch up, usually within one to three weeks of work."],
+      ["Can you help if I owe the IRS money?", "Yes. As an Enrolled Agent I can talk to the IRS on your behalf and set up payment plans or request penalty relief."],
+      ["How do I send you documents?", "Through a secure, encrypted client portal. You can upload from your phone or connect your bank and payroll accounts directly."],
+      ["Is there a contract?", "No long-term contract. Monthly packages can be cancelled with 30 days' notice."],
+    ];
+    $("acc").innerHTML = FAQ.map(([q, a], i) => `<details class="acc__item"${i === 0 ? " open" : ""}><summary>${q}<i class="ri-arrow-down-s-line"></i></summary><p>${a}</p></details>`).join("");
+
+    /* Booking: next 6 weekdays + slots */
+    const SLOTS = ["9:00", "9:30", "10:30", "11:00", "13:00", "14:30", "15:00", "16:00"];
+    const days = []; const d = new Date(today);
+    while (days.length < 6) { d.setDate(d.getDate() + 1); if (d.getDay() % 6) days.push(new Date(d)); }
+    let selDay = 0, selSlot = null;
+    function renderDays() {
+      $("days").innerHTML = days.map((x, i) => `<button type="button" class="day${i === selDay ? " on" : ""}" data-i="${i}"><span>${fmt(x, { weekday: "short" })}</span><strong>${x.getDate()}</strong><small>${fmt(x, { month: "short" })}</small></button>`).join("");
+    }
+    function renderSlots() {
+      const taken = new Set([(selDay * 3) % 8, (selDay * 5 + 2) % 8]);
+      $("slots").innerHTML = SLOTS.map((s, i) => `<button type="button" class="slot${selSlot === s ? " on" : ""}" data-s="${s}" ${taken.has(i) ? "disabled" : ""}>${s}</button>`).join("");
+    }
+    $("days").addEventListener("click", (e) => { const b = e.target.closest(".day"); if (!b) return; selDay = +b.dataset.i; selSlot = null; renderDays(); renderSlots(); });
+    $("slots").addEventListener("click", (e) => { const b = e.target.closest(".slot"); if (!b || b.disabled) return; selSlot = b.dataset.s; renderSlots(); });
+    renderDays(); renderSlots();
+    $("booking").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const f = e.target, errs = [];
+      f.querySelectorAll(".bad").forEach((x) => x.classList.remove("bad"));
+      if (!selSlot) errs.push("a time");
+      if (!f.name.value.trim()) { errs.push("your name"); f.name.classList.add("bad"); }
+      if (f.phone.value.replace(/\D/g, "").length < 7) { errs.push("a phone number"); f.phone.classList.add("bad"); }
+      if (!/^\S+@\S+\.\S+$/.test(f.email.value)) { errs.push("a valid email"); f.email.classList.add("bad"); }
+      $("bookErr").textContent = errs.length ? `Please choose ${errs.join(", ")}.` : "";
+      if (errs.length) return;
+      $("bookOk").innerHTML = `<i class="ri-checkbox-circle-fill"></i><div><strong>You're booked, ${f.name.value.trim().split(" ")[0]}!</strong><span>${fmt(days[selDay], { weekday: "long", month: "long", day: "numeric" })} at ${selSlot} MT. A confirmation is on its way to ${f.email.value}.</span></div>`;
+      $("bookOk").hidden = false; f.querySelector("button[type=submit]").hidden = true;
+    });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "Thanks! Your first tip arrives next month."; e.target.reset(); });
+
+    /* Header, menu, top, active link */
+    addEventListener("scroll", () => {
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("totop").classList.toggle("show", scrollY > 600);
+    }, { passive: true });
+    $("totop").addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+    $("burger").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) document.body.classList.remove("menu-open"); });
+    const links = [...document.querySelectorAll(".nav a")];
+    const spy = new IntersectionObserver((es) => es.forEach((en) => {
+      if (en.isIntersecting) links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id));
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    ["home", "services", "deadlines", "pricing", "about", "book"].forEach((id) => spy.observe($(id)));
+
+    /* Counters */
+    const io = new IntersectionObserver((es) => es.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.querySelectorAll("[data-count]").forEach((el) => {
+        const end = +el.dataset.count, dec = +(el.dataset.dec || 0), pre = el.dataset.pre || "", suf = el.dataset.suf || "", plus = el.hasAttribute("data-plus"), t0 = performance.now();
+        (function tick(t) {
+          const k = Math.min((t - t0) / 1400, 1), v = end * (1 - Math.pow(1 - k, 3));
+          el.textContent = pre + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString("en-US")) + suf + (plus && k === 1 ? "+" : "");
+          if (k < 1) requestAnimationFrame(tick);
+        })(t0);
+      });
+      io.unobserve(en.target);
+    }), { threshold: 0.3 });
+    io.observe(document.querySelector(".stats"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-sarah/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

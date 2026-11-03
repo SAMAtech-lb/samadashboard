@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rossa — Neapolitan Pizza, Wood-Fired in 90 Seconds</title>
+  <meta name="description" content="Rossa is a Neapolitan pizzeria in Brooklyn. 48-hour dough, San Marzano tomatoes and a 485°C wood oven. Order online for pickup or delivery, build your own pizza, or book a table." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Lilita+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#top" class="logo" aria-label="Rossa home"><span class="logo__mark"><i class="ri-fire-fill"></i></span>Rossa<small>Pizza Napoletana</small></a>
+      <nav class="nav" id="nav">
+        <a href="#menu">Menu</a>
+        <a href="#build">Build your own</a>
+        <a href="#oven">Our oven</a>
+        <a href="#school">Pizza school</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <span class="oven-status" id="ovenStatus"><i></i><span>Oven is lit</span></span>
+      <button class="cart-btn" id="cartBtn" aria-label="Open your order"><i class="ri-shopping-bag-3-line"></i><b id="cartCount">0</b></button>
+      <a href="#menu" class="btn btn--sm">Order now</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__in">
+        <div class="hero__copy">
+          <p class="eyebrow hero__fade"><i class="ri-map-pin-2-fill"></i> Carroll Gardens, Brooklyn · since 2014</p>
+          <h1 class="hero__title">
+            <span class="line"><span>90 seconds.</span></span>
+            <span class="line"><span><em>485°C.</em></span></span>
+            <span class="line"><span>Perfetta.</span></span>
+          </h1>
+          <p class="hero__lead hero__fade">Dough rested for 48 hours, San Marzano tomatoes, fior di latte pulled every morning and a wood oven built by hand in Naples. Order for pickup in 20 minutes or delivery across South Brooklyn.</p>
+          <div class="hero__cta hero__fade">
+            <a href="#menu" class="btn">Order online <i class="ri-arrow-right-line"></i></a>
+            <a href="#visit" class="btn btn--ghost"><i class="ri-calendar-event-line"></i> Book a table</a>
+          </div>
+          <form class="zone hero__fade" id="zoneForm">
+            <i class="ri-e-bike-2-line"></i>
+            <input id="zoneIn" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP for delivery" aria-label="ZIP code" />
+            <button type="submit">Check</button>
+          </form>
+          <p class="zone__msg" id="zoneMsg" aria-live="polite"></p>
+        </div>
+        <div class="hero__pizza" aria-hidden="true">
+          <div class="hero__plate" id="heroPizza"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1100&q=80" alt="" /></div>
+          <svg class="hero__ring" viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0" /></defs><text><textPath href="#circ">MARGHERITA · SAN MARZANO · FIOR DI LATTE · BASILICO · OLIO EVO · </textPath></text></svg>
+          <div class="hero__leaf hero__leaf--1"></div>
+          <div class="hero__leaf hero__leaf--2"></div>
+          <div class="hero__tomato"></div>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker__track" id="ticker"></div></div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="eyebrow">The menu</p>
+            <h2 class="h2">Twelve pizzas. <em>No shortcuts.</em></h2>
+          </div>
+          <div class="tabs" id="menuTabs" role="tablist" aria-label="Menu categories"></div>
+        </div>
+        <div class="menu" id="menuGrid"></div>
+        <p class="menu__note"><i class="ri-leaf-line"></i> Gluten-free base +$3 · Vegan fior di latte on request · Every pizza is 12" and feeds one hungry person</p>
+      </div>
+    </section>
+
+    <!-- Builder -->
+    <section class="section build-sec" id="build">
+      <div class="container build">
+        <div class="build__stage">
+          <div class="pie" id="pie">
+            <img class="pie__base" id="pieBase" src="img/base-rossa.webp" alt="Your pizza on a Rossa base" width="960" height="960" loading="lazy" />
+            <div class="pie__tops" id="pieTops"></div>
+            <div class="pie__halves" id="pieHalves" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="build__panel">
+          <p class="eyebrow">Build your own</p>
+          <h2 class="h2">Make it <em>yours.</em></h2>
+          <p class="build__lead">Start from our 48-hour dough and add up to five toppings, on the whole pizza or just one half.</p>
+          <div class="step">
+            <h4>1. Choose a base</h4>
+            <div class="bases" id="bases"></div>
+          </div>
+          <div class="step">
+            <h4>2. Add toppings <small id="topCount">0 of 5</small></h4>
+            <div class="tops" id="tops"></div>
+          </div>
+          <div class="step" id="sumStep" hidden>
+            <h4>3. Where should they go?</h4>
+            <ul class="picked" id="picked"></ul>
+          </div>
+          <div class="build__actions">
+            <button class="btn" id="bAdd">Add to order · <span id="bPrice">$15</span></button>
+            <button class="btn btn--ghost" id="bReset">Start over</button>
+          </div>
+          <p class="build__note">Every pizza is 12 in and bakes for 90 seconds at 485°C. Toppings shown are our real ingredients.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oven story -->
+    <section class="section oven-sec" id="oven">
+      <div class="container oven">
+        <div class="oven__media">
+          <img src="https://images.unsplash.com/photo-1600028068383-ea11a7a101f3?auto=format&fit=crop&w=1200&q=80" alt="A pizza baking in the wood-fired oven" loading="lazy" />
+          <div class="oven__gauge"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" /><circle cx="60" cy="60" r="52" class="oven__arc" id="ovenArc" /></svg><div><b id="ovenTemp">0°</b><span>oven floor</span></div></div>
+        </div>
+        <div class="oven__copy">
+          <p class="eyebrow">How we make it</p>
+          <h2 class="h2">Slow dough. <em>Fast fire.</em></h2>
+          <ol class="timeline">
+            <li class="reveal"><span>48 h</span><div><h3>The dough rests</h3><p>Caputo flour, sea salt and a pinch of yeast, left to ferment for two days. It's why the crust is light, airy and easy on your stomach.</p></div></li>
+            <li class="reveal"><span>6 am</span><div><h3>Cheese is pulled</h3><p>Our fior di latte is stretched by hand every morning at a dairy in Red Hook, eight minutes from the shop.</p></div></li>
+            <li class="reveal"><span>90 s</span><div><h3>Into the fire</h3><p>Oak logs keep the oven floor at 485°C. Ninety seconds and one turn of the peel is all a pizza needs.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews-sec">
+      <div class="container">
+        <div class="head head--c">
+          <p class="eyebrow">What Brooklyn says</p>
+          <h2 class="h2">4.8 from <em>3,900 reviews.</em></h2>
+        </div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Pizza school -->
+    <section class="section school-sec" id="school">
+      <div class="container school">
+        <div class="school__img"><img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=1100&q=80" alt="Hands stretching pizza dough on a floured counter" loading="lazy" /></div>
+        <div class="school__copy">
+          <p class="eyebrow">Pizza school</p>
+          <h2 class="h2">Learn to stretch it <em>like Nonna.</em></h2>
+          <p>Two-and-a-half hours with our head pizzaiolo Marco. Make the dough, stretch it by hand, bake two pizzas in the wood oven and take a dough kit home. Wine included.</p>
+          <div class="classes" id="classes"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section visit-sec" id="visit">
+      <div class="container visit">
+        <div class="visit__info">
+          <p class="eyebrow">Visit us</p>
+          <h2 class="h2">Pull up <em>a chair.</em></h2>
+          <ul class="hours" id="hours"></ul>
+          <div class="visit__lines">
+            <a href="https://maps.google.com" target="_blank" rel="noopener"><i class="ri-map-pin-2-line"></i>314 Court Street, Brooklyn, NY 11231</a>
+            <a href="tel:+17185550190"><i class="ri-phone-line"></i>(718) 555-0190</a>
+            <a href="mailto:ciao@rossapizza.com"><i class="ri-mail-line"></i>ciao@rossapizza.com</a>
+          </div>
+        </div>
+        <form class="booking" id="booking" novalidate>
+          <h3>Book a table</h3>
+          <p>Walk-ins welcome, but weekends fill up fast.</p>
+          <label>Guests</label>
+          <div class="chips" id="guests"><button type="button">1</button><button type="button" class="on">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6+</button></div>
+          <div class="row">
+            <div><label for="bDate">Date</label><input type="date" id="bDate" /></div>
+            <div><label for="bTime">Time</label><select id="bTime"></select></div>
+          </div>
+          <div class="row">
+            <div><label for="bName">Name</label><input id="bName" placeholder="Sofia Russo" /></div>
+            <div><label for="bPhone">Phone</label><input id="bPhone" type="tel" placeholder="(718) 555-0123" /></div>
+          </div>
+          <button class="btn btn--full" type="submit">Reserve <i class="ri-arrow-right-line"></i></button>
+          <p class="form-msg" id="bookMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#top" class="logo logo--light"><span class="logo__mark"><i class="ri-fire-fill"></i></span>Rossa<small>Pizza Napoletana</small></a>
+        <p class="footer__big">Ciao, <em>see you at the oven.</em></p>
+      </div>
+      <div class="footer__grid">
+        <div><h4>Order</h4><a href="#menu">Pickup</a><a href="#menu">Delivery</a><a href="#build">Build your own</a><a href="#">Gift cards</a></div>
+        <div><h4>Rossa</h4><a href="#oven">Our oven</a><a href="#school">Pizza school</a><a href="#">Catering</a><a href="#">Careers</a></div>
+        <div><h4>Visit</h4><p>314 Court Street<br />Brooklyn, NY 11231</p><p>(718) 555-0190</p></div>
+        <div><h4>The dough letter</h4><p>A new seasonal pizza every month, first to you.</p><form class="news" id="news"><input type="email" required placeholder="Your email" aria-label="Your email" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form><p class="form-msg" id="newsMsg"></p></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year"></span> Rossa Pizza Napoletana</p><div class="socials"><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></div></div>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Your order" aria-hidden="true">
+    <div class="drawer__head"><h3>Your order</h3><button id="drawerClose" aria-label="Close your order"><i class="ri-close-line"></i></button></div>
+    <div class="mode" id="mode"><button class="on" data-m="pickup"><i class="ri-store-2-line"></i> Pickup · 20 min</button><button data-m="delivery"><i class="ri-e-bike-2-line"></i> Delivery · 35 min</button></div>
+    <ul class="drawer__list" id="drawerList"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__row"><span>Subtotal</span><b id="dSub">$0</b></div>
+      <div class="drawer__row" id="dFeeRow"><span>Delivery</span><b id="dFee">$0</b></div>
+      <div class="drawer__row drawer__row--total"><span>Total</span><b id="dTotal">$0</b></div>
+      <button class="btn btn--full" id="checkout">Checkout <i class="ri-arrow-right-line"></i></button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const toast = (t) => { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2400); };
+    const money = (n) => "$" + (Math.round(n * 100) / 100).toFixed(n % 1 ? 2 : 0);
+
+    /* =====================================================
+       Data
+       ===================================================== */
+    const MENU = [
+      { id: "margherita", cat: "Rosse", name: "Margherita", price: 16, img: "1574071318508-1cdbab80d002", desc: "San Marzano, fior di latte, basil, olive oil", tag: "Classic" },
+      { id: "marinara", cat: "Rosse", name: "Marinara", price: 13, img: "1593560708920-61dd98c46a4e", desc: "San Marzano, garlic, oregano, olive oil", tag: "Vegan" },
+      { id: "diavola", cat: "Rosse", name: "Diavola", price: 19, img: "1604382354936-07c5d9983bd3", desc: "Spicy soppressata, fior di latte, chilli honey", tag: "Hot" },
+      { id: "capricciosa", cat: "Rosse", name: "Capricciosa", price: 21, img: "1513104890138-7c749659a591", desc: "Ham, mushrooms, artichokes, olives, fior di latte" },
+      { id: "bufala", cat: "Rosse", name: "Bufala & Pomodorini", price: 22, img: "1595854341625-f33ee10dbf94", desc: "Buffalo mozzarella, cherry tomatoes, basil", tag: "Best seller" },
+      { id: "bianca", cat: "Bianche", name: "Quattro Formaggi", price: 20, img: "1565299624946-b28f40a0ae38", desc: "Fior di latte, gorgonzola, fontina, pecorino" },
+      { id: "verde", cat: "Bianche", name: "Verde", price: 19, img: "1534308983496-4fabb1a015ee", desc: "Pistachio pesto, stracciatella, lemon zest, basil", tag: "New" },
+      { id: "patate", cat: "Bianche", name: "Patate & Rosmarino", price: 18, img: "1571407970349-bc81e7e96d47", desc: "Thin potatoes, rosemary, smoked provola" },
+      { id: "rucola", cat: "Bianche", name: "Prosciutto & Rucola", price: 23, img: "1528137871618-79d2761e3fd5", desc: "Prosciutto di Parma, rocket, parmigiano, after the oven" },
+      { id: "arancini", cat: "Fritti", name: "Arancini (3)", price: 11, img: "1590947132387-155cc02f3212", desc: "Saffron rice, ragù, peas, mozzarella" },
+      { id: "montanara", cat: "Fritti", name: "Montanara", price: 12, img: "1594007654729-407eedc4be65", desc: "Fried dough, tomato, parmigiano, basil" },
+      { id: "tiramisu", cat: "Dolci", name: "Tiramisù", price: 9, img: "1571877227200-a0d98ea607e9", desc: "Mascarpone, espresso, cocoa. Made every morning" },
+      { id: "nutella", cat: "Dolci", name: "Pizza Nutella", price: 14, img: "1601924582970-9238bcb495d9", desc: "Our dough, Nutella, hazelnuts, powdered sugar. Sharing size" },
+    ];
+    const BASES = [
+      { id: "rossa", name: "Rossa", desc: "San Marzano tomato, fior di latte", price: 15 },
+      { id: "bianca", name: "Bianca", desc: "Fior di latte, olive oil, no tomato", price: 15 },
+      { id: "pesto", name: "Pesto", desc: "Basil pesto, fior di latte", price: 17 },
+    ];
+    /* row = row in img/toppings.webp, v = pieces in that row, size = % of the pizza, n = pieces on a whole pizza */
+    const TOPS = [
+      { id: "pep", name: "Soppressata", price: 3, row: 0, v: 7, size: 23, n: 9, z: 1.55 },
+      { id: "olive", name: "Black olives", price: 2, row: 1, v: 7, size: 15, n: 13, z: 1.9 },
+      { id: "tom", name: "Roma tomato", price: 2, row: 2, v: 4, size: 15.5, n: 6, z: 1 },
+      { id: "mush", name: "Mushrooms", price: 2, row: 3, v: 8, size: 22, n: 11, z: 2.1 },
+      { id: "basil", name: "Fresh basil", price: 1, row: 4, v: 7, size: 16, n: 6, z: 1 },
+      { id: "chili", name: "Calabrian chilli", price: 2, row: 5, v: 5, size: 11.5, n: 10, z: 1.3 },
+      { id: "onion", name: "Red onion", price: 1, row: 6, v: 4, size: 17, n: 10, z: 1.05 },
+      { id: "nduja", name: "'Nduja", price: 3, row: 7, v: 7, size: 15, n: 10, z: 1.6 },
+    ];
+    const REVIEWS = [
+      ["The closest thing to Naples I've found in New York. The crust is soft and blistered and the Margherita is perfect.", "Giulia M.", "Google review"],
+      ["We did the pizza school for my husband's birthday. Marco was hilarious and we actually make decent pizza at home now.", "Priya S.", "Pizza school"],
+      ["Ordered for pickup at 7pm on a Friday and it was ready in 18 minutes, still steaming. The Diavola with chilli honey is unreal.", "Dan K.", "Online order"],
+      ["Kid-friendly, fast, and the tiramisù is worth the trip on its own. Our Sunday spot now.", "The Alvarez family", "Google review"],
+    ];
+    const CLASSES = [
+      ["Sat 14 Nov", "11:00", 4], ["Sun 15 Nov", "11:00", 0], ["Sat 21 Nov", "11:00", 7], ["Sat 28 Nov", "15:00", 2],
+    ];
+    const HOURS = [["Monday", "Closed"], ["Tuesday", "12:00 – 22:00"], ["Wednesday", "12:00 – 22:00"], ["Thursday", "12:00 – 22:00"], ["Friday", "12:00 – 23:00"], ["Saturday", "11:00 – 23:00"], ["Sunday", "11:00 – 21:00"]];
+
+    /* =====================================================
+       Hero: ticker, rotating pizza, oven status, zone check
+       ===================================================== */
+    const tick = ["Margherita", "Diavola", "Verde", "Bufala & Pomodorini", "Quattro Formaggi", "Prosciutto & Rucola", "Marinara", "Capricciosa"];
+    $("ticker").innerHTML = [0, 1].map(() => `<span>${tick.map((t) => `${t}<i class="ri-fire-fill"></i>`).join("")}</span>`).join("");
+    if (!reduce) addEventListener("scroll", () => { $("heroPizza").style.transform = `rotate(${scrollY * 0.12}deg)`; }, { passive: true });
+    (() => {
+      const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
+      const open = { 0: [11, 21], 1: null, 2: [12, 22], 3: [12, 22], 4: [12, 22], 5: [12, 23], 6: [11, 23] }[d];
+      const isOpen = open && h >= open[0] && h < open[1];
+      $("ovenStatus").classList.toggle("off", !isOpen);
+      $("ovenStatus").querySelector("span").textContent = isOpen ? "Oven is lit" : "Oven's resting";
+    })();
+    const ZONES = { "11231": 0, "11201": 0, "11215": 2, "11217": 2, "11232": 2, "11218": 3, "11205": 3, "11238": 3 };
+    $("zoneForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const z = $("zoneIn").value.trim(), msg = $("zoneMsg");
+      if (!/^\d{5}$/.test(z)) { msg.textContent = "Please enter a 5-digit ZIP code."; msg.className = "zone__msg err"; return; }
+      if (z in ZONES) { msg.innerHTML = ZONES[z] ? `<i class="ri-checkbox-circle-fill"></i> We deliver to ${z} in about 35 min. Delivery is $${ZONES[z]}.` : `<i class="ri-checkbox-circle-fill"></i> Free delivery to ${z}, usually under 30 min.`; msg.className = "zone__msg ok"; }
+      else { msg.innerHTML = `<i class="ri-store-2-line"></i> ${z} is outside our delivery area, but pickup is always ready in 20 minutes.`; msg.className = "zone__msg"; }
+    });
+
+    /* =====================================================
+       Cart
+       ===================================================== */
+    let cart = [], mode = "pickup";
+    try { cart = JSON.parse(localStorage.getItem("rossaCart") || "[]"); } catch (e) {}
+    const save = () => { try { localStorage.setItem("rossaCart", JSON.stringify(cart)); } catch (e) {} };
+    const openCart = () => { document.body.classList.add("cart-open"); $("drawer").setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { document.body.classList.remove("cart-open"); $("drawer").setAttribute("aria-hidden", "true"); };
+    const renderCart = () => {
+      const count = cart.reduce((s, i) => s + i.q, 0), sub = cart.reduce((s, i) => s + i.q * i.price, 0), fee = mode === "delivery" && sub ? (sub >= 40 ? 0 : 3) : 0;
+      $("cartCount").textContent = count; $("cartCount").classList.toggle("on", count > 0);
+      $("drawerList").innerHTML = cart.length ? cart.map((i, k) => `<li><img src="${i.img ? U(i.img, 160) : U("1574071318508-1cdbab80d002", 160)}" alt="" /><div><b>${i.name}</b><small>${i.note || ""}</small><span>${money(i.price)}</span></div><div class="qty"><button data-k="${k}" data-d="-1" aria-label="One less"><i class="ri-subtract-line"></i></button><b>${i.q}</b><button data-k="${k}" data-d="1" aria-label="One more"><i class="ri-add-line"></i></button></div></li>`).join("") : `<li class="empty"><i class="ri-restaurant-2-line"></i>Your order is empty.<br />Pick something from the menu.</li>`;
+      $("dSub").textContent = money(sub); $("dFee").textContent = fee ? money(fee) : "Free"; $("dFeeRow").hidden = mode !== "delivery"; $("dTotal").textContent = money(sub + fee);
+      save();
+    };
+    const addToCart = (item) => {
+      const found = cart.find((i) => i.id === item.id && i.note === item.note);
+      found ? found.q++ : cart.push({ ...item, q: 1 });
+      renderCart(); toast(`${item.name} added`);
+      $("cartBtn").classList.remove("bump"); void $("cartBtn").offsetWidth; $("cartBtn").classList.add("bump");
+    };
+    $("drawerList").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; const i = cart[+b.dataset.k]; i.q += +b.dataset.d; if (i.q < 1) cart.splice(+b.dataset.k, 1); renderCart(); });
+    $("mode").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; mode = b.dataset.m; $("mode").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); renderCart(); });
+    $("cartBtn").addEventListener("click", openCart); $("drawerClose").addEventListener("click", closeCart); $("scrim").addEventListener("click", closeCart);
+    $("checkout").addEventListener("click", () => {
+      if (!cart.length) { toast("Add something first"); return; }
+      const t = $("dTotal").textContent; cart = []; renderCart(); closeCart();
+      toast(mode === "pickup" ? `Order placed · ${t} · ready in 20 min` : `Order placed · ${t} · at your door in ~35 min`);
+    });
+    renderCart();
+
+    /* =====================================================
+       Menu
+       ===================================================== */
+    const CATS = ["Rosse", "Bianche", "Fritti", "Dolci"];
+    let cat = "Rosse";
+    const renderMenu = () => {
+      $("menuTabs").innerHTML = CATS.map((c) => `<button role="tab" class="${c === cat ? "on" : ""}" aria-selected="${c === cat}">${c}<small>${MENU.filter((m) => m.cat === c).length}</small></button>`).join("");
+      $("menuGrid").innerHTML = MENU.filter((m) => m.cat === cat).map((m, i) => `
+        <article class="dish" style="--d:${i * 0.06}s">
+          <div class="dish__img"><img src="${U(m.img, 700)}" alt="${m.name}" loading="lazy" />${m.tag ? `<span class="dish__tag">${m.tag}</span>` : ""}</div>
+          <div class="dish__body"><div class="dish__top"><h3>${m.name}</h3><b>${money(m.price)}</b></div><p>${m.desc}</p>
+          <button class="dish__add" data-id="${m.id}"><i class="ri-add-line"></i> Add</button></div>
+        </article>`).join("");
+    };
+    $("menuTabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; cat = CATS[[...$("menuTabs").children].indexOf(b)]; renderMenu(); });
+    $("menuGrid").addEventListener("click", (e) => { const b = e.target.closest(".dish__add"); if (!b) return; const m = MENU.find((x) => x.id === b.dataset.id); addToCart({ id: m.id, name: m.name, price: m.price, img: m.img }); });
+    renderMenu();
+
+    /* =====================================================
+       Pizza builder (real photographed base and toppings)
+       ===================================================== */
+    const B = { base: "rossa", tops: [], where: {}, spots: {} };
+    const LAYER = ["tom", "pep", "nduja", "mush", "onion", "olive", "chili", "basil"];
+    const WHERE = [["whole", "Whole"], ["left", "Left half"], ["right", "Right half"]];
+    const topById = (id) => TOPS.find((t) => t.id === id);
+    const hash = (s) => [...s].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
+    const sprite = (t, k) => `background-position:${((k % t.v) / 7) * 100}% ${(t.row / 7) * 100}%`;
+    /* Spread pieces evenly and away from what is already on the pizza, like a pizzaiolo would */
+    const place = (id) => {
+      const t = topById(id), w = B.where[id];
+      let seed = hash(id + w);
+      const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+      const others = Object.entries(B.spots).filter(([k]) => k !== id).flatMap(([, v]) => v);
+      const mine = [], count = w === "whole" ? t.n : Math.ceil(t.n * .55);
+      for (let k = 0; k < count; k++) {
+        let best = null, bestScore = -1;
+        for (let c = 0; c < 36; c++) {
+          const a = rnd() * 6.2832, d = Math.sqrt(rnd()) * 33;
+          const x = 50 + Math.cos(a) * d, y = 50 + Math.sin(a) * d;
+          if (w === "left" && x > 47) continue;
+          if (w === "right" && x < 53) continue;
+          const near = (list, f) => list.reduce((m, p) => Math.min(m, Math.hypot(p.x - x, p.y - y) * f), 99);
+          const score = Math.min(near(mine, 1), near(others, 1.7));
+          if (score > bestScore) { bestScore = score; best = { x, y }; }
+        }
+        if (best) mine.push({ ...best, r: Math.round(rnd() * 360), s: .9 + rnd() * .2, k });
+      }
+      B.spots[id] = mine;
+    };
+    const price = () => BASES.find((b) => b.id === B.base).price + B.tops.reduce((s, id) => s + topById(id).price, 0);
+    const renderBuilder = (dropped) => {
+      $("bases").innerHTML = BASES.map((b) => `<button class="base ${b.id === B.base ? "on" : ""}" data-b="${b.id}" aria-pressed="${b.id === B.base}"><img src="img/base-${b.id}.webp" alt="" loading="lazy" /><span><b>${b.name}</b><small>${b.desc}</small></span><em>$${b.price}</em></button>`).join("");
+      $("tops").innerHTML = TOPS.map((t) => { const on = B.tops.includes(t.id); return `<button class="tp ${on ? "on" : ""}" data-t="${t.id}" aria-pressed="${on}" ${!on && B.tops.length >= 5 ? "disabled" : ""}><span class="tp__img" style="${sprite(t, 0)};transform:scale(${t.z})"></span><span class="tp__name">${t.name}</span><small>+$${t.price}</small></button>`; }).join("");
+      $("pieBase").src = `img/base-${B.base}.webp`;
+      $("pieTops").innerHTML = LAYER.filter((id) => B.tops.includes(id)).map((id) => { const t = topById(id); return B.spots[id].map((p, k) => `<span class="top ${id === dropped ? "drop" : ""}" style="left:${p.x}%;top:${p.y}%;width:${t.size}%;--r:${p.r}deg;--s:${p.s};--d:${k * .035}s;${sprite(t, p.k)}"></span>`).join(""); }).join("");
+      const halves = B.tops.some((id) => B.where[id] !== "whole");
+      $("pieHalves").classList.toggle("on", halves);
+      $("sumStep").hidden = !B.tops.length;
+      $("picked").innerHTML = B.tops.map((id) => `<li><span class="tp__img" style="${sprite(topById(id), 0)};transform:scale(${topById(id).z})"></span><b>${topById(id).name}</b><span class="seg" role="group" aria-label="Where to put ${topById(id).name}">${WHERE.map(([w, l]) => `<button class="${B.where[id] === w ? "on" : ""}" data-pt="${id}" data-w="${w}" aria-pressed="${B.where[id] === w}">${l}</button>`).join("")}</span><button class="picked__x" data-rm="${id}" aria-label="Remove ${topById(id).name}"><i class="ri-close-line"></i></button></li>`).join("");
+      $("topCount").textContent = `${B.tops.length} of 5`;
+      $("bPrice").textContent = money(price());
+    };
+    const dropTop = (id) => { B.tops = B.tops.filter((x) => x !== id); delete B.where[id]; delete B.spots[id]; renderBuilder(); };
+    $("bases").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { B.base = b.dataset.b; renderBuilder(); } });
+    $("tops").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b || b.disabled) return; const t = b.dataset.t;
+      if (B.tops.includes(t)) dropTop(t);
+      else { B.tops.push(t); B.where[t] = "whole"; place(t); renderBuilder(t); }
+    });
+    $("picked").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (b.dataset.rm) { dropTop(b.dataset.rm); return; }
+      B.where[b.dataset.pt] = b.dataset.w; place(b.dataset.pt); renderBuilder(b.dataset.pt);
+    });
+    $("bReset").addEventListener("click", () => { B.base = "rossa"; B.tops = []; B.where = {}; B.spots = {}; renderBuilder(); });
+    $("bAdd").addEventListener("click", () => {
+      const base = BASES.find((b) => b.id === B.base);
+      const note = [base.name, ...B.tops.map((id) => topById(id).name + (B.where[id] === "whole" ? "" : ` (${B.where[id]} half)`))].join(" · ");
+      addToCart({ id: "custom", name: "Your own pizza", price: price(), note });
+      $("pie").classList.remove("bake"); void $("pie").offsetWidth; $("pie").classList.add("bake");
+    });
+    renderBuilder();
+
+    /* =====================================================
+       Oven gauge (counts up when visible)
+       ===================================================== */
+    new IntersectionObserver(([e], o) => {
+      if (!e.isIntersecting) return; o.disconnect();
+      const t0 = performance.now(), arc = $("ovenArc");
+      const step = (t) => { const k = Math.min(1, (t - t0) / 1800), v = 1 - (1 - k) ** 3; $("ovenTemp").textContent = Math.round(485 * v) + "°"; arc.style.strokeDashoffset = 327 - 327 * 0.82 * v; if (k < 1) requestAnimationFrame(step); };
+      reduce ? ($("ovenTemp").textContent = "485°", arc.style.strokeDashoffset = 327 * 0.18) : requestAnimationFrame(step);
+    }, { threshold: 0.4 }).observe($("ovenTemp"));
+
+    /* =====================================================
+       Reviews, classes, hours, booking
+       ===================================================== */
+    $("reviews").innerHTML = REVIEWS.map(([q, n, s], i) => `<figure class="review reveal" style="--d:${i * 0.07}s"><div class="stars">${'<i class="ri-star-fill"></i>'.repeat(5)}</div><blockquote>${q}</blockquote><figcaption><b>${n}</b>${s}</figcaption></figure>`).join("");
+    $("classes").innerHTML = CLASSES.map(([d, t, s]) => `<div class="cls ${s ? "" : "cls--full"}"><div><b>${d}</b><span>${t} · 2.5 hours · $95</span></div>${s ? `<button class="btn btn--sm" data-cls="${d}">Book · ${s} left</button>` : `<span class="cls__full">Sold out</span>`}</div>`).join("");
+    $("classes").addEventListener("click", (e) => { const b = e.target.closest("[data-cls]"); if (!b) return; addToCart({ id: "school-" + b.dataset.cls, name: "Pizza school", price: 95, note: b.dataset.cls, img: "1528137871618-79d2761e3fd5" }); });
+    const today = (new Date().getDay() + 6) % 7;
+    $("hours").innerHTML = HOURS.map(([d, h], i) => `<li class="${i === today ? "today" : ""}"><span>${d}${i === today ? " <em>Today</em>" : ""}</span><b>${h}</b></li>`).join("");
+    const times = []; for (let h = 12; h <= 21; h++) for (const m of ["00", "30"]) times.push(`${h}:${m}`);
+    $("bTime").innerHTML = times.map((t) => `<option ${t === "19:00" ? "selected" : ""}>${t}</option>`).join("");
+    const d0 = new Date(); $("bDate").value = d0.toISOString().slice(0, 10); $("bDate").min = d0.toISOString().slice(0, 10);
+    $("guests").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) $("guests").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); });
+    $("booking").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const n = $("bName").value.trim(), p = $("bPhone").value.trim(), msg = $("bookMsg");
+      if (!n || p.replace(/\D/g, "").length < 7) { msg.textContent = "Please add your name and a phone number."; msg.className = "form-msg err"; return; }
+      const g = $("guests").querySelector(".on").textContent, d = new Date($("bDate").value + "T12:00");
+      msg.textContent = `Grazie ${n.split(" ")[0]}! Table for ${g} on ${d.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })} at ${$("bTime").value}. We'll text ${p} to confirm.`; msg.className = "form-msg ok";
+      $("bName").value = $("bPhone").value = "";
+    });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); $("newsMsg").textContent = "You're in. First letter lands next month."; e.target.reset(); });
+    $("year").textContent = new Date().getFullYear();
+
+    /* =====================================================
+       Header, nav, reveal
+       ===================================================== */
+    const links = [...document.querySelectorAll(".nav a")];
+    const closeNav = () => { document.body.classList.remove("nav-open"); $("burger").setAttribute("aria-expanded", "false"); };
+    $("burger").addEventListener("click", () => $("burger").setAttribute("aria-expanded", document.body.classList.toggle("nav-open")));
+    links.forEach((a) => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCart(); closeNav(); } });
+    const onScroll = () => {
+      $("header").classList.toggle("sticky", scrollY > 30);
+      let cur = ""; links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = a.getAttribute("href"); });
+      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === cur));
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .section .eyebrow, .section .h2, .oven__media, .school__img, .booking, .build__stage").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+    requestAnimationFrame(() => document.body.classList.add("loaded"));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/restaurant-rossa/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

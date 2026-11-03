@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layla Mansour — People &amp; Culture Consultant</title>
+  <meta name="description" content="Layla Mansour is an HR and People & Culture consultant helping growing companies hire, onboard, grow and keep great people — fractional HR, hiring sprints, culture and leadership coaching." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>try { if (localStorage.getItem("layla-theme") === "light") document.documentElement.dataset.theme = "light"; } catch (_) {}</script>
+</head>
+<body>
+  <div class="cur" id="cur"></div>
+  <div class="cur-ring" id="curRing"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#top" class="logo">layla<i>.</i></a>
+      <nav class="nav" id="nav">
+        <span class="nav__pill" id="navPill"></span>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#results">Results</a>
+        <a href="#packages">Packages</a>
+      </nav>
+      <div class="header__cta">
+        <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark theme"><i class="ri-sun-line"></i></button>
+        <a href="#contact" class="btn">Book a call <i class="ri-arrow-right-line"></i></a>
+        <button class="burger" id="burger" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="mosaic mosaic--grey" id="mosGrey" aria-hidden="true"></div>
+      <div class="mosaic mosaic--color" id="mosColor" aria-hidden="true"></div>
+      <div class="hero__veil"></div>
+      <div class="container hero__in">
+        <span class="hero__badge reveal"><img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=120&q=80" alt="" />Layla Mansour · People &amp; Culture <b>Available</b></span>
+        <h1 class="display">
+          <span class="row"><span class="silver" style="--d:.15s">People</span></span>
+          <span class="row"><span class="grad-text" style="--d:.3s">first.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d:.5s">I help growing companies hire the right people, welcome them properly and give them reasons to stay — HR that feels human, with numbers to prove it.</p>
+        <div class="hero__btns reveal" style="--d:.6s">
+          <a href="#contact" class="btn">Let's talk people <i class="ri-arrow-right-line"></i></a>
+          <a href="#calculator" class="btn btn--ghost"><i class="ri-calculator-line"></i> What's turnover costing you?</a>
+        </div>
+        <div class="hero__proof reveal" style="--d:.7s">
+          <div><b class="grad-text" data-count="1200" data-suffix="+">0</b><span>People hired</span></div>
+          <div><b class="silver" data-count="48">0</b><span>Companies helped</span></div>
+          <div><b class="silver" data-count="54" data-prefix="−" data-suffix="%">0</b><span>Avg. turnover drop</span></div>
+          <div><b class="silver" data-count="12">0</b><span>Years in HR</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pinned statement -->
+    <section class="statement" id="statement">
+      <div class="statement__pin">
+        <div class="statement__in">
+          <div>
+            <span class="eyebrow">What I do</span>
+            <h2 class="display" style="margin-top:22px">
+              <span class="silver">I help teams</span>
+              <span class="verb" id="verb"><span class="on">hire</span><span>onboard</span><span>grow</span><span>keep</span></span>
+              <span class="silver">great people.</span>
+            </h2>
+            <p class="statement__copy" id="stCopy"></p>
+            <div class="statement__dots" id="stDots"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+          </div>
+          <figure class="statement__pics" id="stPics"><figcaption id="stCap"></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + badge -->
+    <section class="section about" id="about">
+      <div class="container about__in">
+        <div class="lanyard" id="lanyard" data-cursor="Drag">
+          <div class="lanyard__rig" id="rig">
+            <div class="lanyard__strap"></div>
+            <div class="lanyard__clip"></div>
+            <div class="badge-card" id="badge">
+              <div class="badge-card__in">
+                <div class="badge-face">
+                  <div class="badge-face__top"><span>Staff · People Team</span></div>
+                  <img class="badge-face__photo" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=300&q=80" alt="Layla Mansour" draggable="false" />
+                  <div class="badge-face__body">
+                    <h3>Layla Mansour</h3>
+                    <p>People &amp; Culture Consultant</p>
+                    <div class="badge-face__tags"><span>Hiring</span><span>Culture</span><span>Coaching</span></div>
+                    <div class="badge-face__row"><div><span>ID</span><b>HR-0412</b></div><div><span>Access</span><b>All teams</b></div><div><span>Since</span><b>2014</b></div></div>
+                  </div>
+                </div>
+                <div class="badge-face badge-face--back">
+                  <h4>Scan to connect</h4>
+                  <div class="qr" id="qr"></div>
+                  <small>layla-mansour.com/hello</small>
+                  <ul><li>SHRM-SCP · CIPD Level 7</li><li>ICF certified coach</li><li>Dubai · Remote worldwide</li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="lanyard__hint"><i class="ri-drag-move-2-line"></i> Drag &amp; throw my badge · tap to flip</span>
+        </div>
+
+        <div class="about__text">
+          <span class="eyebrow reveal">About me</span>
+          <h2 class="display silver reveal">Hi, I'm<br />Layla</h2>
+          <p class="reveal">I've spent <strong>12 years in HR</strong> — from recruiting for a 40-person startup to leading People for a 1,500-person logistics group across six countries.</p>
+          <p class="reveal">Today I work as a <strong>fractional HR lead and consultant</strong> for scale-ups that are growing faster than their people processes. I build the hiring engine, the onboarding, the reviews and the policies — and I make sure they actually feel good to go through.</p>
+          <p class="reveal">I believe most "people problems" are really <strong>clarity problems</strong>. Clear roles, clear expectations, clear growth paths — and people do their best work.</p>
+          <div class="creds reveal">
+            <div class="cred"><i class="ri-award-line"></i><div><b>SHRM-SCP</b><small>Senior certified professional</small></div></div>
+            <div class="cred"><i class="ri-graduation-cap-line"></i><div><b>CIPD Level 7</b><small>Advanced HR management</small></div></div>
+            <div class="cred"><i class="ri-chat-heart-line"></i><div><b>ICF Coach</b><small>Leadership coaching</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">Services</span>
+          <h2 class="display sec-title reveal">How I help</h2>
+          <p class="reveal">Pick one area or hand me the whole People function. Everything comes with templates your team keeps.</p>
+        </div>
+        <div class="svc-wrap reveal">
+          <div class="svc-tabs" id="svcTabs" role="tablist"></div>
+          <div class="svc-panel" id="svcPanel" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="section calc" id="calculator">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">Turnover calculator</span>
+          <h2 class="display silver sec-title reveal">Cost of leaving</h2>
+          <p class="reveal">Every resignation costs you recruiting, onboarding and lost productivity. Move the sliders to see what turnover is costing your company right now.</p>
+        </div>
+        <div class="calc__grid reveal">
+          <div class="calc__in">
+            <div class="field"><div class="field__top"><span class="field__label">Employees</span><output id="oEmp"></output></div><div class="seg" id="cEmp" role="radiogroup" aria-label="Employees"><button type="button" data-v="40">1–50</button><button type="button" data-v="120">51–200</button><button type="button" data-v="250" class="on">201–500</button><button type="button" data-v="800">500–1k</button><button type="button" data-v="2000">1k+</button></div></div>
+            <div class="field"><div class="field__top"><span class="field__label">Average salary</span><output id="oSal"></output></div><div class="seg" id="cSal" role="radiogroup" aria-label="Average salary"><button type="button" data-v="30000">€30k</button><button type="button" data-v="45000">€45k</button><button type="button" data-v="55000" class="on">€55k</button><button type="button" data-v="75000">€75k</button><button type="button" data-v="100000">€100k+</button></div></div>
+            <div class="field"><div class="field__top"><span class="field__label">Yearly turnover</span><output id="oRate"></output></div><div class="seg" id="cRate" role="radiogroup" aria-label="Yearly turnover"><button type="button" data-v="8">Low</button><button type="button" data-v="15">Average</button><button type="button" data-v="22" class="on">High</button><button type="button" data-v="35">Very high</button></div><small>Industry average is around 18%.</small></div>
+            <div class="field"><div class="field__top"><span class="field__label">Typical role leaving</span><output id="oRep"></output></div><div class="seg" id="cRep" role="radiogroup" aria-label="Typical role leaving"><button type="button" data-v="30">Entry level</button><button type="button" data-v="40" class="on">Specialist</button><button type="button" data-v="80">Manager</button><button type="button" data-v="150">Senior leader</button></div><small>Replacing someone costs 30–50% of salary for most roles, 100%+ for senior ones.</small></div>
+          </div>
+          <div class="calc__out">
+            <small>Turnover is costing you</small>
+            <div class="calc__big grad-text" id="rCost">€0</div>
+            <p>every year in hiring, onboarding and lost productivity.</p>
+            <div class="calc__rows">
+              <div><b id="rLeavers">0</b><span>people leave per year</span></div>
+              <div><b id="rPer">€0</b><span>cost per resignation</span></div>
+            </div>
+            <div class="calc__save">
+              <div><span>Cut turnover by 30% and save</span><b class="grad-text" id="rSave">€0</b></div>
+              <a href="#contact" class="btn">Get a retention plan <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section" id="results" style="padding-top:40px">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">Results</span>
+          <h2 class="display silver sec-title reveal">Before &amp; after</h2>
+        </div>
+        <div class="results__tabs reveal" id="rTabs"></div>
+        <div class="results__card reveal" id="rCard"></div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="section" id="journey" style="padding-top:20px">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">The employee journey</span>
+          <h2 class="display silver reveal" style="font-size:clamp(2.8rem,7vw,110px)">Every step,<br />covered</h2>
+        </div>
+        <div class="journey" id="jWrap">
+          <div class="journey__line"><i id="jLine"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials deck -->
+    <section class="section">
+      <div class="container deck-wrap">
+        <div class="deck-copy">
+          <span class="eyebrow reveal">Testimonials</span>
+          <h2 class="display silver reveal">People<br />talk</h2>
+          <p class="reveal">Founders, CEOs and HR teams on what changed after we worked together. Swipe the cards — or use the arrows.</p>
+          <div class="deck-ctrl reveal"><button class="round" id="dPrev" aria-label="Previous testimonial"><i class="ri-arrow-left-line"></i></button><button class="round" id="dNext" aria-label="Next testimonial"><i class="ri-arrow-right-line"></i></button><span class="deck-count" id="dCount"></span></div>
+        </div>
+        <div class="deck reveal" id="deck" data-cursor="Swipe"></div>
+      </div>
+    </section>
+
+    <!-- Workshops -->
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">Workshops &amp; talks</span>
+          <h2 class="display silver reveal" style="font-size:clamp(2.8rem,7vw,110px)">Upcoming</h2>
+        </div>
+        <div class="events" id="events"></div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section" id="packages" style="padding-top:40px">
+      <div class="container">
+        <div class="sec-head">
+          <span class="eyebrow reveal">Packages</span>
+          <h2 class="display silver sec-title reveal">Work with me</h2>
+          <p class="reveal">Clear scopes and fixed prices. Not sure which fits? The intro call is free.</p>
+        </div>
+        <div class="packs" id="packs"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact__in">
+        <div>
+          <span class="eyebrow reveal">Contact</span>
+          <h2 class="display silver reveal">Let's talk<br />people</h2>
+          <p class="contact__lead reveal">Tell me where it hurts — hiring, onboarding, engagement or leadership — and I'll reply within one working day with a first idea.</p>
+          <div class="contact__lines reveal">
+            <a href="mailto:hello@laylamansour.com"><i class="ri-mail-line"></i>hello@laylamansour.com</a>
+            <a href="tel:+971501234567"><i class="ri-phone-line"></i>+971 50 123 4567</a>
+            <span><i class="ri-map-pin-line"></i>Dubai · working remotely worldwide</span>
+          </div>
+        </div>
+        <form class="form reveal" id="form">
+          <h3>How can I help?</h3>
+          <div class="needs" id="needs">
+            <button type="button" class="need on"><i class="ri-user-search-line"></i>Hiring</button>
+            <button type="button" class="need"><i class="ri-file-search-line"></i>HR audit</button>
+            <button type="button" class="need"><i class="ri-emotion-happy-line"></i>Culture &amp; engagement</button>
+            <button type="button" class="need"><i class="ri-compass-3-line"></i>Leadership coaching</button>
+          </div>
+          <div class="inputs">
+            <input id="fName" required placeholder="Your name" aria-label="Your name" />
+            <input id="fMail" type="email" required placeholder="Work email" aria-label="Work email" />
+            <select id="fSize" aria-label="Company size"><option>Company size: 1–20</option><option>21–100</option><option selected>101–500</option><option>500+</option></select>
+            <textarea id="fMsg" placeholder="We're growing from 80 to 150 people this year and our hiring is…" aria-label="Message"></textarea>
+          </div>
+          <button class="btn" type="submit">Send message <i class="ri-send-plane-line"></i></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a href="#top" class="logo">layla<i>.</i></a>
+          <p>People &amp; Culture consultant helping scale-ups hire, onboard, grow and keep great people.</p>
+          <form class="news" id="news"><input type="email" required placeholder="Monthly people-ops tips" aria-label="Email for newsletter" /><button aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button></form>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#calculator">Calculator</a></li><li><a href="#packages">Packages</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="#">Onboarding checklist</a></li><li><a href="#">Interview scorecard</a></li><li><a href="#">1:1 meeting guide</a></li></ul></div>
+        <div><h4>Follow</h4><div class="socials"><a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a></div></div>
+      </div>
+      <div class="wordmark display silver">People first</div>
+      <div class="footer__bot"><span>© 2026 Layla Mansour HR Consulting. All rights reserved.</span><span>Privacy · Terms</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span></span></div>
+  <a href="#top" class="to-top" id="toTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const eur = (n) => "€" + Math.round(n).toLocaleString("en-US");
+    const toast = (m) => { const t = $("toast"); t.querySelector("span").textContent = m; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2800); };
+
+    /* ---------- Theme switch with circle reveal ---------- */
+    const root = document.documentElement;
+    const setIcon = () => ($("themeBtn").innerHTML = root.dataset.theme === "light" ? '<i class="ri-moon-line"></i>' : '<i class="ri-sun-line"></i>');
+    setIcon();
+    $("themeBtn").addEventListener("click", (e) => {
+      const r = e.currentTarget.getBoundingClientRect();
+      root.style.setProperty("--vx", ((r.left + r.width / 2) / innerWidth) * 100 + "%");
+      root.style.setProperty("--vy", ((r.top + r.height / 2) / innerHeight) * 100 + "%");
+      const flip = () => { root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light"; setIcon(); try { localStorage.setItem("layla-theme", root.dataset.theme); } catch (_) {} };
+      document.startViewTransition && !reduced ? document.startViewTransition(flip) : flip();
+    });
+
+    /* ---------- Custom cursor ---------- */
+    const cur = $("cur"), ring = $("curRing");
+    let mx = -100, my = -100, rx = -100, ry = -100;
+    addEventListener("mousemove", (e) => {
+      mx = e.clientX; my = e.clientY;
+      cur.style.transform = `translate(${mx}px, ${my}px)`;
+      const lab = e.target.closest("[data-cursor]");
+      ring.classList.toggle("label", !!lab);
+      ring.textContent = lab ? lab.dataset.cursor : "";
+      ring.classList.toggle("hover", !lab && !!e.target.closest("a, button, input, select, textarea, .tile"));
+    });
+    (function ringLoop() { rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18; ring.style.transform = `translate(${rx}px, ${ry}px)`; requestAnimationFrame(ringLoop); })();
+
+    /* ---------- Nav pill ---------- */
+    const pill = $("navPill");
+    const movePill = (a) => { if (!a) { pill.style.opacity = 0; return; } pill.style.left = a.offsetLeft + "px"; pill.style.width = a.offsetWidth + "px"; pill.style.opacity = 1; };
+    document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("mouseenter", () => movePill(a)));
+    $("nav").addEventListener("mouseleave", () => movePill($("nav").querySelector("a.active")));
+
+    /* ---------- Hero mosaic: flipping faces + colour spotlight ---------- */
+    const FACES = ["1573497019940-1c28c88b4f3e", "1580489944761-15a19d654956", "1560250097-0b93528c311a", "1472099645785-5658abf4ff4e", "1519085360753-af0119f7cbe7", "1599566150163-29194dcaad36", "1554151228-14d9def656e4", "1508214751196-bcfd4ca60f91", "1539571696357-5a69c17a67c6", "1527980965255-d3b416303d12", "1570295999919-56ceb5ecca61", "1546961329-78bef0414d7c", "1529626455594-4ff0802cfb7e", "1524504388940-b1c1722653e1", "1500648767791-00dcc994a43e", "1506794778202-cad84cf45f1d", "1507003211169-0a1dd7228f2d", "1494790108377-be9c29b29330", "1438761681033-6461ffad8d80", "1544005313-94ddf0286df2", "1534528741775-53994a69daeb", "1517841905240-472988babdf9", "1531123897727-8f129e1688ce", "1573496359142-b8d87734a5a2", "1557862921-37829c790f19", "1552058544-f2b08422138a", "1535713875002-d1d0cf377fde", "1542909168-82c3e7fdca5c", "1547425260-76bcadfb4f2c", "1564564321837-a57b7070ac4f", "1558203728-00f45181dd84", "1544723795-3fb6469f5b39", "1557296387-5358ad7997bb", "1567532939604-b6b5b0db2604", "1605462863863-10d9e47e15ee"];
+    const face = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&crop=faces&w=300&h=300&q=70`;
+    const TILE_N = 32;
+    // 35 faces for 32 tiles: every tile starts unique, and flips always pick an unused face.
+    const shown = FACES.slice(0, TILE_N);
+    const tileHTML = shown.map((id) => `<div class="tile"><img src="${face(id)}" alt="" /></div>`).join("");
+    $("mosGrey").innerHTML = tileHTML;
+    $("mosColor").innerHTML = tileHTML;
+    if (!reduced) setInterval(() => {
+      const i = Math.floor(Math.random() * TILE_N);
+      const free = FACES.filter((f) => !shown.includes(f));
+      const next = free[Math.floor(Math.random() * free.length)] || FACES[0];
+      shown[i] = next;
+      [$("mosGrey"), $("mosColor")].forEach((m) => {
+        const img = m.children[i].querySelector("img");
+        img.classList.add("out");
+        setTimeout(() => { img.src = face(next); img.onload = () => img.classList.remove("out"); }, 450);
+      });
+    }, 1400);
+    const heroEl = document.querySelector(".hero");
+    heroEl.addEventListener("mousemove", (e) => {
+      const r = heroEl.getBoundingClientRect();
+      $("mosColor").style.setProperty("--mx", e.clientX - r.left + "px");
+      $("mosColor").style.setProperty("--my", e.clientY - r.top + "px");
+    });
+    heroEl.addEventListener("mouseleave", () => { $("mosColor").style.setProperty("--mx", "-500px"); });
+    requestAnimationFrame(() => heroEl.classList.add("loaded"));
+
+    /* ---------- Pinned statement ---------- */
+    const VERBS = [
+      ["Hire", "Hiring sprints, scorecards and interview training — so you stop guessing and start choosing.", "1521737604893-d14cc237f11d", "Hiring workshop · Northwind"],
+      ["Onboard", "Day-one plans and 90-day roadmaps that make new people productive in weeks, not months.", "1600880292203-757bb62b4baf", "First-week buddy program · Orbit"],
+      ["Grow", "Career ladders, fair reviews and manager coaching that give people a reason to level up here.", "1552664730-d307ca884978", "Career framework session · Lumen"],
+      ["Keep", "Engagement surveys, stay interviews and policies that make your best people want to stay.", "1531545514256-b1400bc00f31", "Team retreat · Fieldnote"],
+    ];
+    $("stPics").insertAdjacentHTML("afterbegin", VERBS.map(([, , img, cap], i) => `<img src="${U(img, 900)}" alt="${cap}" class="${i ? "" : "on"}" />`).join(""));
+    const verbSpans = [...$("verb").children], stImgs = [...$("stPics").querySelectorAll("img")], stDots = [...$("stDots").querySelectorAll("i")];
+    let stIdx = -1;
+    function setVerb(i) {
+      if (i === stIdx) return;
+      verbSpans.forEach((s, j) => { s.className = j === i ? "on" : j < i ? "up" : ""; });
+      stImgs.forEach((im, j) => im.classList.toggle("on", j === i));
+      $("stCopy").textContent = VERBS[i][1];
+      $("stCap").textContent = VERBS[i][3];
+      stIdx = i;
+    }
+    setVerb(0);
+
+    /* ---------- Lanyard badge: pendulum physics ---------- */
+    const rig = $("rig"), badge = $("badge");
+    let ang = 0.35, vel = 0, dragging = false, moved = 0;
+    const pivot = () => { const r = rig.getBoundingClientRect(); return [r.left, r.top]; };
+    badge.addEventListener("pointerdown", (e) => { dragging = true; moved = 0; badge.setPointerCapture(e.pointerId); });
+    badge.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const [px, py] = pivot();
+      const target = clamp(Math.atan2(-(e.clientX - px), e.clientY - py), -1.4, 1.4);
+      moved += Math.abs(target - ang);
+      vel = target - ang; ang = target;
+    });
+    badge.addEventListener("pointerup", () => { dragging = false; if (moved < 0.03) badge.classList.toggle("flip"); });
+    (function swing() {
+      if (!dragging) { vel += -Math.sin(ang) * 0.0065; vel *= 0.985; ang += vel; }
+      rig.style.transform = `rotate(${ang}rad)`;
+      badge.querySelector(".badge-card__in").style.rotate = `y ${clamp(vel * 260, -35, 35)}deg`;
+      requestAnimationFrame(swing);
+    })();
+    // A QR-looking pattern (decorative) with the three finder squares.
+    (function qr() {
+      const n = 21; let s = "";
+      const inF = (x, y) => [[0, 0], [14, 0], [0, 14]].some(([fx, fy]) => x >= fx && x < fx + 7 && y >= fy && y < fy + 7);
+      for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+        let on;
+        if (inF(x, y)) { const fx = x < 7 ? 0 : 14, fy = y < 7 ? 0 : 14, dx = x - fx, dy = y - fy; on = dx === 0 || dy === 0 || dx === 6 || dy === 6 || (dx >= 2 && dx <= 4 && dy >= 2 && dy <= 4); }
+        else on = ((x * 7 + y * 13 + x * y) % 5) < 2;
+        if (on) s += `<rect x="${x}" y="${y}" width="1" height="1" />`;
+      }
+      $("qr").innerHTML = `<svg viewBox="0 0 ${n} ${n}" fill="#141118" shape-rendering="crispEdges">${s}</svg>`;
+    })();
+
+    /* ---------- Services tabs ---------- */
+    const SVC = [
+      ["ri-user-search-line", "Talent acquisition", "Hire faster, hire better", "1542744173-8e7e53415bb0", "A repeatable hiring process: role scorecards, structured interviews, sourcing and a candidate experience people talk about.", ["Role scorecards & job ads", "Structured interview kits", "Sourcing for hard-to-fill roles", "Offer & closing playbook"], ["−55%", "average time-to-hire"]],
+      ["ri-door-open-line", "Onboarding", "Day one to day ninety", "1556761175-b413da4baf72", "Onboarding that starts before day one: welcome packs, buddy programs and 30-60-90 plans for every role.", ["Pre-boarding emails & checklists", "Buddy & mentor program", "30-60-90 day plans", "Onboarding survey"], ["2×", "faster to full productivity"]],
+      ["ri-emotion-happy-line", "Culture & engagement", "Make it a place to stay", "1543269865-cbf427effbad", "Engagement surveys that lead to action, values people can actually describe, and rituals that bring remote teams together.", ["Engagement & eNPS surveys", "Values & behaviours workshop", "Recognition program", "Remote team rituals"], ["+37", "eNPS points on average"]],
+      ["ri-seedling-line", "Performance & growth", "Fair reviews, clear ladders", "1517245386807-bb43f82c33c4", "Career frameworks and review cycles that feel fair — with managers trained to give feedback that helps.", ["Career ladders & levels", "Review & calibration cycle", "Salary bands", "Manager feedback training"], ["35%", "roles filled internally"]],
+      ["ri-file-shield-2-line", "HR audits & policies", "Compliant and calm", "1551836022-d5d88e9218df", "A full health check of your HR — contracts, handbook, policies and tools — with a prioritised fix list.", ["HR health check report", "Employee handbook", "Leave, remote & hybrid policies", "HRIS selection & setup"], ["2 wks", "from audit to action plan"]],
+      ["ri-compass-3-line", "Leadership coaching", "Better managers, happier teams", "1573164713988-8665fc963095", "1:1 and group coaching for new managers and founders — delegation, hard conversations and building trust.", ["1:1 coaching (ICF)", "New-manager bootcamp", "Founder coaching", "360° feedback"], ["92%", "of coachees promoted or retained"]],
+    ];
+    function showSvc(i) {
+      $("svcTabs").querySelectorAll(".svc-tab").forEach((t, j) => { t.classList.toggle("on", j === i); t.setAttribute("aria-selected", j === i); });
+      const [, name, sub, img, d, list, [m, ml]] = SVC[i];
+      $("svcPanel").innerHTML = `<div class="svc-panel__img"><img src="${U(img, 900)}" alt="${name}" /></div>
+        <div class="svc-panel__body"><small>0${i + 1} · ${sub}</small><h3>${name}</h3><p>${d}</p>
+        <ul>${list.map((l) => `<li><i class="ri-check-line"></i>${l}</li>`).join("")}</ul>
+        <div class="svc-panel__metric"><b class="grad-text">${m}</b><span>${ml}</span></div></div>`;
+    }
+    $("svcTabs").innerHTML = SVC.map(([ic, n], i) => `<button class="svc-tab" role="tab" data-i="${i}"><i class="${ic}"></i>${n}</button>`).join("");
+    $("svcTabs").addEventListener("click", (e) => { const t = e.target.closest(".svc-tab"); if (t) showSvc(+t.dataset.i); });
+    showSvc(0);
+
+    /* ---------- Turnover calculator ---------- */
+    const ins = ["cEmp", "cSal", "cRate", "cRep"].map($);
+    const shownVals = { cost: 0, save: 0, per: 0, leavers: 0 };
+    let tween;
+    function calc() {
+      const [emp, sal, rate, rep] = ins.map((g) => +g.querySelector(".on").dataset.v);
+      $("oEmp").textContent = emp.toLocaleString("en-US");
+      $("oSal").textContent = eur(sal);
+      $("oRate").textContent = rate + "%";
+      $("oRep").textContent = rep + "%";
+      const leavers = Math.round(emp * rate / 100), per = sal * rep / 100, cost = leavers * per;
+      const target = { cost, save: cost * 0.3, per, leavers };
+      const from = { ...shownVals }, t0 = performance.now();
+      cancelAnimationFrame(tween);
+      const step = (t) => {
+        const k = Math.min((t - t0) / 600, 1), e = 1 - Math.pow(1 - k, 3);
+        for (const key in target) shownVals[key] = from[key] + (target[key] - from[key]) * e;
+        $("rCost").textContent = eur(shownVals.cost);
+        $("rSave").textContent = eur(shownVals.save);
+        $("rPer").textContent = eur(shownVals.per);
+        $("rLeavers").textContent = Math.round(shownVals.leavers);
+        if (k < 1) tween = requestAnimationFrame(step);
+      };
+      tween = requestAnimationFrame(step);
+    }
+    ins.forEach((g) => g.addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      g.querySelectorAll("button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
+      calc();
+    }));
+    calc();
+
+    /* ---------- Results ---------- */
+    const RESULTS = [
+      ["Northwind Logistics", "420 employees · 6 countries", "1515187029135-18ee286d815b", "Fractional HR lead for 14 months: rebuilt hiring, launched a career framework and fixed a 31% turnover problem.", [["Time to hire", 62, 28, " days", true], ["Yearly turnover", 31, 14, "%", true], ["eNPS", 4, 41, "", false]]],
+      ["Lumen Health", "180 employees · clinics", "1541746972996-4e0b0f43e02a", "Hiring sprint plus onboarding redesign for a fast-growing clinic group hiring 60 nurses a year.", [["Offer acceptance", 58, 89, "%", false], ["Sick days / person", 9.1, 5.4, "", true], ["Engagement score", 61, 84, "%", false]]],
+      ["Orbit Fintech", "95 employees · remote-first", "1559136555-9303baea8ebd", "Performance and growth system for a remote team losing its best engineers to bigger companies.", [["Days to productivity", 90, 45, "", true], ["Regretted attrition", 18, 6, "%", true], ["Internal promotions", 12, 35, "%", false]]],
+    ];
+    $("rTabs").innerHTML = RESULTS.map(([n], i) => `<button class="rtab${i ? "" : " on"}" data-i="${i}">${n}</button>`).join("");
+    function showResult(i) {
+      $("rTabs").querySelectorAll(".rtab").forEach((t, j) => t.classList.toggle("on", j === i));
+      const [n, meta, img, d, bars] = RESULTS[i];
+      $("rCard").innerHTML = `<div class="results__who"><img src="${U(img, 800)}" alt="${n}" /><h3>${n}</h3><p><b>${meta}</b><br />${d}</p></div>
+        <div class="bars">${bars.map(([label, b, a, unit, lower]) => {
+          const max = Math.max(a, b), change = lower ? Math.round((1 - a / b) * 100) + "% lower" : "+" + Math.round((a / b - 1) * 100) + "%";
+          return `<div><div class="bar__head">${label}<em>${change}</em></div><div class="bar__track">
+            <div class="bar__line"><span>Before</span><div class="bar__fill before" data-w="${(b / max) * 82}"></div><b>${b}${unit}</b></div>
+            <div class="bar__line"><span>After</span><div class="bar__fill after" data-w="${(a / max) * 82}"></div><b>${a}${unit}</b></div></div></div>`;
+        }).join("")}</div>`;
+      requestAnimationFrame(() => requestAnimationFrame(() => $("rCard").querySelectorAll(".bar__fill").forEach((f) => (f.style.width = f.dataset.w + "%"))));
+    }
+    $("rTabs").addEventListener("click", (e) => { const t = e.target.closest(".rtab"); if (t) showResult(+t.dataset.i); });
+
+    /* ---------- Journey ---------- */
+    const JOURNEY = [["ri-megaphone-line", "Attract", "Employer brand and job ads that speak to the right people."], ["ri-user-search-line", "Hire", "Structured interviews and fast, fair decisions."], ["ri-door-open-line", "Onboard", "A first 90 days that builds confidence and belonging."], ["ri-seedling-line", "Grow", "Clear ladders, real feedback, coached managers."], ["ri-heart-3-line", "Retain", "Listening, recognition and reasons to stay."]];
+    $("jWrap").insertAdjacentHTML("beforeend", JOURNEY.map(([ic, t, d]) => `<div class="jstep"><div class="jstep__dot"><i class="${ic}"></i></div><h3>${t}</h3><p>${d}</p></div>`).join(""));
+    const jSteps = [...document.querySelectorAll(".jstep")];
+
+    /* ---------- Testimonial deck ---------- */
+    const QUOTES = [
+      ["Layla rebuilt our hiring from scratch. We went from losing candidates to competitors to closing nine out of ten offers.", "Marcus Hale", "CEO", "Northwind", "1507003211169-0a1dd7228f2d"],
+      ["Our onboarding used to be a laptop and a Slack invite. Now new hires tell us it's the best first week they've ever had.", "Sofia Almeida", "COO", "Orbit", "1494790108377-be9c29b29330"],
+      ["She made performance reviews something people actually look forward to. I didn't think that was possible.", "Daniel Brooks", "Founder", "Fieldnote", "1500648767791-00dcc994a43e"],
+      ["Six months of coaching with Layla made me a better manager than five years of figuring it out alone.", "Amara Okafor", "Head of Engineering", "Lumen", "1531123897727-8f129e1688ce"],
+      ["Turnover dropped by half in a year. The calculator on her site was the wake-up call — the work was the fix.", "Theo Grant", "Managing Director", "Voltra", "1506794778202-cad84cf45f1d"],
+    ];
+    const deck = $("deck");
+    let order = QUOTES.map((_, i) => i);
+    function renderDeck() {
+      deck.innerHTML = order.slice(0, 3).reverse().map((qi, k, arr) => {
+        const depth = arr.length - 1 - k;
+        const [q, n, r, co, img] = QUOTES[qi];
+        return `<article class="qcard" data-q="${qi}" style="transform: translateY(${depth * 20}px) scale(${1 - depth * 0.06}) rotate(${depth ? (depth % 2 ? 3 : -3) : 0}deg); z-index:${10 - depth}; opacity:${depth > 1 ? 0.55 : 1}">
+          <span class="qcard__q">“</span><p>${q}</p><footer><img src="${U(img, 120)}" alt="${n}" /><div><b>${n}</b><small>${r}</small></div><span class="qcard__co">${co}</span></footer></article>`;
+      }).join("");
+      $("dCount").textContent = `${String(order[0] + 1).padStart(2, "0")} / ${String(QUOTES.length).padStart(2, "0")}`;
+      bindTop();
+    }
+    function throwCard(dir) {
+      const top = deck.lastElementChild;
+      top.style.transform = `translate(${dir * 140}%, -20px) rotate(${dir * 18}deg)`;
+      top.style.opacity = 0;
+      setTimeout(() => { order = [...order.slice(1), order[0]]; renderDeck(); }, 380);
+    }
+    function back() { order = [order[order.length - 1], ...order.slice(0, -1)]; renderDeck(); }
+    function bindTop() {
+      const top = deck.lastElementChild; let sx = 0, dx = 0, down = false;
+      top.addEventListener("pointerdown", (e) => { down = true; sx = e.clientX; top.classList.add("drag"); top.setPointerCapture(e.pointerId); });
+      top.addEventListener("pointermove", (e) => { if (!down) return; dx = e.clientX - sx; top.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`; });
+      const up = () => { if (!down) return; down = false; top.classList.remove("drag"); if (Math.abs(dx) > 110) throwCard(Math.sign(dx)); else top.style.transform = ""; dx = 0; };
+      top.addEventListener("pointerup", up); top.addEventListener("pointercancel", up);
+    }
+    $("dNext").onclick = () => throwCard(1);
+    $("dPrev").onclick = back;
+    renderDeck();
+
+    /* ---------- Workshops ---------- */
+    const EVENTS = [
+      ["18", "Nov", "Hiring without the guesswork", "Live workshop · Dubai Design District", "3 hours", 6],
+      ["02", "Dec", "Onboarding that sticks", "Online masterclass", "90 min", 24],
+      ["14", "Jan", "From peer to manager", "Leadership bootcamp · Hybrid", "2 days", 3],
+      ["05", "Feb", "People ops for founders", "Talk · Scale-Up Summit, Abu Dhabi", "45 min", 40],
+    ];
+    $("events").innerHTML = EVENTS.map(([d, m, t, w, len, seats], i) => `
+      <div class="event reveal" style="--d:${i * 0.06}s"><div class="event__date"><b>${d}</b><span>${m}</span></div>
+      <div><h3>${t}</h3><p><span><i class="ri-map-pin-line"></i>${w}</span><span><i class="ri-time-line"></i>${len}</span></p></div>
+      <span class="event__seats"><b data-seats>${seats}</b> seats left</span>
+      <button class="reserve" type="button">Reserve seat</button></div>`).join("");
+    $("events").addEventListener("click", (e) => {
+      const b = e.target.closest(".reserve"); if (!b) return;
+      const on = b.classList.toggle("on"), s = b.parentElement.querySelector("[data-seats]");
+      s.textContent = +s.textContent + (on ? -1 : 1);
+      b.textContent = on ? "Reserved ✓" : "Reserve seat";
+      if (on) toast(`Seat reserved for "${b.parentElement.querySelector("h3").textContent}"`);
+    });
+
+    /* ---------- Packages with spotlight border ---------- */
+    const PACKS = [
+      ["HR health check", "A full audit with a clear fix list", "€2,400", "one-off", "Book the audit", ["Contracts, policies & handbook review", "Hiring & onboarding review", "Prioritised 90-day action plan", "2 weeks"]],
+      ["Fractional HR lead", "Your part-time Head of People", "€4,800", "/ month", "Start fractional HR", ["2 days a week, embedded in your team", "Hiring, onboarding & reviews", "Manager coaching included", "Monthly people dashboard"]],
+      ["Hiring sprint", "Up to 5 roles, fully run", "€6,900", "/ sprint", "Plan a sprint", ["Scorecards & job ads", "Sourcing & screening", "Interview kits & training", "Offers closed in ~30 days"]],
+    ];
+    $("packs").innerHTML = PACKS.map(([n, s, p, per, cta, list], i) => `
+      <div class="pack${i === 1 ? " pack--pop" : ""} reveal" style="--d:${i * 0.08}s"><div class="pack__in">
+        ${i === 1 ? '<span class="pack__flag">Most booked</span>' : ""}<h3>${n}</h3><p>${s}</p>
+        <div class="pack__price">${p} <small>${per}</small></div>
+        <ul>${list.map((l) => `<li><i class="ri-check-line"></i>${l}</li>`).join("")}</ul>
+        <a href="#contact" class="btn${i === 1 ? "" : " btn--ghost"}">${cta} <i class="ri-arrow-right-line"></i></a>
+      </div></div>`).join("");
+    document.querySelectorAll(".pack").forEach((p) => p.addEventListener("mousemove", (e) => { const r = p.getBoundingClientRect(); p.style.setProperty("--x", e.clientX - r.left + "px"); p.style.setProperty("--y", e.clientY - r.top + "px"); }));
+
+    /* ---------- Contact ---------- */
+    $("needs").addEventListener("click", (e) => { const b = e.target.closest(".need"); if (b) b.classList.toggle("on"); });
+    $("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const picked = [...document.querySelectorAll(".need.on")].map((b) => b.textContent.trim().toLowerCase());
+      toast(`Thanks ${$("fName").value.trim().split(" ")[0]}! I'll reply about ${picked.join(" & ") || "your project"} within one working day.`);
+      e.target.reset(); document.querySelectorAll(".need").forEach((b, i) => b.classList.toggle("on", !i));
+    });
+    $("news").addEventListener("submit", (e) => { e.preventDefault(); toast("Subscribed — first tips arrive next Monday"); e.target.reset(); });
+
+    /* ---------- Scroll-driven motion ---------- */
+    const st = $("statement");
+    let ticking = false;
+    function onScroll() {
+      ticking = false;
+      const vh = innerHeight;
+      // Statement: four verbs across the pinned section.
+      const r = st.getBoundingClientRect();
+      const p = clamp(-r.top / (st.offsetHeight - vh), 0, 0.9999);
+      setVerb(Math.floor(p * 4));
+      stDots.forEach((d, i) => d.style.setProperty("--w", clamp((p * 4 - i) * 100, 0, 100) + "%"));
+      // Journey line fills as the row crosses the screen.
+      const j = $("jWrap").getBoundingClientRect();
+      const jp = clamp((vh * 0.8 - j.top) / (vh * 0.6), 0, 1);
+      $("jLine").style.setProperty("--w", jp * 100 + "%");
+      jSteps.forEach((s, i) => s.classList.toggle("on", jp >= i / (jSteps.length - 1) - 0.02));
+      // Header, back-to-top, active link.
+      $("header").classList.toggle("sticky", scrollY > 40);
+      $("toTop").classList.toggle("show", scrollY > vh);
+      let cur = "";
+      document.querySelectorAll("main section[id]").forEach((s) => { if (s.getBoundingClientRect().top < vh * 0.4) cur = s.id; });
+      document.querySelectorAll(".nav a").forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
+    }
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener("resize", onScroll);
+
+    /* ---------- Reveal + count-up ---------- */
+    let resultsShown = false;
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("in");
+      en.target.querySelectorAll("[data-count]").forEach(countUp);
+      if (en.target.id === "rCard" && !resultsShown) { resultsShown = true; showResult(0); }
+      io.unobserve(en.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    function countUp(el) {
+      const end = +el.dataset.count, pre = el.dataset.prefix || "", suf = el.dataset.suffix || "", t0 = performance.now();
+      const step = (t) => { const k = Math.min((t - t0) / 1800, 1); el.textContent = pre + Math.round(end * (1 - Math.pow(1 - k, 3))).toLocaleString("en-US") + suf; if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }
+
+    /* ---------- Menu ---------- */
+    const setMenu = (o) => { $("nav").classList.toggle("open", o); $("burger").innerHTML = o ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-4-line"></i>'; };
+    $("burger").onclick = () => setMenu(!$("nav").classList.contains("open"));
+    $("nav").addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+
+    onScroll();
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/portfolio-layla/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>

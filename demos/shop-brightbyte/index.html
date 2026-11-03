@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brightbyte — Phones, Laptops, Gaming &amp; Tech at the Best Prices</title>
+  <meta name="description" content="Shop the latest Apple, Samsung, Sony, PlayStation, Xbox, Nintendo, Canon and DJI tech at Brightbyte. Free next-day delivery, 0% finance, trade-in and price match." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <span><i class="ri-flashlight-fill"></i> Free next-day delivery on orders over £50 · Order by 10pm</span>
+      <div class="topbar__links"><a href="#">Track order</a><a href="#trade">Trade-in</a><a href="#">Stores</a><a href="#">Help</a></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__main">
+      <a href="#home" class="logo"><i class="ri-flashlight-fill"></i>bright<span>byte</span></a>
+      <div class="search">
+        <div class="search__box">
+          <select id="search-cat" aria-label="Search category"><option value="all">All</option><option value="phones">Phones</option><option value="laptops">Laptops</option><option value="audio">Audio</option><option value="gaming">Gaming</option><option value="cameras">Cameras</option></select>
+          <input id="search" placeholder="Search for iPhone, PS5, AirPods…" autocomplete="off" aria-label="Search products" />
+          <button id="search-go" aria-label="Search"><i class="ri-search-line"></i></button>
+        </div>
+        <div class="suggest" id="suggest"></div>
+      </div>
+      <div class="header__icons">
+        <button class="hicon" aria-label="Account"><i class="ri-user-3-line"></i><span><small>Hello, sign in</small>Account</span></button>
+        <button class="hicon" id="cmp-open" aria-label="Compare"><i class="ri-scales-3-line"></i><b id="cmp-count">0</b><span><small>Up to 3</small>Compare</span></button>
+        <button class="hicon" id="cart-open" aria-label="Basket"><i class="ri-shopping-cart-2-line"></i><b id="cart-count">0</b><span><small id="cart-sub-top">£0.00</small>Basket</span></button>
+        <button class="hicon burger" id="burger" aria-label="Categories"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+    <nav class="catnav" id="catnav">
+      <div class="container">
+        <button data-cat="phones"><i class="ri-smartphone-line"></i>Phones</button>
+        <button data-cat="laptops"><i class="ri-macbook-line"></i>Laptops</button>
+        <button data-cat="tablets"><i class="ri-tablet-line"></i>Tablets</button>
+        <button data-cat="audio"><i class="ri-headphone-line"></i>Audio</button>
+        <button data-cat="gaming"><i class="ri-gamepad-line"></i>Gaming</button>
+        <button data-cat="cameras"><i class="ri-camera-3-line"></i>Cameras &amp; Drones</button>
+        <button data-cat="wearables"><i class="ri-heart-pulse-line"></i>Wearables</button>
+        <button data-cat="deals" class="deal"><i class="ri-price-tag-3-line"></i>Deals</button>
+        <button data-goto="trade"><i class="ri-exchange-line"></i>Trade-in</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Landing hero -->
+  <section class="lead" id="home">
+    <div class="container lead__grid">
+      <div class="lead__text">
+        <span class="lead__pill"><i class="ri-star-fill"></i> Excellent · 4.8 out of 5 from 48,210 reviews</span>
+        <h1>The Latest Tech. <span>Lowest Prices.</span></h1>
+        <p>Phones, laptops, gaming and audio from Apple, Samsung, Sony, PlayStation and more — with free next-day delivery, 0% finance and a price match promise.</p>
+        <div class="lead__btns">
+          <a href="#shop" class="btn">Shop Best Sellers <i class="ri-arrow-right-line"></i></a>
+          <a href="#trade" class="btn btn--ghost"><i class="ri-exchange-line"></i> Get a Trade-in Quote</a>
+        </div>
+        <div class="lead__trending"><span>Trending:</span><button data-open="iph15">iPhone 15 Pro</button><button data-open="ps5">PS5 Slim</button><button data-open="airpods">AirPods Pro</button><button data-open="mba">MacBook Air</button></div>
+        <div class="lead__perks">
+          <div><i class="ri-truck-line"></i><span><b>Next-day</b>Order by 10pm</span></div>
+          <div><i class="ri-scales-line"></i><span><b>Price match</b>We'll beat it</span></div>
+          <div><i class="ri-bank-card-line"></i><span><b>0% finance</b>Up to 24 months</span></div>
+        </div>
+      </div>
+      <div class="lead__bento">
+        <button class="tile tile--big" data-open="iph15"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=900&q=80" alt="iPhone 15 Pro" /><span class="tile__tag">New</span><span class="tile__label"><small>Apple</small><b>iPhone 15 Pro</b><em>From £999 or £41.63/mo</em></span></button>
+        <button class="tile" data-open="ps5"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=600&q=80" alt="PlayStation 5" /><span class="tile__tag tile__tag--sale">-£50</span><span class="tile__label"><small>PlayStation</small><b>PS5 Slim</b><em>£429</em></span></button>
+        <button class="tile" data-open="airpods"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=600&q=80" alt="AirPods Pro" /><span class="tile__tag tile__tag--sale">-£40</span><span class="tile__label"><small>Apple</small><b>AirPods Pro 2</b><em>£189</em></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured slider + promos -->
+  <section class="hero" id="featured">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="slider" id="slider">
+          <div class="slide active"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1400&q=80" alt="iPhone 15 Pro in graphite" />
+            <div class="slide__text"><small><i class="ri-apple-fill"></i>Apple</small><h1>iPhone 15 Pro. <span>Titanium. Tough.</span></h1><p>A17 Pro chip, 48MP camera system and USB-C. Trade in your old phone and save up to £640.</p><div class="slide__price"><b>£999</b><span>or £41.63/mo for 24 months at 0% APR</span></div><button class="btn" data-open="iph15">Buy Now <i class="ri-arrow-right-line"></i></button></div></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=1400&q=80" alt="PlayStation 5 console" loading="lazy" />
+            <div class="slide__text"><small><i class="ri-gamepad-fill"></i>PlayStation</small><h1>PS5 Slim. <span>Play Has No Limits.</span></h1><p>Ultra-fast SSD, haptic feedback and 1TB of storage — now £50 off for a limited time.</p><div class="slide__price"><b>£429</b><span><s>£479</s> · save £50</span></div><button class="btn" data-open="ps5">Shop PS5 <i class="ri-arrow-right-line"></i></button></div></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1400&q=80" alt="MacBook Pro keyboard" loading="lazy" />
+            <div class="slide__text"><small><i class="ri-apple-fill"></i>Mac</small><h1>MacBook Pro M4. <span>Pro Anywhere.</span></h1><p>Up to 24 hours battery, Liquid Retina XDR display and the most powerful Mac chips yet.</p><div class="slide__price"><b>£1,599</b><span>or £66.63/mo · free AppleCare+ for 1 year</span></div><button class="btn" data-open="mbp">Configure <i class="ri-arrow-right-line"></i></button></div></div>
+          <div class="slider__dots" id="dots"><button class="active" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button></div>
+          <div class="slider__nav"><button id="s-prev" aria-label="Previous slide"><i class="ri-arrow-left-s-line"></i></button><button id="s-next" aria-label="Next slide"><i class="ri-arrow-right-s-line"></i></button></div>
+        </div>
+        <div class="hero__side">
+          <a href="#shop" class="mini" data-open="airpods"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80" alt="AirPods Pro" /><small>Save £40</small><h3>AirPods Pro 2</h3><span>From £189 <i class="ri-arrow-right-line"></i></span></a>
+          <a href="#shop" class="mini" data-open="watch"><img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80" alt="Apple Watch on a wrist" /><small>New</small><h3>Apple Watch Series 10</h3><span>From £399 <i class="ri-arrow-right-line"></i></span></a>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service"><i class="ri-truck-line"></i><div><b>Free next-day delivery</b><small>On orders over £50</small></div></div>
+        <div class="service"><i class="ri-shield-check-line"></i><div><b>2-year warranty</b><small>On every product, as standard</small></div></div>
+        <div class="service"><i class="ri-scales-line"></i><div><b>Price match promise</b><small>Found it cheaper? We'll match it</small></div></div>
+        <div class="service"><i class="ri-bank-card-line"></i><div><b>0% finance</b><small>Spread the cost over 24 months</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" style="padding-bottom:20px">
+    <div class="container">
+      <div class="head"><h2>Shop by Category</h2></div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <!-- Deal of the day -->
+  <section class="section">
+    <div class="container">
+      <div class="head"><h2><i class="ri-fire-fill"></i>Deal of the Day</h2><a href="#shop" data-cat="deals">All deals <i class="ri-arrow-right-s-line"></i></a></div>
+      <div class="deal reveal">
+        <div class="deal__img"><img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=900&q=80" alt="Sony WH-1000XM4 headphones" loading="lazy" /><span>-28%</span></div>
+        <div class="deal__body">
+          <small class="lbl"><i class="ri-timer-flash-line"></i>Today only</small>
+          <h3>Sony WH-1000XM4 Wireless Noise Cancelling Headphones</h3>
+          <span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i><em>4.8 (6,214 reviews)</em></span>
+          <div class="deal__price"><b>£179</b><s>£249</s><em>Save £70</em></div>
+          <p>Industry-leading noise cancelling, 30-hour battery and speak-to-chat. Black or Silver.</p>
+          <div class="timer"><div><b id="t-h">00</b>Hours</div><div><b id="t-m">00</b>Mins</div><div><b id="t-s">00</b>Secs</div></div>
+          <div class="stock"><div class="stock__top"><span>Claimed: <b id="claimed">62%</b></span><span id="left">Only 38 left</span></div><div class="stock__bar"><span id="stock-bar" style="width:62%"></span></div></div>
+          <button class="btn" id="deal-add">Add to Basket <i class="ri-shopping-cart-2-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="head"><h2>Best Sellers</h2><span id="result-count" style="font-weight:600"></span></div>
+      <div class="shopbar">
+        <div class="tabs" id="tabs"></div>
+        <div class="shopbar__right">
+          <select id="sort" aria-label="Sort"><option value="pop">Most popular</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rate">Customer rating</option><option value="save">Biggest saving</option></select>
+        </div>
+      </div>
+      <div class="brands" id="brands"></div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Banners -->
+  <section class="section" style="padding-top:20px">
+    <div class="container duo">
+      <div class="banner reveal"><img src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=1000&q=80" alt="Gaming setup" loading="lazy" /><small>Gaming week</small><h3>Level up your setup</h3><p>Consoles, controllers and monitors — up to 25% off.</p><button class="btn btn--white" data-cat="gaming">Shop Gaming</button></div>
+      <div class="banner reveal"><img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=80" alt="DJI drone flying" loading="lazy" /><small>Creator kit</small><h3>Capture it all</h3><p>Cameras and drones from Canon, DJI and Polaroid.</p><button class="btn btn--white" data-cat="cameras">Shop Cameras</button></div>
+    </div>
+  </section>
+
+  <!-- Trade-in -->
+  <section class="section" id="trade">
+    <div class="container">
+      <div class="trade reveal">
+        <div class="trade__in">
+          <h2>Trade In &amp; Save</h2>
+          <p>Get an instant quote for your old device. We'll send a free prepaid box and pay within 48 hours — or take it as basket credit today.</p>
+          <label for="t-type">Device type</label>
+          <select id="t-type"></select>
+          <label for="t-model">Model</label>
+          <select id="t-model"></select>
+          <label>Condition</label>
+          <div class="conds" id="t-cond"></div>
+        </div>
+        <div class="trade__out">
+          <small>Your instant estimate</small>
+          <b class="val" id="t-val">£0</b>
+          <span id="t-note"></span>
+          <ul><li><i class="ri-checkbox-circle-fill"></i>Free tracked postage box</li><li><i class="ri-checkbox-circle-fill"></i>Data wiped to certified standard</li><li><i class="ri-checkbox-circle-fill"></i>Price locked for 14 days</li></ul>
+          <button class="btn" id="t-apply">Use as Basket Credit <i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="head"><h2>Top Brands</h2></div>
+      <div class="brandstrip" id="brandstrip"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="head"><h2><i class="ri-star-fill" style="color:var(--amber)"></i>Excellent · 4.8 out of 5</h2><a href="#">Based on 48,210 reviews <i class="ri-arrow-right-s-line"></i></a></div>
+      <div class="reviews">
+        <div class="review reveal"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><p>"Ordered my PS5 at 9pm, it was on my doorstep before lunch the next day. Price matched another retailer without any hassle."</p><div class="review__who"><div><b>James T.</b>Verified purchase</div><span>PlayStation 5 Slim</span></div></div>
+        <div class="review reveal"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span><p>"Traded in my old iPhone 12 and got £170 off the new one. The compare tool made choosing between the Pro and the Galaxy really easy."</p><div class="review__who"><div><b>Aisha K.</b>Verified purchase</div><span>iPhone 15 Pro</span></div></div>
+        <div class="review reveal"><span class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></span><p>"Spread the MacBook over 24 months at 0% — approval took about a minute. Great packaging and the setup service was worth it."</p><div class="review__who"><div><b>Daniel R.</b>Verified purchase</div><span>MacBook Air M3</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="container">
+    <div class="news reveal">
+      <div><h2>Get £20 off your first order</h2><p>Plus flash deals and early access to Black Friday. Unsubscribe anytime.</p></div>
+      <form id="news-form"><input type="email" required placeholder="Your email address" aria-label="Email" /><button class="btn btn--dark" type="submit">Get My Code</button></form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><a href="#home" class="logo"><i class="ri-flashlight-fill"></i>bright<span>byte</span></a><p>Independent UK tech retailer since 2012. 40 stores, 2,000+ products and real experts on the phone.</p><div class="socials"><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a><a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a><a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a></div></div>
+        <div><h4>Shop</h4><ul><li><a href="#shop">Phones</a></li><li><a href="#shop">Laptops</a></li><li><a href="#shop">Gaming</a></li><li><a href="#shop">Deals</a></li></ul></div>
+        <div><h4>Services</h4><ul><li><a href="#trade">Trade-in</a></li><li><a href="#">Repairs</a></li><li><a href="#">Setup &amp; install</a></li><li><a href="#">Finance</a></li></ul></div>
+        <div><h4>Help</h4><ul><li><a href="#">Track order</a></li><li><a href="#">Returns</a></li><li><a href="#">Warranty</a></li><li><a href="#">Contact us</a></li></ul></div>
+        <div><h4>Get the app</h4><div class="apps"><a href="#"><i class="ri-apple-fill"></i><span><small>Download on the</small>App Store</span></a><a href="#"><i class="ri-google-play-fill"></i><span><small>Get it on</small>Google Play</span></a></div></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Brightbyte Retail Ltd. Demo template — product names and trademarks belong to their owners.</span><span class="pay"><i class="ri-visa-line"></i><i class="ri-mastercard-line"></i><i class="ri-paypal-line"></i><i class="ri-apple-line"></i><i class="ri-google-line"></i></span></div>
+    </div>
+  </footer>
+
+  <!-- Compare bar -->
+  <div class="cbar" id="cbar"><b>Compare</b><div class="cbar__items" id="cbar-items"></div><button class="btn btn--ghost" id="cbar-clear" style="padding:10px 14px">Clear</button><button class="btn" id="cbar-go">Compare <span id="cbar-n"></span></button></div>
+
+  <!-- Compare modal -->
+  <div class="modal" id="cmp-modal" role="dialog" aria-modal="true" aria-label="Compare products">
+    <div class="modal__box"><button class="modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button><div class="cmp-head"><h3>Compare Products</h3><p>Green ticks show the best value in each row.</p></div><div class="cmp-wrap"><table class="ctable" id="ctable"></table></div></div>
+  </div>
+
+  <!-- Product modal -->
+  <div class="modal" id="p-modal" role="dialog" aria-modal="true" aria-labelledby="pm-name">
+    <div class="modal__box"><button class="modal__close" data-close aria-label="Close"><i class="ri-close-line"></i></button>
+      <div class="pm">
+        <div class="pm__img"><img id="pm-img" alt="" /></div>
+        <div class="pm__body">
+          <span class="product__brand" id="pm-brand"></span>
+          <h3 id="pm-name"></h3>
+          <span class="stars" id="pm-stars"></span>
+          <p id="pm-desc" style="margin-top:10px"></p>
+          <div id="pm-variants"></div>
+          <label class="protect"><input type="checkbox" id="pm-protect" /><span><b>Brightbyte Care+ · <span id="pm-care"></span></b><small>Accidental damage &amp; theft cover for 2 years</small></span></label>
+          <div class="opt-label">Payment</div>
+          <div class="vopts" id="pm-fin"><button data-m="0" class="active">Pay in full</button><button data-m="12">12 months 0%</button><button data-m="24">24 months 0%</button></div>
+          <div class="pm__total"><div><b id="pm-total"></b><small id="pm-monthly"></small></div><span class="product__stock" id="pm-stock"></span></div>
+          <div class="pm__btns"><button class="btn" id="pm-add">Add to Basket <i class="ri-shopping-cart-2-line"></i></button><button class="btn btn--ghost" id="pm-cmp"><i class="ri-scales-3-line"></i></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basket drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Basket">
+    <div class="drawer__head"><h3>Your Basket</h3><button id="cart-close" aria-label="Close basket"><i class="ri-close-line"></i></button></div>
+    <div class="drawer__list" id="cart-list"></div>
+    <div class="drawer__foot" id="cart-foot">
+      <div class="row"><span>Subtotal</span><span id="c-sub"></span></div>
+      <div class="row"><span>Trade-in credit</span><span id="c-credit" style="color:var(--green)"></span></div>
+      <div class="row"><span>Delivery</span><span id="c-ship"></span></div>
+      <div class="row total"><span>Total</span><span id="c-total"></span></div>
+      <p class="fin-note" id="c-fin"></p>
+      <button class="btn" id="checkout">Checkout Securely <i class="ri-lock-line"></i></button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"><i class="ri-checkbox-circle-fill"></i><span id="toast-msg"></span></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+    const gbp = (n, d = 2) => "£" + n.toLocaleString("en-GB", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 });
+    const store = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+
+    /* Products */
+    const P = [
+      { id: "iph15", c: "phones", b: "Apple", n: "iPhone 15 Pro", p: 999, img: "1592750475338-74b7b21085ab", r: 4.8, rv: 3120, badge: "Bestseller", stock: 24, d: "Titanium design, A17 Pro chip, 48MP Main camera with 5x Telephoto and USB-C.",
+        v: { Storage: [["128GB", 0], ["256GB", 100], ["512GB", 300], ["1TB", 500]] }, col: [["Natural Titanium", "#bfb6a8"], ["Black Titanium", "#3b3b3d"], ["White Titanium", "#f1efe9"]],
+        s: { Display: '6.1" Super Retina XDR, 120Hz', Chip: "A17 Pro", Storage: "128GB–1TB", Battery: "Up to 23h video", Weight: "187 g", Camera: "48MP + 12MP + 12MP" } },
+      { id: "s24", c: "phones", b: "Samsung", n: "Samsung Galaxy S24 256GB", p: 799, was: 859, img: "1610945265064-0e34e5519bbf", r: 4.7, rv: 1840, stock: 31, d: "Galaxy AI, 50MP triple camera and a 6.2\" Dynamic AMOLED 2X display.",
+        v: { Storage: [["128GB", -60], ["256GB", 0], ["512GB", 120]] }, col: [["Cobalt Violet", "#8b86c9"], ["Onyx Black", "#222"], ["Marble Grey", "#c8c8c8"]],
+        s: { Display: '6.2" Dynamic AMOLED 2X, 120Hz', Chip: "Exynos 2400", Storage: "128GB–512GB", Battery: "4,000 mAh · up to 29h video", Weight: "167 g", Camera: "50MP + 12MP + 10MP" } },
+      { id: "mba", c: "laptops", b: "Apple", n: 'MacBook Air 13" M3', p: 1099, img: "1611186871348-b1ce696e52c9", r: 4.9, rv: 2210, badge: "Bestseller", stock: 18, d: "Strikingly thin, fanless and silent, with up to 18 hours of battery life.",
+        v: { Memory: [["8GB", 0], ["16GB", 200], ["24GB", 400]], Storage: [["256GB", 0], ["512GB", 200], ["1TB", 400]] }, col: [["Midnight", "#2c3443"], ["Starlight", "#ece3d3"], ["Silver", "#d9dadc"]],
+        s: { Display: '13.6" Liquid Retina', Chip: "Apple M3 (8-core CPU)", Storage: "256GB SSD", Battery: "Up to 18h", Weight: "1.24 kg", Camera: "1080p FaceTime HD" } },
+      { id: "mbp", c: "laptops", b: "Apple", n: 'MacBook Pro 14" M4', p: 1599, img: "1517336714731-489689fd1ca8", r: 4.9, rv: 980, badge: "New", stock: 9, d: "Liquid Retina XDR display, M4 chip and up to 24 hours of battery for pro workflows.",
+        v: { Chip: [["M4", 0], ["M4 Pro", 400], ["M4 Max", 1600]], Storage: [["512GB", 0], ["1TB", 200], ["2TB", 600]] }, col: [["Space Black", "#2b2b2d"], ["Silver", "#d9dadc"]],
+        s: { Display: '14.2" Liquid Retina XDR', Chip: "Apple M4 (10-core CPU)", Storage: "512GB SSD", Battery: "Up to 24h", Weight: "1.55 kg", Camera: "12MP Center Stage" } },
+      { id: "xps", c: "laptops", b: "Dell", n: "Dell XPS 13 (2024)", p: 1149, was: 999, img: "1588872657578-7efd1f1555ed", r: 4.5, rv: 412, stock: 6, d: "InfinityEdge display, Intel Core Ultra 7 and a machined aluminium chassis.",
+        v: { Memory: [["16GB", 0], ["32GB", 180]], Storage: [["512GB", 0], ["1TB", 120]] }, col: [["Platinum", "#cfd2d6"], ["Graphite", "#3c3f44"]],
+        s: { Display: '13.4" FHD+ InfinityEdge', Chip: "Intel Core Ultra 7 155H", Storage: "512GB SSD", Battery: "Up to 14h", Weight: "1.19 kg", Camera: "1080p IR webcam" } },
+      { id: "ipad", c: "tablets", b: "Apple", n: 'iPad Air 11" M2', p: 599, img: "1544244015-0df4b3ffc6b0", r: 4.8, rv: 1330, stock: 27, d: "Serious performance in a thin, light design, with Apple Pencil Pro support.",
+        v: { Storage: [["128GB", 0], ["256GB", 100], ["512GB", 300]], Connectivity: [["Wi-Fi", 0], ["Wi-Fi + Cellular", 150]] }, col: [["Space Grey", "#4a4a4c"], ["Blue", "#a9c1d9"], ["Purple", "#c9b8dc"]],
+        s: { Display: '11" Liquid Retina', Chip: "Apple M2", Storage: "128GB–1TB", Battery: "Up to 10h", Weight: "462 g", Camera: "12MP Wide" } },
+      { id: "watch", c: "wearables", b: "Apple", n: "Apple Watch Series 10 GPS 42mm", p: 399, img: "1546868871-7041f2a55e12", r: 4.7, rv: 760, badge: "New", stock: 40, d: "Thinnest Apple Watch ever with the biggest display, sleep apnoea notifications and fast charging.",
+        v: { Size: [["42mm", 0], ["46mm", 30]], Connectivity: [["GPS", 0], ["GPS + Cellular", 100]] }, col: [["Jet Black", "#1c1c1e"], ["Silver", "#d9dadc"], ["Rose Gold", "#e6c2b6"]],
+        s: { Display: "Always-on Retina, wide-angle OLED", Chip: "S10 SiP", Storage: "64GB", Battery: "Up to 18h", Weight: "30 g", Camera: "—" } },
+      { id: "airpods", c: "audio", b: "Apple", n: "AirPods Pro (2nd gen) USB-C", p: 229, was: 189, img: "1572569511254-d8f925fe2cbb", r: 4.8, rv: 5420, stock: 52, d: "Up to 2x more Active Noise Cancellation, Adaptive Audio and Personalised Spatial Audio.",
+        s: { Display: "—", Chip: "H2", Storage: "—", Battery: "Up to 30h with case", Weight: "5.3 g per bud", Camera: "—" } },
+      { id: "sony", c: "audio", b: "Sony", n: "Sony WH-1000XM4 Wireless Headphones", p: 249, was: 179, img: "1618366712010-f4ae9c647dcb", r: 4.8, rv: 6214, badge: "Deal of the day", stock: 38, d: "Industry-leading noise cancelling with Dual Noise Sensor, 30-hour battery and speak-to-chat.",
+        col: [["Black", "#1b1b1b"], ["Silver", "#d8d3cb"]],
+        s: { Display: "—", Chip: "QN1 HD processor", Storage: "—", Battery: "Up to 30h", Weight: "254 g", Camera: "—" } },
+      { id: "jbl", c: "audio", b: "JBL", n: "JBL Flip 6 Portable Speaker", p: 119, was: 99, img: "1608043152269-423dbba4e7e1", r: 4.7, rv: 2890, stock: 64, d: "Bold JBL Pro Sound, IP67 waterproof and dustproof, and 12 hours of playtime.",
+        col: [["Black", "#1b1b1b"], ["Blue", "#2b5fb3"], ["Red", "#c8102e"]],
+        s: { Display: "—", Chip: "—", Storage: "—", Battery: "Up to 12h", Weight: "550 g", Camera: "—" } },
+      { id: "ps5", c: "gaming", b: "PlayStation", n: "PlayStation 5 Slim Console (Disc)", p: 479, was: 429, img: "1606144042614-b2417e99c4e3", r: 4.9, rv: 7320, badge: "Bestseller", stock: 12, d: "Ultra-high-speed 1TB SSD, ray tracing, 4K at 120fps and the DualSense wireless controller.",
+        v: { Edition: [["Disc", 0], ["Digital", -60]], Bundle: [["Console only", 0], ["+ EA FC 25", 40], ["+ 2nd DualSense", 60]] },
+        s: { Display: "Up to 4K 120Hz output", Chip: "AMD Zen 2 + RDNA 2", Storage: "1TB SSD", Battery: "—", Weight: "3.2 kg", Camera: "—" } },
+      { id: "xbox", c: "gaming", b: "Xbox", n: "Xbox Series X 1TB", p: 479, img: "1621259182978-fbf93132d53d", r: 4.8, rv: 3410, stock: 15, d: "The fastest, most powerful Xbox ever, with 12 teraflops and Quick Resume.",
+        v: { Bundle: [["Console only", 0], ["+ Game Pass Ultimate 3 mo", 45]] },
+        s: { Display: "Up to 4K 120Hz output", Chip: "AMD Zen 2 + RDNA 2 (12 TFLOPS)", Storage: "1TB SSD", Battery: "—", Weight: "4.45 kg", Camera: "—" } },
+      { id: "switch", c: "gaming", b: "Nintendo", n: "Nintendo Switch OLED Model", p: 309, was: 279, img: "1578303512597-81e6cc155b3e", r: 4.8, rv: 4100, stock: 3, d: "7-inch OLED screen, wide adjustable stand, enhanced audio and 64GB storage.",
+        col: [["Neon Red/Blue", "#e60012"], ["White", "#f2f2f2"]],
+        s: { Display: '7" OLED, 720p', Chip: "NVIDIA Custom Tegra", Storage: "64GB", Battery: "4.5–9h", Weight: "420 g", Camera: "—" } },
+      { id: "canon", c: "cameras", b: "Canon", n: "Canon EOS 250D + 18-55mm Kit", p: 629, img: "1502920917128-1aa500764cbd", r: 4.6, rv: 880, stock: 11, d: "The world's lightest DSLR with a vari-angle touchscreen and 4K video.",
+        v: { Kit: [["18-55mm", 0], ["18-55mm + 75-300mm", 180]] },
+        s: { Display: '3" vari-angle touchscreen', Chip: "DIGIC 8", Storage: "SD card", Battery: "~1,070 shots", Weight: "449 g", Camera: "24.1MP APS-C, 4K video" } },
+      { id: "dji", c: "cameras", b: "DJI", n: "DJI Mavic 3 Classic", p: 1349, was: 1199, img: "1507582020474-9a35b7d455d9", r: 4.8, rv: 520, stock: 4, d: "Hasselblad 4/3 CMOS camera, 46-minute flight time and omnidirectional obstacle sensing.",
+        v: { Package: [["Drone only", 0], ["With RC", 160], ["Fly More Combo", 420]] },
+        s: { Display: "—", Chip: "—", Storage: "8GB internal + microSD", Battery: "Up to 46 min flight", Weight: "895 g", Camera: "20MP 4/3 Hasselblad, 5.1K video" } },
+      { id: "polaroid", c: "cameras", b: "Polaroid", n: "Polaroid OneStep+ Instant Camera", p: 129, img: "1526170375885-4d8ecf77b99f", r: 4.4, rv: 640, stock: 22, d: "Two lenses, Bluetooth app control and that classic Polaroid look.",
+        col: [["White", "#f2f2f2"], ["Black", "#1b1b1b"]],
+        s: { Display: "—", Chip: "—", Storage: "i-Type / 600 film", Battery: "60 packs per charge", Weight: "495 g", Camera: "Instant analogue, 2 lenses" } },
+    ];
+    P.forEach((p, i) => { p.price = p.was || p.p; p.save = p.was ? p.p - p.was : 0; p.pop = i; });
+    const CATS = [["phones", "Phones", "ri-smartphone-line"], ["laptops", "Laptops", "ri-macbook-line"], ["tablets", "Tablets", "ri-tablet-line"], ["audio", "Audio", "ri-headphone-line"], ["gaming", "Gaming", "ri-gamepad-line"], ["cameras", "Cameras", "ri-camera-3-line"], ["wearables", "Wearables", "ri-heart-pulse-line"], ["deals", "Deals", "ri-price-tag-3-line"]];
+    const inCat = (p, c) => c === "all" || (c === "deals" ? p.save > 0 : p.c === c);
+    const stars = (r) => [1, 2, 3, 4, 5].map((i) => `<i class="${r >= i ? "ri-star-fill" : r >= i - 0.5 ? "ri-star-half-fill" : "ri-star-line"}"></i>`).join("");
+
+    /* Categories + tabs + brand strip */
+    $("cats").innerHTML = CATS.map(([k, n, i]) => `<button class="cat reveal" data-cat="${k}"><i class="${i}"></i><b>${n}</b><small>${P.filter((p) => inCat(p, k)).length} products</small></button>`).join("");
+    $("tabs").innerHTML = [["all", "All"], ...CATS.map(([k, n]) => [k, n])].map(([k, n], i) => `<button class="${i ? "" : "active"}" data-tab="${k}">${n}</button>`).join("");
+    const brandIcon = { Apple: "ri-apple-fill", PlayStation: "ri-playstation-fill", Xbox: "ri-xbox-fill", Nintendo: "ri-switch-fill" };
+    $("brandstrip").innerHTML = ["Apple", "Samsung", "Sony", "PlayStation", "Xbox", "Nintendo", "Canon", "DJI", "JBL", "Dell", "Polaroid"].slice(0, 12).map((b) => `<button data-brand="${b}">${brandIcon[b] ? `<i class="${brandIcon[b]}"></i>` : ""}${b}</button>`).join("") + '<button data-cat="deals" style="color:var(--primary)"><i class="ri-price-tag-3-fill"></i>All Deals</button>';
+
+    /* Shop grid */
+    const st = { cat: "all", brand: null };
+    let wish = new Set(store.get("bb-wish", [])), cmp = store.get("bb-cmp", []);
+    function renderShop() {
+      document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("active", b.dataset.tab === st.cat));
+      const base = P.filter((p) => inCat(p, st.cat));
+      const brands = [...new Set(base.map((p) => p.b))];
+      if (st.brand && !brands.includes(st.brand)) st.brand = null;
+      $("brands").innerHTML = brands.length > 1 ? `<button class="${st.brand ? "" : "active"}" data-b="">All brands</button>` + brands.map((b) => `<button class="${st.brand === b ? "active" : ""}" data-b="${b}">${b}</button>`).join("") : "";
+      let list = base.filter((p) => !st.brand || p.b === st.brand);
+      const s = $("sort").value;
+      if (s === "low") list.sort((a, b) => a.price - b.price);
+      if (s === "high") list.sort((a, b) => b.price - a.price);
+      if (s === "rate") list.sort((a, b) => b.r - a.r);
+      if (s === "save") list.sort((a, b) => b.save - a.save);
+      $("result-count").textContent = `${list.length} products`;
+      $("products").innerHTML = list.length ? list.map((p, i) => `
+        <article class="product" style="animation-delay:${i * 35}ms" data-id="${p.id}">
+          <div class="product__img" data-view>
+            ${p.save ? `<span class="pbadge">-${Math.round((p.save / p.p) * 100)}%</span>` : p.badge ? `<span class="pbadge ${p.badge === "New" ? "new" : "hot"}">${p.badge}</span>` : ""}
+            <button class="pwish ${wish.has(p.id) ? "on" : ""}" data-wish aria-label="Save ${p.n}"><i class="${wish.has(p.id) ? "ri-heart-3-fill" : "ri-heart-3-line"}"></i></button>
+            <img src="${U(p.img, 600)}" alt="${p.n}" loading="lazy" />
+          </div>
+          <div class="product__body">
+            <span class="product__brand">${p.b}</span><h3 data-view>${p.n}</h3>
+            <span class="stars">${stars(p.r)}<em>${p.r} (${p.rv.toLocaleString()})</em></span>
+            <div class="product__price"><b>${gbp(p.price)}</b>${p.was ? `<s>${gbp(p.p)}</s>` : ""}</div>
+            <span class="product__fin">or ${gbp(Math.round((p.price / 24) * 100) / 100)}/mo for 24 months · 0% APR</span>
+            <span class="product__stock ${p.stock < 10 ? "low" : ""}"><i class="${p.stock < 10 ? "ri-error-warning-line" : "ri-checkbox-circle-line"}"></i>${p.stock < 10 ? `Only ${p.stock} left` : "In stock · next-day delivery"}</span>
+            <div class="product__foot"><label class="cmp"><input type="checkbox" data-cmp ${cmp.includes(p.id) ? "checked" : ""} />Compare</label><button class="btn" data-add>Add</button></div>
+          </div>
+        </article>`).join("") : '<div class="empty-grid"><i class="ri-search-eye-line"></i><b>No products here yet</b>Try another category.</div>';
+    }
+    function setCat(c) { st.cat = c; st.brand = null; renderShop(); document.querySelector("#shop").scrollIntoView(); }
+    $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.cat = b.dataset.tab; st.brand = null; renderShop(); } });
+    $("brands").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.brand = b.dataset.b || null; renderShop(); } });
+    $("sort").addEventListener("change", renderShop);
+    document.addEventListener("click", (e) => {
+      const c = e.target.closest("[data-cat]"); if (c) { e.preventDefault(); setCat(c.dataset.cat); $("catnav").classList.remove("open"); }
+      const bb = e.target.closest("[data-brand]"); if (bb) { st.cat = "all"; st.brand = bb.dataset.brand; renderShop(); document.querySelector("#shop").scrollIntoView(); }
+      const g = e.target.closest("[data-goto]"); if (g) document.getElementById(g.dataset.goto).scrollIntoView();
+      const o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); openP(o.dataset.open); }
+    });
+    $("products").addEventListener("click", (e) => {
+      const card = e.target.closest(".product"); if (!card) return; const id = card.dataset.id;
+      if (e.target.closest("[data-wish]")) { wish.has(id) ? wish.delete(id) : wish.add(id); store.set("bb-wish", [...wish]); renderShop(); return toast(wish.has(id) ? "Saved to your list" : "Removed from your list"); }
+      if (e.target.closest("[data-add]")) { addToCart(id, defaultCfg(P.find((p) => p.id === id))); return; }
+      if (e.target.closest("[data-view]")) openP(id);
+    });
+    $("products").addEventListener("change", (e) => { if (e.target.matches("[data-cmp]")) toggleCmp(e.target.closest(".product").dataset.id, e.target); });
+
+    /* Compare */
+    function toggleCmp(id, box) {
+      if (cmp.includes(id)) cmp = cmp.filter((x) => x !== id);
+      else if (cmp.length >= 3) { if (box) box.checked = false; return toast("You can compare up to 3 products"); }
+      else cmp.push(id);
+      store.set("bb-cmp", cmp); renderCmp();
+    }
+    function renderCmp() {
+      $("cmp-count").textContent = cmp.length; $("cbar-n").textContent = `(${cmp.length})`;
+      $("cbar").classList.toggle("show", cmp.length > 0);
+      $("cbar-items").innerHTML = cmp.map((id) => { const p = P.find((x) => x.id === id); return `<div class="cbar__item"><img src="${U(p.img, 120)}" alt="${p.n}" title="${p.n}" /><button data-rm="${id}" aria-label="Remove ${p.n}">×</button></div>`; }).join("") + '<div class="cbar__slot"><i class="ri-add-line"></i></div>'.repeat(3 - cmp.length);
+      document.querySelectorAll("[data-cmp]").forEach((c) => (c.checked = cmp.includes(c.closest(".product").dataset.id)));
+    }
+    $("cbar-items").addEventListener("click", (e) => { const b = e.target.closest("[data-rm]"); if (b) toggleCmp(b.dataset.rm); });
+    $("cbar-clear").onclick = () => { cmp = []; store.set("bb-cmp", cmp); renderCmp(); };
+    function openCmp() {
+      if (cmp.length < 2) return toast("Pick at least 2 products to compare");
+      const items = cmp.map((id) => P.find((p) => p.id === id));
+      const minPrice = Math.min(...items.map((p) => p.price)), maxRate = Math.max(...items.map((p) => p.r));
+      const rows = [["Price", (p) => `<span class="${p.price === minPrice ? "best" : ""}">${gbp(p.price)}</span>`], ["Rating", (p) => `<span class="${p.r === maxRate ? "best" : ""}">${p.r} / 5 (${p.rv.toLocaleString()})</span>`], ["Category", (p) => CATS.find((c) => c[0] === p.c)[1]], ...["Display", "Chip", "Storage", "Battery", "Weight", "Camera"].map((k) => [k, (p) => p.s[k]]), ["Delivery", (p) => (p.stock < 10 ? `Only ${p.stock} left` : "Next day")]];
+      $("ctable").innerHTML = `<thead><tr><th></th>${items.map((p) => `<td><img src="${U(p.img, 400)}" alt="" /><b>${p.n}</b><button class="btn" style="margin-top:10px;padding:8px 14px;font-size:13.5px" data-cadd="${p.id}">Add to basket</button></td>`).join("")}</tr></thead><tbody>${rows.map(([k, f]) => `<tr><th>${k}</th>${items.map((p) => `<td>${f(p)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+      $("cmp-modal").classList.add("open");
+    }
+    $("cbar-go").onclick = openCmp; $("cmp-open").onclick = openCmp;
+    $("ctable").addEventListener("click", (e) => { const b = e.target.closest("[data-cadd]"); if (b) addToCart(b.dataset.cadd, defaultCfg(P.find((p) => p.id === b.dataset.cadd))); });
+
+    /* Product modal */
+    let cur, cfg;
+    const defaultCfg = (p) => ({ v: Object.fromEntries(Object.keys(p.v || {}).map((k) => [k, 0])), col: 0, care: false, m: 0 });
+    const careFor = (p) => Math.max(29, Math.round(p.price * 0.12));
+    function unitPrice(p, c) { return p.price + Object.entries(c.v).reduce((s, [k, i]) => s + p.v[k][i][1], 0) + (c.care ? careFor(p) : 0); }
+    function cfgLabel(p, c) { return [...Object.entries(c.v).map(([k, i]) => p.v[k][i][0]), p.col ? p.col[c.col][0] : "", c.care ? "Care+" : ""].filter(Boolean).join(" · "); }
+    function openP(id) {
+      cur = P.find((p) => p.id === id); cfg = defaultCfg(cur);
+      $("pm-img").src = U(cur.img, 1000); $("pm-img").alt = cur.n; $("pm-brand").textContent = cur.b; $("pm-name").textContent = cur.n;
+      $("pm-stars").innerHTML = `${stars(cur.r)}<em>${cur.r} (${cur.rv.toLocaleString()} reviews)</em>`; $("pm-desc").textContent = cur.d;
+      $("pm-care").textContent = gbp(careFor(cur)); $("pm-protect").checked = false;
+      $("pm-variants").innerHTML = Object.entries(cur.v || {}).map(([k, opts]) => `<div class="opt-label">${k}</div><div class="vopts" data-k="${k}">${opts.map(([n, d], i) => `<button data-i="${i}" class="${i ? "" : "active"}">${n}${d ? `<small>${d > 0 ? "+" : "−"}${gbp(Math.abs(d))}</small>` : ""}</button>`).join("")}</div>`).join("") +
+        (cur.col ? `<div class="opt-label">Colour <small id="pm-col">${cur.col[0][0]}</small></div><div class="swatches" id="pm-sw">${cur.col.map(([n, h], i) => `<button class="${i ? "" : "active"}" style="background:${h}" data-c="${i}" aria-label="${n}"></button>`).join("")}</div>` : "");
+      document.querySelectorAll("#pm-fin button").forEach((b) => b.classList.toggle("active", b.dataset.m === "0"));
+      $("pm-stock").className = "product__stock" + (cur.stock < 10 ? " low" : ""); $("pm-stock").innerHTML = cur.stock < 10 ? `<i class="ri-error-warning-line"></i>Only ${cur.stock} left` : '<i class="ri-checkbox-circle-line"></i>In stock';
+      updateP(); $("p-modal").classList.add("open");
+    }
+    function updateP() {
+      const t = unitPrice(cur, cfg); $("pm-total").textContent = gbp(t);
+      $("pm-monthly").innerHTML = cfg.m ? `<strong>${gbp(Math.round((t / cfg.m) * 100) / 100)}/mo</strong> × ${cfg.m} months · 0% APR · £0 deposit` : `or from ${gbp(Math.round((t / 24) * 100) / 100)}/mo`;
+      $("pm-cmp").innerHTML = cmp.includes(cur.id) ? '<i class="ri-scales-3-fill"></i>' : '<i class="ri-scales-3-line"></i>';
+    }
+    $("pm-variants").addEventListener("click", (e) => {
+      const b = e.target.closest(".vopts button"); if (b) { const k = b.parentNode.dataset.k; cfg.v[k] = +b.dataset.i; b.parentNode.querySelectorAll("button").forEach((x) => x.classList.toggle("active", x === b)); updateP(); }
+      const s = e.target.closest("[data-c]"); if (s) { cfg.col = +s.dataset.c; document.querySelectorAll("#pm-sw button").forEach((x) => x.classList.toggle("active", x === s)); $("pm-col").textContent = cur.col[cfg.col][0]; }
+    });
+    $("pm-protect").addEventListener("change", (e) => { cfg.care = e.target.checked; updateP(); });
+    $("pm-fin").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; cfg.m = +b.dataset.m; document.querySelectorAll("#pm-fin button").forEach((x) => x.classList.toggle("active", x === b)); updateP(); });
+    $("pm-add").onclick = () => { addToCart(cur.id, { ...cfg, v: { ...cfg.v } }); closeModals(); };
+    $("pm-cmp").onclick = () => { toggleCmp(cur.id); updateP(); };
+    function closeModals() { document.querySelectorAll(".modal").forEach((m) => m.classList.remove("open")); }
+    document.querySelectorAll(".modal").forEach((m) => m.addEventListener("click", (e) => { if (e.target === m || e.target.closest("[data-close]")) closeModals(); }));
+
+    /* Basket */
+    let cart = store.get("bb-cart", []), credit = store.get("bb-credit", null);
+    function addToCart(id, c) {
+      const p = P.find((x) => x.id === id), key = id + "|" + JSON.stringify(c.v) + c.col + c.care, ex = cart.find((x) => x.key === key);
+      if (ex) ex.q++; else cart.push({ key, id, c, q: 1 });
+      store.set("bb-cart", cart); renderCart(); toast(`${p.n} added to basket`);
+    }
+    function renderCart() {
+      const sub = cart.reduce((s, it) => s + unitPrice(P.find((p) => p.id === it.id), it.c) * it.q, 0);
+      const cr = credit && sub ? Math.min(credit.val, sub) : 0, ship = sub === 0 || sub >= 50 ? 0 : 4.99, total = sub - cr + ship;
+      $("cart-count").textContent = cart.reduce((s, c) => s + c.q, 0); $("cart-sub-top").textContent = gbp(sub);
+      if (!cart.length) { $("cart-list").innerHTML = `<div class="drawer__empty"><i class="ri-shopping-cart-2-line"></i><b>Your basket is empty</b>${credit ? `You have ${gbp(credit.val)} trade-in credit waiting.` : "Find something brilliant."}</div>`; $("cart-foot").style.display = "none"; return; }
+      $("cart-foot").style.display = "";
+      $("cart-list").innerHTML = cart.map((it, i) => { const p = P.find((x) => x.id === it.id); return `
+        <div class="ci"><img src="${U(p.img, 160)}" alt="" /><div><b>${p.n}</b><small>${cfgLabel(p, it.c) || "Standard"}</small><button class="rm" data-rm="${i}">Remove</button></div>
+        <div class="ci__r"><strong>${gbp(unitPrice(p, it.c) * it.q)}</strong><div class="qty"><button data-i="${i}" data-d="-1" aria-label="Less">−</button><span>${it.q}</span><button data-i="${i}" data-d="1" aria-label="More">+</button></div></div></div>`; }).join("") +
+        (credit ? `<div class="ci"><span class="credit"><i class="ri-exchange-line"></i></span><div><b>Trade-in credit</b><small>${credit.label}</small><button class="rm" data-rmcredit>Remove</button></div><div class="ci__r"><strong class="neg">−${gbp(cr)}</strong></div></div>` : "");
+      $("c-sub").textContent = gbp(sub); $("c-credit").textContent = cr ? "−" + gbp(cr) : "—"; $("c-ship").textContent = ship ? gbp(ship) : "Free"; $("c-total").textContent = gbp(Math.round(total * 100) / 100);
+      $("c-fin").innerHTML = `Or <b>${gbp(Math.round((total / 24) * 100) / 100)}/mo</b> for 24 months at 0% APR.`;
+    }
+    $("cart-list").addEventListener("click", (e) => {
+      const q = e.target.closest("[data-d]"); if (q) { const it = cart[+q.dataset.i]; it.q += +q.dataset.d; if (it.q <= 0) cart.splice(+q.dataset.i, 1); }
+      const r = e.target.closest("[data-rm]"); if (r) cart.splice(+r.dataset.rm, 1);
+      if (e.target.closest("[data-rmcredit]")) { credit = null; store.set("bb-credit", null); }
+      store.set("bb-cart", cart); renderCart();
+    });
+    const openCart = () => { $("drawer").classList.add("open"); $("overlay").classList.add("open"); };
+    const closeCart = () => { $("drawer").classList.remove("open"); $("overlay").classList.remove("open"); };
+    $("cart-open").onclick = openCart; $("cart-close").onclick = closeCart; $("overlay").onclick = closeCart;
+    $("checkout").onclick = () => { closeCart(); toast(`Order BB-${Math.floor(1e6 + Math.random() * 9e6)} placed — arriving tomorrow!`); cart = []; credit = null; store.set("bb-cart", cart); store.set("bb-credit", null); renderCart(); };
+
+    /* Deal of the day */
+    $("deal-add").onclick = () => addToCart("sony", defaultCfg(P.find((p) => p.id === "sony")));
+    function dealTick() {
+      const n = new Date(), end = new Date(n); end.setHours(24, 0, 0, 0);
+      const s = Math.floor((end - n) / 1000), pad = (x) => String(x).padStart(2, "0");
+      $("t-h").textContent = pad(Math.floor(s / 3600)); $("t-m").textContent = pad(Math.floor((s % 3600) / 60)); $("t-s").textContent = pad(s % 60);
+      const claimed = Math.min(96, 40 + Math.floor(((86400 - s) / 86400) * 56));
+      $("claimed").textContent = claimed + "%"; $("stock-bar").style.width = claimed + "%"; $("left").textContent = `Only ${100 - claimed} left`;
+    }
+    dealTick(); setInterval(dealTick, 1000);
+
+    /* Trade-in */
+    const TRADE = {
+      Phone: [["iPhone 14 Pro", 420], ["iPhone 13", 260], ["iPhone 12", 170], ["Samsung Galaxy S23", 300], ["Google Pixel 7", 150]],
+      Tablet: [['iPad Pro 11" (2021)', 320], ["iPad Air (5th gen)", 230], ["iPad (9th gen)", 110]],
+      Laptop: [['MacBook Pro 14" M1 Pro', 720], ["MacBook Air M1", 380], ["Dell XPS 13 (2021)", 260]],
+      Console: [["PlayStation 5 (Disc)", 230], ["Xbox Series X", 220], ["Nintendo Switch OLED", 140]],
+      Watch: [["Apple Watch Series 8", 120], ["Samsung Galaxy Watch 5", 70]],
+    };
+    const CONDS = [["Like new", "No marks", 1], ["Good", "Light wear", 0.82], ["Fair", "Visible scratches", 0.6], ["Faulty", "Cracked / not working", 0.25]];
+    let cond = 1;
+    $("t-type").innerHTML = Object.keys(TRADE).map((t) => `<option>${t}</option>`).join("");
+    $("t-cond").innerHTML = CONDS.map(([n, s], i) => `<button class="${i === cond ? "active" : ""}" data-i="${i}">${n}<small>${s}</small></button>`).join("");
+    function fillModels() { $("t-model").innerHTML = TRADE[$("t-type").value].map(([m], i) => `<option value="${i}">${m}</option>`).join(""); calcTrade(); }
+    function calcTrade() {
+      const [m, base] = TRADE[$("t-type").value][+$("t-model").value], val = Math.round(base * CONDS[cond][2] / 5) * 5;
+      $("t-val").textContent = gbp(val); $("t-note").textContent = `${m} · ${CONDS[cond][0]} condition · +10% bonus when used on a new ${$("t-type").value.toLowerCase()}`;
+      return { val, label: `${m} (${CONDS[cond][0]})` };
+    }
+    $("t-type").addEventListener("change", fillModels); $("t-model").addEventListener("change", calcTrade);
+    $("t-cond").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; cond = +b.dataset.i; document.querySelectorAll("#t-cond button").forEach((x) => x.classList.toggle("active", x === b)); calcTrade(); });
+    $("t-apply").onclick = () => { credit = calcTrade(); store.set("bb-credit", credit); renderCart(); openCart(); toast(`${gbp(credit.val)} trade-in credit added to your basket`); };
+    fillModels();
+
+    /* Live search */
+    let hl = -1, hits = [];
+    const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    function runSearch() {
+      const q = $("search").value.trim().toLowerCase(), c = $("search-cat").value;
+      if (!q) { $("suggest").classList.remove("open"); return; }
+      hits = P.filter((p) => (c === "all" || p.c === c) && (p.n + " " + p.b + " " + p.c).toLowerCase().includes(q)).slice(0, 6); hl = -1;
+      $("suggest").innerHTML = hits.length ? hits.map((p, i) => `<button data-i="${i}"><img src="${U(p.img, 100)}" alt="" /><span>${p.n.replace(new RegExp(esc(q), "i"), (m) => `<mark>${m}</mark>`)}<small>${p.b} · ${CATS.find((x) => x[0] === p.c)[1]}</small></span><b>${gbp(p.price)}</b></button>`).join("") : `<p>No results for “${q}”. Try “iPhone”, “PS5” or “headphones”.</p>`;
+      $("suggest").classList.add("open");
+    }
+    $("search").addEventListener("input", runSearch); $("search-cat").addEventListener("change", runSearch);
+    $("search").addEventListener("keydown", (e) => {
+      const btns = [...$("suggest").querySelectorAll("button")];
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); hl = (hl + (e.key === "ArrowDown" ? 1 : -1) + btns.length) % btns.length; btns.forEach((b, i) => b.classList.toggle("hl", i === hl)); }
+      if (e.key === "Enter") { e.preventDefault(); if (hits[hl] || hits[0]) { openP((hits[hl] || hits[0]).id); $("suggest").classList.remove("open"); } }
+      if (e.key === "Escape") $("suggest").classList.remove("open");
+    });
+    $("suggest").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { openP(hits[+b.dataset.i].id); $("suggest").classList.remove("open"); } });
+    $("search-go").onclick = () => { if (hits[0]) openP(hits[0].id); else runSearch(); };
+    document.addEventListener("click", (e) => { if (!e.target.closest(".search")) $("suggest").classList.remove("open"); });
+
+    /* Hero slider */
+    const slides = [...document.querySelectorAll(".slide")], dots = [...$("dots").children]; let si = 0, sT;
+    function go(i) { si = (i + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle("active", k === si)); dots.forEach((d, k) => d.classList.toggle("active", k === si)); clearInterval(sT); sT = setInterval(() => go(si + 1), 6000); }
+    dots.forEach((d, k) => (d.onclick = () => go(k))); $("s-prev").onclick = () => go(si - 1); $("s-next").onclick = () => go(si + 1); go(0);
+
+    /* Misc */
+    function toast(m) { $("toast-msg").textContent = m; $("toast").classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("show"), 3000); }
+    $("news-form").addEventListener("submit", (e) => { e.preventDefault(); toast("Your £20 code BRIGHT20 is on its way!"); e.target.reset(); });
+    $("burger").onclick = () => document.querySelector(".catnav").scrollIntoView({ block: "nearest" });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModals(); closeCart(); } });
+    renderShop(); renderCmp(); renderCart();
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/shop-brightbyte/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>
+</body>
+</html>
