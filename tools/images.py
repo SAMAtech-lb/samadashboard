@@ -13,12 +13,13 @@ def fit(im, w):
 
 
 import json
+import os
 ids = {p["id"] for p in json.loads((root / "data" / "library.json").read_text(encoding="utf8"))}
 
 for f in sorted(cache.glob("*.jpg")):
     pid = f.stem[:-2] if f.stem.endswith("-m") else f.stem
     done = out / (f"{f.stem}.webp" if f.stem.endswith("-m") else f"{f.stem}-900.webp")
-    if pid not in ids or done.exists():
+    if pid not in ids or (done.exists() and not os.environ.get("REDO")):
         continue
     im = Image.open(f).convert("RGB")
     if f.stem.endswith("-m"):

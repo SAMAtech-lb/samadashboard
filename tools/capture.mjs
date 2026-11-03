@@ -30,12 +30,20 @@ const pend = new Map();
 ws.onmessage = (m) => { const d = JSON.parse(m.data); if (d.id && pend.has(d.id)) { pend.get(d.id)(d.result ?? d.error); pend.delete(d.id); } };
 const cdp = (method, params = {}) => new Promise((r) => { const i = ++n; pend.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
 await cdp("Page.enable");
+await cdp("Runtime.enable");
+// Sliders and fade-ins would otherwise be caught halfway: ask each site for its still version
+const still = (on) => cdp("Emulation.setEmulatedMedia", { features: [{ name: "prefers-reduced-motion", value: on ? "reduce" : "no-preference" }] });
+const NEEDS_MOTION = new Set(["arch-varo"]); // its still version lays out differently
+const READY = `(async () => { const end = Date.now() + 15000; const inView = (i) => { const r = i.getBoundingClientRect(); return r.width > 0 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth; }; while (Date.now() < end) { const imgs = [...document.images].filter(inView); if (document.readyState === "complete" && document.fonts.status === "loaded" && imgs.every((i) => i.complete)) break; await new Promise((r) => setTimeout(r, 200)); } await document.fonts.ready; return true; })()`;
 
 for (const [suffix, w, h, mobile] of [["", 1440, 900, false], ["-m", 390, 844, true]]) {
   await cdp("Emulation.setDeviceMetricsOverride", { width: w, height: h, deviceScaleFactor: mobile ? 2 : 1, mobile });
   for (const p of list) {
+    await still(!NEEDS_MOTION.has(p.id));
     await cdp("Page.navigate", { url: `http://127.0.0.1:8123/demos/${p.id}/index.html?nointro` });
-    await sleep(7000); // long enough for each demo's own opening animation to finish
+    await sleep(1200);
+    await cdp("Runtime.evaluate", { expression: READY, awaitPromise: true });
+    await sleep(NEEDS_MOTION.has(p.id) ? 6000 : 2500); // let any opening animation finish
     const r = await cdp("Page.captureScreenshot", { format: "jpeg", quality: 92 });
     writeFileSync(join(cache, p.id + suffix + ".jpg"), Buffer.from(r.data, "base64"));
     console.log(p.id + suffix);
