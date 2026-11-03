@@ -34,7 +34,7 @@ for (const p of projects) {
   const robots = '<meta name="robots" content="noindex, follow" />';
   html = html.replace(/<meta\s+name=["']robots["'][^>]*>\s*/i, "");
   html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, (m) => `${m}\n  ${robots}`) : robots + html;
-  const pill = `<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/${p.id}/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#0f0f0e;color:#d7ff3a;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>`;
+  const pill = `<script>if(top===self&&location.search.indexOf("nointro")<0){var a=document.createElement("a");a.href="../../work/${p.id}/";a.textContent="Demo site by SAMA";a.style.cssText="position:fixed;left:14px;bottom:14px;z-index:2147483647;padding:8px 14px;border-radius:999px;background:#060a18;color:#9cc4ff;font:500 13px/1.2 system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)";document.body.appendChild(a)}</script>`;
   const at = html.toLowerCase().lastIndexOf("</body>");
   html = at === -1 ? html + pill : html.slice(0, at) + pill + "\n" + html.slice(at);
   writeFileSync(file, html);

@@ -1,6 +1,6 @@
 # samadashboard
 
-The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web design and development studio in Beirut, Lebanon. It uses the same design as Forma Studio, shows only the top 30 projects, and is plain static HTML, CSS and JavaScript.
+The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web design and development studio in Beirut, Lebanon. It uses the design of the SAMA site (`studio-dashboard/sama`), shows only the top 30 projects, and is plain static HTML, CSS and JavaScript.
 
 ## Publish on GitHub Pages
 
@@ -15,6 +15,7 @@ The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web de
 | To change | Do this |
 | --- | --- |
 | Wording, email or WhatsApp number | Edit `tools/content.mjs`, then run `node tools/build.mjs` |
+| Add an icon | Add it to `tools/fetch_assets.mjs`, then run that file |
 | The list of projects (after changing it in Forma) | Run `node tools/import.mjs`, the capture steps below, then `node tools/build.mjs` |
 | Check for SEO mistakes and broken links | Run `node tools/check.mjs` |
 

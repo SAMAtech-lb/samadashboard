@@ -183,17 +183,16 @@ export const SERVICES = [
 ];
 
 export const PROMISE = [
-  ["A fixed quote, up front", "One price agreed on day one. It does not grow halfway through."],
-  ["Progress you can see weekly", "A live preview link every week, so you are never left wondering."],
-  ["One person, always reachable", "Talk directly to the person building your project."],
-  ["A reply within 24 hours", "Tell us about your project and hear back with ideas, a timeline and a quote."],
+  ["A fixed quote, up front", "One price agreed on day one. It does not grow halfway through.", "price-tag-3-line"],
+  ["Progress you can see weekly", "A live preview link every week, so you are never left wondering.", "calendar-check-line"],
+  ["One person, always reachable", "Talk directly to the person building your project.", "user-smile-line"],
 ];
 
 export const PROCESS = [
-  ["Discover", "A free call about your goals, audience and budget. You leave with a clear plan and a fixed quote."],
-  ["Design", "Wireframes and UI in Figma. You review and approve before a single line of code."],
-  ["Build", "We develop, test on every device and share live previews so you see progress every week."],
-  ["Launch and grow", "We publish, set up analytics and SEO, and stay with you for updates and support."],
+  ["Discover", "A free call about your goals, audience and budget. You leave with a clear plan and a fixed quote.", "chat-smile-2-line"],
+  ["Design", "Wireframes and UI in Figma. You review and approve before a single line of code.", "pencil-ruler-2-line"],
+  ["Build", "We develop, test on every device and share live previews so you see progress every week.", "code-s-slash-line"],
+  ["Launch & grow", "We publish, set up analytics and SEO, and stay with you for updates and support.", "rocket-2-line"],
 ];
 
 export const HOME_FAQ = [
@@ -207,7 +206,7 @@ export const HOME_FAQ = [
 export const ABOUT = {
   title: "About SAMA: Web Design Studio in Beirut, Lebanon",
   meta: "SAMA (سماء, Arabic for sky) is a web and app studio in Beirut, Lebanon, founded by full stack developer Ahmad Ghzayel. Meet the studio and how we work.",
-  h1: "A small studio with a <em>big</em> sky",
+  h1: "A small team with a <em>big sky.</em>",
   lead: "SAMA (سماء, Arabic for sky) is a creative tech studio in Beirut, Lebanon. We design and build websites, mobile apps and interfaces, and we edit video, all in one team.",
   sections: [
     { h: "Why one team matters", p: "When design, code and content sit in different places, decisions slow down and brands start to look different from one channel to the next. Keeping them together means faster answers and a business that looks the same on its website, its app and its reels." },
@@ -216,3 +215,32 @@ export const ABOUT = {
     { h: "Why you can try our work first", p: "Everything in our library is a working build, not a picture of one. The businesses in the demos are fictional, but the booking flows, filters and checkouts are real code you can click through on your own phone before you ever talk to us." },
   ],
 };
+
+export const HOME_SERVICES = [
+  { i: "layout-masonry-line", t: "Web Development", slug: "web-design-lebanon", more: "Web design in Lebanon", d: "Fast, responsive websites, landing pages and online stores that turn visitors into customers.", pts: [["Business & portfolio sites"], ["Landing pages", "work/landing-pages"], ["E-commerce stores", "ecommerce-website-lebanon"], ["SEO & performance"]] },
+  { i: "pen-nib-line", t: "UI/UX Design", slug: "ui-ux-design-lebanon", more: "UI/UX design services", d: "User research, wireframes and pixel-perfect interfaces that are easy and enjoyable to use.", pts: [["Wireframes & user flows"], ["Design systems"], ["Interactive prototypes"], ["Usability reviews"]] },
+  { i: "smartphone-line", t: "Mobile & App Development", slug: "mobile-app-development-lebanon", more: "Mobile app development", d: "iOS and Android apps, plus web apps and dashboards, built to scale with your business.", pts: [["iOS & Android apps"], ["Cross-platform (Flutter)"], ["Web apps & dashboards", "work/dashboards"], ["API & backend integration"]] },
+  { i: "film-line", t: "Video Editing", slug: "video-editing-lebanon", more: "Video editing services", d: "Scroll-stopping reels, ads and brand videos with colour grading, motion graphics and captions.", pts: [["Reels, TikTok & Shorts"], ["YouTube & brand films"], ["Motion graphics"], ["Colour & sound"]] },
+];
+
+export const WHY = [
+  ["palette-line", "Design-first", "Every project starts with UI/UX, not code."],
+  ["smartphone-line", "Mobile-perfect", "Tested on phones, tablets and desktops."],
+  ["flashlight-line", "Fast & SEO-ready", "Clean code that loads quickly and is built for search."],
+  ["customer-service-2-line", "Real support", "We're here after launch, not just before."],
+];
+
+export const FORMATS = [
+  ["smartphone-line", "Reels & TikTok", "9:16 · 15–60s"],
+  ["youtube-line", "YouTube videos", "16:9 · long-form"],
+  ["advertisement-line", "Ads & promos", "All platforms"],
+  ["magic-line", "Motion graphics", "Logos · titles"],
+];
+
+export const SHOW = [
+  ["agency-atlas", "Atlas Labs", "Software company"],
+  ["shop-norde", "Norde", "Fashion store"],
+  ["realestate-havenly", "Havenly", "Real estate"],
+  ["portfolio-rami", "Rami Aziz", "Developer portfolio"],
+  ["landing-portline", "Portline Logistics", "Logistics platform"],
+];

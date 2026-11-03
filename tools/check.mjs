@@ -27,7 +27,7 @@ for (const p of pages) {
   if (canonical !== expected) bad(p, `canonical ${canonical} should be ${expected}`);
   for (const m of h.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)) { try { JSON.parse(m[1]); } catch { bad(p, "invalid JSON-LD"); } }
   for (const m of h.matchAll(/<img\b[^>]*>/g)) {
-    if (!/\balt="[^"]+"/.test(m[0])) bad(p, `image without alt: ${m[0].slice(0, 80)}`);
+    if (!/\balt="/.test(m[0])) bad(p, `image without alt: ${m[0].slice(0, 80)}`);
     if (!/\bwidth="\d+"/.test(m[0]) || !/\bheight="\d+"/.test(m[0])) bad(p, "image without size");
   }
   for (const m of h.matchAll(/(?:href|src)="([^"#]*)"/g)) {
