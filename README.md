@@ -4,13 +4,14 @@ The public website of SAMA at [samatechlb.com](https://samatechlb.com): a web de
 
 ## Manage projects
 
-Open [samatechlb.com/admin/](https://samatechlb.com/admin/) and sign in with a GitHub access token (the sign-in page explains how to make one).
+Open [samatechlb.com/admin/](https://samatechlb.com/admin/) and sign in with your email and password. The first time, sign in with a GitHub access token and choose **Login settings** to set them.
 
-- **Add or Remove** moves a project on or off the website, and the arrows change its order.
+- **All, Published and Not published** filter the grid of every website, and **View** opens any of them.
+- **Add to website or Remove** changes what is on the site, and the arrows change its order.
 - **+ New project** uploads a new project folder into the library.
 - **Publish to website** saves everything as one commit. The `Build website` GitHub Action then makes screenshots and pages, and the page tells you when it's live.
 
-The sign-in is the token itself: nothing secret is stored in this repository, so the page is useless without a token that can edit it.
+GitHub Pages has no server, so the email and password are never stored or sent anywhere. Together they unlock a GitHub token kept encrypted in `admin/vault.json` (PBKDF2 and AES-GCM in the browser). That file is public, so use a long, unique password: anyone could try guessing it offline.
 
 The library lives in `data/library.json` and `demos/`, and the projects on the site are listed in `data/list.json`. This repository is public, so every project in `demos/` can be opened by anyone who has its address, even when it isn't on the site. Demos carry a `noindex` tag to keep them out of Google, because they show fictional businesses.
 

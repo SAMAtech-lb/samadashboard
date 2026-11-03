@@ -66,7 +66,7 @@ function proj(p, base, i = 1, wide = false) {
 }
 const workGrid = (list, base) => `<div class="work">${list.map((p, i) => proj(p, base, i)).join("\n")}</div>`;
 
-const needs = ["Web Development", "E-commerce", "UI/UX Design", "Mobile & App Development", "Video Editing"];
+const needs = ["Web Development", "E-commerce", "UI/UX Design", "Mobile & App Development", "SEO", "Video Editing"];
 const contactForm = () => `<form class="form" data-form data-email="${SITE.email}">
   <span class="form__l" id="needL">What do you need?</span>
   <div class="chips" data-needs role="group" aria-labelledby="needL">${needs.map((t, i) => `<button type="button" class="${i ? "" : "on"}">${esc(t)}</button>`).join("")}</div>
@@ -120,13 +120,13 @@ function footer(base) {
   <p class="footer__word" aria-hidden="true">SΛMΛ</p>
   <div class="footer__grid">
     <div><a href="${base}" class="logo" aria-label="SAMA home">${logoMark("samaF")}<span class="logo__word" aria-hidden="true">SΛMΛ</span></a>
-      <p>Web design and development studio in ${SITE.city}, ${SITE.country}. Websites, online stores, mobile apps, UI/UX and video for clients in Lebanon and worldwide.</p></div>
+      <p>Web design and development studio in ${SITE.city}, ${SITE.country}. Websites, online stores, mobile apps, UI/UX, SEO and video for clients in Lebanon and worldwide.</p></div>
     <div><h2 class="footer__h">Services</h2>${SERVICES.map((s) => `<a href="${base}${s.slug}/">${esc(s.tab)}</a>`).join("")}</div>
     <div><h2 class="footer__h">Work</h2><a href="${base}work/">All work</a>${cats.map((c) => `<a href="${base}${catPath(c)}">${esc(CATEGORIES[c].tab)}</a>`).join("")}</div>
     <div><h2 class="footer__h">Company</h2><a href="${base}about/">About SAMA</a><a href="${base}contact/">Contact</a><a href="mailto:${SITE.email}">${SITE.email}</a>${SITE.whatsapp ? `<a href="https://wa.me/${waNum}" rel="noopener">WhatsApp ${esc(SITE.whatsapp)}</a>` : ""}
       <div class="socials"><a href="${SITE.sameAs[0]}" aria-label="SAMA on GitHub" rel="noopener">${svg("github-fill")}</a></div></div>
   </div>
-  <div class="footer__bottom"><p>© ${SITE.updated.slice(0, 4)} SAMA · سماء. All rights reserved.</p><p>The businesses in our demos are fictional.</p></div>
+  <div class="footer__bottom"><p>© ${SITE.updated.slice(0, 4)} SAMA. All rights reserved.</p><p>The businesses in our demos are fictional.</p></div>
 </footer>`;
 }
 
@@ -209,7 +209,7 @@ page({
   <img class="hero__bg" src="${base}assets/img/sky-900.webp" srcset="${base}assets/img/sky-900.webp 900w, ${base}assets/img/sky-1800.webp 1800w" sizes="100vw" width="1800" height="1200" alt="" fetchpriority="high" />
   <div class="hero__in">
     <div class="hero__copy">
-      <h1 class="hero__tag reveal"><span>سماء</span>Web design company in Beirut, Lebanon</h1>
+      <h1 class="hero__tag reveal">Web design company in Beirut, Lebanon</h1>
       <p class="hero__title">
         <span class="line"><span>We build digital</span></span>
         <span class="line"><span>products that</span></span>
@@ -245,14 +245,14 @@ page({
     <div class="nums reveal">
       <div><strong>${projects.length}</strong><span>live demos</span></div>
       <div><strong>${cats.length}</strong><span>website categories</span></div>
-      <div><strong>4</strong><span>disciplines, one team</span></div>
+      <div><strong>${HOME_SERVICES.length}</strong><span>disciplines, one team</span></div>
       <div><strong>24h</strong><span>reply, every time</span></div>
     </div>
   </div>
   ${promiseList()}
 </div></section>
 <section class="section" id="services"><div class="container">
-  <div class="head"><p class="label reveal">What we do</p><h2 class="h2 reveal">Four crafts. <span class="grad">One horizon.</span></h2></div>
+  <div class="head"><p class="label reveal">What we do</p><h2 class="h2 reveal">Five crafts. <span class="grad">One horizon.</span></h2></div>
   <div class="services">${HOME_SERVICES.map((s, i) => `<article class="service reveal" style="--d:${(i * 0.08).toFixed(2)}s" data-tilt>
     <div class="service__top"><span class="service__icon">${svg(s.i)}</span><span class="service__n">0${i + 1}</span></div>
     <h3>${esc(s.t)}</h3><p>${esc(s.d)}</p>

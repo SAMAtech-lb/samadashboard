@@ -185,7 +185,7 @@
     needs.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) b.classList.toggle("on"); });
     budget.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) $$("button", budget).forEach((x) => x.classList.toggle("on", x === b)); });
     const qs = new URLSearchParams(location.search), project = qs.get("project"), service = qs.get("service");
-    if (service) { const pick = { "Web design": "Web Development", "E-commerce websites": "E-commerce", "Mobile app development": "Mobile & App Development", "UI/UX design": "UI/UX Design", "Video editing": "Video Editing" }[service]; $$("button", needs).forEach((b) => b.classList.toggle("on", b.textContent === pick)); }
+    if (service) { const pick = { "Web design": "Web Development", "E-commerce websites": "E-commerce", "Mobile app development": "Mobile & App Development", "UI/UX design": "UI/UX Design", "Video editing": "Video Editing", "SEO services": "SEO" }[service]; $$("button", needs).forEach((b) => b.classList.toggle("on", b.textContent === pick)); }
     if (project) form.message.value = "I'm interested in a website like " + project + ".\n\n";
     form.addEventListener("submit", (e) => {
       e.preventDefault();

@@ -13,7 +13,7 @@ def fit(im, w):
 
 
 import json
-ids = set(json.loads((root / "data" / "list.json").read_text(encoding="utf8")))
+ids = {p["id"] for p in json.loads((root / "data" / "library.json").read_text(encoding="utf8"))}
 
 for f in sorted(cache.glob("*.jpg")):
     pid = f.stem[:-2] if f.stem.endswith("-m") else f.stem

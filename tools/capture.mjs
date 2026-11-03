@@ -11,7 +11,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const cache = join(root, "tools", ".cache");
 mkdirSync(cache, { recursive: true });
 const only = process.argv.slice(2);
-const list = (only.length ? only : JSON.parse(readFileSync(join(root, "data", "list.json"), "utf8"))).map((id) => ({ id }));
+const list = (only.length ? only : JSON.parse(readFileSync(join(root, "data", "library.json"), "utf8")).map((p) => p.id)).map((id) => ({ id }));
 const edge = process.env.CHROME || "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
 const port = 9300 + Math.floor(Math.random() * 500);
 const prof = join(tmpdir(), "samacap" + port);

@@ -33,9 +33,9 @@ for (const id of readdirSync(join(root, "demos"))) {
 
 const work = join(root, "assets", "work");
 mkdirSync(work, { recursive: true });
-const keep = new Set(list);
+const keep = new Set(library.map((p) => p.id));
 for (const f of readdirSync(work)) { const id = f.replace(/-(480|900|og|m)\.(webp|jpg)$/, ""); if (!keep.has(id)) rmSync(join(work, f)); }
-const missing = list.filter((id) => !existsSync(join(work, `${id}-900.webp`)) || !existsSync(join(work, `${id}-m.webp`)));
+const missing = library.map((p) => p.id).filter((id) => !existsSync(join(work, `${id}-900.webp`)) || !existsSync(join(work, `${id}-m.webp`)));
 mkdirSync(join(root, "tools", ".cache"), { recursive: true });
 writeFileSync(join(root, "tools", ".cache", "missing.txt"), missing.join(" "));
 console.log(`${list.length} on the site, ${library.length} in the library, ${missing.length} need screenshots`);

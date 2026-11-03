@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <meta name="referrer" content="no-referrer" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; frame-src 'self'; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'" />
 <title>SAMA Admin</title>
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="admin.css" />
@@ -14,26 +14,38 @@
 
 <!-- Sign in -->
 <main class="login" id="login">
-  <form class="card login__card" id="loginForm">
+  <div class="panel login__card">
     <img src="../assets/favicon.svg" width="52" height="52" alt="" />
     <h1>SAMA Admin</h1>
-    <p>Sign in with a GitHub access token that can edit the <b>samadashboard</b> repository.</p>
-    <label for="token">Access token</label>
-    <input id="token" type="password" autocomplete="off" spellcheck="false" required />
-    <label class="check"><input id="remember" type="checkbox" /> Keep me signed in on this computer</label>
-    <button class="btn" type="submit" id="loginBtn">Sign in</button>
+
+    <form id="passForm" hidden>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username" required />
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required />
+      <button class="btn" type="submit" id="passBtn">Sign in</button>
+      <button class="linkbtn" type="button" id="useToken">Sign in with an access token instead</button>
+    </form>
+
+    <form id="tokenForm" hidden>
+      <p class="muted">Sign in with a GitHub access token that can edit the <b>samadashboard</b> repository. Afterwards you can set an email and password in <b>Login settings</b>.</p>
+      <label for="token">Access token</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" required />
+      <button class="btn" type="submit" id="tokenBtn">Sign in</button>
+      <button class="linkbtn" type="button" id="usePass" hidden>Sign in with email and password instead</button>
+      <details>
+        <summary>How do I get a token?</summary>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub's new token page</a>.</li>
+          <li>Set <b>Resource owner</b> to <b>SAMAtech-lb</b>.</li>
+          <li>Under Repository access, choose <b>Only select repositories</b> and pick <b>samadashboard</b>.</li>
+          <li>Under Permissions, set <b>Contents</b> to <b>Read and write</b>.</li>
+          <li>Generate the token and paste it above. Treat it like a password.</li>
+        </ol>
+      </details>
+    </form>
     <p class="err" id="loginErr" role="alert"></p>
-    <details>
-      <summary>How do I get a token?</summary>
-      <ol>
-        <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub's new token page</a>.</li>
-        <li>Set <b>Resource owner</b> to <b>SAMAtech-lb</b>.</li>
-        <li>Under Repository access, choose <b>Only select repositories</b> and pick <b>samadashboard</b>.</li>
-        <li>Under Permissions, set <b>Contents</b> to <b>Read and write</b>.</li>
-        <li>Generate the token and paste it above. Treat it like a password.</li>
-      </ol>
-    </details>
-  </form>
+  </div>
 </main>
 
 <!-- Dashboard -->
@@ -41,31 +53,25 @@
   <header class="top">
     <a class="brand" href="../" target="_blank" rel="noopener"><img src="../assets/favicon.svg" width="34" height="34" alt="" /><span>SAMA <small>Admin</small></span></a>
     <div class="top__right">
-      <a class="btn btn--ghost btn--sm" href="../" target="_blank" rel="noopener">View website ↗</a>
+      <a class="btn btn--ghost btn--sm hide-sm" href="../" target="_blank" rel="noopener">View website ↗</a>
+      <button class="btn btn--ghost btn--sm" id="settingsBtn" type="button">Login settings</button>
       <button class="btn btn--ghost btn--sm" id="signOut" type="button">Sign out</button>
     </div>
   </header>
 
-  <main class="cols">
-    <section class="card col" aria-labelledby="siteH">
-      <div class="col__head">
-        <div><h2 id="siteH">On the website</h2><p><b id="siteCount">0</b> projects, best first</p></div>
+  <main class="wrap">
+    <div class="tools">
+      <div class="seg" id="filters" role="group" aria-label="Filter by status">
+        <button type="button" class="on" data-f="all">All <em id="nAll"></em></button>
+        <button type="button" data-f="published">Published <em id="nPub"></em></button>
+        <button type="button" data-f="unpublished">Not published <em id="nUn"></em></button>
       </div>
-      <ol class="rows" id="siteList"></ol>
-    </section>
-
-    <section class="card col" aria-labelledby="libH">
-      <div class="col__head">
-        <div><h2 id="libH">Library</h2><p><b id="libCount">0</b> not on the website</p></div>
-        <button class="btn btn--sm" id="newBtn" type="button">+ New project</button>
-      </div>
-      <div class="tools">
-        <input id="q" type="search" placeholder="Search projects…" aria-label="Search the library" />
-        <select id="cat" aria-label="Filter by category"></select>
-      </div>
-      <ul class="rows" id="libList"></ul>
-      <p class="none" id="libEmpty" hidden>No projects match.</p>
-    </section>
+      <input id="q" type="search" placeholder="Search websites…" aria-label="Search websites" />
+      <select id="cat" aria-label="Filter by category"></select>
+      <button class="btn btn--sm" id="newBtn" type="button">+ New project</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="none" id="empty" hidden>No websites match.</p>
   </main>
 
   <div class="bar" id="bar" hidden>
@@ -77,21 +83,55 @@
   </div>
 </div>
 
+<!-- Website viewer -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="vName" hidden>
+  <div class="viewer__bar">
+    <div class="viewer__info"><strong id="vName"></strong><small id="vSub"></small></div>
+    <div class="seg" id="devices" role="group" aria-label="Screen size">
+      <button type="button" class="on" data-d="desktop">Desktop</button>
+      <button type="button" data-d="tablet">Tablet</button>
+      <button type="button" data-d="mobile">Mobile</button>
+    </div>
+    <div class="viewer__btns">
+      <button class="ico" id="vPrev" type="button" aria-label="Previous website">←</button>
+      <button class="ico" id="vNext" type="button" aria-label="Next website">→</button>
+      <button class="act" id="vToggle" type="button"></button>
+      <a class="ico" id="vOpen" target="_blank" rel="noopener noreferrer" aria-label="Open in a new tab">↗</a>
+      <button class="ico" id="vClose" type="button" aria-label="Close">✕</button>
+    </div>
+  </div>
+  <div class="viewer__stage"><div class="device" id="device" data-d="desktop"><iframe id="frame" title="Website preview"></iframe></div></div>
+</div>
+
 <!-- New project -->
-<dialog class="card modal" id="newDlg" aria-labelledby="newH">
-  <form id="newForm" method="dialog" novalidate>
+<dialog class="panel modal" id="newDlg" aria-labelledby="newH">
+  <form id="newForm" novalidate>
     <h2 id="newH">New project</h2>
-    <p class="hint">Upload the project's folder. It must have an <code>index.html</code> at the top level.</p>
+    <p class="muted">Upload the project's folder. It must have an <code>index.html</code> at the top level.</p>
     <label for="nName">Project name</label><input id="nName" maxlength="40" required />
     <label for="nCat">Category</label><select id="nCat"></select>
     <label for="nType">Kind of business</label><input id="nType" maxlength="30" placeholder="For example: Dental clinic" required />
     <label for="nTags">Highlights, separated by commas</label><input id="nTags" maxlength="90" placeholder="Booking, Menu tabs, Gallery" />
     <label for="nDesc">Description</label><textarea id="nDesc" rows="4" minlength="60" maxlength="700" required placeholder="What the site is and what it can do. This appears on its public page."></textarea>
     <label for="nFiles">Project folder</label><input id="nFiles" type="file" webkitdirectory multiple required />
-    <p class="hint" id="nFilesInfo"></p>
+    <p class="muted" id="nFilesInfo"></p>
     <label class="check"><input id="nOnSite" type="checkbox" checked /> Also add it to the website</label>
     <p class="err" id="newErr" role="alert"></p>
     <div class="modal__btns"><button class="btn btn--ghost btn--sm" id="newCancel" type="button">Cancel</button><button class="btn btn--sm" id="newSave" type="button">Add project</button></div>
+  </form>
+</dialog>
+
+<!-- Email and password -->
+<dialog class="panel modal" id="setDlg" aria-labelledby="setH">
+  <form id="setForm" novalidate>
+    <h2 id="setH">Login settings</h2>
+    <p class="muted">Set the email and password for signing in. They are never saved or sent anywhere. They only unlock your GitHub token, which is stored encrypted on this site.</p>
+    <p class="muted"><b>Use a long password you don't use anywhere else</b>, at least 14 characters. The encrypted file is public, so a weak password could be guessed. If you forget it, sign in with a GitHub token and set a new one.</p>
+    <label for="sEmail">Email</label><input id="sEmail" type="email" autocomplete="username" required />
+    <label for="sPass">New password</label><input id="sPass" type="password" autocomplete="new-password" required />
+    <label for="sPass2">Repeat the password</label><input id="sPass2" type="password" autocomplete="new-password" required />
+    <p class="err" id="setErr" role="alert"></p>
+    <div class="modal__btns"><button class="btn btn--ghost btn--sm" id="setCancel" type="button">Cancel</button><button class="btn btn--sm" id="setSave" type="submit">Save login</button></div>
   </form>
 </dialog>
 

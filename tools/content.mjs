@@ -182,6 +182,30 @@ export const SERVICES = [
   },
 ];
 
+SERVICES.push({
+  slug: "seo-services-lebanon", tab: "SEO services",
+  title: "SEO Services in Lebanon | SAMA, Beirut",
+  meta: "SEO services in Beirut, Lebanon by SAMA: technical fixes, on-page content, Google Business Profile setup and clear monthly reports. No fake ranking promises.",
+  h1: "SEO <em>services</em> in Lebanon",
+  lead: "We help your business show up when people in Lebanon search for what you sell. That means fixing what stops Google from reading your site, writing pages around the words your customers use, and setting up your Google Business Profile.",
+  short: "Technical fixes, on-page content and local SEO that help customers find you on Google.",
+  includes: ["Technical SEO audit and fixes", "Keyword research for your market", "Titles, descriptions and page content", "Structured data and sitemaps", "Google Business Profile setup", "Search Console setup and reports"],
+  sections: [
+    { h: "Start by finding out what is wrong", p: "We begin with an audit of your site: can Google crawl it, are pages indexed, how fast does it load on a phone, and which searches already bring you visitors. You get a short list of problems ranked by how much they matter, so the first work goes where it will help most." },
+    { h: "Local SEO for businesses in Lebanon", p: "Searches like \"dentist in Beirut\" or \"restaurant near me\" often show a map before any website. We set up and complete your Google Business Profile, make sure your name, address and phone match everywhere they appear, and show you how to ask real customers for reviews. Many searches here also happen in Arabic, so we check which language your customers actually use before writing anything." },
+    { h: "Pages written around real searches", p: "A page ranks when it answers what someone typed. We research the words people use for your service and city, then write or improve your titles, descriptions, headings and content to match. The writing stays natural and useful, because a page that sounds like a keyword list loses customers even if it gets the click." },
+    { h: "What we will never promise", p: "Nobody can honestly guarantee first place on Google, because Google decides and your competitors matter. We also avoid shortcuts such as buying links or copying content, since they can get a site penalised. SEO usually takes months to show results, and we report what actually changed using your own Search Console data." },
+  ],
+  faq: [
+    { q: "How long does SEO take to work?", a: "Technical fixes can help within weeks, once Google has crawled your pages again. Ranking for competitive searches usually takes several months, and it depends on your market and competitors." },
+    { q: "Can you guarantee first place on Google?", a: "No, and be careful with anyone who does. We can promise honest work, correct technical setup, useful content and clear reports on what changed." },
+    { q: "Do you do SEO for a website you didn't build?", a: "Yes. We start with an audit of your current site and tell you what can be fixed where it is, and whether anything needs rebuilding." },
+    { q: "What do you need from me to start?", a: "Your website address, what you sell and where, and access to Google Search Console if you already have it. If you don't, we can set it up with you." },
+  ],
+  categories: ["Business"],
+  examples: ["clinic-stride", "hotel-azure", "restaurant-saintroast"],
+});
+
 export const PROMISE = [
   ["A fixed quote, up front", "One price agreed on day one. It does not grow halfway through.", "price-tag-3-line"],
   ["Progress you can see weekly", "A live preview link every week, so you are never left wondering.", "calendar-check-line"],
@@ -196,7 +220,7 @@ export const PROCESS = [
 ];
 
 export const HOME_FAQ = [
-  { q: "What does SAMA do?", a: "SAMA is a web design and development studio based in Beirut, Lebanon. We design and build websites, online stores, mobile apps and interfaces, and we edit video for brands." },
+  { q: "What does SAMA do?", a: "SAMA is a web design and development studio based in Beirut, Lebanon. We design and build websites, online stores, mobile apps and interfaces, we help businesses get found on Google, and we edit video for brands." },
   { q: "Are the websites on this page real?", a: "They are working demos that we designed and built, using fictional businesses. You can open each one and try it on desktop, tablet or mobile, then ask us to make a version for your own business." },
   { q: "How much does a website cost in Lebanon?", a: "It depends on the pages and features you need. We send one fixed quote within 24 hours of hearing about your project, and that price does not grow halfway through." },
   { q: "Can you make my website appear on Google?", a: "Yes, we set up every site so Google can read and understand it, and we show you how to verify it in Search Console. No honest studio can guarantee a first position, but a fast and clear site gives you a strong start." },
@@ -222,6 +246,8 @@ export const HOME_SERVICES = [
   { i: "smartphone-line", t: "Mobile & App Development", slug: "mobile-app-development-lebanon", more: "Mobile app development", d: "iOS and Android apps, plus web apps and dashboards, built to scale with your business.", pts: [["iOS & Android apps"], ["Cross-platform (Flutter)"], ["Web apps & dashboards", "work/dashboards"], ["API & backend integration"]] },
   { i: "film-line", t: "Video Editing", slug: "video-editing-lebanon", more: "Video editing services", d: "Scroll-stopping reels, ads and brand videos with colour grading, motion graphics and captions.", pts: [["Reels, TikTok & Shorts"], ["YouTube & brand films"], ["Motion graphics"], ["Colour & sound"]] },
 ];
+
+HOME_SERVICES.push({ i: "search-eye-line", t: "SEO", slug: "seo-services-lebanon", more: "SEO services in Lebanon", d: "Technical fixes, useful content and local SEO that help customers find your business on Google.", pts: [["Technical audits & fixes"], ["Keyword research"], ["On-page content"], ["Google Business Profile"]] });
 
 export const WHY = [
   ["palette-line", "Design-first", "Every project starts with UI/UX, not code."],
