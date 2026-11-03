@@ -58,8 +58,7 @@ if (noPush) { console.log("\n--no-push: stopped before GitHub."); process.exit(0
 
 const top = git("rev-parse", "--show-toplevel").stdout.trim().replace(/\\/g, "/").toLowerCase();
 if (top !== root.replace(/\\/g, "/").toLowerCase()) { console.error("\nStopped: this folder is not its own git repository."); process.exit(1); }
-if (!git("status", "--porcelain").stdout.trim()) { console.log("
-Nothing has changed, so there is nothing to publish."); process.exit(0); }
+if (!git("status", "--porcelain").stdout.trim()) { console.log("\nNothing has changed, so there is nothing to publish."); process.exit(0); }
 git("add", "-A");
 const note = [added.length && `add ${added.join(", ")}`, removed.length && `remove ${removed.join(", ")}`, moved && "reorder"].filter(Boolean).join("; ") || "wording";
 run("git", ["commit", "-q", "-m", `Update site: ${note}`]);
