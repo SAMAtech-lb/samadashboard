@@ -14,6 +14,7 @@ import { WorkerMailer } from "worker-mailer";
 
 const SITE = "https://samatechlb.com";
 const BRAND = "SAMA";
+const COMPANY = "SAMA Tech"; // how the thank-you email names us
 const SERVICES = ["Web Development", "E-commerce", "UI/UX Design", "Mobile & App Development", "SEO", "Video Editing", "General enquiry"];
 const EMAIL_RE = /^[^\s@<>"',;]+@[^\s@<>"',;]+\.[a-z]{2,}$/i;
 
@@ -94,19 +95,19 @@ export async function onRequestPost({ request, env }) {
   try {
     const first = name.split(" ")[0];
     await mailer.send({
-      from: { name: BRAND, email: ownEmail },
+      from: { name: COMPANY, email: ownEmail },
       to: { name, email },
-      reply: { name: BRAND, email: inbox },
-      subject: `Thank you for contacting ${BRAND}`,
-      text: `Hi ${first},\n\nThank you for contacting ${BRAND}. We've received your message and will get back to you soon, usually within 24 hours.\n\nHere's a copy of what you sent:\n\nServices: ${topic}\n${message}\n\nIf you'd like to add anything, just reply to this email.\n\nThe ${BRAND} team\n${SITE}`,
+      reply: { name: COMPANY, email: inbox },
+      subject: `Thank you for contacting ${COMPANY}`,
+      text: `Hi ${first},\n\nThank you for reaching out to ${COMPANY}. Your message is now with our team, and we'll get back to you within 24 hours with the next steps for your project.\n\nIn the meantime, feel free to reply to this email with anything that helps us understand what you need: websites you like, your logo or brand files, or a deadline you're working towards.\n\nHere's a copy of your message:\n\nServices: ${topic}\n${message}\n\nBest regards,\nThe ${COMPANY} team\n${SITE}`,
       html: layout(`
-        <h1 style="margin:0 0 14px;font-size:24px;color:#0b1430">Thank you for contacting ${BRAND}</h1>
+        <h1 style="margin:0 0 14px;font-size:24px;color:#0b1430">Thank you for reaching out</h1>
         <p style="margin:0 0 14px;font-size:16px;line-height:1.65;color:#1b2440">Hi ${esc(first)},</p>
-        <p style="margin:0 0 14px;font-size:16px;line-height:1.65;color:#1b2440">We've received your message and will get back to you soon, usually within 24 hours.</p>
-        <p style="margin:0 0 22px;font-size:16px;line-height:1.65;color:#1b2440">If you'd like to add anything, like links, files or a deadline, just reply to this email.</p>
+        <p style="margin:0 0 14px;font-size:16px;line-height:1.65;color:#1b2440">Thank you for reaching out to ${COMPANY}. Your message is now with our team, and we'll get back to you <b>within 24 hours</b> with the next steps for your project.</p>
+        <p style="margin:0 0 22px;font-size:16px;line-height:1.65;color:#1b2440">In the meantime, feel free to reply to this email with anything that helps us understand what you need: websites you like, your logo or brand files, or a deadline you're working towards.</p>
         <p style="margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#5b6785">Your message</p>
         <div style="padding:16px 18px;border-radius:12px;background:#f2f5fc;font-size:15px;line-height:1.6;color:#1b2440"><b>${esc(topic)}</b><br>${paras(message)}</div>
-        <p style="margin:24px 0 0;font-size:16px;line-height:1.65;color:#1b2440">The ${BRAND} team</p>`),
+        <p style="margin:24px 0 0;font-size:16px;line-height:1.65;color:#1b2440">Best regards,<br><b>The ${COMPANY} team</b></p>`),
     });
   } catch (err) {
     console.error("contact: thank-you email not sent", err);
