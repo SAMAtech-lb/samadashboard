@@ -74,8 +74,6 @@ const contactForm = () => `<form class="form" data-form data-email="${SITE.email
     <input name="name" type="text" required placeholder="Your name" aria-label="Your name" autocomplete="name" />
     <input name="email" type="email" required placeholder="Email address" aria-label="Email address" autocomplete="email" />
   </div>
-  <span class="form__l" id="budL">Estimated budget</span>
-  <div class="chips" data-budget role="group" aria-labelledby="budL"><button type="button">&lt; $500</button><button type="button" class="on">$500 – $1,500</button><button type="button">$1,500 – $5,000</button><button type="button">$5,000+</button></div>
   <textarea name="message" rows="5" required placeholder="Tell us about your project, goals and timeline…" aria-label="Project details"></textarea>
   <button class="btn btn--full" type="submit" data-magnet>Send message ${ic("send-plane-2-line")}</button>
   <p class="form-msg" data-msg role="status"></p>

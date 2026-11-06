@@ -3,7 +3,7 @@
 export const SITE = {
   url: "https://samatechlb.com",
   name: "SAMA",
-  email: "hello@samatechlb.com",
+  email: "info@samatechlb.com",
   // Fill this in (for example "+961 70 123 456") and rebuild: the WhatsApp links appear by themselves.
   whatsapp: "",
   city: "Beirut",

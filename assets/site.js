@@ -181,16 +181,15 @@
 
   /* Contact forms: open the visitor's email app */
   $$("[data-form]").forEach((form) => {
-    const needs = $("[data-needs]", form), budget = $("[data-budget]", form), msg = $("[data-msg]", form);
+    const needs = $("[data-needs]", form), msg = $("[data-msg]", form);
     needs.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) b.classList.toggle("on"); });
-    budget.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) $$("button", budget).forEach((x) => x.classList.toggle("on", x === b)); });
     const qs = new URLSearchParams(location.search), project = qs.get("project"), service = qs.get("service");
     if (service) { const pick = { "Web design": "Web Development", "E-commerce websites": "E-commerce", "Mobile app development": "Mobile & App Development", "UI/UX design": "UI/UX Design", "Video editing": "Video Editing", "SEO services": "SEO" }[service]; $$("button", needs).forEach((b) => b.classList.toggle("on", b.textContent === pick)); }
     if (project) form.message.value = "I'm interested in a website like " + project + ".\n\n";
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const picked = $$(".on", needs).map((b) => b.textContent).join(", ") || "General enquiry", amount = ($(".on", budget) || {}).textContent || "";
-      const body = "Name: " + form.name.value + "\nEmail: " + form.email.value + "\nServices: " + picked + "\nBudget: " + amount + "\n\n" + form.message.value;
+      const picked = $$(".on", needs).map((b) => b.textContent).join(", ") || "General enquiry";
+      const body = "Name: " + form.name.value + "\nEmail: " + form.email.value + "\nServices: " + picked + "\n\n" + form.message.value;
       location.href = "mailto:" + form.dataset.email + "?subject=" + encodeURIComponent("New project: " + picked) + "&body=" + encodeURIComponent(body);
       msg.textContent = "Thanks! Your email app is opening. Press send there and we'll reply within 24 hours.";
     });
