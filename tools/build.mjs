@@ -74,6 +74,7 @@ const contactForm = () => `<form class="form" data-form data-email="${SITE.email
     <input name="name" type="text" required placeholder="Your name" aria-label="Your name" autocomplete="name" />
     <input name="email" type="email" required placeholder="Email address" aria-label="Email address" autocomplete="email" />
   </div>
+  <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <textarea name="message" rows="5" required placeholder="Tell us about your project, goals and timeline…" aria-label="Project details"></textarea>
   <button class="btn btn--full" type="submit" data-magnet>Send message ${ic("send-plane-2-line")}</button>
   <p class="form-msg" data-msg role="status"></p>

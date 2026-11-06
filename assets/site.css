@@ -390,6 +390,9 @@ a.cline:hover i { background: var(--sky-grad); color: #fff; }
 .editor__view::after { background: linear-gradient(0deg, rgba(20, 50, 120, .35), transparent 60%); }
 .editor__view img { filter: saturate(.7) hue-rotate(-10deg); }
 .form-msg { color: var(--blue-2); }
+.form-msg.is-error { color: #fca5a5; }
+.form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.form button[disabled] { opacity: .6; cursor: wait; }
 .flight__comet { box-shadow: 0 0 20px 6px rgba(255, 255, 255, .9), 0 0 60px 20px rgba(61, 123, 255, .6); }
 .flight > svg path { filter: drop-shadow(0 0 8px rgba(156, 196, 255, .8)); }
 .service__icon, .step i { box-shadow: 0 14px 30px -14px rgba(61, 123, 255, .9); }

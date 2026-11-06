@@ -186,12 +186,34 @@
     const qs = new URLSearchParams(location.search), project = qs.get("project"), service = qs.get("service");
     if (service) { const pick = { "Web design": "Web Development", "E-commerce websites": "E-commerce", "Mobile app development": "Mobile & App Development", "UI/UX design": "UI/UX Design", "Video editing": "Video Editing", "SEO services": "SEO" }[service]; $$("button", needs).forEach((b) => b.classList.toggle("on", b.textContent === pick)); }
     if (project) form.message.value = "I'm interested in a website like " + project + ".\n\n";
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const picked = $$(".on", needs).map((b) => b.textContent).join(", ") || "General enquiry";
+    const opened = Date.now(), btn = $("[type=submit]", form);
+    const say = (text, error) => { msg.textContent = text; msg.classList.toggle("is-error", !!error); };
+    const viaEmailApp = (picked) => {
       const body = "Name: " + form.name.value + "\nEmail: " + form.email.value + "\nServices: " + picked + "\n\n" + form.message.value;
       location.href = "mailto:" + form.dataset.email + "?subject=" + encodeURIComponent("New project: " + picked) + "&body=" + encodeURIComponent(body);
-      msg.textContent = "Thanks! Your email app is opening. Press send there and we'll reply within 24 hours.";
+      say("Your email app is opening. Press send there and we'll reply within 24 hours.");
+    };
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (btn.disabled) return;
+      const services = $$(".on", needs).map((b) => b.textContent), picked = services.join(", ") || "General enquiry";
+      btn.disabled = true; say("Sending…");
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value, services, company: form.company.value, elapsed: Date.now() - opened, page: location.pathname }),
+        });
+        const out = (res.headers.get("content-type") || "").includes("json") ? await res.json() : null;
+        if (!out) return viaEmailApp(picked); /* no mail server on this host: fall back to the email app */
+        if (!out.ok) return say(out.error || "Something went wrong. Please email us directly.", true);
+        form.reset(); $$("button", needs).forEach((b, i) => b.classList.toggle("on", i === 0));
+        say("Thank you! Your message has been sent. Check your inbox for our confirmation, and we'll reply within 24 hours.");
+      } catch {
+        viaEmailApp(picked);
+      } finally {
+        btn.disabled = false;
+      }
     });
   });
 })();

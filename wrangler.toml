@@ -1,0 +1,6 @@
+# Cloudflare Pages settings. The site is already built into the repo, so there is no build step:
+# Pages serves the files as they are and runs functions/api/contact.js for /api/contact.
+name = "samadashboard"
+pages_build_output_dir = "."
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]

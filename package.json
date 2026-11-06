@@ -1,0 +1,8 @@
+{
+  "name": "samadashboard",
+  "private": true,
+  "description": "samatechlb.com. The site is static; functions/ holds the contact form's email sender for Cloudflare Pages.",
+  "dependencies": {
+    "worker-mailer": "1.3.1"
+  }
+}
